@@ -1,0 +1,11 @@
+<footer class="content-footer">
+  This work is licensed under a <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a> except where otherwise noted. Unless specified, all source code on this site is licensed under the <a href="https://sm.mit-license.org/">MIT license</a>.<br />
+  Site design based on <a href="https://github.com/poole/hyde">Hyde</a> under the <a href="https://sm.mit-license.org/">MIT license</a>.
+</footer>
+
+{% if site.disqus_shortname %}
+  <script id="dsq-count-scr" src="//{{ site.disqus_shortname }}.disqus.com/count.js" async></script>
+{% endif %}
+{% if site.addthis_profile %}
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ site.addthis_profile }}"></script>
+{% endif %}

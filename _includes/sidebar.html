@@ -1,0 +1,33 @@
+<aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="{{ site.baseurl }}/">
+          {{ site.title }}
+        </a>
+      </h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="{{ site.baseurl }}/about/">About</a>
+      <a class="sidebar-nav-item" href="{{ site.baseurl }}/archive/">Archive</a>
+    </nav>
+    
+    <ul class="sidebar-social">
+      {% for link in site.social.links %}
+        {% if link contains 'twitter.com' %}
+          {% assign link_title = 'Twitter' %}
+        {% elsif link contains 'facebook.com' %}
+          {% assign link_title = 'Facebook' %}
+        {% elsif link contains 'linkedin.com' %}
+          {% assign link_title = 'LinkedIn' %}
+        {% elsif link contains 'github.com' %}
+          {% assign link_title = 'GitHub' %}
+        {% endif %}
+        <li><a href="{{ link }}" title="{{ link_title }}"><span class="screen-reader-text">{{ link_title }}</span></a></li>
+      {% endfor %}
+      <li><a href="{{ site.baseurl }}/atom.xml" title="Atom Feed"><span class="screen-reader-text">RSS Atom Feed</span></a></li>
+    </ul>
+  </div>
+</aside>

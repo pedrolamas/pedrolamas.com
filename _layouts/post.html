@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<main>
+  <article class="post">
+    {% include article.html article=page %}
+  </article>
+
+  {% if site.addthis_profile %}
+    {% unless page.noshare %}
+      <section class="post-social">
+        <div class="addthis_inline_share_toolbox"></div>
+      </section>
+    {% endunless %}
+  {% endif %}
+  
+  {% if site.disqus_shortname %}
+    {% unless page.nocomments %}
+      <section class="post-comments">
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url = '{{ page.url | relative_url  }}'
+          };
+          (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//{{ site.disqus_shortname }}.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </section>
+    {% endunless %}
+  {% endif %}
+
+  {% if page.previous or page.next %}
+    <nav class="post-navigation">
+      {% if page.previous.url %}
+        <h2>Previous</h2>
+        <h3 class="post-entry">
+          <a href="{{ page.previous.url | relative_url }}" title="Previous Post: {{ page.previous.title }}">
+            {{ page.previous.title }}
+            <small>{{ page.previous.date | date: "%B %-d, %Y" }}</small>
+          </a>
+        </h3>
+      {% endif %}
+      {% if page.next.url %}
+        <h2>Next</h2>
+        <h3 class="post-entry">
+          <a href="{{ page.next.url | relative_url }}" title="Next Post: {{ page.next.title }}">
+            {{ page.next.title }}
+            <small>{{ page.next.date | date: "%B %-d, %Y" }}</small>
+          </a>
+        </h3>
+      {% endif %}
+    </nav>
+  {% endif %}
+</main>

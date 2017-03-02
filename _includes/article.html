@@ -1,0 +1,44 @@
+<header class="post-header">
+  <h1 class="post-title"><a href="{{ include.article.url | relative_url }}" rel="bookmark">{{ include.article.title }}</a></h1>
+</header>
+
+{% if include.article.image %}
+  <div class="post-thumbnail">
+    <a href="{{ include.article.url | relative_url }}"><img src="{{ include.article.image | relative_url }}" class="img-responsive" /></a>
+  </div>
+{% endif %}
+
+<div class="post-meta">
+  <span class="posted-on">
+    <span class="screen-reader-text">Posted on </span>
+    <time datetime="{{ include.article.date | date_to_xmlschema }}">{{ include.article.date | date: "%B %-d, %Y" }}</time>
+  </span>
+  <span class="categories">
+    <span class="screen-reader-text">Categories </span>
+    {% for category in include.article.categories %}
+      {% capture category_name %}{{ category }}{% endcapture %}
+      <a href="{{ category_name | slugify | prepend: '/category/' | relative_url }}">{{ category_name }}</a>{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+  </span>
+  <span class="tags">
+    <span class="screen-reader-text">Tags </span>
+    {% for tag in include.article.tags %}
+      {% capture tag_name %}{{ tag }}{% endcapture %}
+      <a href="{{ tag_name | slugify | prepend: '/tag/' | relative_url }}">{{ tag_name }}</a>{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+  </span>
+  {% if site.disqus_shortname %}
+    <span class="comments">
+      <a href="{{ include.article.url | relative_url }}#disqus_thread">Comments</a>
+    </span>
+  {% endif %}
+  {% if site.github.repository_url %}
+  <span class="edit">
+    <a href="{{ site.github.repository_url }}/edit/master/{{ include.article.path }}">Edit</a>
+  </span>
+  {% endif %}
+</div>
+
+<div class="post-content">
+  {% include contentformatter.html content=include.article.content %}
+</div>
