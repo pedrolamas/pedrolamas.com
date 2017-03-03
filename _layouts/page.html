@@ -1,15 +1,24 @@
 ---
 layout: default
 ---
+{% assign page_type = page.path | split: "/" | compact | first %}
+{% case page_type %}
+  {% when "category" %}
+    {% assign page_title = page.title | prepend: "Category: " %}
+  {% when "tag" %}
+    {% assign page_title = page.title | prepend: "Tag: " %}
+  {% else %}
+    {% assign page_title = page.title %}
+{% endcase %}
 
 <main>
   <article class="page">
     <header class="page-header">
-      <h1 class="page-title">{{ page.title }}</h1>
+      <h1 class="page-title">{{ page_title }}</h1>
     </header>
 
     <div class="page-content">
-      {% include contentformatter.html content=page.content %}
+      {% include contentformatter.html content=content %}
     </div>
   </article>
 </main>

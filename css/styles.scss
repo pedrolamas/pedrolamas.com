@@ -1,6 +1,14 @@
 ---
 ---
 
+li {
+  img {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+  }
+}
+
 code, pre {
   font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
 }
