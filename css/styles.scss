@@ -35,9 +35,11 @@ code, pre {
 }
 
 .sidebar-social {
-  list-style-type: none;
-  display: inline-block;
-  padding: 0;
+  ul {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0;
+  }
 
   li {
     float: left;

@@ -2,8 +2,12 @@
 layout: default
 ---
 
-<main>
+<main role="main">
   <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+    </header>
+
     {% include article.html article=page %}
   </article>
 
@@ -36,9 +40,10 @@ layout: default
   {% endif %}
 
   {% if page.previous or page.next %}
-    <nav class="post-navigation">
+    <nav class="post-navigation" role="navigation">
       {% if page.previous.url %}
-        <h2>Previous</h2>
+        <h2 aria-hidden="true">Previous</h2>
+        <span class="screen-reader-text2">Previous post:</span>
         <h3 class="post-entry">
           <a href="{{ page.previous.url | relative_url }}" title="Previous Post: {{ page.previous.title }}">
             {{ page.previous.title }}
@@ -47,7 +52,8 @@ layout: default
         </h3>
       {% endif %}
       {% if page.next.url %}
-        <h2>Next</h2>
+        <h2 aria-hidden="true">Next</h2>
+        <span class="screen-reader-text">Next post:</span>
         <h3 class="post-entry">
           <a href="{{ page.next.url | relative_url }}" title="Next Post: {{ page.next.title }}">
             {{ page.next.title }}
