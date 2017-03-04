@@ -1,0 +1,3 @@
+[submodule "wp-content"]
+	path = wp-content
+	url = https://github.com/PedroLamas/pedrolamas.com-wp-content.git
