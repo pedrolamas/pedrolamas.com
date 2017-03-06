@@ -1,7 +1,7 @@
 author:           Pedro Lamas
-description:      Windows Development
 title:            pedrolamas.com
-subtitle:         Windows Development
+description:      Windows Development
+logo:             /wp-content/uploads/cwp_tiles/cimbalino-bullet@2x.png
 
 twitter:
   username:       pedrolamas
@@ -32,5 +32,4 @@ paginate_path:    /page/:num/
 
 gems:
   - jekyll-redirect-from
-  - jekyll-seo-tag
   - jekyll-github-metadata

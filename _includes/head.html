@@ -1,33 +1,41 @@
-{% assign site_title = site.title %}
 {% if paginator %}
-{%   assign page_type =         'website' %}
-{%   assign page_title =        site.subtitle | prepend: ' – ' | prepend: site.title %}
-{%   assign page_description =  site.title %}
+{%   assign page_title =        site.title %}
+{%   assign page_full_title =   site.description | prepend: ' – ' | prepend: site.title %}
+{%   assign page_description =  site.description %}
 {%   assign page_url =          '/' | absolute_url %}
-{%   assign page_image =        site.image %}
+{%   assign page_image =        site.logo | absolute_url %}
+{%   assign page_fb_type =      'website' %}
+{%   assign page_ld_type =      'WebSite' %}
 {% else %}
-{%   assign page_type =         'article' %}
-{%   assign page_title =        site.title | prepend: ' – ' | prepend: page.title %}
+{%   assign no_paginator =      true %}
+{%   assign page_title =        page.title %}
+{%   assign page_full_title =   site.title | prepend: ' – ' | prepend: page.title %}
 {%   assign page_description =  page.excerpt | default: content | strip_html | strip_newlines | lstrip | truncate: 160, '' | rstrip %}
 {%   assign page_url =          page.url | absolute_url %}
-{%   assign page_image =        page.image %}
+{%   assign page_image =        page.image | default: site.logo | absolute_url %}
+{%   assign page_fb_type =      'article' %}
+{%   assign page_ld_type =      'BlogPosting' %}
 {% endif %}
-<head>
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-{% comment %}
-  <title>{{ page_title }}</title>
+  <title>{{ page_full_title | smartify }}</title>
 
   <meta name="description" content="{{ page_description }}">
   <meta name="author" content="{{ site.author }}">
   
   <link rel="canonical" href="{{ page_url }}">
-{% endcomment %}
-  <link rel="alternate" type="application/rss+xml" title="{{ site_title }}" href="{{ site.baseurl }}/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml">
   <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
+  
+  {% if paginator.next %}
+    <link rel="next" href="{{ paginator.next | absolute_url }}">
+  {% endif %}
+  {% if paginator.previous %}
+    <link rel="prev" href="{{ paginator.previous | absolute_url }}">
+  {% endif %}
 
   <link rel="stylesheet" href="{{ site.baseurl }}/css/poole.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
@@ -36,14 +44,23 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,700">
 
-{% comment %}
-  <meta property="og:type" content="{{ page_type }}" />
-  <meta property="og:site_name" content="{{ site_title }}" />
+  <meta property="og:type" content="{{ page_fb_type }}" />
+  <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:title" content="{{ page_title }}" />
   <meta property="og:description" content="{{ page_description }}" />
   <meta property="og:url" content="{{ page_url }}" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="{{ page_image }}" />
+
+  {% if site.facebook.admins %}
+    <meta property="fb:admins" content="{{ site.facebook.admins }}" />
+  {% endif %}
+  {% if site.facebook.publisher and no_paginator %}
+    <meta property="article:publisher" content="{{ site.facebook.publisher }}" />
+  {% endif %}
+  {% if site.facebook.app_id %}
+    <meta property="fb:app_id" content="{{ site.facebook.app_id }}" />
+  {% endif %}
   
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="{{ site.twitter.username }}" />
@@ -53,22 +70,34 @@
   <meta name="twitter:url" content="{{ page_url }}" />
   <meta name="twitter:image:src" content="{{ page_image }}" />
 
+  <meta name="application-name" content="{{ site.title }}"/>
+  <meta name="msapplication-tooltip" content="{{ site.description }}"/>
+  <meta name="msapplication-starturl" content="./"/>
+  <meta name="msapplication-window" content="width=device-width;height=device-height"/>
+  <meta name="msapplication-task" content="name=Syndicate this site using RSS 2.0;action-uri={{ '/feed.xml' | absolute_url }};icon-uri=favicon.ico"/>
+
   <script type="application/ld+json">
   {
     "@context": "http://schema.org",
-    "@type": "Website",
+    "@type": "{{ page_ld_type }}",
+    "name": "{{ site_title }}",
+    "headline": "{{ page_title }}",
+    "description": "{{ page_description }}",
     "publisher": "{{ site.author }}",
-    "url": "{{ '/' | absolute_url }}",
-    "description": "{{ site.description }}"
+    "image": "{{ page_image }}",
+    {% if paginator %}
+      {% if site.social.links %}
+        "sameAs": {{ site.social.links | jsonify }},
+      {% endif %}
+    {% else %}
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+    {% endif %}
+    "url": "{{ page_url }}"
   }
   </script>
-{% endcomment %}
-
-{% seo %}
-
 
   {% if site.google_analytics %}
-    <script>
+    <script type="text/javascript">
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -76,7 +105,6 @@
 
       ga('create', '{{ site.google_analytics }}', 'auto');
       ga('send', 'pageview');
-
     </script>
   {% endif %}
 </head>
