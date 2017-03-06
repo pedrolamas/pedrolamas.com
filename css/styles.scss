@@ -13,21 +13,20 @@ code, pre {
   font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
 }
 
-@media (min-width: 48em) {
-  .sidebar {
-    width: 20rem;
+.sidebar-about {
+  img {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
   }
 
-  .content {
-    margin-left: 24rem;
+  h1 {
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: -.025rem;
   }
-}
-
-.sidebar-about h1 {
-  font-family: inherit;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: -.025rem;
 }
 
 .sidebar-nav-item {
@@ -188,4 +187,38 @@ code, pre {
   overflow: hidden;
   position: absolute!important;
   word-wrap: normal!important;
+}
+
+@media (min-width: 38em) {
+  .sidebar-about {
+    img {
+      width: 160px;
+    }
+  }
+}
+
+@media (min-width: 48em) {
+  .sidebar {
+    width: 20rem;
+  }
+
+  .sidebar-about {
+    img {
+      width: 100px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+  
+  .content {
+    margin-left: 24rem;
+  }
+}
+
+@media (min-width: 58em) {
+  .sidebar-about {
+    img {
+      width: 160px;
+    }
+  }
 }
