@@ -89,6 +89,10 @@ code, pre {
   }
 }
 
+.sidebar-facebook {
+  display: none;
+}
+
 .post-thumbnail {
   margin-top: 1.5rem;
 }
@@ -208,6 +212,10 @@ code, pre {
       margin-left: 0px;
       margin-right: 0px;
     }
+  }
+
+  .sidebar-facebook {
+    display: block;
   }
   
   .content {
