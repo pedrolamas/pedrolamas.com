@@ -1,7 +1,13 @@
+{% assign site_logo = site.logo %}
+{% unless site_logo contains '://' %}
+  {% assign site_logo = site_logo | relative_url %}
+{% endunless %}
 <aside class="sidebar" role="complementary">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <img src="{{ site.logo | relative_url }}" />
+      {% if site_logo %}
+        <img src="{{ site_logo }}" />
+      {% endif %}
       <h1>
         <a href="{{ site.baseurl }}/" rel="home">{{ site.title }}</a>
       </h1>
