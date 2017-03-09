@@ -34,58 +34,49 @@ code, pre {
 }
 
 .sidebar-social {
-  ul {
-    list-style-type: none;
-    display: inline-block;
-    padding: 0;
+  margin-bottom: 1rem;
+}
+
+.sidebar-social-item {
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 50%;
+  display: inline-block;
+
+  &:hover, &:active, &:focus {
+    border-color: #fff;
+    text-decoration: none;
   }
 
-  li {
-    float: left;
+  &:before {
+    font-family: FontAwesome;
+    font-size: 16px;
+    content: "\f1e0";
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
   }
 
-  a {
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    border: 1px solid rgba(255,255,255,.5);
-    border-radius: 50%;
-    margin-right: 5px;
-    display: inline-block;
+  &[href*="github.com"]:before {
+    content: "\f09b";
+  }
 
-    &:hover, &:active, &:focus {
-      border-color: #fff;
-      text-decoration: none;
-    }
+  &[href*="twitter.com"]:before {
+    content: "\f099";
+  }
 
-    &:before {
-      font-family: FontAwesome;
-      font-size: 16px;
-      content: "\f1e0";
-      width: 34px;
-      height: 34px;
-      line-height: 34px;
-    }
+  &[href*="facebook.com"]:before {
+    content: "\f09a";
+  }
 
-    &[href*="github.com"]:before {
-      content: "\f09b";
-    }
+  &[href*="linkedin.com"]:before {
+    content: "\f0e1";
+  }
 
-    &[href*="twitter.com"]:before {
-      content: "\f099";
-    }
-
-    &[href*="facebook.com"]:before {
-      content: "\f09a";
-    }
-
-    &[href*="linkedin.com"]:before {
-      content: "\f0e1";
-    }
-
-    &[href$="atom.xml"]:before {
-      content: "\f09e";
-    }
+  &[href$="atom.xml"]:before {
+    content: "\f09e";
   }
 }
 
