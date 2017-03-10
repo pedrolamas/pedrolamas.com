@@ -25,7 +25,7 @@ layout: default
         <div id="disqus_thread"></div>
         <script>
           var disqus_config = function () {
-            this.page.url = '{{ page.url | relative_url  }}'
+            this.page.url = '{{ page.url | absolute_url }}'
           };
           (function() {
           var d = document, s = d.createElement('script');
