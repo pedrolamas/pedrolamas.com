@@ -1,10 +1,15 @@
 {% assign site_title =            site.title | smartify | strip_html | normalize_whitespace | escape_once %}
 {% assign site_description =      site.description | smartify | strip_html | normalize_whitespace | escape_once %}
 {% if site.logo contains '://' %}
-{%   assign site_logo = site.logo | escape %}
+{%   assign site_logo =           site.logo | escape %}
 {% elsif site.logo %}
-{%   assign site_logo = site.logo | absolute_url | escape %}
+{%   assign site_logo =           site.logo | absolute_url | escape %}
 {% endif %}
+{% assign site_feed =             site.feedurl | default: site.feed.path | default: '/feed.xml' %}
+{% unless site_feed contains '://' %}
+{%   assign site_feed =           site_feed | relative_url %}
+{% endunless %}
+{% assign site_feed =             site_feed | escape_once %}
 {% assign page_title =            page.title | default: site.title | smartify | strip_html | normalize_whitespace | escape_once %}
 {% assign page_description =      page.description | default: page.excerpt | default: site.description | markdownify | strip_html | normalize_whitespace | escape_once %}
 {% assign page_url =              page.url | absolute_url %}
@@ -34,10 +39,10 @@
   <title>{{ page_full_title }}</title>
 
   <meta name="description" content="{{ page_description }}">
-  <meta name="author" content="{{ site.author }}">
+  <meta name="author" content="{{ site.author.name | default: site.author }}">
   
   <link rel="canonical" href="{{ page_url }}">
-  <link rel="alternate" type="application/atom+xml" title="{{ site_title }}" href="{{ site.baseurl }}{% link atom.xml %}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site_title }}" href="{{ site_feed }}">
   <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}{% link favicon.ico %}">
   
   {% if paginator.next_page or page.next.url %}
@@ -59,7 +64,6 @@
   <meta property="og:title" content="{{ page_title }}" />
   <meta property="og:description" content="{{ page_description }}" />
   <meta property="og:url" content="{{ page_url }}" />
-  <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="{{ page_image }}" />
 
   {% if site.facebook %}
@@ -91,7 +95,7 @@
     <meta name="twitter:url" content="{{ page_url }}" />
     <meta name="twitter:image:src" content="{{ page_image }}" />
     <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="{{ site.author }}" />
+    <meta name="twitter:data1" content="{{ site.author.name | default: site.author }}" />
     <meta name="twitter:label2" content="Filed under" />
     <meta name="twitter:data2" content="{% for category in page.categories %}{{ category }}{% unless forloop.last %}, {% endunless %}{% endfor %}" />
   {% endif %}
@@ -116,7 +120,7 @@
     },
     "author": {
       "@type": "Person",
-      "name": {{ site.social.name | default: site.author | jsonify }},
+      "name": {{ site.social.name | default: site.author.name | default: site.author | jsonify }},
       "sameAs": {{ site.social.links | jsonify }}
     },
     {% if page_image %}
@@ -124,6 +128,9 @@
     {% endif %}
     {% if page.date %}
       "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+    {% endif %}
+    {% if page.last_modified_at or page.date %}
+      "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
     {% endif %}
     "url": {{ page_url | jsonify }},
     "mainEntityOfPage": {

@@ -75,7 +75,7 @@ code, pre {
     content: "\f0e1";
   }
 
-  &[href$="atom.xml"]:before {
+  &[title="Atom Feed"]:before {
     content: "\f09e";
   }
 }
