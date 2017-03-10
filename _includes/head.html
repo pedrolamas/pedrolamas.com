@@ -37,8 +37,8 @@
   <meta name="author" content="{{ site.author }}">
   
   <link rel="canonical" href="{{ page_url }}">
-  <link rel="alternate" type="application/atom+xml" title="{{ site_title }}" href="{{ site.baseurl }}/atom.xml">
-  <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="{{ site_title }}" href="{{ site.baseurl }}{% link atom.xml %}">
+  <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}{% link favicon.ico %}">
   
   {% if paginator.next_page or page.next.url %}
     <link rel="next" href="{{ paginator.next_page_path | default: page.next.url | absolute_url }}">
@@ -47,10 +47,10 @@
     <link rel="prev" href="{{ paginator.previous_page_path | default: page.previous.url | absolute_url }}">
   {% endif %}
 
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/poole.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/hyde.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}{% link css/poole.css %}">
+  <link rel="stylesheet" href="{{ site.baseurl }}{% link css/syntax.css %}">
+  <link rel="stylesheet" href="{{ site.baseurl }}{% link css/hyde.css %}">
+  <link rel="stylesheet" href="{{ site.baseurl }}{% link css/styles.scss %}">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,700">
 

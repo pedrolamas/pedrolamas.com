@@ -1,6 +1,6 @@
 {% assign site_logo = site.logo %}
 {% unless site_logo contains '://' %}
-  {% assign site_logo = site_logo | relative_url %}
+{%   assign site_logo = site_logo | relative_url %}
 {% endunless %}
 <aside class="sidebar" role="complementary">
   <div class="container sidebar-sticky">
@@ -9,15 +9,15 @@
         <img src="{{ site_logo }}" />
       {% endif %}
       <h1>
-        <a href="{{ site.baseurl }}/" rel="home">{{ site.title }}</a>
+        <a href="{{ site.baseurl }}{% link index.html %}" rel="home">{{ site.title }}</a>
       </h1>
       <p class="lead">{{ site.description }}</p>
     </div>
 
     <nav class="sidebar-nav" role="navigation" aria-label="Primary Menu">
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}/about/">About</a>
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}/archive/">Archive</a>
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}/contributors/">Contributors</a>
+      <a class="sidebar-nav-item" href="{{ site.baseurl }}{% link about/index.md %}">About</a>
+      <a class="sidebar-nav-item" href="{{ site.baseurl }}{% link archive/index.md %}">Archive</a>
+      <a class="sidebar-nav-item" href="{{ site.baseurl }}{% link contributors/index.md %}">Contributors</a>
     </nav>
     
     <nav class="sidebar-social" role="navigation" aria-label="Social Links Menu">
@@ -33,7 +33,7 @@
         {% endif %}
         <a class="sidebar-social-item" href="{{ link }}" title="{{ link_title }}"><span class="screen-reader-text">{{ link_title }}</span></a>
       {% endfor %}
-      <a class="sidebar-social-item" href="{{ site.baseurl }}/atom.xml" title="Atom Feed"><span class="screen-reader-text">Atom Feed</span></a>
+      <a class="sidebar-social-item" href="{{ site.baseurl }}{% link atom.xml %}" title="Atom Feed"><span class="screen-reader-text">Atom Feed</span></a>
     </nav>
 
     {% if site.facebook.app_id and site.facebook.publisher %}
