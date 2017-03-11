@@ -1,3 +1,5 @@
+{% capture site_url %}{% link index.html %}{% endcapture %}
+{% assign site_url =              site_url | absolute_url %}
 {% assign site_title =            site.title | smartify | strip_html | normalize_whitespace | escape_once %}
 {% assign site_description =      site.description | smartify | strip_html | normalize_whitespace | escape_once %}
 {% if site.logo contains '://' %}
@@ -42,8 +44,17 @@
   <meta name="author" content="{{ site.author.name | default: site.author }}">
   
   <link rel="canonical" href="{{ page_url }}">
+  <link rel="prefetch" href="{{ site_url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site_title }}" href="{{ site_feed }}">
+  
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}{% link favicon.ico %}">
   <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}{% link favicon.ico %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}{% link favicon-16x16.png %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}{% link favicon-32x32.png %}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ site.baseurl }}{% link favicon-96x96.png %}">
+  <link rel="icon" type="image/png" sizes="144x144" href="{{ site.baseurl }}{% link favicon-144x144.png %}">
+  
+  <meta name="theme-color" content="{{ site.theme-color | default: '#202020'}}">
   
   {% if paginator.next_page or page.next.url %}
     <link rel="next" href="{{ paginator.next_page_path | default: page.next.url | absolute_url }}">
@@ -135,7 +146,7 @@
     "url": {{ page_url | jsonify }},
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": {{ '/' | absolute_url | jsonify }}
+      "@id": {{ site_url | jsonify }}
     }
   }
   </script>
