@@ -1,15 +1,11 @@
 ---
 layout: default
 ---
-{% assign page_type = page.path | split: "/" | compact | first %}
-{% case page_type %}
-  {% when "category" %}
-    {% assign page_title = page.title | prepend: "Category: " %}
-  {% when "tag" %}
-    {% assign page_title = page.title | prepend: "Tag: " %}
-  {% else %}
-    {% assign page_title = page.title %}
-{% endcase %}
+{% if page.collection == "categories" %}
+  {% assign page_title = page.title | prepend: "Category: " %}
+{% else %}
+  {% assign page_title = page.title %}
+{% endif %}
 
 <main role="main">
   <article class="page">

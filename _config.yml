@@ -37,6 +37,18 @@ permalink:        /:year/:month/:day/:title/
 paginate:         8
 paginate_path:    /page/:num/
 
+collections:
+  categories:
+    output:       true
+    permalink:    /category/:title/
+
+defaults:
+  - scope:
+      path:       ""
+      type:       categories
+    values:
+      layout:     archive
+
 gems:
   - jekyll-redirect-from
   - jekyll-github-metadata
