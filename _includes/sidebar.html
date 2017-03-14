@@ -1,7 +1,9 @@
 {% assign site_logo = site.logo %}
-{% unless site_logo contains '://' %}
-{%   assign site_logo = site_logo | relative_url %}
-{% endunless %}
+{% if site_logo %}
+{%   unless site_logo contains '://' %}
+{%     assign site_logo = site_logo | relative_url %}
+{%   endunless %}
+{% endif %}
 {% assign site_feed =             site.feedurl | default: site.feed.path | default: '/feed.xml' %}
 {% unless site_feed contains '://' %}
 {%   assign site_feed =           site_feed | relative_url %}

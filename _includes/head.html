@@ -2,10 +2,12 @@
 {% assign site_url =              site_url | absolute_url %}
 {% assign site_title =            site.title | smartify | strip_html | normalize_whitespace | escape_once %}
 {% assign site_description =      site.description | smartify | strip_html | normalize_whitespace | escape_once %}
-{% if site.logo contains '://' %}
-{%   assign site_logo =           site.logo | escape %}
-{% elsif site.logo %}
-{%   assign site_logo =           site.logo | absolute_url | escape %}
+{% assign site_logo =             site.logo %}
+{% if site_logo %}
+{%   unless site_logo contains '://' %}
+{%     assign site_logo =         site_logo | absolute_url %}
+{%   endunless %}
+{%   assign site_logo =           site_logo | escape %}
 {% endif %}
 {% assign site_feed =             site.feedurl | default: site.feed.path | default: '/feed.xml' %}
 {% unless site_feed contains '://' %}
@@ -31,6 +33,12 @@
 {%   else %}
 {%     assign page_ld_type =      'WebPage' %}
 {%   endif %}
+{% endif %}
+{% assign author_picture =          site.author.picture %}
+{% if author_picture %}
+{%   unless author_picture contains '://' %}
+{%     assign site_logo =         site_logo | absolute_url %}
+{%   endunless %}
 {% endif %}
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
   <meta charset="utf-8">
@@ -132,6 +140,9 @@
     "author": {
       "@type": "Person",
       "name": {{ site.social.name | default: site.author.name | default: site.author | jsonify }},
+      {% if author_picture %}
+        "image": {{ author_picture | jsonify }},
+      {% endif %}
       "sameAs": {{ site.social.links | jsonify }}
     },
     {% if page_image %}
