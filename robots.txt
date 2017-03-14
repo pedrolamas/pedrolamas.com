@@ -2,5 +2,4 @@
 ---
 User-agent: *
 Sitemap: {{ "/sitemap.xml" | absolute_url }}
-Allow: /
-Disalow: /wp-content/
+Disallow: /wp-content/
