@@ -17,7 +17,13 @@
 {% assign page_title =            page.title | default: site.title | smartify | strip_html | normalize_whitespace | escape_once %}
 {% assign page_description =      page.description | default: page.excerpt | default: site.description | markdownify | strip_html | normalize_whitespace | escape_once %}
 {% assign page_url =              page.url | absolute_url %}
-{% assign page_image =            page.image | default: site.logo | absolute_url | escape %}
+{% assign page_image =            page.image | default: site.logo %}
+{% if page_image %}
+{%   unless page_image contains '://' %}
+{%     assign page_image =         page_image | absolute_url %}
+{%   endunless %}
+{%   assign page_image =           page_image | escape %}
+{% endif %}
 {% if page.title %}
 {%   assign page_full_title =     page.title | append: ' – ' | append: site.title | smartify | strip_html | normalize_whitespace | escape_once %}
 {% else %}
@@ -83,7 +89,9 @@
   <meta property="og:title" content="{{ page_title }}" />
   <meta property="og:description" content="{{ page_description }}" />
   <meta property="og:url" content="{{ page_url }}" />
-  <meta property="og:image" content="{{ page_image }}" />
+  {% if page_image %}
+    <meta property="og:image" content="{{ page_image }}" />
+  {% endif %}
 
   {% if site.facebook %}
     {% if site.facebook.admins %}
@@ -108,22 +116,26 @@
   {% if site.twitter %}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@{{ site.twitter.username | replace: '@', '' }}" />
-    <meta name="twitter:creator" content="@{{ site.twitter.username | replace: '@', '' }}">
+    <meta name="twitter:creator" content="@{{ site.author.twitter | default: site.twitter.username | replace: '@', '' }}">
     <meta name="twitter:title" content="{{ page_title }}" />
     <meta name="twitter:description" content="{{ page_description }}" />
     <meta name="twitter:url" content="{{ page_url }}" />
-    <meta name="twitter:image:src" content="{{ page_image }}" />
+    {% if page_image %}
+      <meta name="twitter:image:src" content="{{ page_image }}" />
+    {% endif %}
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="{{ site.author.name | default: site.author }}" />
-    <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="{% for category in page.categories %}{{ category }}{% unless forloop.last %}, {% endunless %}{% endfor %}" />
+    {% if page.categories %}
+      <meta name="twitter:label2" content="Filed under" />
+      <meta name="twitter:data2" content="{% for category in page.categories %}{{ category }}{% unless forloop.last %}, {% endunless %}{% endfor %}" />
+    {% endif %}
   {% endif %}
 
   <meta name="application-name" content="{{ site_title }}"/>
   <meta name="msapplication-tooltip" content="{{ site_description }}"/>
   <meta name="msapplication-starturl" content="./"/>
   <meta name="msapplication-window" content="width=device-width;height=device-height"/>
-  <meta name="msapplication-task" content="name=Syndicate this site using RSS 2.0;action-uri={{ '/atom.xml' | absolute_url }};icon-uri=favicon.ico"/>
+  <meta name="msapplication-task" content="name=Syndicate this site using RSS 2.0;action-uri={{ site_feed }};icon-uri=favicon.ico"/>
 
   <script type="application/ld+json">
   {
