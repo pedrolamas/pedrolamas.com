@@ -23,7 +23,7 @@ tags:
 ---
 If you've been following <a href="http://blogs.msdn.com/b/visualstudioalm/archive/2013/01/31/windows-phone-unit-tests-in-visual-studio-2012-update-2.aspx">the news</a> on the upcoming <strong>Visual Studio 2012 Update 2</strong> (currently in <a href="http://go.microsoft.com/fwlink/?LinkId=273878">CTP4</a>), you know that we now have a fully working Unit Tests framework for Windows Phone projects!
 
-Well, this seemed like the perfect opportunity to finally create some unit tests for the <a href="http://Cimbalino%20Windows%20Phone%20Toolkit">Cimbalino Windows Phone Toolkit</a> and test this new test framework, all at once!
+Well, this seemed like the perfect opportunity to finally create some unit tests for the <a href="http://cimbalino.org">Cimbalino Windows Phone Toolkit</a> and test this new test framework, all at once!
 
 <img class="alignright size-full wp-image-174 clear" src="http://www.pedrolamas.com/wp-content/uploads/2013/02/Works-on-my-machine.png" alt="Works on my machine" width="200" height="193" />Given that this post will require installing the VS2012.2 CTP 4, a non-final preview version software that has a "go-live" license, I think it's only proper to apply the WOMM certification to it.
 
