@@ -40,10 +40,10 @@
 {%     assign page_ld_type =      'WebPage' %}
 {%   endif %}
 {% endif %}
-{% assign author_picture =          site.author.picture %}
+{% assign author_picture =        site.author.picture %}
 {% if author_picture %}
 {%   unless author_picture contains '://' %}
-{%     assign site_logo =         site_logo | absolute_url %}
+{%     assign author_picture =    author_picture | absolute_url %}
 {%   endunless %}
 {% endif %}
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
