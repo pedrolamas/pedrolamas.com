@@ -1,0 +1,7 @@
+{% if include.pages %}
+<ul>
+  {% for page in include.pages %}
+    <li>{% if page.url %}<a href="{{ page.url | relativeurl }}">{{ page.title }}</a>{% else %}{{ page.title }}{% endif %}{% include sitemap-iterator.html pages=page.sub %}</li>
+  {% endfor %}
+</ul>
+{% endif %}

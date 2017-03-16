@@ -9,6 +9,7 @@
 {%   assign site_feed =           site_feed | relative_url %}
 {% endunless %}
 {% assign site_feed =             site_feed | escape_once %}
+{% assign minimap_pages =         site.data.sitemap | where_exp: 'page', 'page.minimap != false' %}
 <aside class="sidebar" role="complementary">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
@@ -22,9 +23,9 @@
     </div>
 
     <nav class="sidebar-nav" role="navigation" aria-label="Primary Menu">
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}{% link about/index.md %}">About</a>
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}{% link archive/index.md %}">Archive</a>
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}{% link contributors/index.md %}">Contributors</a>
+      {% for page in minimap_pages %}
+        <a class="sidebar-nav-item" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+      {% endfor %}
     </nav>
     
     <nav class="sidebar-social" role="navigation" aria-label="Social Links Menu">

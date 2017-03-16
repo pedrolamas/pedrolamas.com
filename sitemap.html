@@ -1,0 +1,8 @@
+---
+layout: page
+title: Site Map
+sitemap: false
+---
+<ul>
+  <li><a href="{{ site.baseurl }}{% link index.html %}">{{ site.title | default: site.name }}</a>{% include sitemap-iterator.html pages=site.data.sitemap %}</li>
+</ul>
