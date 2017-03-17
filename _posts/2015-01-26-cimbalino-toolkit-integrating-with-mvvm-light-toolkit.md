@@ -171,9 +171,7 @@ And... we are done!!!
 
 Just run the Windows project and the Windows Phone project to confirm that our shared code does in fact work across the two platforms! :)
 
-To make things even easier, you can download the full solution here:
-
-[download id="13"]
+To make things even easier, you can download the full solution [here]({{ site.baseurl }}{% link wp-content/uploads/downloads/2015/01/App1.zip %})!
 
   [1]: https://www.pedrolamas.com/2015/01/05/cimbalino-toolkit-step-by-step/
   [2]: http://cimbalino.org

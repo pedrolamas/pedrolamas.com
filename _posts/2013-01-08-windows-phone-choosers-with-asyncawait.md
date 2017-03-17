@@ -92,6 +92,4 @@ public static class ExtensionMethods {
 }
 ```
 
-You can download a sample code for this directly from Microsoft Code Gallery:
-
-[download id="4" format="2"]
+You can download a sample code for this directly from the [Microsoft Code Gallery](https://code.msdn.microsoft.com/Windows-Phone-Choosers-99aeec4b).

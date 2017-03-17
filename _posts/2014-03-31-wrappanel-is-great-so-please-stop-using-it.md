@@ -80,9 +80,7 @@ Here's the resulting layout schematic:
 
 Major advantages with this approach is the obvious performance improvement and memory consumption reduction. Why? Because we maintained the `VirtualizingStackPanel` in our main `ListBox.ItemsPanel`!
 
-To prove my point, I've created a small demonstration app showing the result of using these two approaches with a list of 400 items.
-
-[download id="12"]
+To prove my point, I've created a [small demonstration app]({{ site.baseurl }}{% link wp-content/uploads/downloads/2014/03/PedroLamas.SmartWrapListDemo.zip %}) showing the result of using these two approaches with a list of 400 items.
 
 Download the code, deploy it on a phone or emulator, then run each approach separately and exit the app after each run in order to check the peak memory usage.
 
