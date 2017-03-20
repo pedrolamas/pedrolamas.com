@@ -16,6 +16,7 @@ code, pre {
 .sidebar-about {
   img {
     width: 100px;
+    height: 100px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
@@ -144,10 +145,33 @@ code, pre {
   }
 }
 
-.post-social, .post-comments, .post-navigation {
+.post-author, .post-social, .post-comments, .post-navigation {
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-top: 1px solid #eee;
+}
+
+.post-author {
+  overflow: hidden;
+
+  .author-thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    float: left;
+  }
+
+  .author-biography {
+    margin-left: 100px;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
 }
 
 .post-entry {
@@ -188,6 +212,7 @@ code, pre {
   .sidebar-about {
     img {
       width: 160px;
+      height: 160px;
     }
   }
 }

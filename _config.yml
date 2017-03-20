@@ -9,8 +9,9 @@ author:
   name:           Pedro Lamas
   email:          pedrolamas@gmail.com
   url:            https://www.pedrolamas.com
-  twitter:        pedrolamas
   picture:        https://s.gravatar.com/avatar/fecaf27c91e2d50b25930e280b2a81d0?s=320
+  biography:      Pedro is a software developer specialized in Microsoft technologies. He's a regular blogger, speaker, and the author of the open-source [Cimbalino Toolkit](http://cimbalino.org). Since 2017 he's also a [Microsoft Most Valuable Professional (MVP)](https://mvp.microsoft.com/en-us/PublicProfile/5002547) for Windows Development.
+  twitter:        pedrolamas
 
 twitter:
   username:       pedrolamas

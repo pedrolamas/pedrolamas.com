@@ -1,7 +1,12 @@
 ---
 layout: default
 ---
-
+{% assign author_picture =        site.author.picture %}
+{% if author_picture %}
+{%   unless author_picture contains '://' %}
+{%     assign author_picture =    author_picture | relative_url %}
+{%   endunless %}
+{% endif %}
 <main role="main">
   <article class="post">
     <header class="post-header">
@@ -10,6 +15,16 @@ layout: default
 
     {% include article.html article=page %}
   </article>
+
+  {% if author_picture %}
+    <section class="post-author">
+      <img src="{{ author_picture }}" class="author-thumbnail" />
+      <div class="author-biography">
+        <h2>by {{ site.author.name | default: site.author }}</h2>
+        {{ site.author.biography | markdownify }}
+      </div>
+    </section>
+  {% endif %}
 
   {% if site.addthis_profile %}
     {% unless page.noshare %}
