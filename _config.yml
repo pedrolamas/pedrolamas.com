@@ -52,6 +52,9 @@ defaults:
     values:
       layout:     archive
 
+sass:
+  style:          compressed
+
 gems:
   - jekyll-redirect-from
   - jekyll-github-metadata
