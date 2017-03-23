@@ -83,7 +83,7 @@ code, pre {
   }
 }
 
-.sidebar-facebook {
+.sidebar-logos, .sidebar-facebook {
   display: none;
 }
 
@@ -144,6 +144,15 @@ code, pre {
     &:before {
       content: "\f044";
     }
+  }
+}
+
+.sidebar-logos {
+  img {
+    max-width: 200px;
+    max-height: 100px;
+    display: inline-block;
+    margin: 0;
   }
 }
 
@@ -234,7 +243,7 @@ code, pre {
     }
   }
 
-  .sidebar-facebook {
+  .sidebar-logos, .sidebar-facebook {
     display: block;
   }
   

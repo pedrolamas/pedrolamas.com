@@ -26,12 +26,17 @@ github:
   username:       pedrolamas
 
 social:
-  name: Pedro Lamas
+  name:           Pedro Lamas
   links:
     - https://twitter.com/pedrolamas
     - https://www.facebook.com/pedrolamas
     - https://www.linkedin.com/in/pedrolamas
     - https://github.com/pedrolamas
+
+sidebar:
+  logos:
+    - url:        /wp-content/uploads/2017/03/MVP_Logo_Horizontal_Preferred_Cyan300_RGB_300ppi.png
+      title:      Microsoft Most Valuable Professional (MVP) for Windows Development
 
 google_analytics: UA-1376452-1
 disqus_shortname: pedrolamas-com

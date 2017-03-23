@@ -44,6 +44,18 @@
       <a class="sidebar-social-item" href="{{ site_feed }}" title="Atom Feed"><span class="screen-reader-text">Atom Feed</span></a>
     </nav>
 
+    {% if site.sidebar.logos %}
+      <div class="sidebar-logos">
+        {% for logo in site.sidebar.logos %}
+          {% assign logo_url = logo.url %}
+          {% unless logo_url contains '://' %}
+          {%   assign logo_url = logo_url | relative_url %}
+          {% endunless %}
+          <img src="{{ logo_url }}" {% if logo.title %}title="{{ logo.title }}"{% endif %} />
+        {% endfor %}
+      </div>
+    {% endif %}
+
     {% if site.facebook.app_id and site.facebook.publisher %}
       <div class="sidebar-facebook">
         <div class="fb-follow" data-href="https://www.facebook.com/{{ site.facebook.publisher }}" data-layout="standard" data-size="small" data-show-faces="true" data-colorscheme="dark" data-width="320"></div>
