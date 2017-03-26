@@ -58,6 +58,12 @@ defaults:
     values:
       layout:     archive
 
+exclude:
+  - README.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+
 sass:
   style:          compressed
 
