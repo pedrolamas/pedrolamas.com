@@ -104,3 +104,15 @@ public async void OnMyEvent(object sender, DeferredEventArgs e)
     }
 }
 ```
+
+Alternatively, you can also use the `using` pattern like this:
+
+```csharp
+public async void OnMyEvent(object sender, DeferredEventArgs e)
+{
+    using (e.GetDeferral())
+    {
+        // awaiteable code
+    }
+}
+```
