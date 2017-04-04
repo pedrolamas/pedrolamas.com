@@ -13,7 +13,7 @@ tags:
 ---
 Developers should avoid `async void` methods, but there are some situations where this is a "necessary evil", and event handlers are one of those cases.
 
-If one need to use the `await` keyword inside an event handler code, the method itself must be `async void`
+If one needs to use the `await` keyword inside an event handler code, the method itself must be `async void`
 
 The following is an example of this:
 
