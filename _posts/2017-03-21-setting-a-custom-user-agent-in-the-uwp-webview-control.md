@@ -37,7 +37,7 @@ Here's an example of how to use it; first, add the following class to your app:
 ```csharp
 public class UserAgentHelper
 {
-    [DllImport("urlmon.dll", CharSet = CharSet.Ansi)]
+    [DllImport("urlmon.dll", CharSet = CharSet.Ansi, ExactSpelling = true)]
     private static extern int UrlMkSetSessionOption(int dwOption, string pBuffer, int dwBufferLength, int dwReserved);
 
     private const int URLMON_OPTION_USERAGENT = 0x10000001;
