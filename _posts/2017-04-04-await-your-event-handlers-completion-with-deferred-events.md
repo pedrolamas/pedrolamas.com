@@ -46,7 +46,7 @@ A "deferred event" is basically an event that allows the invoker to wait for the
 
 My personal implementation is available on the [DeferredEvents NuGet package](https://www.nuget.org/packages/DeferredEvents/) that you can install by running `Install-Package DeferredEvents` on the [Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console), or add with Visual Studio NuGet Packages Manager.
 
-This is a .NET Standard 1.4 package, so you should be able to use it on pretty much any .NET project!
+This is a .NET Standard 1.0 package, so you should be able to use it on any .NET project!
 
 ## Usage
 
