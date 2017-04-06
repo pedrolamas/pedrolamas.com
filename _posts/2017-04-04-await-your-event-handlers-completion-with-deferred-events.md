@@ -1,6 +1,7 @@
 ---
 title: Await your event handlers completion with Deferred Events
 date: 2017-04-04T14:55:59+01:00
+last_modified_at: 2017-04-06T10:04:20+01:00
 layout: post
 categories:
   - Windows
@@ -47,6 +48,8 @@ A "deferred event" is basically an event that allows the invoker to wait for the
 My personal implementation is available on the [DeferredEvents NuGet package](https://www.nuget.org/packages/DeferredEvents/) that you can install by running `Install-Package DeferredEvents` on the [Package Manager Console](https://docs.nuget.org/docs/start-here/using-the-package-manager-console), or add with Visual Studio NuGet Packages Manager.
 
 This is a .NET Standard 1.0 package, so you should be able to use it on any .NET project!
+
+If you want to take a look at what's inside, the full source code is available [here](https://github.com/PedroLamas/DeferredEvents).
 
 ## Usage
 
