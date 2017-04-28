@@ -1,6 +1,7 @@
 ---
 title: Creating custom build configurations for the .NET Core project format
 date: 2017-04-24T14:58:05+01:00
+last_modified_at: 2017-04-28T10:47:00+01:00
 layout: post
 categories:
   - Windows
@@ -28,7 +29,7 @@ Those MSBuild scripts are available [here](https://github.com/PedroLamas/MSBuild
 
 After adding the NuGet package, I recommend closing and re-opening the solution to ensure that the build scripts are correctly loaded.
 
-# Usage
+## Usage
 
 Once installed, any custom build configuration name starting or ending on "Debug" will have the following build properties set by default:
 
