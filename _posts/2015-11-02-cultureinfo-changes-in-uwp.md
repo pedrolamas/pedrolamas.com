@@ -2,6 +2,7 @@
 id: 4241
 title: CultureInfo changes in UWP
 date: 2015-11-02T16:32:32+00:00
+last_modified_at: 2017-05-03T14:27:45+01:00
 author: Pedro Lamas
 layout: post
 guid: https://www.pedrolamas.com/?p=4241
@@ -18,6 +19,8 @@ tags:
   - Windows 10
   - WPDev
 ---
+**Update:** There's now a [part 2](https://www.pedrolamas.com/2017/05/03/cultureinfo-changes-in-uwp-part-2/) for this article!
+
 Since the very first versions of the .NET Framework, developers had the [System.Globalization](https://msdn.microsoft.com/en-us/library/system.globalization(v=vs.110).aspx) namespace *"containing classes that define culture-related information, including language, country/region, calendars in use, format patterns for dates, currency, and numbers, and sort order for strings."*
 
 One of the most useful classes in this namespace is the [CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo(v=vs.110).aspx) class!
