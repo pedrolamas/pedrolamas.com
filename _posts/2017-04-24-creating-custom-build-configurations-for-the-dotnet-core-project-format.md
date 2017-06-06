@@ -1,7 +1,7 @@
 ---
 title: Creating custom build configurations for the .NET Core project format
 date: 2017-04-24T14:58:05+01:00
-last_modified_at: 2017-04-28T10:47:00+01:00
+last_modified_at: 2017-06-06T14:12:00+01:00
 layout: post
 categories:
   - Windows
@@ -56,7 +56,7 @@ If you don't want to name your custom build definition according to the rules ab
 The following is an example of a custom build configuration called "Production", that has the `ConfigurationGroup` set to "Release" (so it gets the default property values set as for the a "Release" build configuration), but also overrides the `DebugSymbols` property default value:
 
 ```xml
-<PropertyGroup Condition="'$(Configuration)' == 'Prodution'">
+<PropertyGroup Condition="'$(Configuration)' == 'Production'">
   <ConfigurationGroup>Release</ConfigurationGroup>
   <DebugSymbols>true</DebugSymbols>
 </PropertyGroup>
