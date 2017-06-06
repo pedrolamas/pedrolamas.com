@@ -1,11 +1,14 @@
 ---
 layout: default
 ---
-{% if page.collection == "categories" %}
-  {% assign page_title = page.title | prepend: "Category: " %}
-{% else %}
-  {% assign page_title = page.title %}
-{% endif %}
+{% case page.collection %}
+  {% when "categories" %}
+    {% assign page_title = page.title | prepend: "Category: " %}
+  {% when "tags" %}
+    {% assign page_title = page.title | prepend: "Tag: " %}
+  {% else %}
+    {% assign page_title = page.title %}
+{% endcase %}
 
 <main role="main">
   <article class="page">

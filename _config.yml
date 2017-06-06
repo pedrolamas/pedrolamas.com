@@ -51,11 +51,19 @@ collections:
   categories:
     output:       true
     permalink:    /category/:title/
+  tags:
+    output:       true
+    permalink:    /tag/:title/
 
 defaults:
   - scope:
       path:       ""
       type:       categories
+    values:
+      layout:     archive
+  - scope:
+      path:       ""
+      type:       tags
     values:
       layout:     archive
 
