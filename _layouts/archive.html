@@ -1,11 +1,10 @@
 ---
 layout: page
 ---
-{% assign page_type = page.path | split: "/" | compact | first %}
-{% case page_type %}
-  {% when "category" %}
+{% case page.collection %}
+  {% when "categories" %}
     {% assign site_posts = site.posts | where_exp: "item", "item.categories contains page.title" %}
-  {% when "tag" %}
+  {% when "tags" %}
     {% assign site_posts = site.posts | where_exp: "item", "item.tags contains page.title" %}
   {% else %}
     {% assign site_posts = site.posts %}

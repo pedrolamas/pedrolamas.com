@@ -89,6 +89,9 @@
   {% if page_image %}
     <meta property="og:image" content="{{ page_image }}" />
   {% endif %}
+  {% if site.lang %}
+    <meta property="og:locale" content="{{ site.lang | replace: '-', '_' }}" />
+  {% endif %}
 
   {% if site.facebook %}
     {% if site.facebook.admins %}
