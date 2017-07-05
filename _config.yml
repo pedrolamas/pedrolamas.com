@@ -5,7 +5,7 @@ lang:             en-US
 timezone:         Europe/London
 logo:             /logo.jpg
 feedurl:          http://feeds.feedburner.com/pedrolamascom
-disclaimer:       This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](https://creativecommons.org/licenses/by-sa/3.0/) except where otherwise noted. Unless specified, all source code on this site is licensed under the [MIT license](https://sm.mit-license.org/).
+disclaimer:       This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](https://creativecommons.org/licenses/by-sa/3.0/) except where otherwise noted. Unless specified, all source code on this site is licensed under the [MIT license](https://www.pedrolamas.com/LICENSE.txt).
 
 author:
   name:           Pedro Lamas
