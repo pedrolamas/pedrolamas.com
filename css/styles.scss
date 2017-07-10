@@ -16,6 +16,27 @@ code, pre {
   font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
 }
 
+figure {
+  margin: 0 0 1rem;
+
+  img {
+    margin: 0;
+  }
+}
+
+figcaption {
+  font-size: 80%;
+  font-style: italic;
+  margin: 5px 0 0 5px;
+  color: #999;
+
+  &:before {
+    content: '\f129';
+    font-family: FontAwesome;
+    margin-right: 5px;
+  }
+}
+
 .sidebar-about {
   img {
     width: 100px;
