@@ -4,9 +4,10 @@ layout: default
 
 <main role="main">
   {% for post in paginator.posts %}
-    <article class="post">
+    {% assign post_id = post.id | replace: '/', '-' %}
+    <article id="post{{ post_id }}" class="post post{{ post_id }}">
       <header class="post-header">
-        <h1 class="post-title"><a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title }}</a></h1>
+        <h1 class="post-title"><a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title | smartify }}</a></h1>
       </header>
 
       {% include article.html article=post %}

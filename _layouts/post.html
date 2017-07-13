@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign post_id =               post.id | replace: '/', '-' %}
 {% assign author_picture =        site.author.picture %}
 {% if author_picture %}
 {%   unless author_picture contains '://' %}
@@ -8,9 +9,9 @@ layout: default
 {%   endunless %}
 {% endif %}
 <main role="main">
-  <article class="post">
+  <article id="post{{ post_id }}" class="post post{{ post_id }}">
     <header class="post-header">
-      <h1 class="post-title">{{ page.title }}</h1>
+      <h1 class="post-title">{{ page.title | smartify }}</h1>
     </header>
 
     {% include article.html article=page %}
@@ -60,8 +61,8 @@ layout: default
         <h2 aria-hidden="true">Previous</h2>
         <span class="screen-reader-text2">Previous post:</span>
         <h3 class="post-entry">
-          <a href="{{ page.previous.url | relative_url }}" title="Previous Post: {{ page.previous.title }}">
-            {{ page.previous.title }}
+          <a href="{{ page.previous.url | relative_url }}" title="Previous Post: {{ page.previous.title | smartify }}">
+            {{ page.previous.title | smartify }}
             <small>{{ page.previous.date | date: "%B %-d, %Y" }}</small>
           </a>
         </h3>
@@ -70,8 +71,8 @@ layout: default
         <h2 aria-hidden="true">Next</h2>
         <span class="screen-reader-text">Next post:</span>
         <h3 class="post-entry">
-          <a href="{{ page.next.url | relative_url }}" title="Next Post: {{ page.next.title }}">
-            {{ page.next.title }}
+          <a href="{{ page.next.url | relative_url }}" title="Next Post: {{ page.next.title | smartify }}">
+            {{ page.next.title | smartify }}
             <small>{{ page.next.date | date: "%B %-d, %Y" }}</small>
           </a>
         </h3>
