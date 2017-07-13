@@ -1,5 +1,11 @@
   - title:    About
     url:      /about/
+    sub:
+      - title:    Microsoft Certified Professional (MCP) Transcript
+        url:      /about/mcp-transcript/
+      
+      - title:    PGP Public Key
+        url:      /about/pgp-public-key/
     
   - title:    Windows Phone
     url:      /windows-phone/
