@@ -4,11 +4,6 @@
 {%     assign site_logo = site_logo | relative_url %}
 {%   endunless %}
 {% endif %}
-{% assign site_feed =             site.feedurl | default: site.feed.path | default: '/feed.xml' %}
-{% unless site_feed contains '://' %}
-{%   assign site_feed =           site_feed | relative_url %}
-{% endunless %}
-{% assign site_feed =             site_feed | escape_once %}
 {% assign minimap_pages =         site.data.sitemap | where_exp: 'page', 'page.minimap != false' %}
 <aside class="sidebar" role="complementary">
   <div class="container sidebar-sticky">
@@ -41,7 +36,7 @@
         {% endif %}
         <a class="sidebar-social-item" href="{{ link }}" title="{{ link_title }}"><span class="screen-reader-text">{{ link_title }}</span></a>
       {% endfor %}
-      <a class="sidebar-social-item" href="{{ site_feed }}" title="Atom Feed"><span class="screen-reader-text">Atom Feed</span></a>
+      <a class="sidebar-social-item" href="{{ '/feed.xml' | relative_url }}" title="Atom Feed"><span class="screen-reader-text">Atom Feed</span></a>
     </nav>
 
     {% if site.sidebar.logos %}
