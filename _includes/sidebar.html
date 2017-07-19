@@ -19,7 +19,7 @@
 
     <nav class="sidebar-nav" role="navigation" aria-label="Primary Menu">
       {% for page in minimap_pages %}
-        <a class="sidebar-nav-item" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+        <a class="sidebar-nav-item" href="{{ page.url | relative_url }}">{{ page.title }}</a>
       {% endfor %}
     </nav>
     
@@ -36,7 +36,7 @@
         {% endif %}
         <a class="sidebar-social-item" href="{{ link }}" title="{{ link_title }}"><span class="screen-reader-text">{{ link_title }}</span></a>
       {% endfor %}
-      <a class="sidebar-social-item" href="{{ '/feed.xml' | relative_url }}" title="Atom Feed"><span class="screen-reader-text">Atom Feed</span></a>
+      <a class="sidebar-social-item" href="{{ '/feeds' | relative_url }}" title="Syndicated Feeds"><span class="screen-reader-text">Syndicated Feeds</span></a>
     </nav>
 
     {% if site.sidebar.logos %}

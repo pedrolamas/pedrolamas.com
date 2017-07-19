@@ -63,6 +63,10 @@
 
   - title:    Archive
     url:      /archive/
+  
+  - title:    Syndicated Feeds
+    url:      /feeds/
+    minimap:  false
 
   - title:    Site Map
     url:      /sitemap/
