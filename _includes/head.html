@@ -12,7 +12,7 @@
 {% assign page_title =            page.title | default: site.title | smartify | strip_html | normalize_whitespace | escape_once %}
 {% assign page_description =      page.description | default: page.excerpt | default: site.description | markdownify | strip_html | normalize_whitespace | escape_once %}
 {% assign page_url =              page.url | absolute_url %}
-{% assign page_image =            page.image | default: site.logo %}
+{% assign page_image =            page.image.path | page.image | default: site.logo %}
 {% if page_image %}
 {%   unless page_image contains '://' %}
 {%     assign page_image =         page_image | absolute_url %}
