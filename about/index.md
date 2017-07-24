@@ -16,7 +16,7 @@ By the end of 2014, I decided to move to London where I started working for [Sky
 
 In September 2015 I wanted to start something new and exciting, so I took the leap to create my own company, [Ample Roads](http://www.ampleroads.com), and go contracting, starting to work in Windows 10 development for Microsoft in their Reading HQ.
 
-I'm a [Microsoft Certified Professional]({{ site.baseurl }}{% link about/mcp-transcript.md %}) and a [Microsoft Windows Development MVP]({{ site.baseurl }}{% post_url 2017-03-02-awarded-microsoft-windows-development-mvp-2017 %})!
+I'm a [Microsoft Certified Professional]({{ site.baseurl }}{% link about/mcp-transcript.md %}), a [Xamarin Certified Mobile Developer]({{ site.baseurl }}{% post_url 2017-08-24-xamarin-certified-mobile-developer %}), and a [Microsoft Windows Development MVP]({{ site.baseurl }}{% post_url 2017-03-02-awarded-microsoft-windows-development-mvp-2017 %})!
 
 ## You might also want to check...
 
