@@ -7,7 +7,7 @@ layout: default
     {% assign post_id = post.id | replace: '/', '-' %}
     <article id="post{{ post_id }}" class="post post{{ post_id }}">
       <header class="post-header">
-        <h1 class="post-title"><a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title | smartify }}</a></h1>
+        <h1 class="post-title"><a href="{{ post.url | absolute_url }}" rel="bookmark">{{ post.title | smartify }}</a></h1>
       </header>
 
       {% include article.html article=post %}
@@ -16,12 +16,12 @@ layout: default
 
   <nav class="pagination">
     {% if paginator.next_page %}
-      <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">Older</a>
+      <a class="pagination-item older" href="{{ paginator.next_page_path | absolute_url }}">Older</a>
     {% else %}
       <span class="pagination-item older">Older</span>
     {% endif %}
     {% if paginator.previous_page %}
-      <a class="pagination-item newer" href="{{ paginator.previous_page_path | relative_url }}">Newer</a>
+      <a class="pagination-item newer" href="{{ paginator.previous_page_path | absolute_url }}">Newer</a>
     {% else %}
       <span class="pagination-item newer">Newer</span>
     {% endif %}

@@ -22,7 +22,7 @@ layout: page
   {% endif %}
   <li>
     <h3 class="post-entry">
-      <a href="{{ post.url | relative_url }}">
+      <a href="{{ post.url | absolute_url }}">
         {{ post.title }}
         <small>{{ post.date | date: "%B %-d, %Y" }}</small>
       </a>

@@ -5,7 +5,7 @@ layout: default
 {% assign author_picture =        site.author.picture %}
 {% if author_picture %}
 {%   unless author_picture contains '://' %}
-{%     assign author_picture =    author_picture | relative_url %}
+{%     assign author_picture =    author_picture | absolute_url %}
 {%   endunless %}
 {% endif %}
 <main role="main">
@@ -61,7 +61,7 @@ layout: default
         <h2 aria-hidden="true">Previous</h2>
         <span class="screen-reader-text2">Previous post:</span>
         <h3 class="post-entry">
-          <a href="{{ page.previous.url | relative_url }}" title="Previous Post: {{ page.previous.title | smartify }}">
+          <a href="{{ page.previous.url | absolute_url }}" title="Previous Post: {{ page.previous.title | smartify }}">
             {{ page.previous.title | smartify }}
             <small>{{ page.previous.date | date: "%B %-d, %Y" }}</small>
           </a>
@@ -71,7 +71,7 @@ layout: default
         <h2 aria-hidden="true">Next</h2>
         <span class="screen-reader-text">Next post:</span>
         <h3 class="post-entry">
-          <a href="{{ page.next.url | relative_url }}" title="Next Post: {{ page.next.title | smartify }}">
+          <a href="{{ page.next.url | absolute_url }}" title="Next Post: {{ page.next.title | smartify }}">
             {{ page.next.title | smartify }}
             <small>{{ page.next.date | date: "%B %-d, %Y" }}</small>
           </a>

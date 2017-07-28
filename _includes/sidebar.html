@@ -1,7 +1,7 @@
 {% assign site_logo = site.logo %}
 {% if site_logo %}
 {%   unless site_logo contains '://' %}
-{%     assign site_logo = site_logo | relative_url %}
+{%     assign site_logo = site_logo | absolute_url %}
 {%   endunless %}
 {% endif %}
 {% assign minimap_pages =         site.data.sitemap | where_exp: 'page', 'page.minimap != false' %}
@@ -19,7 +19,7 @@
 
     <nav class="sidebar-nav" role="navigation" aria-label="Primary Menu">
       {% for page in minimap_pages %}
-        <a class="sidebar-nav-item" href="{{ page.url | relative_url }}">{{ page.title }}</a>
+        <a class="sidebar-nav-item" href="{{ page.url | absolute_url }}">{{ page.title }}</a>
       {% endfor %}
     </nav>
     
@@ -36,7 +36,7 @@
         {% endif %}
         <a class="sidebar-social-item" href="{{ link }}" title="{{ link_title }}"><span class="screen-reader-text">{{ link_title }}</span></a>
       {% endfor %}
-      <a class="sidebar-social-item" href="{{ '/feeds' | relative_url }}" title="Syndicated Feeds"><span class="screen-reader-text">Syndicated Feeds</span></a>
+      <a class="sidebar-social-item" href="{{ '/feeds' | absolute_url }}" title="Syndicated Feeds"><span class="screen-reader-text">Syndicated Feeds</span></a>
     </nav>
 
     {% if site.sidebar.logos %}
@@ -44,7 +44,7 @@
         {% for logo in site.sidebar.logos %}
           {% assign logo_url = logo.url %}
           {% unless logo_url contains '://' %}
-          {%   assign logo_url = logo_url | relative_url %}
+          {%   assign logo_url = logo_url | absolute_url %}
           {% endunless %}
           <img src="{{ logo_url }}" {% if logo.title %}title="{{ logo.title }}"{% endif %} />
         {% endfor %}
