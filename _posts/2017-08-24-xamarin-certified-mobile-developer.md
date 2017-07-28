@@ -10,7 +10,7 @@ tags:
 ---
 A couple of weeks ago I decided to enroll into [Xamarin University](https://university.xamarin.com/) and after a few classes and a final exam, I'm now a **Xamarin Certified Mobile Developer**!
 
-![Xamarin Certified Mobile Developer certificate](/wp-content/uploads/2017/07/Xamarin-Certified-Mobile-Developer-certificate.png)
+![Xamarin Certified Mobile Developer certificate](https://www.pedrolamas.com/wp-content/uploads/2017/07/Xamarin-Certified-Mobile-Developer-certificate.png)
 
 I love Windows Development and make no mistake: I intend to keep writing and working with full native UWP!!
 
