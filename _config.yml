@@ -75,7 +75,7 @@ exclude:
 sass:
   style:          compressed
 
-gems:
+plugins:
   - jekyll-redirect-from
   - jekyll-github-metadata
   - jekyll-feed

@@ -3,7 +3,7 @@ layout: null
 ---
 {
   "version": "https://jsonfeed.org/version/1",
-  {% assign site_title = site.title | site.name %}
+  {% assign site_title = site.title | default: site.name %}
   {% if site_title %}
     "title": {{ site_title | smartify | jsonify }},
   {% endif %}
