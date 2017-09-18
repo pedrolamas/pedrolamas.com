@@ -4,7 +4,7 @@ title: Xamarin Certified Mobile Developer
 date: 2017-07-24T12:26:27+01:00
 image: /wp-content/uploads/2017/07/Xamarin-Certified-Mobile-Developer.png
 categories:
- - Uncategorized
+ - Xamarin
 tags:
  - Xamarin
 ---
