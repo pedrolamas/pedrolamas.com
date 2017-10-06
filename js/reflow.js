@@ -7,6 +7,7 @@
 
   function _processPost(post) {
     _iterate(post.getElementsByTagName("img"), _processImage);
+    _iterate(post.getElementsByTagName("time"), _processTime);
   }
 
   function _processImage(image) {
@@ -37,6 +38,21 @@
     figure.appendChild(figcaption);
     
     figcaption.appendChild(document.createTextNode(alt));
+  }
+
+  function _processTime(time) {
+    var datetime = new Date(time.getAttribute("datetime"));
+
+    var container = time.parentNode;
+
+    var link = document.createElement("a");
+
+    link.href = "https://www.timeanddate.com/worldclock/fixedtime.html?iso=" + datetime.toISOString();
+    link.title = datetime.toLocaleString();
+
+    container.replaceChild(link, time);
+
+    link.appendChild(time);
   }
 
   _iterate(document.getElementsByClassName("post-content"), _processPost);
