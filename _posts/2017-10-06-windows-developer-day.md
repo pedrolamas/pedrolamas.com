@@ -18,8 +18,8 @@ You might also want to check if there's a viewing party in your area (check on t
 
 ## And if you're around London on the next day...
 
-... you might want to come to the next [Windows Apps London](https://www.meetup.com/wpuguk/) meetup at <time datetime="2017-10-11T17:30:00Z">6:30 PM on October 11</time>, and meet the Windows engineering team!
+... come to the next [Windows Apps London](https://www.meetup.com/wpuguk/) meetup at <time datetime="2017-10-11T17:30:00Z">6:30 PM on October 11</time> and meet the Windows engineering team!
 
-This will be a relaxed in-person event, where you'll get to ask a few more questions after the main Windows Developer Day!
+This is a relaxed in-person event, where you'll get to ask a few more questions after the main Windows Developer Day!
 
 Please check [here](https://www.meetup.com/wpuguk/events/243674562/) for more details and registration.
