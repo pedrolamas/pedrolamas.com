@@ -2,6 +2,7 @@
 id: 4320
 title: Compiled Bindings considerations II
 date: 2016-01-08T16:02:34+00:00
+last_modified_at: 2018-01-31T23:45:00+00:00
 author: Pedro Lamas
 layout: post
 guid: https://www.pedrolamas.com/?p=4320
@@ -21,6 +22,8 @@ tags:
   - WPDev
   - x:Bind
 ---
+**Update:** Microsoft has finally provided a fix for this bug, covered in the [Compiled Bindings considerations III](https://www.pedrolamas.com/2018/01/31/compiled-bindings-considerations-iii/) article!
+
 A few months ago I wrote my first [Compiled Bindings considerations](https://www.pedrolamas.com/2015/10/19/compiled-bindings-considerations/) article, and seems that time has come to write some more, only this time I'm bearer of some bad news...
 
 ## TL;DR
