@@ -66,6 +66,9 @@ defaults:
     values:
       layout:     archive
 
+include:
+  - .well-known
+
 exclude:
   - README.md
   - CNAME
