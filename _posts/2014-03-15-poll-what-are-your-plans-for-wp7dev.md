@@ -2,6 +2,7 @@
 id: 3931
 title: 'Poll: What are your plans for #wp7dev'
 date: 2014-03-15T14:22:03+00:00
+last_modified_at: 2018-03-16T00:42:20+00:00
 author: Pedro Lamas
 layout: post
 guid: http://www.pedrolamas.com/?p=3931
@@ -26,4 +27,5 @@ The upcoming 4.x would have WP8 and WP Blue support, allowing for a more future 
 
 To actually understand the position of the Windows Phone developers about WP7 development, I started a poll that I now invite you to answer! :)
 
-[polldaddy poll="7881681"]
+<script type="text/javascript" charset="utf-8" src="https://secure.polldaddy.com/p/7881681.js"></script>
+<noscript><a href="https://polldaddy.com/poll/7881681/">What are your plans for #wp7dev</a></noscript>
