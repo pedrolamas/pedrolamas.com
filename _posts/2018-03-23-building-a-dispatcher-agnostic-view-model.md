@@ -50,7 +50,7 @@ public class MainViewModel : BaseViewModel
 
     public async Task RetrieveData()
     {
-        var data = await GetDataFromSomeWebsite();
+        var data = await GetDataFromSomeWebsite().ConfigureAwait(false);
 
         Result = data;
     }
@@ -72,7 +72,7 @@ With some minor changes, the `MainViewModel.RetrieveData` method now looks somet
 ```csharp
 public async Task RetrieveData()
 {
-    var data = await GetDataFromSomeWebsite();
+    var data = await GetDataFromSomeWebsite().ConfigureAwait(false);
 
     CoreApplication.MainView.Dispatcher(CoreDispatcherPriority.Normal, () => 
     {
