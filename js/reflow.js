@@ -13,7 +13,7 @@
   function _processImage(image) {
     var alt = image.alt;
         
-    if (alt == '') {
+    if (alt == '' || image.className == "emoji") {
       return;
     }
       
