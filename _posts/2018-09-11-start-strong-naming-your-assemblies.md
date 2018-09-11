@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Start Strong-Naming your Assemblies!
-date: 2018-09-07T15:00:17+01:00
+date: 2018-09-11T16:25:01+01:00
+image: /wp-content/uploads/2018/09/Keep-Calm-And-Strong-Name-Assemblies.png
 categories:
   - Windows
 tags:
