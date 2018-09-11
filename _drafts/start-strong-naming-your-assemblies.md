@@ -49,7 +49,7 @@ While Windows 10 UWP and Xamarin completely ignore any strong-name information i
 
 In fact, .NET Core enforces all assemblies to be strong-named (they even have a [document](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md) describing this requirement).
 
-NuGet will also ensure that binding redirections are automatically created when you add packages to your project!
+NuGet does help by automatically creating binding redirections when you add packages to your project!
 
 ## The GAC is still very well alive
 
@@ -62,5 +62,7 @@ The GAC requires strong-named assemblies, so there is still a real use case for 
 I'm taking a leap of faith that all currently supported frameworks and all future ones will provide mechanisms to ignore strong-name info in assemblies, or just allow to use redirections.
 
 If that proves true, then yes: you should strong-name your assemblies as that will allow more people to use them.
+
+To those still skeptical of strong-naming their assemblies, I propose a compromise solution: do strong-name your assemblies, but only increment the assembly version for major releases! [Json.NET](https://www.newtonsoft.com/json) has been using this approach to avoid binding redirects since 2014, and as far as I can tell, with relative success!
 
 As a final note to open-source library developers, *I strongly recommend that the strong-name key file gets check-in to the project repository* so that anyone can easily clone the project and compile a version of the library that works with anyone else's binaries!
