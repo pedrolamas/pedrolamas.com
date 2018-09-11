@@ -22,6 +22,8 @@ tags:
   - Windows
   - Windows 10
 ---
+**Update:** Though the information and concerns in this blog post are still very true, I've actually had a change of heart and I'm now advocating to [Start Strong-Naming your Assemblies!](https://www.pedrolamas.com/2018/09/11/start-strong-naming-your-assemblies/)!
+
 For far to long, Strong-Named Assemblies have been a huge rock in the shoe of 3rd party library developers, but people: it's 2016, so why are you still using it?
 
 ## How it all started...
