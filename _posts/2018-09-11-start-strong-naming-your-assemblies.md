@@ -48,7 +48,7 @@ For much that hurts me to say this(!), Silverlight and Windows Phone are dead pl
 
 While Windows 10 UWP and Xamarin completely ignore any strong-name information in the referenced assemblies, .NET Core has mechanisms to automatically redirect all references.
 
-In fact, .NET Core enforces all assemblies to be strong-named (they even have a [document](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md) describing this requirement).
+In fact, .NET Core enforces all their assemblies to be strong-named (they even have a [document](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md) describing this requirement).
 
 NuGet does help by automatically creating binding redirections when you add packages to your project!
 
