@@ -4,7 +4,7 @@ title: Review of my WPUG talk
 date: 2013-05-24T12:27:20+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=1071
+guid: https://www.pedrolamas.com/?p=1071
 permalink: /2013/05/24/review-of-my-wpug-talk/
 dsq_thread_id:
   - 2061027352

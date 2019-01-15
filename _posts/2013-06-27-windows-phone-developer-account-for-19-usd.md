@@ -4,7 +4,7 @@ title: Windows Phone Developer account for $19 USD
 date: 2013-06-27T21:46:58+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=1341
+guid: https://www.pedrolamas.com/?p=1341
 permalink: /2013/06/27/windows-phone-developer-account-for-19-usd/
 dsq_thread_id:
   - 2052583151

@@ -4,7 +4,7 @@ title: Cimbalino Windows Phone Toolkit Updated to v3.2.0
 date: 2013-11-04T11:54:43+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=3321
+guid: https://www.pedrolamas.com/?p=3321
 permalink: /2013/11/04/cimbalino-windows-phone-toolkit-updated-to-v3-2-0/
 dsq_thread_id:
   - 2050296744

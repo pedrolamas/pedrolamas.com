@@ -4,7 +4,7 @@ title: Cimbalino Toolkit 1.0.0
 date: 2014-07-24T11:25:36+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=3987
+guid: https://www.pedrolamas.com/?p=3987
 permalink: /2014/07/24/cimbalino-toolkit-1-0-0/
 fb_fan_page_post_id:
   - 150703221746608_339703969513198
@@ -41,7 +41,7 @@ There was also some limitations on the available API's for Background Agents and
 
 So the toolkit ended up divided like so:
 
-[![Cimbalino Windows Phone Toolkit](http://www.pedrolamas.com/wp-content/uploads/2014/07/Cimbalino-Windows-Phone-Toolkit-thumb.png)](http://www.pedrolamas.com/wp-content/uploads/2014/07/Cimbalino-Windows-Phone-Toolkit.png)
+[![Cimbalino Windows Phone Toolkit](https://www.pedrolamas.com/wp-content/uploads/2014/07/Cimbalino-Windows-Phone-Toolkit-thumb.png)](https://www.pedrolamas.com/wp-content/uploads/2014/07/Cimbalino-Windows-Phone-Toolkit.png)
 
 In light blue are the components that may be used with Background Agents. The rest of the components are divided by Capabilities or 3rd party components requirements.
 

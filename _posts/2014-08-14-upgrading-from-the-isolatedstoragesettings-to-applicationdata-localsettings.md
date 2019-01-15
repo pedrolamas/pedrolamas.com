@@ -4,7 +4,7 @@ title: Upgrading from the IsolatedStorageSettings to ApplicationData.LocalSettin
 date: 2014-08-14T14:11:26+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=4011
+guid: https://www.pedrolamas.com/?p=4011
 permalink: /2014/08/14/upgrading-from-the-isolatedstoragesettings-to-applicationdata-localsettings/
 fb_fan_page_post_id:
   - 150703221746608_346592042157724

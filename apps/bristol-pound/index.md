@@ -4,7 +4,7 @@ title: Bristol Pound
 date: 2013-08-04T10:17:59+00:00
 author: Pedro Lamas
 layout: page
-guid: http://www.pedrolamas.com/?page_id=2021
+guid: https://www.pedrolamas.com/?page_id=2021
 dsq_thread_id:
   - 4544602232
 ---

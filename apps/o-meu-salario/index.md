@@ -4,7 +4,7 @@ title: O meu Salário
 date: 2013-08-04T10:21:41+00:00
 author: Pedro Lamas
 layout: page
-guid: http://www.pedrolamas.com/?page_id=2051
+guid: https://www.pedrolamas.com/?page_id=2051
 dsq_thread_id:
   - 3117528516
 ---

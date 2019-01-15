@@ -4,7 +4,7 @@ title: The Other Side
 date: 2013-08-04T10:27:20+00:00
 author: Pedro Lamas
 layout: page
-guid: http://www.pedrolamas.com/?page_id=2141
+guid: https://www.pedrolamas.com/?page_id=2141
 ---
 Check what's on The Other Side of your location!
 

@@ -4,7 +4,7 @@ title: Windows Phone 7.1 Application Bar Icons
 date: 2013-01-07T16:27:49+00:00
 author: Pedro Lamas
 layout: page
-guid: http://www.pedrolamas.com/?page_id=33
+guid: https://www.pedrolamas.com/?page_id=33
 fb_author_post_id:
   - 4740207657019
 dsq_thread_id:

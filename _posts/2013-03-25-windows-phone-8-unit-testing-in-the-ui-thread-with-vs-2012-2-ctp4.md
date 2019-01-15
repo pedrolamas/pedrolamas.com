@@ -4,7 +4,7 @@ title: Windows Phone 8 Unit Testing in the UI thread with VS 2012.2 CTP4
 date: 2013-03-25T12:37:34+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=239
+guid: https://www.pedrolamas.com/?p=239
 permalink: /2013/03/25/windows-phone-8-unit-testing-in-the-ui-thread-with-vs-2012-2-ctp4/
 dsq_thread_id:
   - 2053865941
@@ -25,7 +25,7 @@ If you've been following <a href="http://blogs.msdn.com/b/visualstudioalm/archiv
 
 Well, this seemed like the perfect opportunity to finally create some unit tests for the <a href="http://cimbalino.org">Cimbalino Windows Phone Toolkit</a> and test this new test framework, all at once!
 
-<img class="alignright size-full wp-image-174 clear" src="http://www.pedrolamas.com/wp-content/uploads/2013/02/Works-on-my-machine.png" alt="Works on my machine" width="200" height="193" />Given that this post will require installing the VS2012.2 CTP 4, a non-final preview version software that has a "go-live" license, I think it's only proper to apply the WOMM certification to it.
+<img class="alignright size-full wp-image-174 clear" src="https://www.pedrolamas.com/wp-content/uploads/2013/02/Works-on-my-machine.png" alt="Works on my machine" width="200" height="193" />Given that this post will require installing the VS2012.2 CTP 4, a non-final preview version software that has a "go-live" license, I think it's only proper to apply the WOMM certification to it.
 
 So bottom line, install it at your own risk!
 
@@ -59,7 +59,7 @@ This simple class will test the <code>ColorToBrushConverter.Convert</code> metho
 
 When I ran the test, this is what happened:
 
-<a href="http://www.pedrolamas.com/wp-content/uploads/2013/03/Windows-Phone-Unit-Test-results.png"><img class="alignnone size-full wp-image-242" src="http://www.pedrolamas.com/wp-content/uploads/2013/03/Windows-Phone-Unit-Test-results.png" alt="Windows Phone Unit Test results" width="691" height="437" /></a>
+<a href="https://www.pedrolamas.com/wp-content/uploads/2013/03/Windows-Phone-Unit-Test-results.png"><img class="alignnone size-full wp-image-242" src="https://www.pedrolamas.com/wp-content/uploads/2013/03/Windows-Phone-Unit-Test-results.png" alt="Windows Phone Unit Test results" width="691" height="437" /></a>
 
 As you can see here, we got an "Invalid cross-thread access" error message; this is the result of all tests running on a special "test app" inside the Emulator, but the really bad news is that they all run in a background thread.
 

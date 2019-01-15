@@ -4,7 +4,7 @@ title: 'Bye Nokia&#8230; Hello Microsoft!'
 date: 2014-04-25T13:53:45+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=3967
+guid: https://www.pedrolamas.com/?p=3967
 permalink: /2014/04/25/bye-nokia-hello-microsoft/
 dsq_thread_id:
   - 2638071127

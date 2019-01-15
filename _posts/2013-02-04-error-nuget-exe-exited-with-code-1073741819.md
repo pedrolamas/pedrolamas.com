@@ -4,7 +4,7 @@ title: 'Error: Nuget.exe exited with code -1073741819'
 date: 2013-02-04T20:06:21+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=132
+guid: https://www.pedrolamas.com/?p=132
 permalink: /2013/02/04/error-nuget-exe-exited-with-code-1073741819/
 dsq_thread_id:
   - 2046765333
@@ -17,7 +17,7 @@ tags:
 ---
 Lately I've been getting more and more this type of error from [Nuget](http://nuget.org) Package Restore when building my apps:
 
-[![NuGet -1073741819 error](http://www.pedrolamas.com/wp-content/uploads/2013/02/NuGet-1073741819-error.png)](http://www.pedrolamas.com/wp-content/uploads/2013/02/NuGet-1073741819-error.png)
+[![NuGet -1073741819 error](https://www.pedrolamas.com/wp-content/uploads/2013/02/NuGet-1073741819-error.png)](https://www.pedrolamas.com/wp-content/uploads/2013/02/NuGet-1073741819-error.png)
 
 This seems to be a completely random issue with Nuget, as I see it happening with different projects, and sometimes not even happening at all!
 

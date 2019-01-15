@@ -4,7 +4,7 @@ title: Assert.ThrowsException the async way
 date: 2013-04-30T17:19:37+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=601
+guid: https://www.pedrolamas.com/?p=601
 permalink: /2013/04/30/assert-throwsexception-the-async-way/
 dsq_thread_id:
   - 2069756678
@@ -27,7 +27,7 @@ I particularly like the fact that all tests run on the emulator where they can g
 
 Yet, the test framework still has some pitfalls where we realize it is just not enough!
 
-A few weeks ago I wrote an [article](http://www.pedrolamas.com/2013/03/25/windows-phone-8-unit-testing-in-the-ui-thread-with-vs-2012-2-ctp4/) about one of these pitfalls, on how to run code in the UI Thread.
+A few weeks ago I wrote an [article](https://www.pedrolamas.com/2013/03/25/windows-phone-8-unit-testing-in-the-ui-thread-with-vs-2012-2-ctp4/) about one of these pitfalls, on how to run code in the UI Thread.
 
 Now I've stumbled in yet another pitfall, this time on how to run the `Assert.ThrowsException` with `async` code!
 

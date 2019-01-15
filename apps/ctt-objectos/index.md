@@ -4,7 +4,7 @@ title: CTT Objectos
 date: 2013-08-04T10:25:57+00:00
 author: Pedro Lamas
 layout: page
-guid: http://www.pedrolamas.com/?page_id=2111
+guid: https://www.pedrolamas.com/?page_id=2111
 dsq_thread_id:
   - 2448519853
 ---

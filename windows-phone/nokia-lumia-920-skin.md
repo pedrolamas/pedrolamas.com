@@ -4,7 +4,7 @@ title: Nokia Lumia 920 Skin
 date: 2013-01-09T00:09:17+00:00
 author: Pedro Lamas
 layout: page
-guid: http://www.pedrolamas.com/?page_id=69
+guid: https://www.pedrolamas.com/?page_id=69
 fb_author_post_id:
   - 4747370916096
 dsq_thread_id:

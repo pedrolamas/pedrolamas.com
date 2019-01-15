@@ -4,7 +4,7 @@ title: Awarded Microsoft Windows Development MVP 2017
 date: 2017-03-02T10:17:20+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=2881
+guid: https://www.pedrolamas.com/?p=2881
 permalink: /2017/03/02/awarded-microsoft-windows-development-mvp-2017/
 instant_articles_submission_id:
   - "669311863241153"

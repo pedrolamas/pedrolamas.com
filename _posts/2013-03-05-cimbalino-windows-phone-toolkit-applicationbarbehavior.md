@@ -4,7 +4,7 @@ title: 'Cimbalino Windows Phone Toolkit: ApplicationBarBehavior'
 date: 2013-03-05T10:05:31+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=20
+guid: https://www.pedrolamas.com/?p=20
 permalink: /2013/03/05/cimbalino-windows-phone-toolkit-applicationbarbehavior/
 dsq_thread_id:
   - 2045483689
@@ -19,7 +19,7 @@ tags:
   - WP8
   - WPDev
 ---
-[![Cimbalino Windows Phone Toolkit](http://www.pedrolamas.com/wp-content/uploads/2013/03/Cimbalino-Windows-Phone-Toolkit-150x150.png)](http://cimbalino.org)The Windows Phone Application Bar has been a true headache for developers since day one, given that this object is not a [FrameworkElement](http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.windows.frameworkelement(v=vs.105).aspx).
+[![Cimbalino Windows Phone Toolkit](https://www.pedrolamas.com/wp-content/uploads/2013/03/Cimbalino-Windows-Phone-Toolkit-150x150.png)](http://cimbalino.org)The Windows Phone Application Bar has been a true headache for developers since day one, given that this object is not a [FrameworkElement](http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.windows.frameworkelement(v=vs.105).aspx).
 
 What this means is that we are unable to apply Styles or Templates to an [ApplicationBar](http://msdn.microsoft.com/en-us/library/windowsphone/develop/microsoft.phone.shell.applicationbar%28v=vs.105%29.aspx) object, but most important, we are unable to bind to its properties, something that is a big issue when you what to use MVVM pattern in you apps.
 

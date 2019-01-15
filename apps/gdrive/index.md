@@ -4,7 +4,7 @@ title: GDrive
 date: 2013-08-03T01:34:00+00:00
 author: Pedro Lamas
 layout: page
-guid: http://www.pedrolamas.com/?page_id=1901
+guid: https://www.pedrolamas.com/?page_id=1901
 dsq_thread_id:
   - 2074183805
 ---

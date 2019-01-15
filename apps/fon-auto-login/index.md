@@ -4,7 +4,7 @@ title: Fon Auto-Login
 date: 2013-08-03T01:36:17+00:00
 author: Pedro Lamas
 layout: page
-guid: http://www.pedrolamas.com/?page_id=1931
+guid: https://www.pedrolamas.com/?page_id=1931
 dsq_thread_id:
   - 2309124443
 ---

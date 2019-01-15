@@ -5,7 +5,7 @@ date: 2014-03-15T14:22:03+00:00
 last_modified_at: 2018-03-16T00:42:20+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=3931
+guid: https://www.pedrolamas.com/?p=3931
 permalink: /2014/03/15/poll-what-are-your-plans-for-wp7dev/
 dsq_thread_id:
   - 2436253614

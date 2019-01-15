@@ -4,7 +4,7 @@ title: Quadratic Solver
 date: 2013-08-04T10:15:49+00:00
 author: Pedro Lamas
 layout: page
-guid: http://www.pedrolamas.com/?page_id=1991
+guid: https://www.pedrolamas.com/?page_id=1991
 ---
 Learn how to solve the quadratic equation, step by step!
 

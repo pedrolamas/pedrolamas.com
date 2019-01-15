@@ -4,7 +4,7 @@ title: 'Geosense: Privacy Policy'
 date: 2013-08-27T23:39:46+00:00
 author: Pedro Lamas
 layout: page
-guid: http://www.pedrolamas.com/?page_id=2811
+guid: https://www.pedrolamas.com/?page_id=2811
 sharing_disabled:
   - 1
 ---

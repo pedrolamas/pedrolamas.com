@@ -4,7 +4,7 @@ title: Disabling screenshot functionality in a Windows Phone app
 date: 2014-01-20T09:58:31+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=3895
+guid: https://www.pedrolamas.com/?p=3895
 permalink: /2014/01/20/disabling-screenshot-functionality-in-a-windows-phone-app/
 dsq_thread_id:
   - 2148030133
@@ -90,10 +90,10 @@ public partial class MainPage : PhoneApplicationPage
 
 If you do try to take a screenshot after that code, this is what will happen:
 
-[![Application screenshot functionality disabled](http://www.pedrolamas.com/wp-content/uploads/2014/01/Application-screenshot-functionality-disabled-180x300.png)](http://www.pedrolamas.com/wp-content/uploads/2014/01/Application-screenshot-functionality-disabled.png)
+[![Application screenshot functionality disabled](https://www.pedrolamas.com/wp-content/uploads/2014/01/Application-screenshot-functionality-disabled-180x300.png)](https://www.pedrolamas.com/wp-content/uploads/2014/01/Application-screenshot-functionality-disabled.png)
 
 The same result will happen from the application switcher screen:
 
-[![Task switcher screenshot functionality disabled](http://www.pedrolamas.com/wp-content/uploads/2014/01/Task-switcher-screenshot-functionality-disabled-180x300.png)](http://www.pedrolamas.com/wp-content/uploads/2014/01/Task-switcher-screenshot-functionality-disabled.png)
+[![Task switcher screenshot functionality disabled](https://www.pedrolamas.com/wp-content/uploads/2014/01/Task-switcher-screenshot-functionality-disabled-180x300.png)](https://www.pedrolamas.com/wp-content/uploads/2014/01/Task-switcher-screenshot-functionality-disabled.png)
 
 Nowadays, privacy has become the #1 concern in everything we do, and I'm sure this is a really useful information for a bunch of apps out there (looking at you 6snap and all other Snapchat apps ;) )

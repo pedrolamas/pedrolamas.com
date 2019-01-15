@@ -4,7 +4,7 @@ title: The PhoneApplicationFrame bug is still alive!
 date: 2013-01-07T11:25:41+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=22
+guid: https://www.pedrolamas.com/?p=22
 permalink: /2013/01/07/the-phoneapplicationframe-bug-is-still-alive/
 dsq_thread_id:
   - 2045483701

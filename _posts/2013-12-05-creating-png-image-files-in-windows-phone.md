@@ -4,7 +4,7 @@ title: Creating PNG image files in Windows Phone
 date: 2013-12-05T13:04:46+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=3611
+guid: https://www.pedrolamas.com/?p=3611
 permalink: /2013/12/05/creating-png-image-files-in-windows-phone/
 dsq_thread_id:
   - 2045472277

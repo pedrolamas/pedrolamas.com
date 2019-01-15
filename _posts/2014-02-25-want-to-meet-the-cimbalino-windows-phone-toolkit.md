@@ -4,7 +4,7 @@ title: Want to meet the Cimbalino Windows Phone Toolkit?
 date: 2014-02-25T11:51:01+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=3920
+guid: https://www.pedrolamas.com/?p=3920
 permalink: /2014/02/25/want-to-meet-the-cimbalino-windows-phone-toolkit/
 dsq_thread_id:
   - 2318045170

@@ -4,7 +4,7 @@ title: Windows Phone URI association deep links and the ampersand
 date: 2013-09-11T18:02:08+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=2931
+guid: https://www.pedrolamas.com/?p=2931
 permalink: /2013/09/11/windows-phone-uri-association-deep-links-and-the-ampersand/
 dsq_thread_id:
   - 2045937682

@@ -4,7 +4,7 @@ title: Nokia Lumia 800 Skin
 date: 2013-01-08T23:58:32+00:00
 author: Pedro Lamas
 layout: page
-guid: http://www.pedrolamas.com/?page_id=63
+guid: https://www.pedrolamas.com/?page_id=63
 fb_author_post_id:
   - 4747344355432
 dsq_thread_id:

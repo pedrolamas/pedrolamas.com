@@ -4,7 +4,7 @@ title: The AbandonedMutexException hoax!
 date: 2013-06-14T17:28:27+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=1251
+guid: https://www.pedrolamas.com/?p=1251
 permalink: /2013/06/14/the-abandonedmutexexception-hoax/
 dsq_thread_id:
   - 2048698355

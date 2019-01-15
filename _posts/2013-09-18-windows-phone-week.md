@@ -4,7 +4,7 @@ title: Windows Phone Week
 date: 2013-09-18T10:21:13+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=3151
+guid: https://www.pedrolamas.com/?p=3151
 permalink: /2013/09/18/windows-phone-week/
 dsq_thread_id:
   - 2053806437
@@ -17,7 +17,7 @@ tags:
   - WP8Dev
   - WPDev
 ---
-[![Windows Phone Week](http://www.pedrolamas.com/wp-content/uploads/2013/09/Windows-Phone-Week.png)](https://wpcommunityweek.eventday.com/)
+[![Windows Phone Week](https://www.pedrolamas.com/wp-content/uploads/2013/09/Windows-Phone-Week.png)](https://wpcommunityweek.eventday.com/)
 
 Directly from the [official site](https://wpcommunityweek.eventday.com/):
 

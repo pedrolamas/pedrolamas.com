@@ -4,7 +4,7 @@ title: The Windows Phone apps on my phone!
 date: 2013-12-30T11:20:54+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=3887
+guid: https://www.pedrolamas.com/?p=3887
 permalink: /2013/12/30/the-windows-phone-apps-on-my-phone/
 dsq_thread_id:
   - 2081524694

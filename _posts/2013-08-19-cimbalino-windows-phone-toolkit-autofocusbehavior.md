@@ -4,7 +4,7 @@ title: 'Cimbalino Windows Phone Toolkit: AutoFocusBehavior'
 date: 2013-08-19T12:33:58+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=2411
+guid: https://www.pedrolamas.com/?p=2411
 permalink: /2013/08/19/cimbalino-windows-phone-toolkit-autofocusbehavior/
 dsq_thread_id:
   - 2046954399

@@ -4,7 +4,7 @@ title: How to force a focused Textbox binding to update when I tap an app bar it
 date: 2013-01-11T17:11:24+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=75
+guid: https://www.pedrolamas.com/?p=75
 permalink: /2013/01/11/how-to-force-a-focused-textbox-binding-to-update-when-i-tap-an-app-bar-item/
 dsq_thread_id:
   - 2045483827

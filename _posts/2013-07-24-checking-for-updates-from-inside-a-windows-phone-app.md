@@ -4,7 +4,7 @@ title: Checking for updates from inside a Windows Phone app
 date: 2013-07-24T16:42:14+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=1551
+guid: https://www.pedrolamas.com/?p=1551
 permalink: /2013/07/24/checking-for-updates-from-inside-a-windows-phone-app/
 dsq_thread_id:
   - 2048129749

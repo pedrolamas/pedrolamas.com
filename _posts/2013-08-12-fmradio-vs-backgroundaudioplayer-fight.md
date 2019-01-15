@@ -4,7 +4,7 @@ title: 'FMRadio vs. BackgroundAudioPlayer&#8230; fight!!'
 date: 2013-08-12T10:00:47+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=2241
+guid: https://www.pedrolamas.com/?p=2241
 permalink: /2013/08/12/fmradio-vs-backgroundaudioplayer-fight/
 dsq_thread_id:
   - 2056177511

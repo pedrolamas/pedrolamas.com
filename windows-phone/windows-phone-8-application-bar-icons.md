@@ -4,7 +4,7 @@ title: Windows Phone 8 Application Bar Icons
 date: 2013-01-07T16:43:59+00:00
 author: Pedro Lamas
 layout: page
-guid: http://www.pedrolamas.com/?page_id=44
+guid: https://www.pedrolamas.com/?page_id=44
 fb_author_post_id:
   - 4740286538991
 dsq_thread_id:

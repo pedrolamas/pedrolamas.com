@@ -4,7 +4,7 @@ title: Geosense
 date: 2013-08-03T01:27:02+00:00
 author: Pedro Lamas
 layout: page
-guid: http://www.pedrolamas.com/?page_id=1861
+guid: https://www.pedrolamas.com/?page_id=1861
 dsq_thread_id:
   - 2704125345
 ---

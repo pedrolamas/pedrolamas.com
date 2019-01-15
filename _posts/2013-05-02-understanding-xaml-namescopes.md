@@ -4,7 +4,7 @@ title: Understanding XAML Namescopes
 date: 2013-05-02T13:31:31+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=481
+guid: https://www.pedrolamas.com/?p=481
 permalink: /2013/05/02/understanding-xaml-namescopes/
 dsq_thread_id:
   - 2046860376
@@ -68,7 +68,7 @@ The problem is that the page's LayoutRoot control gets a different XAML Namescop
 
 The following image illustrates the Namescope boundaries for a default new page:
 
-[![XAML Namescope boundaries thumb](http://www.pedrolamas.com/wp-content/uploads/2013/04/XAML-Namescope-boundaries-thumb.png)](http://www.pedrolamas.com/wp-content/uploads/2013/04/XAML-Namescope-boundaries.png)
+[![XAML Namescope boundaries thumb](https://www.pedrolamas.com/wp-content/uploads/2013/04/XAML-Namescope-boundaries-thumb.png)](https://www.pedrolamas.com/wp-content/uploads/2013/04/XAML-Namescope-boundaries.png)
 
 This is where the `NamescopeBinding` helper class makes its entry: just register an instance of this class as a page resource and bind the `NamescopeBinding.Source` property to the control you require outside the LayoutRoot XAML Namescope as shown in the sample code, and that's it!
 

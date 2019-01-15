@@ -4,7 +4,7 @@ title: Windows Phone Choosers with async/await
 date: 2013-01-08T12:04:04+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=53
+guid: https://www.pedrolamas.com/?p=53
 permalink: /2013/01/08/windows-phone-choosers-with-asyncawait/
 fb_author_post_id:
   - 4744536725243

@@ -4,7 +4,7 @@ title: 'Cimbalino Windows Phone Toolkit: MultiBindingBehavior'
 date: 2013-05-17T15:29:59+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=951
+guid: https://www.pedrolamas.com/?p=951
 permalink: /2013/05/17/cimbalino-windows-phone-toolkit-multibindingbehavior/
 dsq_thread_id:
   - 2046358152

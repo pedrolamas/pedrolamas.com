@@ -4,7 +4,7 @@ title: Cimbalino Windows Phone Toolkit Updated to v3.2.3
 date: 2014-04-11T11:00:50+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=3951
+guid: https://www.pedrolamas.com/?p=3951
 permalink: /2014/04/11/cimbalino-windows-phone-toolkit-updated-to-v3-2-3/
 dsq_thread_id:
   - 2603524557
@@ -23,7 +23,7 @@ tags:
 ---
 Version 3.2.3 of [**Cimbalino Windows Phone Toolkit**](http://cimbalino.org) is now available!
 
-As [previously indicated](http://www.pedrolamas.com/2014/03/15/poll-what-are-your-plans-for-wp7dev/), this will probably be the last version still supporting Windows Phone 7...
+As [previously indicated](https://www.pedrolamas.com/2014/03/15/poll-what-are-your-plans-for-wp7dev/), this will probably be the last version still supporting Windows Phone 7...
 
 Here's the change log starting from version 3.2.0 to the current 3.2.3:
 

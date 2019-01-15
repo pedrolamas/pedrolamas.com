@@ -4,7 +4,7 @@ title: The FrameworkElement.Language property and why should you care!
 date: 2013-01-16T15:48:43+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=90
+guid: https://www.pedrolamas.com/?p=90
 permalink: /2013/01/16/the-frameworkelement-language-property-and-why-should-you-care/
 dsq_thread_id:
   - 2057310772
@@ -91,7 +91,7 @@ public partial class MainPage : PhoneApplicationPage
 
 Finally, I started the emulator, changed all the regional settings to "Portuguese (Portugal), and this is what I got after running the app:
 
-![LanguageTestApp original version](http://www.pedrolamas.com/wp-content/uploads/2013/01/LanguageTestApp-original-version.jpg)
+![LanguageTestApp original version](https://www.pedrolamas.com/wp-content/uploads/2013/01/LanguageTestApp-original-version.jpg)
 
 So the real question right now is: If the operating system interface, the CurrentCulture, and the CurrentUICulture are all set to "pt-PT", from where did that "en-US" came from?
 
@@ -125,7 +125,7 @@ Be aware that for this to work, you must set the Language property **before** th
 
 And here's the final result:
 
-![LanguageTestApp fixed version](http://www.pedrolamas.com/wp-content/uploads/2013/01/LanguageTestApp-fixed-version.jpg)
+![LanguageTestApp fixed version](https://www.pedrolamas.com/wp-content/uploads/2013/01/LanguageTestApp-fixed-version.jpg)
 
 I honestly don't know the reason for this strange behavior, but this is a problem to account for if you have localization needs for your Windows Phone app!
 

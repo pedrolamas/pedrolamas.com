@@ -4,7 +4,7 @@ title: 'Cimbalino Windows Phone Toolkit: MultiApplicationBarBehavior'
 date: 2013-03-11T15:39:40+00:00
 author: Pedro Lamas
 layout: post
-guid: http://www.pedrolamas.com/?p=208
+guid: https://www.pedrolamas.com/?p=208
 permalink: /2013/03/11/cimbalino-windows-phone-toolkit-multiapplicationbarbehavior/
 dsq_thread_id:
   - 2046329236
@@ -20,7 +20,7 @@ tags:
   - WP8
   - WPDev
 ---
-My [previous article](http://www.pedrolamas.com/2013/03/05/cimbalino-windows-phone-toolkit-applicationbarbehavior/) showed how to use the **ApplicationBarBehavior** from the [Cimbalino Windows Phone Toolkit](http://cimbalino.org) to build applications with MVVM pattern and still use the Application Bar control without the need for any code-behind.
+My [previous article](https://www.pedrolamas.com/2013/03/05/cimbalino-windows-phone-toolkit-applicationbarbehavior/) showed how to use the **ApplicationBarBehavior** from the [Cimbalino Windows Phone Toolkit](http://cimbalino.org) to build applications with MVVM pattern and still use the Application Bar control without the need for any code-behind.
 
 More than just controlling the app bar from the ViewModel, the `ApplicationBarBehavior` adds some nice new properties that you can't find in the native app bar control.
 
@@ -30,7 +30,7 @@ To demonstrate the `IsVisible` property, I'll use the sample code from the previ
 
 This is the recorded animation of what the state changing causes to the application bar buttons visibility:
 
-![ApplicationBarBehavior](http://www.pedrolamas.com/wp-content/uploads/2013/03/ApplicationBarBehavior.gif)
+![ApplicationBarBehavior](https://www.pedrolamas.com/wp-content/uploads/2013/03/ApplicationBarBehavior.gif)
 
 As you can see, it works perfectly! Well, almost perfectly...
 
@@ -38,7 +38,7 @@ If you look really closely, you'll notice that the animation doesn't seem quite 
 
 By making time go a bit slower, this is what is actually happening:
 
-![ApplicationBarBehavior (Slower)](http://www.pedrolamas.com/wp-content/uploads/2013/03/ApplicationBarBehavior-Slower.gif)
+![ApplicationBarBehavior (Slower)](https://www.pedrolamas.com/wp-content/uploads/2013/03/ApplicationBarBehavior-Slower.gif)
 
 As you can see above, the buttons **move** before the animation starts!
 
@@ -81,8 +81,8 @@ Major difference here is the presence of multiple `ApplicationBar` entries, but 
 
 Here's the recording of the app bar transition now:
 
-![MultiApplicationBarBehavior](http://www.pedrolamas.com/wp-content/uploads/2013/03/MultiApplicationBarBehavior.gif)
+![MultiApplicationBarBehavior](https://www.pedrolamas.com/wp-content/uploads/2013/03/MultiApplicationBarBehavior.gif)
 
 Much nicer, but just to make sure, here is the same animation but about 5 times slower:
 
-![MultiApplicationBarBehavior (Slower)](http://www.pedrolamas.com/wp-content/uploads/2013/03/MultiApplicationBarBehavior-Slower.gif)
+![MultiApplicationBarBehavior (Slower)](https://www.pedrolamas.com/wp-content/uploads/2013/03/MultiApplicationBarBehavior-Slower.gif)
