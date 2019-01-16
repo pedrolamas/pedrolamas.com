@@ -1,6 +1,7 @@
 title:            pedrolamas.com
 description:      Windows Development
 url:              https://www.pedrolamas.com
+baseurl:          ""
 lang:             en-US
 timezone:         Europe/London
 logo:             /logo.jpg
