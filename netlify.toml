@@ -6,4 +6,4 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Feature-Policy = "accelerometer 'none'; autoplay 'none'; ambient-light-sensor 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'"
     X-Content-Type-Options = "nosniff"
-    Content-Security-Policy-Report-Only = "default-src https:"
+    Content-Security-Policy-Report-Only = "default-src 'self'; font-src 'self' fonts.gstatic.com maxcdn.bootstrapcdn.com; script-src 'self' connect.facebook.net pedrolamas-com.disqus.com platform.twitter.com s7.addthis.com www.google-analytics.com; style-src 'self' fonts.googleapis.com maxcdn.bootstrapcdn.com; upgrade-insecure-requests;"
