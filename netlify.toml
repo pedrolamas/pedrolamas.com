@@ -6,3 +6,4 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Feature-Policy = "accelerometer 'none'; autoplay 'none'; ambient-light-sensor 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'"
     X-Content-Type-Options = "nosniff"
+    Content-Security-Policy-Report-Only = "default-src https:"
