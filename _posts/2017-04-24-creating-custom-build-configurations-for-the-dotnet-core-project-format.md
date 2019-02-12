@@ -1,7 +1,7 @@
 ---
 title: Creating custom build configurations for the .NET Core project format
 date: 2017-04-24T14:58:05+01:00
-last_modified_at: 2017-06-06T14:12:00+01:00
+last_modified_at: 2019-02-12T14:29:00+00:00
 layout: post
 categories:
   - Windows
@@ -17,7 +17,7 @@ While these two configurations are enough for most projects, some might actually
 
 Until now we could use Visual Studio Configuration Manager to easily create a copy an existing configuration setup, and then change small bits to match our specifications.
 
-But now there's a [new csproj format for .NET Core](https://docs.microsoft.com/en-us/dotnet/articles/core/tools/csproj), and while it includes the expected Debug and Release build configurations, the "copy configuration" process doesn't work anymore!
+But now there's a [new csproj format for .NET Core](https://docs.microsoft.com/en-us/dotnet/articles/core/tools/csproj?wt.mc_id=MVP), and while it includes the expected Debug and Release build configurations, the "copy configuration" process doesn't work anymore!
 
 The problem is that the new project format is based in quite a few implicit defaults, so Visual Studio Configuration Manager can't actually create a copy of the existing build configurations with all the properties set.
 

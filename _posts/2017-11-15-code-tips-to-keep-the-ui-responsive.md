@@ -2,6 +2,7 @@
 layout: post
 title: Code tips to keep the UI responsive
 date: 2017-11-15T22:26:05+00:00
+last_modified_at: 2019-02-12T14:29:00+00:00
 categories:
  - Windows
 tags:
@@ -36,7 +37,7 @@ The above code sample will run on the UI thread, and as it takes a while to run 
 
 This is a perfect example of what CPU bound code is: code that should execute on a separate thread as to avoid blocking the UI thread while it runs.
 
-There are a few ways to fix this problem and the easiest one is to just use [Task.Run](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.run?view=netcore-2.0).
+There are a few ways to fix this problem and the easiest one is to just use [Task.Run](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.run?view=netcore-2.0&wt.mc_id=MVP).
 
 Now look at this alternative:
 
@@ -148,7 +149,7 @@ private async void CalculateButton_OnClick(object sender, RoutedEventArgs e)
 
 We have now added `.ConfigureAwait(false)` to each awaited call as to avoid marshaling back to the calling thread.
 
-Any code that needs to run on the UI thread (normally, to update the UI) can do so by using the [Dispatcher.RunAsync](https://docs.microsoft.com/en-us/uwp/api/windows.ui.core.coredispatcher#Windows_UI_Core_CoreDispatcher_RunAsync_) method as seen above.
+Any code that needs to run on the UI thread (normally, to update the UI) can do so by using the [Dispatcher.RunAsync](https://docs.microsoft.com/en-us/uwp/api/windows.ui.core.coredispatcher#Windows_UI_Core_CoreDispatcher_RunAsync_?wt.mc_id=MVP) method as seen above.
 
 ## Consider using Deferred Events for your custom events
 

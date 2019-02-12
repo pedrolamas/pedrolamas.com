@@ -2,6 +2,7 @@
 layout: post
 title: Building multi-window dispatcher agnostic view-model
 date: 2018-04-19T21:19:43+01:00
+last_modified_at: 2019-02-12T14:29:00+00:00
 categories:
   - Windows
 tags:
@@ -25,7 +26,7 @@ Rudy's solution to this problem requires a wrapper around the properties of the 
 
 Well, you will only need this if your application uses multiple windows **and** you want to share the same view-model instance between them!
 
-if that is the case, then you must ensure you raise the [INotifyPropertyChanged.PropertyChanged](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.data.inotifypropertychanged.propertychanged) event on the correct thread as **each window as its own separate UI thread!**
+if that is the case, then you must ensure you raise the [INotifyPropertyChanged.PropertyChanged](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.data.inotifypropertychanged.propertychanged?wt.mc_id=MVP) event on the correct thread as **each window as its own separate UI thread!**
 
 I strongly recommend a look at the great document that Rudy has written around the [CrossUIBinding](https://github.com/rudyhuyn/xUIBinding/blob/master/README.md) as it has a lot of valuable information with some great visualizations!
 
@@ -170,7 +171,7 @@ public class MainViewModel : MultiWindowViewModelBase
 ```
 ## Final thoughts
 
-The [ApplicationView.Consolidated](https://docs.microsoft.com/en-us/uwp/api/windows.ui.viewmanagement.applicationview.consolidated) event should be monitored to allow for proper cleaning, so that no memory leaks occur.
+The [ApplicationView.Consolidated](https://docs.microsoft.com/en-us/uwp/api/windows.ui.viewmanagement.applicationview.consolidated?wt.mc_id=MVP) event should be monitored to allow for proper cleaning, so that no memory leaks occur.
 
 Here's an example of how this can be achieved:
 

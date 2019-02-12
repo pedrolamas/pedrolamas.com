@@ -1,6 +1,7 @@
 ---
 title: Setting a custom User-Agent in the UWP WebView control
 date: 2017-03-21T12:10:45+00:00
+last_modified_at: 2019-02-12T14:29:00+00:00
 layout: post
 categories:
   - Windows
@@ -16,13 +17,13 @@ tags:
 ---
 I recently came into a UWP project requiring all HTTP requests to use a specific User-Agent string.
 
-That's quite easy to do if you only use [Windows.Web.Http.HttpClient](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httpclient) as there's a managed property for that purpose: [HttpClient.DefaultRequestHeaders.UserAgent](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.headers.httprequestheadercollection#Windows_Web_Http_Headers_HttpRequestHeaderCollection_UserAgent).
+That's quite easy to do if you only use [Windows.Web.Http.HttpClient](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httpclient?wt.mc_id=MVP) as there's a managed property for that purpose: [HttpClient.DefaultRequestHeaders.UserAgent](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.headers.httprequestheadercollection#Windows_Web_Http_Headers_HttpRequestHeaderCollection_UserAgent?wt.mc_id=MVP).
 
-Similarly, the same applies for [System.Net.Http.HttpClient](https://docs.microsoft.com/en-us/dotnet/core/api/system.net.http.httpclient) and the [HttpClient.DefaultHeader.UserAgent](https://docs.microsoft.com/en-us/dotnet/core/api/system.net.http.headers.httprequestheaders#System_Net_Http_Headers_HttpRequestHeaders_UserAgent) property.
+Similarly, the same applies for [System.Net.Http.HttpClient](https://docs.microsoft.com/en-us/dotnet/core/api/system.net.http.httpclient?wt.mc_id=MVP) and the [HttpClient.DefaultHeader.UserAgent](https://docs.microsoft.com/en-us/dotnet/core/api/system.net.http.headers.httprequestheaders#System_Net_Http_Headers_HttpRequestHeaders_UserAgent?wt.mc_id=MVP) property.
 
-The real problem is if you need to use the [WebView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.webview) control to present web content, as there's no managed property to change the user-agent!
+The real problem is if you need to use the [WebView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.webview?wt.mc_id=MVP) control to present web content, as there's no managed property to change the user-agent!
 
-It is possible to create a [HttpRequestMessage](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httprequestmessage) instance, set a custom user-agent string in it, and then call the [WebView.NavigateWithHttpRequestMessage](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.webview#Windows_UI_Xaml_Controls_WebView_NavigateWithHttpRequestMessage_Windows_Web_Http_HttpRequestMessage_) method, but that will only work for that specific navigation request.
+It is possible to create a [HttpRequestMessage](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httprequestmessage?wt.mc_id=MVP) instance, set a custom user-agent string in it, and then call the [WebView.NavigateWithHttpRequestMessage](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.webview#Windows_UI_Xaml_Controls_WebView_NavigateWithHttpRequestMessage_Windows_Web_Http_HttpRequestMessage_?wt.mc_id=MVP) method, but that will only work for that specific navigation request.
 
 Any requests invoked from inside the webview (like a form post) will use the system default user-agent string.
 
