@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Windows 10 Mobile Emulator fails to start with 0x800705AA error
-date: 2019-01-15T16:55:05+01:00
+date: 2019-01-15T16:55:05+00:00
+last_modified_at: 2019-03-31T17:29:18+01:00
 categories:
   - Windows
 tags:
