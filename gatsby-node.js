@@ -152,7 +152,7 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
-  const pageSize = 2;
+  const pageSize = 8;
   const totalPages = Math.ceil(edges.length / pageSize);
 
   for (let index = 0; index < totalPages; index ++) {
