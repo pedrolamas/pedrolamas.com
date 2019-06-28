@@ -37,7 +37,7 @@ const ArchiveLayout: React.FunctionComponent<ArchiveLayoutProps> = ({ title, dat
 
   return (
     <PageLayout title={title}>
-      {Object.entries(postsGroupedByYear).map(([year, posts], index) => (
+      {Object.entries(postsGroupedByYear).reverse().map(([year, posts], index) => (
         <React.Fragment key={index}>
           <h2>{year}</h2>
           <ul>
