@@ -67,7 +67,7 @@ exports.sourceNodes = ({ actions }) => {
       frontmatter: MdxFrontmatter
     }`,
     `type MdxFrontmatter @infer {
-      dateFormatted: Date @dateformat(formatString: "MMMM DD, YYYY") @proxy(from: "date")
+      dateFormatted: Date @dateformat(formatString: "MMMM D, YYYY") @proxy(from: "date")
     }`,
     `type SitemapYaml implements Node @infer {
       sub: [SitemapYamlSub]
