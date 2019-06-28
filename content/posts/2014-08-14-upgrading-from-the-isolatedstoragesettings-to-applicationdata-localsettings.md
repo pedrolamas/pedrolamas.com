@@ -9,7 +9,7 @@ permalink: /2014/08/14/upgrading-from-the-isolatedstoragesettings-to-application
 fb_fan_page_post_id:
   - 150703221746608_346592042157724
 dsq_thread_id:
-  - 2926409441
+  - "2926409441"
 categories:
   - Windows
   - Windows Phone

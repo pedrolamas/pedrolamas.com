@@ -6,7 +6,7 @@ author: Pedro Lamas
 layout: page
 guid: https://www.pedrolamas.com/?page_id=2111
 dsq_thread_id:
-  - 2448519853
+  - "2448519853"
 ---
 Esta aplicação permite-lhe localizar de forma fácil e rápida os objectos expedidos por Correio Registado, Azul PRIME, EMS, Today ou Quick.
 

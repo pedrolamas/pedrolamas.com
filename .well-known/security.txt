@@ -1,3 +1,0 @@
-Contact: pedrolamas@gmail.com
-Encryption: https://www.pedrolamas.com/public.asc
-Signature: https://www.pedrolamas.com/.well-known/security.txt

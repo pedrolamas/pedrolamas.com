@@ -6,7 +6,7 @@ author: Pedro Lamas
 layout: page
 guid: https://www.pedrolamas.com/?page_id=2081
 dsq_thread_id:
-  - 2743421021
+  - "2743421021"
 ---
 Com esta aplicação poderá consultar rapidamente os resultados dos Jogos Santa Casa: Euromilhões, Totoloto, Joker, Totobola, Lotaria.
 

@@ -6,7 +6,7 @@ author: Pedro Lamas
 layout: page
 guid: https://www.pedrolamas.com/?page_id=1961
 dsq_thread_id:
-  - 2729938785
+  - "2729938785"
 ---
 Based on "The Bro Code", written by the awesome Barney Stinson.
 

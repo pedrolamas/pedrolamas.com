@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4446
 permalink: /2016/02/23/xaml-behaviors-uwp-managed-1-1-0/
 dsq_thread_id:
-  - 4603841161
+  - "4603841161"
 categories:
   - Windows
 tags:

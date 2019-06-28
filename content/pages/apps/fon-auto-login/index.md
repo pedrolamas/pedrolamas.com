@@ -6,7 +6,7 @@ author: Pedro Lamas
 layout: page
 guid: https://www.pedrolamas.com/?page_id=1931
 dsq_thread_id:
-  - 2309124443
+  - "2309124443"
 ---
 Just connect to the nearest FON Spot, open the app, and with a click of a button you'll be authenticated.
 

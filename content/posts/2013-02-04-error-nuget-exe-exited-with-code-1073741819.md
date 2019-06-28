@@ -7,11 +7,11 @@ layout: post
 guid: https://www.pedrolamas.com/?p=132
 permalink: /2013/02/04/error-nuget-exe-exited-with-code-1073741819/
 dsq_thread_id:
-  - 2046765333
+  - "2046765333"
 categories:
   - Uncategorized
 tags:
-  - -1073741819
+  - "-1073741819"
   - MSBuild
   - Nuget
 ---

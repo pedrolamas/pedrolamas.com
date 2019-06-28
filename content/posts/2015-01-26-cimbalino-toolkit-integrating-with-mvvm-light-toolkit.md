@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4083
 permalink: /2015/01/26/cimbalino-toolkit-integrating-with-mvvm-light-toolkit/
 dsq_thread_id:
-  - 3456687900
+  - "3456687900"
 image: /wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
 categories:
   - Windows
@@ -171,7 +171,7 @@ And... we are done!!!
 
 Just run the Windows project and the Windows Phone project to confirm that our shared code does in fact work across the two platforms! :)
 
-To make things even easier, you can download the full solution [here]({{ site.baseurl }}{% link wp-content/uploads/downloads/2015/01/App1.zip %})!
+To make things even easier, you can download the full solution [here](wp-content/uploads/downloads/2015/01/App1.zip)!
 
   [1]: https://www.pedrolamas.com/2015/01/05/cimbalino-toolkit-step-by-step/
   [2]: http://cimbalino.org

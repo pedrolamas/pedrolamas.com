@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=951
 permalink: /2013/05/17/cimbalino-windows-phone-toolkit-multibindingbehavior/
 dsq_thread_id:
-  - 2046358152
+  - "2046358152"
 image: /wp-content/uploads/2013/03/Cimbalino-Windows-Phone-Toolkit-300x270.png
 categories:
   - Windows Phone
@@ -44,7 +44,7 @@ While useful, the `MultiBinding` is not available for Windows Phone developers -
 
 I've seen a few alternative implementations around the internet, but none seems easy (and light!) enough to me, so I just decided to make my own!
 
-On the latest release of [Cimbalino Windows Phone Toolkit](http://cimbalino.org/) I added the [MultiBindingBehavior](https://github.com/Cimbalino/Cimbalino-Phone-Toolkit/blob/master/src/Cimbalino.Phone.Toolkit%20%28WP71%29/Behaviors/MultiBindingBehavior.cs), a quick and easy approach to solve the missing `MultiBinding` support in Windows Phone!</p>
+On the latest release of [Cimbalino Windows Phone Toolkit](http://cimbalino.org/) I added the [MultiBindingBehavior](https://github.com/Cimbalino/Cimbalino-Phone-Toolkit/blob/master/src/Cimbalino.Phone.Toolkit%20%28WP71%29/Behaviors/MultiBindingBehavior.cs), a quick and easy approach to solve the missing `MultiBinding` support in Windows Phone!
 
 Here's an example using the same scenario from above:
 

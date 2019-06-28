@@ -4,12 +4,12 @@ import PageLayout from './pageLayout';
 import MdxProvider from './mdxProvider';
 import { Mdx } from '../generated/graphql';
 
-type MdxLPageLayoutProps = {
+type MdxPageLayoutProps = {
   pageContext: Mdx;
   children: React.ReactNode;
 }
 
-const MdxPageLayout: React.FunctionComponent<MdxLPageLayoutProps> = ({ pageContext, children }) => {
+const MdxPageLayout: React.FunctionComponent<MdxPageLayoutProps> = ({ pageContext, children }) => {
   const { frontmatter } = pageContext;
 
   return (

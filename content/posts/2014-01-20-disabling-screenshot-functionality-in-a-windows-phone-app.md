@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=3895
 permalink: /2014/01/20/disabling-screenshot-functionality-in-a-windows-phone-app/
 dsq_thread_id:
-  - 2148030133
+  - "2148030133"
 image: /wp-content/uploads/2014/01/Disabling-screenshot-functionality-in-a-Windows-Phone-8-app-300x270.png
 categories:
   - Windows Phone

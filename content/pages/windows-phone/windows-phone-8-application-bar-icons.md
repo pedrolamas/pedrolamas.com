@@ -8,7 +8,7 @@ guid: https://www.pedrolamas.com/?page_id=44
 fb_author_post_id:
   - 4740286538991
 dsq_thread_id:
-  - 2045477622
+  - "2045477622"
 ---
 ## Download
 

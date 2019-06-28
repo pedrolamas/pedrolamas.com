@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=3611
 permalink: /2013/12/05/creating-png-image-files-in-windows-phone/
 dsq_thread_id:
-  - 2045472277
+  - "2045472277"
 image: /wp-content/uploads/2013/12/PNG-image-files-in-Windows-Phone.png
 categories:
   - Windows Phone

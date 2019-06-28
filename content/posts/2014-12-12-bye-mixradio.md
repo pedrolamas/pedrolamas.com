@@ -9,7 +9,7 @@ permalink: /2014/12/12/bye-mixradio/
 fb_fan_page_post_id:
   - 150703221746608_404343719715889
 dsq_thread_id:
-  - 3316743988
+  - "3316743988"
 categories:
   - Uncategorized
 tags:

@@ -8,7 +8,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4320
 permalink: /2016/01/08/compiled-bindings-considerations-ii/
 dsq_thread_id:
-  - 4473571193
+  - "4473571193"
 categories:
   - Windows
   - Windows Phone
@@ -32,7 +32,7 @@ Compiled Bindings have a bug, noticeable in some scenarios, specifically when a 
 
 Make sure to thoroughly test your app if you use compiled bindings!
 
-## So what is the big deal? 
+## So what is the big deal?
 
 To illustrate the problem, I've written a small demo app!
 
@@ -187,7 +187,7 @@ public sealed partial class MainPage : Page
 
 As you can see above, we create a new MainViewModel instance, set it as the page `DataContext` property, and then we have the three click event handlers, one for each of the buttons on the view.
 
-We've also added a `MainPage.ViewModel` property to expose the current MainViewModel instance to the compiled bindings (we can't use the `DataContext` property as its type is `object` and compiled bindings require strong-typed properties to work).  
+We've also added a `MainPage.ViewModel` property to expose the current MainViewModel instance to the compiled bindings (we can't use the `DataContext` property as its type is `object` and compiled bindings require strong-typed properties to work).
 
 This is what you'll get if you run the app and tap the buttons in succession:
 
@@ -197,6 +197,6 @@ As you can see, the 2nd TextBlock (the one using compiled bindings) never gets t
 
 The expected behavior is the one shown in the 1st TextBlock: if the binding value is `null` or unavailable, the `TextBlock.Text` property will set to the [Binding.FallbackValue](https://msdn.microsoft.com/en-US/library/windows/apps/xaml/windows.ui.xaml.data.binding.fallbackvalue) (which is `null` by default).
 
-So after checking the documentation for compiled bindings, one can say without that compiled bindings are ignoring the fallback value when its value is `null`, and that is quite **a nasty bug in the compiled bindings!** 
+So after checking the documentation for compiled bindings, one can say without that compiled bindings are ignoring the fallback value when its value is `null`, and that is quite **a nasty bug in the compiled bindings!**
 
 This bug has already been reported to Microsoft but as we don't know when it will get fixed, all we can do right now is be aware of the whole issue and make sure to test our apps thoroughly to ensure we don't end up with these problems after migrating to compiled bindings!

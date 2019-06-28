@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=3920
 permalink: /2014/02/25/want-to-meet-the-cimbalino-windows-phone-toolkit/
 dsq_thread_id:
-  - 2318045170
+  - "2318045170"
 image: /wp-content/uploads/2014/02/Wales-and-West-Windows-Application-Group.png
 categories:
   - Windows Phone

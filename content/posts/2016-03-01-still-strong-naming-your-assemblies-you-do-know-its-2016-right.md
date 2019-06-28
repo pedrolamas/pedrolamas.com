@@ -8,7 +8,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4455
 permalink: /2016/03/01/still-strong-naming-your-assemblies-you-do-know-its-2016-right/
 dsq_thread_id:
-  - 4624998501
+  - "4624998501"
 image: /wp-content/uploads/2016/03/We-Want-You-To-Stop-Strong-Naming-Assemblies.png
 categories:
   - Windows

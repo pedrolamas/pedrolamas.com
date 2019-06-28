@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4194
 permalink: /2015/07/31/cimbalino-toolkit-2-0-0-beta1/
 dsq_thread_id:
-  - 3989443059
+  - "3989443059"
 image: /wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
 categories:
   - Windows

@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=154
 permalink: /2013/02/15/reduce-the-size-of-your-xapappx-package-time-to-take-out-the-trash/
 dsq_thread_id:
-  - 2046727518
+  - "2046727518"
 categories:
   - Windows
   - Windows Phone
@@ -29,11 +29,11 @@ Before you even continue reading this article, I must just address a small warni
 Recently, while browsing [StackOverflow](http://stackoverflow.com/) as I normally do, I found a [question](http://stackoverflow.com/questions/14849374/visual-studio-packs-into-wp8-xap-unnecessary-xml-doc-files) that really caught my attention:
 
 > **Visual Studio packs into WP8 XAP unnecessary XML doc files**
-> 
+>
 > If you create Windows Phone 8 App in Visual Studio and reference any libs with XML documentation files supplied from nuget or manually, Visual Studio will automatically pack those XML files into output XAP as well.
-> 
+>
 > In our case this weird behavior of Visual Studio increases XAP size almost twice. (We have 8Mb of xml docs in total.)
-> 
+>
 > There is no such problem for WP7 app projects.
 
 After reading this, I had to confirm this behavior myself! Here's what I did:

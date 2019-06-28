@@ -1,6 +1,6 @@
 [build]
+  command = "yarn install"
   publish = "public/"
-  command = "npm run build"
 
 [[headers]]
   for = "/*"

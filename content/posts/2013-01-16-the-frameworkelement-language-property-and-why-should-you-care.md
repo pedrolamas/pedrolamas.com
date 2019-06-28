@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=90
 permalink: /2013/01/16/the-frameworkelement-language-property-and-why-should-you-care/
 dsq_thread_id:
-  - 2057310772
+  - "2057310772"
 categories:
   - Windows Phone
 tags:
@@ -66,10 +66,10 @@ public partial class MainPage : PhoneApplicationPage
 {
     public MainPage()
     {
-        InitializeComponent(); 
+        InitializeComponent();
 
         this.DataContext = this;
-    } 
+    }
 
     public string CurrentCulture
     {
@@ -129,4 +129,4 @@ And here's the final result:
 
 I honestly don't know the reason for this strange behavior, but this is a problem to account for if you have localization needs for your Windows Phone app!
 
-The demo project I created and used for this article can be downloaded from [here]({{ site.baseurl }}{% link wp-content/uploads/downloads/2013/01/PedroLamas.LanguageTestApp.zip %})!
+The demo project I created and used for this article can be downloaded from [here](wp-content/uploads/downloads/2013/01/PedroLamas.LanguageTestApp.zip)!

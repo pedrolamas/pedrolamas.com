@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=20
 permalink: /2013/03/05/cimbalino-windows-phone-toolkit-applicationbarbehavior/
 dsq_thread_id:
-  - 2045483689
+  - "2045483689"
 categories:
   - Windows Phone
 tags:

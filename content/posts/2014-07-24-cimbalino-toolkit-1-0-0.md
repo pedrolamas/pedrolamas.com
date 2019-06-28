@@ -9,7 +9,7 @@ permalink: /2014/07/24/cimbalino-toolkit-1-0-0/
 fb_fan_page_post_id:
   - 150703221746608_339703969513198
 dsq_thread_id:
-  - 2869257645
+  - "2869257645"
 image: /wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
 categories:
   - Windows

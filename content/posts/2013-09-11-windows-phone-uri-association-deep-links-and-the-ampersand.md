@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=2931
 permalink: /2013/09/11/windows-phone-uri-association-deep-links-and-the-ampersand/
 dsq_thread_id:
-  - 2045937682
+  - "2045937682"
 image: /wp-content/uploads/2013/09/hyperlink_hand.png
 categories:
   - Windows Phone

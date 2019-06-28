@@ -6,7 +6,7 @@ author: Pedro Lamas
 layout: page
 guid: https://www.pedrolamas.com/?page_id=1751
 dsq_thread_id:
-  - 2682099770
+  - "2682099770"
 ---
 This is the complete list of my published apps:
 

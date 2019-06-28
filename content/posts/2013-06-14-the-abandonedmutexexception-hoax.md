@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=1251
 permalink: /2013/06/14/the-abandonedmutexexception-hoax/
 dsq_thread_id:
-  - 2048698355
+  - "2048698355"
 categories:
   - Windows Phone
 tags:
@@ -60,7 +60,7 @@ public static void MutextTest()
     {
         Debug.WriteLine(e);
     }
-}   
+}
 ```
 
 When running the above in a Console application, this is the output we get from it:

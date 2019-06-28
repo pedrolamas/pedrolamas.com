@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4334
 permalink: /2016/01/20/awaiting-the-coredispatcher/
 dsq_thread_id:
-  - 4507148543
+  - "4507148543"
 categories:
   - Windows
   - Windows Phone
@@ -70,7 +70,7 @@ public delegate void DispatchedHandler()
 
 The fact that we've added the `async/await` keywords to the callback doesn't ensure that the caller will await for it to execute!
 
-There are a few ways suspend the background thread execution until the foreground thread signals for it to continue, and using a [TaskCompletionSource<T>](https://msdn.microsoft.com/en-us/library/dd449174(v=vs.110).aspx) is one of the easiest:
+There are a few ways suspend the background thread execution until the foreground thread signals for it to continue, and using a [TaskCompletionSource&lt;T&gt;](https://msdn.microsoft.com/en-us/library/dd449174(v=vs.110).aspx) is one of the easiest:
 
 ```csharp
 public async void DoStuff()

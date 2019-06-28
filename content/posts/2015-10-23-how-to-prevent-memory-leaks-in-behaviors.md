@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4211
 permalink: /2015/10/23/how-to-prevent-memory-leaks-in-behaviors/
 dsq_thread_id:
-  - 4252702255
+  - "4252702255"
 categories:
   - Windows
   - Windows Phone

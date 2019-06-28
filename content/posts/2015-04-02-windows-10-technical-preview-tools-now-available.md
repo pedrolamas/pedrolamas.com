@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4099
 permalink: /2015/04/02/windows-10-technical-preview-tools-now-available/
 dsq_thread_id:
-  - 3649093158
+  - "3649093158"
 image: /wp-content/uploads/2015/04/Windows-10.png
 categories:
   - Windows

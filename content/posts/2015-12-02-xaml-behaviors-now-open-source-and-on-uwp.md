@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4279
 permalink: /2015/12/02/xaml-behaviors-now-open-source-and-on-uwp/
 dsq_thread_id:
-  - 4368351746
+  - "4368351746"
 categories:
   - Windows
   - Windows Phone

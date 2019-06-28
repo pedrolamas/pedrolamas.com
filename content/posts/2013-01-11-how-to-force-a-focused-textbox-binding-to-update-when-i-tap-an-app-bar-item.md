@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=75
 permalink: /2013/01/11/how-to-force-a-focused-textbox-binding-to-update-when-i-tap-an-app-bar-item/
 dsq_thread_id:
-  - 2045483827
+  - "2045483827"
 categories:
   - Windows Phone
 tags:

@@ -8,7 +8,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=3931
 permalink: /2014/03/15/poll-what-are-your-plans-for-wp7dev/
 dsq_thread_id:
-  - 2436253614
+  - "2436253614"
 categories:
   - Windows Phone
 tags:

@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=481
 permalink: /2013/05/02/understanding-xaml-namescopes/
 dsq_thread_id:
-  - 2046860376
+  - "2046860376"
 categories:
   - Windows
   - Windows Phone
@@ -76,4 +76,4 @@ In the BindableApplicationBar sample, if you actually attach the `MultiApplicati
 
 But my advice is to always bind the `ApplicationBarBehavior` and `MultiApplicationBarBehavior` to the page as it will provide better integration and more fluid animation, and use the `NamescopeBinding` helper class if needed.
 
-I've created a small sample app that demonstrates the XAML Namescope behavior and how it affects your applications, which you can download from [here]({{ site.baseurl }}{% link wp-content/uploads/downloads/2013/05/XamlNamescopeDemo.zip %}).
+I've created a small sample app that demonstrates the XAML Namescope behavior and how it affects your applications, which you can download from [here](wp-content/uploads/downloads/2013/05/XamlNamescopeDemo.zip).

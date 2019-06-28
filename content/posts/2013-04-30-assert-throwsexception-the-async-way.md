@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=601
 permalink: /2013/04/30/assert-throwsexception-the-async-way/
 dsq_thread_id:
-  - 2069756678
+  - "2069756678"
 categories:
   - Windows Phone
 tags:
@@ -64,16 +64,16 @@ public static class AssertExtensions
                 return ex as T;
             }
 
-            var objArray = new object[] { 
+            var objArray = new object[] {
                 "AssertExtensions.ThrowsExceptionAsync",
-                string.Format(CultureInfo.CurrentCulture, FrameworkMessages.WrongExceptionThrown, message, typeof(T).Name, ex.GetType().Name, ex.Message, ex.StackTrace) 
+                string.Format(CultureInfo.CurrentCulture, FrameworkMessages.WrongExceptionThrown, message, typeof(T).Name, ex.GetType().Name, ex.Message, ex.StackTrace)
             };
 
             throw new AssertFailedException(string.Format(CultureInfo.CurrentCulture, FrameworkMessages.AssertionFailed, objArray));
         }
 
-        var objArray2 = new object[] { 
-            "AssertExtensions.ThrowsExceptionAsync", 
+        var objArray2 = new object[] {
+            "AssertExtensions.ThrowsExceptionAsync",
             string.Format(CultureInfo.CurrentCulture, FrameworkMessages.NoExceptionThrown, message, typeof(T).Name)
         };
 

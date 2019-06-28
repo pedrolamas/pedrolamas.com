@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=2411
 permalink: /2013/08/19/cimbalino-windows-phone-toolkit-autofocusbehavior/
 dsq_thread_id:
-  - 2046954399
+  - "2046954399"
 image: /wp-content/uploads/2013/08/Keyboard-Tab-Key-300x270.png
 categories:
   - Windows Phone

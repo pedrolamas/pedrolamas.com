@@ -6,7 +6,7 @@ author: Pedro Lamas
 layout: page
 guid: https://www.pedrolamas.com/?page_id=1861
 dsq_thread_id:
-  - 2704125345
+  - "2704125345"
 ---
 Geosense helps you to make sense of your location!
 

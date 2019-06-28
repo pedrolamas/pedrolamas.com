@@ -7,9 +7,10 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "install": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
-    "start": "npm run develop",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
     "codegen": "graphql-codegen --config codegen.yml"
   },
@@ -62,9 +63,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/pedrolamas/pedrolamas.com"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/pedrolamas/pedrolamas.com/issues"
   }
 }

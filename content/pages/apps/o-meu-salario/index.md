@@ -6,7 +6,7 @@ author: Pedro Lamas
 layout: page
 guid: https://www.pedrolamas.com/?page_id=2051
 dsq_thread_id:
-  - 3117528516
+  - "3117528516"
 ---
 Esta aplicação permite-lhe calcular qual o seu salário líquido após os descontos para IRS e Segurança Social, para os anos de 2011, 2012 e 2013.
 

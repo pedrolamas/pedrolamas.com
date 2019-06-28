@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=239
 permalink: /2013/03/25/windows-phone-8-unit-testing-in-the-ui-thread-with-vs-2012-2-ctp4/
 dsq_thread_id:
-  - 2053865941
+  - "2053865941"
 categories:
   - Windows Phone
 tags:

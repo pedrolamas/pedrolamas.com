@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=381
 permalink: /2013/04/26/app-package-cleanup/
 dsq_thread_id:
-  - 2046772154
+  - "2046772154"
 categories:
   - Windows
   - Windows Phone

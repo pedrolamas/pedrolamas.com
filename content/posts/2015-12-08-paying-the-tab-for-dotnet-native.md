@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4292
 permalink: /2015/12/08/paying-the-tab-for-dotnet-native/
 dsq_thread_id:
-  - 4385658860
+  - "4385658860"
 image: /wp-content/uploads/2015/12/yoursign-459x510.jpg
 categories:
   - Windows
@@ -24,7 +24,7 @@ Last weekend I was confronted with a bug in [Cimbalino Toolkit](http://cimbalino
 I built a small test app and after a couple of minutes debugging it I noticed a [MissingMetadataException](https://msdn.microsoft.com/en-us/library/dn600633(v=vs.110).aspx) getting raised; the culprit was found: .NET Native!
 
 > If you're working with Universal Windows Apps (UWP) and don't know what .NET Native is, I strongly advise you to start by reading the following excellent articles written by Morgan Brown, "a Software Development Engineer on the .NET Native team":
-> 
+>
 >  - [.NET Native Deep Dive: Dynamic Features in Static Code](http://blogs.msdn.com/b/dotnet/archive/2014/05/20/net-native-deep-dive-dynamic-features-in-static-code.aspx)
 >  - [.NET Native Deep Dive: Help! I Hit a MissingMetadataException!](http://blogs.msdn.com/b/dotnet/archive/2014/05/21/net-native-deep-dive-help-i-hit-a-missingmetadataexception.aspx)
 >  - [.NET Native Deep Dive: Help! I Didn't Hit a MissingMetadataException!](http://blogs.msdn.com/b/dotnet/archive/2014/05/22/net-native-deep-dive-help-i-didn-t-hit-a-missingmetadataexception.aspx)

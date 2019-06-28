@@ -6,7 +6,7 @@ author: Pedro Lamas
 layout: page
 guid: https://www.pedrolamas.com/?page_id=2021
 dsq_thread_id:
-  - 4544602232
+  - "4544602232"
 ---
 Bristol Pound for Windows Phone (BP4WP) is the official app for Bristol’s local currency, Bristol Pound.
 

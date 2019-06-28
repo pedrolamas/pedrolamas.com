@@ -8,7 +8,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4241
 permalink: /2015/11/02/cultureinfo-changes-in-uwp/
 dsq_thread_id:
-  - 4283138515
+  - "4283138515"
 categories:
   - Windows
 tags:

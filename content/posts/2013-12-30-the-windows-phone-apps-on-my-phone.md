@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=3887
 permalink: /2013/12/30/the-windows-phone-apps-on-my-phone/
 dsq_thread_id:
-  - 2081524694
+  - "2081524694"
 categories:
   - Windows Phone
 tags:

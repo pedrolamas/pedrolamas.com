@@ -9,7 +9,7 @@ permalink: /2015/01/05/cimbalino-toolkit-step-by-step/
 fb_fan_page_post_id:
   - 150703221746608_416814151802179
 dsq_thread_id:
-  - 3393109775
+  - "3393109775"
 image: /wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
 categories:
   - Windows

@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=188
 permalink: /2013/02/20/updated-reduce-the-size-of-your-xapappx-package/
 dsq_thread_id:
-  - 2046772091
+  - "2046772091"
 categories:
   - Windows
   - Windows Phone
