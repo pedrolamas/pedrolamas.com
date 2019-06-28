@@ -169,6 +169,7 @@ public class MainViewModel : MultiWindowViewModelBase
     }
 }
 ```
+
 ## Final thoughts
 
 The [ApplicationView.Consolidated](https://docs.microsoft.com/en-us/uwp/api/windows.ui.viewmanagement.applicationview.consolidated?wt.mc_id=MVP) event should be monitored to allow for proper cleaning, so that no memory leaks occur.
@@ -194,9 +195,9 @@ public sealed partial class MainPage : Page
         if (e.IsAppInitiated || e.IsUserInitiated)
         {
             s.Consolidated -= ApplicationView_OnConsolidated;
-            
+
             DataContext = null;
-            
+
             // this is only required if you are using compiled bindings (x:Bind)
             Bindings.StopTracking();
         }
