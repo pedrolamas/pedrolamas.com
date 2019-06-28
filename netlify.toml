@@ -1,3 +1,7 @@
+[build]
+  publish = "public/"
+  command = "yarn && yarn build"
+
 [[headers]]
   for = "/*"
   [headers.values]
