@@ -61,32 +61,19 @@ const PageIndexLayout: React.FunctionComponent<PageIndexLayoutProps> = ({ data, 
 
 export const pageQuery = graphql`
   query($ids: [String!]!) {
-    allMdx(filter: {id: {in: $ids}}, sort: {fields: frontmatter___date, order: DESC}) {
+    allMdx(
+      filter: {
+        id: {
+          in: $ids
+        }
+      }, sort: {
+        fields: frontmatter___date, order: DESC
+      }
+    )
+    {
       edges {
         node {
-          id
-          code {
-            body
-          }
-          fields {
-            slug
-          }
-          frontmatter {
-            categories
-            date
-            dateFormatted
-            image {
-              childImageSharp {
-                fluid(maxWidth: 720) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            last_modified_at
-            layout
-            tags
-            title
-          }
+          ...PostMdx
         }
       }
     }

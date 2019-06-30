@@ -14,32 +14,21 @@ const ArchivePage: React.FunctionComponent<ArchivePageProps> = ({ data }) => (
 
 export const pageQuery = graphql`
   {
-    allMdx(filter: {fields: {slug: {ne: null}}}, sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMdx(
+      filter: {
+        fields: {
+          slug: {
+            ne: null
+          }
+        }
+      }, sort: {
+        order: DESC, fields: [frontmatter___date]
+      }
+    )
+    {
       edges {
         node {
-          id
-          code {
-            body
-          }
-          fields {
-            slug
-          }
-          frontmatter {
-            categories
-            date
-            dateFormatted
-            image {
-              childImageSharp {
-                fluid(maxWidth: 720) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            last_modified_at
-            layout
-            tags
-            title
-          }
+          ...PostMdx
         }
       }
     }

@@ -115,52 +115,58 @@ const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {
   );
 };
 
+export const postMdxFragment = graphql`
+  fragment PostMdx on Mdx {
+    id
+    code {
+      body
+    }
+    fields {
+      slug
+    }
+    frontmatter {
+      categories
+      date
+      dateFormatted
+      image {
+        childImageSharp {
+          fluid(maxWidth: 720) {
+            ...GatsbyImageSharpFluid
+            presentationWidth
+          }
+        }
+      }
+      last_modified_at
+      layout
+      tags
+      title
+    }
+  }
+`;
+
+export const siblingPostMdxFragment = graphql`
+  fragment SiblingPostMdx on Mdx {
+    id
+    fields {
+      slug
+    }
+    frontmatter {
+      dateFormatted
+      title
+    }
+  }
+`;
+
 export const pageQuery = graphql`
   query($id: String!, $previousId: String, $nextId: String) {
     mdx(id: { eq: $id }) {
-      id
-      code {
-        body
-      }
-      fields {
-        slug
-      }
-      frontmatter {
-        categories
-        date
-        dateFormatted
-        image {
-          childImageSharp {
-            fluid(maxWidth: 720) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        last_modified_at
-        layout
-        tags
-        title
-      }
+      ...PostMdx
     }
     previousMdx: mdx(id: { eq: $previousId }) {
-      id
-      fields {
-        slug
-      }
-      frontmatter {
-        dateFormatted
-        title
-      }
+      ...SiblingPostMdx
     }
     nextMdx: mdx(id: { eq: $nextId }) {
-      id
-      fields {
-        slug
-      }
-      frontmatter {
-        dateFormatted
-        title
-      }
+      ...SiblingPostMdx
     }
   }
 `;

@@ -112,8 +112,7 @@ exports.createPages = async ({ graphql, actions }) => {
             ne: null
           }
         }
-      },
-      sort: {
+      }, sort: {
         order: DESC, fields: [frontmatter___date]
       }
     )
