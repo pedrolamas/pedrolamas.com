@@ -5,16 +5,32 @@ const slugify = require('underscore.string/slugify');
 
 const slug = (path) => slugify(path.replace(/\./g, "dot"));
 
-const getSlugForPost = (node, getNode) => {
-  if (getNode(node.parent).sourceInstanceName === "posts") {
-    const value = createFilePath({ node, getNode });
+const fixFrontmatterImageUrl = (node) => {
+  if (node.frontmatter) {
+    const url = node.frontmatter.image;
 
-    const [, date, title] = value.match(/^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)\/$/);
-
-    return `/${date.replace(/-/g, "/")}/${title}/`;
+    if (url && url.startsWith(`/wp-content/`)) {
+      node.frontmatter.image = url.slice(1);
+    }
   }
+}
 
-  return null;
+const createSlugField = (createNodeField, node, getNode) => {
+  const slug = (getNode(node.parent).sourceInstanceName === "posts") ? getSlugForPost(node, getNode) : null;
+
+  createNodeField({
+    name: "slug",
+    node,
+    value: slug
+  });
+}
+
+const getSlugForPost = (node, getNode) => {
+  const value = createFilePath({ node, getNode });
+
+  const [, date, title] = value.match(/^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)\/$/);
+
+  return `/${date.replace(/-/g, "/")}/${title}/`;
 }
 
 const createMdxSource = (id, data, parentNode, actions, createNodeId, createContentDigest) => {
@@ -43,11 +59,9 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   const { createNodeField } = actions;
 
   if (node.internal.type === "Mdx") {
-    createNodeField({
-      name: "slug",
-      node,
-      value: getSlugForPost(node, getNode)
-    });
+    fixFrontmatterImageUrl(node);
+
+    createSlugField(createNodeField, node, getNode);
   }
   else if (node.internal.type === "DataYaml") {
     createMdxSource("disclaimer", node.disclaimer, node, actions, createNodeId, createContentDigest);
@@ -67,7 +81,13 @@ exports.sourceNodes = ({ actions }) => {
       frontmatter: MdxFrontmatter
     }`,
     `type MdxFrontmatter @infer {
+      categories: [String]
+      date: Date
       dateFormatted: Date @dateformat(formatString: "MMMM D, YYYY") @proxy(from: "date")
+      last_modified_at: Date
+      layout: String
+      tags: [String]
+      title: String
     }`,
     `type SitemapYaml implements Node @infer {
       sub: [SitemapYamlSub]
@@ -161,7 +181,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path: (pageIndex === 1 ? `/` : `/page/${pageIndex}/`),
-      component: path.resolve('./src/components/indexLayout.tsx'),
+      component: path.resolve(`./src/components/indexLayout.tsx`),
       context: {
         ids: groupedPosts.map(edge => edge.node.id),
         previousPageIndex: (pageIndex > 1 ? pageIndex - 1 : undefined),

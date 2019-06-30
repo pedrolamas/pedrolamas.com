@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/camelcase */
+/* eslint-disable */
 module.exports = {
   plugins: [
     {
@@ -53,11 +53,16 @@ module.exports = {
         },
         gatsbyRemarkPlugins: [
           {
+            resolve: require.resolve(`./gatsbyRemarkPlugins/fix-image-urls`),
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 720,
+              linkImagesToOriginal: false,
             }
           },
+          `gatsby-remark-responsive-iframe`,
           {
             resolve: `gatsby-remark-smartypants`,
           },
