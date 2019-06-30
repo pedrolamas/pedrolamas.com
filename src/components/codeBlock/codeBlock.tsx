@@ -3,7 +3,7 @@ import Prism from 'prismjs';
 import Highlight, {defaultProps, PrismTheme, Prism as BundledPrism} from 'prism-react-renderer';
 import "prismjs/components/prism-csharp";
 
-import { default as theme } from '../../github';
+import { default as theme } from './themes/github';
 
 type PrismLib = typeof BundledPrism;
 
