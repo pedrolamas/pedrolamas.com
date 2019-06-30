@@ -58,6 +58,9 @@ module.exports = {
               maxWidth: 720,
             }
           },
+          {
+            resolve: `gatsby-remark-smartypants`,
+          },
         ],
       },
     },
