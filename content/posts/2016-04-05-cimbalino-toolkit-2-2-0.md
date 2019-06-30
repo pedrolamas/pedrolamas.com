@@ -28,16 +28,16 @@ This new version includes improved support for Windows Phone Silverlight 8.1 (WP
 
 This brings the total number of supported platforms to 5:
 
- * Windows Phone Silverlight 8.0 apps (WP8)
- * Windows Phone Silverlight 8.1 apps (WP81)
- * Windows Phone 8.1 apps (WPA81)
- * Windows Store 8.1 apps (Win81)
- * Windows 10 UWP apps (UAP)
+* Windows Phone Silverlight 8.0 apps (WP8)
+* Windows Phone Silverlight 8.1 apps (WP81)
+* Windows Phone 8.1 apps (WPA81)
+* Windows Store 8.1 apps (Win81)
+* Windows 10 UWP apps (UAP)
 
 Here's the full change log for version 2.0.0:
 
- * Improved compatibility with Windows Phone Silverlight 8.1 (WP81)
- * New [Cimbalino.Toolkit.Controls](https://www.nuget.org/packages/Cimbalino.Toolkit.Controls) library (includes the [HamburgerFrame for Windows 10](https://www.pedrolamas.com/2016/03/07/cimbalino-toolkit-hamburger-controls-for-uwp/))
- * New IFilePickerService to handle the file picker (when available)
- * Improvements over the INavigationService implementation
- * Other fixes and improvements
+* Improved compatibility with Windows Phone Silverlight 8.1 (WP81)
+* New [Cimbalino.Toolkit.Controls](https://www.nuget.org/packages/Cimbalino.Toolkit.Controls) library (includes the [HamburgerFrame for Windows 10](https://www.pedrolamas.com/2016/03/07/cimbalino-toolkit-hamburger-controls-for-uwp/))
+* New IFilePickerService to handle the file picker (when available)
+* Improvements over the INavigationService implementation
+* Other fixes and improvements

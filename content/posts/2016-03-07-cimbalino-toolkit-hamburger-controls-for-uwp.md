@@ -38,9 +38,9 @@ Starting with version 2.2.0 (currently still in beta 1), the [**Cimbalino Toolki
 
 Currently, the package features 3 controls:
 
- * **HamburgerFrame**
- * **HamburgerTitleBar**
- * **HamburgerMenuButton**
+* **HamburgerFrame**
+* **HamburgerTitleBar**
+* **HamburgerMenuButton**
 
 ### HamburgerFrame
 
@@ -48,17 +48,17 @@ Starting from the top, the `HamburgerFrame` control is a full replacement for th
 
 The control provides 3 content containers represented by the `Header`, `SubHeader`, and `Pane` properties, and on the center, it will show the navigated content:
 
-[![HamburgerFrame container thumb](https://www.pedrolamas.com/wp-content/uploads/2016/03/HamburgerFrame-thumb.png)](https://www.pedrolamas.com/wp-content/uploads/2016/03/HamburgerFrame.png)
+[![HamburgerFrame container thumb](/wp-content/uploads/2016/03/HamburgerFrame-thumb.png)](/wp-content/uploads/2016/03/HamburgerFrame.png)
 
 Obviously, you can specify content for this containers however you would like, or just leave them blank!
 
 The `Header` allows content to be presented above the `Pane`, so it will never be hidden by it:
 
-[![HamburgerFrame container thumb](https://www.pedrolamas.com/wp-content/uploads/2016/03/HamburgerFrame-Header-only-thumb.png)](https://www.pedrolamas.com/wp-content/uploads/2016/03/HamburgerFrame-Header-only.png)
+[![HamburgerFrame container thumb](/wp-content/uploads/2016/03/HamburgerFrame-Header-only-thumb.png)](/wp-content/uploads/2016/03/HamburgerFrame-Header-only.png)
 
 The `SubHeader` allows content to be presented on the right side of the `Pane`. This means that if the pane is in one of the "overflow" modes it will show on top of this container, hiding the content behind it:
 
-[![HamburgerFrame container thumb](https://www.pedrolamas.com/wp-content/uploads/2016/03/HamburgerFrame-SubHeader-only-thumb.png)](https://www.pedrolamas.com/wp-content/uploads/2016/03/HamburgerFrame-SubHeader-only.png)
+[![HamburgerFrame container thumb](/wp-content/uploads/2016/03/HamburgerFrame-SubHeader-only-thumb.png)](/wp-content/uploads/2016/03/HamburgerFrame-SubHeader-only.png)
 
 The control also provides background properties for all these containers (`HeaderBackground`, `SubHeaderBackground`, and `PaneBackground`).
 
@@ -68,7 +68,7 @@ To make the life easier of developers, I've "borrowed" the `VisualStateNarrowMin
 
 The `HamburgerTitleBar` control provides a basic Hamburger button on the left side (can be hidden with the `MenuButtonVisibility` property), and a `Title` property.
 
-[![HamburgerTitleBar](https://www.pedrolamas.com/wp-content/uploads/2016/03/HamburgerTitleBar.png)](https://www.pedrolamas.com/wp-content/uploads/2016/03/HamburgerTitleBar.png)
+[![HamburgerTitleBar](/wp-content/uploads/2016/03/HamburgerTitleBar.png)](/wp-content/uploads/2016/03/HamburgerTitleBar.png)
 
 This is a quite rudimentar and easy to use control, yet developers might want to just go ahead and create their own version of this control and place it on their apps!
 
@@ -78,7 +78,7 @@ Finally, the `HamburgerMenuButton` is the button you'll be using in the pane to 
 
 This control shows a left-side icon and an optional label (through the `Icon` and `Content` properties):
 
-[![HamburgerMenuButton basic states](https://www.pedrolamas.com/wp-content/uploads/2016/03/HamburgerMenuButton-basic-states.png)](https://www.pedrolamas.com/wp-content/uploads/2016/03/HamburgerMenuButton-basic-states.png)
+[![HamburgerMenuButton basic states](/wp-content/uploads/2016/03/HamburgerMenuButton-basic-states.png)](/wp-content/uploads/2016/03/HamburgerMenuButton-basic-states.png)
 
 The regular approach here will be to just place all the `HamburgerMenuButton` controls inside a vertical `StackPanel`, but one can also stack them horizontally, and in this case, we would only show the icon and hide the label (using the provided `LabelVisibility` property).
 
@@ -156,7 +156,7 @@ rootFrame = new Cimbalino.Toolkit.Controls.HamburgerFrame()
 
 **Congratulation:** your app now has a universal Hamburger menu with a nice title bar! :)
 
-[![App with HamburgerFrame](https://www.pedrolamas.com/wp-content/uploads/2016/03/App-with-HamburgerFrame-thumb.png)](https://www.pedrolamas.com/wp-content/uploads/2016/03/App-with-HamburgerFrame.png)
+[![App with HamburgerFrame](/wp-content/uploads/2016/03/App-with-HamburgerFrame-thumb.png)](/wp-content/uploads/2016/03/App-with-HamburgerFrame.png)
 
 Next steps might be to create a separate user control to hold the `HamburgerTitleBar`, which will then allow you to bind the `Title` property to view model (making it easier to update on a page by page basis).
 

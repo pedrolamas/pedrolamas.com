@@ -25,9 +25,10 @@ Attached Behaviors have been around for quite a while, and though I personally a
 I've seen quite a few fixes for them (like [this one](http://dotnetbyexample.blogspot.co.uk/2011/04/safe-event-detachment-pattern-for.html) from MVP Joost Van Schaik), though none proved to be truly "universal" and final!
 
 To demonstrate the problem, let's take a practical example:
- - create an app with two pages
- - page 1 will have a button to navigate to page 2
- - page 2 will have a button that when clicked, will navigate back to page 1 after a pause of 2 seconds
+
+- create an app with two pages
+- page 1 will have a button to navigate to page 2
+- page 2 will have a button that when clicked, will navigate back to page 1 after a pause of 2 seconds
 
 Here's the view model for page 2, `Page2ViewModel`:
 

@@ -21,8 +21,8 @@ The [**XAML Behaviors for UWP**](https://github.com/Microsoft/XamlBehaviors) has
 
 Among other changes, this version contains two fixes that I personally contributed for issues found in the `EventTriggerBehavior`:
 
- * [Ensured EventTriggerBehavior unregisters the event handler](https://github.com/Microsoft/XamlBehaviors/commit/2ad49665200730a25ea61e1bd950ea5887989468)
- * [Properly check for Windows Runtime events in EventTriggerBehavior](https://github.com/Microsoft/XamlBehaviors/commit/71bf9ba628d562f56418b122d9b08bd0a6ff7c55)
+* [Ensured EventTriggerBehavior unregisters the event handler](https://github.com/Microsoft/XamlBehaviors/commit/2ad49665200730a25ea61e1bd950ea5887989468)
+* [Properly check for Windows Runtime events in EventTriggerBehavior](https://github.com/Microsoft/XamlBehaviors/commit/71bf9ba628d562f56418b122d9b08bd0a6ff7c55)
 
 The [NuGet package](https://www.nuget.org/packages/Microsoft.Xaml.Behaviors.Uwp.Managed/) has been updated so if you're using the Xaml Behaviors in your app, all you need is to let NuGet take the latest version of the package!
 
@@ -34,7 +34,7 @@ I forgot to mention a massive difference on the new version of the XAML Behavior
 
 If you use PowerShell to output the Assembly Full Name from the current and previous versions of the XAML Behaviors, this is what you will get:
 
-[![Microsoft.Xaml.Interactivity assembly full name](https://www.pedrolamas.com/wp-content/uploads/2016/02/Microsoft.Xaml_.Interactivity-assembly-full-name.png)](https://www.pedrolamas.com/wp-content/uploads/2016/02/Microsoft.Xaml_.Interactivity-assembly-full-name.png)
+[![Microsoft.Xaml.Interactivity assembly full name](/wp-content/uploads/2016/02/Microsoft.Xaml_.Interactivity-assembly-full-name.png)](/wp-content/uploads/2016/02/Microsoft.Xaml_.Interactivity-assembly-full-name.png)
 
 Notice the different `PublicKey` value?
 

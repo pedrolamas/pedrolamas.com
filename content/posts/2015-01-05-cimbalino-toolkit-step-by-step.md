@@ -30,26 +30,26 @@ As such, I'm now making an effort to regularly write articles on Universal Apps 
 
 Open Visual Studio 2013, click *File -\> New -\> Project*, on the Templates on the left select *Store Apps -\> Universal Apps*, on the right select *Blank App (Universal Apps)*, pick a name and hit *Ok* to save the solution!
 
-[![Creating a blank Universal App project](https://www.pedrolamas.com/wp-content/uploads/2015/01/Creating-a-blank-Universal-App-project.png)](https://www.pedrolamas.com/wp-content/uploads/2015/01/Creating-a-blank-Universal-App-project.png)
+[![Creating a blank Universal App project](/wp-content/uploads/2015/01/Creating-a-blank-Universal-App-project.png)](/wp-content/uploads/2015/01/Creating-a-blank-Universal-App-project.png)
 
 Click *Tools -\> NuGet Package Manager -\> Manage NuGet Packages for Solution...*.
 
 On the top right of the *Manage NuGet Packages* window you will see a search box; type "Cimbalino" on it and press *Enter*. You should now be seeing two packages: "Cimbalino Toolkit Core" (compatible with background agents) and "Cimbalino Toolkit" (main component)
 
-[![Installing Cimbalino Toolkit with NuGet Package Manager](https://www.pedrolamas.com/wp-content/uploads/2015/01/Installing-Cimbalino-Toolkit-with-NuGet-Package-Manager.png)](https://www.pedrolamas.com/wp-content/uploads/2015/01/Installing-Cimbalino-Toolkit-with-NuGet-Package-Manager.png)
+[![Installing Cimbalino Toolkit with NuGet Package Manager](/wp-content/uploads/2015/01/Installing-Cimbalino-Toolkit-with-NuGet-Package-Manager.png)](/wp-content/uploads/2015/01/Installing-Cimbalino-Toolkit-with-NuGet-Package-Manager.png)
 
 Select "Cimbalino Toolkit" and click on the *Install* button. You will now see the *Select Project* window.
 
-[![Select Projects to install package](https://www.pedrolamas.com/wp-content/uploads/2015/01/Select-Projects-to-install-package.png)](https://www.pedrolamas.com/wp-content/uploads/2015/01/Select-Projects-to-install-package.png)
+[![Select Projects to install package](/wp-content/uploads/2015/01/Select-Projects-to-install-package.png)](/wp-content/uploads/2015/01/Select-Projects-to-install-package.png)
 
 Leave all projects of the solution selected and click *Ok*. You will now see the *License Acceptance* window, showing the licenses for all packages that will be installed.
 
-[![License Acceptance](https://www.pedrolamas.com/wp-content/uploads/2015/01/License-Acceptance.png)](https://www.pedrolamas.com/wp-content/uploads/2015/01/License-Acceptance.png)
+[![License Acceptance](/wp-content/uploads/2015/01/License-Acceptance.png)](/wp-content/uploads/2015/01/License-Acceptance.png)
 
 Please review the data and then click *I accept* to continue with the installation.
 
 After this step, you should now have returned to the *Manage NuGet Packages* window, and a green checkmark should now be shown on the side of each of the toolkit components.
 
-[![Packages successfuly installed](https://www.pedrolamas.com/wp-content/uploads/2015/01/Packages-successfuly-installed.png)](https://www.pedrolamas.com/wp-content/uploads/2015/01/Packages-successfuly-installed.png)
+[![Packages successfuly installed](/wp-content/uploads/2015/01/Packages-successfuly-installed.png)](/wp-content/uploads/2015/01/Packages-successfuly-installed.png)
 
 Congratulations: you have now successfully installed the Cimbalino Toolkit in your project! :)

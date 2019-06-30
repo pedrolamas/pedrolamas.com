@@ -60,7 +60,7 @@ Here we can see we have a `Button` called "MyButton", who's background color wil
 
 Now here's how it looks when we run the sample code:
 
-![Simple AdaptiveTrigger working](https://www.pedrolamas.com/wp-content/uploads/2016/12/Simple-AdaptiveTrigger-working.gif)
+![Simple AdaptiveTrigger working](/wp-content/uploads/2016/12/Simple-AdaptiveTrigger-working.gif)
 
 Works exactly as expected! :)
 
@@ -98,7 +98,7 @@ Given this information, let's rename our button from "MyButton" to "Pressed":
 
 This is the result if you run the code again:
 
-![AdaptiveTrigger now failing](https://www.pedrolamas.com/wp-content/uploads/2016/12/AdaptiveTrigger-now-failing.gif)
+![AdaptiveTrigger now failing](/wp-content/uploads/2016/12/AdaptiveTrigger-now-failing.gif)
 
 What you see here is that the initial state was in fact applied, but it failed to change once we started to change the window size as it was supposed to!
 

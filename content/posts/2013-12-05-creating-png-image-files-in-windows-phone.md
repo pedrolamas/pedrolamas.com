@@ -44,6 +44,6 @@ Internally it uses DotNetZip (Ms-Pl license) to handle the required ZLib compres
 
 To illustrate the speed improvement, [Ertay Shashko](https://twitter.com/ErtaySh) was kind enough to test it with his [Tile Me](http://www.windowsphone.com/s?appid=4b113087-6abc-40fb-8e49-d02adeba1393) app, and here are the results of his personal usage:
 
-[embed]https://twitter.com/ErtaySh/statuses/398103937360089089[/embed]
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/pedrolamas?ref_src=twsrc%5Etfw">@pedrolamas</a> Imagetools (~2.5 seconds to generate): <a href="http://t.co/LS5Lj1ZSCq">http://t.co/LS5Lj1ZSCq</a> Cimbalino (Default, ~0.7 secs to gener.): <a href="http://t.co/Hv0CAOK8K6">http://t.co/Hv0CAOK8K6</a></p>&mdash; Ertay Shashko (@ErtaySh) <a href="https://twitter.com/ErtaySh/status/398103937360089089?ref_src=twsrc%5Etfw">November 6, 2013</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I guess the numbers speak for themselves! :)

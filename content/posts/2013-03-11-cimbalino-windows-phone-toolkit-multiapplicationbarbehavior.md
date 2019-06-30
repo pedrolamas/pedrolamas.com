@@ -30,7 +30,7 @@ To demonstrate the `IsVisible` property, I'll use the sample code from the previ
 
 This is the recorded animation of what the state changing causes to the application bar buttons visibility:
 
-![ApplicationBarBehavior](https://www.pedrolamas.com/wp-content/uploads/2013/03/ApplicationBarBehavior.gif)
+![ApplicationBarBehavior](/wp-content/uploads/2013/03/ApplicationBarBehavior.gif)
 
 As you can see, it works perfectly! Well, almost perfectly...
 
@@ -38,7 +38,7 @@ If you look really closely, you'll notice that the animation doesn't seem quite 
 
 By making time go a bit slower, this is what is actually happening:
 
-![ApplicationBarBehavior (Slower)](https://www.pedrolamas.com/wp-content/uploads/2013/03/ApplicationBarBehavior-Slower.gif)
+![ApplicationBarBehavior (Slower)](/wp-content/uploads/2013/03/ApplicationBarBehavior-Slower.gif)
 
 As you can see above, the buttons **move** before the animation starts!
 
@@ -81,8 +81,8 @@ Major difference here is the presence of multiple `ApplicationBar` entries, but 
 
 Here's the recording of the app bar transition now:
 
-![MultiApplicationBarBehavior](https://www.pedrolamas.com/wp-content/uploads/2013/03/MultiApplicationBarBehavior.gif)
+![MultiApplicationBarBehavior](/wp-content/uploads/2013/03/MultiApplicationBarBehavior.gif)
 
 Much nicer, but just to make sure, here is the same animation but about 5 times slower:
 
-![MultiApplicationBarBehavior (Slower)](https://www.pedrolamas.com/wp-content/uploads/2013/03/MultiApplicationBarBehavior-Slower.gif)
+![MultiApplicationBarBehavior (Slower)](/wp-content/uploads/2013/03/MultiApplicationBarBehavior-Slower.gif)

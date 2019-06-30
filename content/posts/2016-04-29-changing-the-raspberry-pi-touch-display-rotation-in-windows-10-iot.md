@@ -25,7 +25,7 @@ If you now click the "Open in Device Portal" option, the browser will launch, as
 
 On the bottom you will find the "Display Orientation" option:
 
-![Display Orientation setting in the Device Portal](https://www.pedrolamas.com/wp-content/uploads/2016/04/Display-Orientation.png "Display Orientation setting in the Device Portal")
+![Display Orientation setting in the Device Portal](/wp-content/uploads/2016/04/Display-Orientation.png "Display Orientation setting in the Device Portal")
 
 Given my touch screen is placed upside down, I changed this setting to "Landscape (Flipped)", and after rebooting the device I noticed that it flipped the touch screen display as requested, but it didn't also flip the touch targets (so you'll need to mentally rotate every point you touch on the screen to make it do what it is supposed to do)!
 

@@ -32,10 +32,10 @@ This is my first MVP Awards and to me feels like the top recognition for all the
 
 I consider this award as a personal achievement, but it is one that I could not have accomplished without the help and support of some people, specifically:
 
-*   **Scott Lovegrove**, **Joost van Schaik**, **Glenn Versweyveld**, **Hermit Dave**, **Sébastien Lachance**, **Bart Lannoeye**, and quite a few other distinguished MVP's!
-*   **Alberto Silva**, **Sandro Pereira**, **Tiago Pascoal**, **Paulo Morgado**, and other fellow Portuguese MVP's!
-*   **Luis Calado**, **João Pedro Martins**, **Clint Rutkas**, and quite a few other Microsoft employees!
-*   my wife, **Joana**, who has the patience to put up with me doing "geeky" stuff all the time!
+* **Scott Lovegrove**, **Joost van Schaik**, **Glenn Versweyveld**, **Hermit Dave**, **Sébastien Lachance**, **Bart Lannoeye**, and quite a few other distinguished MVP's!
+* **Alberto Silva**, **Sandro Pereira**, **Tiago Pascoal**, **Paulo Morgado**, and other fellow Portuguese MVP's!
+* **Luis Calado**, **João Pedro Martins**, **Clint Rutkas**, and quite a few other Microsoft employees!
+* my wife, **Joana**, who has the patience to put up with me doing "geeky" stuff all the time!
 
 ...and finally but most importantly, **the whole community**, who reads my blog, follows me on twitter, checks my code contributions, downloads my apps, and gives me the opportunity to carry on doing what I've done so far and that will continue to improve in the future!
 

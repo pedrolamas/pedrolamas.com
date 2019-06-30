@@ -35,22 +35,22 @@ The year was 2002 (or so I believe!), Microsoft had just released the .NET Frame
 
 Back then, Strong-Named Assemblies had some great advantages, as indicated in [this](https://msdn.microsoft.com/en-us/library/wd40t7ad(v=vs.110).aspx) MSDN article:
 
->  * You want to enable your assemblies to be referenced by strong-named assemblies, or you want to give friend access to your assemblies from other strong-named assemblies.
->  * An app needs access to different versions of the same assembly. This means you need different versions of an assembly to load side by side in the same app domain without conflict. For example, if different extensions of an API exist in assemblies that have the same simple name, strong-naming provides a unique identity for each version of the assembly.
->  * You do not want to negatively affect performance of apps using your assembly, so you want the assembly to be domain neutral. This requires strong-naming because a domain-neutral assembly must be installed in the global assembly cache.
->  * When you want to centralize servicing for your app by applying publisher policy, which means the assembly must be installed in the global assembly cache.
+> * You want to enable your assemblies to be referenced by strong-named assemblies, or you want to give friend access to your assemblies from other strong-named assemblies.
+> * An app needs access to different versions of the same assembly. This means you need different versions of an assembly to load side by side in the same app domain without conflict. For example, if different extensions of an API exist in assemblies that have the same simple name, strong-naming provides a unique identity for each version of the assembly.
+> * You do not want to negatively affect performance of apps using your assembly, so you want the assembly to be domain neutral. This requires strong-naming because a domain-neutral assembly must be installed in the global assembly cache.
+> * When you want to centralize servicing for your app by applying publisher policy, which means the assembly must be installed in the global assembly cache.
 
 So strong-named assemblies are uniquely identified, which is a good thing, until it starts to work against you...
 
 Let's look at a real example: a few years back, [JSON.net](http://json.net/) was actually a strongly-signed assembly. Now let's assume we have a project that depends on "LibraryA" and "LibraryB", and each of these require a different version of JSON.net.
 
-[![Before Assembly Binding Redirection](https://www.pedrolamas.com/wp-content/uploads/2016/03/Before-Assembly-Binding-Redirection-thumb.png "Before Assembly Binding Redirection")](https://www.pedrolamas.com/wp-content/uploads/2016/03/Before-Assembly-Binding-Redirection.png)
+[![Before Assembly Binding Redirection](/wp-content/uploads/2016/03/Before-Assembly-Binding-Redirection-thumb.png "Before Assembly Binding Redirection")](/wp-content/uploads/2016/03/Before-Assembly-Binding-Redirection.png)
 
 If you build the project as it currently is, there will be a conflict as you can only have a single version of JSON.net on the output folder, but the libraries require different versions...
 
 To fix this issue, .NET provided a mechanism called [Assembly Binding Redirection](https://msdn.microsoft.com/en-us/library/7wd6ex19(v=vs.110).aspx) to ensure that only one specific assembly would be used, regardless of the required version.
 
-[![After Assembly Binding Redirection](https://www.pedrolamas.com/wp-content/uploads/2016/03/After-Assembly-Binding-Redirection-thumb.png "After Assembly Binding Redirection")](https://www.pedrolamas.com/wp-content/uploads/2016/03/After-Assembly-Binding-Redirection.png)
+[![After Assembly Binding Redirection](/wp-content/uploads/2016/03/After-Assembly-Binding-Redirection-thumb.png "After Assembly Binding Redirection")](/wp-content/uploads/2016/03/After-Assembly-Binding-Redirection.png)
 
 ## In comes Silverlight and Windows Phone
 

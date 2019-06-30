@@ -25,7 +25,7 @@ If you've been following [the news](http://blogs.msdn.com/b/visualstudioalm/arch
 
 Well, this seemed like the perfect opportunity to finally create some unit tests for the [Cimbalino Windows Phone Toolkit](http://cimbalino.org) and test this new test framework, all at once!
 
-<img class="alignright size-full wp-image-174 clear" src="https://www.pedrolamas.com/wp-content/uploads/2013/02/Works-on-my-machine.png" alt="Works on my machine" width="200" height="193" />Given that this post will require installing the VS2012.2 CTP 4, a non-final preview version software that has a "go-live" license, I think it's only proper to apply the WOMM certification to it.
+<img class="alignright size-full wp-image-174 clear" src="/wp-content/uploads/2013/02/Works-on-my-machine.png" alt="Works on my machine" width="200" height="193" />Given that this post will require installing the VS2012.2 CTP 4, a non-final preview version software that has a "go-live" license, I think it's only proper to apply the WOMM certification to it.
 
 So bottom line, install it at your own risk!
 
@@ -59,7 +59,7 @@ This simple class will test the `ColorToBrushConverter.Convert` method as to che
 
 When I ran the test, this is what happened:
 
-[![Windows Phone Unit Test results](https://www.pedrolamas.com/wp-content/uploads/2013/03/Windows-Phone-Unit-Test-results.png "Windows Phone Unit Test results")](https://www.pedrolamas.com/wp-content/uploads/2013/03/Windows-Phone-Unit-Test-results.png)
+[![Windows Phone Unit Test results](/wp-content/uploads/2013/03/Windows-Phone-Unit-Test-results.png "Windows Phone Unit Test results")](/wp-content/uploads/2013/03/Windows-Phone-Unit-Test-results.png)
 
 As you can see here, we got an "Invalid cross-thread access" error message; this is the result of all tests running on a special "test app" inside the Emulator, but the really bad news is that they all run in a background thread.
 

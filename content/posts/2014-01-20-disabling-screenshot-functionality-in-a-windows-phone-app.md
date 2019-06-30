@@ -90,10 +90,10 @@ public partial class MainPage : PhoneApplicationPage
 
 If you do try to take a screenshot after that code, this is what will happen:
 
-[![Application screenshot functionality disabled](https://www.pedrolamas.com/wp-content/uploads/2014/01/Application-screenshot-functionality-disabled-180x300.png)](https://www.pedrolamas.com/wp-content/uploads/2014/01/Application-screenshot-functionality-disabled.png)
+[![Application screenshot functionality disabled](/wp-content/uploads/2014/01/Application-screenshot-functionality-disabled-180x300.png)](/wp-content/uploads/2014/01/Application-screenshot-functionality-disabled.png)
 
 The same result will happen from the application switcher screen:
 
-[![Task switcher screenshot functionality disabled](https://www.pedrolamas.com/wp-content/uploads/2014/01/Task-switcher-screenshot-functionality-disabled-180x300.png)](https://www.pedrolamas.com/wp-content/uploads/2014/01/Task-switcher-screenshot-functionality-disabled.png)
+[![Task switcher screenshot functionality disabled](/wp-content/uploads/2014/01/Task-switcher-screenshot-functionality-disabled-180x300.png)](/wp-content/uploads/2014/01/Task-switcher-screenshot-functionality-disabled.png)
 
 Nowadays, privacy has become the #1 concern in everything we do, and I'm sure this is a really useful information for a bunch of apps out there (looking at you 6snap and all other Snapchat apps ;) )

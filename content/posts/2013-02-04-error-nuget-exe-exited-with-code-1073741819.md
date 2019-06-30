@@ -17,7 +17,7 @@ tags:
 ---
 Lately I've been getting more and more this type of error from [Nuget](http://nuget.org) Package Restore when building my apps:
 
-[![NuGet -1073741819 error](https://www.pedrolamas.com/wp-content/uploads/2013/02/NuGet-1073741819-error.png)](https://www.pedrolamas.com/wp-content/uploads/2013/02/NuGet-1073741819-error.png)
+[![NuGet -1073741819 error](/wp-content/uploads/2013/02/NuGet-1073741819-error.png)](/wp-content/uploads/2013/02/NuGet-1073741819-error.png)
 
 This seems to be a completely random issue with Nuget, as I see it happening with different projects, and sometimes not even happening at all!
 

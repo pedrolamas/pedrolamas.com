@@ -92,9 +92,9 @@ public class CurrentTimeViewModel : ViewModelBase
 
 Our view model is composed of 3 classes:
 
- * **ViewModelBase** is just a standard implementation for the `INotifyPropertyChanged` interface, providing an `OnPropertyChanged` helper method to its inheritors.
- * **MainViewModel** will be used as the main view model for our sample and has a single property, `CurrentTime`.
- * **CurrentTimeViewModel** has a single `CurrentTimeTicks` property which will contain a string representing the current time in ticks; an `Update` helper method has also been added to this view model.
+* **ViewModelBase** is just a standard implementation for the `INotifyPropertyChanged` interface, providing an `OnPropertyChanged` helper method to its inheritors.
+* **MainViewModel** will be used as the main view model for our sample and has a single property, `CurrentTime`.
+* **CurrentTimeViewModel** has a single `CurrentTimeTicks` property which will contain a string representing the current time in ticks; an `Update` helper method has also been added to this view model.
 
 Now let's take a look at the MainPage view:
 
@@ -191,7 +191,7 @@ We've also added a `MainPage.ViewModel` property to expose the current MainViewM
 
 This is what you'll get if you run the app and tap the buttons in succession:
 
-![Compiled Bindings FallbackValue bug](https://www.pedrolamas.com/wp-content/uploads/2016/01/Compiled-Bindings-FallbackValue-bug.gif)
+![Compiled Bindings FallbackValue bug](/wp-content/uploads/2016/01/Compiled-Bindings-FallbackValue-bug.gif)
 
 As you can see, the 2nd TextBlock (the one using compiled bindings) never gets the text cleared when we tap the "Destroy CurrentTimeViewModel" button!
 

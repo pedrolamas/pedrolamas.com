@@ -32,11 +32,11 @@ That was the final reason I needed to completely ditch WordPress and GoDaddy, an
 
 Major advantages of this approach are:
 
- * No more MySQL or any other database server involved
- * full control over rendered content
- * everything is statically generated on every commit of the git repo, so **it's blazing fast!**
- * I can **host it for free in GitHub Pages** and add some nice features like allowing other people to send me Pull Requests with fixes and improvements (or just to correct my recurrent typos!)
- 
+* No more MySQL or any other database server involved
+* full control over rendered content
+* everything is statically generated on every commit of the git repo, so **it's blazing fast!**
+* I can **host it for free in GitHub Pages** and add some nice features like allowing other people to send me Pull Requests with fixes and improvements (or just to correct my recurrent typos!)
+
 This right now is actually the first post I write in the new platform! :)
 
 There are still a few quirks to fix, so if you find any problem please report it by [creating a new issue]({{ site.github.repository_url }}/issues/new) and I'll take care of it as soon as possible!

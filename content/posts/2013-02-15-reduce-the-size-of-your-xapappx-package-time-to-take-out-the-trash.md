@@ -24,7 +24,7 @@ tags:
 
 Before you even continue reading this article, I must just address a small warning: the following information has passed the WOMM certification, and as such, this works on my machine...
 
-![Works on my machine](https://www.pedrolamas.com/wp-content/uploads/2013/02/Works-on-my-machine.png)
+![Works on my machine](/wp-content/uploads/2013/02/Works-on-my-machine.png)
 
 Recently, while browsing [StackOverflow](http://stackoverflow.com/) as I normally do, I found a [question](http://stackoverflow.com/questions/14849374/visual-studio-packs-into-wp8-xap-unnecessary-xml-doc-files) that really caught my attention:
 
@@ -45,17 +45,17 @@ After reading this, I had to confirm this behavior myself! Here's what I did:
 
 These are the XAP files resulting from building each project:
 
-![Windows Phone XAP files from both projects](https://www.pedrolamas.com/wp-content/uploads/2013/02/Windows-Phone-XAP-files-from-both-projects.png)
+![Windows Phone XAP files from both projects](/wp-content/uploads/2013/02/Windows-Phone-XAP-files-from-both-projects.png)
 
 As you can see here, the WP8 version is about 60Kb larger than the WP7 version. **That's 42% larger!!!**
 
 Here is the content of the WP7 XAP file:
 
-![Windows Phone 7 XAP contents](https://www.pedrolamas.com/wp-content/uploads/2013/02/Windows-Phone-7-XAP-contents.png)
+![Windows Phone 7 XAP contents](/wp-content/uploads/2013/02/Windows-Phone-7-XAP-contents.png)
 
 And this is the content of the WP8 XAP file:
 
-![Windows Phone 8 XAP contents](https://www.pedrolamas.com/wp-content/uploads/2013/02/Windows-Phone-8-XAP-contents.png)
+![Windows Phone 8 XAP contents](/wp-content/uploads/2013/02/Windows-Phone-8-XAP-contents.png)
 
 If you look closely on the WP8 version above, you'll see a `Newtonsoft.Json.xml` file - that's the Json.net Xml Documentation!
 

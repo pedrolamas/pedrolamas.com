@@ -44,7 +44,7 @@ Now say we want to list 3 items per row and them wrap to the next row, we can us
 
 The resulting items layout will look something like the following picture:
 
-[![WrapPanel layout](https://www.pedrolamas.com/wp-content/uploads/2014/03/WrapPanel-layout-252x300.png)](https://www.pedrolamas.com/wp-content/uploads/2014/03/WrapPanel-layout.png)
+[![WrapPanel layout](/wp-content/uploads/2014/03/WrapPanel-layout-252x300.png)](/wp-content/uploads/2014/03/WrapPanel-layout.png)
 
 This will work fine with 10 items, but what about 100? Or 1.000? Or even 10.000?
 
@@ -76,7 +76,7 @@ All we now need is another `ItemsControl` inside our main `ListBox` to iterate t
 
 Here's the resulting layout schematic:
 
-[![Smart Wrapping layout](https://www.pedrolamas.com/wp-content/uploads/2014/03/Smart-Wrapping-layout-252x300.png)](https://www.pedrolamas.com/wp-content/uploads/2014/03/Smart-Wrapping-layout.png)
+[![Smart Wrapping layout](/wp-content/uploads/2014/03/Smart-Wrapping-layout-252x300.png)](/wp-content/uploads/2014/03/Smart-Wrapping-layout.png)
 
 Major advantages with this approach is the obvious performance improvement and memory consumption reduction. Why? Because we maintained the `VirtualizingStackPanel` in our main `ListBox.ItemsPanel`!
 

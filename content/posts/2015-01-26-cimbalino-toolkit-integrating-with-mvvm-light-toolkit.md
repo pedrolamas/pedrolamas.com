@@ -176,8 +176,8 @@ To make things even easier, you can download the full solution [here](wp-content
   [1]: https://www.pedrolamas.com/2015/01/05/cimbalino-toolkit-step-by-step/
   [2]: http://cimbalino.org
   [3]: http://mvvmlight.codeplex.com/
-  [4]: https://www.pedrolamas.com/wp-content/uploads/2015/01/Searching-for-MVVM-Light-Toolkit.png
+  [4]: /wp-content/uploads/2015/01/Searching-for-MVVM-Light-Toolkit.png
   [5]: http://www.mvvmlight.net/nuget-univ
-  [6]: https://www.pedrolamas.com/wp-content/uploads/2015/01/Projects-with-different-ViewModel-folders.png
-  [7]: https://www.pedrolamas.com/wp-content/uploads/2015/01/Projects-with-shared-ViewModel-folder.png
+  [6]: /wp-content/uploads/2015/01/Projects-with-different-ViewModel-folders.png
+  [7]: /wp-content/uploads/2015/01/Projects-with-shared-ViewModel-folder.png
   [8]: https://github.com/Cimbalino/Cimbalino-Toolkit/tree/master/src/Cimbalino.Toolkit.Core%20%28Portable%29/Services

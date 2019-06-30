@@ -29,7 +29,7 @@ In case you missed it, **there is a new and improved [Cimbalino Toolkit](http://
 * Windows Phone 8.1 apps (WPA81)
 * Windows Store 8.1 apps (Win81)
 
-# The long story
+## The long story
 
 About 3 years ago, the first version of Cimbalino Windows Phone Toolkit was released as a [NuGet package](https://www.nuget.org/packages/Cimbalino.Phone.Toolkit/) with [full source code hosted in GitHub](https://github.com/Cimbalino/Cimbalino-Phone-Toolkit) to help every on the development of Windows Phone apps!
 
@@ -41,7 +41,7 @@ There was also some limitations on the available API's for Background Agents and
 
 So the toolkit ended up divided like so:
 
-[![Cimbalino Windows Phone Toolkit](https://www.pedrolamas.com/wp-content/uploads/2014/07/Cimbalino-Windows-Phone-Toolkit-thumb.png)](https://www.pedrolamas.com/wp-content/uploads/2014/07/Cimbalino-Windows-Phone-Toolkit.png)
+[![Cimbalino Windows Phone Toolkit](/wp-content/uploads/2014/07/Cimbalino-Windows-Phone-Toolkit-thumb.png)](/wp-content/uploads/2014/07/Cimbalino-Windows-Phone-Toolkit.png)
 
 In light blue are the components that may be used with Background Agents. The rest of the components are divided by Capabilities or 3rd party components requirements.
 
@@ -58,7 +58,7 @@ There is still a lot of work to be done to port everything from the old toolkit 
 
 Also, there is the need to write some new samples and documentation, so if you can I could surely use the help!!! ;)
 
-# TL;DR
+## TL;DR
 
 Here are the new **Cimbalino Toolkit** NuGet packages:
 

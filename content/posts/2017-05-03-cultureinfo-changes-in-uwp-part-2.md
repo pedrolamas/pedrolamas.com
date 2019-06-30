@@ -22,6 +22,7 @@ However, Microsoft has since open-sourced the [.NET Core Runtime (CoreRT)](https
 While looking at the [CultureInfo.cs](https://github.com/dotnet/corert/blob/master/src/System.Private.CoreLib/src/System/Globalization/CultureInfo.cs#L399) code, I noticed the following comment on the `CurrentCulture` property:
 
 > We use the following order to return CurrentCulture and CurrentUICulture
+>
 > * Use WinRT to return the current user profile language
 > * Use current thread culture if the user already set one using CurrentCulture/CurrentUICulture
 > * Use thread culture if the user already set one using DefaultThreadCurrentCulture or DefaultThreadCurrentUICulture

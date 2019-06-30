@@ -68,7 +68,7 @@ The problem is that the page's LayoutRoot control gets a different XAML Namescop
 
 The following image illustrates the Namescope boundaries for a default new page:
 
-[![XAML Namescope boundaries thumb](https://www.pedrolamas.com/wp-content/uploads/2013/04/XAML-Namescope-boundaries-thumb.png)](https://www.pedrolamas.com/wp-content/uploads/2013/04/XAML-Namescope-boundaries.png)
+[![XAML Namescope boundaries thumb](/wp-content/uploads/2013/04/XAML-Namescope-boundaries-thumb.png)](/wp-content/uploads/2013/04/XAML-Namescope-boundaries.png)
 
 This is where the `NamescopeBinding` helper class makes its entry: just register an instance of this class as a page resource and bind the `NamescopeBinding.Source` property to the control you require outside the LayoutRoot XAML Namescope as shown in the sample code, and that's it!
 

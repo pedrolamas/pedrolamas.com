@@ -74,4 +74,4 @@ As the name might suggest, "Augmented Reality" adds information to your *real* e
 
 No one said it, but I'm sure a lot of people remembered this while watching Build 2015:
 
-https://www.youtube.com/watch?v=Vhh_GeBPOhs
+[https://www.youtube.com/watch?v=Vhh_GeBPOhs](https://www.youtube.com/watch?v=Vhh_GeBPOhs)

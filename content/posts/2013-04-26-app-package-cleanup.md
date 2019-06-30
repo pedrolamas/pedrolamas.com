@@ -29,7 +29,7 @@ And if you've read [this article](https://www.pedrolamas.com/2013/02/15/reduce-t
 
 All you have to do is run the following command from the Package Manager console window:
 
-[![InstallPackage AppPackageCleanup](https://www.pedrolamas.com/wp-content/uploads/2013/04/AppPackageCleanup.png)](https://nuget.org/packages/AppPackageCleanup)
+[![InstallPackage AppPackageCleanup](/wp-content/uploads/2013/04/AppPackageCleanup.png)](https://nuget.org/packages/AppPackageCleanup)
 
 If you have NuGet Package Manager extension installed on Visual Studio, just search for `AppPackageCleanup` to install the Package.
 

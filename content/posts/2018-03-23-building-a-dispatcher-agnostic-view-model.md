@@ -77,7 +77,7 @@ public async Task RetrieveData()
     var data = await GetDataFromSomeWebsite()
         .ConfigureAwait(false);
 
-    CoreApplication.MainView.Dispatcher(CoreDispatcherPriority.Normal, () => 
+    CoreApplication.MainView.Dispatcher(CoreDispatcherPriority.Normal, () =>
     {
         Text = data;
     });
