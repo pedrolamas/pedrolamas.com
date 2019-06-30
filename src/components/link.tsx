@@ -1,7 +1,7 @@
-import React, { ComponentProps } from 'react';
+import React, { ComponentPropsWithoutRef } from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 
-type LinkProps = Omit<ComponentProps<typeof GatsbyLink>, 'ref'>;
+type LinkProps = ComponentPropsWithoutRef<typeof GatsbyLink>;
 
 const Link: React.FunctionComponent<LinkProps> = (props) => {
   return (<>

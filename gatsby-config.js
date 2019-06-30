@@ -57,7 +57,7 @@ module.exports = {
             options: {
               maxWidth: 720,
             }
-          }
+          },
         ],
       },
     },
@@ -74,7 +74,7 @@ module.exports = {
           failOnError: false
         }
       }
-    }
+    },
   ],
   mapping: {
     'Mdx.frontmatter.image': `File.relativePath`,
