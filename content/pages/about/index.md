@@ -20,5 +20,5 @@ I'm a [Microsoft Certified Professional](about/mcp-transcript), a [Xamarin Certi
 
 ## You might also want to check...
 
- * [Microsoft Certified Professional (MCP) Transcript](about/mcp-transcript)
- * [PGP Public Key](about/pgp-public-key)
+* [Microsoft Certified Professional (MCP) Transcript](about/mcp-transcript)
+* [PGP Public Key](about/pgp-public-key)

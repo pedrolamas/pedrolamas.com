@@ -26,12 +26,12 @@ So, I created my very own Nokia Lumia 800 skin for Windows Phone emulator, and t
 
 This skin uses hi-res images, and has the following fully working buttons:
 
-*   Back/App switcher
-*   Start/Speech
-*   Search
-*   Volume Up
-*   Volume Down
-*   Camera
+* Back/App switcher
+* Start/Speech
+* Search
+* Volume Up
+* Volume Down
+* Camera
 
 Note: though the "Power" is present and does the expected animation(!), this doesn't seem to work on the Windows Phone emulator!
 
@@ -39,8 +39,8 @@ Note: though the "Power" is present and does the expected animation(!), this doe
 
 Here's what you need to do to use this skin:
 
-*   Make sure the emulator is closed!
-*   Open the emulator folder (normally should be something like “C:\Program Files (x86)\Microsoft XDE\1.0\”)
-*   Create a backup of the “WM7_Skin.xml” file just in case you want to go back to the old skin
-*   Extract the files to the emulator folder (note: requires administrator access)
-*   Start the emulator!
+* Make sure the emulator is closed!
+* Open the emulator folder (normally should be something like “C:\Program Files (x86)\Microsoft XDE\1.0\”)
+* Create a backup of the “WM7_Skin.xml” file just in case you want to go back to the old skin
+* Extract the files to the emulator folder (note: requires administrator access)
+* Start the emulator!
