@@ -16,8 +16,7 @@ const Head: React.FunctionComponent<HeadProps> = (props) => (
     {siteContext => {
       const { siteMetadata } = siteContext;
 
-      if (!siteMetadata || !siteMetadata.author)
-      {
+      if (!siteMetadata || !siteMetadata.author) {
         return null;
       }
 

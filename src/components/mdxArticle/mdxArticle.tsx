@@ -11,7 +11,7 @@ type MdxArticleProps = {
   children?: never;
 }
 
-const MdxArticle: React.FunctionComponent<MdxArticleProps> = ({mdx}) => (
+const MdxArticle: React.FunctionComponent<MdxArticleProps> = ({ mdx }) => (
   <MdxArticleContext.Provider value={mdx}>
     <MdxArticleImage />
 

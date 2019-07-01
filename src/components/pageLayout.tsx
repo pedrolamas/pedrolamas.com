@@ -8,7 +8,7 @@ type PageLayoutProps = {
   children: React.ReactNode;
 }
 
-const PageLayout: React.FunctionComponent<PageLayoutProps> = ({title, children}) => (
+const PageLayout: React.FunctionComponent<PageLayoutProps> = ({ title, children }) => (
   <RootLayout>
     <Head title={title} />
     <main role="main">

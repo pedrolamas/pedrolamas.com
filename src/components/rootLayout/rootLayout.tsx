@@ -12,7 +12,7 @@ type RootLayoutProperties = {
   children: React.ReactNode;
 }
 
-const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({children}) => {
+const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children }) => {
   const { dataYaml } = useStaticQuery<Query>(
     graphql`
       query {

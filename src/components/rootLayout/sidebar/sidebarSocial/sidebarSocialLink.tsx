@@ -7,7 +7,7 @@ type SidebarSocialLinkProps = {
   title: string;
 }
 
-const SidebarSocialLink: React.FunctionComponent<SidebarSocialLinkProps> = ({url, title}) => (
+const SidebarSocialLink: React.FunctionComponent<SidebarSocialLinkProps> = ({ url, title }) => (
   <Link to={url} className="sidebar-social-item" title={title}>
     <span className="screen-reader-text">{title}</span>
   </Link>
