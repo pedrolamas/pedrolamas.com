@@ -1,4 +1,3 @@
-/* eslint-disable */
 module.exports = {
   plugins: [
     {
@@ -49,7 +48,7 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
-          default: require.resolve("./src/components/mdxPageLayout.tsx")
+          default: require.resolve('./src/components/mdxPageLayout.tsx'),
         },
         gatsbyRemarkPlugins: [
           {
@@ -60,7 +59,7 @@ module.exports = {
             options: {
               maxWidth: 720,
               linkImagesToOriginal: false,
-            }
+            },
           },
           `gatsby-remark-responsive-iframe`,
           {
@@ -79,9 +78,9 @@ module.exports = {
         stages: [`develop`],
         options: {
           emitWarning: true,
-          failOnError: false
-        }
-      }
+          failOnError: false,
+        },
+      },
     },
   ],
   mapping: {
@@ -91,4 +90,4 @@ module.exports = {
     'DataYaml.disclaimer': 'Mdx.rawBody',
     'DataYaml.author.biography': 'Mdx.rawBody',
   },
-}
+};

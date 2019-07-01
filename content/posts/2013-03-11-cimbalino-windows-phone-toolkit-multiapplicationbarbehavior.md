@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=208
 permalink: /2013/03/11/cimbalino-windows-phone-toolkit-multiapplicationbarbehavior/
 dsq_thread_id:
-  - "2046329236"
+  - '2046329236'
 categories:
   - Windows Phone
 tags:
@@ -20,6 +20,7 @@ tags:
   - WP8
   - WPDev
 ---
+
 My [previous article](https://www.pedrolamas.com/2013/03/05/cimbalino-windows-phone-toolkit-applicationbarbehavior/) showed how to use the **ApplicationBarBehavior** from the [Cimbalino Windows Phone Toolkit](http://cimbalino.org) to build applications with MVVM pattern and still use the Application Bar control without the need for any code-behind.
 
 More than just controlling the app bar from the ViewModel, the `ApplicationBarBehavior` adds some nice new properties that you can't find in the native app bar control.

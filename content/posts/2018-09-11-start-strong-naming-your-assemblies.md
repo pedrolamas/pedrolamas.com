@@ -19,6 +19,7 @@ tags:
   - .NET
   - .NET Core
 ---
+
 ## TL;DR
 
 My opinion on this subject has evolved to the point I'm now recommending that you should strong-name your assemblies.
@@ -66,4 +67,4 @@ If that proves true, then yes: you should strong-name your assemblies as that wi
 
 To those still skeptical of strong-naming their assemblies, I propose a compromise solution: do strong-name your assemblies, but only increment the assembly version for major releases! [Json.NET](https://www.newtonsoft.com/json) has been using this approach to avoid binding redirects since 2014, and as far as I can tell, with relative success!
 
-As a final note to open-source library developers, *I strongly recommend that the strong-name key file gets check-in to the project repository* so that anyone can easily clone the project and compile a version of the library that works with anyone else's binaries!
+As a final note to open-source library developers, _I strongly recommend that the strong-name key file gets check-in to the project repository_ so that anyone can easily clone the project and compile a version of the library that works with anyone else's binaries!

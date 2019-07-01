@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4633
 permalink: /2016/12/09/adaptive-triggers-failing-better-check-your-control-names/
 dsq_thread_id:
-  - "5367375429"
+  - '5367375429'
 categories:
   - Windows
 tags:
@@ -18,6 +18,7 @@ tags:
   - Windows 10
   - WPDev
 ---
+
 ## TL;DR
 
 Adaptive triggers will not work if you are trying to change a control whose instance name is the same as one of the VisualStates of **any** control on the page, so make sure you name your controls accordingly!

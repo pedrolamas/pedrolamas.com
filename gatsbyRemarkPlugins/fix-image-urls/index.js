@@ -1,4 +1,3 @@
-/* eslint-disable */
 const select = require(`unist-util-select`);
 
 module.exports = ({ markdownAST }) => {
@@ -11,4 +10,4 @@ module.exports = ({ markdownAST }) => {
 
     return node;
   });
-}
+};

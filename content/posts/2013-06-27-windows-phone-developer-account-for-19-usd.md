@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=1341
 permalink: /2013/06/27/windows-phone-developer-account-for-19-usd/
 dsq_thread_id:
-  - "2052583151"
+  - '2052583151'
 categories:
   - Windows Phone
 tags:
@@ -16,9 +16,10 @@ tags:
   - WP8Dev
   - WPDev
 ---
-You've been playing with Visual Studio Express for a while, creating some new cool apps and games for Windows Phone, and now you want to publish them but the $99 USD price tag on the developer account seems a bit steep!
 
-Well, how does $19 USD sound like? :)
+You've been playing with Visual Studio Express for a while, creating some new cool apps and games for Windows Phone, and now you want to publish them but the \$99 USD price tag on the developer account seems a bit steep!
+
+Well, how does \$19 USD sound like? :)
 
 Until the end of August, that's the current subscrition fee for a one year WPDev account (plus taxes)!
 

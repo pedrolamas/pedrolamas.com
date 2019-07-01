@@ -2,6 +2,7 @@
 layout: page
 title: About
 ---
+
 My name is Pedro Lamas, I’m a Portuguese developer specialized in Microsoft Technologies, and this is my english blog for Windows and Windows Phone Development.
 
 Back in the year 2000 I started working for a Portuguese company called [LiveSolutions](http://www.livesolutions.pt), mainly on a ASP.net powered ERP solution.
@@ -20,5 +21,5 @@ I'm a [Microsoft Certified Professional](about/mcp-transcript), a [Xamarin Certi
 
 ## You might also want to check...
 
-* [Microsoft Certified Professional (MCP) Transcript](about/mcp-transcript)
-* [PGP Public Key](about/pgp-public-key)
+- [Microsoft Certified Professional (MCP) Transcript](about/mcp-transcript)
+- [PGP Public Key](about/pgp-public-key)

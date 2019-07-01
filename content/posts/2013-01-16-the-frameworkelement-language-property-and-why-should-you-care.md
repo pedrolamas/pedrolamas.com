@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=90
 permalink: /2013/01/16/the-frameworkelement-language-property-and-why-should-you-care/
 dsq_thread_id:
-  - "2057310772"
+  - '2057310772'
 categories:
   - Windows Phone
 tags:
@@ -19,11 +19,12 @@ tags:
   - WP8
   - WPDev
 ---
+
 The first time I came aware of this issue was when reading a post by Portuguese MVP [Paulo Morgado](http://paulomorgado.net/) on the App Hub Forums:
 
-> If all the emulator settings are set to "Portuguese (Portugal)" (both interface as all regional settings), how come when I use an [IValueConverter](http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.windows.data.ivalueconverter(v=vs.105).aspx) on any Binding expression, the "culture" parameter has a "en-US" [CultureInfo](http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.globalization.cultureinfo(v=vs.105).aspx)?...
+> If all the emulator settings are set to "Portuguese (Portugal)" (both interface as all regional settings), how come when I use an [IValueConverter](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.windows.data.ivalueconverter(v=vs.105).aspx>) on any Binding expression, the "culture" parameter has a "en-US" [CultureInfo](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.globalization.cultureinfo(v=vs.105).aspx>)?...
 
-To properly research on the subject, I created a small app with two TextBlock controls that show the [Thread.CurrentThread.CurrentCulture](http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.threading.thread.currentculture(v=vs.105).aspx) and [Thread.CurrentThread.CurrentUICulture](http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.threading.thread.currentuiculture(v=vs.105).aspx) current values, and a third TextBlock with an IValueConverter that basically returns the culture.Name he is using, and the result was quite surprising!
+To properly research on the subject, I created a small app with two TextBlock controls that show the [Thread.CurrentThread.CurrentCulture](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.threading.thread.currentculture(v=vs.105).aspx>) and [Thread.CurrentThread.CurrentUICulture](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.threading.thread.currentuiculture(v=vs.105).aspx>) current values, and a third TextBlock with an IValueConverter that basically returns the culture.Name he is using, and the result was quite surprising!
 
 Here is the code for my CultureDebugValueConverter class, implementing an IValueConverter:
 
@@ -95,14 +96,14 @@ Finally, I started the emulator, changed all the regional settings to "Portugues
 
 So the real question right now is: If the operating system interface, the CurrentCulture, and the CurrentUICulture are all set to "pt-PT", from where did that "en-US" came from?
 
-There is no trivial reason for this behavior, and to completely understand it, we first need to know how the "culture" parameter on [IValueConverter.Convert](http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.windows.data.ivalueconverter.convert(v=vs.105).aspx) method works; on the documentation, you can read the following: * The culture is determined in the following order:
+There is no trivial reason for this behavior, and to completely understand it, we first need to know how the "culture" parameter on [IValueConverter.Convert](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.windows.data.ivalueconverter.convert(v=vs.105).aspx>) method works; on the documentation, you can read the following: \* The culture is determined in the following order:
 
-* The converter looks for the ConverterCulture property on the Binding object.
-* If the ConverterCulture value is null, **the value of the Language property is used.**
+- The converter looks for the ConverterCulture property on the Binding object.
+- If the ConverterCulture value is null, **the value of the Language property is used.**
 
-Given that I didn't set the Binding.ConverterCulture property, this means it will fallback to the [FrameworkElement.Language](http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.windows.frameworkelement.language(v=vs.105).aspx), which in turn has this in the docs:
+Given that I didn't set the Binding.ConverterCulture property, this means it will fallback to the [FrameworkElement.Language](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.windows.frameworkelement.language(v=vs.105).aspx>), which in turn has this in the docs:
 
-The default is an XmlLanguage object that has its IetfLanguageTag value set to the string "en-US"**
+The default is an XmlLanguage object that has its IetfLanguageTag value set to the string "en-US"\*\*
 
 **We have finally found the "guilty" one!!!**
 

@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4194
 permalink: /2015/07/31/cimbalino-toolkit-2-0-0-beta1/
 dsq_thread_id:
-  - "3989443059"
+  - '3989443059'
 image: /wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
 categories:
   - Windows
@@ -20,6 +20,7 @@ tags:
   - Windows Phone
   - WPDev
 ---
+
 Assuming you don't live in a planet where you don't get internet (and I know that's not the case as you're reading this!), by now you know that **Windows 10 has officially launched**!
 
 So did Visual Studio 2015 and NuGet 3.x, so pretty much everything you need to develop new Windows 10 universal apps, right? Not quite! ;)

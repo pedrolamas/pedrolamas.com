@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=1551
 permalink: /2013/07/24/checking-for-updates-from-inside-a-windows-phone-app/
 dsq_thread_id:
-  - "2048129749"
+  - '2048129749'
 image: /wp-content/uploads/2013/07/Store-tile-with-1-update.png
 categories:
   - Windows Phone
@@ -20,15 +20,16 @@ tags:
   - WP8Dev
   - WPDev
 ---
+
 A few months ago, I started receiving some crash reports from one of my most successful apps, [Geosense](http://windowsphone.com/s?appid=7ca9cfea-1b92-4ca4-8559-269936d5361e)!
 
 After fixing the issue and publishing an updated version of the app, until today I still get quite a few reports from the very same old version, but none from the updated one!
 
 This has got me to think on the reason to why people don't update their apps! Here are some reasons:
 
-* No constant internet connection
-* Removing the Store tile from the Home screen
-* Don't care about updating apps!
+- No constant internet connection
+- Removing the Store tile from the Home screen
+- Don't care about updating apps!
 
 The first one doesn't make much sense to me, as the Windows Phone ecosystem makes a lot more sense as a "always online" system! Also, Geosense requires internet connection to work and crash reports can't be done without internet connection, so this doesn't seem to be the main reason in my case!
 

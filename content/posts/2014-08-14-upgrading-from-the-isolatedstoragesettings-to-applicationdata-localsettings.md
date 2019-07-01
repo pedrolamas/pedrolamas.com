@@ -9,7 +9,7 @@ permalink: /2014/08/14/upgrading-from-the-isolatedstoragesettings-to-application
 fb_fan_page_post_id:
   - 150703221746608_346592042157724
 dsq_thread_id:
-  - "2926409441"
+  - '2926409441'
 categories:
   - Windows
   - Windows Phone
@@ -23,6 +23,7 @@ tags:
   - Windows Phone 8
   - WPDev
 ---
+
 When Windows Phone 7 came out, the SDK provided a really easy class to maintain the app settings: the [**IsolatedStorageSettings**](http://msdn.microsoft.com/en-us/library/windows/apps/system.io.isolatedstorage.isolatedstoragesettings%28v=vs.105%29.aspx).
 
 Basically, the class is an `IDictionary<string, object>` with a `Save()` method that will take the instance and serialize it to a file called "\_\_ApplicationSettings" in the root of the app's isolated storage.
@@ -42,10 +43,10 @@ PhoneApp1.Address, PhoneApp1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=n
 
 By looking at the contents of some samples of settings file like the one above, here's what we can learn:
 
-* the file has always two lines (second line in the above sample is auto-wrapped to fit the post!)
-* the first line has the known types full names that should be loaded and passed on to the [DataContractSerializer](http://msdn.microsoft.com/en-us/library/windows/apps/system.runtime.serialization.datacontractserializer%28v=vs.105%29.aspx) constructor, each properly separated by a null char
-* if only basic types are used, the first line will be empty
-* the second line is the serialized xml data
+- the file has always two lines (second line in the above sample is auto-wrapped to fit the post!)
+- the first line has the known types full names that should be loaded and passed on to the [DataContractSerializer](http://msdn.microsoft.com/en-us/library/windows/apps/system.runtime.serialization.datacontractserializer%28v=vs.105%29.aspx) constructor, each properly separated by a null char
+- if only basic types are used, the first line will be empty
+- the second line is the serialized xml data
 
 So I wrote the following code snippet to read and deserialize the values from "\_\_ApplicationSetting" to an `IEnumerable<KeyValuePair<string, object>>`:
 
@@ -90,11 +91,11 @@ In case that wasn't clear from the names, the `Legacy` settings will allow you t
 
 Here are the platform rules for the `ISettingsService`:
 
-* **Local**
-  * Supported in all platforms
-* **Roaming**
-  * Supported in all platforms except Windows Phone Silverlight 8.0
-* **Legacy**
-  * Only supported in Windows Phone
+- **Local**
+  - Supported in all platforms
+- **Roaming**
+  - Supported in all platforms except Windows Phone Silverlight 8.0
+- **Legacy**
+  - Only supported in Windows Phone
 
 One last suggestion: after migrating the legacy settings remember to delete the "\_\_ApplicationSettings" file as it won't be needed again! ;)

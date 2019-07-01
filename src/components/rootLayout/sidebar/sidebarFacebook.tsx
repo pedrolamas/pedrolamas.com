@@ -4,9 +4,9 @@ import SiteContext from '../../siteContext';
 
 type SidebarFacebookProps = {
   children?: never;
-}
+};
 
-const SidebarFacebook: React.FunctionComponent<SidebarFacebookProps> = (props) => (
+const SidebarFacebook: React.FunctionComponent<SidebarFacebookProps> = props => (
   <SiteContext.Consumer>
     {siteContext => {
       const { siteMetadata } = siteContext;
@@ -15,21 +15,11 @@ const SidebarFacebook: React.FunctionComponent<SidebarFacebookProps> = (props) =
 
       return (
         <>
-          {siteMetadata.facebook && siteMetadata.facebook.app_id && siteMetadata.facebook.publisher &&
-            <div className="sidebar-facebook">
-              <div
-                className="fb-like"
-                data-href={`https://www.facebook.com/${siteMetadata.facebook.publisher}`}
-                data-width="320"
-                data-layout="standard"
-                data-action="like"
-                data-size="small"
-                data-show-faces="true"
-                data-share="false"
-                data-colorscheme="dark"
-              />
+          {siteMetadata.facebook && siteMetadata.facebook.app_id && siteMetadata.facebook.publisher && (
+            <div className='sidebar-facebook'>
+              <div className='fb-like' data-href={`https://www.facebook.com/${siteMetadata.facebook.publisher}`} data-width='320' data-layout='standard' data-action='like' data-size='small' data-show-faces='true' data-share='false' data-colorscheme='dark' />
             </div>
-          }
+          )}
         </>
       );
     }}

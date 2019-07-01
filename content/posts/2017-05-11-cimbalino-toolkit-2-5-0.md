@@ -14,13 +14,14 @@ tags:
   - Windows Phone
   - WPDev
 ---
+
 Yesterday I released [**Cimbalino Toolkit**](http://cimbalino.org/) version 2.5.0!
 
 Here's what's changed on this version:
 
-* Cimbalino.Toolkit.Core now targets the .NET Standard 1.0
-* Cimbalino.Toolkit.Core will now behave as the rest of the toolkit in regards to throwing `NotImplementedExceptions` only on specific cases
-* Exposed overrideable async methods in `ExtendedPageBase`
-* Other fixes and improvements
+- Cimbalino.Toolkit.Core now targets the .NET Standard 1.0
+- Cimbalino.Toolkit.Core will now behave as the rest of the toolkit in regards to throwing `NotImplementedExceptions` only on specific cases
+- Exposed overrideable async methods in `ExtendedPageBase`
+- Other fixes and improvements
 
 From the above, I'd like to emphasise the huge advantage of supporting .NET Standard 1.0: this means **you can now use Cimbalino.Tookit.Core in all .NET platforms: .NET Framework, .NET Core, and Mono!**

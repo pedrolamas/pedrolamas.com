@@ -4,7 +4,7 @@ title: Code tips to keep the UI responsive
 date: 2017-11-15T22:26:05+00:00
 last_modified_at: 2019-02-12T14:29:00+00:00
 categories:
- - Windows
+  - Windows
 tags:
   - UWP
   - Windows
@@ -12,6 +12,7 @@ tags:
   - WPDev
   - Async
 ---
+
 I have taken a break from UWP development, and for the last couple of weeks I have been working mostly on WPF projects.
 
 You know, that "old" XAML technology that started back when Windows XP was still a thing!

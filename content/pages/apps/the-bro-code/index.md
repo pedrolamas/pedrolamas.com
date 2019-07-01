@@ -6,8 +6,9 @@ author: Pedro Lamas
 layout: page
 guid: https://www.pedrolamas.com/?page_id=1961
 dsq_thread_id:
-  - "2729938785"
+  - '2729938785'
 ---
+
 Based on "The Bro Code", written by the awesome Barney Stinson.
 
 Containing approximately 150 "unspoken" rules, this code of conduct ranges from the simple (bros before hos) to the complex (the hot-to-crazy ratio, complete with bar graphs and charts).

@@ -7,14 +7,15 @@ layout: post
 guid: https://www.pedrolamas.com/?p=132
 permalink: /2013/02/04/error-nuget-exe-exited-with-code-1073741819/
 dsq_thread_id:
-  - "2046765333"
+  - '2046765333'
 categories:
   - Uncategorized
 tags:
-  - "-1073741819"
+  - '-1073741819'
   - MSBuild
   - Nuget
 ---
+
 Lately I've been getting more and more this type of error from [Nuget](http://nuget.org) Package Restore when building my apps:
 
 [![NuGet -1073741819 error](/wp-content/uploads/2013/02/NuGet-1073741819-error.png)](/wp-content/uploads/2013/02/NuGet-1073741819-error.png)

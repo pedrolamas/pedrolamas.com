@@ -12,6 +12,7 @@ tags:
   - .NET
   - .NET Standard
 ---
+
 Developers should avoid `async void` methods, but there are some situations where this is a "necessary evil", and event handlers are one of those cases.
 
 If one needs to use the `await` keyword inside an event handler code, the method itself must be `async void`
@@ -86,9 +87,9 @@ The trick here is to call `e.GetDeferral()` to retrieve a deferral object, and j
 
 There are a few rules that you have to be aware of:
 
-* You only need to call `e.GetDeferral()` if you actually want to the event caller to wait for the completion of the event handler; if you don't call it, it will just behave as a regular event handler.
-* You **must** call `e.GetDeferral()` to get an `EventDeferral` instance before any `await` call in your code to ensure that the event caller knows that it should wait for `deferral.Complete()`; ideally, it should be the first thing you do in the event handler code.
-* If you have indeed called `e.GetDeferral()`, then you **must** call `deferral.Complete()` to signal that the event handler has finished.
+- You only need to call `e.GetDeferral()` if you actually want to the event caller to wait for the completion of the event handler; if you don't call it, it will just behave as a regular event handler.
+- You **must** call `e.GetDeferral()` to get an `EventDeferral` instance before any `await` call in your code to ensure that the event caller knows that it should wait for `deferral.Complete()`; ideally, it should be the first thing you do in the event handler code.
+- If you have indeed called `e.GetDeferral()`, then you **must** call `deferral.Complete()` to signal that the event handler has finished.
 
 To ensure the correct usage of the deferred events, use the following as a template for your event handlers:
 

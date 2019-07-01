@@ -6,8 +6,9 @@ author: Pedro Lamas
 layout: page
 guid: https://www.pedrolamas.com/?page_id=1901
 dsq_thread_id:
-  - "2074183805"
+  - '2074183805'
 ---
+
 GDrive is a Google Drive client application for Windows Phone.
 
 This application is provided AS IS and I will decline any problem you may or may not have by using it with your Google account.

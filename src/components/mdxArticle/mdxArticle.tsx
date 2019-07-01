@@ -9,7 +9,7 @@ import { Mdx } from '../../generated/graphql';
 type MdxArticleProps = {
   mdx: Mdx;
   children?: never;
-}
+};
 
 const MdxArticle: React.FunctionComponent<MdxArticleProps> = ({ mdx }) => (
   <MdxArticleContext.Provider value={mdx}>

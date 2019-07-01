@@ -1,34 +1,34 @@
-title:            pedrolamas.com
-description:      Windows Development
+title: pedrolamas.com
+description: Windows Development
 #url:              https://www.pedrolamas.com
 #baseurl:          ""
-lang:             en-US
-timezone:         Europe/London
-logo:             logo.jpg
-disclaimer:       This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](https://creativecommons.org/licenses/by-sa/3.0/) except where otherwise noted. Unless specified, all source code on this site is licensed under the [MIT license](https://www.pedrolamas.com/LICENSE.txt).
+lang: en-US
+timezone: Europe/London
+logo: logo.jpg
+disclaimer: This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unported License](https://creativecommons.org/licenses/by-sa/3.0/) except where otherwise noted. Unless specified, all source code on this site is licensed under the [MIT license](https://www.pedrolamas.com/LICENSE.txt).
 
 author:
-  name:           Pedro Lamas
-  email:          pedrolamas@gmail.com
-  uri:            https://www.pedrolamas.com
-  picture:        https://s.gravatar.com/avatar/fecaf27c91e2d50b25930e280b2a81d0?s=320
-  biography:      Pedro is a software developer specialized in Microsoft technologies. He's a regular blogger, speaker, and the author of the open-source [Cimbalino Toolkit](http://cimbalino.org). Since 2017 he's also a [Microsoft Most Valuable Professional (MVP)](https://mvp.microsoft.com/en-us/PublicProfile/5002547) for Windows Development.
-  twitter:        pedrolamas
+  name: Pedro Lamas
+  email: pedrolamas@gmail.com
+  uri: https://www.pedrolamas.com
+  picture: https://s.gravatar.com/avatar/fecaf27c91e2d50b25930e280b2a81d0?s=320
+  biography: Pedro is a software developer specialized in Microsoft technologies. He's a regular blogger, speaker, and the author of the open-source [Cimbalino Toolkit](http://cimbalino.org). Since 2017 he's also a [Microsoft Most Valuable Professional (MVP)](https://mvp.microsoft.com/en-us/PublicProfile/5002547) for Windows Development.
+  twitter: pedrolamas
 
 twitter:
-  username:       pedrolamas
+  username: pedrolamas
 
 facebook:
-  app_id:         401681359922124
-  publisher:      150703221746608
-  admins:         1049758397
+  app_id: 401681359922124
+  publisher: 150703221746608
+  admins: 1049758397
 
 github:
-  username:       pedrolamas
+  username: pedrolamas
   repository_url: https://github.com/pedrolamas/pedrolamas.com
 
 social:
-  name:           Pedro Lamas
+  name: Pedro Lamas
   links:
     - https://twitter.com/pedrolamas
     - https://www.facebook.com/pedrolamas
@@ -37,9 +37,9 @@ social:
 
 sidebar:
   logos:
-    - image:      wp-content/uploads/2017/03/MVP_Logo_Horizontal_Preferred_Cyan300_RGB_300ppi.png
-      title:      Microsoft Most Valuable Professional (MVP) for Windows Development
+    - image: wp-content/uploads/2017/03/MVP_Logo_Horizontal_Preferred_Cyan300_RGB_300ppi.png
+      title: Microsoft Most Valuable Professional (MVP) for Windows Development
 
 google_analytics: UA-1376452-1
 disqus_shortname: pedrolamas-com
-addthis_profile:  ra-58b55b8d7a40cd51
+addthis_profile: ra-58b55b8d7a40cd51

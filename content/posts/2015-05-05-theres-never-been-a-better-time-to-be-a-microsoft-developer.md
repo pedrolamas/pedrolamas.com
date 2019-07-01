@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4166
 permalink: /2015/05/05/theres-never-been-a-better-time-to-be-a-microsoft-developer/
 dsq_thread_id:
-  - "3737730208"
+  - '3737730208'
 image: /wp-content/uploads/2015/05/Microsoft-Build.png
 categories:
   - Windows
@@ -20,7 +20,8 @@ tags:
   - Windows
   - Windows 10
 ---
-*Full disclosure: though [I've been a Microsoft employee for a short while](https://www.pedrolamas.com/2014/12/12/bye-mixradio/), I currently have no professional (or other type of) connection with the company.*
+
+_Full disclosure: though [I've been a Microsoft employee for a short while](https://www.pedrolamas.com/2014/12/12/bye-mixradio/), I currently have no professional (or other type of) connection with the company._
 
 Now that we have got that out of the way, I do believe that there has never been a better time to be a Microsoft developer than today! :)
 
@@ -44,7 +45,7 @@ Microsoft went from a closed-source software company to open-source a big chunk 
 
 ## Going cross-platform
 
-Say goodbye to the Microsoft you've know for years as a Windows and Office only company; *"Mobile first, cloud first"* is the new motto, and there was enough proof of that in Build conference.
+Say goodbye to the Microsoft you've know for years as a Windows and Office only company; _"Mobile first, cloud first"_ is the new motto, and there was enough proof of that in Build conference.
 
 If you're a web developer, you should definitely give [Visual Studio Code](https://code.visualstudio.com//) a spin - and here's the twist: it runs not only in Windows, but also in Mac and Linux, as Visual Studio Code is itself built on top of open-source technologies!
 
@@ -68,7 +69,7 @@ Hololens! If you don't know what it is by now, then you definitely should!!
 
 While other companies are investing Virtual Reality, Microsoft took a different approach with Hololens and went with Augmented Reality.
 
-As the name might suggest, "Augmented Reality" adds information to your *real* environment, and it's usages are quite diverse. Microsoft showed a couple of demos of usage for construction and health that I believe made some jaw's drop!
+As the name might suggest, "Augmented Reality" adds information to your _real_ environment, and it's usages are quite diverse. Microsoft showed a couple of demos of usage for construction and health that I believe made some jaw's drop!
 
 ## "DEVELOPERS, DEVELOPERS, DEVELOPERS!!"
 

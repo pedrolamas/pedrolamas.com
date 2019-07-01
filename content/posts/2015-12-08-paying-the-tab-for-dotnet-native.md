@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4292
 permalink: /2015/12/08/paying-the-tab-for-dotnet-native/
 dsq_thread_id:
-  - "4385658860"
+  - '4385658860'
 image: /wp-content/uploads/2015/12/yoursign-459x510.jpg
 categories:
   - Windows
@@ -17,11 +17,12 @@ tags:
   - Windows
   - Windows 10
 ---
+
 > .NET Native behaves just like that expensive restaurant you love to got to: you have to wait until you finish the meal to see how much it will cost you - and it will definitely cost you!
 
-Last weekend I was confronted with a bug in [Cimbalino Toolkit](http://cimbalino.org) [MultiBindingBehavior](https://github.com/Cimbalino/Cimbalino-Toolkit/blob/master/src/Cimbalino.Toolkit%20(WP8)/Behaviors/MultiBindingBehavior.cs), which caused apps using it to crash when they were built in Release mode!
+Last weekend I was confronted with a bug in [Cimbalino Toolkit](http://cimbalino.org) [MultiBindingBehavior](<https://github.com/Cimbalino/Cimbalino-Toolkit/blob/master/src/Cimbalino.Toolkit%20(WP8)/Behaviors/MultiBindingBehavior.cs>), which caused apps using it to crash when they were built in Release mode!
 
-I built a small test app and after a couple of minutes debugging it I noticed a [MissingMetadataException](https://msdn.microsoft.com/en-us/library/dn600633(v=vs.110).aspx) getting raised; the culprit was found: .NET Native!
+I built a small test app and after a couple of minutes debugging it I noticed a [MissingMetadataException](<https://msdn.microsoft.com/en-us/library/dn600633(v=vs.110).aspx>) getting raised; the culprit was found: .NET Native!
 
 > If you're working with Universal Windows Apps (UWP) and don't know what .NET Native is, I strongly advise you to start by reading the following excellent articles written by Morgan Brown, "a Software Development Engineer on the .NET Native team":
 >

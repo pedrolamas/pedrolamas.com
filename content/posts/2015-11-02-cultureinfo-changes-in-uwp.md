@@ -8,7 +8,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4241
 permalink: /2015/11/02/cultureinfo-changes-in-uwp/
 dsq_thread_id:
-  - "4283138515"
+  - '4283138515'
 categories:
   - Windows
 tags:
@@ -19,11 +19,12 @@ tags:
   - Windows 10
   - WPDev
 ---
+
 **Update:** There's now a [part 2](https://www.pedrolamas.com/2017/05/03/cultureinfo-changes-in-uwp-part-2/) for this article!
 
-Since the very first versions of the .NET Framework, developers had the [System.Globalization](https://msdn.microsoft.com/en-us/library/system.globalization(v=vs.110).aspx) namespace *"containing classes that define culture-related information, including language, country/region, calendars in use, format patterns for dates, currency, and numbers, and sort order for strings."*
+Since the very first versions of the .NET Framework, developers had the [System.Globalization](<https://msdn.microsoft.com/en-us/library/system.globalization(v=vs.110).aspx>) namespace _"containing classes that define culture-related information, including language, country/region, calendars in use, format patterns for dates, currency, and numbers, and sort order for strings."_
 
-One of the most useful classes in this namespace is the [CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo(v=vs.110).aspx) class!
+One of the most useful classes in this namespace is the [CultureInfo](<https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo(v=vs.110).aspx>) class!
 
 To demonstrate the usage of this class, take a look at this really simple console app code:
 
@@ -137,6 +138,6 @@ public class CultureInfoHelper
 }
 ```
 
-I honestly still don't know how or why does this work with that *Magic String™* (others might also do the trick though), but it does, and at this stage all I care are positive results!
+I honestly still don't know how or why does this work with that _Magic String™_ (others might also do the trick though), but it does, and at this stage all I care are positive results!
 
 So there you go, this is a nice hack to retrieve a `CultureInfo` instance for the Regional Settings, which you can then use to parse and format values in your UWP (and WinRT) app! :)

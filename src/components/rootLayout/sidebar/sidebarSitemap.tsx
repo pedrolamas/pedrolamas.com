@@ -7,13 +7,13 @@ import SiteContext from '../../siteContext';
 
 type SidebarSitemapProps = {
   children?: never;
-}
+};
 
 const SidebarSitemap: React.FunctionComponent<SidebarSitemapProps> = () => {
   const { allSitemapYaml }: Query = useStaticQuery<Query>(
     graphql`
       query {
-        allSitemapYaml(filter: {minimap: {ne: false}}) {
+        allSitemapYaml(filter: { minimap: { ne: false } }) {
           edges {
             node {
               title
@@ -22,7 +22,7 @@ const SidebarSitemap: React.FunctionComponent<SidebarSitemapProps> = () => {
           }
         }
       }
-    `,
+    `
   );
 
   return (
@@ -34,18 +34,20 @@ const SidebarSitemap: React.FunctionComponent<SidebarSitemapProps> = () => {
 
         return (
           <>
-            {allSitemapYaml &&
-              <nav className="sidebar-nav" role="navigation" aria-label="Primary Menu">
+            {allSitemapYaml && (
+              <nav className='sidebar-nav' role='navigation' aria-label='Primary Menu'>
                 {allSitemapYaml.edges.map(({ node }, index) => (
-                  <Link className="sidebar-nav-item" to={node.url || ""} key={index}>{node.title}</Link>
+                  <Link className='sidebar-nav-item' to={node.url || ''} key={index}>
+                    {node.title}
+                  </Link>
                 ))}
               </nav>
-            }
+            )}
           </>
         );
       }}
     </SiteContext.Consumer>
   );
-}
+};
 
 export default SidebarSitemap;

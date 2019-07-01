@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4279
 permalink: /2015/12/02/xaml-behaviors-now-open-source-and-on-uwp/
 dsq_thread_id:
-  - "4368351746"
+  - '4368351746'
 categories:
   - Windows
   - Windows Phone
@@ -21,6 +21,7 @@ tags:
   - Windows Phone
   - XAML Behaviors
 ---
+
 In case you missed the [big news](https://blogs.windows.com/buildingapps/2015/11/30/xaml-behaviors-open-source-and-on-uwp/), the XAML Behaviors are now [open source in GitHub](https://github.com/Microsoft/XamlBehaviors/) and available to use in UWP, both in [managed](https://www.nuget.org/packages/Microsoft.Xaml.Behaviors.Uwp.Managed/) and [native](https://www.nuget.org/packages/Microsoft.Xaml.Behaviors.Uwp.Native/) apps, mostly due to the work of some [awesome MVPs](https://github.com/Microsoft/XamlBehaviors/wiki/About-the-Team#our-team-of-mvp-leaders-includes)!
 
 They were kind enough to keep me in the loop and that allowed me to prepare for the incoming changes! ;)

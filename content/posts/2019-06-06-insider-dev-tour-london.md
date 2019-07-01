@@ -13,6 +13,7 @@ tags:
   - Build
   - Edge
 ---
+
 Microsoft is hosting the Insider Dev Tour London on **June 18th, 2019** from 8:00 to 17:30 at the [Vue Cinema in Leiceiter Square](https://goo.gl/maps/BLWkFPbfqFpjMV748).
 
 You can expect a lot of content around building Microsoft 365 experiences (Windows, Graph, Office, Teams), no matter your skill as a developer.

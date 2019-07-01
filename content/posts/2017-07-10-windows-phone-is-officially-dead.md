@@ -8,9 +8,10 @@ categories:
 tags:
   - Windows Phone
 ---
+
 Over the last few ~~months~~ years [quite](https://www.forbes.com/sites/curtissilver/2017/05/01/microsoft-windows-phone-is-dead-long-live-the-surface-phone/) [a few](https://www.theverge.com/2016/1/28/10864034/windows-phone-is-dead) [people](http://uk.businessinsider.com/microsoft-windows-phone-dead-2016-11) have written about the Windows Phone demise.
 
-However, according to [Microsoft's Support Page for product life cycle](https://support.microsoft.com/en-gb/lifecycle/search?alpha=windows%20phone), the "Mainstream Support End Date" for Windows Phone 8.1 is July 11, 2017... so that's basically, *tomorrow!*
+However, according to [Microsoft's Support Page for product life cycle](https://support.microsoft.com/en-gb/lifecycle/search?alpha=windows%20phone), the "Mainstream Support End Date" for Windows Phone 8.1 is July 11, 2017... so that's basically, _tomorrow!_
 
 Microsoft's last update for the WP8.x operating system (dubbed "Update 2") was more than 2 years ago... so even if the "official" support only now ended, I think we can all agree that unofficially Microsoft abandoned the OS a long time ago (mostly when they replaced it with Windows 10 Mobile).
 

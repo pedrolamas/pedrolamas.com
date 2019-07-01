@@ -9,7 +9,7 @@ permalink: /2013/01/08/windows-phone-choosers-with-asyncawait/
 fb_author_post_id:
   - 4744536725243
 dsq_thread_id:
-  - "2045483759"
+  - '2045483759'
 categories:
   - Windows Phone
 tags:
@@ -18,11 +18,12 @@ tags:
   - Windows Phone
   - WPDev
 ---
-Currently, Windows Phone [Choosers](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769542(v=vs.105).aspx#BKMK_Choosers) work is by invoking the [Show](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff707460(v=vs.105).aspx) method and then subscribing the [Completed](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff707989(v=vs.105).aspx) event and waiting for it to be invoked.
+
+Currently, Windows Phone [Choosers](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769542(v=vs.105).aspx#BKMK_Choosers>) work is by invoking the [Show](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff707460(v=vs.105).aspx>) method and then subscribing the [Completed](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff707989(v=vs.105).aspx>) event and waiting for it to be invoked.
 
 Wouldn't it be great to just use `await chooser.ShowAsync()` and get the results immediately?
 
-All choosers extend the [ChooserBase&lt;TTaskEventArgs&gt;](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff707923(v=vs.105).aspx) class, and it's exactly for this class that we are going to use to create a ShowAsync extension method.
+All choosers extend the [ChooserBase&lt;TTaskEventArgs&gt;](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff707923(v=vs.105).aspx>) class, and it's exactly for this class that we are going to use to create a ShowAsync extension method.
 
 We start by creating the extension method signature:
 
@@ -36,9 +37,9 @@ public static class ExtensionMethods
 }
 ```
 
-The `async` methods are required to return void, [Task](http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.threading.tasks.task(v=vs.105).aspx), or [Task&lt;TResult&gt;](http://msdn.microsoft.com/en-us/library/windowsphone/develop/dd321424(v=vs.105).aspx) in order to be invoked with the `await` keyword. So our method will return a `Task<TTaskEventArgs>` value, where the `TTaskEventArgs` generic type must be a [TaskEventArgs](http://msdn.microsoft.com/en-US/library/windowsphone/develop/microsoft.phone.tasks.taskeventargs(v=vs.105).aspx) subtype.
+The `async` methods are required to return void, [Task](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.threading.tasks.task(v=vs.105).aspx>), or [Task&lt;TResult&gt;](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/dd321424(v=vs.105).aspx>) in order to be invoked with the `await` keyword. So our method will return a `Task<TTaskEventArgs>` value, where the `TTaskEventArgs` generic type must be a [TaskEventArgs](<http://msdn.microsoft.com/en-US/library/windowsphone/develop/microsoft.phone.tasks.taskeventargs(v=vs.105).aspx>) subtype.
 
-We will need to use a [TaskCompletionSource](http://msdn.microsoft.com/en-us/library/windowsphone/develop/dd449174(v=vs.105).aspx) object so we can return a Task and later on set the result of the asynchronous operation.
+We will need to use a [TaskCompletionSource](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/dd449174(v=vs.105).aspx>) object so we can return a Task and later on set the result of the asynchronous operation.
 
 ```csharp
 var taskCompletionSource = new TaskCompletionSource<TTaskEventArgs>();

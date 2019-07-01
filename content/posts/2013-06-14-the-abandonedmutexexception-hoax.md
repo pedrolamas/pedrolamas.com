@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=1251
 permalink: /2013/06/14/the-abandonedmutexexception-hoax/
 dsq_thread_id:
-  - "2048698355"
+  - '2048698355'
 categories:
   - Windows Phone
 tags:
@@ -18,7 +18,8 @@ tags:
   - WP8Dev
   - WPDev
 ---
-When working with multi-process applications, there comes a time where you'll definitely need some sort of synchronization, and for that specific purpose we have the [**Mutex**](http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.threading.mutex(v=vs.105).aspx) class.
+
+When working with multi-process applications, there comes a time where you'll definitely need some sort of synchronization, and for that specific purpose we have the [**Mutex**](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.threading.mutex(v=vs.105).aspx>) class.
 
 MSDN states the following for the Mutex class:
 
@@ -30,7 +31,7 @@ When it comes to usage, there is a major difference between them: the `lock` key
 
 One situation that you can get into is when a thread terminates while owning a mutex, the mutex is said to be abandoned, and this is a really bad thing, normally indicating a serious programming error.
 
-Unfortunately, due to the volatile nature of the Windows Phone background agents, abandoned mutexes will eventually happen without any thing a developer can actually do, but to catch and treat the [**AbandonedMutexException**](http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.threading.abandonedmutexexception(v=vs.105).aspx) that will get raised on the other awaiting thread (if one exists)!
+Unfortunately, due to the volatile nature of the Windows Phone background agents, abandoned mutexes will eventually happen without any thing a developer can actually do, but to catch and treat the [**AbandonedMutexException**](<http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.threading.abandonedmutexexception(v=vs.105).aspx>) that will get raised on the other awaiting thread (if one exists)!
 
 The following code sample simulates how to raise and handle the `AbandonedMutexException`:
 

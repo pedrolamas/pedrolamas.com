@@ -1,72 +1,72 @@
-  - title:    About
-    url:      /about/
-    sub:
-      - title:    Microsoft Certified Professional (MCP) Transcript
-        url:      /about/mcp-transcript/
-      
-      - title:    PGP Public Key
-        url:      /about/pgp-public-key/
-    
-  - title:    Windows Phone
-    url:      /windows-phone/
-    minimap:  false
-    sub:
-      - title:    Nokia Lumia 800 Skin
-        url:      /windows-phone/nokia-lumia-800-skin/
+- title: About
+  url: /about/
+  sub:
+    - title: Microsoft Certified Professional (MCP) Transcript
+      url: /about/mcp-transcript/
 
-      - title:    Nokia Lumia 920 Skin
-        url:      /windows-phone/nokia-lumia-920-skin/
+    - title: PGP Public Key
+      url: /about/pgp-public-key/
 
-      - title:    Windows Phone Application Bar Icons
-        url:      /windows-phone/windows-phone-application-bar-icons/
+- title: Windows Phone
+  url: /windows-phone/
+  minimap: false
+  sub:
+    - title: Nokia Lumia 800 Skin
+      url: /windows-phone/nokia-lumia-800-skin/
 
-      - title:    Windows Phone 8 Application Bar Icons
-        url:      /windows-phone/windows-phone-8-application-bar-icons/
+    - title: Nokia Lumia 920 Skin
+      url: /windows-phone/nokia-lumia-920-skin/
 
-  - title:    Apps
-    url:      /apps/
-    minimap:  false
-    sub:
-      - title:    Geosense
-        url:      /apps/geosense/
-      
-      - title:    GDrive
-        url:      /apps/gdrive/
+    - title: Windows Phone Application Bar Icons
+      url: /windows-phone/windows-phone-application-bar-icons/
 
-      - title:    Fon Auto-Login
-        url:      /apps/fon-auto-login/
+    - title: Windows Phone 8 Application Bar Icons
+      url: /windows-phone/windows-phone-8-application-bar-icons/
 
-      - title:    The Bro Code
-        url:      /apps/the-bro-code/
+- title: Apps
+  url: /apps/
+  minimap: false
+  sub:
+    - title: Geosense
+      url: /apps/geosense/
 
-      - title:    Quadratic Solver
-        url:      /apps/quadratic-solver/
+    - title: GDrive
+      url: /apps/gdrive/
 
-      - title:    Bristol Pound
-        url:      /apps/bristol-pound/
+    - title: Fon Auto-Login
+      url: /apps/fon-auto-login/
 
-      - title:    O meu Salário
-        url:      /apps/o-meu-salario/
+    - title: The Bro Code
+      url: /apps/the-bro-code/
 
-      - title:    Totojogos
-        url:      /apps/totojogos/
+    - title: Quadratic Solver
+      url: /apps/quadratic-solver/
 
-      - title:    CTT Objectos
-        url:      /ctt-objectos/
+    - title: Bristol Pound
+      url: /apps/bristol-pound/
 
-      - title:    The Other Side
-        url:      /apps/the-other-side/
+    - title: O meu Salário
+      url: /apps/o-meu-salario/
 
-  - title:    Contributors
-    url:      /contributors/
-    minimap:  false
+    - title: Totojogos
+      url: /apps/totojogos/
 
-  - title:    Archive
-    url:      /archive/
-  
-  - title:    Syndicated Feeds
-    url:      /feeds/
-    minimap:  false
+    - title: CTT Objectos
+      url: /ctt-objectos/
 
-  - title:    Site Map
-    url:      /sitemap/
+    - title: The Other Side
+      url: /apps/the-other-side/
+
+- title: Contributors
+  url: /contributors/
+  minimap: false
+
+- title: Archive
+  url: /archive/
+
+- title: Syndicated Feeds
+  url: /feeds/
+  minimap: false
+
+- title: Site Map
+  url: /sitemap/

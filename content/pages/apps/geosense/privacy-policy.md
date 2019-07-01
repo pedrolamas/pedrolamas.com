@@ -8,6 +8,7 @@ guid: https://www.pedrolamas.com/?page_id=2811
 sharing_disabled:
   - 1
 ---
+
 ## last updated: 03-04-2012
 
 **Geosense** is a client application designed for displaying location-based information on your Windows Phone.

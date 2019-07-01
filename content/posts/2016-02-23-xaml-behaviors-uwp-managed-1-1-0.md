@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4446
 permalink: /2016/02/23/xaml-behaviors-uwp-managed-1-1-0/
 dsq_thread_id:
-  - "4603841161"
+  - '4603841161'
 categories:
   - Windows
 tags:
@@ -17,12 +17,13 @@ tags:
   - Windows 10
   - XAML Behaviors
 ---
+
 The [**XAML Behaviors for UWP**](https://github.com/Microsoft/XamlBehaviors) has just been updated to version 1.1.0.
 
 Among other changes, this version contains two fixes that I personally contributed for issues found in the `EventTriggerBehavior`:
 
-* [Ensured EventTriggerBehavior unregisters the event handler](https://github.com/Microsoft/XamlBehaviors/commit/2ad49665200730a25ea61e1bd950ea5887989468)
-* [Properly check for Windows Runtime events in EventTriggerBehavior](https://github.com/Microsoft/XamlBehaviors/commit/71bf9ba628d562f56418b122d9b08bd0a6ff7c55)
+- [Ensured EventTriggerBehavior unregisters the event handler](https://github.com/Microsoft/XamlBehaviors/commit/2ad49665200730a25ea61e1bd950ea5887989468)
+- [Properly check for Windows Runtime events in EventTriggerBehavior](https://github.com/Microsoft/XamlBehaviors/commit/71bf9ba628d562f56418b122d9b08bd0a6ff7c55)
 
 The [NuGet package](https://www.nuget.org/packages/Microsoft.Xaml.Behaviors.Uwp.Managed/) has been updated so if you're using the Xaml Behaviors in your app, all you need is to let NuGet take the latest version of the package!
 

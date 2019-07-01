@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=3151
 permalink: /2013/09/18/windows-phone-week/
 dsq_thread_id:
-  - "2053806437"
+  - '2053806437'
 categories:
   - Windows Phone
 tags:
@@ -17,6 +17,7 @@ tags:
   - WP8Dev
   - WPDev
 ---
+
 [![Windows Phone Week](/wp-content/uploads/2013/09/Windows-Phone-Week.png)](https://wpcommunityweek.eventday.com/)
 
 Directly from the [official site](https://wpcommunityweek.eventday.com/):

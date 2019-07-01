@@ -3,13 +3,14 @@ layout: post
 title: Windows Developer Day
 date: 2017-10-06T11:33:14+01:00
 categories:
- - Windows
+  - Windows
 tags:
   - UWP
   - Windows
   - Windows 10
   - WPDev
 ---
+
 On October 10, Microsoft is hosting the [Windows Developer Day](https://blogs.windows.com/buildingapps/2017/09/14/windows-developer-day-returns/) here in London, and you can watch the live stream starting at <time datetime="2017-10-10T16:30:00Z">9:30 AM PDT</time>.
 
 The event will start with a keynote by Kevin Gallo and members of the Windows engineering team, followed by a live-streamed Q&A session and several streaming sessions diving deeper into what's new for developers in the Windows 10 Fall Creators Update.

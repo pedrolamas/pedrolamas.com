@@ -3,8 +3,8 @@ import React from 'react';
 import SiteContext from '../siteContext';
 
 type HeaderProps = {
-  children?: never
-}
+  children?: never;
+};
 
 const Header: React.FunctionComponent<HeaderProps> = () => (
   <SiteContext.Consumer>
@@ -15,12 +15,12 @@ const Header: React.FunctionComponent<HeaderProps> = () => (
 
       return (
         <>
-          {siteMetadata.facebook && siteMetadata.facebook.app_id &&
+          {siteMetadata.facebook && siteMetadata.facebook.app_id && (
             <>
-              <div id="fb-root"></div>
-              <script src="js/fb.js" async></script>
+              <div id='fb-root'></div>
+              <script src='js/fb.js' async></script>
             </>
-          }
+          )}
         </>
       );
     }}

@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=381
 permalink: /2013/04/26/app-package-cleanup/
 dsq_thread_id:
-  - "2046772154"
+  - '2046772154'
 categories:
   - Windows
   - Windows Phone
@@ -21,6 +21,7 @@ tags:
   - WPDev
   - XAP
 ---
+
 The [NuGet](http://nuget.org) team released the 2.5 version yesterday, and along with a bunch of really cool [new features](http://docs.nuget.org/docs/release-notes/nuget-2.5), there was one I was particularly interested: the ability to import MSBuild targets and props files!
 
 This means we can now have NuGet packages without any type of assembly, targeting only the project build process.

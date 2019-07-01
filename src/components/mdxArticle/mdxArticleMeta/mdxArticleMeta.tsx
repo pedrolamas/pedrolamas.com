@@ -8,10 +8,10 @@ import MdxArticleMetaEdit from './mdxArticleMetaEdit';
 
 type MdxArticleMetaProps = {
   children?: never;
-}
+};
 
 const MdxArticleMeta: React.FunctionComponent<MdxArticleMetaProps> = () => (
-  <div className="post-meta">
+  <div className='post-meta'>
     <MdxArticleMetaPostedOn />
 
     <MdxArticleMetaCategories />

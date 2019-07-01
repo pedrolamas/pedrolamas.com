@@ -15,6 +15,7 @@ tags:
   - Windows 10
   - WPDev
 ---
+
 I recently came into a UWP project requiring all HTTP requests to use a specific User-Agent string.
 
 That's quite easy to do if you only use [Windows.Web.Http.HttpClient](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httpclient?wt.mc_id=MVP) as there's a managed property for that purpose: [HttpClient.DefaultRequestHeaders.UserAgent](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.headers.httprequestheadercollection#Windows_Web_Http_Headers_HttpRequestHeaderCollection_UserAgent?wt.mc_id=MVP).
@@ -29,7 +30,7 @@ Any requests invoked from inside the webview (like a form post) will use the sys
 
 ## So what's the solution?
 
-The solution comes in the form of a Win32 API called [UrlMkSetSessionOption](https://msdn.microsoft.com/en-us/library/ms775125(v=vs.85).aspx).
+The solution comes in the form of a Win32 API called [UrlMkSetSessionOption](<https://msdn.microsoft.com/en-us/library/ms775125(v=vs.85).aspx>).
 
 Amongst other things, this API allows you to set the default user-agent string for the current internet session!
 

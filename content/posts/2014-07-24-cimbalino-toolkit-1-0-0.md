@@ -9,7 +9,7 @@ permalink: /2014/07/24/cimbalino-toolkit-1-0-0/
 fb_fan_page_post_id:
   - 150703221746608_339703969513198
 dsq_thread_id:
-  - "2869257645"
+  - '2869257645'
 image: /wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
 categories:
   - Windows
@@ -23,11 +23,12 @@ tags:
   - WP8
   - WPDev
 ---
+
 In case you missed it, **there is a new and improved [Cimbalino Toolkit](http://cimbalino.org) now available**, supporting the following platforms:
 
-* Windows Phone Silverlight 8.0 and 8.1 apps (WP8)
-* Windows Phone 8.1 apps (WPA81)
-* Windows Store 8.1 apps (Win81)
+- Windows Phone Silverlight 8.0 and 8.1 apps (WP8)
+- Windows Phone 8.1 apps (WPA81)
+- Windows Store 8.1 apps (Win81)
 
 ## The long story
 
@@ -51,10 +52,10 @@ This small change allowed to reduce the create a **new Cimbalino Toolkit with ju
 
 There is still a lot of work to be done to port everything from the old toolkit to the new one, but here's some of the things already working:
 
-* ApplicationBarBehavior, MultiApplicationBarBehavior, MultiBindingBehavior
-* StorageService, EmailComposeService, MessageBoxService, NavigationService, and others...
-* Most of the extension methods have already been ported, including the PNG support ones
-* Most of the value converters
+- ApplicationBarBehavior, MultiApplicationBarBehavior, MultiBindingBehavior
+- StorageService, EmailComposeService, MessageBoxService, NavigationService, and others...
+- Most of the extension methods have already been ported, including the PNG support ones
+- Most of the value converters
 
 Also, there is the need to write some new samples and documentation, so if you can I could surely use the help!!! ;)
 
@@ -62,7 +63,7 @@ Also, there is the need to write some new samples and documentation, so if you c
 
 Here are the new **Cimbalino Toolkit** NuGet packages:
 
-* [Cimbalino.Toolkit.Core](https://www.nuget.org/packages/Cimbalino.Toolkit.Core) - The core portion of the toolkit (compatible with background agents)
-* [Cimbalino.Toolkit](https://www.nuget.org/packages/Cimbalino.Toolkit) - The main component of the toolkit
+- [Cimbalino.Toolkit.Core](https://www.nuget.org/packages/Cimbalino.Toolkit.Core) - The core portion of the toolkit (compatible with background agents)
+- [Cimbalino.Toolkit](https://www.nuget.org/packages/Cimbalino.Toolkit) - The main component of the toolkit
 
 Please check back soon to read about what's new and what changed! :)

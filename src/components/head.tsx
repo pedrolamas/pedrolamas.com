@@ -9,9 +9,9 @@ type HeadProps = {
   title?: string;
   description?: string;
   meta?: MetaProps[];
-}
+};
 
-const Head: React.FunctionComponent<HeadProps> = (props) => (
+const Head: React.FunctionComponent<HeadProps> = props => (
   <SiteContext.Consumer>
     {siteContext => {
       const { siteMetadata } = siteContext;
@@ -49,7 +49,7 @@ const Head: React.FunctionComponent<HeadProps> = (props) => (
         },
         {
           property: `og:locale`,
-          content: (siteMetadata.lang || "en").replace('-', '_'),
+          content: (siteMetadata.lang || 'en').replace('-', '_'),
         },
         {
           name: `twitter:card`,
@@ -82,7 +82,7 @@ const Head: React.FunctionComponent<HeadProps> = (props) => (
       );
     }}
   </SiteContext.Consumer>
-)
+);
 
 Head.defaultProps = {
   title: '',

@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=2931
 permalink: /2013/09/11/windows-phone-uri-association-deep-links-and-the-ampersand/
 dsq_thread_id:
-  - "2045937682"
+  - '2045937682'
 image: /wp-content/uploads/2013/09/hyperlink_hand.png
 categories:
   - Windows Phone
@@ -20,6 +20,7 @@ tags:
   - WP8Dev
   - WPDev
 ---
+
 A few weeks ago I stumbled on an issue while using ampersand (`&`) in a URI association deep link with query string parameters!
 
 Let's start by assuming I have a [Windows Phone app capable of handling deep links](http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj206987%28v=vs.105%29.aspx#BKMK_URIassociations) with "my-app:" moniker. Now take a look at the following sample link:

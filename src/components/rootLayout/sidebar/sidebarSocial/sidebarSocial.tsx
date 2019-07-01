@@ -5,7 +5,7 @@ import SiteContext from '../../../siteContext';
 
 type SidebarSocialProps = {
   children?: never;
-}
+};
 
 const SidebarSocial: React.FunctionComponent<SidebarSocialProps> = () => (
   <SiteContext.Consumer>
@@ -15,8 +15,9 @@ const SidebarSocial: React.FunctionComponent<SidebarSocialProps> = () => (
       if (!siteMetadata) return null;
 
       return (
-        <nav className="sidebar-social" role="navigation" aria-label="Social Links Menu">
-          {siteMetadata.social && siteMetadata.social.links &&
+        <nav className='sidebar-social' role='navigation' aria-label='Social Links Menu'>
+          {siteMetadata.social &&
+            siteMetadata.social.links &&
             siteMetadata.social.links.map((link, index) => {
               if (!link) {
                 return null;
@@ -34,12 +35,9 @@ const SidebarSocial: React.FunctionComponent<SidebarSocialProps> = () => (
                 linkTitle = 'GitHub';
               }
 
-              return (
-                <SidebarSocialLink url={link} title={linkTitle} key={index} />
-              );
-            })
-          }
-          <SidebarSocialLink url="/feeds" title="Syndicated Feeds" />
+              return <SidebarSocialLink url={link} title={linkTitle} key={index} />;
+            })}
+          <SidebarSocialLink url='/feeds' title='Syndicated Feeds' />
         </nav>
       );
     }}

@@ -10,7 +10,7 @@ import { Query } from '../../generated/graphql';
 
 type RootLayoutProperties = {
   children: React.ReactNode;
-}
+};
 
 const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children }) => {
   const { dataYaml } = useStaticQuery<Query>(
@@ -76,13 +76,15 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
           }
         }
       }
-    `,
+    `
   );
 
   return (
-    <SiteContext.Provider value={{
-      siteMetadata: dataYaml || undefined
-    }}>
+    <SiteContext.Provider
+      value={{
+        siteMetadata: dataYaml || undefined,
+      }}
+    >
       <Sidebar />
 
       <Content>
@@ -94,6 +96,6 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
       </Content>
     </SiteContext.Provider>
   );
-}
+};
 
 export default RootLayout;

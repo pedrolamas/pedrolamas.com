@@ -13,6 +13,7 @@ tags:
   - Windows 10
   - WPDev
 ---
+
 A while back I wrote an article about the [CultureInfo changes in UWP](https://www.pedrolamas.com/2015/11/02/cultureinfo-changes-in-uwp/) and how they affected the UWP apps.
 
 Well, things haven't changed much since then, and the information in that article still stands today!
@@ -23,12 +24,12 @@ While looking at the [CultureInfo.cs](https://github.com/dotnet/corert/blob/mast
 
 > We use the following order to return CurrentCulture and CurrentUICulture
 >
-> * Use WinRT to return the current user profile language
-> * Use current thread culture if the user already set one using CurrentCulture/CurrentUICulture
-> * Use thread culture if the user already set one using DefaultThreadCurrentCulture or DefaultThreadCurrentUICulture
-> * Use NLS default user culture
-> * Use NLS default system culture
-> * Use Invariant culture
+> - Use WinRT to return the current user profile language
+> - Use current thread culture if the user already set one using CurrentCulture/CurrentUICulture
+> - Use thread culture if the user already set one using DefaultThreadCurrentCulture or DefaultThreadCurrentUICulture
+> - Use NLS default user culture
+> - Use NLS default system culture
+> - Use Invariant culture
 
 This confirms our findings!
 

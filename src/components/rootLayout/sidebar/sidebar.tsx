@@ -7,8 +7,8 @@ import SidebarLogos from './sidebarLogos';
 import SidebarFacebook from './sidebarFacebook';
 
 const Sidebar: React.FunctionComponent = () => (
-  <aside className="sidebar">
-    <div className="container sidebar-sticky">
+  <aside className='sidebar'>
+    <div className='container sidebar-sticky'>
       <SidebarAbout />
 
       <SidebarSitemap />

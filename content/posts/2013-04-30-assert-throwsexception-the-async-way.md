@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=601
 permalink: /2013/04/30/assert-throwsexception-the-async-way/
 dsq_thread_id:
-  - "2069756678"
+  - '2069756678'
 categories:
   - Windows Phone
 tags:
@@ -21,6 +21,7 @@ tags:
   - WP8Dev
   - WPDev
 ---
+
 The new Windows Phone Test Framework on Visual Studio 2012 Update 2 is a major step in the right direction for testing WP apps.
 
 I particularly like the fact that all tests run on the emulator where they can get the full runtime environment of a real Windows Phone device.

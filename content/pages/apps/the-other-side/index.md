@@ -6,6 +6,7 @@ author: Pedro Lamas
 layout: page
 guid: https://www.pedrolamas.com/?page_id=2141
 ---
+
 Check what's on The Other Side of your location!
 
 This app will alow you to see the exact opposite (the antípode) of any location of the planet!

@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4083
 permalink: /2015/01/26/cimbalino-toolkit-integrating-with-mvvm-light-toolkit/
 dsq_thread_id:
-  - "3456687900"
+  - '3456687900'
 image: /wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
 categories:
   - Windows
@@ -19,6 +19,7 @@ tags:
   - Windows Phone
   - WPDev
 ---
+
 Picking up where we left off on the [previous article][1], you now know how to install the [Cimbalino Toolkit][2] in your app, so congratulations for that! :)
 
 On this article I will show how to integrate it with the [MVVM Light Toolkit][3], and then build a really simple "Hello World" app!
@@ -29,21 +30,21 @@ Using the same approach to add NuGet packages to the solution shown in the previ
 
 [![Searching for MVVM Light Toolkit][4]][4]
 
-You should now click on the *Install* button, confirm that you want to install the package into both projects, review the details shown in the *License Acceptance* window, and click the *I Accept* button.
+You should now click on the _Install_ button, confirm that you want to install the package into both projects, review the details shown in the _License Acceptance_ window, and click the _I Accept_ button.
 
-You will now see a couple of warnings about moving the *ViewModel* folder manually; this is expected and it is due to the fact that we are building a Universal App (you can find more information about this [here][5]).
+You will now see a couple of warnings about moving the _ViewModel_ folder manually; this is expected and it is due to the fact that we are building a Universal App (you can find more information about this [here][5]).
 
-Look at the Solution Explorer Window, you should see that we have two *ViewModel* folders, one on each of the projects:
+Look at the Solution Explorer Window, you should see that we have two _ViewModel_ folders, one on each of the projects:
 
 [![Projects with different ViewModel folders][6]][6]
 
-Go ahead and delete one of the *ViewModel* folders, and move the remaining one from the project to the shared files on the bottom. The end result should look something like this:
+Go ahead and delete one of the _ViewModel_ folders, and move the remaining one from the project to the shared files on the bottom. The end result should look something like this:
 
 [![Projects with shared ViewModel folder][7]][7]
 
 We now we need to register the `IMessageBoxService` with the `ViewModelLocator` so that we can use it in the `MainViewModel` to show message popups in the app!
 
-Edit the *ViewModelLocator.cs* file and change it to the following:
+Edit the _ViewModelLocator.cs_ file and change it to the following:
 
 ```csharp
 using Cimbalino.Toolkit.Services;
@@ -81,7 +82,7 @@ namespace App1.ViewModel
 
 As you can see above, we registered the `IMessageBoxService` with the MVVM Light Toolkit IoC Container by calling `SimpleIoc.Default.Register<IMessageBoxService, MessageBoxService>()`, and this is how we will use all of the services provided by Cimbalino Toolkit - and [there are quite a lot of them][8]!!
 
-Now open the *MainViewModel.cs* file and change it to the following code:
+Now open the _MainViewModel.cs_ file and change it to the following code:
 
 ```csharp
 using Cimbalino.Toolkit.Services;
@@ -124,7 +125,7 @@ Inside the constructor, we declared what will happen when the `SayHelloCommand` 
 
 That takes care of the view model, time to work on the view!
 
-On the shared files project, create a new folder named *View*, and inside it create a new user control named *MainUserControl.xaml* with the following content:
+On the shared files project, create a new folder named _View_, and inside it create a new user control named _MainUserControl.xaml_ with the following content:
 
 ```xml
 <UserControl x:Class="App1.View.MainUserControl"
@@ -146,11 +147,11 @@ On the shared files project, create a new folder named *View*, and inside it cre
 </UserControl>
 ```
 
-For the view we will use root `StackPanel` control, containing a `TextBlock` with a "name" label, a *TextBox* binded to the `Name` property in the view model, and a `Button` binded to the `SayHelloCommand` property.
+For the view we will use root `StackPanel` control, containing a `TextBlock` with a "name" label, a _TextBox_ binded to the `Name` property in the view model, and a `Button` binded to the `SayHelloCommand` property.
 
 Notice also on the top of the file that we set the user control `DataContext` property to use the `ViewModelLocator.Main` property, which returns the instance of the `MainViewModel`.
 
-Now all that we needed is to add our `MainUserControl` to the *MainPage.xaml* file in each of the app projects. In the end, each of the *MainPage.xaml* files should be similar to this:
+Now all that we needed is to add our `MainUserControl` to the _MainPage.xaml_ file in each of the app projects. In the end, each of the _MainPage.xaml_ files should be similar to this:
 
 ```xml
 <Page x:Class="App1.MainPage"
@@ -173,11 +174,11 @@ Just run the Windows project and the Windows Phone project to confirm that our s
 
 To make things even easier, you can download the full solution [here](wp-content/uploads/downloads/2015/01/App1.zip)!
 
-  [1]: https://www.pedrolamas.com/2015/01/05/cimbalino-toolkit-step-by-step/
-  [2]: http://cimbalino.org
-  [3]: http://mvvmlight.codeplex.com/
-  [4]: /wp-content/uploads/2015/01/Searching-for-MVVM-Light-Toolkit.png
-  [5]: http://www.mvvmlight.net/nuget-univ
-  [6]: /wp-content/uploads/2015/01/Projects-with-different-ViewModel-folders.png
-  [7]: /wp-content/uploads/2015/01/Projects-with-shared-ViewModel-folder.png
-  [8]: https://github.com/Cimbalino/Cimbalino-Toolkit/tree/master/src/Cimbalino.Toolkit.Core%20%28Portable%29/Services
+[1]: https://www.pedrolamas.com/2015/01/05/cimbalino-toolkit-step-by-step/
+[2]: http://cimbalino.org
+[3]: http://mvvmlight.codeplex.com/
+[4]: /wp-content/uploads/2015/01/Searching-for-MVVM-Light-Toolkit.png
+[5]: http://www.mvvmlight.net/nuget-univ
+[6]: /wp-content/uploads/2015/01/Projects-with-different-ViewModel-folders.png
+[7]: /wp-content/uploads/2015/01/Projects-with-shared-ViewModel-folder.png
+[8]: https://github.com/Cimbalino/Cimbalino-Toolkit/tree/master/src/Cimbalino.Toolkit.Core%20%28Portable%29/Services

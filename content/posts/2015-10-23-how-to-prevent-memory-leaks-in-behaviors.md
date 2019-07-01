@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4211
 permalink: /2015/10/23/how-to-prevent-memory-leaks-in-behaviors/
 dsq_thread_id:
-  - "4252702255"
+  - '4252702255'
 categories:
   - Windows
   - Windows Phone
@@ -20,6 +20,7 @@ tags:
   - Windows 10
   - Windows Phone
 ---
+
 Attached Behaviors have been around for quite a while, and though I personally always liked them, they have a fundamental flaw: they can lead to huge memory leaks!
 
 I've seen quite a few fixes for them (like [this one](http://dotnetbyexample.blogspot.co.uk/2011/04/safe-event-detachment-pattern-for.html) from MVP Joost Van Schaik), though none proved to be truly "universal" and final!
@@ -120,7 +121,7 @@ But things get even worse in this example: everytime we navigate to page 2, we w
 
 ## Introducing the MonitoredInteraction class
 
-The [Cimbalino Toolkit](http://cimbalino.org) now has the [**MonitoredInteraction**](https://github.com/Cimbalino/Cimbalino-Toolkit/blob/master/src/Cimbalino.Toolkit%20(WP8)/Behaviors/MonitoredInteraction.cs) class to solve this issue!
+The [Cimbalino Toolkit](http://cimbalino.org) now has the [**MonitoredInteraction**](<https://github.com/Cimbalino/Cimbalino-Toolkit/blob/master/src/Cimbalino.Toolkit%20(WP8)/Behaviors/MonitoredInteraction.cs>) class to solve this issue!
 
 The `MonitoredInteraction` was built as a direct replacement of the `Microsoft.Xaml.Interactivity.Interaction`, and will monitor the attached object `Loaded` and `Unloaded` events and call for the attachment and detachment of all behaviors it contains!
 

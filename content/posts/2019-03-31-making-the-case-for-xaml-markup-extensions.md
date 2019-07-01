@@ -12,6 +12,7 @@ tags:
   - Windows 10
   - WPDev
 ---
+
 Consider the following code:
 
 ```xml
@@ -52,10 +53,10 @@ Introduced in Windows 10 Fall Creators Update (v10.0.16299.0), the [MarkupExtens
 
 To create a XAML markup extension, create a new class and ensure that it:
 
-* inherits from `MarkupExtension`
-* overrides the `MarkupExtension.ProvideValue` to provide the implementation
-* is marked with the [MarkupExtensionReturnTypeAttribute](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.markup.markupextensionreturntypeattribute?wt.mc_id=MVP) and specifies the return type
-* has a name ending in "Extension".
+- inherits from `MarkupExtension`
+- overrides the `MarkupExtension.ProvideValue` to provide the implementation
+- is marked with the [MarkupExtensionReturnTypeAttribute](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.markup.markupextensionreturntypeattribute?wt.mc_id=MVP) and specifies the return type
+- has a name ending in "Extension".
 
 Following on our example, we can easily create a `MarkupExtension` that would return a `FontIcon` instance for a given glyph unicode point:
 

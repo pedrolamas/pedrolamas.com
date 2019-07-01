@@ -1,9 +1,8 @@
 @import url('//fonts.googleapis.com/css?family=PT+Sans:400,700');
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-@import 'poole';
-@import 'syntax';
-@import 'hyde';
+@import 'base/poole';
+@import 'base/hyde';
 
 li {
   img {
@@ -13,8 +12,9 @@ li {
   }
 }
 
-code, pre {
-  font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+code,
+pre {
+  font-family: Consolas, Menlo, Monaco, 'Courier New', monospace;
 }
 
 figure {
@@ -50,7 +50,7 @@ figcaption {
     font-family: inherit;
     font-size: 2rem;
     font-weight: 400;
-    letter-spacing: -.025rem;
+    letter-spacing: -0.025rem;
   }
 }
 
@@ -67,11 +67,13 @@ figcaption {
   width: 36px;
   height: 36px;
   margin-right: 5px;
-  border: 1px solid rgba(255,255,255,.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   display: inline-block;
 
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     border-color: #fff;
     text-decoration: none;
   }
@@ -79,34 +81,35 @@ figcaption {
   &:before {
     font-family: FontAwesome;
     font-size: 16px;
-    content: "\f1e0";
+    content: '\f1e0';
     width: 34px;
     height: 34px;
     line-height: 34px;
   }
 
-  &[href*="github.com"]:before {
-    content: "\f09b";
+  &[href*='github.com']:before {
+    content: '\f09b';
   }
 
-  &[href*="twitter.com"]:before {
-    content: "\f099";
+  &[href*='twitter.com']:before {
+    content: '\f099';
   }
 
-  &[href*="facebook.com"]:before {
-    content: "\f09a";
+  &[href*='facebook.com']:before {
+    content: '\f09a';
   }
 
-  &[href*="linkedin.com"]:before {
-    content: "\f0e1";
+  &[href*='linkedin.com']:before {
+    content: '\f0e1';
   }
 
-  &[title="Syndicated Feeds"]:before {
-    content: "\f09e";
+  &[title='Syndicated Feeds']:before {
+    content: '\f09e';
   }
 }
 
-.sidebar-logos, .sidebar-facebook {
+.sidebar-logos,
+.sidebar-facebook {
   display: none;
 }
 
@@ -133,7 +136,7 @@ figcaption {
     @extend .meta-entry;
 
     &:before {
-      content: "\f073";
+      content: '\f073';
     }
   }
 
@@ -141,7 +144,7 @@ figcaption {
     @extend .meta-entry;
 
     &:before {
-      content: "\f07b";
+      content: '\f07b';
     }
   }
 
@@ -149,7 +152,7 @@ figcaption {
     @extend .meta-entry;
 
     &:before {
-      content: "\f02c";
+      content: '\f02c';
     }
   }
 
@@ -157,7 +160,7 @@ figcaption {
     @extend .meta-entry;
 
     &:before {
-      content: "\f075";
+      content: '\f075';
     }
   }
 
@@ -165,7 +168,7 @@ figcaption {
     @extend .meta-entry;
 
     &:before {
-      content: "\f044";
+      content: '\f044';
     }
   }
 }
@@ -177,7 +180,10 @@ figcaption {
   }
 }
 
-.post-author, .post-social, .post-comments, .post-navigation {
+.post-author,
+.post-social,
+.post-comments,
+.post-navigation {
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-top: 1px solid #eee;
@@ -239,8 +245,8 @@ figcaption {
   width: 1px;
   height: 1px;
   overflow: hidden;
-  position: absolute!important;
-  word-wrap: normal!important;
+  position: absolute !important;
+  word-wrap: normal !important;
 }
 
 @media (min-width: 38em) {
@@ -264,7 +270,8 @@ figcaption {
     }
   }
 
-  .sidebar-logos, .sidebar-facebook {
+  .sidebar-logos,
+  .sidebar-facebook {
     display: block;
   }
 

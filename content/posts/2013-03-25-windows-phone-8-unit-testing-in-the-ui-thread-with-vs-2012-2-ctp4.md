@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=239
 permalink: /2013/03/25/windows-phone-8-unit-testing-in-the-ui-thread-with-vs-2012-2-ctp4/
 dsq_thread_id:
-  - "2053865941"
+  - '2053865941'
 categories:
   - Windows Phone
 tags:
@@ -21,6 +21,7 @@ tags:
   - WP8Dev
   - WPDev
 ---
+
 If you've been following [the news](http://blogs.msdn.com/b/visualstudioalm/archive/2013/01/31/windows-phone-unit-tests-in-visual-studio-2012-update-2.aspx) on the upcoming **Visual Studio 2012 Update 2** (currently in [CTP4](http://go.microsoft.com/fwlink/?LinkId=273878)), you know that we now have a fully working Unit Tests framework for Windows Phone projects!
 
 Well, this seemed like the perfect opportunity to finally create some unit tests for the [Cimbalino Windows Phone Toolkit](http://cimbalino.org) and test this new test framework, all at once!
@@ -59,7 +60,7 @@ This simple class will test the `ColorToBrushConverter.Convert` method as to che
 
 When I ran the test, this is what happened:
 
-[![Windows Phone Unit Test results](/wp-content/uploads/2013/03/Windows-Phone-Unit-Test-results.png "Windows Phone Unit Test results")](/wp-content/uploads/2013/03/Windows-Phone-Unit-Test-results.png)
+[![Windows Phone Unit Test results](/wp-content/uploads/2013/03/Windows-Phone-Unit-Test-results.png 'Windows Phone Unit Test results')](/wp-content/uploads/2013/03/Windows-Phone-Unit-Test-results.png)
 
 As you can see here, we got an "Invalid cross-thread access" error message; this is the result of all tests running on a special "test app" inside the Emulator, but the really bad news is that they all run in a background thread.
 

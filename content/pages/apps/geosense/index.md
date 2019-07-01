@@ -6,8 +6,9 @@ author: Pedro Lamas
 layout: page
 guid: https://www.pedrolamas.com/?page_id=1861
 dsq_thread_id:
-  - "2704125345"
+  - '2704125345'
 ---
+
 Geosense helps you to make sense of your location!
 
 Just enter an address or coordinate, and Geosense will provide information regarding the requested location; or just press a single button and Geosense will get your current location and show you some details about where you are!

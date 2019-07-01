@@ -13,7 +13,7 @@ type PageIndexLayoutProps = {
     previousPageIndex?: number;
     nextPageIndex?: number;
   };
-}
+};
 
 const PageIndexLayout: React.FunctionComponent<PageIndexLayoutProps> = ({ data, pageContext }) => {
   const posts = data.allMdx && data.allMdx.edges;
@@ -32,11 +32,13 @@ const PageIndexLayout: React.FunctionComponent<PageIndexLayoutProps> = ({ data, 
 
         return (
           <article id={`post${node.id}`} className={`post post${node.id}`} key={index}>
-            <header className="post-header">
-              <h1 className="post-title">
-                {node.fields && node.fields.slug &&
-                  <Link to={node.fields.slug} rel="bookmark">{title || "(untitled)"}</Link>
-                }
+            <header className='post-header'>
+              <h1 className='post-title'>
+                {node.fields && node.fields.slug && (
+                  <Link to={node.fields.slug} rel='bookmark'>
+                    {title || '(untitled)'}
+                  </Link>
+                )}
               </h1>
             </header>
 
@@ -45,15 +47,21 @@ const PageIndexLayout: React.FunctionComponent<PageIndexLayoutProps> = ({ data, 
         );
       })}
 
-      <nav className="pagination">
-        {nextPageIndex
-          ? <Link className="pagination-item older" to={`/page/${nextPageIndex}/`}>Older</Link>
-          : <span className="pagination-item older">Older</span>
-        }
-        {previousPageIndex
-          ? <Link className="pagination-item newer" to={previousPageIndex === 1 ? "/" : `/page/${previousPageIndex}/`}>Newer</Link>
-          : <span className="pagination-item newer">Newer</span>
-        }
+      <nav className='pagination'>
+        {nextPageIndex ? (
+          <Link className='pagination-item older' to={`/page/${nextPageIndex}/`}>
+            Older
+          </Link>
+        ) : (
+          <span className='pagination-item older'>Older</span>
+        )}
+        {previousPageIndex ? (
+          <Link className='pagination-item newer' to={previousPageIndex === 1 ? '/' : `/page/${previousPageIndex}/`}>
+            Newer
+          </Link>
+        ) : (
+          <span className='pagination-item newer'>Newer</span>
+        )}
       </nav>
     </RootLayout>
   );
@@ -61,16 +69,7 @@ const PageIndexLayout: React.FunctionComponent<PageIndexLayoutProps> = ({ data, 
 
 export const pageQuery = graphql`
   query($ids: [String!]!) {
-    allMdx(
-      filter: {
-        id: {
-          in: $ids
-        }
-      }, sort: {
-        fields: frontmatter___date, order: DESC
-      }
-    )
-    {
+    allMdx(filter: { id: { in: $ids } }, sort: { fields: frontmatter___date, order: DESC }) {
       edges {
         node {
           ...PostMdx

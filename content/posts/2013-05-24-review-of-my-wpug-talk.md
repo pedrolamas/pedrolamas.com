@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=1071
 permalink: /2013/05/24/review-of-my-wpug-talk/
 dsq_thread_id:
-  - "2061027352"
+  - '2061027352'
 image: /wp-content/uploads/2013/05/WPUG.png
 categories:
   - Windows Phone
@@ -20,6 +20,7 @@ tags:
   - WPDev
   - WPUG
 ---
+
 Last Monday I had the pleasure of participating in a [WPUG](http://wpug.net/) event where I talked about the [Nokia Music API](http://nokia.ly/musicapi) and the [Cimbalino Windows Phone Toolkit](http://cimbalino.org).
 
 I had quite a technical challenge, as I couldn't access the internet from inside the emulator, no matter what I did!
@@ -30,7 +31,7 @@ Other than that, the event went really good, and hopefully I'll start seeing mor
 
 From the feedback I got, I can see people requesting more information about MVVM, so I'm going to point to two articles I wrote about two years ago for [Coding4Fun](http://channel9.msdn.com/coding4fun) (now part of Microsoft Channel9):
 
-* [Currency Converter for Windows Phone 7](http://channel9.msdn.com/coding4fun/articles/Currency-Converter-for-Windows-Phone-7)
-* [Currency Converter v2 - Now on Caffeine](http://channel9.msdn.com/coding4fun/articles/Currency-Converter-v2--Now-on-Caffeine)
+- [Currency Converter for Windows Phone 7](http://channel9.msdn.com/coding4fun/articles/Currency-Converter-for-Windows-Phone-7)
+- [Currency Converter v2 - Now on Caffeine](http://channel9.msdn.com/coding4fun/articles/Currency-Converter-v2--Now-on-Caffeine)
 
 My big "thank you" to [Matt Lacey](https://twitter.com/mrlacey) and [Riaz Ahmed](https://twitter.com/TheRealRiaz) for the opportunity! :)

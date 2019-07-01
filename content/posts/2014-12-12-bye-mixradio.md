@@ -9,13 +9,14 @@ permalink: /2014/12/12/bye-mixradio/
 fb_fan_page_post_id:
   - 150703221746608_404343719715889
 dsq_thread_id:
-  - "3316743988"
+  - '3316743988'
 categories:
   - Uncategorized
 tags:
   - Microsoft
   - MixRadio
 ---
+
 Today was my last day as a MixRadio employee.
 
 After [Microsoft completed the acquisition of the Nokia Devices & Services business](https://www.pedrolamas.com/2014/04/25/bye-nokia-hello-microsoft/), MixRadio and all of it's employees became part of Microsoft.

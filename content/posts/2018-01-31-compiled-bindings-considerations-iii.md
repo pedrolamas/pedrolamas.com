@@ -14,6 +14,7 @@ tags:
   - WPDev
   - x:Bind
 ---
+
 Two years since my [Compiled Bindings considerations II](https://www.pedrolamas.com/2016/01/08/compiled-bindings-considerations-ii/) article, I can finally write a part III that actually comes with some good news!
 
 The earlier article focused on a really nasty bug with the compiled bindings ignoring the FallbackValue when the binding path didn't resolve.

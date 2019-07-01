@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=3895
 permalink: /2014/01/20/disabling-screenshot-functionality-in-a-windows-phone-app/
 dsq_thread_id:
-  - "2148030133"
+  - '2148030133'
 image: /wp-content/uploads/2014/01/Disabling-screenshot-functionality-in-a-Windows-Phone-8-app-300x270.png
 categories:
   - Windows Phone
@@ -21,6 +21,7 @@ tags:
   - WP8Dev
   - WPDev
 ---
+
 **Update:** Kudos to Murat and Rudy Huyn for pointing me out on a missing `return;` that would cause the `NotSupportedException` to be raised all the time... I've fixed the code by inverting the `if` condition.
 
 **Update 2:** Just noticed that **GDR2 is also supported**, as the code below will also work in devices with it! :)

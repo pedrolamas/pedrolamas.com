@@ -8,8 +8,9 @@ guid: https://www.pedrolamas.com/?page_id=33
 fb_author_post_id:
   - 4740207657019
 dsq_thread_id:
-  - "2047856152"
+  - '2047856152'
 ---
+
 ## Warning
 
 **New Windows Phone 8 icons are now available [here](windows-phone/windows-phone-8-application-bar-icons.md)!**

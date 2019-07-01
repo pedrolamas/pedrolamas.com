@@ -16,6 +16,7 @@ tags:
   - Windows 10
   - WPDev
 ---
+
 If you are writing multithread Windows apps (and if you are not, you should!), you know by now that any code related to the UI **must** run in the main thread (also called UI thread).
 
 Knowing this, please look at the following view-model:

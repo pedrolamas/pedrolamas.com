@@ -8,7 +8,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4320
 permalink: /2016/01/08/compiled-bindings-considerations-ii/
 dsq_thread_id:
-  - "4473571193"
+  - '4473571193'
 categories:
   - Windows
   - Windows Phone
@@ -22,6 +22,7 @@ tags:
   - WPDev
   - x:Bind
 ---
+
 **Update:** Microsoft has finally provided a fix for this bug, covered in the [Compiled Bindings considerations III](https://www.pedrolamas.com/2018/01/31/compiled-bindings-considerations-iii/) article!
 
 A few months ago I wrote my first [Compiled Bindings considerations](https://www.pedrolamas.com/2015/10/19/compiled-bindings-considerations/) article, and seems that time has come to write some more, only this time I'm bearer of some bad news...
@@ -92,9 +93,9 @@ public class CurrentTimeViewModel : ViewModelBase
 
 Our view model is composed of 3 classes:
 
-* **ViewModelBase** is just a standard implementation for the `INotifyPropertyChanged` interface, providing an `OnPropertyChanged` helper method to its inheritors.
-* **MainViewModel** will be used as the main view model for our sample and has a single property, `CurrentTime`.
-* **CurrentTimeViewModel** has a single `CurrentTimeTicks` property which will contain a string representing the current time in ticks; an `Update` helper method has also been added to this view model.
+- **ViewModelBase** is just a standard implementation for the `INotifyPropertyChanged` interface, providing an `OnPropertyChanged` helper method to its inheritors.
+- **MainViewModel** will be used as the main view model for our sample and has a single property, `CurrentTime`.
+- **CurrentTimeViewModel** has a single `CurrentTimeTicks` property which will contain a string representing the current time in ticks; an `Update` helper method has also been added to this view model.
 
 Now let's take a look at the MainPage view:
 
@@ -138,11 +139,11 @@ Now let's take a look at the MainPage view:
 
 The MainPage view is composed of the following:
 
-* a TextBlock with its `Text` property binded to `CurrentTimeViewModel.CurrentTimeTicks`, using "classic" bindings
-* a TextBlock with its `Text` property binded to `CurrentTimeViewModel.CurrentTimeTicks`, using compiled bindings
-* a Button to create a new CurrentTimeViewModel instance
-* a Button to update the current CurrentTimeViewModel instance
-* a Button to destroy the current CurrentTimeViewModel instance
+- a TextBlock with its `Text` property binded to `CurrentTimeViewModel.CurrentTimeTicks`, using "classic" bindings
+- a TextBlock with its `Text` property binded to `CurrentTimeViewModel.CurrentTimeTicks`, using compiled bindings
+- a Button to create a new CurrentTimeViewModel instance
+- a Button to update the current CurrentTimeViewModel instance
+- a Button to destroy the current CurrentTimeViewModel instance
 
 Finally, here's the code behind for the MainPage view:
 

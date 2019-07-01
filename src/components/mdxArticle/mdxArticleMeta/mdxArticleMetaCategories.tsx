@@ -6,7 +6,7 @@ import { slug } from '../../../utils';
 
 type MdxArticleMetaCategoriesProps = {
   children?: never;
-}
+};
 
 const MdxArticleMetaCategories: React.FunctionComponent<MdxArticleMetaCategoriesProps> = () => (
   <MdxArticleContext.Consumer>
@@ -19,17 +19,19 @@ const MdxArticleMetaCategories: React.FunctionComponent<MdxArticleMetaCategories
 
       return (
         <>
-          {categories &&
-            <span className="categories">
-              <span className="screen-reader-text">Categories </span>
+          {categories && (
+            <span className='categories'>
+              <span className='screen-reader-text'>Categories </span>
               {categories.map((category, index) => (
                 <React.Fragment key={index}>
-                  {index > 0 && ", "}
-                  <Link to={`/category/${slug(category || "")}/`} rel="category tag">{category}</Link>
+                  {index > 0 && ', '}
+                  <Link to={`/category/${slug(category || '')}/`} rel='category tag'>
+                    {category}
+                  </Link>
                 </React.Fragment>
               ))}
             </span>
-          }
+          )}
         </>
       );
     }}

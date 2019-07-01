@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4334
 permalink: /2016/01/20/awaiting-the-coredispatcher/
 dsq_thread_id:
-  - "4507148543"
+  - '4507148543'
 categories:
   - Windows
   - Windows Phone
@@ -20,6 +20,7 @@ tags:
   - Windows Phone
   - WPDev
 ---
+
 Most programming language allow you to take advantage of multi-threaded execution, and .NET is no exception!
 
 Asynchronous code is a modern abstraction of multi-threading execution, and as you hopefully are aware, in .NET land, this is achieved with the `async` and `await` keywords.
@@ -70,7 +71,7 @@ public delegate void DispatchedHandler()
 
 The fact that we've added the `async/await` keywords to the callback doesn't ensure that the caller will await for it to execute!
 
-There are a few ways suspend the background thread execution until the foreground thread signals for it to continue, and using a [TaskCompletionSource&lt;T&gt;](https://msdn.microsoft.com/en-us/library/dd449174(v=vs.110).aspx) is one of the easiest:
+There are a few ways suspend the background thread execution until the foreground thread signals for it to continue, and using a [TaskCompletionSource&lt;T&gt;](<https://msdn.microsoft.com/en-us/library/dd449174(v=vs.110).aspx>) is one of the easiest:
 
 ```csharp
 public async void DoStuff()
@@ -93,4 +94,4 @@ public async void DoStuff()
 
 In this version of the code, once the execution returns from await'ing the `dispatcher.RunAsync()` call, the background thread will carry on execution, but will then await for the `taskCompletionSource.Task` to finish, which will only happen after the `taskCompletionSource.SetResult(true)` call that we make in the main thread!
 
-I've written a few [CoreDispatcher extension methods](https://github.com/Cimbalino/Cimbalino-Toolkit/blob/master/src/Cimbalino.Toolkit.Core%20(WP8)/Extensions/CoreDispatcherExtensions.cs) to help around this issue, and added them to the next version of the [Cimbalino Toolkit](http://cimbalino.org), but you can access them right now if you wish so! ;)
+I've written a few [CoreDispatcher extension methods](<https://github.com/Cimbalino/Cimbalino-Toolkit/blob/master/src/Cimbalino.Toolkit.Core%20(WP8)/Extensions/CoreDispatcherExtensions.cs>) to help around this issue, and added them to the next version of the [Cimbalino Toolkit](http://cimbalino.org), but you can access them right now if you wish so! ;)

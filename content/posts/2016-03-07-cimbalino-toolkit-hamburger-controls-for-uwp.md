@@ -7,9 +7,9 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4493
 permalink: /2016/03/07/cimbalino-toolkit-hamburger-controls-for-uwp/
 dsq_thread_id:
-  - "4642083339"
+  - '4642083339'
 instant_articles_submission_id:
-  - "1249897685020397"
+  - '1249897685020397'
 categories:
   - Windows
 tags:
@@ -22,13 +22,14 @@ tags:
   - Windows
   - Windows 10
 ---
+
 Like it or not, the so called "Hamburger" design pattern has made its way to pretty much every platform, including the Windows Universal Apps!
 
 Most Windows 10 native apps already show this new pattern, even a classic like the Calculator app!
 
 However, for reasons unknown, Microsoft didn't provide any Hamburger related control on the SDK base controls... frankly, this move brings back to memory when Windows Phone 7 SDK was launched without the `Panorama` and `Pivot` controls, the foundation of the whole "Metro" design guidelines!
 
-The only alternative I've found is to use the [Template 10](http://aka.ms/Template10), a *"set of Visual Studio project templates"*!
+The only alternative I've found is to use the [Template 10](http://aka.ms/Template10), a _"set of Visual Studio project templates"_!
 
 However, I've found that Template 10 version for Hamburger adds a bit of too much "fat" for my own taste, hence why I've been working on an alternative for the past last few weeks!
 
@@ -38,9 +39,9 @@ Starting with version 2.2.0 (currently still in beta 1), the [**Cimbalino Toolki
 
 Currently, the package features 3 controls:
 
-* **HamburgerFrame**
-* **HamburgerTitleBar**
-* **HamburgerMenuButton**
+- **HamburgerFrame**
+- **HamburgerTitleBar**
+- **HamburgerMenuButton**
 
 ### HamburgerFrame
 

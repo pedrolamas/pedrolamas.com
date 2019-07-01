@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=4223
 permalink: /2015/10/19/compiled-bindings-considerations/
 dsq_thread_id:
-  - "4238868670"
+  - '4238868670'
 categories:
   - Windows
   - Windows Phone

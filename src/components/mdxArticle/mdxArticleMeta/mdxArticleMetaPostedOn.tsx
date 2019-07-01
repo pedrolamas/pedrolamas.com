@@ -5,7 +5,7 @@ import Link from '../../link';
 
 type MdxArticleMetaPostedOnProps = {
   children?: never;
-}
+};
 
 const MdxArticleMetaPostedOn: React.FunctionComponent<MdxArticleMetaPostedOnProps> = () => (
   <MdxArticleContext.Consumer>
@@ -19,9 +19,11 @@ const MdxArticleMetaPostedOn: React.FunctionComponent<MdxArticleMetaPostedOnProp
       const url = fields && fields.slug;
 
       return (
-        <span className="posted-on">
-          <span className="screen-reader-text">Posted on </span>
-          <Link to={url || ""} rel="bookmark"><time dateTime={date}>{dateFormatted}</time></Link>
+        <span className='posted-on'>
+          <span className='screen-reader-text'>Posted on </span>
+          <Link to={url || ''} rel='bookmark'>
+            <time dateTime={date}>{dateFormatted}</time>
+          </Link>
         </span>
       );
     }}

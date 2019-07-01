@@ -11,6 +11,7 @@ tags:
   - .NET
   - .NET Core
 ---
+
 MSBuild based projects have two default build configurations: Debug and Release.
 
 While these two configurations are enough for most projects, some might actually require custom build configurations that will support different environments, alternative build targets, etc..

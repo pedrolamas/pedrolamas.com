@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=951
 permalink: /2013/05/17/cimbalino-windows-phone-toolkit-multibindingbehavior/
 dsq_thread_id:
-  - "2046358152"
+  - '2046358152'
 image: /wp-content/uploads/2013/03/Cimbalino-Windows-Phone-Toolkit-300x270.png
 categories:
   - Windows Phone
@@ -20,6 +20,7 @@ tags:
   - WP8Dev
   - WPDev
 ---
+
 One of the features I most enjoy in WPF is the [MultiBinding](http://msdn.microsoft.com/en-us/library/system.windows.data.multibinding.aspx) class, which allows you to take several source properties, pass their values to an [IMultiValueConverter](http://msdn.microsoft.com/en-us/library/system.windows.data.imultivalueconverter.aspx) implementation, and bind the result to a single target property!
 
 By now you're probably thinking "why do I need that?", but in certain specific scenarios, having the possibility to take several values and produce a single result directly in the UI can be quite useful!

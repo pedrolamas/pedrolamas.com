@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=3611
 permalink: /2013/12/05/creating-png-image-files-in-windows-phone/
 dsq_thread_id:
-  - "2045472277"
+  - '2045472277'
 image: /wp-content/uploads/2013/12/PNG-image-files-in-Windows-Phone.png
 categories:
   - Windows Phone
@@ -21,6 +21,7 @@ tags:
   - WP8Dev
   - WPDev
 ---
+
 Windows Phone image processing and format support has always been lacking a bit, especially when compared with all the GDI+ capabilities one has available in the full .NET Framework.
 
 For instance, you can read JPEG and PNG files, but you can only save to JPEG, as there is no support to save to PNG directly on the platform.
@@ -29,8 +30,8 @@ Saving to PNG has been quite easy since the beginning of Windows Phone 7 by usin
 
 But personally, using Image Tools always presented two major problems:
 
-* it requires [SharpZipLib](http://www.icsharpcode.net/opensource/sharpziplib/) (a GPL licensed library) to handle Zlib compression
-* it's quite slow and uses a lot of memory
+- it requires [SharpZipLib](http://www.icsharpcode.net/opensource/sharpziplib/) (a GPL licensed library) to handle Zlib compression
+- it's quite slow and uses a lot of memory
 
 The first problem is a definitive "no-no" for usage in closed code commercial apps, as [GPL](http://en.wikipedia.org/wiki/GNU_General_Public_License) is "[viral license](http://en.wikipedia.org/wiki/Viral_license)"
 

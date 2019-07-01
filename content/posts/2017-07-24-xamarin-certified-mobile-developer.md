@@ -4,10 +4,11 @@ title: Xamarin Certified Mobile Developer
 date: 2017-07-24T12:26:27+01:00
 image: /wp-content/uploads/2017/07/Xamarin-Certified-Mobile-Developer.png
 categories:
- - Xamarin
+  - Xamarin
 tags:
- - Xamarin
+  - Xamarin
 ---
+
 A couple of weeks ago I decided to enroll into [Xamarin University](https://university.xamarin.com/) and after a few classes and a final exam, I'm now a **Xamarin Certified Mobile Developer**!
 
 ![Xamarin Certified Mobile Developer certificate](/wp-content/uploads/2017/07/Xamarin-Certified-Mobile-Developer-certificate.png)

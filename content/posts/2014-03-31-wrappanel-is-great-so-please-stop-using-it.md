@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=3936
 permalink: /2014/03/31/wrappanel-is-great-so-please-stop-using-it/
 dsq_thread_id:
-  - "2562203881"
+  - '2562203881'
 image: /wp-content/uploads/2014/03/WrapPanel-layout-420x270.png
 categories:
   - Windows Phone
@@ -19,6 +19,7 @@ tags:
   - WPDev
   - WrapPanel
 ---
+
 The **WrapPanel** control (part of the [Windows Phone Toolkit](http://phone.codeplex.com)) is a really useful control container.
 
 Having said that, **you should definitely avoid using it** in your apps if you are planing to use in [ListBox.ItemsPanel](http://msdn.microsoft.com/en-us/library/windowsphone/develop/system.windows.controls.itemscontrol.itemspanel%28v=vs.105%29.aspx) for large lists items presented with fixed size!!

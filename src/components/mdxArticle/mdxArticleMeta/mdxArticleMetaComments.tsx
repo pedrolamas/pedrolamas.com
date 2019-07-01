@@ -6,7 +6,7 @@ import MdxArticleContext from '../mdxArticleContext';
 
 type MdxArticleMetaCommentsProps = {
   children?: never;
-}
+};
 
 const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProps> = () => (
   <SiteContext.Consumer>
@@ -20,24 +20,24 @@ const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProp
           const { fields } = mdx;
 
           const disqusConfig = {
-            url: (fields && fields.slug) || "",
-            identifier: "",
-            title: "",
+            url: (fields && fields.slug) || '',
+            identifier: '',
+            title: '',
           };
 
           return (
             <>
-              {siteMetadata && siteMetadata.disqus_shortname &&
+              {siteMetadata && siteMetadata.disqus_shortname && (
                 <Disqus.CommentCount shortname={siteMetadata.disqus_shortname} config={disqusConfig}>
-                  <a href="#disqus_thread">Comments</a>
+                  <a href='#disqus_thread'>Comments</a>
                 </Disqus.CommentCount>
-              }
+              )}
             </>
           );
         }}
       </MdxArticleContext.Consumer>
     )}
   </SiteContext.Consumer>
-)
+);
 
 export default MdxArticleMetaComments;

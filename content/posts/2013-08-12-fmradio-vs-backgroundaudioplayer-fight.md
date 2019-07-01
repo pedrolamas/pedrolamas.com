@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=2241
 permalink: /2013/08/12/fmradio-vs-backgroundaudioplayer-fight/
 dsq_thread_id:
-  - "2056177511"
+  - '2056177511'
 image: /wp-content/uploads/2013/08/Windows-Phone-8-FM-Radio-604x270.png
 categories:
   - Windows Phone
@@ -21,6 +21,7 @@ tags:
   - WP8Dev
   - WPDev
 ---
+
 ## "The cat is out of the bag"...
 
 ...as [Microsoft has confirmed](http://www.windowsphone.com/en-gb/how-to/wp8/basics/windows-phone-8-update-history) that **FM Radio is making a return in the next update to Windows Phone 8** (commonly known as GDR2)!
@@ -35,18 +36,18 @@ Back when Windows Phone 7.x was king we could use the [FMRadio](http://msdn.micr
 
 Here's the whole problem and how you can check it, step by step:
 
-* **Preconditions**
-  * Use a real phone with Windows Phone updated to GDR2
-  * Plug in your headphones to the phone (the phone uses them as an FM Radio antenna)
-* **Steps to reproduce**
-  * Open Music+Videos hub
-  * Tap the "radio" item to start the FM Radio tuner
-  * Tune in a radio station and check that you can hear audio on the headphones
-  * Open any app that uses the `BackgroundAudioPlayer` and start playback
-* **Actual Results**
-  * You hear the FM Radio audio and the audio from the app... at the same time!!
-* **Expected Results**
-  * FM Radio should stop and you should now be hearing the audio from the app
+- **Preconditions**
+  - Use a real phone with Windows Phone updated to GDR2
+  - Plug in your headphones to the phone (the phone uses them as an FM Radio antenna)
+- **Steps to reproduce**
+  - Open Music+Videos hub
+  - Tap the "radio" item to start the FM Radio tuner
+  - Tune in a radio station and check that you can hear audio on the headphones
+  - Open any app that uses the `BackgroundAudioPlayer` and start playback
+- **Actual Results**
+  - You hear the FM Radio audio and the audio from the app... at the same time!!
+- **Expected Results**
+  - FM Radio should stop and you should now be hearing the audio from the app
 
 Basically, there seems to be some sort of issue where the FM Radio does not stop once the `BackgroundAudioPlayer` starts!
 

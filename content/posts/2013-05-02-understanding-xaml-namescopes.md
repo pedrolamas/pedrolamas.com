@@ -7,7 +7,7 @@ layout: post
 guid: https://www.pedrolamas.com/?p=481
 permalink: /2013/05/02/understanding-xaml-namescopes/
 dsq_thread_id:
-  - "2046860376"
+  - '2046860376'
 categories:
   - Windows
   - Windows Phone
@@ -20,6 +20,7 @@ tags:
   - XAML
   - XAML Namescope
 ---
+
 I've been getting some inquires about the [BindableApplicationBar sample](https://github.com/Cimbalino/Cimbalino-Phone-Toolkit/tree/master/samples/BindableApplicationBar) from the [Cimbalino Windows Phone Toolkit](http://cimbalino.org), specifically about what is the `NamescopeBinding` resource appearing on the top of the [MainPage.xaml](https://github.com/Cimbalino/Cimbalino-Phone-Toolkit/blob/master/samples/BindableApplicationBar/BindableApplicationBar/View/MainPage.xaml) file.
 
 Here is the specific bit:
