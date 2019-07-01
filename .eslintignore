@@ -1,0 +1,6 @@
+public
+src/generated
+src/styles/base
+**/.cache
+**/.vscode
+**/node_modules
