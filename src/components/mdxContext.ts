@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Mdx } from '../generated';
+import { Mdx } from '../generated/graphql';
 
 const MdxContext = React.createContext<Mdx | undefined>(undefined);
 

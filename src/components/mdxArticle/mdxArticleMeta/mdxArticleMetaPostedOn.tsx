@@ -2,6 +2,7 @@ import React from 'react';
 
 import MdxContext from '../../mdxContext';
 import Link from '../../link';
+import * as Utils from '../../../utils';
 
 type MdxArticleMetaPostedOnProps = {
   children?: never;
@@ -12,11 +13,7 @@ const MdxArticleMetaPostedOn: React.FunctionComponent<MdxArticleMetaPostedOnProp
     {mdx => {
       if (!mdx) return null;
 
-      const { fields, frontmatter } = mdx;
-
-      const date = frontmatter && frontmatter.date;
-      const dateFormatted = frontmatter && frontmatter.dateFormatted;
-      const url = (fields && fields.slug) || '';
+      const { url, date, dateFormatted } = Utils.SafeMetadataFromMdx(mdx);
 
       return (
         <span className="posted-on">

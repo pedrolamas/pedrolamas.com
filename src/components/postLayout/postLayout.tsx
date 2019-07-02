@@ -7,6 +7,7 @@ import PostLayoutArticle from './postLayoutArticle';
 import PostLayoutAuthor from './postLayoutAuthor';
 import PostLayoutNavigation from './postLayoutNavigation';
 import MdxContext from '../mdxContext';
+import * as Utils from '../../utils';
 import { Query, Mdx } from '../../generated/graphql';
 
 type PostLayoutProps = {
@@ -21,9 +22,7 @@ const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {
 
   if (!mdx) throw Error('Mdx expected!');
 
-  const { frontmatter } = mdx;
-
-  const title = (frontmatter && frontmatter.title) || '(untitled)';
+  const { title } = Utils.SafeMetadataFromMdx(mdx);
 
   return (
     <RootLayout>
@@ -105,7 +104,7 @@ export const siblingPostMdxFragment = graphql`
 `;
 
 export const pageQuery = graphql`
-  query($id: String!, $previousId: String, $nextId: String) {
+  query PostLayout($id: String!, $previousId: String, $nextId: String) {
     mdx(id: { eq: $id }) {
       ...PostMdx
     }

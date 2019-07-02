@@ -42,7 +42,7 @@ const SitemapPage: React.FunctionComponent<SitemapPageProps> = ({ data }) => {
 };
 
 export const pageQuery = graphql`
-  {
+  query SitemapPage {
     allSitemapYaml {
       edges {
         node {

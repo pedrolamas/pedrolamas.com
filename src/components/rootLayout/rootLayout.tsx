@@ -15,7 +15,7 @@ type RootLayoutProperties = {
 const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children }) => {
   const { dataYaml } = useStaticQuery<Query>(
     graphql`
-      query {
+      query RootLayout {
         dataYaml {
           title
           description

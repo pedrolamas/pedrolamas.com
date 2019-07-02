@@ -2,6 +2,7 @@ import React from 'react';
 
 import PageLayout from './pageLayout';
 import MdxProvider from './mdxProvider';
+import * as Utils from '../utils';
 import { Mdx } from '../generated/graphql';
 
 type MdxPageLayoutProps = {
@@ -10,9 +11,7 @@ type MdxPageLayoutProps = {
 };
 
 const MdxPageLayout: React.FunctionComponent<MdxPageLayoutProps> = ({ pageContext, children }) => {
-  const { frontmatter } = pageContext;
-
-  const title = (frontmatter && frontmatter.title) || '(untitled)';
+  const { title } = Utils.SafeMetadataFromMdx(pageContext);
 
   return (
     <PageLayout title={title}>

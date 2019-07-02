@@ -1,8 +1,12 @@
 overwrite: true
 schema: 'http://localhost:8000/___graphql'
-documents: '**/*.graphql'
+documents:
+  - ./src/**/*.{ts,tsx}
+  - ./node_modules/gatsby-*/**/*.js
 generates:
   src/generated/graphql.ts:
+    config:
+      skipTypename: true
     plugins:
       - 'typescript'
       - 'typescript-operations'

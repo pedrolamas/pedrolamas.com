@@ -2,6 +2,7 @@ import React from 'react';
 
 import PageLayout from './pageLayout';
 import Link from './link';
+import * as Utils from '../utils';
 import { Query, Mdx } from '../generated/graphql';
 
 type PostsGroupedByKey = {
@@ -43,10 +44,8 @@ const ArchiveLayout: React.FunctionComponent<ArchiveLayoutProps> = ({ title, dat
           <React.Fragment key={index}>
             <h2>{year}</h2>
             <ul>
-              {posts.map(({ fields, frontmatter }, index2) => {
-                const title = (frontmatter && frontmatter.title) || '(untitled)';
-                const dateFormatted = frontmatter && frontmatter.dateFormatted;
-                const url = (fields && fields.slug) || '';
+              {posts.map((mdx, index2) => {
+                const { title, dateFormatted, url } = Utils.SafeMetadataFromMdx(mdx);
 
                 return (
                   <li key={index2}>

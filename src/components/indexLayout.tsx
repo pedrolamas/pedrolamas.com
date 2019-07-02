@@ -6,9 +6,10 @@ import RootLayout from './rootLayout';
 import MdxArticle from './mdxArticle';
 import Link from './link';
 import MdxContext from './mdxContext';
+import * as Utils from '../utils';
 import { Query } from '../generated/graphql';
 
-type PageIndexLayoutProps = {
+type IndexLayoutProps = {
   data: Query;
   pageContext: {
     previousPageIndex?: number;
@@ -16,7 +17,7 @@ type PageIndexLayoutProps = {
   };
 };
 
-const PageIndexLayout: React.FunctionComponent<PageIndexLayoutProps> = ({ data, pageContext }) => {
+const IndexLayout: React.FunctionComponent<IndexLayoutProps> = ({ data, pageContext }) => {
   const posts = data.allMdx && data.allMdx.edges;
 
   if (!posts) return null;
@@ -27,10 +28,7 @@ const PageIndexLayout: React.FunctionComponent<PageIndexLayoutProps> = ({ data, 
     <RootLayout>
       <Head />
       {posts.map(({ node }, index) => {
-        const { id, fields, frontmatter } = node;
-
-        const title = (frontmatter && frontmatter.title) || '(untitled)';
-        const url = (fields && fields.slug) || '';
+        const { id, title, url } = Utils.SafeMetadataFromMdx(node);
 
         return (
           <MdxContext.Provider value={node}>
@@ -70,7 +68,7 @@ const PageIndexLayout: React.FunctionComponent<PageIndexLayoutProps> = ({ data, 
 };
 
 export const pageQuery = graphql`
-  query($ids: [String!]!) {
+  query IndexLayout($ids: [String!]!) {
     allMdx(filter: { id: { in: $ids } }, sort: { fields: frontmatter___date, order: DESC }) {
       edges {
         node {
@@ -81,4 +79,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default PageIndexLayout;
+export default IndexLayout;

@@ -3,6 +3,7 @@ import Disqus from 'disqus-react';
 
 import SiteContext from '../../siteContext';
 import MdxContext from '../../mdxContext';
+import * as Utils from '../../../utils';
 
 type MdxArticleMetaCommentsProps = {
   children?: never;
@@ -17,10 +18,10 @@ const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProp
 
           if (!mdx) return null;
 
-          const { fields } = mdx;
+          const { url } = Utils.SafeMetadataFromMdx(mdx);
 
           const disqusConfig = {
-            url: (fields && fields.slug) || '',
+            url: url,
             identifier: '',
             title: '',
           };

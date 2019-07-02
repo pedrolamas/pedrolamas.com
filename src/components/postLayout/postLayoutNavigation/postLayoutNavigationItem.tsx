@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Link from '../../link';
+import * as Utils from '../../../utils';
 import { Mdx } from '../../../generated/graphql';
 
 type PostLayoutNavigationItemProps = {
@@ -10,11 +11,7 @@ type PostLayoutNavigationItemProps = {
 };
 
 const PostLayoutNavigationItem: React.FunctionComponent<PostLayoutNavigationItemProps> = ({ label, mdx }) => {
-  const { fields, frontmatter } = mdx;
-
-  const title = (frontmatter && frontmatter.title) || '(untitled)';
-  const dateFormatted = frontmatter && frontmatter.dateFormatted;
-  const url = (fields && fields.slug) || '';
+  const { title, url, dateFormatted } = Utils.SafeMetadataFromMdx(mdx);
 
   return (
     <>

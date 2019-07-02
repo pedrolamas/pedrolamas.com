@@ -12,7 +12,7 @@ type SidebarSitemapProps = {
 const SidebarSitemap: React.FunctionComponent<SidebarSitemapProps> = () => {
   const { allSitemapYaml }: Query = useStaticQuery<Query>(
     graphql`
-      query {
+      query SidebarSitemap {
         allSitemapYaml(filter: { minimap: { ne: false } }) {
           edges {
             node {

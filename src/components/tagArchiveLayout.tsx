@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import ArchiveLayout from './archiveLayout';
-import { Query } from '../generated';
+import { Query } from '../generated/graphql';
 
 type TagArchiveLayoutProps = {
   data: Query;
@@ -18,7 +18,7 @@ const TagArchiveLayout: React.FunctionComponent<TagArchiveLayoutProps> = ({ data
 };
 
 export const pageQuery = graphql`
-  query($tag: String!) {
+  query TagArchiveLayout($tag: String!) {
     allMdx(filter: { fields: { slug: { ne: null } }, frontmatter: { tags: { eq: $tag } } }, sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {

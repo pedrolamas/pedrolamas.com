@@ -18,7 +18,7 @@ const CategoryArchiveLayout: React.FunctionComponent<CategoryArchiveLayoutProps>
 };
 
 export const pageQuery = graphql`
-  query($category: String!) {
+  query CategoryArchiveLayout($category: String!) {
     allMdx(filter: { fields: { slug: { ne: null } }, frontmatter: { categories: { eq: $category } } }, sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {

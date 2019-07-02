@@ -1,5 +1,7 @@
 import { slugify } from 'underscore.string';
 
+import { Mdx } from '../generated/graphql';
+
 type predType<T> = (x: T) => boolean;
 type fnType<T, U> = (x: T) => U;
 
@@ -28,3 +30,23 @@ export const IsValidDate = (date: Date): boolean => date instanceof Date && !isN
 export const ValidDateOrUndefined = (date: Date): Date | undefined => (IsValidDate(date) ? date : undefined);
 
 export const Slug = (path: string): string => slugify(path.replace(/\./g, 'dot'));
+
+type SafeMdxMetadata = {
+  id: string;
+  title: string;
+  url: string;
+  date: string;
+  dateFormatted: string;
+};
+
+export const SafeMetadataFromMdx = (mdx: Mdx): SafeMdxMetadata => {
+  const { id, fields, frontmatter } = mdx;
+
+  return {
+    id,
+    title: (frontmatter && frontmatter.title) || '(untitled)',
+    url: (fields && fields.slug) || '',
+    date: (frontmatter && frontmatter.date) || '',
+    dateFormatted: (frontmatter && frontmatter.dateFormatted) || '',
+  };
+};
