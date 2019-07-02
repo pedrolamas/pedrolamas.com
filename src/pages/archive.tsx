@@ -8,7 +8,7 @@ type ArchivePageProps = {
   data: Query;
 };
 
-const ArchivePage: React.FunctionComponent<ArchivePageProps> = ({ data }) => <ArchiveLayout title='Archive' data={data} />;
+const ArchivePage: React.FunctionComponent<ArchivePageProps> = ({ data }) => <ArchiveLayout title="Archive" data={data} />;
 
 export const pageQuery = graphql`
   {

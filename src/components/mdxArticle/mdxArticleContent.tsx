@@ -12,7 +12,7 @@ const MdxArticleContent: React.FunctionComponent<MdxArticleContentProps> = () =>
     {mdx => (
       <>
         {mdx && (
-          <div className='post-content'>
+          <div className="post-content">
             <MdxRenderer>{mdx}</MdxRenderer>
           </div>
         )}

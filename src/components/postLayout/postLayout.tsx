@@ -30,7 +30,7 @@ const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {
       <Head title={title} />
 
       <MdxContext.Provider value={mdx}>
-        <main role='main'>
+        <main role="main">
           <PostLayoutArticle />
 
           <PostLayoutAuthor />

@@ -11,7 +11,7 @@ const MdxArticleMetaEdit: React.FunctionComponent<MdxArticleMetaEditProps> = pro
       return (
         <>
           {siteMetadata && siteMetadata.github && siteMetadata.github.repository_url && (
-            <span className='edit'>
+            <span className="edit">
               <a href={`${siteMetadata.github.repository_url}/edit/master/this_article`}>Edit</a>
             </span>
           )}

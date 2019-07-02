@@ -25,8 +25,8 @@ const MdxArticleImage: React.FunctionComponent<MdxArticleImageProps> = () => (
       const style = fluidObject.presentationWidth ? { maxWidth: fluidObject.presentationWidth } : undefined;
 
       return (
-        <div className='post-thumbnail'>
-          <Img className='sidebar-logo' fluid={fluidObject} style={style} />
+        <div className="post-thumbnail">
+          <Img className="sidebar-logo" fluid={fluidObject} style={style} />
         </div>
       );
     }}

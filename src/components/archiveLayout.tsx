@@ -50,7 +50,7 @@ const ArchiveLayout: React.FunctionComponent<ArchiveLayoutProps> = ({ title, dat
 
                 return (
                   <li key={index2}>
-                    <h3 className='post-entry'>
+                    <h3 className="post-entry">
                       <Link to={url}>
                         {title} <small>{dateFormatted}</small>
                       </Link>

@@ -7,7 +7,7 @@ import SiteContext from '../components/siteContext';
 const NotFoundPage: React.FunctionComponent = () => (
   <SiteContext.Consumer>
     {siteContext => (
-      <PageLayout title='404: Not found'>
+      <PageLayout title="404: Not found">
         <p>I recently migrated my blog to a new platform and may have broken a few links inadvertently!</p>
         {siteContext.siteMetadata && siteContext.siteMetadata.github && siteContext.siteMetadata.github.repository_url && (
           <p>
@@ -15,7 +15,7 @@ const NotFoundPage: React.FunctionComponent = () => (
           </p>
         )}
         <p>
-          In the meantime, you can <Link to='/'>head back home</Link> to try finding it again.
+          In the meantime, you can <Link to="/">head back home</Link> to try finding it again.
         </p>
       </PageLayout>
     )}

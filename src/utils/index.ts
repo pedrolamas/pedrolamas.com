@@ -23,8 +23,8 @@ export const match = <T, U>(x: T): MatchInterface<T, U> => ({
   otherwise: fn => fn(x),
 });
 
-export const isValidDate = (date: Date): boolean => date instanceof Date && !isNaN(+date);
+export const IsValidDate = (date: Date): boolean => date instanceof Date && !isNaN(+date);
 
-export const validDateOrUndefined = (date: Date): Date | undefined => (isValidDate(date) ? date : undefined);
+export const ValidDateOrUndefined = (date: Date): Date | undefined => (IsValidDate(date) ? date : undefined);
 
-export const slug = (path: string): string => slugify(path.replace(/\./g, 'dot'));
+export const Slug = (path: string): string => slugify(path.replace(/\./g, 'dot'));

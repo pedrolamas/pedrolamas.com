@@ -17,8 +17,8 @@ const Header: React.FunctionComponent<HeaderProps> = () => (
         <>
           {siteMetadata.facebook && siteMetadata.facebook.app_id && (
             <>
-              <div id='fb-root'></div>
-              <script src='js/fb.js' async></script>
+              <div id="fb-root"></div>
+              <script src="js/fb.js" async></script>
             </>
           )}
         </>

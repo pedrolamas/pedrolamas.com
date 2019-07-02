@@ -13,9 +13,9 @@ const PostLayoutNavigation: React.FunctionComponent<PostLayoutNavigationProps> =
   if (!previousMdx && !nextMdx) return null;
 
   return (
-    <nav className='post-navigation' role='navigation'>
-      {previousMdx && <PostLayoutNavigationItem label='Previous' mdx={previousMdx} />}
-      {nextMdx && <PostLayoutNavigationItem label='Next' mdx={nextMdx} />}
+    <nav className="post-navigation" role="navigation">
+      {previousMdx && <PostLayoutNavigationItem label="Previous" mdx={previousMdx} />}
+      {nextMdx && <PostLayoutNavigationItem label="Next" mdx={nextMdx} />}
     </nav>
   );
 };

@@ -18,8 +18,8 @@ const PostLayoutArticle: React.FunctionComponent<PostLayoutArticleProps> = () =>
 
       return (
         <article id={`post${id}`} className={`post post${id}`}>
-          <header className='post-header'>
-            <h1 className='post-title'>{title}</h1>
+          <header className="post-header">
+            <h1 className="post-title">{title}</h1>
           </header>
 
           <MdxArticle />

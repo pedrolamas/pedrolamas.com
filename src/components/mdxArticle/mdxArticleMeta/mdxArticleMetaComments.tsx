@@ -29,7 +29,7 @@ const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProp
             <>
               {siteMetadata && siteMetadata.disqus_shortname && (
                 <Disqus.CommentCount shortname={siteMetadata.disqus_shortname} config={disqusConfig}>
-                  <a href='#disqus_thread'>Comments</a>
+                  <a href="#disqus_thread">Comments</a>
                 </Disqus.CommentCount>
               )}
             </>

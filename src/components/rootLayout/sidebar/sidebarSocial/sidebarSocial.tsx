@@ -15,7 +15,7 @@ const SidebarSocial: React.FunctionComponent<SidebarSocialProps> = () => (
       if (!siteMetadata) return null;
 
       return (
-        <nav className='sidebar-social' role='navigation' aria-label='Social Links Menu'>
+        <nav className="sidebar-social" role="navigation" aria-label="Social Links Menu">
           {siteMetadata.social &&
             siteMetadata.social.links &&
             siteMetadata.social.links.map((link, index) => {
@@ -37,7 +37,7 @@ const SidebarSocial: React.FunctionComponent<SidebarSocialProps> = () => (
 
               return <SidebarSocialLink url={link} title={linkTitle} key={index} />;
             })}
-          <SidebarSocialLink url='/feeds' title='Syndicated Feeds' />
+          <SidebarSocialLink url="/feeds" title="Syndicated Feeds" />
         </nav>
       );
     }}

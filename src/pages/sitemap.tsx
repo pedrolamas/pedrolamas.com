@@ -29,11 +29,11 @@ const SitemapPage: React.FunctionComponent<SitemapPageProps> = ({ data }) => {
   if (!allSitemapYaml) throw Error('AllSitemapYaml expected!');
 
   return (
-    <PageLayout title='Site Map'>
+    <PageLayout title="Site Map">
       <SiteContext.Consumer>
         {siteContext => (
           <ul>
-            <SitemapEntry title={siteContext.siteMetadata && siteContext.siteMetadata.title} url='/' subNodes={allSitemapYaml.edges.map(edge => edge.node)} />
+            <SitemapEntry title={siteContext.siteMetadata && siteContext.siteMetadata.title} url="/" subNodes={allSitemapYaml.edges.map(edge => edge.node)} />
           </ul>
         )}
       </SiteContext.Consumer>

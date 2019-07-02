@@ -16,7 +16,7 @@ const CodeBlock: React.FunctionComponent<any> = ({ children, className }) => {
   return (
     <Highlight {...defaultProps} code={children} language={language} theme={prismTheme} Prism={prism}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <div className='highlight'>
+        <div className="highlight">
           <pre className={`${className} highlight`} style={style}>
             {tokens.slice(0, -1).map((line, i) => (
               <div key={i} {...getLineProps({ line, key: i })}>
