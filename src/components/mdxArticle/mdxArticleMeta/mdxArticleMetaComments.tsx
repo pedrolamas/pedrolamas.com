@@ -2,7 +2,7 @@ import React from 'react';
 import Disqus from 'disqus-react';
 
 import SiteContext from '../../siteContext';
-import MdxArticleContext from '../mdxArticleContext';
+import MdxContext from '../../mdxContext';
 
 type MdxArticleMetaCommentsProps = {
   children?: never;
@@ -11,7 +11,7 @@ type MdxArticleMetaCommentsProps = {
 const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProps> = () => (
   <SiteContext.Consumer>
     {siteContext => (
-      <MdxArticleContext.Consumer>
+      <MdxContext.Consumer>
         {mdx => {
           const { siteMetadata } = siteContext;
 
@@ -35,7 +35,7 @@ const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProp
             </>
           );
         }}
-      </MdxArticleContext.Consumer>
+      </MdxContext.Consumer>
     )}
   </SiteContext.Consumer>
 );

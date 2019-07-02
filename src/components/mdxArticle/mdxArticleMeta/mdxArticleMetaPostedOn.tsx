@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MdxArticleContext from '../mdxArticleContext';
+import MdxContext from '../../mdxContext';
 import Link from '../../link';
 
 type MdxArticleMetaPostedOnProps = {
@@ -8,7 +8,7 @@ type MdxArticleMetaPostedOnProps = {
 };
 
 const MdxArticleMetaPostedOn: React.FunctionComponent<MdxArticleMetaPostedOnProps> = () => (
-  <MdxArticleContext.Consumer>
+  <MdxContext.Consumer>
     {mdx => {
       if (!mdx) return null;
 
@@ -27,7 +27,7 @@ const MdxArticleMetaPostedOn: React.FunctionComponent<MdxArticleMetaPostedOnProp
         </span>
       );
     }}
-  </MdxArticleContext.Consumer>
+  </MdxContext.Consumer>
 );
 
 export default MdxArticleMetaPostedOn;

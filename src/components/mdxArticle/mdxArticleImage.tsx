@@ -1,7 +1,7 @@
 import React from 'react';
 import Img, { FluidObject } from 'gatsby-image';
 
-import MdxArticleContext from './mdxArticleContext';
+import MdxContext from '../mdxContext';
 
 type FluidObjectWithPresentationWidth = FluidObject & {
   presentationWidth: number;
@@ -12,7 +12,7 @@ type MdxArticleImageProps = {
 };
 
 const MdxArticleImage: React.FunctionComponent<MdxArticleImageProps> = () => (
-  <MdxArticleContext.Consumer>
+  <MdxContext.Consumer>
     {mdx => {
       if (!mdx) return null;
 
@@ -30,7 +30,7 @@ const MdxArticleImage: React.FunctionComponent<MdxArticleImageProps> = () => (
         </div>
       );
     }}
-  </MdxArticleContext.Consumer>
+  </MdxContext.Consumer>
 );
 
 export default MdxArticleImage;

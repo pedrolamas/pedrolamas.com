@@ -148,7 +148,7 @@ exports.createPages = async ({ graphql, actions }) => {
   edges.forEach(({ node, previous, next }) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve(`./src/components/postLayout.tsx`),
+      component: path.resolve(`./src/components/postLayout/postLayout.tsx`),
       context: {
         id: node.id,
         previousId: previous && previous.id,

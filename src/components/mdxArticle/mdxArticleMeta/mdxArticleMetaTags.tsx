@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MdxArticleContext from '../mdxArticleContext';
+import MdxContext from '../../mdxContext';
 import Link from '../../link';
 import { slug } from '../../../utils';
 
@@ -9,7 +9,7 @@ type MdxArticleMetaTagsProps = {
 };
 
 const MdxArticleMetaTags: React.FunctionComponent<MdxArticleMetaTagsProps> = () => (
-  <MdxArticleContext.Consumer>
+  <MdxContext.Consumer>
     {mdx => {
       if (!mdx) return null;
 
@@ -35,7 +35,7 @@ const MdxArticleMetaTags: React.FunctionComponent<MdxArticleMetaTagsProps> = () 
         </>
       );
     }}
-  </MdxArticleContext.Consumer>
+  </MdxContext.Consumer>
 );
 
 export default MdxArticleMetaTags;

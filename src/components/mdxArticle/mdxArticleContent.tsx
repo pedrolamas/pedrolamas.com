@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MdxArticleContext from './mdxArticleContext';
+import MdxContext from '../mdxContext';
 import MdxRenderer from '../mdxRenderer';
 
 type MdxArticleContentProps = {
@@ -8,7 +8,7 @@ type MdxArticleContentProps = {
 };
 
 const MdxArticleContent: React.FunctionComponent<MdxArticleContentProps> = () => (
-  <MdxArticleContext.Consumer>
+  <MdxContext.Consumer>
     {mdx => (
       <>
         {mdx && (
@@ -18,7 +18,7 @@ const MdxArticleContent: React.FunctionComponent<MdxArticleContentProps> = () =>
         )}
       </>
     )}
-  </MdxArticleContext.Consumer>
+  </MdxContext.Consumer>
 );
 
 export default MdxArticleContent;

@@ -6,6 +6,7 @@ import RootLayout from './rootLayout';
 import MdxArticle from './mdxArticle';
 import Link from './link';
 import { Query } from '../generated/graphql';
+import MdxContext from './mdxContext';
 
 type PageIndexLayoutProps = {
   data: Query;
@@ -31,19 +32,21 @@ const PageIndexLayout: React.FunctionComponent<PageIndexLayoutProps> = ({ data, 
         const { title } = node.frontmatter;
 
         return (
-          <article id={`post${node.id}`} className={`post post${node.id}`} key={index}>
-            <header className='post-header'>
-              <h1 className='post-title'>
-                {node.fields && node.fields.slug && (
-                  <Link to={node.fields.slug} rel='bookmark'>
-                    {title || '(untitled)'}
-                  </Link>
-                )}
-              </h1>
-            </header>
+          <MdxContext.Provider value={node}>
+            <article id={`post${node.id}`} className={`post post${node.id}`} key={index}>
+              <header className='post-header'>
+                <h1 className='post-title'>
+                  {node.fields && node.fields.slug && (
+                    <Link to={node.fields.slug} rel='bookmark'>
+                      {title || '(untitled)'}
+                    </Link>
+                  )}
+                </h1>
+              </header>
 
-            <MdxArticle mdx={node} />
-          </article>
+              <MdxArticle />
+            </article>
+          </MdxContext.Provider>
         );
       })}
 
