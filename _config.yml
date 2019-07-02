@@ -12,7 +12,7 @@ author:
   email:          pedrolamas@gmail.com
   uri:            https://www.pedrolamas.com
   picture:        https://s.gravatar.com/avatar/fecaf27c91e2d50b25930e280b2a81d0?s=320
-  biography:      Pedro is a software developer specialized in Microsoft technologies. He's a regular blogger, speaker, and the author of the open-source [Cimbalino Toolkit](http://cimbalino.org). Since 2017 he's also a [Microsoft Most Valuable Professional (MVP)](https://mvp.microsoft.com/en-us/PublicProfile/5002547) for Windows Development.
+  biography:      Pedro is a software developer specialized in Microsoft technologies. He's a regular blogger, speaker, and the author of the open-source [Cimbalino Toolkit](http://cimbalino.org).
   twitter:        pedrolamas
 
 twitter:
@@ -34,10 +34,10 @@ social:
     - https://www.linkedin.com/in/pedrolamas
     - https://github.com/pedrolamas
 
-sidebar:
-  logos:
-    - url:        /wp-content/uploads/2017/03/MVP_Logo_Horizontal_Preferred_Cyan300_RGB_300ppi.png
-      title:      Microsoft Most Valuable Professional (MVP) for Windows Development
+#sidebar:
+#  logos:
+#    - url:        /wp-content/uploads/2017/03/MVP_Logo_Horizontal_Preferred_Cyan300_RGB_300ppi.png
+#      title:      Microsoft Most Valuable Professional (MVP) for Windows Development
 
 google_analytics: UA-1376452-1
 disqus_shortname: pedrolamas-com
