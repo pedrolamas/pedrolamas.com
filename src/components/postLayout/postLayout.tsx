@@ -55,7 +55,7 @@ const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {
             {% endunless %}
           {% endif %} */}
 
-          <PostLayoutNavigation previousMdx={previousMdx} nextMdx={nextMdx} />
+          <PostLayoutNavigation previousMdx={previousMdx || undefined} nextMdx={nextMdx || undefined} />
         </main>
       </MdxContext.Provider>
     </RootLayout>

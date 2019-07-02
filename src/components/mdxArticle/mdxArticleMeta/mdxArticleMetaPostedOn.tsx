@@ -16,12 +16,12 @@ const MdxArticleMetaPostedOn: React.FunctionComponent<MdxArticleMetaPostedOnProp
 
       const date = frontmatter && frontmatter.date;
       const dateFormatted = frontmatter && frontmatter.dateFormatted;
-      const url = fields && fields.slug;
+      const url = (fields && fields.slug) || '';
 
       return (
         <span className='posted-on'>
           <span className='screen-reader-text'>Posted on </span>
-          <Link to={url || ''} rel='bookmark'>
+          <Link to={url} rel='bookmark'>
             <time dateTime={date}>{dateFormatted}</time>
           </Link>
         </span>

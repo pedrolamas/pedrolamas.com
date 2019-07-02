@@ -4,7 +4,7 @@ import Head from './head';
 import RootLayout from './rootLayout';
 
 type PageLayoutProps = {
-  title?: string;
+  title: string;
   children: React.ReactNode;
 };
 
@@ -22,9 +22,5 @@ const PageLayout: React.FunctionComponent<PageLayoutProps> = ({ title, children 
     </main>
   </RootLayout>
 );
-
-PageLayout.defaultProps = {
-  title: '(untitled)',
-};
 
 export default PageLayout;

@@ -12,9 +12,11 @@ type MdxPageLayoutProps = {
 const MdxPageLayout: React.FunctionComponent<MdxPageLayoutProps> = ({ pageContext, children }) => {
   const { frontmatter } = pageContext;
 
+  const title = (frontmatter && frontmatter.title) || '(untitled)';
+
   return (
-    <PageLayout title={(frontmatter && frontmatter.title) || undefined}>
-      <MdxProvider children={children} />
+    <PageLayout title={title}>
+      <MdxProvider>{children}</MdxProvider>
     </PageLayout>
   );
 };

@@ -9,7 +9,7 @@ type PostsGroupedByKey = {
 };
 
 type ArchiveLayoutProps = {
-  title?: string;
+  title: string;
   data: Query;
   children?: never;
 };
@@ -19,24 +19,21 @@ const ArchiveLayout: React.FunctionComponent<ArchiveLayoutProps> = ({ title, dat
 
   if (!posts) return null;
 
-  const postsGroupedByYear: PostsGroupedByKey = posts.reduce(
-    (reduced: PostsGroupedByKey, edge) => {
-      const { node } = edge;
+  const postsGroupedByYear = posts.reduce<PostsGroupedByKey>((reduced, { node }) => {
+    const { frontmatter } = node;
 
-      if (node && node.frontmatter) {
-        const year = new Date(node.frontmatter.date).getFullYear().toString();
+    if (frontmatter) {
+      const year = new Date(frontmatter.date).getFullYear().toString();
 
-        if (!reduced[year]) {
-          reduced[year] = [];
-        }
-
-        reduced[year].push(node);
+      if (!reduced[year]) {
+        reduced[year] = [];
       }
 
-      return reduced;
-    },
-    ({} as any) as PostsGroupedByKey
-  );
+      reduced[year].push(node);
+    }
+
+    return reduced;
+  }, {});
 
   return (
     <PageLayout title={title}>
@@ -46,28 +43,26 @@ const ArchiveLayout: React.FunctionComponent<ArchiveLayoutProps> = ({ title, dat
           <React.Fragment key={index}>
             <h2>{year}</h2>
             <ul>
-              {posts.map((node, index2) => (
-                <React.Fragment key={index2}>
-                  {node.fields && node.frontmatter && node.fields.slug && (
-                    <li>
-                      <h3 className='post-entry'>
-                        <Link to={node.fields.slug}>
-                          {node.frontmatter.title} <small>{node.frontmatter.dateFormatted}</small>
-                        </Link>
-                      </h3>
-                    </li>
-                  )}
-                </React.Fragment>
-              ))}
+              {posts.map(({ fields, frontmatter }, index2) => {
+                const title = (frontmatter && frontmatter.title) || '(untitled)';
+                const dateFormatted = frontmatter && frontmatter.dateFormatted;
+                const url = (fields && fields.slug) || '';
+
+                return (
+                  <li key={index2}>
+                    <h3 className='post-entry'>
+                      <Link to={url}>
+                        {title} <small>{dateFormatted}</small>
+                      </Link>
+                    </h3>
+                  </li>
+                );
+              })}
             </ul>
           </React.Fragment>
         ))}
     </PageLayout>
   );
-};
-
-ArchiveLayout.defaultProps = {
-  title: 'Archive',
 };
 
 export default ArchiveLayout;

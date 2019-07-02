@@ -27,18 +27,18 @@ const PageIndexLayout: React.FunctionComponent<PageIndexLayoutProps> = ({ data, 
     <RootLayout>
       <Head />
       {posts.map(({ node }, index) => {
-        if (!node.frontmatter) return null;
+        const { id, fields, frontmatter } = node;
 
-        const { title } = node.frontmatter;
+        const title = (frontmatter && frontmatter.title) || '(untitled)';
 
         return (
           <MdxContext.Provider value={node}>
-            <article id={`post${node.id}`} className={`post post${node.id}`} key={index}>
+            <article id={`post${id}`} className={`post post${id}`} key={index}>
               <header className='post-header'>
                 <h1 className='post-title'>
-                  {node.fields && node.fields.slug && (
-                    <Link to={node.fields.slug} rel='bookmark'>
-                      {title || '(untitled)'}
+                  {fields && fields.slug && (
+                    <Link to={fields.slug} rel='bookmark'>
+                      {title}
                     </Link>
                   )}
                 </h1>

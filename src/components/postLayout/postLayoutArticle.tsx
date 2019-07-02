@@ -12,9 +12,8 @@ const PostLayoutArticle: React.FunctionComponent<PostLayoutArticleProps> = () =>
     {mdx => {
       if (!mdx) return null;
 
-      const { frontmatter } = mdx;
+      const { id, frontmatter } = mdx;
 
-      const id = mdx.id;
       const title = (frontmatter && frontmatter.title) || '(untitled)';
 
       return (

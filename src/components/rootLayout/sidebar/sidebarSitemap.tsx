@@ -1,9 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Query } from '../../../generated/graphql';
 
 import Link from '../../link';
 import SiteContext from '../../siteContext';
+import { Query } from '../../../generated/graphql';
 
 type SidebarSitemapProps = {
   children?: never;
@@ -36,11 +36,16 @@ const SidebarSitemap: React.FunctionComponent<SidebarSitemapProps> = () => {
           <>
             {allSitemapYaml && (
               <nav className='sidebar-nav' role='navigation' aria-label='Primary Menu'>
-                {allSitemapYaml.edges.map(({ node }, index) => (
-                  <Link className='sidebar-nav-item' to={node.url || ''} key={index}>
-                    {node.title}
-                  </Link>
-                ))}
+                {allSitemapYaml.edges.map(({ node }, index) => {
+                  const title = node.title || '(untitled)';
+                  const url = node.url || '';
+
+                  return (
+                    <Link className='sidebar-nav-item' to={url} key={index}>
+                      {title}
+                    </Link>
+                  );
+                })}
               </nav>
             )}
           </>
