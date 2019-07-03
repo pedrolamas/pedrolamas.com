@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Mdx } from '../generated/graphql';
+import { PostMdxFragment } from '../generated/graphql';
 
-const MdxContext = React.createContext<Mdx | undefined>(undefined);
+const MdxContext = React.createContext<PostMdxFragment | undefined>(undefined);
 
 export default MdxContext;

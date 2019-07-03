@@ -4,16 +4,16 @@ import { graphql } from 'gatsby';
 import PageLayout from '../components/pageLayout';
 import Link from '../components/link';
 import SiteContext from '../components/siteContext';
-import { Query, SitemapYamlSub, Maybe } from '../generated/graphql';
+import { SitemapPageQuery, SitemapYamlSub, Maybe } from '../generated/graphql';
 
 type SitemapEntryProps = {
-  title?: string | null;
-  url?: string | null;
-  subNodes?: Maybe<SitemapYamlSub>[] | null;
+  title?: Maybe<string>;
+  url?: Maybe<string>;
+  subNodes?: Maybe<Maybe<SitemapYamlSub>[]>;
 };
 
 type SitemapPageProps = {
-  data: Query;
+  data: SitemapPageQuery;
 };
 
 const SitemapEntry: React.FunctionComponent<SitemapEntryProps> = ({ title, url, subNodes }) => (

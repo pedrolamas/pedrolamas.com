@@ -39,11 +39,11 @@ type SafeMdxMetadata = {
   dateFormatted: string;
 };
 
-export const SafeMetadataFromMdx = (mdx: Mdx): SafeMdxMetadata => {
+export const SafeMetadataFromMdx = (mdx: Partial<Mdx>): SafeMdxMetadata => {
   const { id, fields, frontmatter } = mdx;
 
   return {
-    id,
+    id: id || '',
     title: (frontmatter && frontmatter.title) || '(untitled)',
     url: (fields && fields.slug) || '',
     date: (frontmatter && frontmatter.date) || '',

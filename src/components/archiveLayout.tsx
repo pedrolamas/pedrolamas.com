@@ -3,15 +3,15 @@ import React from 'react';
 import PageLayout from './pageLayout';
 import Link from './link';
 import * as Utils from '../utils';
-import { Query, Mdx } from '../generated/graphql';
+import { PostMdxFragment, ArchivePageQuery, CategoryArchiveLayoutQuery, TagArchiveLayoutQuery } from '../generated/graphql';
 
 type PostsGroupedByKey = {
-  [key: string]: Mdx[];
+  [key: string]: PostMdxFragment[];
 };
 
 type ArchiveLayoutProps = {
   title: string;
-  data: Query;
+  data: ArchivePageQuery | CategoryArchiveLayoutQuery | TagArchiveLayoutQuery;
   children?: never;
 };
 

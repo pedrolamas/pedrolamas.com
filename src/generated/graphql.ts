@@ -3036,8 +3036,8 @@ export type SitePageContextFrontmatter = {
   date?: Maybe<Scalars['Date']>,
   author?: Maybe<Scalars['String']>,
   guid?: Maybe<Scalars['String']>,
-  sharing_disabled?: Maybe<Array<Maybe<Scalars['Int']>>>,
   dsq_thread_id?: Maybe<Array<Maybe<Scalars['String']>>>,
+  sharing_disabled?: Maybe<Array<Maybe<Scalars['Int']>>>,
   fb_author_post_id?: Maybe<Array<Maybe<Scalars['Float']>>>,
 };
 
@@ -3048,8 +3048,8 @@ export type SitePageContextFrontmatterFilterInput = {
   date?: Maybe<DateQueryOperatorInput>,
   author?: Maybe<StringQueryOperatorInput>,
   guid?: Maybe<StringQueryOperatorInput>,
-  sharing_disabled?: Maybe<IntQueryOperatorInput>,
   dsq_thread_id?: Maybe<StringQueryOperatorInput>,
+  sharing_disabled?: Maybe<IntQueryOperatorInput>,
   fb_author_post_id?: Maybe<FloatQueryOperatorInput>,
 };
 
@@ -3165,8 +3165,8 @@ export enum SitePageFieldsEnum {
   ContextFrontmatterDate = 'context___frontmatter___date',
   ContextFrontmatterAuthor = 'context___frontmatter___author',
   ContextFrontmatterGuid = 'context___frontmatter___guid',
-  ContextFrontmatterSharingDisabled = 'context___frontmatter___sharing_disabled',
   ContextFrontmatterDsqThreadId = 'context___frontmatter___dsq_thread_id',
+  ContextFrontmatterSharingDisabled = 'context___frontmatter___sharing_disabled',
   ContextFrontmatterFbAuthorPostId = 'context___frontmatter___fb_author_post_id',
   PluginCreatorId = 'pluginCreator___id',
   PluginCreatorParentId = 'pluginCreator___parent___id',
@@ -3654,7 +3654,7 @@ export type PostLayoutQuery = { mdx: Maybe<PostMdxFragment>, previousMdx: Maybe<
 export type RootLayoutQueryVariables = {};
 
 
-export type RootLayoutQuery = { dataYaml: Maybe<(Pick<DataYaml, 'title' | 'description' | 'disqus_shortname' | 'google_analytics' | 'lang' | 'addthis_profile'> & { disclaimer: Maybe<{ code: Maybe<Pick<MdxCodeMdx, 'body'>> }>, logo: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> }>, author: Maybe<(Pick<DataYamlAuthor, 'email' | 'name' | 'picture' | 'twitter' | 'uri'> & { biography: Maybe<{ code: Maybe<Pick<MdxCodeMdx, 'body'>> }> })>, facebook: Maybe<Pick<DataYamlFacebook, 'admins' | 'app_id' | 'publisher'>>, github: Maybe<Pick<DataYamlGithub, 'username'>>, sidebar: Maybe<{ logos: Maybe<Array<Maybe<(Pick<DataYamlSidebarLogos, 'title'> & { image: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> })>>> }>, social: Maybe<Pick<DataYamlSocial, 'links' | 'name'>>, twitter: Maybe<Pick<DataYamlTwitter, 'username'>> })> };
+export type RootLayoutQuery = { dataYaml: Maybe<(Pick<DataYaml, 'title' | 'description' | 'disqus_shortname' | 'google_analytics' | 'lang' | 'addthis_profile'> & { disclaimer: Maybe<{ code: Maybe<Pick<MdxCodeMdx, 'body'>> }>, logo: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> }>, author: Maybe<(Pick<DataYamlAuthor, 'email' | 'name' | 'picture' | 'twitter' | 'uri'> & { biography: Maybe<{ code: Maybe<Pick<MdxCodeMdx, 'body'>> }> })>, facebook: Maybe<Pick<DataYamlFacebook, 'admins' | 'app_id' | 'publisher'>>, github: Maybe<Pick<DataYamlGithub, 'username' | 'repository_url'>>, sidebar: Maybe<{ logos: Maybe<Array<Maybe<(Pick<DataYamlSidebarLogos, 'title'> & { image: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> })>>> }>, social: Maybe<Pick<DataYamlSocial, 'links' | 'name'>>, twitter: Maybe<Pick<DataYamlTwitter, 'username'>> })> };
 
 export type SidebarSitemapQueryVariables = {};
 

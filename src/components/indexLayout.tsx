@@ -7,10 +7,10 @@ import MdxArticle from './mdxArticle';
 import Link from './link';
 import MdxContext from './mdxContext';
 import * as Utils from '../utils';
-import { Query } from '../generated/graphql';
+import { IndexLayoutQuery } from '../generated/graphql';
 
 type IndexLayoutProps = {
-  data: Query;
+  data: IndexLayoutQuery;
   pageContext: {
     previousPageIndex?: number;
     nextPageIndex?: number;

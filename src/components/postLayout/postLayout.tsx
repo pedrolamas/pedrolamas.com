@@ -8,13 +8,10 @@ import PostLayoutAuthor from './postLayoutAuthor';
 import PostLayoutNavigation from './postLayoutNavigation';
 import MdxContext from '../mdxContext';
 import * as Utils from '../../utils';
-import { Query, Mdx } from '../../generated/graphql';
+import { PostLayoutQuery } from '../../generated/graphql';
 
 type PostLayoutProps = {
-  data: Query & {
-    previousMdx?: Mdx | null;
-    nextMdx?: Mdx | null;
-  };
+  data: PostLayoutQuery;
 };
 
 const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {

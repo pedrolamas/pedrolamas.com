@@ -2,10 +2,10 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import ArchiveLayout from './archiveLayout';
-import { Query } from '../generated/graphql';
+import { TagArchiveLayoutQuery } from '../generated/graphql';
 
 type TagArchiveLayoutProps = {
-  data: Query;
+  data: TagArchiveLayoutQuery;
   pageContext: {
     tag: string;
   };

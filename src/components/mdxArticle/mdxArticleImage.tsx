@@ -3,10 +3,6 @@ import Img, { FluidObject } from 'gatsby-image';
 
 import MdxContext from '../mdxContext';
 
-type FluidObjectWithPresentationWidth = FluidObject & {
-  presentationWidth: number;
-};
-
 type MdxArticleImageProps = {
   children?: never;
 };
@@ -18,15 +14,15 @@ const MdxArticleImage: React.FunctionComponent<MdxArticleImageProps> = () => (
 
       const { frontmatter } = mdx;
 
-      const fluidObject = frontmatter && frontmatter.image && frontmatter.image.childImageSharp && (frontmatter.image.childImageSharp.fluid as FluidObjectWithPresentationWidth);
+      const fluid = frontmatter && frontmatter.image && frontmatter.image.childImageSharp && frontmatter.image.childImageSharp.fluid;
 
-      if (!fluidObject) return null;
+      if (!fluid) return null;
 
-      const style = fluidObject.presentationWidth ? { maxWidth: fluidObject.presentationWidth } : undefined;
+      const style = fluid.presentationWidth ? { maxWidth: fluid.presentationWidth } : undefined;
 
       return (
         <div className="post-thumbnail">
-          <Img className="sidebar-logo" fluid={fluidObject} style={style} />
+          <Img className="sidebar-logo" fluid={fluid as FluidObject} style={style} />
         </div>
       );
     }}
