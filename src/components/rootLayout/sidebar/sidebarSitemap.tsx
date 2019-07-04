@@ -3,14 +3,14 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Link from '../../link';
 import SiteContext from '../../siteContext';
-import { SidebarSitemapQuery } from '../../../generated/graphql';
+import { GraphQl } from '../../../utils';
 
 type SidebarSitemapProps = {
   children?: never;
 };
 
 const SidebarSitemap: React.FunctionComponent<SidebarSitemapProps> = () => {
-  const { allSitemapYaml } = useStaticQuery<SidebarSitemapQuery>(
+  const { allSitemapYaml } = useStaticQuery<GraphQl.SidebarSitemapQuery>(
     graphql`
       query SidebarSitemap {
         allSitemapYaml(filter: { minimap: { ne: false } }) {

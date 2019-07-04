@@ -6,11 +6,10 @@ import RootLayout from './rootLayout';
 import MdxArticle from './mdxArticle';
 import Link from './link';
 import MdxContext from './mdxContext';
-import * as Utils from '../utils';
-import { IndexLayoutQuery } from '../generated/graphql';
+import { Utils, GraphQl } from '../utils';
 
 type IndexLayoutProps = {
-  data: IndexLayoutQuery;
+  data: GraphQl.IndexLayoutQuery;
   pageContext: {
     previousPageIndex?: number;
     nextPageIndex?: number;
@@ -31,8 +30,8 @@ const IndexLayout: React.FunctionComponent<IndexLayoutProps> = ({ data, pageCont
         const { id, title, url } = Utils.SafeMetadataFromMdx(node);
 
         return (
-          <MdxContext.Provider value={node}>
-            <article id={`post${id}`} className={`post post${id}`} key={index}>
+          <MdxContext.Provider value={node} key={index}>
+            <article id={`post${id}`} className={`post post${id}`}>
               <header className="post-header">
                 <h1 className="post-title">
                   <Link to={url} rel="bookmark">

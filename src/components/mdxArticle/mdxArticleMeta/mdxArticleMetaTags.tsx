@@ -2,7 +2,7 @@ import React from 'react';
 
 import MdxContext from '../../mdxContext';
 import Link from '../../link';
-import * as Utils from '../../../utils';
+import { Utils } from '../../../utils';
 
 type MdxArticleMetaTagsProps = {
   children?: never;

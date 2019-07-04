@@ -1,12 +1,11 @@
 import React from 'react';
 
 import Link from '../../link';
-import * as Utils from '../../../utils';
-import { SiblingPostMdxFragment } from '../../../generated/graphql';
+import { Utils, GraphQl } from '../../../utils';
 
 type PostLayoutNavigationItemProps = {
   label: string;
-  mdx: SiblingPostMdxFragment;
+  mdx: GraphQl.SiblingPostMdxFragment;
   children?: never;
 };
 

@@ -6,14 +6,14 @@ import Footer from './footer';
 import Header from './header';
 import Sidebar from './sidebar';
 import SiteContext from '../siteContext';
-import { RootLayoutQuery } from '../../generated/graphql';
+import { GraphQl } from '../../utils';
 
 type RootLayoutProperties = {
   children: React.ReactNode;
 };
 
 const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children }) => {
-  const { dataYaml } = useStaticQuery<RootLayoutQuery>(
+  const { dataYaml } = useStaticQuery<GraphQl.RootLayoutQuery>(
     graphql`
       query RootLayout {
         dataYaml {

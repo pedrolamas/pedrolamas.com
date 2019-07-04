@@ -2,16 +2,15 @@ import React from 'react';
 
 import PageLayout from './pageLayout';
 import Link from './link';
-import * as Utils from '../utils';
-import { PostMdxFragment, ArchivePageQuery, CategoryArchiveLayoutQuery, TagArchiveLayoutQuery } from '../generated/graphql';
+import { Utils, GraphQl } from '../utils';
 
 type PostsGroupedByKey = {
-  [key: string]: PostMdxFragment[];
+  [key: string]: GraphQl.PostMdxFragment[];
 };
 
 type ArchiveLayoutProps = {
   title: string;
-  data: ArchivePageQuery | CategoryArchiveLayoutQuery | TagArchiveLayoutQuery;
+  data: GraphQl.ArchivePageQuery | GraphQl.CategoryArchiveLayoutQuery | GraphQl.TagArchiveLayoutQuery;
   children?: never;
 };
 

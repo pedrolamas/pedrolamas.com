@@ -2,7 +2,7 @@ import React from 'react';
 
 import MdxArticle from '../mdxArticle';
 import MdxContext from '../mdxContext';
-import * as Utils from '../../utils';
+import { Utils } from '../../utils';
 
 type PostLayoutArticleProps = {
   children?: never;

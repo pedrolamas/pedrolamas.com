@@ -3,7 +3,7 @@ import Disqus from 'disqus-react';
 
 import SiteContext from '../../siteContext';
 import MdxContext from '../../mdxContext';
-import * as Utils from '../../../utils';
+import { Utils } from '../../../utils';
 
 type MdxArticleMetaCommentsProps = {
   children?: never;

@@ -1,11 +1,11 @@
 import React from 'react';
 
 import PostLayoutNavigationItem from './postLayoutNavigationItem';
-import { SiblingPostMdxFragment } from '../../../generated/graphql';
+import { GraphQl } from '../../../utils';
 
 type PostLayoutNavigationProps = {
-  previousMdx?: SiblingPostMdxFragment;
-  nextMdx?: SiblingPostMdxFragment;
+  previousMdx?: GraphQl.SiblingPostMdxFragment;
+  nextMdx?: GraphQl.SiblingPostMdxFragment;
   children?: never;
 };
 

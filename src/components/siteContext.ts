@@ -1,8 +1,9 @@
 import React from 'react';
-import { RootLayoutQuery } from '../generated/graphql';
+
+import { GraphQl } from '../utils';
 
 type SiteContextProps = {
-  siteMetadata?: RootLayoutQuery extends { dataYaml: infer T } ? T : unknown;
+  siteMetadata?: GraphQl.RootLayoutQuery extends { dataYaml: infer T } ? T : unknown;
 };
 
 const SiteContext = React.createContext<SiteContextProps>({

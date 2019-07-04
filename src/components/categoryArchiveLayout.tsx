@@ -2,10 +2,10 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import ArchiveLayout from './archiveLayout';
-import { CategoryArchiveLayoutQuery } from '../generated/graphql';
+import { GraphQl } from '../utils';
 
 type CategoryArchiveLayoutProps = {
-  data: CategoryArchiveLayoutQuery;
+  data: GraphQl.CategoryArchiveLayoutQuery;
   pageContext: {
     category: string;
   };

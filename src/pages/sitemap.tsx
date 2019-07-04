@@ -4,22 +4,18 @@ import { graphql } from 'gatsby';
 import PageLayout from '../components/pageLayout';
 import Link from '../components/link';
 import SiteContext from '../components/siteContext';
-import { SitemapPageQuery, SitemapYamlSub, Maybe } from '../generated/graphql';
+import { GraphQl } from '../utils';
 
-type SitemapEntryProps = {
-  title?: Maybe<string>;
-  url?: Maybe<string>;
-  subNodes?: Maybe<Maybe<SitemapYamlSub>[]>;
-};
+type SitemapEntryProps = GraphQl.SitemapYamlSub;
 
 type SitemapPageProps = {
-  data: SitemapPageQuery;
+  data: GraphQl.SitemapPageQuery;
 };
 
-const SitemapEntry: React.FunctionComponent<SitemapEntryProps> = ({ title, url, subNodes }) => (
+const SitemapEntry: React.FunctionComponent<SitemapEntryProps> = ({ title, url, sub }) => (
   <li>
     {url ? <Link to={url}>{title}</Link> : title}
-    {subNodes && <ul>{subNodes.map((subnode, index) => subnode && <SitemapEntry title={subnode.title} url={subnode.url} subNodes={subnode.sub} key={index} />)}</ul>}
+    {sub && <ul>{sub.map((subnode, index) => subnode && <SitemapEntry title={subnode.title} url={subnode.url} sub={subnode.sub} key={index} />)}</ul>}
   </li>
 );
 
@@ -33,7 +29,7 @@ const SitemapPage: React.FunctionComponent<SitemapPageProps> = ({ data }) => {
       <SiteContext.Consumer>
         {siteContext => (
           <ul>
-            <SitemapEntry title={siteContext.siteMetadata && siteContext.siteMetadata.title} url="/" subNodes={allSitemapYaml.edges.map(edge => edge.node)} />
+            <SitemapEntry title={siteContext.siteMetadata && siteContext.siteMetadata.title} url="/" sub={allSitemapYaml.edges.map(edge => edge.node)} />
           </ul>
         )}
       </SiteContext.Consumer>

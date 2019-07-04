@@ -19,7 +19,7 @@ const PostLayoutAuthor: React.FunctionComponent<PostLayoutAuthorProps> = () => (
               <img src={author.picture} className="author-thumbnail" alt={author.name} />
               <div className="author-biography">
                 <h2>by {author.name}</h2>
-                <p>{author.biography && <MdxRenderer>{author.biography}</MdxRenderer>}</p>
+                {author.biography && <MdxRenderer>{author.biography}</MdxRenderer>}
               </div>
             </section>
           )}

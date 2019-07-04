@@ -2,11 +2,11 @@ import React from 'react';
 import { MDXRenderer } from 'gatsby-mdx';
 
 import MdxProvider from './mdxProvider';
-import { Maybe, MdxCodeMdx } from '../generated/graphql';
+import { GraphQl } from '../utils';
 
 type MdxRendererProps = {
   children: {
-    code?: Maybe<Pick<MdxCodeMdx, 'body'>>;
+    code?: GraphQl.Maybe<Pick<GraphQl.MdxCodeMdx, 'body'>>;
   };
 };
 

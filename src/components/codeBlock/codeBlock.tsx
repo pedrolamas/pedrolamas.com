@@ -1,20 +1,14 @@
 import React from 'react';
-import Prism from 'prismjs';
-import Highlight, { defaultProps, PrismTheme, Prism as BundledPrism } from 'prism-react-renderer';
-import 'prismjs/components/prism-csharp';
+import Highlight, { defaultProps } from 'prism-react-renderer';
 
-import { default as theme } from './themes/github';
-
-type PrismLib = typeof BundledPrism;
+import PrismLib from './prismLib';
+import Theme from './theme';
 
 const CodeBlock: React.FunctionComponent<any> = ({ children, className }) => {
   const language = className.replace(/language-/, '');
 
-  const prismTheme = theme as PrismTheme;
-  const prism = (Prism as unknown) as PrismLib;
-
   return (
-    <Highlight {...defaultProps} code={children} language={language} theme={prismTheme} Prism={prism}>
+    <Highlight {...defaultProps} code={children} language={language} theme={Theme} Prism={PrismLib}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <div className="highlight">
           <pre className={`${className} highlight`} style={style}>

@@ -7,11 +7,10 @@ import PostLayoutArticle from './postLayoutArticle';
 import PostLayoutAuthor from './postLayoutAuthor';
 import PostLayoutNavigation from './postLayoutNavigation';
 import MdxContext from '../mdxContext';
-import * as Utils from '../../utils';
-import { PostLayoutQuery } from '../../generated/graphql';
+import { Utils, GraphQl } from '../../utils/';
 
 type PostLayoutProps = {
-  data: PostLayoutQuery;
+  data: GraphQl.PostLayoutQuery;
 };
 
 const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {
