@@ -13,7 +13,7 @@ dsq_thread_id:
 
 ## Download
 
-[Download here!](wp-content/uploads/downloads/2013/01/WP8AppbarIcons.zip)
+[Download here!](/wp-content/uploads/downloads/2013/01/WP8AppbarIcons.zip)
 
 ## Last update
 
@@ -27,7 +27,7 @@ This number seemed quite low to get things done, even more after seeing the othe
 
 Thus, I now present you a collection of **99 extra icons** in comparison to the 36 that comes on the SDK (please click on the image below to get a full size visualization of the collection)
 
-[![Windows Phone 8 Application Bar Icons](wp-content/uploads/2013/01/Windows-Phone-8-Application-Bar-Icons-thumb.png)](wp-content/uploads/2013/01/Windows-Phone-8-Application-Bar-Icons.png)
+[![Windows Phone 8 Application Bar Icons](/wp-content/uploads/2013/01/Windows-Phone-8-Application-Bar-Icons-thumb.png)](/wp-content/uploads/2013/01/Windows-Phone-8-Application-Bar-Icons.png)
 
 Most of these icons are the original ones that show up in the Windows Phone 8 apps (extracted from the application resources), others where simply modified to get the correct measures (changing the “canvas” to 76x76, the right size for this type of icons).
 

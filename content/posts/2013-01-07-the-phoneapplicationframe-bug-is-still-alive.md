@@ -36,7 +36,7 @@ By using a Reflection tool to look at the PhoneApplicationFrame implementation, 
 
 And this is where lies the whole problem: the values ​​of these properties should be obtained directly from NavigationService like the methods are, or at least they should also be updated when RemoveBackEntry method gets called!
 
-You can test and confirm this bug by downloading [this sample application](wp-content/uploads/downloads/2013/01/FrameBugSample.zip).
+You can test and confirm this bug by downloading [this sample application](/wp-content/uploads/downloads/2013/01/FrameBugSample.zip).
 
 All you need to do is run the app, click on "Navigate to self", check that the stack count is now 1, click on one of the two buttons for the "RemoveBackEntry" and realize that the CanGoBack properties now have different values!
 

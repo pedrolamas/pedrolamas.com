@@ -1,8 +1,19 @@
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 
-import Link from './link';
 import CodeBlock from './codeBlock';
+import Link from './link';
+
+const ABlock: React.FunctionComponent<React.AnchorHTMLAttributes<HTMLAnchorElement>> = props => {
+  var { href } = props;
+
+  if (href) {
+    return <Link to={href} {...props} />;
+  }
+
+  // eslint-disable-next-line jsx-a11y/anchor-has-content
+  return <a {...props} />;
+};
 
 const PreBlock: React.FunctionComponent<any> = props => {
   const { children } = props;
@@ -17,7 +28,7 @@ const PreBlock: React.FunctionComponent<any> = props => {
 };
 
 const MdxProviderComponents = {
-  a: Link,
+  a: ABlock,
   code: CodeBlock,
   pre: PreBlock,
 };

@@ -19,4 +19,4 @@ From the results screen you have the ability to open Bing maps for the specified
 
 This application can also be used to convert between Decimal Degrees, MinDec, and DMS coordinate formats.
 
-[![Download](wp-content/uploads/2013/08/258x67_WPS_Download_cyan.png)](http://windowsphone.com/s?appid=7ca9cfea-1b92-4ca4-8559-269936d5361e)
+[![Download](/wp-content/uploads/2013/08/258x67_WPS_Download_cyan.png)](http://windowsphone.com/s?appid=7ca9cfea-1b92-4ca4-8559-269936d5361e)

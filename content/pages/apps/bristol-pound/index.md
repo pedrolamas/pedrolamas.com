@@ -17,4 +17,4 @@ BP4WP allows everyone to discover independent local business in their doorstep, 
 
 It represents a unique way to get involved and be part of the community, whilst discovering Bristol and its unique community identity.
 
-[![Download](wp-content/uploads/2013/08/258x67_WPS_Download_cyan.png)](http://windowsphone.com/s?appid=35de9c7d-4337-4228-8c76-bec79525bddd)
+[![Download](/wp-content/uploads/2013/08/258x67_WPS_Download_cyan.png)](http://windowsphone.com/s?appid=35de9c7d-4337-4228-8c76-bec79525bddd)

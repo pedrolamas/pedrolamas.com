@@ -130,4 +130,4 @@ And here's the final result:
 
 I honestly don't know the reason for this strange behavior, but this is a problem to account for if you have localization needs for your Windows Phone app!
 
-The demo project I created and used for this article can be downloaded from [here](wp-content/uploads/downloads/2013/01/PedroLamas.LanguageTestApp.zip)!
+The demo project I created and used for this article can be downloaded from [here](/wp-content/uploads/downloads/2013/01/PedroLamas.LanguageTestApp.zip)!

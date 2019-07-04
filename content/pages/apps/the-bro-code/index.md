@@ -13,4 +13,4 @@ Based on "The Bro Code", written by the awesome Barney Stinson.
 
 Containing approximately 150 "unspoken" rules, this code of conduct ranges from the simple (bros before hos) to the complex (the hot-to-crazy ratio, complete with bar graphs and charts).
 
-[![Download](wp-content/uploads/2013/08/258x67_WPS_Download_cyan.png)](http://windowsphone.com/s?appid=2f575845-7f15-4de2-acc8-cb68bcf954a7)
+[![Download](/wp-content/uploads/2013/08/258x67_WPS_Download_cyan.png)](http://windowsphone.com/s?appid=2f575845-7f15-4de2-acc8-cb68bcf954a7)
