@@ -166,7 +166,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path: pageIndex === 1 ? `/` : `/page/${pageIndex}/`,
-      component: path.resolve(`./src/components/indexLayout.tsx`),
+      component: path.resolve(`./src/components/indexLayout/indexLayout.tsx`),
       context: {
         ids: groupedPosts.map(edge => edge.node.id),
         previousPageIndex: pageIndex > 1 ? pageIndex - 1 : undefined,
