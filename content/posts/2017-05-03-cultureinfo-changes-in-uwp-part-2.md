@@ -14,7 +14,7 @@ tags:
   - WPDev
 ---
 
-A while back I wrote an article about the [CultureInfo changes in UWP](https://www.pedrolamas.com/2015/11/02/cultureinfo-changes-in-uwp/) and how they affected the UWP apps.
+A while back I wrote an article about the [CultureInfo changes in UWP](/2015/11/02/cultureinfo-changes-in-uwp/) and how they affected the UWP apps.
 
 Well, things haven't changed much since then, and the information in that article still stands today!
 
@@ -41,7 +41,7 @@ This Win32 API is actually [allowed for apps published to the Windows Store](htt
 
 ## Retrieving the "proper" CurrentCulture, the proper way!
 
-In my [previous article](https://www.pedrolamas.com/2015/11/02/cultureinfo-changes-in-uwp/) on this subject, I found a hack where one could retrieve the "proper" CurrentCulture using the `DateTimeFormatter` class.
+In my [previous article](/2015/11/02/cultureinfo-changes-in-uwp/) on this subject, I found a hack where one could retrieve the "proper" CurrentCulture using the `DateTimeFormatter` class.
 
 But with all this new information, I have now created a non-hacky way of doing the same:
 

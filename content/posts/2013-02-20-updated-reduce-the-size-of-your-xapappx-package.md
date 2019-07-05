@@ -21,10 +21,10 @@ tags:
   - XAP
 ---
 
-In my [previous post](https://www.pedrolamas.com/2013/02/15/reduce-the-size-of-your-xapappx-package-time-to-take-out-the-trash/) I wrote about an issue with the current build process for Windows 8 and Windows Phone 8 apps, where the Xml Documentation would get bundled in the output packages (APPX and XAP).
+In my [previous post](/2013/02/15/reduce-the-size-of-your-xapappx-package-time-to-take-out-the-trash/) I wrote about an issue with the current build process for Windows 8 and Windows Phone 8 apps, where the Xml Documentation would get bundled in the output packages (APPX and XAP).
 
 A few days later, I started to get some comments over the internet regarding the need to add my fix to all projects in a solution in order to make it fully work, something that turned out to be a bit tedious...
 
 I have now updated the original post with a new solution that will only require you to change the projects that actually have a package output! :)
 
-Please check the [original post](https://www.pedrolamas.com/2013/02/15/reduce-the-size-of-your-xapappx-package-time-to-take-out-the-trash/) and update your projects to match the new change!
+Please check the [original post](/2013/02/15/reduce-the-size-of-your-xapappx-package-time-to-take-out-the-trash/) and update your projects to match the new change!

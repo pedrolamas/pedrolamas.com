@@ -20,7 +20,7 @@ tags:
   - WPDev
 ---
 
-**Update:** There's now a [part 2](https://www.pedrolamas.com/2017/05/03/cultureinfo-changes-in-uwp-part-2/) for this article!
+**Update:** There's now a [part 2](/2017/05/03/cultureinfo-changes-in-uwp-part-2/) for this article!
 
 Since the very first versions of the .NET Framework, developers had the [System.Globalization](<https://msdn.microsoft.com/en-us/library/system.globalization(v=vs.110).aspx>) namespace _"containing classes that define culture-related information, including language, country/region, calendars in use, format patterns for dates, currency, and numbers, and sort order for strings."_
 

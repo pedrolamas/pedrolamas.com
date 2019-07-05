@@ -24,7 +24,7 @@ tags:
   - Windows 10
 ---
 
-**Update:** Though the information and concerns in this blog post are still very true, I've actually had a change of heart and I'm now advocating to [Start Strong-Naming your Assemblies!](https://www.pedrolamas.com/2018/09/11/start-strong-naming-your-assemblies/)!
+**Update:** Though the information and concerns in this blog post are still very true, I've actually had a change of heart and I'm now advocating to [Start Strong-Naming your Assemblies!](/2018/09/11/start-strong-naming-your-assemblies/)!
 
 ---
 
@@ -79,7 +79,7 @@ Unfortunately, as far as I know there is no support for Assembly Binding Redirec
 
 A couple of weeks ago, Microsoft open-sourced the [XAML Behaviors](https://github.com/Microsoft/XamlBehaviors) and guess what? Yes you guessed correctly: [they strongly-signed it!](https://github.com/Microsoft/XamlBehaviors/pull/29)
 
-Fortunately, after a long debate on that same thread, they realized that it made no sense to do that, and [removed the strong-name signing on the latest version!](https://www.pedrolamas.com/2016/02/23/xaml-behaviors-uwp-managed-1-1-0/)
+Fortunately, after a long debate on that same thread, they realized that it made no sense to do that, and [removed the strong-name signing on the latest version!](/2016/02/23/xaml-behaviors-uwp-managed-1-1-0/)
 
 ## Bottom line
 

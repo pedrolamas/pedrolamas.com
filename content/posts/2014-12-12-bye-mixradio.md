@@ -19,7 +19,7 @@ tags:
 
 Today was my last day as a MixRadio employee.
 
-After [Microsoft completed the acquisition of the Nokia Devices & Services business](https://www.pedrolamas.com/2014/04/25/bye-nokia-hello-microsoft/), MixRadio and all of it's employees became part of Microsoft.
+After [Microsoft completed the acquisition of the Nokia Devices & Services business](/2014/04/25/bye-nokia-hello-microsoft/), MixRadio and all of it's employees became part of Microsoft.
 
 However, a couple of weeks after that Microsoft started a full reorganization and decisions were quickly made to ensure [MixRadio would become a separate entity](http://www.theguardian.com/technology/2014/jul/18/nokia-mixradio-streaming-music-ios-android).
 

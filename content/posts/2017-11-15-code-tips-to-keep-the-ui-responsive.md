@@ -156,4 +156,4 @@ Any code that needs to run on the UI thread (normally, to update the UI) can do 
 
 The rule of thumb on the asynchronous code is to avoid `async void` methods as much as possible, but for event handlers, there is no way to bypass this.
 
-A while back I created the [DeferredEvents](https://www.nuget.org/packages/DeferredEvents/) NuGet package to mitigate this issue; at the time, I wrote an [article](https://www.pedrolamas.com/2017/04/04/await-your-event-handlers-completion-with-deferred-events/) that I now recommend reading to further understand the problem and my proposed solution.
+A while back I created the [DeferredEvents](https://www.nuget.org/packages/DeferredEvents/) NuGet package to mitigate this issue; at the time, I wrote an [article](/2017/04/04/await-your-event-handlers-completion-with-deferred-events/) that I now recommend reading to further understand the problem and my proposed solution.

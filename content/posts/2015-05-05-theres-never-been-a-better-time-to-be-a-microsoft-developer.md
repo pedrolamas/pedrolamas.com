@@ -21,7 +21,7 @@ tags:
   - Windows 10
 ---
 
-_Full disclosure: though [I've been a Microsoft employee for a short while](https://www.pedrolamas.com/2014/12/12/bye-mixradio/), I currently have no professional (or other type of) connection with the company._
+_Full disclosure: though [I've been a Microsoft employee for a short while](/2014/12/12/bye-mixradio/), I currently have no professional (or other type of) connection with the company._
 
 Now that we have got that out of the way, I do believe that there has never been a better time to be a Microsoft developer than today! :)
 

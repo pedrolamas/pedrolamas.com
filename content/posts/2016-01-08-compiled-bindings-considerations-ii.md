@@ -23,9 +23,9 @@ tags:
   - x:Bind
 ---
 
-**Update:** Microsoft has finally provided a fix for this bug, covered in the [Compiled Bindings considerations III](https://www.pedrolamas.com/2018/01/31/compiled-bindings-considerations-iii/) article!
+**Update:** Microsoft has finally provided a fix for this bug, covered in the [Compiled Bindings considerations III](/2018/01/31/compiled-bindings-considerations-iii/) article!
 
-A few months ago I wrote my first [Compiled Bindings considerations](https://www.pedrolamas.com/2015/10/19/compiled-bindings-considerations/) article, and seems that time has come to write some more, only this time I'm bearer of some bad news...
+A few months ago I wrote my first [Compiled Bindings considerations](/2015/10/19/compiled-bindings-considerations/) article, and seems that time has come to write some more, only this time I'm bearer of some bad news...
 
 ## TL;DR
 

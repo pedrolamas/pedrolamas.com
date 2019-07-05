@@ -33,7 +33,7 @@ They were kind enough to keep me in the loop and that allowed me to prepare for 
 - UWP apps it now will pull the XAML Behaviors Managed NuGet package to the projects
 - non-UWP apps will still use the NuGet PowerShell scripts to add the Behaviors SDK
 
-A few weeks ago I introduced the `MonitoredInteraction` class from Cimbalino Toolkit 2.0.0 to ["prevent memory leaks in behaviors"](https://www.pedrolamas.com/2015/10/23/how-to-prevent-memory-leaks-in-behaviors/), and I'm happy to say that those changes [made it's way to the XAML Behaviors code](https://github.com/Microsoft/XamlBehaviors/commit/c23f4a4156318042eaf651faea8f2fafd9467d59)! :)
+A few weeks ago I introduced the `MonitoredInteraction` class from Cimbalino Toolkit 2.0.0 to ["prevent memory leaks in behaviors"](/2015/10/23/how-to-prevent-memory-leaks-in-behaviors/), and I'm happy to say that those changes [made it's way to the XAML Behaviors code](https://github.com/Microsoft/XamlBehaviors/commit/c23f4a4156318042eaf651faea8f2fafd9467d59)! :)
 
 Do notice that while the `Interaction` class in the XAML Behaviors now performs the proper attach/detach pattern, the same can't be said for the Behaviors SDK Extension for non-UWP apps, so I strongly advise you to keep using the `MonitoredInteraction` class for those projects!
 

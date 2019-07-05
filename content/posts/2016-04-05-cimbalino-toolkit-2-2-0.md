@@ -38,7 +38,7 @@ This brings the total number of supported platforms to 5:
 Here's the full change log for version 2.0.0:
 
 - Improved compatibility with Windows Phone Silverlight 8.1 (WP81)
-- New [Cimbalino.Toolkit.Controls](https://www.nuget.org/packages/Cimbalino.Toolkit.Controls) library (includes the [HamburgerFrame for Windows 10](https://www.pedrolamas.com/2016/03/07/cimbalino-toolkit-hamburger-controls-for-uwp/))
+- New [Cimbalino.Toolkit.Controls](https://www.nuget.org/packages/Cimbalino.Toolkit.Controls) library (includes the [HamburgerFrame for Windows 10](/2016/03/07/cimbalino-toolkit-hamburger-controls-for-uwp/))
 - New IFilePickerService to handle the file picker (when available)
 - Improvements over the INavigationService implementation
 - Other fixes and improvements

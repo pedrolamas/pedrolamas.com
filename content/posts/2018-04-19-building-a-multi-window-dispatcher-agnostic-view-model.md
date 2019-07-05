@@ -14,7 +14,7 @@ tags:
   - WPDev
 ---
 
-On my earlier post I wrote about ["Building a dispatcher agnostic view-model"](https://www.pedrolamas.com/2018/03/23/building-a-dispatcher-agnostic-view-model/); that was just laying the ground for this follow up post, where I am going to show how we can extend that knowledge to use view-models shared between separate windows on different UI threads!
+On my earlier post I wrote about ["Building a dispatcher agnostic view-model"](/2018/03/23/building-a-dispatcher-agnostic-view-model/); that was just laying the ground for this follow up post, where I am going to show how we can extend that knowledge to use view-models shared between separate windows on different UI threads!
 
 In truth, I started thinking in writing this after seeing my fellow MVP [Rudy Huyn](http://www.rudyhuyn.com/) [CrossUIBinding](https://github.com/rudyhuyn/xUIBinding) library.
 

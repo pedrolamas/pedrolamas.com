@@ -24,11 +24,11 @@ Version 3.1.0 of [**Cimbalino Windows Phone Toolkit**](http://cimbalino.org) is 
 
 Here's the change-log for this release:
 
-- New **MarketplaceInformationService** ([more info](https://www.pedrolamas.com/2013/07/24/checking-for-updates-from-inside-a-windows-phone-app/))
+- New **MarketplaceInformationService** ([more info](/2013/07/24/checking-for-updates-from-inside-a-windows-phone-app/))
 - New **MediaLibraryService**
 - New **FMRadioService**
 - New **LockScreenService**
-- New **AutoFocusBehavior** ([more info](https://www.pedrolamas.com/2013/08/19/cimbalino-windows-phone-toolkit-autofocusbehavior/))
+- New **AutoFocusBehavior** ([more info](/2013/08/19/cimbalino-windows-phone-toolkit-autofocusbehavior/))
 - Various improvements and bug fixes
 
 You can count on some articles around the new stuff for the next few days! :)

@@ -28,7 +28,7 @@ I particularly like the fact that all tests run on the emulator where they can g
 
 Yet, the test framework still has some pitfalls where we realize it is just not enough!
 
-A few weeks ago I wrote an [article](https://www.pedrolamas.com/2013/03/25/windows-phone-8-unit-testing-in-the-ui-thread-with-vs-2012-2-ctp4/) about one of these pitfalls, on how to run code in the UI Thread.
+A few weeks ago I wrote an [article](/2013/03/25/windows-phone-8-unit-testing-in-the-ui-thread-with-vs-2012-2-ctp4/) about one of these pitfalls, on how to run code in the UI Thread.
 
 Now I've stumbled in yet another pitfall, this time on how to run the `Assert.ThrowsException` with `async` code!
 

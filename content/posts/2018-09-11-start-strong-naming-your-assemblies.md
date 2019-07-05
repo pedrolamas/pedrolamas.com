@@ -26,7 +26,7 @@ My opinion on this subject has evolved to the point I'm now recommending that yo
 
 ## Why the change of heart?
 
-2 years ago, I wrote my thoughts about strong-naming assemblies in a post I called ["Still Strong-Naming your Assemblies? You do know it's 2016, right?"](https://www.pedrolamas.com/2016/03/01/still-strong-naming-your-assemblies-you-do-know-its-2016-right/).
+2 years ago, I wrote my thoughts about strong-naming assemblies in a post I called ["Still Strong-Naming your Assemblies? You do know it's 2016, right?"](/2016/03/01/still-strong-naming-your-assemblies-you-do-know-its-2016-right/).
 
 Coming from all the development related pains in Silverlight and Windows Phone platforms, I knew how strong-named assemblies were a real problem, hence why I wrote that post and said that developers should stop strong-naming their assemblies.
 

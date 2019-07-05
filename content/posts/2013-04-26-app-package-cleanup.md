@@ -26,7 +26,7 @@ The [NuGet](http://nuget.org) team released the 2.5 version yesterday, and along
 
 This means we can now have NuGet packages without any type of assembly, targeting only the project build process.
 
-And if you've read [this article](https://www.pedrolamas.com/2013/02/15/reduce-the-size-of-your-xapappx-package-time-to-take-out-the-trash/) about the issue with the current build process for Windows 8 and Windows Phone 8 apps, where the Xml Documentation gets bundled in the output packages (APPX and XAP), I have some great news: no more need to change the project file manually, as I just published a [NuGet package](https://nuget.org/packages/AppPackageCleanup) that does those changes for you!!
+And if you've read [this article](/2013/02/15/reduce-the-size-of-your-xapappx-package-time-to-take-out-the-trash/) about the issue with the current build process for Windows 8 and Windows Phone 8 apps, where the Xml Documentation gets bundled in the output packages (APPX and XAP), I have some great news: no more need to change the project file manually, as I just published a [NuGet package](https://nuget.org/packages/AppPackageCleanup) that does those changes for you!!
 
 All you have to do is run the following command from the Package Manager console window:
 

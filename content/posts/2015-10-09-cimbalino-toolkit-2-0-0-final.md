@@ -23,7 +23,7 @@ tags:
 
 Bring out the champagne, because [**Cimbalino Toolkit**](http://cimbalino.org/) version 2.0.0 has gone "gold" and is now production ready! :)
 
-As [previously stated](https://www.pedrolamas.com/2015/07/31/cimbalino-toolkit-2-0-0-beta1/), the focus for this new version was to add support for UWP (Universal Windows Platform), thus making the toolkit support a total of 4 platforms:
+As [previously stated](/2015/07/31/cimbalino-toolkit-2-0-0-beta1/), the focus for this new version was to add support for UWP (Universal Windows Platform), thus making the toolkit support a total of 4 platforms:
 
 - Windows Phone Silverlight 8.0 and 8.1 apps (WP8)
 - Windows Phone 8.1 apps (WPA81)
