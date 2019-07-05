@@ -4,7 +4,7 @@ import path from 'path';
 
 type LinkProps = ComponentPropsWithoutRef<typeof GatsbyLink>;
 
-const isInternal = (url: string): boolean => /^\/?(?!\/)/.test(url);
+const isInternal = (url: string): boolean => !url.includes(':') && !url.startsWith('//');
 const isFile = (url: string): boolean => /\.[0-9a-z]+$/i.test(url);
 
 const Link: React.FunctionComponent<LinkProps> = props => {
