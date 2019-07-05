@@ -162,8 +162,8 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/components/postLayout/postLayout.tsx`),
       context: {
         id: node.id,
-        previousId: previous && previous.id,
-        nextId: next && next.id,
+        previousId: next && next.id,
+        nextId: previous && previous.id,
       },
     });
   });
