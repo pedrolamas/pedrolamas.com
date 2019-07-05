@@ -86,6 +86,16 @@ exports.sourceNodes = ({ actions }) => {
       tags: [String]
       title: String
     }`,
+    `type DataYaml implements Node @infer {
+      sidebar: DataYamlSidebar
+    }`,
+    `type DataYamlSidebar @infer {
+      logos: [DataYamlSidebarLogos]
+    }`,
+    `type DataYamlSidebarLogos @infer {
+      image: File
+      title: String
+    }`,
     `type SitemapYaml implements Node @infer {
       sub: [SitemapYamlSub]
     }`,
