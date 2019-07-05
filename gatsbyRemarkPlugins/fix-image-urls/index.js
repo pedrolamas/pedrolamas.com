@@ -1,21 +1,38 @@
 const path = require('path');
-const select = require(`unist-util-select`);
+const select = require('unist-util-select');
 
-module.exports = ({ markdownNode, markdownAST, getNode, pathPrefix }) => {
-  const markdownImageNodes = select(markdownAST, `image`);
+module.exports = ({ markdownNode, markdownAST, files }) => {
+  const markdownImageNodes = select(markdownAST, 'image');
 
-  if (!markdownImageNodes || markdownImageNodes.length === 0) {
+  if (!markdownNode.fileAbsolutePath) {
     return;
   }
 
-  const parentNode = getNode(markdownNode.parent);
-
-  const rootPath = parentNode.sourceInstanceName === 'posts' ? '/content/posts/' : `/${parentNode.relativeDirectory}`;
-  const relativePath = path.relative(rootPath, '/content/assets');
+  const markdownNodePath = path.posix.dirname(markdownNode.fileAbsolutePath);
 
   markdownImageNodes.forEach(node => {
+    if (node.url.startsWith('/wp-content/')) {
+      const fileNode = files.find(x => x && x.absolutePath && x.absolutePath.endsWith(node.url));
+
+      if (fileNode) {
+        const relativePath = path.posix.relative(markdownNodePath, fileNode.absolutePath);
+
+        node.url = relativePath;
+      }
+    }
+  });
+
+  const markdownLinkNodes = select(markdownAST, 'link');
+
+  markdownLinkNodes.forEach(node => {
     if (node.url.startsWith(`/wp-content/`)) {
-      node.url = `${relativePath}/${node.url}`;
+      const fileNode = files.find(x => x && x.absolutePath && x.absolutePath.endsWith(node.url));
+
+      if (fileNode) {
+        const relativePath = path.posix.relative(markdownNodePath, fileNode.absolutePath);
+
+        node.url = relativePath;
+      }
     }
   });
 };

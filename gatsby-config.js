@@ -3,14 +3,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `posts`,
-        path: `${__dirname}/content/posts`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/content/pages`,
+        name: `assets`,
+        path: `${__dirname}/content/assets`,
       },
     },
     {
@@ -23,8 +17,21 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `assets`,
-        path: `${__dirname}/content/assets`,
+        name: `pages`,
+        path: `${__dirname}/content/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/content/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/content/pages`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -54,6 +61,7 @@ module.exports = {
           {
             resolve: require.resolve(`./gatsbyRemarkPlugins/fix-image-urls`),
           },
+          `gatsby-remark-copy-linked-files`,
           {
             resolve: `gatsby-remark-images`,
             options: {
