@@ -207,4 +207,4 @@ n3IeI8rfw2YNtiXmeOseSGbibAmipttiN5euQSoZaLoq1UVwB0L0S0aEtvK7
 -----END PGP PUBLIC KEY BLOCK-----
 </pre>
 
-[Download Public Key file](public.asc)
+[Download Public Key file](/public.asc)

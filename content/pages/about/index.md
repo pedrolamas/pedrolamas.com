@@ -17,9 +17,9 @@ By the end of 2014, I decided to move to London where I started working for [Sky
 
 In September 2015 I wanted to start something new and exciting, so I took the leap to create my own company, [Ample Roads](http://www.ampleroads.com), and go contracting, starting to work in Windows 10 development for Microsoft in their Reading HQ.
 
-I'm a [Microsoft Certified Professional](about/mcp-transcript), a [Xamarin Certified Mobile Developer](2017-07-24-xamarin-certified-mobile-developer), and a former [Microsoft Windows Development MVP](2017-03-02-awarded-microsoft-windows-development-mvp-2017)!
+I'm a [Microsoft Certified Professional](mcp-transcript), a [Xamarin Certified Mobile Developer](/2017-07-24-xamarin-certified-mobile-developer), and a former [Microsoft Windows Development MVP](/2017-03-02-awarded-microsoft-windows-development-mvp-2017)!
 
 ## You might also want to check...
 
-- [Microsoft Certified Professional (MCP) Transcript](about/mcp-transcript)
-- [PGP Public Key](about/pgp-public-key)
+- [Microsoft Certified Professional (MCP) Transcript](mcp-transcript)
+- [PGP Public Key](pgp-public-key)
