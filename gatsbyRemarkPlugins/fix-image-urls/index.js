@@ -1,6 +1,8 @@
 const path = require('path');
 const select = require('unist-util-select');
 
+const isInternal = url => /^\/(?!\/)/.test(url);
+
 module.exports = ({ markdownNode, markdownAST, files }) => {
   const markdownImageNodes = select(markdownAST, 'image');
 
@@ -11,8 +13,10 @@ module.exports = ({ markdownNode, markdownAST, files }) => {
   const markdownNodePath = path.posix.dirname(markdownNode.fileAbsolutePath);
 
   markdownImageNodes.forEach(node => {
-    if (node.url.startsWith('/wp-content/')) {
-      const fileNode = files.find(x => x && x.absolutePath && x.absolutePath.endsWith(node.url));
+    if (isInternal(node.url)) {
+      const nodeRelativePath = node.url.substr(1);
+
+      const fileNode = files.find(x => x && x.relativePath && x.relativePath === nodeRelativePath);
 
       if (fileNode) {
         const relativePath = path.posix.relative(markdownNodePath, fileNode.absolutePath);
@@ -25,8 +29,10 @@ module.exports = ({ markdownNode, markdownAST, files }) => {
   const markdownLinkNodes = select(markdownAST, 'link');
 
   markdownLinkNodes.forEach(node => {
-    if (node.url.startsWith(`/wp-content/`)) {
-      const fileNode = files.find(x => x && x.absolutePath && x.absolutePath.endsWith(node.url));
+    if (isInternal(node.url)) {
+      const nodeRelativePath = node.url.substr(1);
+
+      const fileNode = files.find(x => x && x.relativePath && x.relativePath === nodeRelativePath);
 
       if (fileNode) {
         const relativePath = path.posix.relative(markdownNodePath, fileNode.absolutePath);

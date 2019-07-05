@@ -81,6 +81,7 @@ exports.sourceNodes = ({ actions }) => {
       categories: [String]
       date: Date
       dateFormatted: Date @dateformat(formatString: "MMMM D, YYYY") @proxy(from: "date")
+      image: File
       last_modified_at: Date
       layout: String
       tags: [String]
