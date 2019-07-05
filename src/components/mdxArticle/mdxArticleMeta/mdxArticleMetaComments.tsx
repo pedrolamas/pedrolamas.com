@@ -1,6 +1,7 @@
 import React from 'react';
 import Disqus from 'disqus-react';
 
+import Link from '../../link';
 import SiteContext from '../../siteContext';
 import MdxContext from '../../mdxContext';
 import { Utils } from '../../../utils';
@@ -31,7 +32,7 @@ const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProp
               {siteMetadata && siteMetadata.disqus_shortname && (
                 <span className="comments">
                   <Disqus.CommentCount shortname={siteMetadata.disqus_shortname} config={disqusConfig}>
-                    <a href="#disqus_thread">Comments</a>
+                    <Link to={`${url}#disqus_thread`}>Comments</Link>
                   </Disqus.CommentCount>
                 </span>
               )}
