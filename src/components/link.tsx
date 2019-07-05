@@ -3,14 +3,19 @@ import { Link as GatsbyLink } from 'gatsby';
 
 type LinkProps = ComponentPropsWithoutRef<typeof GatsbyLink>;
 
+const isInternal = (url: string): boolean => /^\/(?!\/)/.test(url);
+const isFile = (url: string): boolean => /\.[0-9a-z]+$/i.test(url);
+
 const Link: React.FunctionComponent<LinkProps> = props => {
+  const { to, ...restOfProps } = props;
+
   return (
     <>
-      {props.to && !props.to.includes(':') && !props.to.startsWith('//') ? (
-        <GatsbyLink {...props} />
+      {to && isInternal(to) && !isFile(to) ? (
+        <GatsbyLink style={{ color: '#ff0000' }} {...props} />
       ) : (
         // eslint-disable-next-line jsx-a11y/anchor-has-content
-        <a href={props.to} {...props} />
+        <a href={to} {...restOfProps} />
       )}
     </>
   );
