@@ -1,44 +1,47 @@
 const path = require('path');
 const select = require('unist-util-select');
 
-const isInternalAbsolute = url => /^\/(?!\/)/.test(url);
+const isInternal = url => !url.includes(':') && !url.startsWith('//');
 
-module.exports = ({ markdownNode, markdownAST, files }) => {
-  const markdownImageNodes = select(markdownAST, 'image');
-
+module.exports = ({ markdownNode, markdownAST, getNode, files }) => {
   if (!markdownNode.fileAbsolutePath) {
     return;
   }
 
-  const markdownNodePath = path.posix.dirname(markdownNode.fileAbsolutePath);
+  const filteredFiles = files.filter(x => x && x.relativePath);
 
-  markdownImageNodes.forEach(node => {
-    if (isInternalAbsolute(node.url)) {
-      const nodeRelativePath = node.url.substr(1);
+  const parentNode = getNode(markdownNode.parent);
+  const parentNodeAbsoluteDir = parentNode.dir + '/';
+  const parentNodeRelativeDir = path.posix.dirname(parentNode.relativePath) + '/';
 
-      const fileNode = files.find(x => x && x.relativePath && x.relativePath === nodeRelativePath);
+  const fixUrl = url => {
+    if (isInternal(url)) {
+      const relativePath = path.posix.resolve('/', parentNodeRelativeDir, url);
+      const rootlessRelativePath = relativePath.substr(1);
 
-      if (fileNode) {
-        const relativePath = path.posix.relative(markdownNodePath, fileNode.absolutePath);
-
-        node.url = relativePath;
-      }
-    }
-  });
-
-  const markdownLinkNodes = select(markdownAST, 'link');
-
-  markdownLinkNodes.forEach(node => {
-    if (isInternalAbsolute(node.url)) {
-      const nodeRelativePath = node.url.substr(1);
-
-      const fileNode = files.find(x => x && x.relativePath && x.relativePath === nodeRelativePath);
+      const fileNode = filteredFiles.find(x => x.relativePath === rootlessRelativePath);
 
       if (fileNode) {
-        const relativePath = path.posix.relative(markdownNodePath, fileNode.absolutePath);
+        const relativePath = path.posix.relative(parentNodeAbsoluteDir, fileNode.absolutePath);
 
-        node.url = relativePath;
+        return relativePath;
       }
     }
+
+    return url;
+  };
+
+  select(markdownAST, 'image').forEach(node => {
+    node.url = fixUrl(node.url);
   });
+
+  select(markdownAST, 'link').forEach(node => {
+    node.url = fixUrl(node.url);
+  });
+
+  const frontmatterImage = markdownNode.frontmatter && markdownNode.frontmatter.image;
+
+  if (frontmatterImage) {
+    markdownNode.frontmatter.image = fixUrl(frontmatterImage);
+  }
 };

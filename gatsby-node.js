@@ -4,16 +4,6 @@ const slugify = require('underscore.string/slugify');
 
 const slug = path => slugify(path.replace(/\./g, 'dot'));
 
-const fixFrontmatterImageUrl = node => {
-  if (node.frontmatter) {
-    const url = node.frontmatter.image;
-
-    if (url && url.startsWith(`/wp-content/`)) {
-      node.frontmatter.image = url.slice(1);
-    }
-  }
-};
-
 const createSlugField = (createNodeField, node, getNode) => {
   const slug = getNode(node.parent).sourceInstanceName === 'posts' ? getSlugForPost(node, getNode) : null;
 
@@ -57,16 +47,21 @@ const createMdxSource = (id, data, parentNode, actions, createNodeId, createCont
 exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === 'Mdx') {
-    fixFrontmatterImageUrl(node);
+  // eslint-disable-next-line default-case
+  switch (node.internal.type) {
+    case 'Mdx':
+      createSlugField(createNodeField, node, getNode);
 
-    createSlugField(createNodeField, node, getNode);
-  } else if (node.internal.type === 'DataYaml') {
-    createMdxSource('disclaimer', node.disclaimer, node, actions, createNodeId, createContentDigest);
+      break;
 
-    if (node.author) {
-      createMdxSource('biography', node.author.biography, node, actions, createNodeId, createContentDigest);
-    }
+    case 'DataYaml':
+      createMdxSource('disclaimer', node.disclaimer, node, actions, createNodeId, createContentDigest);
+
+      if (node.author) {
+        createMdxSource('biography', node.author.biography, node, actions, createNodeId, createContentDigest);
+      }
+
+      break;
   }
 };
 
@@ -81,20 +76,26 @@ exports.sourceNodes = ({ actions }) => {
       categories: [String]
       date: Date
       dateFormatted: Date @dateformat(formatString: "MMMM D, YYYY") @proxy(from: "date")
-      image: File
+      image: File @fileByRelativePath
       last_modified_at: Date
       layout: String
       tags: [String]
       title: String
     }`,
     `type DataYaml implements Node @infer {
+      author: DataYamlAuthor
+      disclaimer: Mdx @link(by: "rawBody")
+      logo: File @link(by: "relativePath")
       sidebar: DataYamlSidebar
+    }`,
+    `type DataYamlAuthor @infer {
+      biography: Mdx @link(by: "rawBody")
     }`,
     `type DataYamlSidebar @infer {
       logos: [DataYamlSidebarLogos]
     }`,
     `type DataYamlSidebarLogos @infer {
-      image: File
+      image: File @link(by: "relativePath")
       title: String
     }`,
     `type SitemapYaml implements Node @infer {

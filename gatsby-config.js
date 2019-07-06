@@ -92,11 +92,4 @@ module.exports = {
       },
     },
   ],
-  mapping: {
-    'Mdx.frontmatter.image': `File.relativePath`,
-    'DataYaml.logo': `File.relativePath`,
-    'DataYaml.sidebar.logos.image': `File.relativePath`,
-    'DataYaml.disclaimer': 'Mdx.rawBody',
-    'DataYaml.author.biography': 'Mdx.rawBody',
-  },
 };
