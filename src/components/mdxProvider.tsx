@@ -5,10 +5,10 @@ import CodeBlock from './codeBlock';
 import Link from './link';
 
 const ABlock: React.FunctionComponent<React.AnchorHTMLAttributes<HTMLAnchorElement>> = props => {
-  var { href } = props;
+  var { href, ...restOfProps } = props;
 
   if (href) {
-    return <Link to={href} {...props} />;
+    return <Link to={href} {...restOfProps} />;
   }
 
   // eslint-disable-next-line jsx-a11y/anchor-has-content
