@@ -83,6 +83,11 @@ export const postMdxFragment = graphql`
       tags
       title
     }
+    file: parent {
+      ... on File {
+        base
+      }
+    }
   }
 `;
 

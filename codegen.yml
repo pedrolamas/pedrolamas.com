@@ -4,7 +4,7 @@ documents:
   - ./src/**/*.{ts,tsx}
   - ./node_modules/gatsby-*/**/*.js
 generates:
-  src/generated/graphql.ts:
+  src/utils/graphql.generated.ts:
     config:
       skipTypename: true
     plugins:
