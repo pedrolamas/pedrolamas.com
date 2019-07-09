@@ -40,4 +40,4 @@ Major advantages of this approach are:
 
 This right now is actually the first post I write in the new platform! :)
 
-There are still a few quirks to fix, so if you find any problem please report it by [creating a new issue]({{ site.github.repository_url }}/issues/new) and I'll take care of it as soon as possible!
+There are still a few quirks to fix, so if you find any problem please report it by [creating a new issue](https://github.com/pedrolamas/pedrolamas.com/issues/new) and I'll take care of it as soon as possible!

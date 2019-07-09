@@ -52,10 +52,6 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
             app_id
             publisher
           }
-          github {
-            username
-            repository_url
-          }
           sidebar {
             logos {
               title

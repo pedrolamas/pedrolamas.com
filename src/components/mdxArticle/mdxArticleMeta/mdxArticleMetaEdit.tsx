@@ -1,34 +1,27 @@
 import React from 'react';
 
-import SiteContext from '../../siteContext';
 import MdxContext from '../../mdxContext';
 
 type MdxArticleMetaEditProps = {};
 
 const MdxArticleMetaEdit: React.FunctionComponent<MdxArticleMetaEditProps> = props => (
-  <SiteContext.Consumer>
-    {siteContext => (
-      <MdxContext.Consumer>
-        {mdx => {
-          const { siteMetadata } = siteContext;
+  <MdxContext.Consumer>
+    {mdx => {
+      if (!mdx) return null;
 
-          if (!mdx) return null;
+      const originalFile = mdx.file && mdx.file.base;
 
-          const originalFile = mdx.file && mdx.file.base;
-
-          return (
-            <>
-              {siteMetadata && siteMetadata.github && siteMetadata.github.repository_url && (
-                <span className="edit">
-                  <a href={`${siteMetadata.github.repository_url}/edit/master/content/posts/${originalFile}`}>Edit</a>
-                </span>
-              )}
-            </>
-          );
-        }}
-      </MdxContext.Consumer>
-    )}
-  </SiteContext.Consumer>
+      return (
+        <>
+          {originalFile && process.env.REPOSITORY_URL && (
+            <span className="edit">
+              <a href={`${process.env.REPOSITORY_URL}/edit/${process.env.BRANCH || 'master'}/content/posts/${originalFile}`}>Edit</a>
+            </span>
+          )}
+        </>
+      );
+    }}
+  </MdxContext.Consumer>
 );
 
 export default MdxArticleMetaEdit;
