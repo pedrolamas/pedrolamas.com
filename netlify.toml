@@ -1,5 +1,5 @@
 [build]
-  command = "yarn build"
+  command = "env GATSBY_REPOSITORY_URL=$REPOSITORY_URL GATSBY_BRANCH=$BRANCH yarn build"
   publish = "public/"
 
 [[headers]]

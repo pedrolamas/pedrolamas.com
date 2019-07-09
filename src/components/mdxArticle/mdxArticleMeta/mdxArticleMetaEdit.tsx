@@ -13,9 +13,9 @@ const MdxArticleMetaEdit: React.FunctionComponent<MdxArticleMetaEditProps> = pro
 
       return (
         <>
-          {originalFile && process.env.REPOSITORY_URL && (
+          {originalFile && process.env.GATSBY_REPOSITORY_URL && process.env.GATSBY_BRANCH && (
             <span className="edit">
-              <a href={`${process.env.REPOSITORY_URL}/edit/${process.env.BRANCH || 'master'}/content/posts/${originalFile}`}>Edit</a>
+              <a href={`${process.env.GATSBY_REPOSITORY_URL}/edit/${process.env.GATSBY_BRANCH || 'master'}/content/posts/${originalFile}`}>Edit</a>
             </span>
           )}
         </>
