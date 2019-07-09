@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { MDXProvider } from '@mdx-js/react';
 
 import CodeBlock from './codeBlock';
 import Link from './link';
 
-const ABlock: React.FunctionComponent<React.AnchorHTMLAttributes<HTMLAnchorElement>> = props => {
+const ABlock: React.FunctionComponent<React.ComponentPropsWithoutRef<'a'>> = props => {
   var { href, ...restOfProps } = props;
 
   if (href) {
@@ -15,13 +15,13 @@ const ABlock: React.FunctionComponent<React.AnchorHTMLAttributes<HTMLAnchorEleme
   return <a {...props} />;
 };
 
-const PreBlock: React.FunctionComponent<any> = props => {
+const PreBlock: React.FunctionComponent<React.ComponentPropsWithoutRef<'pre'>> = props => {
   const { children } = props;
 
-  const childType = children && children.props && children.props.originalType;
+  const child = children as ReactElement<{ originalType?: string }>;
 
-  if (childType === 'code') {
-    return children;
+  if (child && child.props && child.props.originalType === 'code') {
+    return child;
   }
 
   return <pre {...props} />;

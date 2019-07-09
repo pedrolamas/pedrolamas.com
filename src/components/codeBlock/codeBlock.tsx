@@ -1,11 +1,16 @@
 import React from 'react';
-import Highlight, { defaultProps } from 'prism-react-renderer';
+import Highlight, { defaultProps, Language } from 'prism-react-renderer';
 
 import PrismLib from './prismLib';
 import Theme from './theme';
 
-const CodeBlock: React.FunctionComponent<any> = ({ children, className }) => {
-  const language = className.replace(/language-/, '');
+interface CodeBlockProps {
+  children: string;
+  className: string;
+}
+
+const CodeBlock: React.FunctionComponent<CodeBlockProps> = ({ children, className }) => {
+  const language = className.replace(/language-/, '') as Language;
 
   return (
     <Highlight {...defaultProps} code={children} language={language} theme={Theme} Prism={PrismLib}>

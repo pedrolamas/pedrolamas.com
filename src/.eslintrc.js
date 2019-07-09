@@ -14,7 +14,6 @@ module.exports = {
         allowTypedFunctionExpressions: true,
       },
     ],
-    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/prefer-interface': 'off',
   },
 }
