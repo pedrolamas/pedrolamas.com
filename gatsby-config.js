@@ -59,7 +59,7 @@ module.exports = {
         },
         gatsbyRemarkPlugins: [
           {
-            resolve: require.resolve(`./gatsbyRemarkPlugins/fix-image-urls`),
+            resolve: require.resolve(`./gatsby-remark-fix-urls`),
           },
           {
             resolve: `gatsby-remark-copy-linked-files`,
