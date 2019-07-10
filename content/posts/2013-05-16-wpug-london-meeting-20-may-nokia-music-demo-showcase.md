@@ -1,6 +1,6 @@
 ---
 id: 831
-title: 'WPUG London meeting 20 May: Nokia Music &#038; demo showcase'
+title: 'WPUG London meeting 20 May: Nokia Music & demo showcase'
 date: 2013-05-16T13:56:46+00:00
 author: Pedro Lamas
 layout: post

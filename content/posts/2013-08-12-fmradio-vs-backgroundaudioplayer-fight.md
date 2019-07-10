@@ -1,6 +1,6 @@
 ---
 id: 2241
-title: 'FMRadio vs. BackgroundAudioPlayer&#8230; fight!!'
+title: 'FMRadio vs. BackgroundAudioPlayer... fight!!'
 date: 2013-08-12T10:00:47+00:00
 author: Pedro Lamas
 layout: post

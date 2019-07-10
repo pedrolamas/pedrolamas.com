@@ -1,6 +1,6 @@
 ---
 id: 4166
-title: 'There&#8217;s never been a better time to be a Microsoft developer!'
+title: 'There''s never been a better time to be a Microsoft developer!'
 date: 2015-05-05T11:54:25+00:00
 author: Pedro Lamas
 layout: post

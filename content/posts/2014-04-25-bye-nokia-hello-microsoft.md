@@ -1,6 +1,6 @@
 ---
 id: 3967
-title: 'Bye Nokia&#8230; Hello Microsoft!'
+title: 'Bye Nokia... Hello Microsoft!'
 date: 2014-04-25T13:53:45+00:00
 author: Pedro Lamas
 layout: post
