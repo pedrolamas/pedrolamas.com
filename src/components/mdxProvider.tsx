@@ -1,5 +1,5 @@
-import React, { ReactElement } from 'react';
-import { MDXProvider } from '@mdx-js/react';
+import React from 'react';
+import { MDXProvider, MDXProviderComponents } from '@mdx-js/react';
 
 import CodeBlock from './codeBlock';
 import Link from './link';
@@ -18,7 +18,7 @@ const ABlock: React.FunctionComponent<React.ComponentPropsWithoutRef<'a'>> = pro
 const PreBlock: React.FunctionComponent<React.ComponentPropsWithoutRef<'pre'>> = props => {
   const { children } = props;
 
-  const child = children as ReactElement<{ originalType?: string }>;
+  const child = children as React.ReactElement<{ originalType?: string }>;
 
   if (child && child.props && child.props.originalType === 'code') {
     return child;
@@ -27,7 +27,7 @@ const PreBlock: React.FunctionComponent<React.ComponentPropsWithoutRef<'pre'>> =
   return <pre {...props} />;
 };
 
-const MdxProviderComponents = {
+const MdxProviderComponents: MDXProviderComponents = {
   a: ABlock,
   code: CodeBlock,
   pre: PreBlock,

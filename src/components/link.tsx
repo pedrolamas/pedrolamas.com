@@ -1,14 +1,14 @@
-import React, { ComponentPropsWithoutRef } from 'react';
+import React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 import { Location } from '@reach/router';
 import path from 'path';
 
-type LinkProps = ComponentPropsWithoutRef<typeof GatsbyLink>;
+type LinkProps = React.ComponentPropsWithoutRef<typeof GatsbyLink>;
 
 const isInternal = (url: string): boolean => !url.includes(':') && !url.startsWith('//');
 const isFile = (url: string): boolean => /\.[0-9a-z]+$/i.test(url);
 
-const linkStyle = process.env.NODE_ENV === 'development' ? ({ color: '#ff0000' } as React.CSSProperties) : undefined;
+const linkStyle: React.CSSProperties | undefined = process.env.NODE_ENV === 'development' ? { color: '#ff0000' } : undefined;
 
 const Link: React.FunctionComponent<LinkProps> = props => {
   const { to, ...restOfProps } = props;
