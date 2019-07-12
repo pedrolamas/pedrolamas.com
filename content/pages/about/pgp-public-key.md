@@ -3,11 +3,11 @@ layout: page
 title: PGP Public Key
 ---
 
-### Fingerprint
+## Fingerprint
 
 <pre>4C71 7BDC 0E45 2F5B 1349 0409 AB4C 64C5 8BA9 C3ED</pre>
 
-### Public Key
+## Public Key
 
 <pre>
 -----BEGIN PGP PUBLIC KEY BLOCK-----

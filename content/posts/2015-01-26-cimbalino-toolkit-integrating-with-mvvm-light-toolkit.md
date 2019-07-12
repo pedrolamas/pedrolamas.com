@@ -20,27 +20,27 @@ tags:
   - WPDev
 ---
 
-Picking up where we left off on the [previous article][1], you now know how to install the [Cimbalino Toolkit][2] in your app, so congratulations for that! :)
+Picking up where we left off on the [previous article](/2015/01/05/cimbalino-toolkit-step-by-step/), you now know how to install the [Cimbalino Toolkit](http://cimbalino.org) in your app, so congratulations for that! :)
 
-On this article I will show how to integrate it with the [MVVM Light Toolkit][3], and then build a really simple "Hello World" app!
+On this article I will show how to integrate it with the [MVVM Light Toolkit](http://mvvmlight.codeplex.com/), and then build a really simple "Hello World" app!
 
 **Note:** Though this article will focus on how to integrate with the MVVM Light Toolkit, the Cimbalino Toolkit can be combined with most Windows development toolkits and frameworks that are available (like MVVMCross, Caliburn, etc.)
 
 Using the same approach to add NuGet packages to the solution shown in the previous article, now search for "MvvmLight" and select the package shown in this picture:
 
-[![Searching for MVVM Light Toolkit][4]][4]
+[![Searching for MVVM Light Toolkit](/wp-content/uploads/2015/01/Searching-for-MVVM-Light-Toolkit.png)](/wp-content/uploads/2015/01/Searching-for-MVVM-Light-Toolkit.png)
 
 You should now click on the _Install_ button, confirm that you want to install the package into both projects, review the details shown in the _License Acceptance_ window, and click the _I Accept_ button.
 
-You will now see a couple of warnings about moving the _ViewModel_ folder manually; this is expected and it is due to the fact that we are building a Universal App (you can find more information about this [here][5]).
+You will now see a couple of warnings about moving the _ViewModel_ folder manually; this is expected and it is due to the fact that we are building a Universal App (you can find more information about this [here](http://www.mvvmlight.net/nuget-univ)).
 
 Look at the Solution Explorer Window, you should see that we have two _ViewModel_ folders, one on each of the projects:
 
-[![Projects with different ViewModel folders][6]][6]
+[![Projects with different ViewModel folders](/wp-content/uploads/2015/01/Projects-with-different-ViewModel-folders.png)](/wp-content/uploads/2015/01/Projects-with-different-ViewModel-folders.png)
 
 Go ahead and delete one of the _ViewModel_ folders, and move the remaining one from the project to the shared files on the bottom. The end result should look something like this:
 
-[![Projects with shared ViewModel folder][7]][7]
+[![Projects with shared ViewModel folder](/wp-content/uploads/2015/01/Projects-with-shared-ViewModel-folder.png)](/wp-content/uploads/2015/01/Projects-with-shared-ViewModel-folder.png)
 
 We now we need to register the `IMessageBoxService` with the `ViewModelLocator` so that we can use it in the `MainViewModel` to show message popups in the app!
 
@@ -80,7 +80,7 @@ namespace App1.ViewModel
 }
 ```
 
-As you can see above, we registered the `IMessageBoxService` with the MVVM Light Toolkit IoC Container by calling `SimpleIoc.Default.Register<IMessageBoxService, MessageBoxService>()`, and this is how we will use all of the services provided by Cimbalino Toolkit - and [there are quite a lot of them][8]!!
+As you can see above, we registered the `IMessageBoxService` with the MVVM Light Toolkit IoC Container by calling `SimpleIoc.Default.Register<IMessageBoxService, MessageBoxService>()`, and this is how we will use all of the services provided by Cimbalino Toolkit - and [there are quite a lot of them](https://github.com/Cimbalino/Cimbalino-Toolkit/tree/master/src/Cimbalino.Toolkit.Core%20%28Portable%29/Services)!!
 
 Now open the _MainViewModel.cs_ file and change it to the following code:
 
@@ -173,12 +173,3 @@ And... we are done!!!
 Just run the Windows project and the Windows Phone project to confirm that our shared code does in fact work across the two platforms! :)
 
 To make things even easier, you can download the full solution [here](/wp-content/uploads/downloads/2015/01/App1.zip)!
-
-[1]: https://www.pedrolamas.com/2015/01/05/cimbalino-toolkit-step-by-step/
-[2]: http://cimbalino.org
-[3]: http://mvvmlight.codeplex.com/
-[4]: /wp-content/uploads/2015/01/Searching-for-MVVM-Light-Toolkit.png
-[5]: http://www.mvvmlight.net/nuget-univ
-[6]: /wp-content/uploads/2015/01/Projects-with-different-ViewModel-folders.png
-[7]: /wp-content/uploads/2015/01/Projects-with-shared-ViewModel-folder.png
-[8]: https://github.com/Cimbalino/Cimbalino-Toolkit/tree/master/src/Cimbalino.Toolkit.Core%20%28Portable%29/Services
