@@ -25,6 +25,12 @@ export const match = <T, U>(x: T): MatchInterface<T, U> => ({
   otherwise: fn => fn(x),
 });
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const IsNumber = (x: any): x is number => typeof x === 'number';
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const IsString = (x: any): x is string => typeof x === 'string';
+
 export const IsValidDate = (date: Date): boolean => date instanceof Date && !isNaN(+date);
 
 export const ValidDateOrUndefined = (date: Date): Date | undefined => (IsValidDate(date) ? date : undefined);
