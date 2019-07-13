@@ -17,8 +17,11 @@ const HBlockFactory = <T extends HBlockType>(headerBlock: T): React.FunctionComp
           id: slug,
         },
         <>
+          {
+            // eslint-disable-next-line jsx-a11y/anchor-has-content
+            <a href={`#${slug}`} aria-labelledby={slug} />
+          }
           {children}
-          <a href={`#${slug}`}>#</a>
         </>
       );
     }

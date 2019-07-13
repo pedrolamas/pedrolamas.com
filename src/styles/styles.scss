@@ -43,6 +43,7 @@ figcaption {
     width: 100px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1rem;
     border-radius: 50%;
   }
 
@@ -229,6 +230,21 @@ figcaption {
   }
 }
 
+.content {
+  h1 a, h2 a, h3 a, h4 a {
+    font-size: 0.8rem;
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:before {
+      font-family: FontAwesome;
+      content: '\f292';
+      width: 22px;
+    }
+  }
+}
+
 .content-footer {
   font-size: 0.6rem;
   text-align: center;
@@ -277,6 +293,18 @@ figcaption {
 
   .content {
     margin-left: 22rem;
+
+    h1 a, h2 a, h3 a, h4 a {
+      opacity: 0;
+
+      &:before {
+        width: 22px;
+        margin-left: -22px;
+      }
+    }
+    h1:hover a, h2:hover a, h3:hover a, h4:hover a {
+      opacity: 1;
+    }
   }
 }
 
