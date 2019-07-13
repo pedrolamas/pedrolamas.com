@@ -1,6 +1,6 @@
 ---
 id: 4455
-title: 'Still Strong-Naming your Assemblies? You do know it''s 2016, right?'
+title: "Still Strong-Naming your Assemblies? You do know it's 2016, right?"
 date: 2016-03-01T15:56:14+00:00
 last_modified_at: 2018-09-17T23:53:14+01:00
 author: Pedro Lamas
