@@ -212,6 +212,30 @@ figcaption {
   }
 }
 
+.post-content {
+  %header-style {
+    a {
+      font-size: 0.8rem;
+      font-weight: normal;
+      display: inline-block;
+      vertical-align: middle;
+
+      &:before {
+        font-family: FontAwesome;
+        content: '\f292';
+        width: 22px;
+      }
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @extend %header-style;
+  }
+}
+
 .post-entry {
   margin-top: 0;
 
@@ -226,21 +250,6 @@ figcaption {
 
     small {
       color: inherit;
-    }
-  }
-}
-
-.content {
-  h1 a, h2 a, h3 a, h4 a {
-    font-size: 0.8rem;
-    font-weight: normal;
-    display: inline-block;
-    vertical-align: middle;
-
-    &:before {
-      font-family: FontAwesome;
-      content: '\f292';
-      width: 22px;
     }
   }
 }
@@ -293,17 +302,35 @@ figcaption {
 
   .content {
     margin-left: 22rem;
+  }
 
-    h1 a, h2 a, h3 a, h4 a {
-      opacity: 0;
+  .post-content {
+    %wide-header-style {
+      a {
+        opacity: 0;
 
-      &:before {
-        width: 22px;
-        margin-left: -22px;
+        &:before {
+          width: 22px;
+          margin-left: -22px;
+        }
+
+        &:focus {
+          opacity: 1;
+          text-decoration: none;
+        }
+      }
+
+      &:hover a {
+        opacity: 1;
+        text-decoration: none;
       }
     }
-    h1:hover a, h2:hover a, h3:hover a, h4:hover a {
-      opacity: 1;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      @extend %wide-header-style;
     }
   }
 }
