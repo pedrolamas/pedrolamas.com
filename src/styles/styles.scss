@@ -212,18 +212,18 @@ figcaption {
   }
 }
 
-.post-content {
+.page-content, .post-content {
   %header-style {
     a {
-      font-size: 0.8rem;
-      font-weight: normal;
-      display: inline-block;
-      vertical-align: middle;
+      margin-left: 8px;
 
       &:before {
         font-family: FontAwesome;
+        font-size: 0.8rem;
+        font-weight: normal;
         content: '\f292';
-        width: 22px;
+        display: inline-block;
+        vertical-align: middle;
       }
     }
   }
@@ -304,15 +304,16 @@ figcaption {
     margin-left: 22rem;
   }
 
-  .post-content {
+  .page-content, .post-content {
     %wide-header-style {
       a {
+        float: left;
+        margin-left: -24px;
+        padding-right: 8px;
         opacity: 0;
 
-        &:before {
-          width: 22px;
-          margin-left: -22px;
-        }
+        // &:before {
+        // }
 
         &:focus {
           opacity: 1;
