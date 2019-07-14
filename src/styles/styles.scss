@@ -1,8 +1,17 @@
 @import url('//fonts.googleapis.com/css?family=PT+Sans:400,700');
-@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://use.fontawesome.com/releases/v5.9.0/css/all.css');
 
 @import 'base/poole';
 @import 'base/hyde';
+
+%font-awesome-5-free {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+%font-awesome-5-brands {
+  font-family: 'Font Awesome 5 Brands';
+}
 
 li {
   img {
@@ -32,8 +41,8 @@ figcaption {
   color: #999;
 
   &:before {
+    @extend %font-awesome-5-free;
     content: '\f129';
-    font-family: FontAwesome;
     margin-right: 5px;
   }
 }
@@ -80,7 +89,7 @@ figcaption {
   }
 
   &:before {
-    font-family: FontAwesome;
+    @extend %font-awesome-5-brands;
     font-size: 16px;
     content: '\f1e0';
     width: 34px;
@@ -97,7 +106,7 @@ figcaption {
   }
 
   &[href*='facebook.com']:before {
-    content: '\f09a';
+    content: '\f39e';
   }
 
   &[href*='linkedin.com']:before {
@@ -105,6 +114,7 @@ figcaption {
   }
 
   &[title='Syndicated Feeds']:before {
+    @extend %font-awesome-5-free;
     content: '\f09e';
   }
 }
@@ -128,7 +138,7 @@ figcaption {
     margin-right: 10px;
 
     &:before {
-      font-family: FontAwesome;
+      @extend %font-awesome-5-free;
       margin-right: 4px;
     }
   }
@@ -218,9 +228,8 @@ figcaption {
       margin-left: 8px;
 
       &:before {
-        font-family: FontAwesome;
+        @extend %font-awesome-5-free;
         font-size: 0.8rem;
-        font-weight: normal;
         content: '\f292';
         display: inline-block;
         vertical-align: middle;
