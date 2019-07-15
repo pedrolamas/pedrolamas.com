@@ -13,6 +13,23 @@
   font-family: 'Font Awesome 5 Brands';
 }
 
+h1,
+h2,
+h3,
+h4 {
+  a.anchor {
+    margin-left: 8px;
+
+    &:before {
+      @extend %font-awesome-5-free;
+      font-size: 0.8rem;
+      content: '\f292';
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
 li {
   img {
     display: inline-block;
@@ -222,29 +239,6 @@ figcaption {
   }
 }
 
-.page-content, .post-content {
-  %header-style {
-    a {
-      margin-left: 8px;
-
-      &:before {
-        @extend %font-awesome-5-free;
-        font-size: 0.8rem;
-        content: '\f292';
-        display: inline-block;
-        vertical-align: middle;
-      }
-    }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    @extend %header-style;
-  }
-}
-
 .post-entry {
   margin-top: 0;
 
@@ -292,6 +286,28 @@ figcaption {
 }
 
 @media (min-width: 48em) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    %anchor-visible {
+      opacity: 1;
+      text-decoration: none;
+    }
+
+    a.anchor {
+      opacity: 0;
+
+      &:focus {
+        @extend %anchor-visible;
+      }
+    }
+
+    &:hover a.anchor {
+      @extend %anchor-visible;
+    }
+  }
+
   .sidebar {
     width: 20rem;
   }
@@ -311,37 +327,6 @@ figcaption {
 
   .content {
     margin-left: 22rem;
-  }
-
-  .page-content, .post-content {
-    %wide-header-style {
-      a {
-        float: left;
-        margin-left: -24px;
-        padding-right: 8px;
-        opacity: 0;
-
-        // &:before {
-        // }
-
-        &:focus {
-          opacity: 1;
-          text-decoration: none;
-        }
-      }
-
-      &:hover a {
-        opacity: 1;
-        text-decoration: none;
-      }
-    }
-
-    h1,
-    h2,
-    h3,
-    h4 {
-      @extend %wide-header-style;
-    }
   }
 }
 
