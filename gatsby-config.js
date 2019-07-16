@@ -55,17 +55,11 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
-          default: require.resolve('./src/components/mdxPageLayout.tsx'),
+          default: require.resolve(`./src/components/mdxPageLayout.tsx`),
         },
         gatsbyRemarkPlugins: [
           {
             resolve: require.resolve(`./gatsby-remark-fix-urls`),
-          },
-          {
-            resolve: `gatsby-remark-copy-linked-files`,
-            options: {
-              ignoreFileExtensions: [],
-            },
           },
           {
             resolve: `gatsby-remark-images`,
@@ -74,11 +68,16 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          `gatsby-remark-responsive-iframe`,
           {
-            resolve: `gatsby-remark-smartypants`,
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              ignoreFileExtensions: [],
+            },
           },
+          `gatsby-remark-responsive-iframe`,
+          `gatsby-remark-smartypants`,
         ],
+        plugins: [`gatsby-remark-images`],
       },
     },
     `gatsby-plugin-twitter`,
