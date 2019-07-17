@@ -1,7 +1,7 @@
 import React from 'react';
 
-import MdxContext from '../mdxContext';
 import MdxRenderer from '../mdxRenderer';
+import MdxContext from '../mdxContext';
 
 type MdxArticleContentProps = {
   children?: never;
@@ -9,11 +9,11 @@ type MdxArticleContentProps = {
 
 const MdxArticleContent: React.FunctionComponent<MdxArticleContentProps> = () => (
   <MdxContext.Consumer>
-    {mdx => (
+    {mdxContext => (
       <>
-        {mdx && (
+        {mdxContext.mdx && (
           <div className="post-content">
-            <MdxRenderer>{mdx}</MdxRenderer>
+            <MdxRenderer>{mdxContext.mdx}</MdxRenderer>
           </div>
         )}
       </>

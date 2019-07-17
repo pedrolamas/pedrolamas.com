@@ -1,7 +1,20 @@
 import React from 'react';
 
-import { GraphQl } from '../utils';
+import { GraphQl, Utils } from '../utils';
 
-const MdxContext = React.createContext<GraphQl.PostMdxFragment | undefined>(undefined);
+type MdxContextProps = {
+  mdx?: GraphQl.PostMdxFragment;
+  meta: Utils.SafeMdxMetadata;
+};
+
+const MdxContext = React.createContext<MdxContextProps>({
+  meta: {
+    id: '',
+    title: '(untitled)',
+    url: '',
+    date: '',
+    dateFormatted: '',
+  },
+});
 
 export default MdxContext;

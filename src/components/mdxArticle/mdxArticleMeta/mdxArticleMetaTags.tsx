@@ -10,12 +10,8 @@ type MdxArticleMetaTagsProps = {
 
 const MdxArticleMetaTags: React.FunctionComponent<MdxArticleMetaTagsProps> = () => (
   <MdxContext.Consumer>
-    {mdx => {
-      if (!mdx) return null;
-
-      const { frontmatter } = mdx;
-
-      const tags = frontmatter && frontmatter.tags;
+    {mdxContext => {
+      const { tags } = mdxContext.meta;
 
       return (
         <>

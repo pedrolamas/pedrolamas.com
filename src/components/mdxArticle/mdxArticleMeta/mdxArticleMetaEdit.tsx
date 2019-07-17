@@ -6,10 +6,8 @@ type MdxArticleMetaEditProps = {};
 
 const MdxArticleMetaEdit: React.FunctionComponent<MdxArticleMetaEditProps> = props => (
   <MdxContext.Consumer>
-    {mdx => {
-      if (!mdx) return null;
-
-      const originalFile = mdx.file && mdx.file.base;
+    {mdxContext => {
+      const { originalFile } = mdxContext.meta;
 
       return (
         <>

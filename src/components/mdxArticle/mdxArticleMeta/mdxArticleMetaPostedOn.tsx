@@ -2,7 +2,6 @@ import React from 'react';
 
 import MdxContext from '../../mdxContext';
 import Link from '../../link';
-import { Utils } from '../../../utils';
 
 type MdxArticleMetaPostedOnProps = {
   children?: never;
@@ -10,10 +9,8 @@ type MdxArticleMetaPostedOnProps = {
 
 const MdxArticleMetaPostedOn: React.FunctionComponent<MdxArticleMetaPostedOnProps> = () => (
   <MdxContext.Consumer>
-    {mdx => {
-      if (!mdx) return null;
-
-      const { url, date, dateFormatted } = Utils.SafeMetadataFromMdx(mdx);
+    {mdxContext => {
+      const { url, date, dateFormatted } = mdxContext.meta;
 
       return (
         <span className="posted-on">

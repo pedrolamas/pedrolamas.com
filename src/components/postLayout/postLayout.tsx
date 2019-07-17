@@ -7,7 +7,7 @@ import PostLayoutArticle from './postLayoutArticle';
 import PostLayoutAuthor from './postLayoutAuthor';
 import PostLayoutNavigation from './postLayoutNavigation';
 import MdxContext from '../mdxContext';
-import { Utils, GraphQl } from '../../utils/';
+import { GraphQl, Utils } from '../../utils/';
 
 type PostLayoutProps = {
   data: GraphQl.PostLayoutQuery;
@@ -18,13 +18,18 @@ const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {
 
   if (!mdx) throw Error('Mdx expected!');
 
-  const { title } = Utils.SafeMetadataFromMdx(mdx);
+  const mdxMeta = Utils.SafeMetadataFromMdx(mdx);
 
   return (
     <RootLayout>
-      <Head title={title} />
+      <Head title={mdxMeta.title} />
 
-      <MdxContext.Provider value={mdx}>
+      <MdxContext.Provider
+        value={{
+          mdx,
+          meta: mdxMeta,
+        }}
+      >
         <main role="main">
           <PostLayoutArticle />
 

@@ -9,12 +9,10 @@ type MdxArticleImageProps = {
 
 const MdxArticleImage: React.FunctionComponent<MdxArticleImageProps> = () => (
   <MdxContext.Consumer>
-    {mdx => {
-      if (!mdx) return null;
+    {mdxContext => {
+      const { image } = mdxContext.meta;
 
-      const { frontmatter } = mdx;
-
-      const fluid = frontmatter && frontmatter.image && frontmatter.image.childImageSharp && frontmatter.image.childImageSharp.fluid;
+      const fluid = image && image.childImageSharp && image.childImageSharp.fluid;
 
       if (!fluid) return null;
 

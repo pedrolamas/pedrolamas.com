@@ -2,7 +2,6 @@ import React from 'react';
 
 import MdxArticle from '../mdxArticle';
 import MdxContext from '../mdxContext';
-import { Utils } from '../../utils';
 
 type PostLayoutArticleProps = {
   children?: never;
@@ -10,10 +9,8 @@ type PostLayoutArticleProps = {
 
 const PostLayoutArticle: React.FunctionComponent<PostLayoutArticleProps> = () => (
   <MdxContext.Consumer>
-    {mdx => {
-      if (!mdx) return null;
-
-      const { id, title } = Utils.SafeMetadataFromMdx(mdx);
+    {mdxContext => {
+      const { id, title } = mdxContext.meta;
 
       return (
         <article id={`post${id}`} className={`post post${id}`}>

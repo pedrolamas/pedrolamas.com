@@ -10,12 +10,8 @@ type MdxArticleMetaCategoriesProps = {
 
 const MdxArticleMetaCategories: React.FunctionComponent<MdxArticleMetaCategoriesProps> = () => (
   <MdxContext.Consumer>
-    {mdx => {
-      if (!mdx) return null;
-
-      const { frontmatter } = mdx;
-
-      const categories = frontmatter && frontmatter.categories;
+    {mdxContext => {
+      const { categories } = mdxContext.meta;
 
       return (
         <>

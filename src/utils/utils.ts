@@ -37,16 +37,22 @@ export const ValidDateOrUndefined = (date: Date): Date | undefined => (IsValidDa
 
 export const Slug = (path: string): string => slugify(path.replace(/\./g, 'dot'));
 
-type SafeMdxMetadata = {
+type PostMdxFrontmatterType = GraphQl.PostMdxFragment extends { frontmatter: infer T } ? NonNullable<T> : unknown;
+
+export type SafeMdxMetadata = {
   id: string;
   title: string;
   url: string;
   date: string;
   dateFormatted: string;
+  categories?: string[];
+  tags?: string[];
+  image?: PostMdxFrontmatterType extends { image: infer T } ? NonNullable<T> : unknown;
+  originalFile?: string;
 };
 
-export const SafeMetadataFromMdx = (mdx: Partial<GraphQl.Mdx>): SafeMdxMetadata => {
-  const { id, fields, frontmatter } = mdx;
+export const SafeMetadataFromMdx = (mdx: Partial<GraphQl.Mdx> & Partial<GraphQl.PostMdxFragment>): SafeMdxMetadata => {
+  const { id, fields, frontmatter, file } = mdx;
 
   return {
     id: id || '',
@@ -54,5 +60,9 @@ export const SafeMetadataFromMdx = (mdx: Partial<GraphQl.Mdx>): SafeMdxMetadata 
     url: (fields && fields.slug) || '',
     date: (frontmatter && frontmatter.date) || '',
     dateFormatted: (frontmatter && frontmatter.dateFormatted) || '',
+    categories: (frontmatter && frontmatter.categories && (frontmatter.categories.filter(x => x) as string[])) || undefined,
+    tags: (frontmatter && frontmatter.tags && (frontmatter.tags.filter(x => x) as string[])) || undefined,
+    image: (frontmatter && frontmatter.image) || undefined,
+    originalFile: (file && file.base) || undefined,
   };
 };

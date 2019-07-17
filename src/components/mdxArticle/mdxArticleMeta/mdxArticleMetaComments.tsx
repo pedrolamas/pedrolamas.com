@@ -4,7 +4,6 @@ import Disqus from 'disqus-react';
 import Link from '../../link';
 import SiteContext from '../../siteContext';
 import MdxContext from '../../mdxContext';
-import { Utils } from '../../../utils';
 
 type MdxArticleMetaCommentsProps = {
   children?: never;
@@ -14,12 +13,9 @@ const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProp
   <SiteContext.Consumer>
     {siteContext => (
       <MdxContext.Consumer>
-        {mdx => {
+        {mdxContext => {
           const { siteMetadata } = siteContext;
-
-          if (!mdx) return null;
-
-          const { url } = Utils.SafeMetadataFromMdx(mdx);
+          const { url } = mdxContext.meta;
 
           const disqusConfig = {
             url: url,

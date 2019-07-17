@@ -3,7 +3,7 @@ import React from 'react';
 import MdxArticle from '../mdxArticle';
 import Link from '../link';
 import MdxContext from '../mdxContext';
-import { Utils, GraphQl } from '../../utils';
+import { GraphQl, Utils } from '../../utils';
 
 type IndexLayoutPostsProps = {
   data: GraphQl.IndexLayoutQuery;
@@ -17,10 +17,17 @@ const IndexLayoutPosts: React.FunctionComponent<IndexLayoutPostsProps> = ({ data
   return (
     <>
       {posts.map(({ node }, index) => {
-        const { id, title, url } = Utils.SafeMetadataFromMdx(node);
+        const mdxMeta = Utils.SafeMetadataFromMdx(node);
+        const { id, title, url } = mdxMeta;
 
         return (
-          <MdxContext.Provider value={node} key={index}>
+          <MdxContext.Provider
+            value={{
+              mdx: node,
+              meta: mdxMeta,
+            }}
+            key={index}
+          >
             <article id={`post${id}`} className={`post post${id}`}>
               <header className="post-header">
                 <h1 className="post-title">
