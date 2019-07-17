@@ -1,6 +1,6 @@
 import { slugify } from 'underscore.string';
 
-import { Mdx } from './graphql.generated';
+import * as GraphQl from './graphql.generated';
 
 type predType<T> = (x: T) => boolean;
 type fnType<T, U> = (x: T) => U;
@@ -45,7 +45,7 @@ type SafeMdxMetadata = {
   dateFormatted: string;
 };
 
-export const SafeMetadataFromMdx = (mdx: Partial<Mdx>): SafeMdxMetadata => {
+export const SafeMetadataFromMdx = (mdx: Partial<GraphQl.Mdx>): SafeMdxMetadata => {
   const { id, fields, frontmatter } = mdx;
 
   return {
