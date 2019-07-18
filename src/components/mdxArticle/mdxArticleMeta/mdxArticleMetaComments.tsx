@@ -15,21 +15,23 @@ const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProp
       <MdxContext.Consumer>
         {mdxContext => {
           const { siteMetadata } = siteContext;
-          const { url } = mdxContext.meta;
+          const { title, url } = mdxContext.meta;
 
           const disqusConfig = {
-            url: url,
+            url,
             identifier: '',
-            title: '',
+            title,
           };
 
           return (
             <>
               {siteMetadata && siteMetadata.disqus_shortname && (
                 <span className="comments">
-                  <Disqus.CommentCount shortname={siteMetadata.disqus_shortname} config={disqusConfig}>
-                    <Link to={`${url}#disqus_thread`}>Comments</Link>
-                  </Disqus.CommentCount>
+                  <Link to={`${url}#disqus_thread`}>
+                    <Disqus.CommentCount shortname={siteMetadata.disqus_shortname} config={disqusConfig}>
+                      Comments
+                    </Disqus.CommentCount>
+                  </Link>
                 </span>
               )}
             </>
