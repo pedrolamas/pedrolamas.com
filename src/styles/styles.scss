@@ -18,15 +18,8 @@ h2,
 h3,
 h4 {
   a.anchor {
-    margin-left: 8px;
-
-    &:before {
-      @extend %font-awesome-5-free;
-      font-size: 0.8rem;
-      content: '\f292';
-      display: inline-block;
-      vertical-align: middle;
-    }
+    position: absolute;
+    opacity: 0;
   }
 }
 
@@ -296,7 +289,15 @@ figcaption {
     }
 
     a.anchor {
-      opacity: 0;
+      margin-left: 8px;
+
+      &:before {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        font-size: 0.8rem;
+        content: '\f292';
+        vertical-align: middle;
+      }
 
       &:focus {
         @extend %anchor-visible;
