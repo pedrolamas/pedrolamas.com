@@ -25,11 +25,8 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
                 body
               }
             }
-            disqus {
-              shortname
-              website_url
-            }
-            google_analytics
+            disqusShortname
+            googleAnalytics
             lang
             logo {
               childImageSharp {
@@ -38,22 +35,22 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
                 }
               }
             }
-            addthis_profile
-            author {
+            addthisProfile
+            author
+            authorDetails {
               biography {
                 code {
                   body
                 }
               }
               email
-              name
               picture
               twitter
               uri
             }
             facebook {
               admins
-              app_id
+              appId
               publisher
             }
             sidebar {
@@ -70,7 +67,6 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
             }
             social {
               links
-              name
             }
             twitter {
               username

@@ -12,20 +12,16 @@ const PostLayoutAuthor: React.FunctionComponent<PostLayoutAuthorProps> = () => (
 
       if (!siteMetadata) return null;
 
-      const { author } = siteMetadata;
+      const { author, authorDetails } = siteMetadata;
 
       return (
-        <>
-          {author && author.picture && author.name && (
-            <section className="post-author">
-              <img src={author.picture} className="author-thumbnail" alt={author.name} />
-              <div className="author-biography">
-                <h2>by {author.name}</h2>
-                {author.biography && <MdxRenderer>{author.biography}</MdxRenderer>}
-              </div>
-            </section>
-          )}
-        </>
+        <section className="post-author">
+          {authorDetails && authorDetails.picture && <img src={authorDetails.picture} className="author-thumbnail" alt={author} />}
+          <div className="author-biography">
+            <h2>by {author}</h2>
+            {authorDetails && authorDetails.biography && <MdxRenderer>{authorDetails.biography}</MdxRenderer>}
+          </div>
+        </section>
       );
     }}
   </SiteContext.Consumer>

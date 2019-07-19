@@ -17,17 +17,17 @@ const PostLayoutComments: React.FunctionComponent<PostLayoutCommentsProps> = () 
 
           if (!siteMetadata) return null;
 
-          const { disqus } = siteMetadata;
+          const { siteUrl, disqusShortname } = siteMetadata;
 
-          if (!disqus || !disqus.shortname) return null;
+          if (!disqusShortname) return null;
 
           const disqusConfig = {
-            url: disqus.website_url ? path.join(disqus.website_url, url) : url,
+            url: siteUrl ? path.join(siteUrl, url) : url,
             identifier: '',
             title,
           };
 
-          return <Disqus.DiscussionEmbed shortname={disqus.shortname} config={disqusConfig} />;
+          return <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />;
         }}
       </MdxContext.Consumer>
     )}

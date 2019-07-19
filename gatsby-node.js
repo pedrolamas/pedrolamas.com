@@ -75,14 +75,15 @@ exports.sourceNodes = ({ actions }) => {
     `type SiteSiteMetadata @infer {
       title: String!
       description: String
+      author: String!
+      siteUrl: String!
       lang: String
       logo: File @link(by: "relativePath")
       disclaimer: Mdx @link(by: "rawBody")
-      author: SiteSiteMetadataAuthor!
+      authorDetails: SiteSiteMetadataAuthorDetails
       sidebar: SiteSiteMetadataSidebar
     }`,
-    `type SiteSiteMetadataAuthor @infer {
-      name: String!
+    `type SiteSiteMetadataAuthorDetails @infer {
       biography: Mdx @link(by: "rawBody")
     }`,
     `type SiteSiteMetadataSidebar @infer {

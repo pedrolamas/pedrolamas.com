@@ -44,8 +44,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `pedrolamas.com`,
-        short_name: `pedrolamas.com`,
+        name: siteMetadata.title,
+        short_name: siteMetadata.title,
         start_url: `/`,
         background_color: `#202020`,
         theme_color: `#202020`,
@@ -84,9 +84,62 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-feed-generator',
+      options: {
+        generator: `GatsbyJS`,
+        rss: true,
+        json: true,
+        siteQuery: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                author
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            name: 'feed',
+            query: `
+              {
+                allMdx(filter: { fields: { slug: { ne: null } } }, sort: { order: DESC, fields: [frontmatter___date] }) {
+                  edges {
+                    node {
+                      html
+                      frontmatter {
+                        date
+                        title
+                      }
+                      fields {
+                        slug
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            normalize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
+                return {
+                  title: edge.node.frontmatter.title,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  html: edge.node.html,
+                };
+              });
+            },
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: siteMetadata.google_analytics,
+        trackingId: siteMetadata.googleAnalytics,
         head: true,
         respectDNT: true,
       },

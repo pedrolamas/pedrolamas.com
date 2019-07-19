@@ -29,7 +29,7 @@ const Head: React.FunctionComponent<HeadProps> = props => (
         },
         {
           name: `author`,
-          content: author.name,
+          content: author,
         },
         {
           property: `og:title`,
@@ -57,7 +57,7 @@ const Head: React.FunctionComponent<HeadProps> = props => (
         },
         {
           name: `twitter:creator`,
-          content: author.name,
+          content: author,
         },
         {
           name: `twitter:title`,

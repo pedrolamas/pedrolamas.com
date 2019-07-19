@@ -20,12 +20,12 @@ const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProp
 
           if (!siteMetadata) return null;
 
-          const { disqus } = siteMetadata;
+          const { siteUrl, disqusShortname } = siteMetadata;
 
-          if (!disqus || !disqus.shortname) return null;
+          if (!disqusShortname) return null;
 
           const disqusConfig = {
-            url: disqus.website_url ? path.join(disqus.website_url, url) : url,
+            url: siteUrl ? path.join(siteUrl, url) : url,
             identifier: '',
             title,
           };
@@ -33,7 +33,7 @@ const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProp
           return (
             <span className="comments">
               <Link to={`${url}#disqus_thread`}>
-                <Disqus.CommentCount shortname={disqus.shortname} config={disqusConfig}>
+                <Disqus.CommentCount shortname={disqusShortname} config={disqusConfig}>
                   Comments
                 </Disqus.CommentCount>
               </Link>

@@ -14,7 +14,7 @@ const Footer: React.FunctionComponent<FooterProps> = () => (
 
       if (!siteMetadata) return null;
 
-      const { disclaimer, addthis_profile: addthisProfile } = siteMetadata;
+      const { disclaimer, addthisProfile } = siteMetadata;
 
       return (
         <>

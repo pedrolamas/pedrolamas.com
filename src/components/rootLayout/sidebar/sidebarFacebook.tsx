@@ -18,9 +18,9 @@ const SidebarFacebook: React.FunctionComponent<SidebarFacebookProps> = props => 
 
       return (
         <>
-          {facebook && facebook.app_id && facebook.publisher && (
+          {facebook && facebook.appId && facebook.publisher && (
             <div className="sidebar-facebook">
-              <FacebookProvider appId={facebook.app_id.toString()}>
+              <FacebookProvider appId={facebook.appId}>
                 <Like href={`https://www.facebook.com/${facebook.publisher}`} width={320} layout="standard" action="like" size="small" showFaces={true} share={false} colorScheme="dark" />
               </FacebookProvider>
             </div>
