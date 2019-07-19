@@ -69,6 +69,35 @@ exports.sourceNodes = ({ actions }) => {
   const { createTypes } = actions;
 
   const typeDefs = [
+    `type Site implements Node @infer {
+      siteMetadata: SiteSiteMetadata!
+    }`,
+    `type SiteSiteMetadata @infer {
+      title: String!
+      description: String
+      lang: String
+      logo: File @link(by: "relativePath")
+      disclaimer: Mdx @link(by: "rawBody")
+      author: SiteSiteMetadataAuthor!
+      sidebar: SiteSiteMetadataSidebar
+    }`,
+    `type SiteSiteMetadataAuthor @infer {
+      name: String!
+      biography: Mdx @link(by: "rawBody")
+    }`,
+    `type SiteSiteMetadataSidebar @infer {
+      logos: [SiteSiteMetadataSidebarLogos]
+    }`,
+    `type SiteSiteMetadataSidebarLogos @infer {
+      image: File! @link(by: "relativePath")
+      title: String!
+    }`,
+    `type SitemapYaml implements Node @infer {
+      sub: [SitemapYamlSub]
+    }`,
+    `type SitemapYamlSub @infer {
+      sub: [SitemapYamlSub]
+    }`,
     `type Mdx implements Node @infer {
       frontmatter: MdxFrontmatter
     }`,
@@ -81,28 +110,6 @@ exports.sourceNodes = ({ actions }) => {
       layout: String
       tags: [String]
       title: String
-    }`,
-    `type DataYaml implements Node @infer {
-      author: DataYamlAuthor
-      disclaimer: Mdx @link(by: "rawBody")
-      logo: File @link(by: "relativePath")
-      sidebar: DataYamlSidebar
-    }`,
-    `type DataYamlAuthor @infer {
-      biography: Mdx @link(by: "rawBody")
-    }`,
-    `type DataYamlSidebar @infer {
-      logos: [DataYamlSidebarLogos]
-    }`,
-    `type DataYamlSidebarLogos @infer {
-      image: File @link(by: "relativePath")
-      title: String
-    }`,
-    `type SitemapYaml implements Node @infer {
-      sub: [SitemapYamlSub]
-    }`,
-    `type SitemapYamlSub @infer {
-      sub: [SitemapYamlSub]
     }`,
   ];
 

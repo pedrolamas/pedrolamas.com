@@ -20,9 +20,6 @@ const Head: React.FunctionComponent<HeadProps> = props => (
 
       const { description, author, title, lang } = siteMetadata;
 
-      if (!title) throw Error('Site needs a title!');
-      if (!author || !author.name) throw Error('Site needs an author!');
-
       const metaDescription = props.description || description || undefined;
 
       const metaProps: MetaProps[] = [

@@ -13,66 +13,68 @@ type RootLayoutProperties = {
 };
 
 const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children }) => {
-  const { dataYaml } = useStaticQuery<GraphQl.RootLayoutQuery>(
+  const { site } = useStaticQuery<GraphQl.RootLayoutQuery>(
     graphql`
       query RootLayout {
-        dataYaml {
-          title
-          description
-          disclaimer {
-            code {
-              body
-            }
-          }
-          disqus {
-            shortname
-            website_url
-          }
-          google_analytics
-          lang
-          logo {
-            childImageSharp {
-              fluid(maxWidth: 160) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          addthis_profile
-          author {
-            biography {
+        site {
+          siteMetadata {
+            title
+            description
+            disclaimer {
               code {
                 body
               }
             }
-            email
-            name
-            picture
-            twitter
-            uri
-          }
-          facebook {
-            admins
-            app_id
-            publisher
-          }
-          sidebar {
-            logos {
-              title
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 200, fit: CONTAIN) {
-                    ...GatsbyImageSharpFluid
+            disqus {
+              shortname
+              website_url
+            }
+            google_analytics
+            lang
+            logo {
+              childImageSharp {
+                fluid(maxWidth: 160) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            addthis_profile
+            author {
+              biography {
+                code {
+                  body
+                }
+              }
+              email
+              name
+              picture
+              twitter
+              uri
+            }
+            facebook {
+              admins
+              app_id
+              publisher
+            }
+            sidebar {
+              logos {
+                title
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 200, fit: CONTAIN) {
+                      ...GatsbyImageSharpFluid
+                    }
                   }
                 }
               }
             }
-          }
-          social {
-            links
-            name
-          }
-          twitter {
-            username
+            social {
+              links
+              name
+            }
+            twitter {
+              username
+            }
           }
         }
       }
@@ -82,7 +84,7 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
   return (
     <SiteContext.Provider
       value={{
-        siteMetadata: dataYaml || undefined,
+        siteMetadata: (site && site.siteMetadata) || undefined,
       }}
     >
       <Sidebar />

@@ -1,4 +1,7 @@
+const siteMetadata = require('./gatsby-site-metadata');
+
 module.exports = {
+  siteMetadata,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -83,7 +86,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-1376452-1',
+        trackingId: siteMetadata.google_analytics,
         head: true,
         respectDNT: true,
       },
