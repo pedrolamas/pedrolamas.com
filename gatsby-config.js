@@ -80,6 +80,14 @@ module.exports = {
         plugins: [`gatsby-remark-images`],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-1376452-1',
+        head: true,
+        respectDNT: true,
+      },
+    },
     `gatsby-plugin-twitter`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-typescript`,
