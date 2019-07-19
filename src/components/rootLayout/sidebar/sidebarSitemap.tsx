@@ -2,7 +2,6 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Link from '../../link';
-import SiteContext from '../../siteContext';
 import { GraphQl } from '../../../utils';
 
 type SidebarSitemapProps = {
@@ -26,32 +25,22 @@ const SidebarSitemap: React.FunctionComponent<SidebarSitemapProps> = () => {
   );
 
   return (
-    <SiteContext.Consumer>
-      {siteContext => {
-        const { siteMetadata } = siteContext;
+    <>
+      {allSitemapYaml && (
+        <nav className="sidebar-nav" role="navigation" aria-label="Primary Menu">
+          {allSitemapYaml.edges.map(({ node }, index) => {
+            const title = node.title || '(untitled)';
+            const url = node.url || '';
 
-        if (!siteMetadata) return null;
-
-        return (
-          <>
-            {allSitemapYaml && (
-              <nav className="sidebar-nav" role="navigation" aria-label="Primary Menu">
-                {allSitemapYaml.edges.map(({ node }, index) => {
-                  const title = node.title || '(untitled)';
-                  const url = node.url || '';
-
-                  return (
-                    <Link className="sidebar-nav-item" to={url} key={index}>
-                      {title}
-                    </Link>
-                  );
-                })}
-              </nav>
-            )}
-          </>
-        );
-      }}
-    </SiteContext.Consumer>
+            return (
+              <Link className="sidebar-nav-item" to={url} key={index}>
+                {title}
+              </Link>
+            );
+          })}
+        </nav>
+      )}
+    </>
   );
 };
 

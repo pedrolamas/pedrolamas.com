@@ -10,7 +10,9 @@ const PostLayoutAuthor: React.FunctionComponent<PostLayoutAuthorProps> = () => (
     {siteContext => {
       const { siteMetadata } = siteContext;
 
-      const author = siteMetadata && siteMetadata.author;
+      if (!siteMetadata) return null;
+
+      const { author } = siteMetadata;
 
       return (
         <>

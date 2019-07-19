@@ -13,15 +13,17 @@ const SidebarAbout: React.FunctionComponent<SidebarAboutProps> = props => (
 
       if (!siteMetadata) return null;
 
+      const { logo, title, description } = siteMetadata;
+
       return (
         <div className="sidebar-about">
-          {siteMetadata.logo && siteMetadata.logo.childImageSharp && <Img className="sidebar-logo" fluid={siteMetadata.logo.childImageSharp.fluid as FluidObject} />}
+          {logo && logo.childImageSharp && <Img className="sidebar-logo" fluid={logo.childImageSharp.fluid as FluidObject} />}
           <h1>
             <Link to="/" rel="home">
-              {siteMetadata.title}
+              {title}
             </Link>
           </h1>
-          <p className="lead">{siteMetadata.description}</p>
+          <p className="lead">{description}</p>
         </div>
       );
     }}

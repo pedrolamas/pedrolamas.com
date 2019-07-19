@@ -13,11 +13,13 @@ const SidebarFacebook: React.FunctionComponent<SidebarFacebookProps> = props => 
 
       if (!siteMetadata) return null;
 
+      const { facebook } = siteMetadata;
+
       return (
         <>
-          {siteMetadata.facebook && siteMetadata.facebook.app_id && siteMetadata.facebook.publisher && (
+          {facebook && facebook.app_id && facebook.publisher && (
             <div className="sidebar-facebook">
-              <div className="fb-like" data-href={`https://www.facebook.com/${siteMetadata.facebook.publisher}`} data-width="320" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="false" data-colorscheme="dark" />
+              <div className="fb-like" data-href={`https://www.facebook.com/${facebook.publisher}`} data-width="320" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="false" data-colorscheme="dark" />
             </div>
           )}
         </>

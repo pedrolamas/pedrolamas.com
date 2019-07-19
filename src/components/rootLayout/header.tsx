@@ -13,9 +13,11 @@ const Header: React.FunctionComponent<HeaderProps> = () => (
 
       if (!siteMetadata) return null;
 
+      const { facebook } = siteMetadata;
+
       return (
         <>
-          {siteMetadata.facebook && siteMetadata.facebook.app_id && (
+          {facebook && facebook.app_id && (
             <>
               <div id="fb-root"></div>
               <script src="js/fb.js" async></script>

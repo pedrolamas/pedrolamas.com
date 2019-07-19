@@ -16,20 +16,23 @@ const Head: React.FunctionComponent<HeadProps> = props => (
     {siteContext => {
       const { siteMetadata } = siteContext;
 
-      if (!siteMetadata || !siteMetadata.author) {
-        return null;
-      }
+      if (!siteMetadata) return null;
 
-      const metaDescription = props.description || siteMetadata.description;
+      const { description, author, title, lang } = siteMetadata;
+
+      if (!title) throw Error('Site needs a title!');
+      if (!author || !author.name) throw Error('Site needs an author!');
+
+      const metaDescription = props.description || description || undefined;
 
       const metaProps: MetaProps[] = [
         {
           name: `description`,
-          content: metaDescription || undefined,
+          content: metaDescription,
         },
         {
           name: `author`,
-          content: siteMetadata.author.name || undefined,
+          content: author.name,
         },
         {
           property: `og:title`,
@@ -37,7 +40,7 @@ const Head: React.FunctionComponent<HeadProps> = props => (
         },
         {
           property: `og:description`,
-          content: metaDescription || undefined,
+          content: metaDescription,
         },
         {
           property: `og:type`,
@@ -45,11 +48,11 @@ const Head: React.FunctionComponent<HeadProps> = props => (
         },
         {
           property: `og:site_name`,
-          content: siteMetadata.title || undefined,
+          content: title,
         },
         {
           property: `og:locale`,
-          content: (siteMetadata.lang || 'en').replace('-', '_'),
+          content: (lang || 'en').replace('-', '_'),
         },
         {
           name: `twitter:card`,
@@ -57,7 +60,7 @@ const Head: React.FunctionComponent<HeadProps> = props => (
         },
         {
           name: `twitter:creator`,
-          content: siteMetadata.author.name || undefined,
+          content: author.name,
         },
         {
           name: `twitter:title`,
@@ -65,18 +68,18 @@ const Head: React.FunctionComponent<HeadProps> = props => (
         },
         {
           name: `twitter:description`,
-          content: metaDescription || undefined,
+          content: metaDescription,
         },
       ];
 
       return (
         <Helmet
           htmlAttributes={{
-            lang: siteMetadata.lang,
+            lang,
           }}
           title={props.title}
-          titleTemplate={`%s – ${siteMetadata.title}`}
-          defaultTitle={`${siteMetadata.title} – ${siteMetadata.description}`}
+          titleTemplate={`%s – ${title}`}
+          defaultTitle={`${title} – ${description}`}
           meta={metaProps.concat(props.meta || [])}
         />
       );

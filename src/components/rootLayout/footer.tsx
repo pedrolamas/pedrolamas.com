@@ -14,23 +14,18 @@ const Footer: React.FunctionComponent<FooterProps> = () => (
 
       if (!siteMetadata) return null;
 
+      const { disclaimer, addthis_profile: addthisProfile } = siteMetadata;
+
       return (
         <>
           <footer className="content-footer" role="contentinfo">
-            {siteMetadata.disclaimer && <MdxRenderer>{siteMetadata.disclaimer}</MdxRenderer>}
+            {disclaimer && <MdxRenderer>{disclaimer}</MdxRenderer>}
             <p>
               Site design based on <a href="https://github.com/poole/hyde">Hyde</a> under the <a href="https://github.com/poole/hyde/blob/master/LICENSE.md">MIT license</a>.
             </p>
           </footer>
 
-          {siteMetadata.addthis_profile && <script type="text/javascript" src={`//s7.addthis.com/js/300/addthis_widget.js#pubid=${siteMetadata.addthis_profile}`} async={true} />}
-
-          {/* {% if site.addthis_profile and page.layout == "post" %}
-            {% unless page.noshare %}
-              <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ site.addthis_profile }}" async></script>
-            {% endunless %}
-          {% endif %}
-          <script src="{{ site.baseurl }}{% link js/reflow.js %}" async></script> */}
+          {addthisProfile && <script type="text/javascript" src={`//s7.addthis.com/js/300/addthis_widget.js#pubid=${addthisProfile}`} async={true} />}
         </>
       );
     }}

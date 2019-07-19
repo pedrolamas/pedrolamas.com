@@ -18,11 +18,11 @@ const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProp
           const { siteMetadata } = siteContext;
           const { title, url } = mdxContext.meta;
 
-          const disqus = siteMetadata && siteMetadata.disqus;
+          if (!siteMetadata) return null;
 
-          if (!disqus || !disqus.shortname) {
-            return null;
-          }
+          const { disqus } = siteMetadata;
+
+          if (!disqus || !disqus.shortname) return null;
 
           const disqusConfig = {
             url: disqus.website_url ? path.join(disqus.website_url, url) : url,

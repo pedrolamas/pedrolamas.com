@@ -14,11 +14,13 @@ const SidebarSocial: React.FunctionComponent<SidebarSocialProps> = () => (
 
       if (!siteMetadata) return null;
 
+      const { social } = siteMetadata;
+
       return (
         <nav className="sidebar-social" role="navigation" aria-label="Social Links Menu">
-          {siteMetadata.social &&
-            siteMetadata.social.links &&
-            siteMetadata.social.links.map((link, index) => {
+          {social &&
+            social.links &&
+            social.links.map((link, index) => {
               if (!link) {
                 return null;
               }
