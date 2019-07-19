@@ -23,8 +23,6 @@ const Footer: React.FunctionComponent<FooterProps> = () => (
             </p>
           </footer>
 
-          {/* {siteMetadata.disqus_shortname && <script id="dsq-count-scr" src={`//${siteMetadata.disqus_shortname}.disqus.com/count.js`} async={true} />} */}
-
           {siteMetadata.addthis_profile && <script type="text/javascript" src={`//s7.addthis.com/js/300/addthis_widget.js#pubid=${siteMetadata.addthis_profile}`} async={true} />}
 
           {/* {% if site.addthis_profile and page.layout == "post" %}

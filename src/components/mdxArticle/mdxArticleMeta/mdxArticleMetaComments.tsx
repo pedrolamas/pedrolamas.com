@@ -1,5 +1,6 @@
 import React from 'react';
 import Disqus from 'disqus-react';
+import path from 'path';
 
 import Link from '../../link';
 import SiteContext from '../../siteContext';
@@ -17,24 +18,26 @@ const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProp
           const { siteMetadata } = siteContext;
           const { title, url } = mdxContext.meta;
 
+          const disqus = siteMetadata && siteMetadata.disqus;
+
+          if (!disqus || !disqus.shortname) {
+            return null;
+          }
+
           const disqusConfig = {
-            url,
+            url: disqus.website_url ? path.join(disqus.website_url, url) : url,
             identifier: '',
             title,
           };
 
           return (
-            <>
-              {siteMetadata && siteMetadata.disqus_shortname && (
-                <span className="comments">
-                  <Link to={`${url}#disqus_thread`}>
-                    <Disqus.CommentCount shortname={siteMetadata.disqus_shortname} config={disqusConfig}>
-                      Comments
-                    </Disqus.CommentCount>
-                  </Link>
-                </span>
-              )}
-            </>
+            <span className="comments">
+              <Link to={`${url}#disqus_thread`}>
+                <Disqus.CommentCount shortname={disqus.shortname} config={disqusConfig}>
+                  Comments
+                </Disqus.CommentCount>
+              </Link>
+            </span>
           );
         }}
       </MdxContext.Consumer>

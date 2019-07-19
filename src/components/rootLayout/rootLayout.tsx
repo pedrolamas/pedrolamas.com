@@ -24,7 +24,10 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
               body
             }
           }
-          disqus_shortname
+          disqus {
+            shortname
+            website_url
+          }
           google_analytics
           lang
           logo {

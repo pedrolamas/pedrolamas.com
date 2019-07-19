@@ -37,5 +37,9 @@ social:
 #       title: Microsoft Most Valuable Professional (MVP) for Windows Development
 
 google_analytics: UA-1376452-1
-disqus_shortname: pedrolamas-com
+
+disqus:
+  shortname: pedrolamas-com
+  website_url: https://www.pedrolamas.com
+
 addthis_profile: ra-58b55b8d7a40cd51
