@@ -1,4 +1,5 @@
 import React from 'react';
+import { FacebookProvider, Like } from 'react-facebook';
 
 import SiteContext from '../../siteContext';
 
@@ -19,7 +20,9 @@ const SidebarFacebook: React.FunctionComponent<SidebarFacebookProps> = props => 
         <>
           {facebook && facebook.app_id && facebook.publisher && (
             <div className="sidebar-facebook">
-              <div className="fb-like" data-href={`https://www.facebook.com/${facebook.publisher}`} data-width="320" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="false" data-colorscheme="dark" />
+              <FacebookProvider appId={facebook.app_id.toString()}>
+                <Like href={`https://www.facebook.com/${facebook.publisher}`} width={320} layout="standard" action="like" size="small" showFaces={true} share={false} colorScheme="dark" />
+              </FacebookProvider>
             </div>
           )}
         </>
