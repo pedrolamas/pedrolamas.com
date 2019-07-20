@@ -55,8 +55,8 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 
       break;
 
-    case 'DataYaml':
-      const { disclaimer, authorDetails } = node;
+    case 'Site':
+      const { disclaimer, authorDetails } = node.siteMetadata;
 
       createMdxSource('disclaimer', disclaimer, node, actions, createNodeId, createContentDigest);
 
