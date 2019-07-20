@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Head from '../head';
-import RootLayout from '../rootLayout';
 import IndexLayoutPosts from './indexLayoutPosts';
 import IndexLayoutNavigation from './indexLayoutNavigation';
 import { GraphQl } from '../../utils';
@@ -16,13 +15,13 @@ type IndexLayoutProps = {
 };
 
 const IndexLayout: React.FunctionComponent<IndexLayoutProps> = ({ data, pageContext }) => (
-  <RootLayout>
+  <>
     <Head />
 
     <IndexLayoutPosts data={data} />
 
     <IndexLayoutNavigation previousPageIndex={pageContext.previousPageIndex} nextPageIndex={pageContext.nextPageIndex} />
-  </RootLayout>
+  </>
 );
 
 export const pageQuery = graphql`

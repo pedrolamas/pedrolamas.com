@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import RootLayout from '../rootLayout';
 import Head from '../head';
 import PostLayoutArticle from './postLayoutArticle';
 import PostLayoutComments from './postLayoutComments';
@@ -22,7 +21,7 @@ const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {
   const mdxMeta = Utils.SafeMetadataFromMdx(mdx);
 
   return (
-    <RootLayout>
+    <>
       <Head title={mdxMeta.title} />
 
       <MdxContext.Provider
@@ -41,7 +40,7 @@ const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {
           <PostLayoutNavigation previousMdx={previousMdx || undefined} nextMdx={nextMdx || undefined} />
         </main>
       </MdxContext.Provider>
-    </RootLayout>
+    </>
   );
 };
 

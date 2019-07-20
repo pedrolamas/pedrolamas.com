@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Head from './head';
-import RootLayout from './rootLayout';
 
 type PageLayoutProps = {
   title: string;
@@ -9,7 +8,7 @@ type PageLayoutProps = {
 };
 
 const PageLayout: React.FunctionComponent<PageLayoutProps> = ({ title, children }) => (
-  <RootLayout>
+  <>
     <Head title={title} />
     <main role="main" id="main">
       <article className="page">
@@ -20,7 +19,7 @@ const PageLayout: React.FunctionComponent<PageLayoutProps> = ({ title, children 
         <div className="page-content">{children}</div>
       </article>
     </main>
-  </RootLayout>
+  </>
 );
 
 export default PageLayout;
