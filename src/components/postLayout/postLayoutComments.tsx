@@ -1,6 +1,6 @@
 import React from 'react';
 import Disqus from 'disqus-react';
-import path from 'path';
+import Url from 'url';
 
 import SiteContext from '../siteContext';
 import MdxContext from '../mdxContext';
@@ -22,7 +22,7 @@ const PostLayoutComments: React.FunctionComponent<PostLayoutCommentsProps> = () 
           if (!disqusShortname) return null;
 
           const disqusConfig = {
-            url: siteUrl ? path.join(siteUrl, url) : url,
+            url: siteUrl ? Url.resolve(siteUrl, url) : url,
             identifier: '',
             title,
           };

@@ -1,6 +1,6 @@
 import React from 'react';
 import Disqus from 'disqus-react';
-import path from 'path';
+import Url from 'url';
 
 import Link from '../../link';
 import SiteContext from '../../siteContext';
@@ -25,7 +25,7 @@ const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProp
           if (!disqusShortname) return null;
 
           const disqusConfig = {
-            url: siteUrl ? path.join(siteUrl, url) : url,
+            url: siteUrl ? Url.resolve(siteUrl, url) : url,
             identifier: '',
             title,
           };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 import { Location } from '@reach/router';
-import path from 'path';
+import Url from 'url';
 
 type LinkProps = React.ComponentPropsWithoutRef<typeof GatsbyLink>;
 
@@ -16,7 +16,7 @@ const Link: React.FunctionComponent<LinkProps> = props => {
   return (
     <>
       {to && isInternal(to) && !isFile(to) ? (
-        <Location>{locationContext => <GatsbyLink style={linkStyle} to={path.join(path.resolve(locationContext.location.pathname, to), '/')} {...restOfProps} />}</Location>
+        <Location>{locationContext => <GatsbyLink style={linkStyle} to={Url.resolve(locationContext.location.pathname, to)} {...restOfProps} />}</Location>
       ) : (
         // eslint-disable-next-line jsx-a11y/anchor-has-content
         <a href={to} {...restOfProps} />
