@@ -20,13 +20,8 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
           siteMetadata {
             title
             description
-            disclaimer {
-              code {
-                body
-              }
-            }
-            disqusShortname
-            googleAnalytics
+            author
+            siteUrl
             lang
             logo {
               childImageSharp {
@@ -35,23 +30,32 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
                 }
               }
             }
-            addthisProfile
-            author
+            disclaimer {
+              code {
+                body
+              }
+            }
             authorDetails {
+              email
+              uri
+              picture
               biography {
                 code {
                   body
                 }
               }
-              email
-              picture
               twitter
-              uri
+            }
+            twitter {
+              username
             }
             facebook {
-              admins
               appId
               publisher
+              admins
+            }
+            social {
+              links
             }
             sidebar {
               logos {
@@ -65,12 +69,9 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
                 }
               }
             }
-            social {
-              links
-            }
-            twitter {
-              username
-            }
+            googleAnalytics
+            disqusShortname
+            addthisProfile
           }
         }
       }
