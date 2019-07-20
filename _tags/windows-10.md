@@ -1,3 +1,0 @@
----
-title: Windows 10
----

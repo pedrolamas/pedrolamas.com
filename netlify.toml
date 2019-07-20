@@ -1,10 +1,6 @@
 [build]
-  command = "jekyll build"
-  publish = "_site/"
-  
-[build.environment]
-  JEKYLL_ENV = "production"
-  PAGES_REPO_NWO = "PedroLamas/pedrolamas.com"
+  command = "env GATSBY_REPOSITORY_URL=$REPOSITORY_URL GATSBY_BRANCH=$BRANCH yarn build"
+  publish = "public/"
 
 [[headers]]
   for = "/*"

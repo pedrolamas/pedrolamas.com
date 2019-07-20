@@ -1,0 +1,72 @@
+- title: About
+  url: /about/
+  sub:
+    - title: Microsoft Certified Professional (MCP) Transcript
+      url: /about/mcp-transcript/
+
+    - title: PGP Public Key
+      url: /about/pgp-public-key/
+
+- title: Windows Phone
+  url: /windows-phone/
+  minimap: false
+  sub:
+    - title: Nokia Lumia 800 Skin
+      url: /windows-phone/nokia-lumia-800-skin/
+
+    - title: Nokia Lumia 920 Skin
+      url: /windows-phone/nokia-lumia-920-skin/
+
+    - title: Windows Phone Application Bar Icons
+      url: /windows-phone/windows-phone-application-bar-icons/
+
+    - title: Windows Phone 8 Application Bar Icons
+      url: /windows-phone/windows-phone-8-application-bar-icons/
+
+- title: Apps
+  url: /apps/
+  minimap: false
+  sub:
+    - title: Geosense
+      url: /apps/geosense/
+
+    - title: GDrive
+      url: /apps/gdrive/
+
+    - title: Fon Auto-Login
+      url: /apps/fon-auto-login/
+
+    - title: The Bro Code
+      url: /apps/the-bro-code/
+
+    - title: Quadratic Solver
+      url: /apps/quadratic-solver/
+
+    - title: Bristol Pound
+      url: /apps/bristol-pound/
+
+    - title: O meu Salário
+      url: /apps/o-meu-salario/
+
+    - title: Totojogos
+      url: /apps/totojogos/
+
+    - title: CTT Objectos
+      url: /apps/ctt-objectos/
+
+    - title: The Other Side
+      url: /apps/the-other-side/
+
+- title: Contributors
+  url: /contributors/
+  minimap: false
+
+- title: Archive
+  url: /archive/
+
+- title: Syndicated Feeds
+  url: /feeds/
+  minimap: false
+
+- title: Site Map
+  url: /sitemap/
