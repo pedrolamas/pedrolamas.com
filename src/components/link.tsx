@@ -16,7 +16,7 @@ const Link: React.FunctionComponent<LinkProps> = props => {
   return (
     <>
       {to && isInternal(to) && !isFile(to) ? (
-        <Location>{locationContext => <GatsbyLink style={linkStyle} to={path.resolve(locationContext.location.pathname, to)} {...restOfProps} />}</Location>
+        <Location>{locationContext => <GatsbyLink style={linkStyle} to={path.join(path.resolve(locationContext.location.pathname, to), '/')} {...restOfProps} />}</Location>
       ) : (
         // eslint-disable-next-line jsx-a11y/anchor-has-content
         <a href={to} {...restOfProps} />

@@ -5,7 +5,8 @@ const slugify = require('underscore.string/slugify');
 const slug = path => slugify(path.replace(/\./g, 'dot'));
 
 const createSlugField = (createNodeField, node, getNode) => {
-  const slug = getNode(node.parent).sourceInstanceName === 'posts' ? getSlugForPost(node, getNode) : null;
+  const parentNode = getNode(node.parent);
+  const slug = parentNode.sourceInstanceName === 'posts' ? getSlugForPost(node, getNode) : null;
 
   createNodeField({
     name: 'slug',
@@ -55,10 +56,12 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       break;
 
     case 'DataYaml':
-      createMdxSource('disclaimer', node.disclaimer, node, actions, createNodeId, createContentDigest);
+      const { disclaimer, authorDetails } = node;
 
-      if (node.author) {
-        createMdxSource('biography', node.author.biography, node, actions, createNodeId, createContentDigest);
+      createMdxSource('disclaimer', disclaimer, node, actions, createNodeId, createContentDigest);
+
+      if (authorDetails && authorDetails.biography) {
+        createMdxSource('biography', authorDetails.biography, node, actions, createNodeId, createContentDigest);
       }
 
       break;
