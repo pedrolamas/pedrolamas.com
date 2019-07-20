@@ -134,6 +134,10 @@ exports.createPages = async ({ graphql, actions }) => {
             fields {
               slug
             }
+            frontmatter {
+              date
+              last_modified_at
+            }
           }
           previous {
             id
@@ -173,6 +177,7 @@ exports.createPages = async ({ graphql, actions }) => {
         id: node.id,
         previousId: next && next.id,
         nextId: previous && previous.id,
+        lastModified: (node.frontmatter && (node.frontmatter.last_modified_at || node.frontmatter.date)) || null,
       },
     });
   });

@@ -137,6 +137,37 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              edges {
+                node {
+                  context {
+                    lastModified
+                  }
+                  path
+                }
+              }
+            }
+          }
+        `,
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map(({ node }) => {
+            return {
+              url: site.siteMetadata.siteUrl + node.path,
+              lastmodISO: (node.context && node.context.lastModified) || null,
+            };
+          }),
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: siteMetadata.googleAnalytics,
