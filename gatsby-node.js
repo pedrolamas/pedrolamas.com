@@ -87,6 +87,7 @@ exports.sourceNodes = ({ actions }) => {
       sidebar: SiteSiteMetadataSidebar
     }`,
     `type SiteSiteMetadataAuthorDetails @infer {
+      picture: File @link(by: "relativePath")
       biography: Mdx @link(by: "rawBody")
     }`,
     `type SiteSiteMetadataSidebar @infer {

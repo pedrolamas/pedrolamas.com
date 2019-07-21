@@ -11,7 +11,7 @@ module.exports = {
   authorDetails: {
     email: `pedrolamas@gmail.com`,
     uri: `https://www.pedrolamas.com`,
-    picture: `https://s.gravatar.com/avatar/fecaf27c91e2d50b25930e280b2a81d0?s=320`,
+    picture: `logo.jpg`,
     biography: `Pedro is a software developer specialized in Microsoft technologies. He's a regular blogger, speaker, and the author of the open-source [Cimbalino Toolkit](http://cimbalino.org).`,
     twitter: `pedrolamas`,
   },

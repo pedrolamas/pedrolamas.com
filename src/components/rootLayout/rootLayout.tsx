@@ -38,7 +38,13 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
             authorDetails {
               email
               uri
-              picture
+              picture {
+                childImageSharp {
+                  fluid(maxWidth: 80) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
               biography {
                 code {
                   body
