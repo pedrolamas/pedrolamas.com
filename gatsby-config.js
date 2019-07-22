@@ -175,6 +175,7 @@ module.exports = {
         respectDNT: true,
       },
     },
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-twitter`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-typescript`,
