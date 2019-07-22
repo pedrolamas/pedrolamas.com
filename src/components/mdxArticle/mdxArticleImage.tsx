@@ -1,6 +1,6 @@
 import React from 'react';
-import Img, { FluidObject } from 'gatsby-image';
 
+import Image from '../image';
 import MdxContext from '../mdxContext';
 
 type MdxArticleImageProps = {
@@ -12,16 +12,14 @@ const MdxArticleImage: React.FunctionComponent<MdxArticleImageProps> = () => (
     {mdxContext => {
       const { image } = mdxContext.meta;
 
-      const fluid = image && image.childImageSharp && image.childImageSharp.fluid;
-
-      if (!fluid) return null;
-
-      const style = fluid.presentationWidth ? { maxWidth: fluid.presentationWidth } : undefined;
-
       return (
-        <div className="post-thumbnail">
-          <Img className="sidebar-logo" fluid={fluid as FluidObject} style={style} />
-        </div>
+        <>
+          {image && image.childImageSharp && (
+            <div className="post-thumbnail">
+              <Image className="sidebar-logo" imageSharp={image.childImageSharp} />
+            </div>
+          )}
+        </>
       );
     }}
   </MdxContext.Consumer>

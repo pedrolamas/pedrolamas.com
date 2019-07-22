@@ -1,6 +1,6 @@
 import React from 'react';
-import Img, { FluidObject } from 'gatsby-image';
 
+import Image from '../../image';
 import SiteContext from '../../siteContext';
 
 type SidebarLogosProps = {
@@ -16,7 +16,7 @@ const SidebarLogos: React.FunctionComponent<SidebarLogosProps> = () => (
 
       const { sidebar } = siteMetadata;
 
-      return <>{sidebar && sidebar.logos && <div className="sidebar-logos">{sidebar.logos.map((logo, index) => (logo && logo.image && logo.image.childImageSharp ? <Img className="sidebar-logos-logo" title={logo.title || undefined} alt={logo.title || undefined} fluid={logo.image.childImageSharp.fluid as FluidObject} key={index} /> : null))}</div>}</>;
+      return <>{sidebar && sidebar.logos && <div className="sidebar-logos">{sidebar.logos.map((logo, index) => logo && logo.image && logo.image.childImageSharp && <Image className="sidebar-logos-logo" title={logo.title || undefined} alt={logo.title || undefined} imageSharp={logo.image.childImageSharp} key={index} />)}</div>}</>;
     }}
   </SiteContext.Consumer>
 );

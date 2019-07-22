@@ -1,6 +1,6 @@
 import React from 'react';
-import Img, { FluidObject } from 'gatsby-image';
 
+import Image from '../../image';
 import Link from '../../link';
 import SiteContext from '../../siteContext';
 
@@ -17,7 +17,7 @@ const SidebarAbout: React.FunctionComponent<SidebarAboutProps> = props => (
 
       return (
         <div className="sidebar-about">
-          {logo && logo.childImageSharp && <Img className="sidebar-logo" fluid={logo.childImageSharp.fluid as FluidObject} />}
+          {logo && logo.childImageSharp && <Image className="sidebar-logo" imageSharp={logo.childImageSharp} />}
           <h1>
             <Link to="/" rel="home">
               {title}

@@ -1,6 +1,6 @@
 import React from 'react';
-import Img, { FluidObject } from 'gatsby-image';
 
+import Image from '../image';
 import MdxRenderer from '../mdxRenderer';
 import SiteContext from '../siteContext';
 
@@ -17,7 +17,7 @@ const PostLayoutAuthor: React.FunctionComponent<PostLayoutAuthorProps> = () => (
 
       return (
         <section className="post-author">
-          {authorDetails && authorDetails.picture && authorDetails.picture.childImageSharp && <Img className="author-thumbnail" fluid={authorDetails.picture.childImageSharp.fluid as FluidObject} />}
+          {authorDetails && authorDetails.picture && authorDetails.picture.childImageSharp && <Image className="author-thumbnail" imageSharp={authorDetails.picture.childImageSharp} />}
           <div className="author-biography">
             <h2>by {author}</h2>
             {authorDetails && authorDetails.biography && <MdxRenderer>{authorDetails.biography}</MdxRenderer>}
