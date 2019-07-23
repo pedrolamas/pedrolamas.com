@@ -4,6 +4,12 @@ module.exports = {
   siteMetadata,
   plugins: [
     {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        whitelist: ['REPOSITORY_URL', 'BRANCH'],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,

@@ -29,6 +29,7 @@
     "gatsby-cli": "^2.7.11",
     "gatsby-image": "^2.2.5",
     "gatsby-mdx": "^0.6.3",
+    "gatsby-plugin-env-variables": "^1.0.1",
     "gatsby-plugin-eslint": "^2.0.5",
     "gatsby-plugin-feed-generator": "^2.0.3",
     "gatsby-plugin-google-analytics": "^2.1.4",

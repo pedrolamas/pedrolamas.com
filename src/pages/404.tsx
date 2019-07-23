@@ -6,9 +6,9 @@ import Link from '../components/link';
 const NotFoundPage: React.FunctionComponent = () => (
   <PageLayout title="404: Not found">
     <p>I recently migrated my blog to a new platform and may have broken a few links inadvertently!</p>
-    {process.env.GATSBY_REPOSITORY_URL && (
+    {process.env.REPOSITORY_URL && (
       <p>
-        If you don't mind, please <a href={`${process.env.GATSBY_REPOSITORY_URL}/issues/new?title=404%20Not%20Found&labels=bug`}>log an issue</a> with the URL you were trying to reach and where you found the URL. Thank you!
+        If you don't mind, please <a href={`${process.env.REPOSITORY_URL}/issues/new?title=404%20Not%20Found&labels=bug`}>log an issue</a> with the URL you were trying to reach and where you found the URL. Thank you!
       </p>
     )}
     <p>
