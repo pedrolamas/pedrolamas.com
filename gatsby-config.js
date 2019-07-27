@@ -197,5 +197,14 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          '/*': [`X-Frame-Options: DENY`, `X-XSS-Protection: 1; mode=block`, `Referrer-Policy: strict-origin-when-cross-origin`, `Feature-Policy: accelerometer 'none'; autoplay 'none'; ambient-light-sensor 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'`, `X-Content-Type-Options: nosniff`],
+        },
+        mergeSecurityHeaders: false,
+      },
+    },
   ],
 };
