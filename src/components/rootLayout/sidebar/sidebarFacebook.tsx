@@ -7,28 +7,24 @@ type SidebarFacebookProps = {
   children?: never;
 };
 
-const SidebarFacebook: React.FunctionComponent<SidebarFacebookProps> = props => (
-  <SiteContext.Consumer>
-    {siteContext => {
-      const { siteMetadata } = siteContext;
+const SidebarFacebook: React.FunctionComponent<SidebarFacebookProps> = props => {
+  const { siteMetadata } = React.useContext(SiteContext);
 
-      if (!siteMetadata) return null;
+  if (!siteMetadata) return null;
 
-      const { facebook } = siteMetadata;
+  const { facebook } = siteMetadata;
 
-      return (
-        <>
-          {facebook && facebook.appId && facebook.publisher && (
-            <div className="sidebar-facebook">
-              <FacebookProvider appId={facebook.appId}>
-                <Like href={`https://www.facebook.com/${facebook.publisher}`} width={320} layout="standard" action="like" size="small" showFaces={true} share={false} colorScheme="dark" />
-              </FacebookProvider>
-            </div>
-          )}
-        </>
-      );
-    }}
-  </SiteContext.Consumer>
-);
+  return (
+    <>
+      {facebook && facebook.appId && facebook.publisher && (
+        <div className="sidebar-facebook">
+          <FacebookProvider appId={facebook.appId}>
+            <Like href={`https://www.facebook.com/${facebook.publisher}`} width={320} layout="standard" action="like" size="small" showFaces={true} share={false} colorScheme="dark" />
+          </FacebookProvider>
+        </div>
+      )}
+    </>
+  );
+};
 
 export default SidebarFacebook;

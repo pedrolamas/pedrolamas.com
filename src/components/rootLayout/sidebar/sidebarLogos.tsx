@@ -7,18 +7,14 @@ type SidebarLogosProps = {
   children?: never;
 };
 
-const SidebarLogos: React.FunctionComponent<SidebarLogosProps> = () => (
-  <SiteContext.Consumer>
-    {siteContext => {
-      const { siteMetadata } = siteContext;
+const SidebarLogos: React.FunctionComponent<SidebarLogosProps> = () => {
+  const { siteMetadata } = React.useContext(SiteContext);
 
-      if (!siteMetadata) return null;
+  if (!siteMetadata) return null;
 
-      const { sidebar } = siteMetadata;
+  const { sidebar } = siteMetadata;
 
-      return <>{sidebar && sidebar.logos && <div className="sidebar-logos">{sidebar.logos.map((logo, index) => logo && logo.image && logo.image.childImageSharp && <Image className="sidebar-logos-logo" title={logo.title || undefined} alt={logo.title || undefined} imageSharp={logo.image.childImageSharp} key={index} />)}</div>}</>;
-    }}
-  </SiteContext.Consumer>
-);
+  return <>{sidebar && sidebar.logos && <div className="sidebar-logos">{sidebar.logos.map((logo, index) => logo && logo.image && logo.image.childImageSharp && <Image className="sidebar-logos-logo" title={logo.title || undefined} alt={logo.title || undefined} imageSharp={logo.image.childImageSharp} key={index} />)}</div>}</>;
+};
 
 export default SidebarLogos;

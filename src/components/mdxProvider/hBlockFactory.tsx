@@ -10,6 +10,9 @@ type HBlockType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 const HBlockFactory = <T extends HBlockType>(headerBlock: T): React.FunctionComponent<React.ComponentPropsWithoutRef<T>> => {
   return ({ children, ...restOfProps }) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const { meta } = React.useContext(MdxContext);
+
     if (Utils.IsString(children)) {
       const slug = slugify(children);
 
@@ -21,7 +24,7 @@ const HBlockFactory = <T extends HBlockType>(headerBlock: T): React.FunctionComp
         },
         <>
           {children}
-          <Location>{locationContext => <MdxContext.Consumer>{mdxContext => <Link to={`${mdxContext.meta.url || locationContext.location.pathname}#${slug}`} className="anchor" aria-labelledby={slug} />}</MdxContext.Consumer>}</Location>
+          <Location>{locationContext => <Link to={`${meta.url || locationContext.location.pathname}#${slug}`} className="anchor" aria-labelledby={slug} />}</Location>
         </>
       );
     }

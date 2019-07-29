@@ -7,31 +7,24 @@ import MdxContext from '../mdxContext';
 
 type PostLayoutCommentsProps = {};
 
-const PostLayoutComments: React.FunctionComponent<PostLayoutCommentsProps> = () => (
-  <SiteContext.Consumer>
-    {siteContext => (
-      <MdxContext.Consumer>
-        {mdxContext => {
-          const { siteMetadata } = siteContext;
-          const { title, url } = mdxContext.meta;
+const PostLayoutComments: React.FunctionComponent<PostLayoutCommentsProps> = () => {
+  const { siteMetadata } = React.useContext(SiteContext);
+  const { meta } = React.useContext(MdxContext);
 
-          if (!siteMetadata) return null;
+  if (!siteMetadata) return null;
 
-          const { siteUrl, disqusShortname } = siteMetadata;
+  const { siteUrl, disqusShortname } = siteMetadata;
+  const { title, url } = meta;
 
-          if (!disqusShortname) return null;
+  if (!disqusShortname) return null;
 
-          const disqusConfig = {
-            url: siteUrl ? Url.resolve(siteUrl, url) : url,
-            identifier: '',
-            title,
-          };
+  const disqusConfig = {
+    url: siteUrl ? Url.resolve(siteUrl, url) : url,
+    identifier: '',
+    title,
+  };
 
-          return <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />;
-        }}
-      </MdxContext.Consumer>
-    )}
-  </SiteContext.Consumer>
-);
+  return <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />;
+};
 
 export default PostLayoutComments;

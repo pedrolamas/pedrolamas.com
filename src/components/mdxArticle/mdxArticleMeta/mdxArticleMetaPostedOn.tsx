@@ -7,21 +7,19 @@ type MdxArticleMetaPostedOnProps = {
   children?: never;
 };
 
-const MdxArticleMetaPostedOn: React.FunctionComponent<MdxArticleMetaPostedOnProps> = () => (
-  <MdxContext.Consumer>
-    {mdxContext => {
-      const { url, date, dateFormatted } = mdxContext.meta;
+const MdxArticleMetaPostedOn: React.FunctionComponent<MdxArticleMetaPostedOnProps> = () => {
+  const { meta } = React.useContext(MdxContext);
 
-      return (
-        <span className="posted-on">
-          <span className="screen-reader-text">Posted on </span>
-          <Link to={url} rel="bookmark">
-            <time dateTime={date}>{dateFormatted}</time>
-          </Link>
-        </span>
-      );
-    }}
-  </MdxContext.Consumer>
-);
+  const { url, date, dateFormatted } = meta;
+
+  return (
+    <span className="posted-on">
+      <span className="screen-reader-text">Posted on </span>
+      <Link to={url} rel="bookmark">
+        <time dateTime={date}>{dateFormatted}</time>
+      </Link>
+    </span>
+  );
+};
 
 export default MdxArticleMetaPostedOn;

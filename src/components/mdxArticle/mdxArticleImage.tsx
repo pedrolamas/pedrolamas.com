@@ -7,22 +7,20 @@ type MdxArticleImageProps = {
   children?: never;
 };
 
-const MdxArticleImage: React.FunctionComponent<MdxArticleImageProps> = () => (
-  <MdxContext.Consumer>
-    {mdxContext => {
-      const { image } = mdxContext.meta;
+const MdxArticleImage: React.FunctionComponent<MdxArticleImageProps> = () => {
+  const { meta } = React.useContext(MdxContext);
 
-      return (
-        <>
-          {image && image.childImageSharp && (
-            <div className="post-thumbnail">
-              <Image className="sidebar-logo" imageSharp={image.childImageSharp} />
-            </div>
-          )}
-        </>
-      );
-    }}
-  </MdxContext.Consumer>
-);
+  const { image } = meta;
+
+  return (
+    <>
+      {image && image.childImageSharp && (
+        <div className="post-thumbnail">
+          <Image className="sidebar-logo" imageSharp={image.childImageSharp} />
+        </div>
+      )}
+    </>
+  );
+};
 
 export default MdxArticleImage;

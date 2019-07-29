@@ -11,78 +11,74 @@ type HeadProps = {
   meta?: MetaProps[];
 };
 
-const Head: React.FunctionComponent<HeadProps> = props => (
-  <SiteContext.Consumer>
-    {siteContext => {
-      const { siteMetadata } = siteContext;
+const Head: React.FunctionComponent<HeadProps> = props => {
+  const { siteMetadata } = React.useContext(SiteContext);
 
-      if (!siteMetadata) return null;
+  if (!siteMetadata) return null;
 
-      const { description, author, title, lang } = siteMetadata;
+  const { description, author, title, lang } = siteMetadata;
 
-      const metaDescription = props.description || description || undefined;
+  const metaDescription = props.description || description || undefined;
 
-      const metaProps: MetaProps[] = [
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          name: `author`,
-          content: author,
-        },
-        {
-          property: `og:title`,
-          content: props.title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: `og:site_name`,
-          content: title,
-        },
-        {
-          property: `og:locale`,
-          content: (lang || 'en').replace('-', '_'),
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: author,
-        },
-        {
-          name: `twitter:title`,
-          content: props.title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ];
+  const metaProps: MetaProps[] = [
+    {
+      name: `description`,
+      content: metaDescription,
+    },
+    {
+      name: `author`,
+      content: author,
+    },
+    {
+      property: `og:title`,
+      content: props.title,
+    },
+    {
+      property: `og:description`,
+      content: metaDescription,
+    },
+    {
+      property: `og:type`,
+      content: `website`,
+    },
+    {
+      property: `og:site_name`,
+      content: title,
+    },
+    {
+      property: `og:locale`,
+      content: (lang || 'en').replace('-', '_'),
+    },
+    {
+      name: `twitter:card`,
+      content: `summary`,
+    },
+    {
+      name: `twitter:creator`,
+      content: author,
+    },
+    {
+      name: `twitter:title`,
+      content: props.title,
+    },
+    {
+      name: `twitter:description`,
+      content: metaDescription,
+    },
+  ];
 
-      return (
-        <Helmet
-          htmlAttributes={{
-            lang,
-          }}
-          title={props.title}
-          titleTemplate={`%s – ${title}`}
-          defaultTitle={`${title} – ${description}`}
-          meta={metaProps.concat(props.meta || [])}
-        />
-      );
-    }}
-  </SiteContext.Consumer>
-);
+  return (
+    <Helmet
+      htmlAttributes={{
+        lang,
+      }}
+      title={props.title}
+      titleTemplate={`%s – ${title}`}
+      defaultTitle={`${title} – ${description}`}
+      meta={metaProps.concat(props.meta || [])}
+    />
+  );
+};
 
 Head.defaultProps = {
   title: '',

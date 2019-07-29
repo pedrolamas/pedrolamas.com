@@ -7,22 +7,20 @@ type PostLayoutArticleProps = {
   children?: never;
 };
 
-const PostLayoutArticle: React.FunctionComponent<PostLayoutArticleProps> = () => (
-  <MdxContext.Consumer>
-    {mdxContext => {
-      const { id, title } = mdxContext.meta;
+const PostLayoutArticle: React.FunctionComponent<PostLayoutArticleProps> = () => {
+  const { meta } = React.useContext(MdxContext);
 
-      return (
-        <article id={`post${id}`} className={`post post${id}`}>
-          <header className="post-header">
-            <h1 className="post-title">{title}</h1>
-          </header>
+  const { id, title } = meta;
 
-          <MdxArticle />
-        </article>
-      );
-    }}
-  </MdxContext.Consumer>
-);
+  return (
+    <article id={`post${id}`} className={`post post${id}`}>
+      <header className="post-header">
+        <h1 className="post-title">{title}</h1>
+      </header>
+
+      <MdxArticle />
+    </article>
+  );
+};
 
 export default PostLayoutArticle;

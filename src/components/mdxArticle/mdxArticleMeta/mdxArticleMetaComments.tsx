@@ -10,39 +10,32 @@ type MdxArticleMetaCommentsProps = {
   children?: never;
 };
 
-const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProps> = () => (
-  <SiteContext.Consumer>
-    {siteContext => (
-      <MdxContext.Consumer>
-        {mdxContext => {
-          const { siteMetadata } = siteContext;
-          const { title, url } = mdxContext.meta;
+const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProps> = () => {
+  const { siteMetadata } = React.useContext(SiteContext);
+  const { meta } = React.useContext(MdxContext);
 
-          if (!siteMetadata) return null;
+  if (!siteMetadata) return null;
 
-          const { siteUrl, disqusShortname } = siteMetadata;
+  const { siteUrl, disqusShortname } = siteMetadata;
+  const { title, url } = meta;
 
-          if (!disqusShortname) return null;
+  if (!disqusShortname) return null;
 
-          const disqusConfig = {
-            url: siteUrl ? Url.resolve(siteUrl, url) : url,
-            identifier: '',
-            title,
-          };
+  const disqusConfig = {
+    url: siteUrl ? Url.resolve(siteUrl, url) : url,
+    identifier: '',
+    title,
+  };
 
-          return (
-            <span className="comments">
-              <Link to={`${url}#disqus_thread`}>
-                <Disqus.CommentCount shortname={disqusShortname} config={disqusConfig}>
-                  Comments
-                </Disqus.CommentCount>
-              </Link>
-            </span>
-          );
-        }}
-      </MdxContext.Consumer>
-    )}
-  </SiteContext.Consumer>
-);
+  return (
+    <span className="comments">
+      <Link to={`${url}#disqus_thread`}>
+        <Disqus.CommentCount shortname={disqusShortname} config={disqusConfig}>
+          Comments
+        </Disqus.CommentCount>
+      </Link>
+    </span>
+  );
+};
 
 export default MdxArticleMetaComments;

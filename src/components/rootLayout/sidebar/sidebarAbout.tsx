@@ -6,28 +6,24 @@ import SiteContext from '../../siteContext';
 
 type SidebarAboutProps = {};
 
-const SidebarAbout: React.FunctionComponent<SidebarAboutProps> = props => (
-  <SiteContext.Consumer>
-    {siteContext => {
-      const { siteMetadata } = siteContext;
+const SidebarAbout: React.FunctionComponent<SidebarAboutProps> = props => {
+  const { siteMetadata } = React.useContext(SiteContext);
 
-      if (!siteMetadata) return null;
+  if (!siteMetadata) return null;
 
-      const { logo, title, description } = siteMetadata;
+  const { logo, title, description } = siteMetadata;
 
-      return (
-        <div className="sidebar-about">
-          {logo && logo.childImageSharp && <Image className="sidebar-logo" imageSharp={logo.childImageSharp} />}
-          <h1>
-            <Link to="/" rel="home">
-              {title}
-            </Link>
-          </h1>
-          <p className="lead">{description}</p>
-        </div>
-      );
-    }}
-  </SiteContext.Consumer>
-);
+  return (
+    <div className="sidebar-about">
+      {logo && logo.childImageSharp && <Image className="sidebar-logo" imageSharp={logo.childImageSharp} />}
+      <h1>
+        <Link to="/" rel="home">
+          {title}
+        </Link>
+      </h1>
+      <p className="lead">{description}</p>
+    </div>
+  );
+};
 
 export default SidebarAbout;
