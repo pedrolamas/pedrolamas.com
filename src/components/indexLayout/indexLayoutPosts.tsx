@@ -20,14 +20,13 @@ const IndexLayoutPosts: React.FunctionComponent<IndexLayoutPostsProps> = ({ data
         const mdxMeta = Utils.SafeMetadataFromMdx(node);
         const { id, title, url } = mdxMeta;
 
+        const mdxContext = {
+          mdx: node,
+          meta: mdxMeta,
+        };
+
         return (
-          <MdxContext.Provider
-            value={{
-              mdx: node,
-              meta: mdxMeta,
-            }}
-            key={index}
-          >
+          <MdxContext.Provider value={mdxContext} key={index}>
             <article id={`post${id}`} className={`post post${id}`}>
               <header className="post-header">
                 <h1 className="post-title">

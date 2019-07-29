@@ -84,12 +84,12 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
     `
   );
 
+  const siteContext = {
+    siteMetadata: (site && site.siteMetadata) || undefined,
+  };
+
   return (
-    <SiteContext.Provider
-      value={{
-        siteMetadata: (site && site.siteMetadata) || undefined,
-      }}
-    >
+    <SiteContext.Provider value={siteContext}>
       <Sidebar />
 
       <Content>

@@ -20,16 +20,16 @@ const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {
 
   const mdxMeta = Utils.SafeMetadataFromMdx(mdx);
 
+  const mdxContext = {
+    mdx,
+    meta: mdxMeta,
+  };
+
   return (
     <>
       <Head title={mdxMeta.title} />
 
-      <MdxContext.Provider
-        value={{
-          mdx,
-          meta: mdxMeta,
-        }}
-      >
+      <MdxContext.Provider value={mdxContext}>
         <main role="main" id="main">
           <PostLayoutArticle />
 
