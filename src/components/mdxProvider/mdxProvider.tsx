@@ -4,16 +4,18 @@ import { MDXProvider, MDXProviderComponents } from '@mdx-js/react';
 import ABlock from './aBlock';
 import CodeBlock from './codeBlock';
 import PreBlock from './preBlock';
-import HBlockFactory from './hBlockFactory';
+import HBlock from './hBlock';
 
 const MdxProviderComponents: MDXProviderComponents = {
   a: ABlock,
   code: CodeBlock,
   pre: PreBlock,
-  h1: HBlockFactory('h1'),
-  h2: HBlockFactory('h2'),
-  h3: HBlockFactory('h3'),
-  h4: HBlockFactory('h4'),
+  h1: HBlock.H1Block,
+  h2: HBlock.H2Block,
+  h3: HBlock.H3Block,
+  h4: HBlock.H4Block,
+  h5: HBlock.H5Block,
+  h6: HBlock.H6Block,
 };
 
 type MdxProviderProps = {
