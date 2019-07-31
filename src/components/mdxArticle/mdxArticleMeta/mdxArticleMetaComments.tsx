@@ -22,7 +22,7 @@ const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProp
   if (!disqusShortname) return null;
 
   const disqusConfig = {
-    url: siteUrl ? Url.resolve(siteUrl, url) : url,
+    url: Url.resolve(siteUrl, url),
     identifier: '',
     title,
   };

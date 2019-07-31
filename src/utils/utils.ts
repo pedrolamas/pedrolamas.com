@@ -45,6 +45,7 @@ export type SafeMdxMetadata = {
   url: string;
   date: string;
   dateFormatted: string;
+  lastModified: string;
   categories?: string[];
   tags?: string[];
   image?: PostMdxFrontmatterType extends { image: infer T } ? NonNullable<T> : unknown;
@@ -60,6 +61,7 @@ export const SafeMetadataFromMdx = (mdx: Partial<GraphQl.Mdx> & Partial<GraphQl.
     url: (fields && fields.slug) || '',
     date: (frontmatter && frontmatter.date) || '',
     dateFormatted: (frontmatter && frontmatter.dateFormatted) || '',
+    lastModified: (frontmatter && frontmatter.last_modified_at) || '',
     categories: (frontmatter && frontmatter.categories && (frontmatter.categories.filter(x => x) as string[])) || undefined,
     tags: (frontmatter && frontmatter.tags && (frontmatter.tags.filter(x => x) as string[])) || undefined,
     image: (frontmatter && frontmatter.image) || undefined,
