@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import SitemapLayoutEntry from './sitemapLayoutEntry';
 import PageLayout from '../../components/pageLayout';
@@ -14,7 +14,7 @@ const SitemapLayout: React.FunctionComponent<SitemapLayoutProps> = ({ data }) =>
 
   if (!allSitemapYaml) throw Error('AllSitemapYaml expected!');
 
-  const { siteMetadata } = useContext(SiteContext);
+  const { siteMetadata } = React.useContext(SiteContext);
 
   return (
     <PageLayout title="Site Map">
