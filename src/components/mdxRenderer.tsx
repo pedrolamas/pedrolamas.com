@@ -1,23 +1,17 @@
 import React from 'react';
-import { MDXRenderer } from 'gatsby-mdx';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import MdxProvider from './mdxProvider';
 import { GraphQl } from '../utils';
 
 type MdxRendererProps = {
-  children: {
-    code?: GraphQl.Maybe<Pick<GraphQl.MdxCodeMdx, 'body'>>;
-  };
+  children: Pick<GraphQl.Mdx, 'body'>;
 };
 
 const MdxRenderer: React.FunctionComponent<MdxRendererProps> = ({ children }) => (
-  <>
-    {children.code && children.code.body && (
-      <MdxProvider>
-        <MDXRenderer>{children.code.body}</MDXRenderer>
-      </MdxProvider>
-    )}
-  </>
+  <MdxProvider>
+    <MDXRenderer>{children.body}</MDXRenderer>
+  </MdxProvider>
 );
 
 export default MdxRenderer;

@@ -47,9 +47,7 @@ const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {
 export const postMdxFragment = graphql`
   fragment PostMdx on Mdx {
     id
-    code {
-      body
-    }
+    body
     fields {
       slug
     }

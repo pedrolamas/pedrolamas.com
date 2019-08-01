@@ -38,9 +38,7 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
               }
             }
             disclaimer {
-              code {
-                body
-              }
+              body
             }
             authorDetails {
               email
@@ -53,9 +51,7 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
                 }
               }
               biography {
-                code {
-                  body
-                }
+                body
               }
               twitter
             }

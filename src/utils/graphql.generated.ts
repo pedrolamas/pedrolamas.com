@@ -735,6 +735,9 @@ export enum FileFieldsEnum {
   ChildrenSitemapYamlInternalMediaType = 'childrenSitemapYaml___internal___mediaType',
   ChildrenSitemapYamlInternalOwner = 'childrenSitemapYaml___internal___owner',
   ChildrenSitemapYamlInternalType = 'childrenSitemapYaml___internal___type',
+  ChildMdxRawBody = 'childMdx___rawBody',
+  ChildMdxFileAbsolutePath = 'childMdx___fileAbsolutePath',
+  ChildMdxFrontmatterTitle = 'childMdx___frontmatter___title',
   ChildMdxFrontmatterCategories = 'childMdx___frontmatter___categories',
   ChildMdxFrontmatterDate = 'childMdx___frontmatter___date',
   ChildMdxFrontmatterDateFormatted = 'childMdx___frontmatter___dateFormatted',
@@ -776,29 +779,25 @@ export enum FileFieldsEnum {
   ChildMdxFrontmatterLastModifiedAt = 'childMdx___frontmatter___last_modified_at',
   ChildMdxFrontmatterLayout = 'childMdx___frontmatter___layout',
   ChildMdxFrontmatterTags = 'childMdx___frontmatter___tags',
-  ChildMdxFrontmatterTitle = 'childMdx___frontmatter___title',
-  ChildMdxFrontmatterParent = 'childMdx___frontmatter____PARENT',
   ChildMdxFrontmatterId = 'childMdx___frontmatter___id',
   ChildMdxFrontmatterAuthor = 'childMdx___frontmatter___author',
   ChildMdxFrontmatterGuid = 'childMdx___frontmatter___guid',
   ChildMdxFrontmatterSharingDisabled = 'childMdx___frontmatter___sharing_disabled',
   ChildMdxFrontmatterDsqThreadId = 'childMdx___frontmatter___dsq_thread_id',
   ChildMdxFrontmatterFbAuthorPostId = 'childMdx___frontmatter___fb_author_post_id',
-  ChildMdxRawBody = 'childMdx___rawBody',
-  ChildMdxFileAbsolutePath = 'childMdx___fileAbsolutePath',
-  ChildMdxFieldsSlug = 'childMdx___fields___slug',
-  ChildMdxCodeBody = 'childMdx___code___body',
-  ChildMdxCodeScope = 'childMdx___code___scope',
+  ChildMdxBody = 'childMdx___body',
   ChildMdxExcerpt = 'childMdx___excerpt',
   ChildMdxHeadings = 'childMdx___headings',
   ChildMdxHeadingsValue = 'childMdx___headings___value',
   ChildMdxHeadingsDepth = 'childMdx___headings___depth',
   ChildMdxHtml = 'childMdx___html',
+  ChildMdxMdxAst = 'childMdx___mdxAST',
   ChildMdxTableOfContents = 'childMdx___tableOfContents',
   ChildMdxTimeToRead = 'childMdx___timeToRead',
   ChildMdxWordCountParagraphs = 'childMdx___wordCount___paragraphs',
   ChildMdxWordCountSentences = 'childMdx___wordCount___sentences',
   ChildMdxWordCountWords = 'childMdx___wordCount___words',
+  ChildMdxFieldsSlug = 'childMdx___fields___slug',
   ChildMdxId = 'childMdx___id',
   ChildMdxParentId = 'childMdx___parent___id',
   ChildMdxParentParentId = 'childMdx___parent___parent___id',
@@ -1441,17 +1440,18 @@ export type JsonQueryOperatorInput = {
 };
 
 export type Mdx = Node & {
+  rawBody: Scalars['String'],
+  fileAbsolutePath: Scalars['String'],
   frontmatter?: Maybe<MdxFrontmatter>,
-  rawBody?: Maybe<Scalars['String']>,
-  fileAbsolutePath?: Maybe<Scalars['String']>,
-  fields?: Maybe<MdxFields>,
-  code?: Maybe<MdxCodeMdx>,
-  excerpt?: Maybe<Scalars['String']>,
+  body: Scalars['String'],
+  excerpt: Scalars['String'],
   headings?: Maybe<Array<Maybe<MdxHeadingMdx>>>,
   html?: Maybe<Scalars['String']>,
+  mdxAST?: Maybe<Scalars['JSON']>,
   tableOfContents?: Maybe<Scalars['JSON']>,
   timeToRead?: Maybe<Scalars['Int']>,
-  wordCount?: Maybe<WordCountsMdx>,
+  wordCount?: Maybe<MdxWordCount>,
+  fields?: Maybe<MdxFields>,
   id: Scalars['ID'],
   parent?: Maybe<Node>,
   children: Array<Node>,
@@ -1471,16 +1471,6 @@ export type MdxHeadingsArgs = {
 
 export type MdxTableOfContentsArgs = {
   maxDepth?: Maybe<Scalars['Int']>
-};
-
-export type MdxCodeMdx = {
-  body?: Maybe<Scalars['String']>,
-  scope?: Maybe<Scalars['String']>,
-};
-
-export type MdxCodeMdxFilterInput = {
-  body?: Maybe<StringQueryOperatorInput>,
-  scope?: Maybe<StringQueryOperatorInput>,
 };
 
 export type MdxConnection = {
@@ -1515,6 +1505,9 @@ export type MdxFields = {
 };
 
 export enum MdxFieldsEnum {
+  RawBody = 'rawBody',
+  FileAbsolutePath = 'fileAbsolutePath',
+  FrontmatterTitle = 'frontmatter___title',
   FrontmatterCategories = 'frontmatter___categories',
   FrontmatterDate = 'frontmatter___date',
   FrontmatterDateFormatted = 'frontmatter___dateFormatted',
@@ -1575,9 +1568,11 @@ export enum MdxFieldsEnum {
   FrontmatterImageChildrenSitemapYamlChildren = 'frontmatter___image___childrenSitemapYaml___children',
   FrontmatterImageChildMdxRawBody = 'frontmatter___image___childMdx___rawBody',
   FrontmatterImageChildMdxFileAbsolutePath = 'frontmatter___image___childMdx___fileAbsolutePath',
+  FrontmatterImageChildMdxBody = 'frontmatter___image___childMdx___body',
   FrontmatterImageChildMdxExcerpt = 'frontmatter___image___childMdx___excerpt',
   FrontmatterImageChildMdxHeadings = 'frontmatter___image___childMdx___headings',
   FrontmatterImageChildMdxHtml = 'frontmatter___image___childMdx___html',
+  FrontmatterImageChildMdxMdxAst = 'frontmatter___image___childMdx___mdxAST',
   FrontmatterImageChildMdxTableOfContents = 'frontmatter___image___childMdx___tableOfContents',
   FrontmatterImageChildMdxTimeToRead = 'frontmatter___image___childMdx___timeToRead',
   FrontmatterImageChildMdxId = 'frontmatter___image___childMdx___id',
@@ -1585,29 +1580,25 @@ export enum MdxFieldsEnum {
   FrontmatterLastModifiedAt = 'frontmatter___last_modified_at',
   FrontmatterLayout = 'frontmatter___layout',
   FrontmatterTags = 'frontmatter___tags',
-  FrontmatterTitle = 'frontmatter___title',
-  FrontmatterParent = 'frontmatter____PARENT',
   FrontmatterId = 'frontmatter___id',
   FrontmatterAuthor = 'frontmatter___author',
   FrontmatterGuid = 'frontmatter___guid',
   FrontmatterSharingDisabled = 'frontmatter___sharing_disabled',
   FrontmatterDsqThreadId = 'frontmatter___dsq_thread_id',
   FrontmatterFbAuthorPostId = 'frontmatter___fb_author_post_id',
-  RawBody = 'rawBody',
-  FileAbsolutePath = 'fileAbsolutePath',
-  FieldsSlug = 'fields___slug',
-  CodeBody = 'code___body',
-  CodeScope = 'code___scope',
+  Body = 'body',
   Excerpt = 'excerpt',
   Headings = 'headings',
   HeadingsValue = 'headings___value',
   HeadingsDepth = 'headings___depth',
   Html = 'html',
+  MdxAst = 'mdxAST',
   TableOfContents = 'tableOfContents',
   TimeToRead = 'timeToRead',
   WordCountParagraphs = 'wordCount___paragraphs',
   WordCountSentences = 'wordCount___sentences',
   WordCountWords = 'wordCount___words',
+  FieldsSlug = 'fields___slug',
   Id = 'id',
   ParentId = 'parent___id',
   ParentParentId = 'parent___parent___id',
@@ -1701,17 +1692,18 @@ export type MdxFieldsFilterInput = {
 };
 
 export type MdxFilterInput = {
-  frontmatter?: Maybe<MdxFrontmatterFilterInput>,
   rawBody?: Maybe<StringQueryOperatorInput>,
   fileAbsolutePath?: Maybe<StringQueryOperatorInput>,
-  fields?: Maybe<MdxFieldsFilterInput>,
-  code?: Maybe<MdxCodeMdxFilterInput>,
+  frontmatter?: Maybe<MdxFrontmatterFilterInput>,
+  body?: Maybe<StringQueryOperatorInput>,
   excerpt?: Maybe<StringQueryOperatorInput>,
   headings?: Maybe<MdxHeadingMdxFilterListInput>,
   html?: Maybe<StringQueryOperatorInput>,
+  mdxAST?: Maybe<JsonQueryOperatorInput>,
   tableOfContents?: Maybe<JsonQueryOperatorInput>,
   timeToRead?: Maybe<IntQueryOperatorInput>,
-  wordCount?: Maybe<WordCountsMdxFilterInput>,
+  wordCount?: Maybe<MdxWordCountFilterInput>,
+  fields?: Maybe<MdxFieldsFilterInput>,
   id?: Maybe<StringQueryOperatorInput>,
   parent?: Maybe<NodeFilterInput>,
   children?: Maybe<NodeFilterListInput>,
@@ -1719,6 +1711,7 @@ export type MdxFilterInput = {
 };
 
 export type MdxFrontmatter = {
+  title?: Maybe<Scalars['String']>,
   categories?: Maybe<Array<Maybe<Scalars['String']>>>,
   date?: Maybe<Scalars['Date']>,
   dateFormatted?: Maybe<Scalars['Date']>,
@@ -1726,8 +1719,6 @@ export type MdxFrontmatter = {
   last_modified_at?: Maybe<Scalars['Date']>,
   layout?: Maybe<Scalars['String']>,
   tags?: Maybe<Array<Maybe<Scalars['String']>>>,
-  title?: Maybe<Scalars['String']>,
-  _PARENT?: Maybe<Scalars['String']>,
   id?: Maybe<Scalars['Int']>,
   author?: Maybe<Scalars['String']>,
   guid?: Maybe<Scalars['String']>,
@@ -1745,6 +1736,7 @@ export type MdxFrontmatterDateFormattedArgs = {
 };
 
 export type MdxFrontmatterFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>,
   categories?: Maybe<StringQueryOperatorInput>,
   date?: Maybe<DateQueryOperatorInput>,
   dateFormatted?: Maybe<DateQueryOperatorInput>,
@@ -1752,8 +1744,6 @@ export type MdxFrontmatterFilterInput = {
   last_modified_at?: Maybe<DateQueryOperatorInput>,
   layout?: Maybe<StringQueryOperatorInput>,
   tags?: Maybe<StringQueryOperatorInput>,
-  title?: Maybe<StringQueryOperatorInput>,
-  _PARENT?: Maybe<StringQueryOperatorInput>,
   id?: Maybe<IntQueryOperatorInput>,
   author?: Maybe<StringQueryOperatorInput>,
   guid?: Maybe<StringQueryOperatorInput>,
@@ -1912,6 +1902,9 @@ export enum MdxSourceFieldsEnum {
   InternalMediaType = 'internal___mediaType',
   InternalOwner = 'internal___owner',
   InternalType = 'internal___type',
+  ChildMdxRawBody = 'childMdx___rawBody',
+  ChildMdxFileAbsolutePath = 'childMdx___fileAbsolutePath',
+  ChildMdxFrontmatterTitle = 'childMdx___frontmatter___title',
   ChildMdxFrontmatterCategories = 'childMdx___frontmatter___categories',
   ChildMdxFrontmatterDate = 'childMdx___frontmatter___date',
   ChildMdxFrontmatterDateFormatted = 'childMdx___frontmatter___dateFormatted',
@@ -1953,29 +1946,25 @@ export enum MdxSourceFieldsEnum {
   ChildMdxFrontmatterLastModifiedAt = 'childMdx___frontmatter___last_modified_at',
   ChildMdxFrontmatterLayout = 'childMdx___frontmatter___layout',
   ChildMdxFrontmatterTags = 'childMdx___frontmatter___tags',
-  ChildMdxFrontmatterTitle = 'childMdx___frontmatter___title',
-  ChildMdxFrontmatterParent = 'childMdx___frontmatter____PARENT',
   ChildMdxFrontmatterId = 'childMdx___frontmatter___id',
   ChildMdxFrontmatterAuthor = 'childMdx___frontmatter___author',
   ChildMdxFrontmatterGuid = 'childMdx___frontmatter___guid',
   ChildMdxFrontmatterSharingDisabled = 'childMdx___frontmatter___sharing_disabled',
   ChildMdxFrontmatterDsqThreadId = 'childMdx___frontmatter___dsq_thread_id',
   ChildMdxFrontmatterFbAuthorPostId = 'childMdx___frontmatter___fb_author_post_id',
-  ChildMdxRawBody = 'childMdx___rawBody',
-  ChildMdxFileAbsolutePath = 'childMdx___fileAbsolutePath',
-  ChildMdxFieldsSlug = 'childMdx___fields___slug',
-  ChildMdxCodeBody = 'childMdx___code___body',
-  ChildMdxCodeScope = 'childMdx___code___scope',
+  ChildMdxBody = 'childMdx___body',
   ChildMdxExcerpt = 'childMdx___excerpt',
   ChildMdxHeadings = 'childMdx___headings',
   ChildMdxHeadingsValue = 'childMdx___headings___value',
   ChildMdxHeadingsDepth = 'childMdx___headings___depth',
   ChildMdxHtml = 'childMdx___html',
+  ChildMdxMdxAst = 'childMdx___mdxAST',
   ChildMdxTableOfContents = 'childMdx___tableOfContents',
   ChildMdxTimeToRead = 'childMdx___timeToRead',
   ChildMdxWordCountParagraphs = 'childMdx___wordCount___paragraphs',
   ChildMdxWordCountSentences = 'childMdx___wordCount___sentences',
   ChildMdxWordCountWords = 'childMdx___wordCount___words',
+  ChildMdxFieldsSlug = 'childMdx___fields___slug',
   ChildMdxId = 'childMdx___id',
   ChildMdxParentId = 'childMdx___parent___id',
   ChildMdxParentParentId = 'childMdx___parent___parent___id',
@@ -2042,6 +2031,18 @@ export type MdxSourceSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>,
 };
 
+export type MdxWordCount = {
+  paragraphs?: Maybe<Scalars['Int']>,
+  sentences?: Maybe<Scalars['Int']>,
+  words?: Maybe<Scalars['Int']>,
+};
+
+export type MdxWordCountFilterInput = {
+  paragraphs?: Maybe<IntQueryOperatorInput>,
+  sentences?: Maybe<IntQueryOperatorInput>,
+  words?: Maybe<IntQueryOperatorInput>,
+};
+
 /** Node Interface */
 export type Node = {
   id: Scalars['ID'],
@@ -2092,14 +2093,14 @@ export enum PotraceTurnPolicy {
 }
 
 export type Query = {
-  sitemapYaml?: Maybe<SitemapYaml>,
-  allSitemapYaml?: Maybe<SitemapYamlConnection>,
-  imageSharp?: Maybe<ImageSharp>,
-  allImageSharp?: Maybe<ImageSharpConnection>,
   file?: Maybe<File>,
   allFile?: Maybe<FileConnection>,
+  imageSharp?: Maybe<ImageSharp>,
+  allImageSharp?: Maybe<ImageSharpConnection>,
   mdx?: Maybe<Mdx>,
   allMdx?: Maybe<MdxConnection>,
+  sitemapYaml?: Maybe<SitemapYaml>,
+  allSitemapYaml?: Maybe<SitemapYamlConnection>,
   site?: Maybe<Site>,
   allSite?: Maybe<SiteConnection>,
   sitePage?: Maybe<SitePage>,
@@ -2110,48 +2111,6 @@ export type Query = {
   allDirectory?: Maybe<DirectoryConnection>,
   mdxSource?: Maybe<MdxSource>,
   allMdxSource?: Maybe<MdxSourceConnection>,
-};
-
-
-export type QuerySitemapYamlArgs = {
-  sub?: Maybe<SitemapYamlSubFilterListInput>,
-  title?: Maybe<StringQueryOperatorInput>,
-  url?: Maybe<StringQueryOperatorInput>,
-  minimap?: Maybe<BooleanQueryOperatorInput>,
-  id?: Maybe<StringQueryOperatorInput>,
-  parent?: Maybe<NodeFilterInput>,
-  children?: Maybe<NodeFilterListInput>,
-  internal?: Maybe<InternalFilterInput>
-};
-
-
-export type QueryAllSitemapYamlArgs = {
-  filter?: Maybe<SitemapYamlFilterInput>,
-  sort?: Maybe<SitemapYamlSortInput>,
-  skip?: Maybe<Scalars['Int']>,
-  limit?: Maybe<Scalars['Int']>
-};
-
-
-export type QueryImageSharpArgs = {
-  id?: Maybe<StringQueryOperatorInput>,
-  fixed?: Maybe<ImageSharpFixedFilterInput>,
-  resolutions?: Maybe<ImageSharpResolutionsFilterInput>,
-  fluid?: Maybe<ImageSharpFluidFilterInput>,
-  sizes?: Maybe<ImageSharpSizesFilterInput>,
-  original?: Maybe<ImageSharpOriginalFilterInput>,
-  resize?: Maybe<ImageSharpResizeFilterInput>,
-  parent?: Maybe<NodeFilterInput>,
-  children?: Maybe<NodeFilterListInput>,
-  internal?: Maybe<InternalFilterInput>
-};
-
-
-export type QueryAllImageSharpArgs = {
-  filter?: Maybe<ImageSharpFilterInput>,
-  sort?: Maybe<ImageSharpSortInput>,
-  skip?: Maybe<Scalars['Int']>,
-  limit?: Maybe<Scalars['Int']>
 };
 
 
@@ -2206,18 +2165,41 @@ export type QueryAllFileArgs = {
 };
 
 
+export type QueryImageSharpArgs = {
+  id?: Maybe<StringQueryOperatorInput>,
+  fixed?: Maybe<ImageSharpFixedFilterInput>,
+  resolutions?: Maybe<ImageSharpResolutionsFilterInput>,
+  fluid?: Maybe<ImageSharpFluidFilterInput>,
+  sizes?: Maybe<ImageSharpSizesFilterInput>,
+  original?: Maybe<ImageSharpOriginalFilterInput>,
+  resize?: Maybe<ImageSharpResizeFilterInput>,
+  parent?: Maybe<NodeFilterInput>,
+  children?: Maybe<NodeFilterListInput>,
+  internal?: Maybe<InternalFilterInput>
+};
+
+
+export type QueryAllImageSharpArgs = {
+  filter?: Maybe<ImageSharpFilterInput>,
+  sort?: Maybe<ImageSharpSortInput>,
+  skip?: Maybe<Scalars['Int']>,
+  limit?: Maybe<Scalars['Int']>
+};
+
+
 export type QueryMdxArgs = {
-  frontmatter?: Maybe<MdxFrontmatterFilterInput>,
   rawBody?: Maybe<StringQueryOperatorInput>,
   fileAbsolutePath?: Maybe<StringQueryOperatorInput>,
-  fields?: Maybe<MdxFieldsFilterInput>,
-  code?: Maybe<MdxCodeMdxFilterInput>,
+  frontmatter?: Maybe<MdxFrontmatterFilterInput>,
+  body?: Maybe<StringQueryOperatorInput>,
   excerpt?: Maybe<StringQueryOperatorInput>,
   headings?: Maybe<MdxHeadingMdxFilterListInput>,
   html?: Maybe<StringQueryOperatorInput>,
+  mdxAST?: Maybe<JsonQueryOperatorInput>,
   tableOfContents?: Maybe<JsonQueryOperatorInput>,
   timeToRead?: Maybe<IntQueryOperatorInput>,
-  wordCount?: Maybe<WordCountsMdxFilterInput>,
+  wordCount?: Maybe<MdxWordCountFilterInput>,
+  fields?: Maybe<MdxFieldsFilterInput>,
   id?: Maybe<StringQueryOperatorInput>,
   parent?: Maybe<NodeFilterInput>,
   children?: Maybe<NodeFilterListInput>,
@@ -2228,6 +2210,26 @@ export type QueryMdxArgs = {
 export type QueryAllMdxArgs = {
   filter?: Maybe<MdxFilterInput>,
   sort?: Maybe<MdxSortInput>,
+  skip?: Maybe<Scalars['Int']>,
+  limit?: Maybe<Scalars['Int']>
+};
+
+
+export type QuerySitemapYamlArgs = {
+  sub?: Maybe<SitemapYamlSubFilterListInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+  url?: Maybe<StringQueryOperatorInput>,
+  minimap?: Maybe<BooleanQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  parent?: Maybe<NodeFilterInput>,
+  children?: Maybe<NodeFilterListInput>,
+  internal?: Maybe<InternalFilterInput>
+};
+
+
+export type QueryAllSitemapYamlArgs = {
+  filter?: Maybe<SitemapYamlFilterInput>,
+  sort?: Maybe<SitemapYamlSortInput>,
   skip?: Maybe<Scalars['Int']>,
   limit?: Maybe<Scalars['Int']>
 };
@@ -2481,42 +2483,43 @@ export enum SiteFieldsEnum {
   SiteMetadataLogoChildrenSitemapYamlChildren = 'siteMetadata___logo___childrenSitemapYaml___children',
   SiteMetadataLogoChildMdxRawBody = 'siteMetadata___logo___childMdx___rawBody',
   SiteMetadataLogoChildMdxFileAbsolutePath = 'siteMetadata___logo___childMdx___fileAbsolutePath',
+  SiteMetadataLogoChildMdxBody = 'siteMetadata___logo___childMdx___body',
   SiteMetadataLogoChildMdxExcerpt = 'siteMetadata___logo___childMdx___excerpt',
   SiteMetadataLogoChildMdxHeadings = 'siteMetadata___logo___childMdx___headings',
   SiteMetadataLogoChildMdxHtml = 'siteMetadata___logo___childMdx___html',
+  SiteMetadataLogoChildMdxMdxAst = 'siteMetadata___logo___childMdx___mdxAST',
   SiteMetadataLogoChildMdxTableOfContents = 'siteMetadata___logo___childMdx___tableOfContents',
   SiteMetadataLogoChildMdxTimeToRead = 'siteMetadata___logo___childMdx___timeToRead',
   SiteMetadataLogoChildMdxId = 'siteMetadata___logo___childMdx___id',
   SiteMetadataLogoChildMdxChildren = 'siteMetadata___logo___childMdx___children',
+  SiteMetadataDisclaimerRawBody = 'siteMetadata___disclaimer___rawBody',
+  SiteMetadataDisclaimerFileAbsolutePath = 'siteMetadata___disclaimer___fileAbsolutePath',
+  SiteMetadataDisclaimerFrontmatterTitle = 'siteMetadata___disclaimer___frontmatter___title',
   SiteMetadataDisclaimerFrontmatterCategories = 'siteMetadata___disclaimer___frontmatter___categories',
   SiteMetadataDisclaimerFrontmatterDate = 'siteMetadata___disclaimer___frontmatter___date',
   SiteMetadataDisclaimerFrontmatterDateFormatted = 'siteMetadata___disclaimer___frontmatter___dateFormatted',
   SiteMetadataDisclaimerFrontmatterLastModifiedAt = 'siteMetadata___disclaimer___frontmatter___last_modified_at',
   SiteMetadataDisclaimerFrontmatterLayout = 'siteMetadata___disclaimer___frontmatter___layout',
   SiteMetadataDisclaimerFrontmatterTags = 'siteMetadata___disclaimer___frontmatter___tags',
-  SiteMetadataDisclaimerFrontmatterTitle = 'siteMetadata___disclaimer___frontmatter___title',
-  SiteMetadataDisclaimerFrontmatterParent = 'siteMetadata___disclaimer___frontmatter____PARENT',
   SiteMetadataDisclaimerFrontmatterId = 'siteMetadata___disclaimer___frontmatter___id',
   SiteMetadataDisclaimerFrontmatterAuthor = 'siteMetadata___disclaimer___frontmatter___author',
   SiteMetadataDisclaimerFrontmatterGuid = 'siteMetadata___disclaimer___frontmatter___guid',
   SiteMetadataDisclaimerFrontmatterSharingDisabled = 'siteMetadata___disclaimer___frontmatter___sharing_disabled',
   SiteMetadataDisclaimerFrontmatterDsqThreadId = 'siteMetadata___disclaimer___frontmatter___dsq_thread_id',
   SiteMetadataDisclaimerFrontmatterFbAuthorPostId = 'siteMetadata___disclaimer___frontmatter___fb_author_post_id',
-  SiteMetadataDisclaimerRawBody = 'siteMetadata___disclaimer___rawBody',
-  SiteMetadataDisclaimerFileAbsolutePath = 'siteMetadata___disclaimer___fileAbsolutePath',
-  SiteMetadataDisclaimerFieldsSlug = 'siteMetadata___disclaimer___fields___slug',
-  SiteMetadataDisclaimerCodeBody = 'siteMetadata___disclaimer___code___body',
-  SiteMetadataDisclaimerCodeScope = 'siteMetadata___disclaimer___code___scope',
+  SiteMetadataDisclaimerBody = 'siteMetadata___disclaimer___body',
   SiteMetadataDisclaimerExcerpt = 'siteMetadata___disclaimer___excerpt',
   SiteMetadataDisclaimerHeadings = 'siteMetadata___disclaimer___headings',
   SiteMetadataDisclaimerHeadingsValue = 'siteMetadata___disclaimer___headings___value',
   SiteMetadataDisclaimerHeadingsDepth = 'siteMetadata___disclaimer___headings___depth',
   SiteMetadataDisclaimerHtml = 'siteMetadata___disclaimer___html',
+  SiteMetadataDisclaimerMdxAst = 'siteMetadata___disclaimer___mdxAST',
   SiteMetadataDisclaimerTableOfContents = 'siteMetadata___disclaimer___tableOfContents',
   SiteMetadataDisclaimerTimeToRead = 'siteMetadata___disclaimer___timeToRead',
   SiteMetadataDisclaimerWordCountParagraphs = 'siteMetadata___disclaimer___wordCount___paragraphs',
   SiteMetadataDisclaimerWordCountSentences = 'siteMetadata___disclaimer___wordCount___sentences',
   SiteMetadataDisclaimerWordCountWords = 'siteMetadata___disclaimer___wordCount___words',
+  SiteMetadataDisclaimerFieldsSlug = 'siteMetadata___disclaimer___fields___slug',
   SiteMetadataDisclaimerId = 'siteMetadata___disclaimer___id',
   SiteMetadataDisclaimerParentId = 'siteMetadata___disclaimer___parent___id',
   SiteMetadataDisclaimerParentChildren = 'siteMetadata___disclaimer___parent___children',
@@ -2568,9 +2571,11 @@ export enum SiteFieldsEnum {
   SiteMetadataAuthorDetailsPictureChildrenSitemapYaml = 'siteMetadata___authorDetails___picture___childrenSitemapYaml',
   SiteMetadataAuthorDetailsBiographyRawBody = 'siteMetadata___authorDetails___biography___rawBody',
   SiteMetadataAuthorDetailsBiographyFileAbsolutePath = 'siteMetadata___authorDetails___biography___fileAbsolutePath',
+  SiteMetadataAuthorDetailsBiographyBody = 'siteMetadata___authorDetails___biography___body',
   SiteMetadataAuthorDetailsBiographyExcerpt = 'siteMetadata___authorDetails___biography___excerpt',
   SiteMetadataAuthorDetailsBiographyHeadings = 'siteMetadata___authorDetails___biography___headings',
   SiteMetadataAuthorDetailsBiographyHtml = 'siteMetadata___authorDetails___biography___html',
+  SiteMetadataAuthorDetailsBiographyMdxAst = 'siteMetadata___authorDetails___biography___mdxAST',
   SiteMetadataAuthorDetailsBiographyTableOfContents = 'siteMetadata___authorDetails___biography___tableOfContents',
   SiteMetadataAuthorDetailsBiographyTimeToRead = 'siteMetadata___authorDetails___biography___timeToRead',
   SiteMetadataAuthorDetailsBiographyId = 'siteMetadata___authorDetails___biography___id',
@@ -2719,35 +2724,34 @@ export enum SiteFieldsEnum {
   ChildrenMdxSourceInternalMediaType = 'childrenMdxSource___internal___mediaType',
   ChildrenMdxSourceInternalOwner = 'childrenMdxSource___internal___owner',
   ChildrenMdxSourceInternalType = 'childrenMdxSource___internal___type',
+  ChildrenMdxSourceChildMdxRawBody = 'childrenMdxSource___childMdx___rawBody',
+  ChildrenMdxSourceChildMdxFileAbsolutePath = 'childrenMdxSource___childMdx___fileAbsolutePath',
+  ChildrenMdxSourceChildMdxFrontmatterTitle = 'childrenMdxSource___childMdx___frontmatter___title',
   ChildrenMdxSourceChildMdxFrontmatterCategories = 'childrenMdxSource___childMdx___frontmatter___categories',
   ChildrenMdxSourceChildMdxFrontmatterDate = 'childrenMdxSource___childMdx___frontmatter___date',
   ChildrenMdxSourceChildMdxFrontmatterDateFormatted = 'childrenMdxSource___childMdx___frontmatter___dateFormatted',
   ChildrenMdxSourceChildMdxFrontmatterLastModifiedAt = 'childrenMdxSource___childMdx___frontmatter___last_modified_at',
   ChildrenMdxSourceChildMdxFrontmatterLayout = 'childrenMdxSource___childMdx___frontmatter___layout',
   ChildrenMdxSourceChildMdxFrontmatterTags = 'childrenMdxSource___childMdx___frontmatter___tags',
-  ChildrenMdxSourceChildMdxFrontmatterTitle = 'childrenMdxSource___childMdx___frontmatter___title',
-  ChildrenMdxSourceChildMdxFrontmatterParent = 'childrenMdxSource___childMdx___frontmatter____PARENT',
   ChildrenMdxSourceChildMdxFrontmatterId = 'childrenMdxSource___childMdx___frontmatter___id',
   ChildrenMdxSourceChildMdxFrontmatterAuthor = 'childrenMdxSource___childMdx___frontmatter___author',
   ChildrenMdxSourceChildMdxFrontmatterGuid = 'childrenMdxSource___childMdx___frontmatter___guid',
   ChildrenMdxSourceChildMdxFrontmatterSharingDisabled = 'childrenMdxSource___childMdx___frontmatter___sharing_disabled',
   ChildrenMdxSourceChildMdxFrontmatterDsqThreadId = 'childrenMdxSource___childMdx___frontmatter___dsq_thread_id',
   ChildrenMdxSourceChildMdxFrontmatterFbAuthorPostId = 'childrenMdxSource___childMdx___frontmatter___fb_author_post_id',
-  ChildrenMdxSourceChildMdxRawBody = 'childrenMdxSource___childMdx___rawBody',
-  ChildrenMdxSourceChildMdxFileAbsolutePath = 'childrenMdxSource___childMdx___fileAbsolutePath',
-  ChildrenMdxSourceChildMdxFieldsSlug = 'childrenMdxSource___childMdx___fields___slug',
-  ChildrenMdxSourceChildMdxCodeBody = 'childrenMdxSource___childMdx___code___body',
-  ChildrenMdxSourceChildMdxCodeScope = 'childrenMdxSource___childMdx___code___scope',
+  ChildrenMdxSourceChildMdxBody = 'childrenMdxSource___childMdx___body',
   ChildrenMdxSourceChildMdxExcerpt = 'childrenMdxSource___childMdx___excerpt',
   ChildrenMdxSourceChildMdxHeadings = 'childrenMdxSource___childMdx___headings',
   ChildrenMdxSourceChildMdxHeadingsValue = 'childrenMdxSource___childMdx___headings___value',
   ChildrenMdxSourceChildMdxHeadingsDepth = 'childrenMdxSource___childMdx___headings___depth',
   ChildrenMdxSourceChildMdxHtml = 'childrenMdxSource___childMdx___html',
+  ChildrenMdxSourceChildMdxMdxAst = 'childrenMdxSource___childMdx___mdxAST',
   ChildrenMdxSourceChildMdxTableOfContents = 'childrenMdxSource___childMdx___tableOfContents',
   ChildrenMdxSourceChildMdxTimeToRead = 'childrenMdxSource___childMdx___timeToRead',
   ChildrenMdxSourceChildMdxWordCountParagraphs = 'childrenMdxSource___childMdx___wordCount___paragraphs',
   ChildrenMdxSourceChildMdxWordCountSentences = 'childrenMdxSource___childMdx___wordCount___sentences',
   ChildrenMdxSourceChildMdxWordCountWords = 'childrenMdxSource___childMdx___wordCount___words',
+  ChildrenMdxSourceChildMdxFieldsSlug = 'childrenMdxSource___childMdx___fields___slug',
   ChildrenMdxSourceChildMdxId = 'childrenMdxSource___childMdx___id',
   ChildrenMdxSourceChildMdxParentId = 'childrenMdxSource___childMdx___parent___id',
   ChildrenMdxSourceChildMdxParentChildren = 'childrenMdxSource___childMdx___parent___children',
@@ -3833,18 +3837,6 @@ export type StringQueryOperatorInput = {
   regex?: Maybe<Scalars['String']>,
   glob?: Maybe<Scalars['String']>,
 };
-
-export type WordCountsMdx = {
-  paragraphs?: Maybe<Scalars['Int']>,
-  sentences?: Maybe<Scalars['Int']>,
-  words?: Maybe<Scalars['Int']>,
-};
-
-export type WordCountsMdxFilterInput = {
-  paragraphs?: Maybe<IntQueryOperatorInput>,
-  sentences?: Maybe<IntQueryOperatorInput>,
-  words?: Maybe<IntQueryOperatorInput>,
-};
 export type CategoryArchiveLayoutQueryVariables = {
   category: Scalars['String']
 };
@@ -3859,7 +3851,7 @@ export type IndexLayoutQueryVariables = {
 
 export type IndexLayoutQuery = { allMdx: Maybe<{ edges: Array<{ node: PostMdxFragment }> }> };
 
-export type PostMdxFragment = (Pick<Mdx, 'id'> & { code: Maybe<Pick<MdxCodeMdx, 'body'>>, fields: Maybe<Pick<MdxFields, 'slug'>>, frontmatter: Maybe<(Pick<MdxFrontmatter, 'categories' | 'date' | 'dateFormatted' | 'last_modified_at' | 'layout' | 'tags' | 'title'> & { image: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<(Pick<ImageSharpFluid, 'presentationWidth'> & GatsbyImageSharpFluidFragment)> }> }> })>, file: Maybe<Pick<File, 'base'>> });
+export type PostMdxFragment = (Pick<Mdx, 'id' | 'body'> & { fields: Maybe<Pick<MdxFields, 'slug'>>, frontmatter: Maybe<(Pick<MdxFrontmatter, 'categories' | 'date' | 'dateFormatted' | 'last_modified_at' | 'layout' | 'tags' | 'title'> & { image: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<(Pick<ImageSharpFluid, 'presentationWidth'> & GatsbyImageSharpFluidFragment)> }> }> })>, file: Maybe<Pick<File, 'base'>> });
 
 export type SiblingPostMdxFragment = (Pick<Mdx, 'id'> & { fields: Maybe<Pick<MdxFields, 'slug'>>, frontmatter: Maybe<Pick<MdxFrontmatter, 'dateFormatted' | 'title'>> });
 
@@ -3875,7 +3867,7 @@ export type PostLayoutQuery = { mdx: Maybe<PostMdxFragment>, previousMdx: Maybe<
 export type RootLayoutQueryVariables = {};
 
 
-export type RootLayoutQuery = { site: Maybe<{ siteMetadata: (Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'siteUrl' | 'lang' | 'googleAnalytics' | 'disqusShortname' | 'addthisProfile'> & { logo: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> }>, logoFixed500: Maybe<{ childImageSharp: Maybe<{ resize: Maybe<Pick<ImageSharpResize, 'src'>> }> }>, disclaimer: Maybe<{ code: Maybe<Pick<MdxCodeMdx, 'body'>> }>, authorDetails: Maybe<(Pick<SiteSiteMetadataAuthorDetails, 'email' | 'uri' | 'twitter'> & { picture: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> }>, biography: Maybe<{ code: Maybe<Pick<MdxCodeMdx, 'body'>> }> })>, twitter: Maybe<Pick<SiteSiteMetadataTwitter, 'username'>>, facebook: Maybe<Pick<SiteSiteMetadataFacebook, 'appId' | 'publisher' | 'admins'>>, social: Maybe<Pick<SiteSiteMetadataSocial, 'links'>>, sidebar: Maybe<{ logos: Maybe<Array<Maybe<(Pick<SiteSiteMetadataSidebarLogos, 'title'> & { image: { childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> } })>>> }> }) }> };
+export type RootLayoutQuery = { site: Maybe<{ siteMetadata: (Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'siteUrl' | 'lang' | 'googleAnalytics' | 'disqusShortname' | 'addthisProfile'> & { logo: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> }>, logoFixed500: Maybe<{ childImageSharp: Maybe<{ resize: Maybe<Pick<ImageSharpResize, 'src'>> }> }>, disclaimer: Maybe<Pick<Mdx, 'body'>>, authorDetails: Maybe<(Pick<SiteSiteMetadataAuthorDetails, 'email' | 'uri' | 'twitter'> & { picture: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> }>, biography: Maybe<Pick<Mdx, 'body'>> })>, twitter: Maybe<Pick<SiteSiteMetadataTwitter, 'username'>>, facebook: Maybe<Pick<SiteSiteMetadataFacebook, 'appId' | 'publisher' | 'admins'>>, social: Maybe<Pick<SiteSiteMetadataSocial, 'links'>>, sidebar: Maybe<{ logos: Maybe<Array<Maybe<(Pick<SiteSiteMetadataSidebarLogos, 'title'> & { image: { childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> } })>>> }> }) }> };
 
 export type SidebarSitemapQueryVariables = {};
 

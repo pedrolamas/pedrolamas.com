@@ -2,7 +2,7 @@
 /// <reference types="react" />
 /// <reference types="react-dom" />
 
-declare module 'gatsby-mdx' {
+declare module 'gatsby-plugin-mdx' {
   import * as React from 'react';
 
   type MDXRendererProps = {

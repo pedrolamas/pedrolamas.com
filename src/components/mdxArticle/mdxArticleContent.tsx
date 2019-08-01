@@ -10,14 +10,12 @@ type MdxArticleContentProps = {
 const MdxArticleContent: React.FunctionComponent<MdxArticleContentProps> = () => {
   const { mdx } = React.useContext(MdxContext);
 
+  if (!mdx) return null;
+
   return (
-    <>
-      {mdx && (
-        <div className="post-content">
-          <MdxRenderer>{mdx}</MdxRenderer>
-        </div>
-      )}
-    </>
+    <div className="post-content">
+      <MdxRenderer>{mdx}</MdxRenderer>
+    </div>
   );
 };
 
