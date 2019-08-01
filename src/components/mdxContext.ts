@@ -14,6 +14,7 @@ const MdxContext = React.createContext<MdxContextProps>({
     url: '',
     date: '',
     dateFormatted: '',
+    lastModified: '',
   },
 });
 

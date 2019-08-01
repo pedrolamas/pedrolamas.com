@@ -91,8 +91,12 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
     `
   );
 
+  const siteMetadata = site && site.siteMetadata;
+
+  if (!siteMetadata) throw Error('Site Metadata expected');
+
   const siteContext = {
-    siteMetadata: (site && site.siteMetadata) || undefined,
+    siteMetadata,
   };
 
   return (
