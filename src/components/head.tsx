@@ -1,5 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Helmet from 'react-helmet';
+import { Location } from '@reach/router';
 import Url from 'url';
 
 import SiteContext from './siteContext';
@@ -10,7 +11,6 @@ type MetaProps = JSX.IntrinsicElements['meta'];
 type HeadProps = {
   title?: string;
   description?: string;
-  url?: string;
   mdxMeta?: Utils.SafeMdxMetadata;
   metaProps?: MetaProps[];
 };
@@ -20,82 +20,88 @@ const Head: React.FunctionComponent<HeadProps> = props => {
 
   if (!siteMetadata) return null;
 
-  const { siteUrl, description, author, authorDetails, title, lang, logo, twitter, facebook } = siteMetadata;
+  const { siteUrl, description, author, authorDetails, title, lang, logoFixed500: logo, twitter, facebook } = siteMetadata;
 
-  const siteLogo = logo && logo.childImageSharp && logo.childImageSharp.fluid && logo.childImageSharp.fluid.src;
+  const siteLogo = logo && logo.childImageSharp && logo.childImageSharp.resize && logo.childImageSharp.resize.src;
 
   const pageTitle = (props.mdxMeta && props.mdxMeta.title) || props.title;
   const pageTitleFull = pageTitle || title;
   const pageDescription = props.description || description;
-  const pageImage = (props.mdxMeta && props.mdxMeta.image && props.mdxMeta.image.childImageSharp && props.mdxMeta.image.childImageSharp.fluid && props.mdxMeta.image.childImageSharp.fluid.src) || siteLogo;
-  const pageImageAbsolute = pageImage && Url.resolve(siteUrl, pageImage);
-  const pageUrl = (props.mdxMeta && props.mdxMeta.url) || props.url;
-  const pageUrlAbsolute = pageUrl && Url.resolve(siteUrl, pageUrl);
-
-  const metaProps: MetaProps[] = [];
-
-  const pushNameMeta = (name: string, content?: string | null): void => {
-    if (content) metaProps.push({ name, content });
-  };
-
-  const pushPropertyMeta = (property: string, content?: string | null): void => {
-    if (content) metaProps.push({ property, content });
-  };
-
-  pushNameMeta('description', pageDescription);
-  pushNameMeta('author', author);
-
-  pushPropertyMeta('og:type', 'website'); // <-- this needs to change!!!
-  pushPropertyMeta('og:site_name', title);
-  pushPropertyMeta('og:title', pageTitleFull);
-  pushPropertyMeta('og:description', pageDescription);
-  pushPropertyMeta('og:url', pageUrlAbsolute);
-  pushPropertyMeta('og:image', pageImageAbsolute);
-  pushPropertyMeta('og:locale', lang && lang.replace('-', '_'));
-
-  if (facebook) {
-    pushPropertyMeta('fb:admins', facebook.admins);
-    pushPropertyMeta('fb:app_id', facebook.appId);
-
-    if (props.mdxMeta) {
-      pushPropertyMeta('article:publisher', facebook.publisher);
-
-      pushPropertyMeta('article:published_time', props.mdxMeta.date);
-
-      pushPropertyMeta('article:modified_time', props.mdxMeta.lastModified);
-
-      if (props.mdxMeta.tags) props.mdxMeta.tags.map(x => pushPropertyMeta('article:tag', x));
-    }
-  }
-
-  if (twitter) {
-    pushNameMeta('twitter:card', 'summary');
-    pushNameMeta('twitter:site', twitter.username ? `@${twitter.username}` : undefined);
-    pushNameMeta('twitter:creator', authorDetails && authorDetails.twitter ? `@${authorDetails.twitter}` : twitter.username ? `@${twitter.username}` : undefined);
-    pushNameMeta('twitter:title', pageTitleFull);
-    pushNameMeta('twitter:description', pageDescription);
-    pushNameMeta('twitter:url', pageUrlAbsolute);
-    pushNameMeta('twitter:image', pageImageAbsolute);
-    pushNameMeta('twitter:label1', 'Written by');
-    pushNameMeta('twitter:data1', author);
-
-    if (props.mdxMeta && props.mdxMeta.categories) {
-      pushNameMeta('twitter:label2', 'Filed under');
-      pushNameMeta('twitter:data2', props.mdxMeta.categories.join(', '));
-    }
-  }
+  const pageImageUrl = (props.mdxMeta && props.mdxMeta.image && props.mdxMeta.image.childImageSharp && props.mdxMeta.image.childImageSharp.fluid && props.mdxMeta.image.childImageSharp.fluid.src) || siteLogo;
+  const pageImageUrlAbsolute = pageImageUrl && Url.resolve(siteUrl, pageImageUrl);
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-        prefix: 'og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#',
-      }}
-      title={pageTitle}
-      titleTemplate={`%s – ${title}`}
-      defaultTitle={`${title} – ${description}`}
-      meta={metaProps.concat(props.metaProps || [])}
-    />
+    <>
+      <Helmet title={pageTitle} titleTemplate={`%s – ${title}`} defaultTitle={`${title} – ${description}`}>
+        <html lang={lang || 'en'} prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#" />
+
+        {pageDescription && <meta name="description" content={pageDescription} />}
+        <meta name="author" content={author} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={title} />
+        <meta property="og:title" content={pageTitleFull} />
+        {pageDescription && <meta property="og:description" content={pageDescription} />}
+        {pageImageUrlAbsolute && <meta property="og:image" content={pageImageUrlAbsolute} />}
+        {lang && <meta property="og:locale" content={lang.replace('-', '_')} />}
+      </Helmet>
+
+      {facebook && (
+        <>
+          <Helmet>
+            {facebook.admins && <meta property="fb:admins" content={facebook.admins} />}
+            {facebook.appId && <meta property="fb:app_id" content={facebook.appId} />}
+          </Helmet>
+
+          {props.mdxMeta && (
+            <Helmet>
+              {facebook.publisher && <meta property="article:publisher" content={facebook.publisher} />}
+              <meta property="article:published_time" content={props.mdxMeta.date} />
+              <meta property="article:modified_time" content={props.mdxMeta.lastModified} />
+              {props.mdxMeta.tags && props.mdxMeta.tags.map((meta, index) => <meta property="article:tag" content={meta} key={index} />)}
+            </Helmet>
+          )}
+        </>
+      )}
+
+      {twitter && (
+        <>
+          <Helmet>
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:site" content={twitter.username ? `@${twitter.username}` : undefined} />
+            <meta name="twitter:creator" content={authorDetails && authorDetails.twitter ? `@${authorDetails.twitter}` : twitter.username ? `@${twitter.username}` : undefined} />
+            <meta name="twitter:title" content={pageTitleFull} />
+            {pageDescription && <meta name="twitter:description" content={pageDescription} />}
+            {pageImageUrlAbsolute && <meta name="twitter:image" content={pageImageUrlAbsolute} />}
+            <meta name="twitter:label1" content="Written by" />
+            <meta name="twitter:data1" content={author} />
+          </Helmet>
+
+          {props.mdxMeta && props.mdxMeta.categories && (
+            <Helmet>
+              <meta name="twitter:label2" content="Filed under" />
+              <meta name="twitter:data2" content={props.mdxMeta.categories.join(', ')} />
+            </Helmet>
+          )}
+        </>
+      )}
+
+      <Location>
+        {locationContext => {
+          const pageUrlAbsolute = Url.resolve(siteUrl, locationContext.location.pathname);
+
+          return (
+            <Helmet>
+              <link rel="canonical" href={pageUrlAbsolute} />
+
+              <meta property="og:url" content={pageUrlAbsolute} />
+
+              {twitter && <meta name="twitter:url" content={pageUrlAbsolute} />}
+            </Helmet>
+          );
+        }}
+      </Location>
+    </>
   );
 };
 

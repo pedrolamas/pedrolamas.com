@@ -30,6 +30,13 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
                 }
               }
             }
+            logoFixed500: logo {
+              childImageSharp {
+                resize(width: 500) {
+                  src
+                }
+              }
+            }
             disclaimer {
               code {
                 body

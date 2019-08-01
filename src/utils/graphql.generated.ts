@@ -782,16 +782,11 @@ export enum FileFieldsEnum {
   ChildMdxFrontmatterAuthor = 'childMdx___frontmatter___author',
   ChildMdxFrontmatterGuid = 'childMdx___frontmatter___guid',
   ChildMdxFrontmatterSharingDisabled = 'childMdx___frontmatter___sharing_disabled',
-  ChildMdxFrontmatterFbAuthorPostId = 'childMdx___frontmatter___fb_author_post_id',
   ChildMdxFrontmatterDsqThreadId = 'childMdx___frontmatter___dsq_thread_id',
-  ChildMdxFrontmatterPermalink = 'childMdx___frontmatter___permalink',
-  ChildMdxFrontmatterFbFanPagePostId = 'childMdx___frontmatter___fb_fan_page_post_id',
-  ChildMdxFrontmatterInstantArticlesSubmissionId = 'childMdx___frontmatter___instant_articles_submission_id',
-  ChildMdxFrontmatterInstantArticlesForceSubmit = 'childMdx___frontmatter___instant_articles_force_submit',
-  ChildMdxFrontmatterDsqNeedsSync = 'childMdx___frontmatter___dsq_needs_sync',
+  ChildMdxFrontmatterFbAuthorPostId = 'childMdx___frontmatter___fb_author_post_id',
   ChildMdxRawBody = 'childMdx___rawBody',
-  ChildMdxFieldsSlug = 'childMdx___fields___slug',
   ChildMdxFileAbsolutePath = 'childMdx___fileAbsolutePath',
+  ChildMdxFieldsSlug = 'childMdx___fields___slug',
   ChildMdxCodeBody = 'childMdx___code___body',
   ChildMdxCodeScope = 'childMdx___code___scope',
   ChildMdxExcerpt = 'childMdx___excerpt',
@@ -1448,8 +1443,8 @@ export type JsonQueryOperatorInput = {
 export type Mdx = Node & {
   frontmatter?: Maybe<MdxFrontmatter>,
   rawBody?: Maybe<Scalars['String']>,
-  fields?: Maybe<MdxFields>,
   fileAbsolutePath?: Maybe<Scalars['String']>,
+  fields?: Maybe<MdxFields>,
   code?: Maybe<MdxCodeMdx>,
   excerpt?: Maybe<Scalars['String']>,
   headings?: Maybe<Array<Maybe<MdxHeadingMdx>>>,
@@ -1596,16 +1591,11 @@ export enum MdxFieldsEnum {
   FrontmatterAuthor = 'frontmatter___author',
   FrontmatterGuid = 'frontmatter___guid',
   FrontmatterSharingDisabled = 'frontmatter___sharing_disabled',
-  FrontmatterFbAuthorPostId = 'frontmatter___fb_author_post_id',
   FrontmatterDsqThreadId = 'frontmatter___dsq_thread_id',
-  FrontmatterPermalink = 'frontmatter___permalink',
-  FrontmatterFbFanPagePostId = 'frontmatter___fb_fan_page_post_id',
-  FrontmatterInstantArticlesSubmissionId = 'frontmatter___instant_articles_submission_id',
-  FrontmatterInstantArticlesForceSubmit = 'frontmatter___instant_articles_force_submit',
-  FrontmatterDsqNeedsSync = 'frontmatter___dsq_needs_sync',
+  FrontmatterFbAuthorPostId = 'frontmatter___fb_author_post_id',
   RawBody = 'rawBody',
-  FieldsSlug = 'fields___slug',
   FileAbsolutePath = 'fileAbsolutePath',
+  FieldsSlug = 'fields___slug',
   CodeBody = 'code___body',
   CodeScope = 'code___scope',
   Excerpt = 'excerpt',
@@ -1713,8 +1703,8 @@ export type MdxFieldsFilterInput = {
 export type MdxFilterInput = {
   frontmatter?: Maybe<MdxFrontmatterFilterInput>,
   rawBody?: Maybe<StringQueryOperatorInput>,
-  fields?: Maybe<MdxFieldsFilterInput>,
   fileAbsolutePath?: Maybe<StringQueryOperatorInput>,
+  fields?: Maybe<MdxFieldsFilterInput>,
   code?: Maybe<MdxCodeMdxFilterInput>,
   excerpt?: Maybe<StringQueryOperatorInput>,
   headings?: Maybe<MdxHeadingMdxFilterListInput>,
@@ -1742,13 +1732,8 @@ export type MdxFrontmatter = {
   author?: Maybe<Scalars['String']>,
   guid?: Maybe<Scalars['String']>,
   sharing_disabled?: Maybe<Array<Maybe<Scalars['Int']>>>,
-  fb_author_post_id?: Maybe<Array<Maybe<Scalars['Float']>>>,
   dsq_thread_id?: Maybe<Array<Maybe<Scalars['String']>>>,
-  permalink?: Maybe<Scalars['String']>,
-  fb_fan_page_post_id?: Maybe<Array<Maybe<Scalars['Float']>>>,
-  instant_articles_submission_id?: Maybe<Array<Maybe<Scalars['String']>>>,
-  instant_articles_force_submit?: Maybe<Array<Maybe<Scalars['String']>>>,
-  dsq_needs_sync?: Maybe<Array<Maybe<Scalars['String']>>>,
+  fb_author_post_id?: Maybe<Array<Maybe<Scalars['Float']>>>,
 };
 
 
@@ -1773,13 +1758,8 @@ export type MdxFrontmatterFilterInput = {
   author?: Maybe<StringQueryOperatorInput>,
   guid?: Maybe<StringQueryOperatorInput>,
   sharing_disabled?: Maybe<IntQueryOperatorInput>,
-  fb_author_post_id?: Maybe<FloatQueryOperatorInput>,
   dsq_thread_id?: Maybe<StringQueryOperatorInput>,
-  permalink?: Maybe<StringQueryOperatorInput>,
-  fb_fan_page_post_id?: Maybe<FloatQueryOperatorInput>,
-  instant_articles_submission_id?: Maybe<StringQueryOperatorInput>,
-  instant_articles_force_submit?: Maybe<StringQueryOperatorInput>,
-  dsq_needs_sync?: Maybe<StringQueryOperatorInput>,
+  fb_author_post_id?: Maybe<FloatQueryOperatorInput>,
 };
 
 export type MdxGroupConnection = {
@@ -1979,16 +1959,11 @@ export enum MdxSourceFieldsEnum {
   ChildMdxFrontmatterAuthor = 'childMdx___frontmatter___author',
   ChildMdxFrontmatterGuid = 'childMdx___frontmatter___guid',
   ChildMdxFrontmatterSharingDisabled = 'childMdx___frontmatter___sharing_disabled',
-  ChildMdxFrontmatterFbAuthorPostId = 'childMdx___frontmatter___fb_author_post_id',
   ChildMdxFrontmatterDsqThreadId = 'childMdx___frontmatter___dsq_thread_id',
-  ChildMdxFrontmatterPermalink = 'childMdx___frontmatter___permalink',
-  ChildMdxFrontmatterFbFanPagePostId = 'childMdx___frontmatter___fb_fan_page_post_id',
-  ChildMdxFrontmatterInstantArticlesSubmissionId = 'childMdx___frontmatter___instant_articles_submission_id',
-  ChildMdxFrontmatterInstantArticlesForceSubmit = 'childMdx___frontmatter___instant_articles_force_submit',
-  ChildMdxFrontmatterDsqNeedsSync = 'childMdx___frontmatter___dsq_needs_sync',
+  ChildMdxFrontmatterFbAuthorPostId = 'childMdx___frontmatter___fb_author_post_id',
   ChildMdxRawBody = 'childMdx___rawBody',
-  ChildMdxFieldsSlug = 'childMdx___fields___slug',
   ChildMdxFileAbsolutePath = 'childMdx___fileAbsolutePath',
+  ChildMdxFieldsSlug = 'childMdx___fields___slug',
   ChildMdxCodeBody = 'childMdx___code___body',
   ChildMdxCodeScope = 'childMdx___code___scope',
   ChildMdxExcerpt = 'childMdx___excerpt',
@@ -2117,6 +2092,8 @@ export enum PotraceTurnPolicy {
 }
 
 export type Query = {
+  sitemapYaml?: Maybe<SitemapYaml>,
+  allSitemapYaml?: Maybe<SitemapYamlConnection>,
   imageSharp?: Maybe<ImageSharp>,
   allImageSharp?: Maybe<ImageSharpConnection>,
   file?: Maybe<File>,
@@ -2125,16 +2102,34 @@ export type Query = {
   allMdx?: Maybe<MdxConnection>,
   site?: Maybe<Site>,
   allSite?: Maybe<SiteConnection>,
-  sitemapYaml?: Maybe<SitemapYaml>,
-  allSitemapYaml?: Maybe<SitemapYamlConnection>,
   sitePage?: Maybe<SitePage>,
   allSitePage?: Maybe<SitePageConnection>,
   sitePlugin?: Maybe<SitePlugin>,
   allSitePlugin?: Maybe<SitePluginConnection>,
-  mdxSource?: Maybe<MdxSource>,
-  allMdxSource?: Maybe<MdxSourceConnection>,
   directory?: Maybe<Directory>,
   allDirectory?: Maybe<DirectoryConnection>,
+  mdxSource?: Maybe<MdxSource>,
+  allMdxSource?: Maybe<MdxSourceConnection>,
+};
+
+
+export type QuerySitemapYamlArgs = {
+  sub?: Maybe<SitemapYamlSubFilterListInput>,
+  title?: Maybe<StringQueryOperatorInput>,
+  url?: Maybe<StringQueryOperatorInput>,
+  minimap?: Maybe<BooleanQueryOperatorInput>,
+  id?: Maybe<StringQueryOperatorInput>,
+  parent?: Maybe<NodeFilterInput>,
+  children?: Maybe<NodeFilterListInput>,
+  internal?: Maybe<InternalFilterInput>
+};
+
+
+export type QueryAllSitemapYamlArgs = {
+  filter?: Maybe<SitemapYamlFilterInput>,
+  sort?: Maybe<SitemapYamlSortInput>,
+  skip?: Maybe<Scalars['Int']>,
+  limit?: Maybe<Scalars['Int']>
 };
 
 
@@ -2214,8 +2209,8 @@ export type QueryAllFileArgs = {
 export type QueryMdxArgs = {
   frontmatter?: Maybe<MdxFrontmatterFilterInput>,
   rawBody?: Maybe<StringQueryOperatorInput>,
-  fields?: Maybe<MdxFieldsFilterInput>,
   fileAbsolutePath?: Maybe<StringQueryOperatorInput>,
+  fields?: Maybe<MdxFieldsFilterInput>,
   code?: Maybe<MdxCodeMdxFilterInput>,
   excerpt?: Maybe<StringQueryOperatorInput>,
   headings?: Maybe<MdxHeadingMdxFilterListInput>,
@@ -2242,8 +2237,8 @@ export type QuerySiteArgs = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
   port?: Maybe<IntQueryOperatorInput>,
   host?: Maybe<StringQueryOperatorInput>,
-  pathPrefix?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
+  pathPrefix?: Maybe<StringQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>,
   id?: Maybe<StringQueryOperatorInput>,
   parent?: Maybe<NodeFilterInput>,
@@ -2256,26 +2251,6 @@ export type QuerySiteArgs = {
 export type QueryAllSiteArgs = {
   filter?: Maybe<SiteFilterInput>,
   sort?: Maybe<SiteSortInput>,
-  skip?: Maybe<Scalars['Int']>,
-  limit?: Maybe<Scalars['Int']>
-};
-
-
-export type QuerySitemapYamlArgs = {
-  sub?: Maybe<SitemapYamlSubFilterListInput>,
-  title?: Maybe<StringQueryOperatorInput>,
-  url?: Maybe<StringQueryOperatorInput>,
-  minimap?: Maybe<BooleanQueryOperatorInput>,
-  id?: Maybe<StringQueryOperatorInput>,
-  parent?: Maybe<NodeFilterInput>,
-  children?: Maybe<NodeFilterListInput>,
-  internal?: Maybe<InternalFilterInput>
-};
-
-
-export type QueryAllSitemapYamlArgs = {
-  filter?: Maybe<SitemapYamlFilterInput>,
-  sort?: Maybe<SitemapYamlSortInput>,
   skip?: Maybe<Scalars['Int']>,
   limit?: Maybe<Scalars['Int']>
 };
@@ -2331,23 +2306,6 @@ export type QueryAllSitePluginArgs = {
 };
 
 
-export type QueryMdxSourceArgs = {
-  id?: Maybe<StringQueryOperatorInput>,
-  parent?: Maybe<NodeFilterInput>,
-  children?: Maybe<NodeFilterListInput>,
-  internal?: Maybe<InternalFilterInput>,
-  childMdx?: Maybe<MdxFilterInput>
-};
-
-
-export type QueryAllMdxSourceArgs = {
-  filter?: Maybe<MdxSourceFilterInput>,
-  sort?: Maybe<MdxSourceSortInput>,
-  skip?: Maybe<Scalars['Int']>,
-  limit?: Maybe<Scalars['Int']>
-};
-
-
 export type QueryDirectoryArgs = {
   id?: Maybe<StringQueryOperatorInput>,
   parent?: Maybe<NodeFilterInput>,
@@ -2394,12 +2352,29 @@ export type QueryAllDirectoryArgs = {
   limit?: Maybe<Scalars['Int']>
 };
 
+
+export type QueryMdxSourceArgs = {
+  id?: Maybe<StringQueryOperatorInput>,
+  parent?: Maybe<NodeFilterInput>,
+  children?: Maybe<NodeFilterListInput>,
+  internal?: Maybe<InternalFilterInput>,
+  childMdx?: Maybe<MdxFilterInput>
+};
+
+
+export type QueryAllMdxSourceArgs = {
+  filter?: Maybe<MdxSourceFilterInput>,
+  sort?: Maybe<MdxSourceSortInput>,
+  skip?: Maybe<Scalars['Int']>,
+  limit?: Maybe<Scalars['Int']>
+};
+
 export type Site = Node & {
   siteMetadata: SiteSiteMetadata,
   port?: Maybe<Scalars['Int']>,
   host?: Maybe<Scalars['String']>,
-  pathPrefix?: Maybe<Scalars['String']>,
   polyfill?: Maybe<Scalars['Boolean']>,
+  pathPrefix?: Maybe<Scalars['String']>,
   buildTime?: Maybe<Scalars['Date']>,
   id: Scalars['ID'],
   parent?: Maybe<Node>,
@@ -2525,16 +2500,11 @@ export enum SiteFieldsEnum {
   SiteMetadataDisclaimerFrontmatterAuthor = 'siteMetadata___disclaimer___frontmatter___author',
   SiteMetadataDisclaimerFrontmatterGuid = 'siteMetadata___disclaimer___frontmatter___guid',
   SiteMetadataDisclaimerFrontmatterSharingDisabled = 'siteMetadata___disclaimer___frontmatter___sharing_disabled',
-  SiteMetadataDisclaimerFrontmatterFbAuthorPostId = 'siteMetadata___disclaimer___frontmatter___fb_author_post_id',
   SiteMetadataDisclaimerFrontmatterDsqThreadId = 'siteMetadata___disclaimer___frontmatter___dsq_thread_id',
-  SiteMetadataDisclaimerFrontmatterPermalink = 'siteMetadata___disclaimer___frontmatter___permalink',
-  SiteMetadataDisclaimerFrontmatterFbFanPagePostId = 'siteMetadata___disclaimer___frontmatter___fb_fan_page_post_id',
-  SiteMetadataDisclaimerFrontmatterInstantArticlesSubmissionId = 'siteMetadata___disclaimer___frontmatter___instant_articles_submission_id',
-  SiteMetadataDisclaimerFrontmatterInstantArticlesForceSubmit = 'siteMetadata___disclaimer___frontmatter___instant_articles_force_submit',
-  SiteMetadataDisclaimerFrontmatterDsqNeedsSync = 'siteMetadata___disclaimer___frontmatter___dsq_needs_sync',
+  SiteMetadataDisclaimerFrontmatterFbAuthorPostId = 'siteMetadata___disclaimer___frontmatter___fb_author_post_id',
   SiteMetadataDisclaimerRawBody = 'siteMetadata___disclaimer___rawBody',
-  SiteMetadataDisclaimerFieldsSlug = 'siteMetadata___disclaimer___fields___slug',
   SiteMetadataDisclaimerFileAbsolutePath = 'siteMetadata___disclaimer___fileAbsolutePath',
+  SiteMetadataDisclaimerFieldsSlug = 'siteMetadata___disclaimer___fields___slug',
   SiteMetadataDisclaimerCodeBody = 'siteMetadata___disclaimer___code___body',
   SiteMetadataDisclaimerCodeScope = 'siteMetadata___disclaimer___code___scope',
   SiteMetadataDisclaimerExcerpt = 'siteMetadata___disclaimer___excerpt',
@@ -2610,8 +2580,8 @@ export enum SiteFieldsEnum {
   SiteMetadataAuthorDetailsTwitter = 'siteMetadata___authorDetails___twitter',
   SiteMetadataSidebarLogos = 'siteMetadata___sidebar___logos',
   SiteMetadataSidebarLogosTitle = 'siteMetadata___sidebar___logos___title',
-  SiteMetadataTimezone = 'siteMetadata___timezone',
   SiteMetadataTwitterUsername = 'siteMetadata___twitter___username',
+  SiteMetadataTimezone = 'siteMetadata___timezone',
   SiteMetadataFacebookAppId = 'siteMetadata___facebook___appId',
   SiteMetadataFacebookPublisher = 'siteMetadata___facebook___publisher',
   SiteMetadataFacebookAdmins = 'siteMetadata___facebook___admins',
@@ -2621,8 +2591,8 @@ export enum SiteFieldsEnum {
   SiteMetadataAddthisProfile = 'siteMetadata___addthisProfile',
   Port = 'port',
   Host = 'host',
-  PathPrefix = 'pathPrefix',
   Polyfill = 'polyfill',
+  PathPrefix = 'pathPrefix',
   BuildTime = 'buildTime',
   Id = 'id',
   ParentId = 'parent___id',
@@ -2761,16 +2731,11 @@ export enum SiteFieldsEnum {
   ChildrenMdxSourceChildMdxFrontmatterAuthor = 'childrenMdxSource___childMdx___frontmatter___author',
   ChildrenMdxSourceChildMdxFrontmatterGuid = 'childrenMdxSource___childMdx___frontmatter___guid',
   ChildrenMdxSourceChildMdxFrontmatterSharingDisabled = 'childrenMdxSource___childMdx___frontmatter___sharing_disabled',
-  ChildrenMdxSourceChildMdxFrontmatterFbAuthorPostId = 'childrenMdxSource___childMdx___frontmatter___fb_author_post_id',
   ChildrenMdxSourceChildMdxFrontmatterDsqThreadId = 'childrenMdxSource___childMdx___frontmatter___dsq_thread_id',
-  ChildrenMdxSourceChildMdxFrontmatterPermalink = 'childrenMdxSource___childMdx___frontmatter___permalink',
-  ChildrenMdxSourceChildMdxFrontmatterFbFanPagePostId = 'childrenMdxSource___childMdx___frontmatter___fb_fan_page_post_id',
-  ChildrenMdxSourceChildMdxFrontmatterInstantArticlesSubmissionId = 'childrenMdxSource___childMdx___frontmatter___instant_articles_submission_id',
-  ChildrenMdxSourceChildMdxFrontmatterInstantArticlesForceSubmit = 'childrenMdxSource___childMdx___frontmatter___instant_articles_force_submit',
-  ChildrenMdxSourceChildMdxFrontmatterDsqNeedsSync = 'childrenMdxSource___childMdx___frontmatter___dsq_needs_sync',
+  ChildrenMdxSourceChildMdxFrontmatterFbAuthorPostId = 'childrenMdxSource___childMdx___frontmatter___fb_author_post_id',
   ChildrenMdxSourceChildMdxRawBody = 'childrenMdxSource___childMdx___rawBody',
-  ChildrenMdxSourceChildMdxFieldsSlug = 'childrenMdxSource___childMdx___fields___slug',
   ChildrenMdxSourceChildMdxFileAbsolutePath = 'childrenMdxSource___childMdx___fileAbsolutePath',
+  ChildrenMdxSourceChildMdxFieldsSlug = 'childrenMdxSource___childMdx___fields___slug',
   ChildrenMdxSourceChildMdxCodeBody = 'childrenMdxSource___childMdx___code___body',
   ChildrenMdxSourceChildMdxCodeScope = 'childrenMdxSource___childMdx___code___scope',
   ChildrenMdxSourceChildMdxExcerpt = 'childrenMdxSource___childMdx___excerpt',
@@ -2803,8 +2768,8 @@ export type SiteFilterInput = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
   port?: Maybe<IntQueryOperatorInput>,
   host?: Maybe<StringQueryOperatorInput>,
-  pathPrefix?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
+  pathPrefix?: Maybe<StringQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>,
   id?: Maybe<StringQueryOperatorInput>,
   parent?: Maybe<NodeFilterInput>,
@@ -3052,8 +3017,6 @@ export type SitePageContext = {
   nextId?: Maybe<Scalars['String']>,
   lastModified?: Maybe<Scalars['Date']>,
   ids?: Maybe<Array<Maybe<Scalars['String']>>>,
-  previousPageIndex?: Maybe<Scalars['Int']>,
-  nextPageIndex?: Maybe<Scalars['Int']>,
   frontmatter?: Maybe<SitePageContextFrontmatter>,
 };
 
@@ -3065,8 +3028,6 @@ export type SitePageContextFilterInput = {
   nextId?: Maybe<StringQueryOperatorInput>,
   lastModified?: Maybe<DateQueryOperatorInput>,
   ids?: Maybe<StringQueryOperatorInput>,
-  previousPageIndex?: Maybe<IntQueryOperatorInput>,
-  nextPageIndex?: Maybe<IntQueryOperatorInput>,
   frontmatter?: Maybe<SitePageContextFrontmatterFilterInput>,
 };
 
@@ -3199,8 +3160,6 @@ export enum SitePageFieldsEnum {
   ContextNextId = 'context___nextId',
   ContextLastModified = 'context___lastModified',
   ContextIds = 'context___ids',
-  ContextPreviousPageIndex = 'context___previousPageIndex',
-  ContextNextPageIndex = 'context___nextPageIndex',
   ContextFrontmatterLayout = 'context___frontmatter___layout',
   ContextFrontmatterTitle = 'context___frontmatter___title',
   ContextFrontmatterId = 'context___frontmatter___id',
@@ -3259,6 +3218,7 @@ export enum SitePageFieldsEnum {
   PluginCreatorPluginOptionsPluginsBrowserApIs = 'pluginCreator___pluginOptions___plugins___browserAPIs',
   PluginCreatorPluginOptionsPluginsSsrApIs = 'pluginCreator___pluginOptions___plugins___ssrAPIs',
   PluginCreatorPluginOptionsPluginsPluginFilepath = 'pluginCreator___pluginOptions___plugins___pluginFilepath',
+  PluginCreatorPluginOptionsWhitelist = 'pluginCreator___pluginOptions___whitelist',
   PluginCreatorPluginOptionsName = 'pluginCreator___pluginOptions___name',
   PluginCreatorPluginOptionsPath = 'pluginCreator___pluginOptions___path',
   PluginCreatorPluginOptionsShortName = 'pluginCreator___pluginOptions___short_name',
@@ -3283,6 +3243,8 @@ export enum SitePageFieldsEnum {
   PluginCreatorPluginOptionsStages = 'pluginCreator___pluginOptions___stages',
   PluginCreatorPluginOptionsOptionsEmitWarning = 'pluginCreator___pluginOptions___options___emitWarning',
   PluginCreatorPluginOptionsOptionsFailOnError = 'pluginCreator___pluginOptions___options___failOnError',
+  PluginCreatorPluginOptionsHeadersX = 'pluginCreator___pluginOptions___headers____x',
+  PluginCreatorPluginOptionsMergeSecurityHeaders = 'pluginCreator___pluginOptions___mergeSecurityHeaders',
   PluginCreatorPluginOptionsPathCheck = 'pluginCreator___pluginOptions___pathCheck',
   PluginCreatorNodeApIs = 'pluginCreator___nodeAPIs',
   PluginCreatorBrowserApIs = 'pluginCreator___browserAPIs',
@@ -3479,6 +3441,7 @@ export enum SitePluginFieldsEnum {
   PluginOptionsPluginsBrowserApIs = 'pluginOptions___plugins___browserAPIs',
   PluginOptionsPluginsSsrApIs = 'pluginOptions___plugins___ssrAPIs',
   PluginOptionsPluginsPluginFilepath = 'pluginOptions___plugins___pluginFilepath',
+  PluginOptionsWhitelist = 'pluginOptions___whitelist',
   PluginOptionsName = 'pluginOptions___name',
   PluginOptionsPath = 'pluginOptions___path',
   PluginOptionsShortName = 'pluginOptions___short_name',
@@ -3503,6 +3466,8 @@ export enum SitePluginFieldsEnum {
   PluginOptionsStages = 'pluginOptions___stages',
   PluginOptionsOptionsEmitWarning = 'pluginOptions___options___emitWarning',
   PluginOptionsOptionsFailOnError = 'pluginOptions___options___failOnError',
+  PluginOptionsHeadersX = 'pluginOptions___headers____x',
+  PluginOptionsMergeSecurityHeaders = 'pluginOptions___mergeSecurityHeaders',
   PluginOptionsPathCheck = 'pluginOptions___pathCheck',
   NodeApIs = 'nodeAPIs',
   BrowserApIs = 'browserAPIs',
@@ -3621,6 +3586,7 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 
 export type SitePluginPluginOptions = {
   plugins?: Maybe<Array<Maybe<SitePluginPluginOptionsPlugins>>>,
+  whitelist?: Maybe<Array<Maybe<Scalars['String']>>>,
   name?: Maybe<Scalars['String']>,
   path?: Maybe<Scalars['String']>,
   short_name?: Maybe<Scalars['String']>,
@@ -3642,6 +3608,8 @@ export type SitePluginPluginOptions = {
   respectDNT?: Maybe<Scalars['Boolean']>,
   stages?: Maybe<Array<Maybe<Scalars['String']>>>,
   options?: Maybe<SitePluginPluginOptionsOptions>,
+  headers?: Maybe<SitePluginPluginOptionsHeaders>,
+  mergeSecurityHeaders?: Maybe<Scalars['Boolean']>,
   pathCheck?: Maybe<Scalars['Boolean']>,
 };
 
@@ -3669,6 +3637,7 @@ export type SitePluginPluginOptionsFeedsFilterListInput = {
 
 export type SitePluginPluginOptionsFilterInput = {
   plugins?: Maybe<SitePluginPluginOptionsPluginsFilterListInput>,
+  whitelist?: Maybe<StringQueryOperatorInput>,
   name?: Maybe<StringQueryOperatorInput>,
   path?: Maybe<StringQueryOperatorInput>,
   short_name?: Maybe<StringQueryOperatorInput>,
@@ -3690,7 +3659,17 @@ export type SitePluginPluginOptionsFilterInput = {
   respectDNT?: Maybe<BooleanQueryOperatorInput>,
   stages?: Maybe<StringQueryOperatorInput>,
   options?: Maybe<SitePluginPluginOptionsOptionsFilterInput>,
+  headers?: Maybe<SitePluginPluginOptionsHeadersFilterInput>,
+  mergeSecurityHeaders?: Maybe<BooleanQueryOperatorInput>,
   pathCheck?: Maybe<BooleanQueryOperatorInput>,
+};
+
+export type SitePluginPluginOptionsHeaders = {
+  _x?: Maybe<Array<Maybe<Scalars['String']>>>,
+};
+
+export type SitePluginPluginOptionsHeadersFilterInput = {
+  _x?: Maybe<StringQueryOperatorInput>,
 };
 
 export type SitePluginPluginOptionsOptions = {
@@ -3742,8 +3721,8 @@ export type SiteSiteMetadata = {
   disclaimer?: Maybe<Mdx>,
   authorDetails?: Maybe<SiteSiteMetadataAuthorDetails>,
   sidebar?: Maybe<SiteSiteMetadataSidebar>,
-  timezone?: Maybe<Scalars['String']>,
   twitter?: Maybe<SiteSiteMetadataTwitter>,
+  timezone?: Maybe<Scalars['String']>,
   facebook?: Maybe<SiteSiteMetadataFacebook>,
   social?: Maybe<SiteSiteMetadataSocial>,
   googleAnalytics?: Maybe<Scalars['String']>,
@@ -3789,8 +3768,8 @@ export type SiteSiteMetadataFilterInput = {
   disclaimer?: Maybe<MdxFilterInput>,
   authorDetails?: Maybe<SiteSiteMetadataAuthorDetailsFilterInput>,
   sidebar?: Maybe<SiteSiteMetadataSidebarFilterInput>,
-  timezone?: Maybe<StringQueryOperatorInput>,
   twitter?: Maybe<SiteSiteMetadataTwitterFilterInput>,
+  timezone?: Maybe<StringQueryOperatorInput>,
   facebook?: Maybe<SiteSiteMetadataFacebookFilterInput>,
   social?: Maybe<SiteSiteMetadataSocialFilterInput>,
   googleAnalytics?: Maybe<StringQueryOperatorInput>,
@@ -3829,7 +3808,7 @@ export type SiteSiteMetadataSocialFilterInput = {
 };
 
 export type SiteSiteMetadataTwitter = {
-  username?: Maybe<Scalars['String']>,
+  username: Scalars['String'],
 };
 
 export type SiteSiteMetadataTwitterFilterInput = {
@@ -3896,7 +3875,7 @@ export type PostLayoutQuery = { mdx: Maybe<PostMdxFragment>, previousMdx: Maybe<
 export type RootLayoutQueryVariables = {};
 
 
-export type RootLayoutQuery = { site: Maybe<{ siteMetadata: (Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'siteUrl' | 'lang' | 'googleAnalytics' | 'disqusShortname' | 'addthisProfile'> & { logo: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> }>, disclaimer: Maybe<{ code: Maybe<Pick<MdxCodeMdx, 'body'>> }>, authorDetails: Maybe<(Pick<SiteSiteMetadataAuthorDetails, 'email' | 'uri' | 'twitter'> & { picture: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> }>, biography: Maybe<{ code: Maybe<Pick<MdxCodeMdx, 'body'>> }> })>, twitter: Maybe<Pick<SiteSiteMetadataTwitter, 'username'>>, facebook: Maybe<Pick<SiteSiteMetadataFacebook, 'appId' | 'publisher' | 'admins'>>, social: Maybe<Pick<SiteSiteMetadataSocial, 'links'>>, sidebar: Maybe<{ logos: Maybe<Array<Maybe<(Pick<SiteSiteMetadataSidebarLogos, 'title'> & { image: { childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> } })>>> }> }) }> };
+export type RootLayoutQuery = { site: Maybe<{ siteMetadata: (Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'siteUrl' | 'lang' | 'googleAnalytics' | 'disqusShortname' | 'addthisProfile'> & { logo: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> }>, logoFixed500: Maybe<{ childImageSharp: Maybe<{ resize: Maybe<Pick<ImageSharpResize, 'src'>> }> }>, disclaimer: Maybe<{ code: Maybe<Pick<MdxCodeMdx, 'body'>> }>, authorDetails: Maybe<(Pick<SiteSiteMetadataAuthorDetails, 'email' | 'uri' | 'twitter'> & { picture: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> }>, biography: Maybe<{ code: Maybe<Pick<MdxCodeMdx, 'body'>> }> })>, twitter: Maybe<Pick<SiteSiteMetadataTwitter, 'username'>>, facebook: Maybe<Pick<SiteSiteMetadataFacebook, 'appId' | 'publisher' | 'admins'>>, social: Maybe<Pick<SiteSiteMetadataSocial, 'links'>>, sidebar: Maybe<{ logos: Maybe<Array<Maybe<(Pick<SiteSiteMetadataSidebarLogos, 'title'> & { image: { childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> } })>>> }> }) }> };
 
 export type SidebarSitemapQueryVariables = {};
 
