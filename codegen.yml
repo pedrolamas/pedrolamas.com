@@ -7,6 +7,7 @@ generates:
   src/utils/graphql.generated.ts:
     config:
       skipTypename: true
+      enumsAsTypes: true
     plugins:
       - 'typescript'
       - 'typescript-operations'
