@@ -1,3 +1,5 @@
+const url = require('url');
+
 const siteMetadata = require('./gatsby-site-metadata');
 
 module.exports = {
@@ -119,6 +121,9 @@ module.exports = {
                       frontmatter {
                         date
                         title
+                        image {
+                          publicURL
+                        }
                       }
                       fields {
                         slug
@@ -129,12 +134,21 @@ module.exports = {
               }
             `,
             normalize: ({ query: { site, allMdx } }) => {
+              const siteUrl = site.siteMetadata.siteUrl;
+
               return allMdx.edges.map(edge => {
+                const { html, frontmatter, fields } = edge.node;
+
+                const title = frontmatter && frontmatter.title;
+                const date = frontmatter && frontmatter.date;
+                const image = frontmatter && frontmatter.image && frontmatter.image.publicURL;
+                const slug = fields && fields.slug;
+
                 return {
-                  title: edge.node.frontmatter.title,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  html: edge.node.html,
+                  title,
+                  date,
+                  url: url.resolve(siteUrl, slug),
+                  html: image ? `<p><img src="${url.resolve(siteUrl, image)}" alt="${title}" class="webfeedsFeaturedVisual" /></p>${html}` : html,
                 };
               });
             },
