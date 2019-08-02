@@ -85,6 +85,7 @@ exports.sourceNodes = ({ actions }) => {
       disclaimer: Mdx @link(by: "rawBody")
       authorDetails: SiteSiteMetadataAuthorDetails
       sidebar: SiteSiteMetadataSidebar
+      twitter: SiteSiteMetadataTwitter
     }`,
     `type SiteSiteMetadataAuthorDetails @infer {
       picture: File @link(by: "relativePath")
@@ -92,6 +93,9 @@ exports.sourceNodes = ({ actions }) => {
     }`,
     `type SiteSiteMetadataSidebar @infer {
       logos: [SiteSiteMetadataSidebarLogos]
+    }`,
+    `type SiteSiteMetadataTwitter @infer {
+      username: String!
     }`,
     `type SiteSiteMetadataSidebarLogos @infer {
       image: File! @link(by: "relativePath")

@@ -10,6 +10,7 @@ type PageLayoutProps = {
 const PageLayout: React.FunctionComponent<PageLayoutProps> = ({ title, children }) => (
   <>
     <Head title={title} />
+
     <main role="main" id="main">
       <article className="page">
         <header className="page-header">

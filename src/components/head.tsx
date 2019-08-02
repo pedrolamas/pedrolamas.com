@@ -20,9 +20,9 @@ const Head: React.FunctionComponent<HeadProps> = props => {
 
   if (!siteMetadata) return null;
 
-  const { siteUrl, description, author, authorDetails, title, lang, logoFixed500: logo, twitter, facebook } = siteMetadata;
+  const { siteUrl, description, author, authorDetails, title, lang, logo, twitter, facebook } = siteMetadata;
 
-  const siteLogo = logo && logo.childImageSharp && logo.childImageSharp.resize && logo.childImageSharp.resize.src;
+  const siteLogo = logo && logo.publicURL;
 
   const pageTitle = (props.mdxMeta && props.mdxMeta.title) || props.title;
   const pageTitleFull = pageTitle || title;
@@ -38,7 +38,7 @@ const Head: React.FunctionComponent<HeadProps> = props => {
         {pageDescription && <meta name="description" content={pageDescription} />}
         <meta name="author" content={author} />
 
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content={pageTitle ? 'article' : 'website'} />
         <meta property="og:site_name" content={title} />
         <meta property="og:title" content={pageTitleFull} />
         {pageDescription && <meta property="og:description" content={pageDescription} />}
@@ -68,8 +68,8 @@ const Head: React.FunctionComponent<HeadProps> = props => {
         <>
           <Helmet>
             <meta name="twitter:card" content="summary" />
-            <meta name="twitter:site" content={twitter.username ? `@${twitter.username}` : undefined} />
-            <meta name="twitter:creator" content={authorDetails && authorDetails.twitter ? `@${authorDetails.twitter}` : twitter.username ? `@${twitter.username}` : undefined} />
+            <meta name="twitter:site" content={`@${twitter.username}`} />
+            <meta name="twitter:creator" content={authorDetails && authorDetails.twitter ? `@${authorDetails.twitter}` : `@${twitter.username}`} />
             <meta name="twitter:title" content={pageTitleFull} />
             {pageDescription && <meta name="twitter:description" content={pageDescription} />}
             {pageImageUrlAbsolute && <meta name="twitter:image" content={pageImageUrlAbsolute} />}

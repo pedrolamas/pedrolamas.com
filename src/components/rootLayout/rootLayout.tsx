@@ -29,13 +29,7 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
                   ...GatsbyImageSharpFluid
                 }
               }
-            }
-            logoFixed500: logo {
-              childImageSharp {
-                resize(width: 500) {
-                  src
-                }
-              }
+              publicURL
             }
             disclaimer {
               body
@@ -49,6 +43,7 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
                     ...GatsbyImageSharpFluid
                   }
                 }
+                publicURL
               }
               biography {
                 body
