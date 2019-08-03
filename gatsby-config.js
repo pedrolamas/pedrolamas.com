@@ -220,5 +220,6 @@ module.exports = {
         mergeSecurityHeaders: false,
       },
     },
+    `gatsby-plugin-offline`,
   ],
 };
