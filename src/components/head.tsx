@@ -32,7 +32,7 @@ const Head: React.FunctionComponent<HeadProps> = props => {
 
   return (
     <>
-      <Helmet title={pageTitle} titleTemplate={`%s – ${title}`} defaultTitle={`${title} – ${description}`}>
+      <Helmet title={pageTitle} titleTemplate={`%s – ${title}`} defaultTitle={`${title} – ${description}`} defer={false}>
         <html lang={lang || 'en'} prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#" />
 
         {pageDescription && <meta name="description" content={pageDescription} />}
@@ -48,13 +48,13 @@ const Head: React.FunctionComponent<HeadProps> = props => {
 
       {facebook && (
         <>
-          <Helmet>
+          <Helmet defer={false}>
             {facebook.admins && <meta property="fb:admins" content={facebook.admins} />}
             {facebook.appId && <meta property="fb:app_id" content={facebook.appId} />}
           </Helmet>
 
           {props.mdxMeta && (
-            <Helmet>
+            <Helmet defer={false}>
               {facebook.publisher && <meta property="article:publisher" content={facebook.publisher} />}
               <meta property="article:published_time" content={props.mdxMeta.date} />
               <meta property="article:modified_time" content={props.mdxMeta.lastModified} />
@@ -66,7 +66,7 @@ const Head: React.FunctionComponent<HeadProps> = props => {
 
       {twitter && (
         <>
-          <Helmet>
+          <Helmet defer={false}>
             <meta name="twitter:card" content="summary" />
             <meta name="twitter:site" content={`@${twitter.username}`} />
             <meta name="twitter:creator" content={authorDetails && authorDetails.twitter ? `@${authorDetails.twitter}` : `@${twitter.username}`} />
@@ -78,7 +78,7 @@ const Head: React.FunctionComponent<HeadProps> = props => {
           </Helmet>
 
           {props.mdxMeta && props.mdxMeta.categories && (
-            <Helmet>
+            <Helmet defer={false}>
               <meta name="twitter:label2" content="Filed under" />
               <meta name="twitter:data2" content={props.mdxMeta.categories.join(', ')} />
             </Helmet>
@@ -91,7 +91,7 @@ const Head: React.FunctionComponent<HeadProps> = props => {
           const pageUrlAbsolute = Url.resolve(siteUrl, locationContext.location.pathname);
 
           return (
-            <Helmet>
+            <Helmet defer={false}>
               <link rel="canonical" href={pageUrlAbsolute} />
 
               <meta property="og:url" content={pageUrlAbsolute} />
