@@ -62,6 +62,7 @@ export const postMdxFragment = graphql`
             presentationWidth
           }
         }
+        publicURL
       }
       last_modified_at
       layout

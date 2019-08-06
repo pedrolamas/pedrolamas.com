@@ -25,10 +25,11 @@ const Head: React.FunctionComponent<HeadProps> = props => {
   const siteLogo = logo && logo.publicURL;
 
   const pageTitle = (props.mdxMeta && props.mdxMeta.title) || props.title;
-  const pageTitleFull = pageTitle || title;
+  const pageTitleFinal = pageTitle || title;
   const pageDescription = props.description || description;
-  const pageImageUrl = (props.mdxMeta && props.mdxMeta.image && props.mdxMeta.image.childImageSharp && props.mdxMeta.image.childImageSharp.fluid && props.mdxMeta.image.childImageSharp.fluid.src) || siteLogo;
-  const pageImageUrlAbsolute = pageImageUrl && Url.resolve(siteUrl, pageImageUrl);
+  const pageImageUrl = props.mdxMeta && props.mdxMeta.image && props.mdxMeta.image.publicURL;
+  const pageImageUrlFinal = pageImageUrl || siteLogo;
+  const pageImageUrlFinalAbsolute = pageImageUrlFinal && Url.resolve(siteUrl, pageImageUrlFinal);
 
   return (
     <>
@@ -40,9 +41,9 @@ const Head: React.FunctionComponent<HeadProps> = props => {
 
         <meta property="og:type" content={pageTitle ? 'article' : 'website'} />
         <meta property="og:site_name" content={title} />
-        <meta property="og:title" content={pageTitleFull} />
+        <meta property="og:title" content={pageTitleFinal} />
         {pageDescription && <meta property="og:description" content={pageDescription} />}
-        {pageImageUrlAbsolute && <meta property="og:image" content={pageImageUrlAbsolute} />}
+        {pageImageUrlFinalAbsolute && <meta property="og:image" content={pageImageUrlFinalAbsolute} />}
         {lang && <meta property="og:locale" content={lang.replace('-', '_')} />}
       </Helmet>
 
@@ -67,12 +68,12 @@ const Head: React.FunctionComponent<HeadProps> = props => {
       {twitter && (
         <>
           <Helmet defer={false}>
-            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:card" content={pageImageUrl ? 'summary_large_image' : 'summary'} />
             <meta name="twitter:site" content={`@${twitter.username}`} />
             <meta name="twitter:creator" content={authorDetails && authorDetails.twitter ? `@${authorDetails.twitter}` : `@${twitter.username}`} />
-            <meta name="twitter:title" content={pageTitleFull} />
+            <meta name="twitter:title" content={pageTitleFinal} />
             {pageDescription && <meta name="twitter:description" content={pageDescription} />}
-            {pageImageUrlAbsolute && <meta name="twitter:image" content={pageImageUrlAbsolute} />}
+            {pageImageUrlFinalAbsolute && <meta name="twitter:image" content={pageImageUrlFinalAbsolute} />}
             <meta name="twitter:label1" content="Written by" />
             <meta name="twitter:data1" content={author} />
           </Helmet>

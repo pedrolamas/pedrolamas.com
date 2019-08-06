@@ -784,6 +784,11 @@ export type FileFieldsEnum =
   'childMdx___frontmatter___dsq_thread_id' |
   'childMdx___frontmatter___sharing_disabled' |
   'childMdx___frontmatter___fb_author_post_id' |
+  'childMdx___frontmatter___permalink' |
+  'childMdx___frontmatter___fb_fan_page_post_id' |
+  'childMdx___frontmatter___instant_articles_submission_id' |
+  'childMdx___frontmatter___instant_articles_force_submit' |
+  'childMdx___frontmatter___dsq_needs_sync' |
   'childMdx___body' |
   'childMdx___excerpt' |
   'childMdx___headings' |
@@ -1579,6 +1584,11 @@ export type MdxFieldsEnum =
   'frontmatter___dsq_thread_id' |
   'frontmatter___sharing_disabled' |
   'frontmatter___fb_author_post_id' |
+  'frontmatter___permalink' |
+  'frontmatter___fb_fan_page_post_id' |
+  'frontmatter___instant_articles_submission_id' |
+  'frontmatter___instant_articles_force_submit' |
+  'frontmatter___dsq_needs_sync' |
   'body' |
   'excerpt' |
   'headings' |
@@ -1717,6 +1727,11 @@ export type MdxFrontmatter = {
   dsq_thread_id?: Maybe<Array<Maybe<Scalars['String']>>>,
   sharing_disabled?: Maybe<Array<Maybe<Scalars['Int']>>>,
   fb_author_post_id?: Maybe<Array<Maybe<Scalars['Float']>>>,
+  permalink?: Maybe<Scalars['String']>,
+  fb_fan_page_post_id?: Maybe<Array<Maybe<Scalars['Float']>>>,
+  instant_articles_submission_id?: Maybe<Array<Maybe<Scalars['String']>>>,
+  instant_articles_force_submit?: Maybe<Array<Maybe<Scalars['String']>>>,
+  dsq_needs_sync?: Maybe<Array<Maybe<Scalars['String']>>>,
 };
 
 
@@ -1742,6 +1757,11 @@ export type MdxFrontmatterFilterInput = {
   dsq_thread_id?: Maybe<StringQueryOperatorInput>,
   sharing_disabled?: Maybe<IntQueryOperatorInput>,
   fb_author_post_id?: Maybe<FloatQueryOperatorInput>,
+  permalink?: Maybe<StringQueryOperatorInput>,
+  fb_fan_page_post_id?: Maybe<FloatQueryOperatorInput>,
+  instant_articles_submission_id?: Maybe<StringQueryOperatorInput>,
+  instant_articles_force_submit?: Maybe<StringQueryOperatorInput>,
+  dsq_needs_sync?: Maybe<StringQueryOperatorInput>,
 };
 
 export type MdxGroupConnection = {
@@ -1944,6 +1964,11 @@ export type MdxSourceFieldsEnum =
   'childMdx___frontmatter___dsq_thread_id' |
   'childMdx___frontmatter___sharing_disabled' |
   'childMdx___frontmatter___fb_author_post_id' |
+  'childMdx___frontmatter___permalink' |
+  'childMdx___frontmatter___fb_fan_page_post_id' |
+  'childMdx___frontmatter___instant_articles_submission_id' |
+  'childMdx___frontmatter___instant_articles_force_submit' |
+  'childMdx___frontmatter___dsq_needs_sync' |
   'childMdx___body' |
   'childMdx___excerpt' |
   'childMdx___headings' |
@@ -2497,6 +2522,11 @@ export type SiteFieldsEnum =
   'siteMetadata___disclaimer___frontmatter___dsq_thread_id' |
   'siteMetadata___disclaimer___frontmatter___sharing_disabled' |
   'siteMetadata___disclaimer___frontmatter___fb_author_post_id' |
+  'siteMetadata___disclaimer___frontmatter___permalink' |
+  'siteMetadata___disclaimer___frontmatter___fb_fan_page_post_id' |
+  'siteMetadata___disclaimer___frontmatter___instant_articles_submission_id' |
+  'siteMetadata___disclaimer___frontmatter___instant_articles_force_submit' |
+  'siteMetadata___disclaimer___frontmatter___dsq_needs_sync' |
   'siteMetadata___disclaimer___body' |
   'siteMetadata___disclaimer___excerpt' |
   'siteMetadata___disclaimer___headings' |
@@ -2729,6 +2759,11 @@ export type SiteFieldsEnum =
   'childrenMdxSource___childMdx___frontmatter___dsq_thread_id' |
   'childrenMdxSource___childMdx___frontmatter___sharing_disabled' |
   'childrenMdxSource___childMdx___frontmatter___fb_author_post_id' |
+  'childrenMdxSource___childMdx___frontmatter___permalink' |
+  'childrenMdxSource___childMdx___frontmatter___fb_fan_page_post_id' |
+  'childrenMdxSource___childMdx___frontmatter___instant_articles_submission_id' |
+  'childrenMdxSource___childMdx___frontmatter___instant_articles_force_submit' |
+  'childrenMdxSource___childMdx___frontmatter___dsq_needs_sync' |
   'childrenMdxSource___childMdx___body' |
   'childrenMdxSource___childMdx___excerpt' |
   'childrenMdxSource___childMdx___headings' |
@@ -3842,7 +3877,7 @@ export type IndexLayoutQueryVariables = {
 
 export type IndexLayoutQuery = { allMdx: Maybe<{ edges: Array<{ node: PostMdxFragment }> }> };
 
-export type PostMdxFragment = (Pick<Mdx, 'id' | 'body'> & { fields: Maybe<Pick<MdxFields, 'slug'>>, frontmatter: Maybe<(Pick<MdxFrontmatter, 'categories' | 'date' | 'dateFormatted' | 'last_modified_at' | 'layout' | 'tags' | 'title'> & { image: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<(Pick<ImageSharpFluid, 'presentationWidth'> & GatsbyImageSharpFluidFragment)> }> }> })>, file: Maybe<Pick<File, 'base'>> });
+export type PostMdxFragment = (Pick<Mdx, 'id' | 'body'> & { fields: Maybe<Pick<MdxFields, 'slug'>>, frontmatter: Maybe<(Pick<MdxFrontmatter, 'categories' | 'date' | 'dateFormatted' | 'last_modified_at' | 'layout' | 'tags' | 'title'> & { image: Maybe<(Pick<File, 'publicURL'> & { childImageSharp: Maybe<{ fluid: Maybe<(Pick<ImageSharpFluid, 'presentationWidth'> & GatsbyImageSharpFluidFragment)> }> })> })>, file: Maybe<Pick<File, 'base'>> });
 
 export type SiblingPostMdxFragment = (Pick<Mdx, 'id'> & { fields: Maybe<Pick<MdxFields, 'slug'>>, frontmatter: Maybe<Pick<MdxFrontmatter, 'dateFormatted' | 'title'>> });
 
