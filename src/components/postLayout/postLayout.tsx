@@ -48,6 +48,7 @@ export const postMdxFragment = graphql`
   fragment PostMdx on Mdx {
     id
     body
+    excerpt(pruneLength: 250)
     fields {
       slug
     }

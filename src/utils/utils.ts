@@ -41,6 +41,7 @@ type PostMdxFrontmatterType = GraphQl.PostMdxFragment extends { frontmatter: inf
 
 export type SafeMdxMetadata = {
   id: string;
+  excerpt: string;
   title: string;
   url: string;
   date: string;
@@ -53,10 +54,11 @@ export type SafeMdxMetadata = {
 };
 
 export const SafeMetadataFromMdx = (mdx: Partial<GraphQl.Mdx> & Partial<GraphQl.PostMdxFragment>): SafeMdxMetadata => {
-  const { id, fields, frontmatter, file } = mdx;
+  const { id, excerpt, fields, frontmatter, file } = mdx;
 
   return {
     id: id || '',
+    excerpt: excerpt || '',
     title: (frontmatter && frontmatter.title) || '(untitled)',
     url: (fields && fields.slug) || '',
     date: (frontmatter && frontmatter.date) || '',

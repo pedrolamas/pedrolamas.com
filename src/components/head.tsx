@@ -26,10 +26,12 @@ const Head: React.FunctionComponent<HeadProps> = props => {
 
   const pageTitle = (props.mdxMeta && props.mdxMeta.title) || props.title;
   const pageTitleFinal = pageTitle || title;
-  const pageDescription = props.description || description;
+  const pageDescription = props.description || (props.mdxMeta && props.mdxMeta.excerpt) || description;
   const pageImageUrl = props.mdxMeta && props.mdxMeta.image && props.mdxMeta.image.publicURL;
   const pageImageUrlFinal = pageImageUrl || siteLogo;
   const pageImageUrlFinalAbsolute = pageImageUrlFinal && Url.resolve(siteUrl, pageImageUrlFinal);
+
+  const authorPictureUrlAbsolute = authorDetails && authorDetails.picture && authorDetails.picture.publicURL && Url.resolve(siteUrl, authorDetails.picture.publicURL);
 
   return (
     <>
@@ -91,6 +93,33 @@ const Head: React.FunctionComponent<HeadProps> = props => {
         {locationContext => {
           const pageUrlAbsolute = Url.resolve(siteUrl, locationContext.location.pathname);
 
+          const jsonLd = {
+            '@context': 'http://schema.org',
+            '@type': 'page_ld_type',
+            name: title,
+            headline: pageTitleFinal,
+            description: pageDescription,
+            publisher: {
+              '@type': 'Organization',
+              name: title,
+              logo: siteLogo,
+            },
+            author: {
+              '@type': 'Person',
+              name: author,
+              image: authorPictureUrlAbsolute,
+              // sameAs: sidebar && sidebar.
+            },
+            image: pageImageUrlFinalAbsolute,
+            datePublished: props.mdxMeta && props.mdxMeta.date,
+            dateModified: props.mdxMeta && (props.mdxMeta.lastModified || props.mdxMeta.date),
+            url: pageUrlAbsolute,
+            mainEntityOfPage: {
+              '@type': pageTitle ? 'WebPage' : 'WebPage',
+              '@id': siteUrl,
+            },
+          };
+
           return (
             <Helmet defer={false}>
               <link rel="canonical" href={pageUrlAbsolute} />
@@ -98,6 +127,8 @@ const Head: React.FunctionComponent<HeadProps> = props => {
               <meta property="og:url" content={pageUrlAbsolute} />
 
               {twitter && <meta name="twitter:url" content={pageUrlAbsolute} />}
+
+              <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
             </Helmet>
           );
         }}
