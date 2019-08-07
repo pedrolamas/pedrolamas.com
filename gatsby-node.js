@@ -116,7 +116,6 @@ exports.sourceNodes = ({ actions }) => {
       dateFormatted: Date @dateformat(formatString: "MMMM D, YYYY") @proxy(from: "date")
       image: File @fileByRelativePath
       last_modified_at: Date
-      layout: String
       tags: [String]
       title: String
     }`,

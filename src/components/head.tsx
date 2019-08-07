@@ -26,7 +26,7 @@ const Head: React.FunctionComponent<HeadProps> = props => {
 
   const pageTitle = (props.mdxMeta && props.mdxMeta.title) || props.title;
   const pageTitleFinal = pageTitle || title;
-  const pageDescription = props.description || (props.mdxMeta && props.mdxMeta.excerpt) || description;
+  const pageDescription = (props.mdxMeta && props.mdxMeta.excerpt) || props.description || description;
   const pageImageUrl = props.mdxMeta && props.mdxMeta.image && props.mdxMeta.image.publicURL;
   const pageImageUrlFinal = pageImageUrl || siteLogo;
   const pageImageUrlFinalAbsolute = pageImageUrlFinal && Url.resolve(siteUrl, pageImageUrlFinal);
@@ -59,8 +59,8 @@ const Head: React.FunctionComponent<HeadProps> = props => {
           {props.mdxMeta && (
             <Helmet defer={false}>
               {facebook.publisher && <meta property="article:publisher" content={facebook.publisher} />}
-              <meta property="article:published_time" content={props.mdxMeta.date} />
-              <meta property="article:modified_time" content={props.mdxMeta.lastModified} />
+              {props.mdxMeta.date && <meta property="article:published_time" content={props.mdxMeta.date} />}
+              {props.mdxMeta.lastModified && <meta property="article:modified_time" content={props.mdxMeta.lastModified} />}
               {props.mdxMeta.tags && props.mdxMeta.tags.map((meta, index) => <meta property="article:tag" content={meta} key={index} />)}
             </Helmet>
           )}

@@ -10,12 +10,9 @@ type MdxContextProps = {
 const MdxContext = React.createContext<MdxContextProps>({
   meta: {
     id: '',
-    excerpt: '',
     title: '(untitled)',
     url: '',
-    date: '',
     dateFormatted: '',
-    lastModified: '',
   },
 });
 

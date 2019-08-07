@@ -41,29 +41,29 @@ type PostMdxFrontmatterType = GraphQl.PostMdxFragment extends { frontmatter: inf
 
 export type SafeMdxMetadata = {
   id: string;
-  excerpt: string;
+  excerpt?: string;
   title: string;
   url: string;
-  date: string;
+  date?: string;
   dateFormatted: string;
-  lastModified: string;
+  lastModified?: string;
   categories?: string[];
   tags?: string[];
   image?: PostMdxFrontmatterType extends { image: infer T } ? NonNullable<T> : unknown;
   originalFile?: string;
 };
 
-export const SafeMetadataFromMdx = (mdx: Partial<GraphQl.Mdx> & Partial<GraphQl.PostMdxFragment>): SafeMdxMetadata => {
+export const SafeMetadataFromMdx = (mdx: Pick<GraphQl.Mdx, 'id'> & Partial<GraphQl.Mdx> & Partial<GraphQl.PostMdxFragment>): SafeMdxMetadata => {
   const { id, excerpt, fields, frontmatter, file } = mdx;
 
   return {
-    id: id || '',
-    excerpt: excerpt || '',
+    id,
+    excerpt,
     title: (frontmatter && frontmatter.title) || '(untitled)',
     url: (fields && fields.slug) || '',
-    date: (frontmatter && frontmatter.date) || '',
+    date: (frontmatter && frontmatter.date) || undefined,
     dateFormatted: (frontmatter && frontmatter.dateFormatted) || '',
-    lastModified: (frontmatter && frontmatter.last_modified_at) || '',
+    lastModified: (frontmatter && frontmatter.last_modified_at) || undefined,
     categories: (frontmatter && frontmatter.categories && (frontmatter.categories.filter(x => x) as string[])) || undefined,
     tags: (frontmatter && frontmatter.tags && (frontmatter.tags.filter(x => x) as string[])) || undefined,
     image: (frontmatter && frontmatter.image) || undefined,

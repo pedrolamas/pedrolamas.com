@@ -13,12 +13,16 @@ const MdxArticleMetaPostedOn: React.FunctionComponent<MdxArticleMetaPostedOnProp
   const { url, date, dateFormatted } = meta;
 
   return (
-    <span className="posted-on">
-      <span className="screen-reader-text">Posted on </span>
-      <Link to={url} rel="bookmark">
-        <time dateTime={date}>{dateFormatted}</time>
-      </Link>
-    </span>
+    <>
+      {date && (
+        <span className="posted-on">
+          <span className="screen-reader-text">Posted on </span>
+          <Link to={url} rel="bookmark">
+            <time dateTime={date}>{dateFormatted}</time>
+          </Link>
+        </span>
+      )}
+    </>
   );
 };
 
