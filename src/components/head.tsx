@@ -9,6 +9,7 @@ import { Utils } from '../utils';
 type MetaProps = JSX.IntrinsicElements['meta'];
 
 type HeadProps = {
+  type: 'index' | 'page' | 'post';
   title?: string;
   description?: string;
   mdxMeta?: Utils.SafeMdxMetadata;
@@ -41,7 +42,7 @@ const Head: React.FunctionComponent<HeadProps> = props => {
         {pageDescription && <meta name="description" content={pageDescription} />}
         <meta name="author" content={author} />
 
-        <meta property="og:type" content={pageTitle ? 'article' : 'website'} />
+        <meta property="og:type" content={props.type === 'index' ? 'website' : 'article'} />
         <meta property="og:site_name" content={title} />
         <meta property="og:title" content={pageTitleFinal} />
         {pageDescription && <meta property="og:description" content={pageDescription} />}
@@ -115,7 +116,7 @@ const Head: React.FunctionComponent<HeadProps> = props => {
             dateModified: props.mdxMeta && (props.mdxMeta.lastModified || props.mdxMeta.date),
             url: pageUrlAbsolute,
             mainEntityOfPage: {
-              '@type': pageTitle ? 'WebPage' : 'WebPage',
+              '@type': props.type === 'index' ? 'WebSite' : props.type === 'page' ? 'WebPage' : 'BlogPosting',
               '@id': siteUrl,
             },
           };

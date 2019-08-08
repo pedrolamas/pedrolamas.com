@@ -27,7 +27,7 @@ const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {
 
   return (
     <>
-      <Head mdxMeta={mdxMeta} />
+      <Head type="post" mdxMeta={mdxMeta} />
 
       <MdxContext.Provider value={mdxContext}>
         <main role="main" id="main">

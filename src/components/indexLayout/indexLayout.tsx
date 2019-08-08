@@ -16,7 +16,7 @@ type IndexLayoutProps = {
 
 const IndexLayout: React.FunctionComponent<IndexLayoutProps> = ({ data, pageContext }) => (
   <>
-    <Head />
+    <Head type="index" />
 
     <IndexLayoutPosts data={data} />
 
