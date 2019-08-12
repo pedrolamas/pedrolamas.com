@@ -77,6 +77,8 @@ module.exports = {
             options: {
               maxWidth: 720,
               linkImagesToOriginal: false,
+              showCaptions: true,
+              wrapperStyle: fluidResult => `margin-left: auto; margin-right: auto; max-width: ${fluidResult.presentationWidth}px`,
             },
           },
           {
@@ -92,7 +94,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-feed-generator',
+      resolve: `gatsby-plugin-feed-generator`,
       options: {
         generator: `GatsbyJS`,
         rss: true,
@@ -111,7 +113,7 @@ module.exports = {
         `,
         feeds: [
           {
-            name: 'feed',
+            name: `feed`,
             query: `
               {
                 allMdx(filter: { fields: { slug: { ne: null } } }, sort: { order: DESC, fields: [frontmatter___date] }) {
