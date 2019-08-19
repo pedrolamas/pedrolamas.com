@@ -77,8 +77,8 @@ module.exports = {
             options: {
               maxWidth: 720,
               linkImagesToOriginal: false,
-              showCaptions: true,
-              wrapperStyle: fluidResult => `margin-left: auto; margin-right: auto; max-width: ${fluidResult.presentationWidth}px`,
+              showCaptions: [`title`],
+              wrapperStyle: fluidResult => `margin-left: auto; margin-right: auto; max-width: ${fluidResult.presentationWidth}px;`,
             },
           },
           {
