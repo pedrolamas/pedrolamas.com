@@ -25,22 +25,18 @@ const SidebarSitemap: React.FunctionComponent<SidebarSitemapProps> = () => {
   );
 
   return (
-    <>
-      {allSitemapYaml && (
-        <nav className="sidebar-nav" role="navigation" aria-label="Primary Menu">
-          {allSitemapYaml.edges.map(({ node }, index) => {
-            const title = node.title || '(untitled)';
-            const url = node.url || '';
+    <nav className="sidebar-nav" role="navigation" aria-label="Primary Menu">
+      {allSitemapYaml.edges.map(({ node }, index) => {
+        const title = node.title || '(untitled)';
+        const url = node.url || '';
 
-            return (
-              <Link className="sidebar-nav-item" to={url} key={index}>
-                {title}
-              </Link>
-            );
-          })}
-        </nav>
-      )}
-    </>
+        return (
+          <Link className="sidebar-nav-item" to={url} key={index}>
+            {title}
+          </Link>
+        );
+      })}
+    </nav>
   );
 };
 

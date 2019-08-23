@@ -12,8 +12,6 @@ type SitemapLayoutProps = {
 const SitemapLayout: React.FunctionComponent<SitemapLayoutProps> = ({ data }) => {
   const { allSitemapYaml } = data;
 
-  if (!allSitemapYaml) throw Error('AllSitemapYaml expected!');
-
   const { siteMetadata } = React.useContext(SiteContext);
 
   return (

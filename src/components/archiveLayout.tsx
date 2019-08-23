@@ -15,7 +15,7 @@ type ArchiveLayoutProps = {
 };
 
 const ArchiveLayout: React.FunctionComponent<ArchiveLayoutProps> = ({ title, data }) => {
-  const posts = data.allMdx && data.allMdx.edges;
+  const posts = data.allMdx.edges;
 
   if (!posts) return null;
 

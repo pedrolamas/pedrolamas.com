@@ -10,7 +10,7 @@ type IndexLayoutPostsProps = {
 };
 
 const IndexLayoutPosts: React.FunctionComponent<IndexLayoutPostsProps> = ({ data }) => {
-  const posts = data.allMdx && data.allMdx.edges;
+  const posts = data.allMdx.edges;
 
   if (!posts) return null;
 
