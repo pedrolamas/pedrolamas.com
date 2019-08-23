@@ -26,7 +26,7 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
             logo {
               childImageSharp {
                 fluid(maxWidth: 160) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
               publicURL
@@ -40,7 +40,7 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
               picture {
                 childImageSharp {
                   fluid(maxWidth: 80) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
                 publicURL
@@ -67,7 +67,7 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
                 image {
                   childImageSharp {
                     fluid(maxWidth: 200, fit: CONTAIN) {
-                      ...GatsbyImageSharpFluid
+                      ...GatsbyImageSharpFluid_withWebp
                     }
                   }
                 }

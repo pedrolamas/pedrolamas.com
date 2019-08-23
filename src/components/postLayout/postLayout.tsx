@@ -59,7 +59,7 @@ export const postMdxFragment = graphql`
       image {
         childImageSharp {
           fluid(maxWidth: 720) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
             presentationWidth
           }
         }
