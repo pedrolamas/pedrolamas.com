@@ -747,7 +747,7 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-transform-typescript" "^7.3.2"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
   integrity sha512-28QvEGyQyNkB0/m2B4FU7IEZGK2NUrcMtT6BZEFALTguLk+AUT6ofsHtPk5QyjAdUkpMJ+/Em+quwz4HOt30AQ==
@@ -6063,12 +6063,12 @@ gatsby-plugin-sitemap@^2.2.8:
     pify "^3.0.0"
     sitemap "^1.13.0"
 
-gatsby-plugin-twitter@^2.1.3:
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-2.1.3.tgz#319aa30e6fa4b421b96e40822d7760e0c03dbd63"
-  integrity sha512-kWHJaIysl4ZCQibyRa9QqRHHa7fF604vXBqxWO/Os3lo1lq/tOZwXbwvx79xMepcoNOiDZwkJrTSOqVNcmwNeA==
+gatsby-plugin-twitter@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-2.1.4.tgz#753d2cc7f1045d088e41c5970071855067cbcf27"
+  integrity sha512-G+yvRUQ3xvUEJ8lVgQaGolcGo2Fg4f5F8iMcEleZ9aMyO/zi29NAym/3aQcPr4HhWl9ATCKCnz856dvGuOJ4pw==
   dependencies:
-    "@babel/runtime" "^7.0.0"
+    "@babel/runtime" "^7.5.5"
 
 gatsby-plugin-typescript@^2.1.4:
   version "2.1.4"
