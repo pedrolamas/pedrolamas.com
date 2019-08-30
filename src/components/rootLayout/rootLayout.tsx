@@ -75,7 +75,6 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
             }
             googleAnalytics
             disqusShortname
-            addthisProfile
           }
         }
       }

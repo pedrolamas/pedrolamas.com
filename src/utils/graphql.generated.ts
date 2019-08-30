@@ -2614,7 +2614,6 @@ export type SiteFieldsEnum =
   'siteMetadata___social___links' |
   'siteMetadata___googleAnalytics' |
   'siteMetadata___disqusShortname' |
-  'siteMetadata___addthisProfile' |
   'port' |
   'host' |
   'polyfill' |
@@ -3759,7 +3758,6 @@ export type SiteSiteMetadata = {
   social?: Maybe<SiteSiteMetadataSocial>,
   googleAnalytics?: Maybe<Scalars['String']>,
   disqusShortname?: Maybe<Scalars['String']>,
-  addthisProfile?: Maybe<Scalars['String']>,
 };
 
 export type SiteSiteMetadataAuthorDetails = {
@@ -3806,7 +3804,6 @@ export type SiteSiteMetadataFilterInput = {
   social?: Maybe<SiteSiteMetadataSocialFilterInput>,
   googleAnalytics?: Maybe<StringQueryOperatorInput>,
   disqusShortname?: Maybe<StringQueryOperatorInput>,
-  addthisProfile?: Maybe<StringQueryOperatorInput>,
 };
 
 export type SiteSiteMetadataSidebar = {
@@ -3957,7 +3954,7 @@ export type RootLayoutQueryVariables = {};
 
 
 export type RootLayoutQuery = { site: Maybe<{ siteMetadata: (
-      Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'siteUrl' | 'lang' | 'googleAnalytics' | 'disqusShortname' | 'addthisProfile'>
+      Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'siteUrl' | 'lang' | 'googleAnalytics' | 'disqusShortname'>
       & { logo: Maybe<(
         Pick<File, 'publicURL'>
         & { childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluid_WithWebpFragment> }> }

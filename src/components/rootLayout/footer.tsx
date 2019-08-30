@@ -12,7 +12,7 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
 
   if (!siteMetadata) return null;
 
-  const { disclaimer, addthisProfile } = siteMetadata;
+  const { disclaimer } = siteMetadata;
 
   return (
     <>
@@ -22,8 +22,6 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
           Site design based on <a href="https://github.com/poole/hyde">Hyde</a> under the <a href="https://github.com/poole/hyde/blob/master/LICENSE.md">MIT license</a>.
         </p>
       </footer>
-
-      {addthisProfile && <script type="text/javascript" src={`//s7.addthis.com/js/300/addthis_widget.js#pubid=${addthisProfile}`} async={true} />}
     </>
   );
 };

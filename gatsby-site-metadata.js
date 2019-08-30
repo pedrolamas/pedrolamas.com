@@ -39,5 +39,4 @@ module.exports = {
 
   googleAnalytics: `UA-1376452-1`,
   disqusShortname: `pedrolamas-com`,
-  addthisProfile: `ra-58b55b8d7a40cd51`,
 };
