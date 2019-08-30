@@ -1,0 +1,14 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    name: Build, test and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          version: 10.x
+          registry-url: https://registry.npmjs.org/
+      - run: yarn install
+      - run: yarn build
