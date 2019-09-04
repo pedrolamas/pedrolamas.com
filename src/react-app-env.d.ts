@@ -15,9 +15,11 @@ declare module 'gatsby-plugin-mdx' {
 declare module '@mdx-js/react' {
   import * as React from 'react';
 
-  type MDXProviderComponents = {
-    [key in 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'thematicBreak' | 'blockquote' | 'ul' | 'ol' | 'li' | 'table' | 'tr' | 'td' | 'th' | 'pre' | 'code' | 'em' | 'strong' | 'delete' | 'inlineCode' | 'hr' | 'a' | 'img']?: React.ReactNode;
-  };
+  type MDXProviderComponents =
+    | {
+        [key in 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'thematicBreak' | 'blockquote' | 'ul' | 'ol' | 'li' | 'table' | 'tr' | 'td' | 'th' | 'pre' | 'code' | 'em' | 'strong' | 'delete' | 'inlineCode' | 'hr' | 'a' | 'img']?: React.ReactNode;
+      }
+    | { [key: string]: React.ReactNode };
 
   type MDXProviderProps = {
     components: MDXProviderComponents;
