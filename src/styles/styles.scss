@@ -70,7 +70,9 @@ figcaption {
 }
 
 .sidebar-social-item {
+  font-size: 16px;
   text-align: center;
+  line-height: 36px;
   width: 36px;
   height: 36px;
   margin-right: 5px;
@@ -79,8 +81,6 @@ figcaption {
   display: inline-block;
 
   svg {
-    font-size: 16px;
-    vertical-align: middle;
     margin: 0;
   }
 
