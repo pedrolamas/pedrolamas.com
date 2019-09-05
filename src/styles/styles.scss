@@ -283,11 +283,8 @@ figcaption {
     a.anchor {
       margin-left: 8px;
 
-      &:before {
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
+      svg {
         font-size: 0.8rem;
-        content: '\f292';
         vertical-align: middle;
       }
 

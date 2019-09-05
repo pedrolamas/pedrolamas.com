@@ -1,6 +1,7 @@
 import React from 'react';
 import { Location } from '@reach/router';
 import { slugify } from 'underscore.string';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Link from '../link';
 import MdxContext from '../mdxContext';
@@ -28,7 +29,13 @@ const HBlock: React.FunctionComponent<HBlockProps> = props => {
       },
       <>
         {children}
-        <Location>{locationContext => <Link to={`${meta.url || locationContext.location.pathname}#${slug}`} className="anchor" aria-labelledby={slug} />}</Location>
+        <Location>
+          {locationContext => (
+            <Link to={`${meta.url || locationContext.location.pathname}#${slug}`} className="anchor" aria-labelledby={slug}>
+              <FontAwesomeIcon icon="link" />
+            </Link>
+          )}
+        </Location>
       </>
     );
   }
