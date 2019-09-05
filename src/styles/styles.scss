@@ -1,17 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap');
-@import url('https://use.fontawesome.com/releases/v5.9.0/css/all.css');
-
 @import 'base/poole';
 @import 'base/hyde';
-
-%font-awesome-5-free {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-}
-
-%font-awesome-5-brands {
-  font-family: 'Font Awesome 5 Brands';
-}
 
 h1,
 h2,
@@ -50,10 +38,9 @@ figcaption {
   margin: 5px 0 0 5px;
   color: #999;
 
-  &:before {
-    @extend %font-awesome-5-free;
-    content: '\f129';
-    margin-right: 5px;
+  svg {
+    transform: skewX(-15deg);
+    margin-right: 4px;
   }
 }
 
@@ -83,7 +70,9 @@ figcaption {
 }
 
 .sidebar-social-item {
+  font-size: 16px;
   text-align: center;
+  line-height: 36px;
   width: 36px;
   height: 36px;
   margin-right: 5px;
@@ -91,41 +80,15 @@ figcaption {
   border-radius: 50%;
   display: inline-block;
 
+  svg {
+    margin: 0;
+  }
+
   &:hover,
   &:active,
   &:focus {
     border-color: #fff;
     text-decoration: none;
-  }
-
-  &:before {
-    @extend %font-awesome-5-brands;
-    font-size: 16px;
-    content: '\f1e0';
-    width: 34px;
-    height: 34px;
-    line-height: 34px;
-  }
-
-  &[href*='github.com']:before {
-    content: '\f09b';
-  }
-
-  &[href*='twitter.com']:before {
-    content: '\f099';
-  }
-
-  &[href*='facebook.com']:before {
-    content: '\f39e';
-  }
-
-  &[href*='linkedin.com']:before {
-    content: '\f0e1';
-  }
-
-  &[title='Syndicated Feeds']:before {
-    @extend %font-awesome-5-free;
-    content: '\f09e';
   }
 }
 
@@ -144,52 +107,15 @@ figcaption {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 
-  .meta-entry {
+  .posted-on,
+  .categories,
+  .tags,
+  .comments,
+  .edit {
     margin-right: 10px;
 
-    &:before {
-      @extend %font-awesome-5-free;
+    svg {
       margin-right: 4px;
-    }
-  }
-
-  .posted-on {
-    @extend .meta-entry;
-
-    &:before {
-      content: '\f073';
-    }
-  }
-
-  .categories {
-    @extend .meta-entry;
-
-    &:before {
-      content: '\f07b';
-    }
-  }
-
-  .tags {
-    @extend .meta-entry;
-
-    &:before {
-      content: '\f02c';
-    }
-  }
-
-  .comments {
-    @extend .meta-entry;
-
-    &:before {
-      content: '\f075';
-    }
-  }
-
-  .edit {
-    @extend .meta-entry;
-
-    &:before {
-      content: '\f044';
     }
   }
 }
@@ -232,6 +158,70 @@ figcaption {
   }
 }
 
+.post-social-item {
+  font-size: 0.6rem;
+  border-radius: 50px;
+  padding: 4px 12px;
+  display: inline-block;
+  margin-right: 5px;
+  color: #fff;
+
+  span {
+    margin-left: 5px;
+    display: inline-block;
+  }
+
+  &[href*='twitter.com'] {
+    background-color: #55acee;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #2795e9;
+    }
+  }
+
+  &[href*='facebook.com'] {
+    background-color: #3b5998;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #2d4373;
+    }
+  }
+
+  &[href*='linkedin.com'] {
+    background-color: #0077b5;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #046293;
+    }
+  }
+
+  &[href*='whatsapp:'] {
+    background-color: #1da851;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #25d366;
+    }
+  }
+
+  &[href*='mailto:'] {
+    background-color: #5e5e5e;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #777;
+    }
+  }
+}
+
 .post-entry {
   margin-top: 0;
 
@@ -240,7 +230,9 @@ figcaption {
     color: #999;
   }
 
-  a:hover {
+  a:hover,
+  a:focus,
+  a:active {
     color: #268bd2;
     text-decoration: none;
 

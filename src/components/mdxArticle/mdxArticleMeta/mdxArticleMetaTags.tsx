@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import MdxContext from '../../mdxContext';
 import Link from '../../link';
@@ -17,6 +18,7 @@ const MdxArticleMetaTags: React.FunctionComponent<MdxArticleMetaTagsProps> = () 
     <>
       {tags && (
         <span className="tags">
+          <FontAwesomeIcon icon="tags" />
           <span className="screen-reader-text">Tags </span>
           {tags.map((tag, index) => (
             <React.Fragment key={index}>

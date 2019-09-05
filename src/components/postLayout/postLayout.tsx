@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import Head from '../head';
 import PostLayoutArticle from './postLayoutArticle';
 import PostLayoutComments from './postLayoutComments';
+import PostLayoutSocial from './postLayoutSocial/postLayoutSocial';
 import PostLayoutAuthor from './postLayoutAuthor';
 import PostLayoutNavigation from './postLayoutNavigation';
 import MdxContext from '../mdxContext';
@@ -34,6 +35,8 @@ const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {
           <PostLayoutArticle />
 
           <PostLayoutAuthor />
+
+          <PostLayoutSocial />
 
           <PostLayoutComments />
 

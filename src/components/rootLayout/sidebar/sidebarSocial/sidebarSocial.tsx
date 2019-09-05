@@ -1,4 +1,5 @@
 import React from 'react';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 import SidebarSocialLink from './sidebarSocialLink';
 import SiteContext from '../../../siteContext';
@@ -24,20 +25,25 @@ const SidebarSocial: React.FunctionComponent<SidebarSocialProps> = () => {
           }
 
           let linkTitle = '';
+          let icon: IconProp = 'share-alt';
 
           if (link.includes('twitter.com')) {
             linkTitle = 'Twitter';
+            icon = ['fab', 'twitter'];
           } else if (link.includes('facebook.com')) {
             linkTitle = 'Facebook';
+            icon = ['fab', 'facebook-f'];
           } else if (link.includes('linkedin.com')) {
             linkTitle = 'LinkedIn';
+            icon = ['fab', 'linkedin-in'];
           } else if (link.includes('github.com')) {
             linkTitle = 'GitHub';
+            icon = ['fab', 'github'];
           }
 
-          return <SidebarSocialLink url={link} title={linkTitle} key={index} />;
+          return <SidebarSocialLink url={link} title={linkTitle} icon={icon} key={index} />;
         })}
-      <SidebarSocialLink url="/feeds" title="Syndicated Feeds" />
+      <SidebarSocialLink url="/feeds" title="Syndicated Feeds" icon="rss" />
     </nav>
   );
 };

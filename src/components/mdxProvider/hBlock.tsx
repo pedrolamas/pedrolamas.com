@@ -12,8 +12,10 @@ type HBlockProps = React.ComponentPropsWithoutRef<HeaderElementType> & {
   headerElementType: HeaderElementType;
 };
 
-const HBlock: React.FunctionComponent<HBlockProps> = ({ headerElementType, children, ...restOfProps }) => {
+const HBlock: React.FunctionComponent<HBlockProps> = props => {
   const { meta } = React.useContext(MdxContext);
+
+  const { headerElementType, children, ...restOfProps } = props;
 
   if (Utils.IsString(children)) {
     const slug = slugify(children);
