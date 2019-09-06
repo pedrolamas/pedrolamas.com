@@ -1,8 +1,8 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import MdxContext from '../../mdxContext';
 import Link from '../../link';
+import FontAwesomeSymbol from '../../fontAwesomeSymbol';
+import MdxContext from '../../mdxContext';
 import { Utils } from '../../../utils';
 
 type MdxArticleMetaCategoriesProps = {
@@ -18,8 +18,10 @@ const MdxArticleMetaCategories: React.FunctionComponent<MdxArticleMetaCategories
     <>
       {categories && (
         <span className="categories">
-          <FontAwesomeIcon icon="folder" />
+          <FontAwesomeSymbol iconName="folder" symbol="article-categories" />
+
           <span className="screen-reader-text">Categories </span>
+
           {categories.map((category, index) => (
             <React.Fragment key={index}>
               {index > 0 && ', '}

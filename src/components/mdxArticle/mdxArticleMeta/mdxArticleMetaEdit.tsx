@@ -1,6 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import FontAwesomeSymbol from '../../fontAwesomeSymbol';
 import MdxContext from '../../mdxContext';
 
 type MdxArticleMetaEditProps = {};
@@ -14,7 +14,8 @@ const MdxArticleMetaEdit: React.FunctionComponent<MdxArticleMetaEditProps> = () 
     <>
       {originalFile && process.env.REPOSITORY_URL && process.env.BRANCH && (
         <span className="edit">
-          <FontAwesomeIcon icon="edit" />
+          <FontAwesomeSymbol iconName="edit" symbol="article-edit" />
+
           <a href={`${process.env.REPOSITORY_URL}/edit/${process.env.BRANCH || 'master'}/content/posts/${originalFile}`}>Edit</a>
         </span>
       )}

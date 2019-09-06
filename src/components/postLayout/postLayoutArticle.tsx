@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MdxArticle from '../mdxArticle';
+import MdxArticle, { MdxArticleSymbols } from '../mdxArticle';
 import MdxContext from '../mdxContext';
 
 type PostLayoutArticleProps = {
@@ -17,6 +17,8 @@ const PostLayoutArticle: React.FunctionComponent<PostLayoutArticleProps> = () =>
       <header className="post-header">
         <h1 className="post-title">{title}</h1>
       </header>
+
+      <MdxArticleSymbols />
 
       <MdxArticle />
     </article>

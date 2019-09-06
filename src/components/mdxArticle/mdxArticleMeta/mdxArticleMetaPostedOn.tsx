@@ -1,8 +1,8 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import MdxContext from '../../mdxContext';
 import Link from '../../link';
+import FontAwesomeSymbol from '../../fontAwesomeSymbol';
+import MdxContext from '../../mdxContext';
 
 type MdxArticleMetaPostedOnProps = {
   children?: never;
@@ -17,8 +17,10 @@ const MdxArticleMetaPostedOn: React.FunctionComponent<MdxArticleMetaPostedOnProp
     <>
       {date && (
         <span className="posted-on">
-          <FontAwesomeIcon icon="calendar-alt" />
+          <FontAwesomeSymbol iconName="calendar-alt" symbol="article-posted-on" />
+
           <span className="screen-reader-text">Posted on </span>
+
           <Link to={url} rel="bookmark">
             <time dateTime={date}>{dateFormatted}</time>
           </Link>
