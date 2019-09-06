@@ -1,20 +1,25 @@
 import React from 'react';
-import { IconPrefix, IconLookup, findIconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { IconPrefix, IconName, findIconDefinition } from '@fortawesome/fontawesome-svg-core';
 
-type FontAwesomeSymbolProps = IconLookup & {
-  symbol: string;
+type FontAwesomeSymbolProps = {
   prefix?: IconPrefix;
+  iconName: IconName;
+  symbolName: string;
 };
 
-const FontAwesomeSymbol: React.FunctionComponent<FontAwesomeSymbolProps> = props => {
-  const iconDefinition = findIconDefinition(props);
+const FontAwesomeSymbol: React.FunctionComponent<FontAwesomeSymbolProps> = ({ prefix, iconName, symbolName }) => {
+  const iconDefinition = findIconDefinition({
+    iconName,
+    prefix: prefix || 'fas',
+  });
+
   const [width, height] = iconDefinition.icon;
 
   const widthClass = `fa-w-${Math.ceil((width / height) * 16)}`;
 
   return (
     <svg className={`svg-inline--fa ${widthClass}`}>
-      <use xlinkHref={`#${props.symbol}`}></use>
+      <use xlinkHref={`#${symbolName}`}></use>
     </svg>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Link from '../../link';
-import FontAwesomeSymbol from '../../fontAwesomeSymbol';
+import MdxArticleSymbol from '../mdxArticleSymbol';
 import MdxContext from '../../mdxContext';
 import { Utils } from '../../../utils';
 
@@ -18,7 +18,7 @@ const MdxArticleMetaTags: React.FunctionComponent<MdxArticleMetaTagsProps> = () 
     <>
       {tags && (
         <span className="tags">
-          <FontAwesomeSymbol iconName="tags" symbol="article-tags" />
+          <MdxArticleSymbol symbolName="article-tags" />
 
           <span className="screen-reader-text">Tags </span>
 

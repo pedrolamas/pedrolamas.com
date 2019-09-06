@@ -3,7 +3,7 @@ import Disqus from 'disqus-react';
 import Url from 'url';
 
 import Link from '../../link';
-import FontAwesomeSymbol from '../../fontAwesomeSymbol';
+import MdxArticleSymbol from '../mdxArticleSymbol';
 import SiteContext from '../../siteContext';
 import MdxContext from '../../mdxContext';
 
@@ -30,7 +30,7 @@ const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProp
 
   return (
     <span className="comments">
-      <FontAwesomeSymbol iconName="comment" symbol="article-comments" />
+      <MdxArticleSymbol symbolName="article-comments" />
 
       <Link to={`${url}#disqus_thread`}>
         <Disqus.CommentCount shortname={disqusShortname} config={disqusConfig}>

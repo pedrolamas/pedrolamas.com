@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Link from '../../link';
-import FontAwesomeSymbol from '../../fontAwesomeSymbol';
+import MdxArticleSymbol from '../mdxArticleSymbol';
 import MdxContext from '../../mdxContext';
 
 type MdxArticleMetaPostedOnProps = {
@@ -17,7 +17,7 @@ const MdxArticleMetaPostedOn: React.FunctionComponent<MdxArticleMetaPostedOnProp
     <>
       {date && (
         <span className="posted-on">
-          <FontAwesomeSymbol iconName="calendar-alt" symbol="article-posted-on" />
+          <MdxArticleSymbol symbolName="article-posted-on" />
 
           <span className="screen-reader-text">Posted on </span>
 
