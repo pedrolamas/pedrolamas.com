@@ -65,7 +65,7 @@
     "gatsby-remark-images": "^3.1.20",
     "gatsby-remark-responsive-iframe": "^2.2.10",
     "gatsby-remark-smartypants": "^2.1.7",
-    "gatsby-source-filesystem": "^2.1.18",
+    "gatsby-source-filesystem": "^2.1.21",
     "gatsby-transformer-sharp": "^2.2.13",
     "gatsby-transformer-yaml": "^2.2.7",
     "github-slugger": "^1.2.1",
