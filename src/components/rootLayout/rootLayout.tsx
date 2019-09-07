@@ -5,6 +5,7 @@ import Content from './content';
 import Footer from './footer';
 import Header from './header';
 import Sidebar from './sidebar';
+import Symbols from './symbols';
 import SiteContext from '../siteContext';
 import { GraphQl } from '../../utils';
 
@@ -91,6 +92,8 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
 
   return (
     <SiteContext.Provider value={siteContext}>
+      <Symbols />
+
       <Sidebar />
 
       <Content>

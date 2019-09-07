@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Link from '../../link';
-import MdxArticleSymbol from '../mdxArticleSymbol';
+import FontAwesomeSymbol from '../../fontAwesomeSymbol';
 import MdxContext from '../../mdxContext';
 import { Utils } from '../../../utils';
 
@@ -18,7 +18,7 @@ const MdxArticleMetaCategories: React.FunctionComponent<MdxArticleMetaCategories
     <>
       {categories && (
         <span className="categories">
-          <MdxArticleSymbol symbolName="article-categories" />
+          <FontAwesomeSymbol symbolName="article-categories" />
 
           <span className="screen-reader-text">Categories </span>
 

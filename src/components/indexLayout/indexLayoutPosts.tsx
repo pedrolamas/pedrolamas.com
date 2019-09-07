@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MdxArticle, { MdxArticleSymbols } from '../mdxArticle';
+import MdxArticle from '../mdxArticle';
 import Link from '../link';
 import MdxContext from '../mdxContext';
 import { GraphQl, Utils } from '../../utils';
@@ -16,8 +16,6 @@ const IndexLayoutPosts: React.FunctionComponent<IndexLayoutPostsProps> = ({ data
 
   return (
     <>
-      <MdxArticleSymbols />
-
       {posts.map(({ node }, index) => {
         const mdxMeta = Utils.SafeMetadataFromMdx(node);
         const { id, title, url } = mdxMeta;

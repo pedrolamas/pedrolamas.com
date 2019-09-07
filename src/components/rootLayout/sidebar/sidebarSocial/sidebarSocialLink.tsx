@@ -1,18 +1,18 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 import Link from '../../../link';
+import FontAwesomeSymbol from '../../../fontAwesomeSymbol';
+import { FontAwesome } from '../../../../utils';
 
 type SidebarSocialLinkProps = {
   url: string;
   title: string;
-  icon: IconProp;
+  symbolName: FontAwesome.SymbolNames;
 };
 
-const SidebarSocialLink: React.FunctionComponent<SidebarSocialLinkProps> = ({ url, title, icon }) => (
+const SidebarSocialLink: React.FunctionComponent<SidebarSocialLinkProps> = ({ url, title, symbolName }) => (
   <Link to={url} className="sidebar-social-item" title={title}>
-    <FontAwesomeIcon icon={icon} />
+    <FontAwesomeSymbol symbolName={symbolName} />
     <span className="screen-reader-text">{title}</span>
   </Link>
 );
