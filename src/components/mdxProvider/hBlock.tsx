@@ -43,16 +43,30 @@ const HBlock: React.FunctionComponent<HBlockProps> = props => {
   return React.createElement('h1', null, null);
 };
 
+HBlock.displayName = 'HBlock';
+
 const H1Block: React.FunctionComponent<React.ComponentPropsWithoutRef<'h1'>> = props => <HBlock headerElementType="h1" {...props} />;
+
+H1Block.displayName = 'H1Block';
 
 const H2Block: React.FunctionComponent<React.ComponentPropsWithoutRef<'h2'>> = props => <HBlock headerElementType="h2" {...props} />;
 
+H2Block.displayName = 'H2Block';
+
 const H3Block: React.FunctionComponent<React.ComponentPropsWithoutRef<'h3'>> = props => <HBlock headerElementType="h3" {...props} />;
+
+H3Block.displayName = 'H3Block';
 
 const H4Block: React.FunctionComponent<React.ComponentPropsWithoutRef<'h4'>> = props => <HBlock headerElementType="h4" {...props} />;
 
+H4Block.displayName = 'H4Block';
+
 const H5Block: React.FunctionComponent<React.ComponentPropsWithoutRef<'h5'>> = props => <HBlock headerElementType="h5" {...props} />;
 
+H5Block.displayName = 'H5Block';
+
 const H6Block: React.FunctionComponent<React.ComponentPropsWithoutRef<'h6'>> = props => <HBlock headerElementType="h6" {...props} />;
+
+H6Block.displayName = 'H6Block';
 
 export default { H1Block, H2Block, H3Block, H4Block, H5Block, H6Block };

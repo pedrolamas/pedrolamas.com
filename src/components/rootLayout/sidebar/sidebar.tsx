@@ -22,4 +22,6 @@ const Sidebar: React.FunctionComponent = () => (
   </aside>
 );
 
+Sidebar.displayName = 'Sidebar';
+
 export default Sidebar;

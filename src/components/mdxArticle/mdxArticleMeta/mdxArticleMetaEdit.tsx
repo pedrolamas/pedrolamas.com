@@ -23,4 +23,6 @@ const MdxArticleMetaEdit: React.FunctionComponent<MdxArticleMetaEditProps> = () 
   );
 };
 
+MdxArticleMetaEdit.displayName = 'MdxArticleMetaEdit';
+
 export default MdxArticleMetaEdit;

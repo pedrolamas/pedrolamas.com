@@ -22,4 +22,6 @@ export const pageQuery = graphql`
   }
 `;
 
+ArchivePage.displayName = 'ArchivePage';
+
 export default ArchivePage;

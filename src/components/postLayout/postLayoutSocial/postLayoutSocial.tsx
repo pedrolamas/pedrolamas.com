@@ -38,4 +38,6 @@ const PostLayoutSocial: React.FunctionComponent<PostLayoutSocialProps> = () => {
   );
 };
 
+PostLayoutSocial.displayName = 'PostLayoutSocial';
+
 export default PostLayoutSocial;

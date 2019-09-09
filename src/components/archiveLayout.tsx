@@ -63,4 +63,6 @@ const ArchiveLayout: React.FunctionComponent<ArchiveLayoutProps> = ({ title, dat
   );
 };
 
+ArchiveLayout.displayName = 'ArchiveLayout';
+
 export default ArchiveLayout;

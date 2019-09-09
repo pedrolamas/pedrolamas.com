@@ -26,4 +26,6 @@ const SidebarAbout: React.FunctionComponent<SidebarAboutProps> = props => {
   );
 };
 
+SidebarAbout.displayName = 'SidebarAbout';
+
 export default SidebarAbout;

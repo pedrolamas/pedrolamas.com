@@ -30,4 +30,6 @@ const MdxArticleMetaPostedOn: React.FunctionComponent<MdxArticleMetaPostedOnProp
   );
 };
 
+MdxArticleMetaPostedOn.displayName = 'MdxArticleMetaPostedOn';
+
 export default MdxArticleMetaPostedOn;

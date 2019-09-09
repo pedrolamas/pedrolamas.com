@@ -36,4 +36,6 @@ const MdxArticleMetaCategories: React.FunctionComponent<MdxArticleMetaCategories
   );
 };
 
+MdxArticleMetaCategories.displayName = 'MdxArticleMetaCategories';
+
 export default MdxArticleMetaCategories;

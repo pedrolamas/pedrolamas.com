@@ -13,4 +13,6 @@ const Symbols: React.FunctionComponent<SymbolsProps> = () => (
   </>
 );
 
+Symbols.displayName = 'Symbols';
+
 export default Symbols;

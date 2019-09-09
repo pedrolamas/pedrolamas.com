@@ -1,10 +1,5 @@
 module.exports = {
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'react-app',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended'
-  ],
+  extends: ['plugin:@typescript-eslint/recommended', 'react-app', 'prettier/@typescript-eslint', 'plugin:prettier/recommended'],
   plugins: ['@typescript-eslint', 'react'],
   rules: {
     '@typescript-eslint/explicit-function-return-type': [
@@ -15,5 +10,11 @@ module.exports = {
       },
     ],
     '@typescript-eslint/prefer-interface': 'off',
+    'react/display-name': [
+      'warn',
+      {
+        ignoreTranspilerName: true,
+      },
+    ],
   },
-}
+};

@@ -2,7 +2,7 @@ import React from 'react';
 
 import FontAwesomeSymbol from '../fontAwesomeSymbol';
 
-const FigCaptionBlock: React.FunctionComponent<React.ComponentPropsWithoutRef<'figcaption'>> = props => {
+const FigcaptionBlock: React.FunctionComponent<React.ComponentPropsWithoutRef<'figcaption'>> = props => {
   const { children, ...otherProps } = props;
 
   return (
@@ -13,4 +13,6 @@ const FigCaptionBlock: React.FunctionComponent<React.ComponentPropsWithoutRef<'f
   );
 };
 
-export default FigCaptionBlock;
+FigcaptionBlock.displayName = 'FigcaptionBlock';
+
+export default FigcaptionBlock;

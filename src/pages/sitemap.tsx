@@ -31,4 +31,6 @@ export const pageQuery = graphql`
   }
 `;
 
+SitemapPage.displayName = 'SitemapPage';
+
 export default SitemapPage;

@@ -23,4 +23,6 @@ const Image: React.FunctionComponent<ImageProps> = ({ imageSharp, style, ...rest
   return <Img fixed={fixed as FixedObject} fluid={fluid as FluidObject} style={newStyle} {...restOfProps} />;
 };
 
+Image.displayName = 'Image';
+
 export default Image;

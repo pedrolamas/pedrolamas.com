@@ -19,4 +19,6 @@ const MdxArticleContent: React.FunctionComponent<MdxArticleContentProps> = () =>
   );
 };
 
+MdxArticleContent.displayName = 'MdxArticleContent';
+
 export default MdxArticleContent;

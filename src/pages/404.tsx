@@ -17,4 +17,6 @@ const NotFoundPage: React.FunctionComponent = () => (
   </PageLayout>
 );
 
+NotFoundPage.displayName = 'NotFoundPage';
+
 export default NotFoundPage;

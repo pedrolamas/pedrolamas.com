@@ -13,4 +13,6 @@ const ABlock: React.FunctionComponent<React.ComponentPropsWithoutRef<'a'>> = pro
   return <a {...props} />;
 };
 
+ABlock.displayName = 'ABlock';
+
 export default ABlock;

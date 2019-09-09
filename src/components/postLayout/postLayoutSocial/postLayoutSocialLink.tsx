@@ -17,4 +17,6 @@ const PostLayoutSocialLink: React.FunctionComponent<PostLayoutSocialLinkProps> =
   </a>
 );
 
+PostLayoutSocialLink.displayName = 'PostLayoutSocialLink';
+
 export default PostLayoutSocialLink;

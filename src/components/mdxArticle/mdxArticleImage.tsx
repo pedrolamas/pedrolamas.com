@@ -23,4 +23,6 @@ const MdxArticleImage: React.FunctionComponent<MdxArticleImageProps> = () => {
   );
 };
 
+MdxArticleImage.displayName = 'MdxArticleImage';
+
 export default MdxArticleImage;

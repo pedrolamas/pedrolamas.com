@@ -40,4 +40,6 @@ const SidebarSitemap: React.FunctionComponent<SidebarSitemapProps> = () => {
   );
 };
 
+SidebarSitemap.displayName = 'SidebarSitemap';
+
 export default SidebarSitemap;

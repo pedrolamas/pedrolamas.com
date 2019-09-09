@@ -23,4 +23,6 @@ const PostLayoutArticle: React.FunctionComponent<PostLayoutArticleProps> = () =>
   );
 };
 
+PostLayoutArticle.displayName = 'PostLayoutArticle';
+
 export default PostLayoutArticle;

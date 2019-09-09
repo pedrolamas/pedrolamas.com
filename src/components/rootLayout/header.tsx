@@ -6,4 +6,6 @@ type HeaderProps = {
 
 const Header: React.FunctionComponent<HeaderProps> = () => null;
 
+Header.displayName = 'Header';
+
 export default Header;

@@ -27,4 +27,6 @@ const PostLayoutComments: React.FunctionComponent<PostLayoutCommentsProps> = () 
   return <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />;
 };
 
+PostLayoutComments.displayName = 'PostLayoutComments';
+
 export default PostLayoutComments;

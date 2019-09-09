@@ -29,4 +29,6 @@ export const pageQuery = graphql`
   }
 `;
 
+TagArchiveLayout.displayName = 'TagArchiveLayout';
+
 export default TagArchiveLayout;

@@ -18,4 +18,6 @@ const MdxArticle: React.FunctionComponent<MdxArticleProps> = () => (
   </>
 );
 
+MdxArticle.displayName = 'MdxArticle';
+
 export default MdxArticle;

@@ -18,4 +18,6 @@ const FontAwesomeSymbol: React.FunctionComponent<FontAwesomeSymbolProps> = ({ sy
   );
 };
 
+FontAwesomeSymbol.displayName = 'FontAwesomeSymbol';
+
 export default FontAwesomeSymbol;

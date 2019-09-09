@@ -20,4 +20,6 @@ const PostLayoutNavigation: React.FunctionComponent<PostLayoutNavigationProps> =
   );
 };
 
+PostLayoutNavigation.displayName = 'PostLayoutNavigation';
+
 export default PostLayoutNavigation;

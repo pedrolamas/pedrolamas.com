@@ -6,4 +6,6 @@ type ContentProps = {
 
 const Content: React.FunctionComponent<ContentProps> = ({ children }) => <div className="content container">{children}</div>;
 
+Content.displayName = 'Content';
+
 export default Content;

@@ -24,6 +24,8 @@ const IndexLayout: React.FunctionComponent<IndexLayoutProps> = ({ data, pageCont
   </>
 );
 
+IndexLayout.displayName = 'IndexLayout';
+
 export const pageQuery = graphql`
   query IndexLayout($ids: [String!]!) {
     allMdx(filter: { id: { in: $ids } }, sort: { fields: frontmatter___date, order: DESC }) {

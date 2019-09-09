@@ -26,4 +26,6 @@ const IndexLayoutNavigation: React.FunctionComponent<IndexLayoutNavigationProps>
   </nav>
 );
 
+IndexLayoutNavigation.displayName = 'IndexLayoutNavigation';
+
 export default IndexLayoutNavigation;

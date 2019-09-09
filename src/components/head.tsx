@@ -137,6 +137,8 @@ const Head: React.FunctionComponent<HeadProps> = props => {
   );
 };
 
+Head.displayName = 'Head';
+
 Head.defaultProps = {
   title: '',
   description: '',

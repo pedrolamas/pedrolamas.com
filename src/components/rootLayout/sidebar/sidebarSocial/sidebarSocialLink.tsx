@@ -17,4 +17,6 @@ const SidebarSocialLink: React.FunctionComponent<SidebarSocialLinkProps> = ({ ur
   </Link>
 );
 
+SidebarSocialLink.displayName = 'SidebarSocialLink';
+
 export default SidebarSocialLink;

@@ -19,4 +19,6 @@ const MdxPageLayout: React.FunctionComponent<MdxPageLayoutProps> = ({ pageContex
   );
 };
 
+MdxPageLayout.displayName = 'MdxPageLayout';
+
 export default MdxPageLayout;

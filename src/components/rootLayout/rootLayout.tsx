@@ -107,4 +107,6 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
   );
 };
 
+RootLayout.displayName = 'RootLayout';
+
 export default RootLayout;

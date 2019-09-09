@@ -41,4 +41,6 @@ const MdxArticleMetaComments: React.FunctionComponent<MdxArticleMetaCommentsProp
   );
 };
 
+MdxArticleMetaComments.displayName = 'MdxArticleMetaComments';
+
 export default MdxArticleMetaComments;

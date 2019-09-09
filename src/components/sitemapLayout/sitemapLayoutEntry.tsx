@@ -12,4 +12,6 @@ const SitemapLayoutEntry: React.FunctionComponent<SitemapLayoutEntryProps> = ({ 
   </li>
 );
 
+SitemapLayoutEntry.displayName = 'SitemapLayoutEntry';
+
 export default SitemapLayoutEntry;

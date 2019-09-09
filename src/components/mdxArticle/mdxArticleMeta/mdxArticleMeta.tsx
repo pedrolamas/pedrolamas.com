@@ -24,4 +24,6 @@ const MdxArticleMeta: React.FunctionComponent<MdxArticleMetaProps> = () => (
   </div>
 );
 
+MdxArticleMeta.displayName = 'MdxArticleMeta';
+
 export default MdxArticleMeta;

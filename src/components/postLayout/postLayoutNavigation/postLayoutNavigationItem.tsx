@@ -25,4 +25,6 @@ const PostLayoutNavigationItem: React.FunctionComponent<PostLayoutNavigationItem
   );
 };
 
+PostLayoutNavigationItem.displayName = 'PostLayoutNavigationItem';
+
 export default PostLayoutNavigationItem;

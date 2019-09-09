@@ -27,4 +27,6 @@ const SidebarFacebook: React.FunctionComponent<SidebarFacebookProps> = props => 
   );
 };
 
+SidebarFacebook.displayName = 'SidebarFacebook';
+
 export default SidebarFacebook;

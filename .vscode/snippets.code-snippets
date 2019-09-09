@@ -12,9 +12,11 @@
 		"body": [
       "import React from 'react';",
       "",
-      "type $1Props = {}",
+      "type $1Props = {};",
       "",
-      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}: React.FunctionComponent<$1Props> = (props) => {$0}",
+      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}: React.FunctionComponent<$1Props> = props => {$0};",
+      "",
+      "$1.displayName = '$1';",
       "",
       "export default $1;",
 		],
@@ -26,14 +28,32 @@
 		"body": [
       "import React from 'react';",
       "",
-      "type $1Props = {}",
+      "type $1Props = {};",
       "",
-      "type $1State = {}",
+      "type $1State = {};",
       "",
-      "class ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}} extends React.Component<$1Props, $1State> {$0}",
+      "class ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}} extends React.Component<$1Props, $1State> {",
+      "  public static displayName: string = '$1';$0",
+      "}",
       "",
       "export default $1;",
 		],
-		"description": "Creates a new FunctionComponent"
-	}
+		"description": "Creates a new Component"
+  },
+  "FunctionComponentDisplayName" :{
+    "scope": "typescriptreact",
+		"prefix": "pl",
+		"body": [
+      "${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}.displayName = '$1';$0",
+		],
+		"description": "Adds displayName an existing FunctionComponent"
+  },
+  "ComponentDisplayName": {
+    "scope": "typescriptreact",
+		"prefix": "pl",
+		"body": [
+      "public static displayName: string = '${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}';$0",
+		],
+		"description": "Adds displayName an existing Component"
+  }
 }

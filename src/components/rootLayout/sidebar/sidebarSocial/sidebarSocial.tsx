@@ -48,4 +48,6 @@ const SidebarSocial: React.FunctionComponent<SidebarSocialProps> = () => {
   );
 };
 
+SidebarSocial.displayName = 'SidebarSocial';
+
 export default SidebarSocial;

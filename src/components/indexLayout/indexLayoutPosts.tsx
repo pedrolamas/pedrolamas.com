@@ -45,4 +45,6 @@ const IndexLayoutPosts: React.FunctionComponent<IndexLayoutPostsProps> = ({ data
   );
 };
 
+IndexLayoutPosts.displayName = 'IndexLayoutPosts';
+
 export default IndexLayoutPosts;

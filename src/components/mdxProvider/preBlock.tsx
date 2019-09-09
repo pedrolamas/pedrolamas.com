@@ -12,4 +12,6 @@ const PreBlock: React.FunctionComponent<React.ComponentPropsWithoutRef<'pre'>> =
   return <pre {...props} />;
 };
 
+PreBlock.displayName = 'PreBlock';
+
 export default PreBlock;

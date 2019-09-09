@@ -23,4 +23,6 @@ const PageLayout: React.FunctionComponent<PageLayoutProps> = ({ title, children 
   </>
 );
 
+PageLayout.displayName = 'PageLayout';
+
 export default PageLayout;

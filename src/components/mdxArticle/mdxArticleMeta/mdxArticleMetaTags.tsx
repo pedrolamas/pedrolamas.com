@@ -36,4 +36,6 @@ const MdxArticleMetaTags: React.FunctionComponent<MdxArticleMetaTagsProps> = () 
   );
 };
 
+MdxArticleMetaTags.displayName = 'MdxArticleMetaTags';
+
 export default MdxArticleMetaTags;

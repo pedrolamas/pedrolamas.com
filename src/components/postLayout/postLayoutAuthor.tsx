@@ -24,4 +24,6 @@ const PostLayoutAuthor: React.FunctionComponent<PostLayoutAuthorProps> = () => {
   );
 };
 
+PostLayoutAuthor.displayName = 'PostLayoutAuthor';
+
 export default PostLayoutAuthor;

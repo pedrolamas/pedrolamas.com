@@ -23,4 +23,6 @@ const SitemapLayout: React.FunctionComponent<SitemapLayoutProps> = ({ data }) =>
   );
 };
 
+SitemapLayout.displayName = 'SitemapLayout';
+
 export default SitemapLayout;

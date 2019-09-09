@@ -14,4 +14,6 @@ const MdxRenderer: React.FunctionComponent<MdxRendererProps> = ({ children }) =>
   </MdxProvider>
 );
 
+MdxRenderer.displayName = 'MdxRenderer';
+
 export default MdxRenderer;

@@ -31,4 +31,6 @@ const CodeBlock: React.FunctionComponent<CodeBlockProps> = ({ children, classNam
   );
 };
 
+CodeBlock.displayName = 'CodeBlock';
+
 export default CodeBlock;
