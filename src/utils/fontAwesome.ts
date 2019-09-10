@@ -1,7 +1,7 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faInfo, faRss, faShareAlt, faCalendarAlt, faFolder, faTags, faComment, faEdit, faLink } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter, faLinkedinIn, faWhatsapp, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faTwitter, faLinkedinIn, faWhatsapp, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 type ArticleSymbolNames = 'article-posted-on' | 'article-categories' | 'article-tags' | 'article-comments' | 'article-edit';
 type HeaderSymbolNames = 'header-anchor';
@@ -31,7 +31,7 @@ export const Symbols: SymbolsType = {
   'figure-caption': faInfo,
   'share-facebook': faFacebookF,
   'share-twitter': faTwitter,
-  'share-linkedin': faLinkedin,
+  'share-linkedin': faLinkedinIn,
   'share-whatsapp': faWhatsapp,
   'share-email': faEnvelope,
 };
