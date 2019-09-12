@@ -73,6 +73,9 @@ module.exports = {
             resolve: require.resolve(`./gatsby-remark-fix-urls`),
           },
           {
+            resolve: require.resolve(`./gatsby-remark-acronyms`),
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 720,
