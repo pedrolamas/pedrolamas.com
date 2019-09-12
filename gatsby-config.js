@@ -1,6 +1,7 @@
 const url = require('url');
 
 const siteMetadata = require('./gatsby-site-metadata');
+const siteAcronyms = require('./gatsby-site-acronyms');
 
 module.exports = {
   siteMetadata,
@@ -73,7 +74,10 @@ module.exports = {
             resolve: require.resolve(`./gatsby-remark-fix-urls`),
           },
           {
-            resolve: require.resolve(`./gatsby-remark-acronyms`),
+            resolve: `gatsby-remark-acronyms`,
+            options: {
+              acronyms: siteAcronyms,
+            },
           },
           {
             resolve: `gatsby-remark-images`,

@@ -6213,6 +6213,13 @@ gatsby-react-router-scroll@^2.1.8:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
+gatsby-remark-acronyms@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-acronyms/-/gatsby-remark-acronyms-1.0.0.tgz#ed0756aa9600ee505a02533fe5268c8f745944aa"
+  integrity sha512-IJR4iBjZAscSk/KSOIosl51p8vvZsSUgwJyUTyVSRT85jYXHOC5cpARWdlepsbb0rvJByLLeATicws4ugx7f1g==
+  dependencies:
+    unist-util-visit "^1.4.1"
+
 gatsby-remark-copy-linked-files@^2.1.19:
   version "2.1.19"
   resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.1.19.tgz#0126da478edafe05f66120f92875e9b1eea49b64"

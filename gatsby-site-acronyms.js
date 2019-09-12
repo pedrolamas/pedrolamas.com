@@ -1,6 +1,4 @@
-var visit = require('unist-util-visit');
-
-const acronyms = {
+module.exports = {
   API: 'Application Programming Interface',
   ASAP: 'As Soon As Possible',
   CTP: 'Community Technology Preview',
@@ -61,30 +59,4 @@ const acronyms = {
   XML: 'Extensible Markup Language',
   XGA: 'Extended Graphics Array',
   YAML: "YAML Ain't Markup Language",
-};
-
-const acronymsRegExp = new RegExp(`\\b(${Object.keys(acronyms).join('|')})\\b`, 'g');
-
-module.exports = ({ markdownNode, markdownAST, getNode, files }) => {
-  visit(markdownAST, 'text', (node, index, parent) => {
-    if (node.type === 'text' && node.value) {
-      var newNodes = node.value.split(acronymsRegExp).map(value => {
-        const acronymTitle = acronyms[value];
-
-        return acronymTitle
-          ? {
-              type: 'html',
-              value: `<acronym title="${acronymTitle}">${value}</acronym>`,
-            }
-          : {
-              type: 'text',
-              value,
-            };
-      });
-
-      parent.children.splice(index, 1, ...newNodes);
-
-      return index + newNodes.length;
-    }
-  });
 };
