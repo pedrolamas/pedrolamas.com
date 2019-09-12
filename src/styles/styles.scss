@@ -171,54 +171,34 @@ figcaption {
     display: inline-block;
   }
 
-  &[href*='twitter.com'] {
-    background-color: #55acee;
+  @mixin withColors($regularColor, $highlightColor) {
+    background-color: $regularColor;
 
     &:hover,
     &:active,
     &:focus {
-      background-color: #2795e9;
+      background-color: $highlightColor;
     }
+  }
+
+  &[href*='twitter.com'] {
+    @include withColors(#55acee, #2795e9);
   }
 
   &[href*='facebook.com'] {
-    background-color: #3b5998;
-
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: #2d4373;
-    }
+    @include withColors(#3b5998, #2d4373);
   }
 
   &[href*='linkedin.com'] {
-    background-color: #0077b5;
-
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: #046293;
-    }
+    @include withColors(#0077b5, #046293);
   }
 
   &[href*='whatsapp:'] {
-    background-color: #1da851;
-
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: #25d366;
-    }
+    @include withColors(#1da851, #25d366);
   }
 
   &[href*='mailto:'] {
-    background-color: #5e5e5e;
-
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: #777;
-    }
+    @include withColors(#5e5e5e, #777);
   }
 }
 
