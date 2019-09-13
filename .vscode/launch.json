@@ -10,6 +10,7 @@
       "args": ["develop"],
       "stopOnEntry": false,
       "runtimeArgs": ["--nolazy"],
+      "console": "integratedTerminal",
       "sourceMaps": false
     },
     {
@@ -21,6 +22,7 @@
       "args": ["build"],
       "stopOnEntry": false,
       "runtimeArgs": ["--nolazy"],
+      "console": "integratedTerminal",
       "sourceMaps": false
     }
   ]
