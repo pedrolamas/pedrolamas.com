@@ -1,5 +1,5 @@
 const path = require('path');
-const select = require('unist-util-select');
+const visit = require('unist-util-visit');
 
 const isInternal = url => !url.includes(':') && !url.startsWith('//');
 
@@ -31,11 +31,11 @@ module.exports = ({ markdownNode, markdownAST, getNode, files }) => {
     return url;
   };
 
-  select(markdownAST, 'image').forEach(node => {
+  visit(markdownAST, 'image', node => {
     node.url = fixUrl(node.url);
   });
 
-  select(markdownAST, 'link').forEach(node => {
+  visit(markdownAST, 'link', node => {
     node.url = fixUrl(node.url);
   });
 
