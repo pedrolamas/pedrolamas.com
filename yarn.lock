@@ -6124,10 +6124,10 @@ gatsby-react-router-scroll@^2.1.8:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
-gatsby-remark-acronyms@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-acronyms/-/gatsby-remark-acronyms-1.0.2.tgz#a93645cf6e82421970c6591c4d943ce06a806fb1"
-  integrity sha512-5Q6LNBbo5GrXmFb3X54sSIFcRbwauaaeoCDTZuEUHsfSEiwDBy6GgyA/mI66OMijwhFzBefZN31W0XbZ4nIIJA==
+gatsby-remark-acronyms@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-acronyms/-/gatsby-remark-acronyms-1.0.6.tgz#cdabfb359800e2a1b0d4894d2569899a0df881c7"
+  integrity sha512-JXQF+lNxK19VSLk2gnfWHQiL1JeZoM+Xam0llTZfmTxTZAWTmDl7OYHVQo3mwY+SI1TAxCGcI0upa/gXL6p1bQ==
   dependencies:
     unist-util-visit "^1.4.1"
 

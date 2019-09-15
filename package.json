@@ -61,7 +61,7 @@
     "gatsby-plugin-sitemap": "^2.2.12",
     "gatsby-plugin-twitter": "^2.1.6",
     "gatsby-plugin-typescript": "^2.1.7",
-    "gatsby-remark-acronyms": "^1.0.2",
+    "gatsby-remark-acronyms": "^1.0.6",
     "gatsby-remark-copy-linked-files": "^2.1.19",
     "gatsby-remark-images": "^3.1.21",
     "gatsby-remark-responsive-iframe": "^2.2.16",
