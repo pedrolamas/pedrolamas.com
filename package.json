@@ -91,7 +91,7 @@
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "eslint-config-prettier": "^6.3.0",
-    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "husky": "^3.0.5",
     "lint-staged": "^9.2.5",
     "node-sass": "^4.12.0",
