@@ -26,7 +26,9 @@ If you've been following [the news](http://blogs.msdn.com/b/visualstudioalm/arch
 
 Well, this seemed like the perfect opportunity to finally create some unit tests for the [Cimbalino Windows Phone Toolkit](http://cimbalino.org) and test this new test framework, all at once!
 
-<img class="alignright size-full wp-image-174 clear" src="/wp-content/uploads/2013/02/Works-on-my-machine.png" alt="Works on my machine" width="200" height="193" />Given that this post will require installing the VS2012.2 CTP 4, a non-final preview version software that has a "go-live" license, I think it's only proper to apply the WOMM certification to it.
+![Works on my machine](/wp-content/uploads/2013/02/Works-on-my-machine.png)
+
+Given that this post will require installing the VS2012.2 CTP 4, a non-final preview version software that has a "go-live" license, I think it's only proper to apply the WOMM certification to it.
 
 So bottom line, install it at your own risk!
 

@@ -22,7 +22,7 @@ The biggest request (and at the same time, the biggest complaint) I always had a
 
 That has now changed, as the documentation is live at [http://cimbalino.org/help](http://cimbalino.org/help)
 
-[<img src="/wp-content/uploads/2015/04/Cimbalino-Toolkit-Documentation.png" alt="Cimbalino Toolkit Documentation" width="1008" height="582" class="size-full wp-image-4147" />](http://cimbalino.org/help)
+[![Cimbalino Toolkit Documentation](/wp-content/uploads/2015/04/Cimbalino-Toolkit-Documentation.png)](http://cimbalino.org/help)
 
 The whole documentation was generated from the inline XML Documentation with the help of [SandCastle](https://sandcastle.codeplex.com/), so it's still a bit minimum but I expect it to improve along time!
 
