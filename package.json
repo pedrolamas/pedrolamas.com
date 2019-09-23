@@ -68,7 +68,7 @@
     "gatsby-remark-smartypants": "^2.1.9",
     "gatsby-source-filesystem": "^2.1.26",
     "gatsby-transformer-sharp": "^2.2.16",
-    "gatsby-transformer-yaml": "^2.2.9",
+    "gatsby-transformer-yaml": "^2.2.10",
     "github-slugger": "^1.2.1",
     "prism-react-renderer": "^0.1.7",
     "prismjs": "^1.16.0",
