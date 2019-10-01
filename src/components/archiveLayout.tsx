@@ -39,11 +39,11 @@ const ArchiveLayout: React.FunctionComponent<ArchiveLayoutProps> = ({ title, dat
     <PageLayout title={title}>
       {Object.entries(postsGroupedByYear)
         .reverse()
-        .map(([year, posts], index) => (
+        .map(([year, posts2], index) => (
           <React.Fragment key={index}>
             <h2>{year}</h2>
             <ul>
-              {posts.map((mdx, index2) => {
+              {posts2.map((mdx, index2) => {
                 const { title, dateFormatted, url } = Utils.SafeMetadataFromMdx(mdx);
 
                 return (

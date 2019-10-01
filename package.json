@@ -88,8 +88,6 @@
     "@types/react-dom": "^16.9.1",
     "@types/react-helmet": "^5.0.11",
     "@types/underscore.string": "^0.0.38",
-    "@typescript-eslint/eslint-plugin": "^1.13.0",
-    "@typescript-eslint/parser": "^1.13.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
     "husky": "^3.0.7",
