@@ -6010,10 +6010,10 @@ gatsby-plugin-eslint@^2.0.5:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-2.0.5.tgz#be02f5aff9b7f4a37927f3f917e82ad9f3d67f09"
   integrity sha512-7dgcNtFOGgPLseDA55DDjqqnSW+2Pe91erL6nFjLFs/vlFlT9+GbR/4zkQH9WjWOHSfCtgrUzi59cxM1rBm4kw==
 
-gatsby-plugin-feed-generator@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed-generator/-/gatsby-plugin-feed-generator-2.0.3.tgz#6e954b2601e5394777b433241be4b54f48ae47e0"
-  integrity sha512-ivf96BCQx0zqni06+DdQYavw3lNHIcsQN6ve45J9/WRFia94KV4TdnxAn/BP4uIeW/BGKLbetTV/ujmXjM/YLQ==
+gatsby-plugin-feed-generator@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed-generator/-/gatsby-plugin-feed-generator-2.0.5.tgz#f7ed2d7d70ecc59a73cb3d57d66c37f53c169e5c"
+  integrity sha512-AWhFXurenfQ4WRLYWB4zB8DMTQ223/KNnhP4deqDeCZbYECC3Il6+rogl8Nc+qCdqGT/xgWGvGRQbRhmf8u/jQ==
   dependencies:
     feed "^3.0.0"
     pify "^3.0.0"
