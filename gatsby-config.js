@@ -225,6 +225,7 @@ module.exports = {
       options: {
         headers: {
           '/*': [`X-Frame-Options: DENY`, `X-XSS-Protection: 1; mode=block`, `Referrer-Policy: strict-origin-when-cross-origin`, `Feature-Policy: accelerometer 'none'; autoplay 'none'; ambient-light-sensor 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'`, `X-Content-Type-Options: nosniff`],
+          '/manifest.webmanifest': ['Content-Type: application/manifest+json'],
         },
         mergeSecurityHeaders: false,
       },
