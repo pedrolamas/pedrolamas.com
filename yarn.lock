@@ -5852,7 +5852,7 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-cli@^2.7.55, gatsby-cli@^2.7.56:
+gatsby-cli@^2.7.56:
   version "2.7.56"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.56.tgz#4ef7cb8bbe1e59d7138aaf428610629aa9a442cb"
   integrity sha512-0Ht6G6CKhzpd/T8LoNr+VwntQNofHyf5BaVbPyx1su4/wK1DqYBdVteJHxMEZ2tEpdjgqrzb4hfxgNv6KrrZMQ==
@@ -6265,10 +6265,10 @@ gatsby-transformer-yaml@^2.2.12:
     lodash "^4.17.15"
     unist-util-select "^1.5.0"
 
-gatsby@^2.15.30:
-  version "2.15.30"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.15.30.tgz#22d7606bab293a829a7d0bdc6129c7c19bbf64b7"
-  integrity sha512-LI3zu1Kiv1B6c8hBuOIrsIIre046bzJtH/lWfA1TM3m8zZbmupby+5Qg8rlqDYwIBSilOzNvcIoonMuxnj2bCw==
+gatsby@^2.15.33:
+  version "2.15.33"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.15.33.tgz#ff32aea93fadeb4734fdafc329e005fc8c2d3317"
+  integrity sha512-VPaEY6xZaKURTg2tFGxhRngfV84kCyCmgRwH1Hwyd4P7l7zl5BuADHyJxnJYvBWMYdF4/7QLbwbvzVnrwWCOKA==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.6.2"
@@ -6330,7 +6330,7 @@ gatsby@^2.15.30:
     flat "^4.1.0"
     fs-exists-cached "1.0.0"
     fs-extra "^8.1.0"
-    gatsby-cli "^2.7.55"
+    gatsby-cli "^2.7.56"
     gatsby-core-utils "^1.0.12"
     gatsby-graphiql-explorer "^0.2.22"
     gatsby-link "^2.2.18"
@@ -6374,7 +6374,7 @@ gatsby@^2.15.30:
     raw-loader "^0.5.1"
     react-dev-utils "^4.2.3"
     react-error-overlay "^3.0.0"
-    react-hot-loader "^4.12.14"
+    react-hot-loader "^4.12.15"
     redux "^4.0.4"
     redux-thunk "^2.3.0"
     semver "^5.7.1"
@@ -11421,10 +11421,10 @@ react-helmet@^5.2.1:
     react-fast-compare "^2.0.2"
     react-side-effect "^1.1.0"
 
-react-hot-loader@^4.12.14:
-  version "4.12.14"
-  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.12.14.tgz#81ca06ffda0b90aad15d6069339f73ed6428340a"
-  integrity sha512-ecxH4eBvEaJ9onT8vkEmK1FAAJUh1PqzGqds9S3k+GeihSp7nKAp4fOxytO+Ghr491LiBD38jaKyDXYnnpI9pQ==
+react-hot-loader@^4.12.15:
+  version "4.12.15"
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.12.15.tgz#6bf3984e52edbdf02ea8952777f53da1b3c68c95"
+  integrity sha512-sgkN6g+tgPE6xZzD0Ysqll7KUFYJbMX0DrczT5OxD6S7hZlSnmqSC3ceudwCkiDd65ZTtm+Ayk4Y9k5xxCvpOw==
   dependencies:
     fast-levenshtein "^2.0.6"
     global "^4.3.0"
