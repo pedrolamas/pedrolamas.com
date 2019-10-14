@@ -6010,13 +6010,13 @@ gatsby-plugin-google-analytics@^2.1.22:
   dependencies:
     "@babel/runtime" "^7.6.3"
 
-gatsby-plugin-manifest@^2.2.21:
-  version "2.2.21"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.21.tgz#3be76247d2f652fd17a8706fd040955201c21e70"
-  integrity sha512-1q54c4AVA3IWF/oo9RbyWwiAjl5Q0t0wAEDncnNQ44amrOno1I5TDcX7uuQH5iMMIfSm6iv1fia9KcWw1/rv5g==
+gatsby-plugin-manifest@^2.2.22:
+  version "2.2.22"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.22.tgz#714c7024783cc6f3742987f4983161c4f504afb6"
+  integrity sha512-pDb/WDEN5kv8Na80PNwMbiTPBSZhVjxCKPZOHd8/vR3zD4pJBZ3NpjcLVyz1IQHoc0fKw+yO6zsYR9nkDaP3FQ==
   dependencies:
     "@babel/runtime" "^7.6.3"
-    gatsby-core-utils "^1.0.13"
+    gatsby-core-utils "^1.0.14"
     semver "^5.7.1"
     sharp "^0.23.1"
 
