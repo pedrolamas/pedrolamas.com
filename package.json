@@ -85,7 +85,7 @@
     "@types/node": "^12.7.12",
     "@types/prismjs": "^1.16.0",
     "@types/react": "^16.9.5",
-    "@types/react-dom": "^16.9.1",
+    "@types/react-dom": "^16.9.2",
     "@types/react-helmet": "^5.0.11",
     "@types/underscore.string": "^0.0.38",
     "eslint-config-prettier": "^6.4.0",
