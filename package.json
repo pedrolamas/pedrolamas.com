@@ -45,7 +45,7 @@
     "disqus-react": "^1.0.7",
     "gatsby": "^2.17.4",
     "gatsby-cli": "^2.8.4",
-    "gatsby-image": "^2.2.29",
+    "gatsby-image": "^2.2.30",
     "gatsby-plugin-env-variables": "^1.0.1",
     "gatsby-plugin-eslint": "^2.0.5",
     "gatsby-plugin-feed-generator": "^2.0.5",
