@@ -12,3 +12,7 @@ dsq_thread_id:
 Com esta aplicação poderá consultar rapidamente os resultados dos Jogos Santa Casa: Euromilhões, Totoloto, Joker, Totobola, Lotaria.
 
 [![Download](/wp-content/uploads/2013/08/258x67_WPS_Download_cyan.png)](http://windowsphone.com/s?appid=bba5b571-13d3-49e9-841e-0e2bf0009fd3)
+
+## Source code
+
+Available in [GitHub](https://github.com/PedroLamas/PedroLamas.JogosSantaCasa).

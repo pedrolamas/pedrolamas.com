@@ -10,3 +10,7 @@ guid: https://www.pedrolamas.com/?page_id=1991
 Learn how to solve the quadratic equation, step by step!
 
 [![Download](/wp-content/uploads/2013/08/258x67_WPS_Download_cyan.png)](http://windowsphone.com/s?appid=d20a5ada-053e-4f4a-8669-2685e2da9e78)
+
+## Source code
+
+Available in [GitHub](https://github.com/PedroLamas/PedroLamas.Quadratic).

@@ -12,3 +12,7 @@ Check what's on The Other Side of your location!
 This app will alow you to see the exact opposite (the antípode) of any location of the planet!
 
 [![Download](/wp-content/uploads/2013/08/258x67_WPS_Download_cyan.png)](http://windowsphone.com/s?appid=9e4d2183-9f54-494a-944f-39faae093622)
+
+## Source code
+
+Available in [GitHub](https://github.com/PedroLamas/PedroLamas.OtherSide).
