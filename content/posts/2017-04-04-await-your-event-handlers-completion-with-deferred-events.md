@@ -1,7 +1,7 @@
 ---
 title: Await your event handlers completion with Deferred Events
 date: 2017-04-04T14:55:59+01:00
-last_modified_at: 2017-04-06T10:04:20+01:00
+last_modified_at: 2019-11-13T19:06:45+00:00
 layout: post
 categories:
   - Windows
@@ -65,7 +65,7 @@ The only difference here to a regular event is that the event arguments have to 
 Now take a look at how we raise this event:
 
 ```csharp
-await MyEvent.InvokeAsync(sender, DeferredEventArgs.Empty);
+await MyEvent.InvokeAsync(sender, new DeferredEventArgs());
 ```
 
 The `InvokeAsync()` is an extension method that will wait for all event handlers to finish their work before we proceed.
