@@ -17,7 +17,7 @@ const SitemapLayout: React.FunctionComponent<SitemapLayoutProps> = ({ data }) =>
   return (
     <PageLayout title="Site Map">
       <ul>
-        <SitemapLayoutEntry title={siteMetadata && siteMetadata.title} url="/" sub={allSitemapYaml.edges.map(edge => edge.node)} />
+        <SitemapLayoutEntry title={siteMetadata?.title} url="/" sub={allSitemapYaml.edges.map(edge => edge.node)} />
       </ul>
     </PageLayout>
   );

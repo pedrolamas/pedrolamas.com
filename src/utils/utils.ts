@@ -59,14 +59,15 @@ export const SafeMetadataFromMdx = (mdx: Pick<GraphQl.Mdx, 'id'> & Partial<Graph
   return {
     id,
     excerpt,
-    title: (frontmatter && frontmatter.title) || '(untitled)',
-    url: (fields && fields.slug) || '',
-    date: (frontmatter && frontmatter.date) || undefined,
-    dateFormatted: (frontmatter && frontmatter.dateFormatted) || '',
-    lastModified: (frontmatter && frontmatter.last_modified_at) || undefined,
-    categories: (frontmatter && frontmatter.categories && (frontmatter.categories.filter(x => x) as string[])) || undefined,
-    tags: (frontmatter && frontmatter.tags && (frontmatter.tags.filter(x => x) as string[])) || undefined,
-    image: (frontmatter && frontmatter.image) || undefined,
-    originalFile: (file && file.base) || undefined,
+    title: frontmatter?.title ?? '(untitled)',
+    url: fields?.slug ?? '',
+    date: frontmatter?.date ?? undefined,
+    dateFormatted: frontmatter?.dateFormatted ?? '',
+    // eslint-disable-next-line @typescript-eslint/camelcase
+    lastModified: frontmatter?.last_modified_at ?? undefined,
+    categories: (frontmatter?.categories?.filter(x => x) as string[]) ?? undefined,
+    tags: (frontmatter?.tags?.filter(x => x) as string[]) ?? undefined,
+    image: frontmatter?.image ?? undefined,
+    originalFile: file?.base ?? undefined,
   };
 };

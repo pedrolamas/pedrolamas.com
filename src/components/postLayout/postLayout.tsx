@@ -28,7 +28,7 @@ const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {
 
   return (
     <>
-      <Head type="post" title={mdxMeta.title} description={mdxMeta.excerpt} imageUrl={(mdxMeta.image && mdxMeta.image.publicURL) || undefined} categories={mdxMeta.categories} tags={mdxMeta.tags} date={mdxMeta.date} lastModified={mdxMeta.lastModified} />
+      <Head type="post" title={mdxMeta.title} description={mdxMeta.excerpt} imageUrl={mdxMeta.image?.publicURL ?? undefined} categories={mdxMeta.categories} tags={mdxMeta.tags} date={mdxMeta.date} lastModified={mdxMeta.lastModified} />
 
       <MdxContext.Provider value={mdxContext}>
         <main role="main" id="main">
@@ -40,7 +40,7 @@ const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {
 
           <PostLayoutComments />
 
-          <PostLayoutNavigation previousMdx={previousMdx || undefined} nextMdx={nextMdx || undefined} />
+          <PostLayoutNavigation previousMdx={previousMdx ?? undefined} nextMdx={nextMdx ?? undefined} />
         </main>
       </MdxContext.Provider>
     </>

@@ -16,8 +16,8 @@ const Image: React.FunctionComponent<ImageProps> = ({ imageSharp, style, ...rest
 
   const newStyle: React.CSSProperties = {
     ...style,
-    maxWidth: (fluid && fluid.presentationWidth) || undefined,
-    maxHeight: (fluid && fluid.presentationHeight) || undefined,
+    maxWidth: fluid?.presentationWidth || undefined,
+    maxHeight: fluid?.presentationHeight || undefined,
   };
 
   return <Img fixed={fixed as FixedObject} fluid={fluid as FluidObject} style={newStyle} {...restOfProps} />;

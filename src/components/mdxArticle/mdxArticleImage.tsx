@@ -14,7 +14,7 @@ const MdxArticleImage: React.FunctionComponent<MdxArticleImageProps> = () => {
 
   return (
     <>
-      {image && image.childImageSharp && (
+      {image?.childImageSharp && (
         <div className="post-thumbnail">
           <Image className="sidebar-logo" imageSharp={image.childImageSharp} />
         </div>

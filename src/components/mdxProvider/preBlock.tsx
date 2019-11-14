@@ -5,7 +5,7 @@ const PreBlock: React.FunctionComponent<React.ComponentPropsWithoutRef<'pre'>> =
 
   const child = children as React.ReactElement<{ originalType?: string }>;
 
-  if (child && child.props && child.props.originalType === 'code') {
+  if (child?.props?.originalType === 'code') {
     return child;
   }
 

@@ -17,32 +17,30 @@ const SidebarSocial: React.FunctionComponent<SidebarSocialProps> = () => {
 
   return (
     <nav className="sidebar-social" role="navigation" aria-label="Social Links Menu">
-      {social &&
-        social.links &&
-        social.links.map((link, index) => {
-          if (!link) {
-            return null;
-          }
+      {social?.links?.map((link, index) => {
+        if (!link) {
+          return null;
+        }
 
-          let linkTitle = '';
-          let symbolName: FontAwesome.SymbolNames = 'sidebar-default';
+        let linkTitle = '';
+        let symbolName: FontAwesome.SymbolNames = 'sidebar-default';
 
-          if (link.includes('twitter.com')) {
-            linkTitle = 'Twitter';
-            symbolName = 'sidebar-twitter';
-          } else if (link.includes('facebook.com')) {
-            linkTitle = 'Facebook';
-            symbolName = 'sidebar-facebook';
-          } else if (link.includes('linkedin.com')) {
-            linkTitle = 'LinkedIn';
-            symbolName = 'sidebar-linkedin';
-          } else if (link.includes('github.com')) {
-            linkTitle = 'GitHub';
-            symbolName = 'sidebar-github';
-          }
+        if (link.includes('twitter.com')) {
+          linkTitle = 'Twitter';
+          symbolName = 'sidebar-twitter';
+        } else if (link.includes('facebook.com')) {
+          linkTitle = 'Facebook';
+          symbolName = 'sidebar-facebook';
+        } else if (link.includes('linkedin.com')) {
+          linkTitle = 'LinkedIn';
+          symbolName = 'sidebar-linkedin';
+        } else if (link.includes('github.com')) {
+          linkTitle = 'GitHub';
+          symbolName = 'sidebar-github';
+        }
 
-          return <SidebarSocialLink url={link} title={linkTitle} symbolName={symbolName} key={index} />;
-        })}
+        return <SidebarSocialLink url={link} title={linkTitle} symbolName={symbolName} key={index} />;
+      })}
       <SidebarSocialLink url="/feeds" title="Syndicated Feeds" symbolName="sidebar-rss" />
     </nav>
   );
