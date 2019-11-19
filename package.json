@@ -43,7 +43,7 @@
     "@mdx-js/react": "^1.5.1",
     "@mdx-js/tag": "^0.20.3",
     "disqus-react": "^1.0.7",
-    "gatsby": "^2.17.13",
+    "gatsby": "^2.17.17",
     "gatsby-cli": "^2.8.11",
     "gatsby-image": "^2.2.33",
     "gatsby-plugin-env-variables": "^1.0.1",
