@@ -39,7 +39,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.12.0",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
-    "@mdx-js/mdx": "^1.5.1",
+    "@mdx-js/mdx": "^1.5.2",
     "@mdx-js/react": "^1.5.1",
     "@mdx-js/tag": "^0.20.3",
     "disqus-react": "^1.0.7",
