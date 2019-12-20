@@ -44,6 +44,15 @@ figcaption {
   }
 }
 
+abbr {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+abbr[title] {
+  border-bottom: inherit;
+}
+
 .sidebar-about {
   .sidebar-logo {
     width: 100px;
