@@ -19,15 +19,11 @@ const HBlock: React.FunctionComponent<HBlockProps> = props => {
   const { headerElementType, children, ...restOfProps } = props;
 
   if (Utils.IsString(children)) {
+    const HeaderElement = headerElementType;
     const slug = slugify(children);
 
-    return React.createElement(
-      headerElementType,
-      {
-        ...restOfProps,
-        id: slug,
-      },
-      <>
+    return (
+      <HeaderElement id={slug} {...restOfProps}>
         {children}
         <Location>
           {locationContext => (
@@ -36,11 +32,12 @@ const HBlock: React.FunctionComponent<HBlockProps> = props => {
             </Link>
           )}
         </Location>
-      </>
+      </HeaderElement>
     );
   }
 
-  return React.createElement('h1', null, null);
+  // eslint-disable-next-line jsx-a11y/heading-has-content
+  return <h1 />;
 };
 
 HBlock.displayName = 'HBlock';

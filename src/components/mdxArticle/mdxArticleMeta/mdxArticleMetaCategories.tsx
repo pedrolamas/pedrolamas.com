@@ -25,7 +25,7 @@ const MdxArticleMetaCategories: React.FunctionComponent<MdxArticleMetaCategories
           {categories.map((category, index) => (
             <React.Fragment key={index}>
               {index > 0 && ', '}
-              <Link to={`/category/${Utils.Slug(category || '')}/`} rel="category tag">
+              <Link to={`/category/${Utils.Slug(category)}/`} rel="category tag">
                 {category}
               </Link>
             </React.Fragment>

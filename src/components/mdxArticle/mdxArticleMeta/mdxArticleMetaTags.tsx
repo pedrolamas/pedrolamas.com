@@ -25,7 +25,7 @@ const MdxArticleMetaTags: React.FunctionComponent<MdxArticleMetaTagsProps> = () 
           {tags.map((tag, index) => (
             <React.Fragment key={index}>
               {index > 0 && ', '}
-              <Link to={`/tag/${Utils.Slug(tag || '')}/`} rel="tag">
+              <Link to={`/tag/${Utils.Slug(tag)}/`} rel="tag">
                 {tag}
               </Link>
             </React.Fragment>
