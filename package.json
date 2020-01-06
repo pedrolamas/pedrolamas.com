@@ -71,7 +71,7 @@
     "gatsby-transformer-yaml": "^2.2.20",
     "github-slugger": "^1.2.1",
     "prism-react-renderer": "^1.0.2",
-    "prismjs": "^1.16.0",
+    "prismjs": "^1.18.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-facebook": "^8.1.4",
