@@ -80,7 +80,7 @@
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^1.12.1",
-    "@graphql-codegen/typescript": "^1.9.0",
+    "@graphql-codegen/typescript": "^1.12.1",
     "@graphql-codegen/typescript-operations": "^1.11.2",
     "@types/node": "^13.5.1",
     "@types/prismjs": "^1.16.0",
