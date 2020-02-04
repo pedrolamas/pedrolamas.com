@@ -57,7 +57,7 @@
     "gatsby-plugin-react-helmet": "^3.1.22",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sass": "^2.1.28",
-    "gatsby-plugin-sharp": "^2.4.4",
+    "gatsby-plugin-sharp": "^2.4.5",
     "gatsby-plugin-sitemap": "^2.2.27",
     "gatsby-plugin-twitter": "^2.1.19",
     "gatsby-plugin-typescript": "^2.1.27",
