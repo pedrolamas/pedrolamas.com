@@ -1386,22 +1386,6 @@
     tslib "1.10.0"
     upper-case "2.0.1"
 
-"@graphql-codegen/plugin-helpers@1.12.1":
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/plugin-helpers/-/plugin-helpers-1.12.1.tgz#6fff6bbc1853a4024ff968bb3edd8750f7ea1244"
-  integrity sha512-mrc+trorCTuJYeD0gJLXO7xxabAyOmwXvDkPTxecWNfw5oJIloKsIorWkK00ZFbPHjorzJlOgON8vgXljREzKA==
-  dependencies:
-    "@graphql-toolkit/common" "0.9.7"
-    camel-case "4.1.1"
-    common-tags "1.8.0"
-    constant-case "3.0.3"
-    import-from "3.0.0"
-    lower-case "2.0.1"
-    param-case "3.0.3"
-    pascal-case "3.1.1"
-    tslib "1.10.0"
-    upper-case "2.0.1"
-
 "@graphql-codegen/plugin-helpers@1.12.2":
   version "1.12.2"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/plugin-helpers/-/plugin-helpers-1.12.2.tgz#44ffeefb21515b021f99c6e5be28699d740af560"
@@ -1438,13 +1422,13 @@
     auto-bind "4.0.0"
     tslib "1.10.0"
 
-"@graphql-codegen/typescript@^1.12.1":
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript/-/typescript-1.12.1.tgz#051f191e127f9f28e03821dcc87dfc124abda1d5"
-  integrity sha512-j2iQrxSIMxF6MlzJ5OvnawRyewfEHlC21It+Z6Md2z7yJK5T2bYLs4jd0RkzDGVezodnpd0TzV/Yv+jGxdMjSQ==
+"@graphql-codegen/typescript@^1.12.2":
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript/-/typescript-1.12.2.tgz#4b63ab80dcac7624711459e776201c6a5d0f7373"
+  integrity sha512-G2H91ocAEcZ86TFNQWV2HZUdXSR7v/Ntjq0ChqDvz/a7PTJxa5Pe5j4sQ9q13vGR5CedAMbBZkZ8zTKLAqY5sg==
   dependencies:
-    "@graphql-codegen/plugin-helpers" "1.12.1"
-    "@graphql-codegen/visitor-plugin-common" "1.12.1"
+    "@graphql-codegen/plugin-helpers" "1.12.2"
+    "@graphql-codegen/visitor-plugin-common" "1.12.2"
     auto-bind "4.0.0"
     tslib "1.10.0"
 
@@ -1460,12 +1444,12 @@
     relay-compiler "8.0.0"
     tslib "1.10.0"
 
-"@graphql-codegen/visitor-plugin-common@1.12.1":
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/visitor-plugin-common/-/visitor-plugin-common-1.12.1.tgz#fb7f3b0e204cb613b7e5cae36171a9c7fedd5b05"
-  integrity sha512-dfcb0d1u0bGo7KgaGoWMUrFec9rKB5JiiFatHfs2CK6h6iT6giqkuyHy8247tH3yvjk+xFoIG2NVIqg9jUyv+w==
+"@graphql-codegen/visitor-plugin-common@1.12.2":
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/visitor-plugin-common/-/visitor-plugin-common-1.12.2.tgz#a32ed6ed2554bd2df125675e296d110d7ec00420"
+  integrity sha512-+DOnCNvgsMvVVXgAqA2Kqvcy9g0V5xiMAmpgNfrRE1tJ2PGXFsYP4HElBu+PQZCTn5AR8Tfw037zhfbUuF5oDw==
   dependencies:
-    "@graphql-codegen/plugin-helpers" "1.12.1"
+    "@graphql-codegen/plugin-helpers" "1.12.2"
     "@graphql-toolkit/relay-operation-optimizer" "0.9.7"
     auto-bind "4.0.0"
     dependency-graph "0.8.1"
