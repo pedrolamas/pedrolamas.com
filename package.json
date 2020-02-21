@@ -94,7 +94,7 @@
     "lint-staged": "^10.0.7",
     "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
-    "typescript": "^3.7.5"
+    "typescript": "^3.8.2"
   },
   "repository": {
     "type": "git",
