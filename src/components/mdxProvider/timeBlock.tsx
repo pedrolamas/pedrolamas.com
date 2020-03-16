@@ -4,12 +4,17 @@ type TimeBlockProps = React.ComponentPropsWithoutRef<'time'>;
 
 const TimeBlock: React.FunctionComponent<TimeBlockProps> = props => {
   const { dateTime } = props;
+  const [date, setDate] = React.useState<Date | undefined>(undefined);
 
-  if (!dateTime) {
+  React.useEffect(() => {
+    if (!dateTime) return;
+
+    setDate(new Date(dateTime));
+  }, [dateTime]);
+
+  if (!dateTime || !date) {
     return <time {...props} />;
   }
-
-  const date = new Date(dateTime);
 
   return (
     <a href={`https://www.timeanddate.com/worldclock/fixedtime.html?iso=${date.toISOString()}`} title={date.toLocaleString()}>
