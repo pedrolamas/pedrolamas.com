@@ -2,7 +2,9 @@ import React from 'react';
 
 import Link from '../link';
 
-const ABlock: React.FunctionComponent<React.ComponentPropsWithoutRef<'a'>> = props => {
+type ABlockProps = React.ComponentPropsWithoutRef<'a'>;
+
+const ABlock: React.FunctionComponent<ABlockProps> = props => {
   const { href, ...restOfProps } = props;
 
   if (href) {
