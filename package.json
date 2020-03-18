@@ -58,7 +58,7 @@
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sass": "^2.1.30",
     "gatsby-plugin-sharp": "^2.4.13",
-    "gatsby-plugin-sitemap": "^2.2.29",
+    "gatsby-plugin-sitemap": "^2.2.30",
     "gatsby-plugin-twitter": "^2.1.21",
     "gatsby-plugin-typescript": "^2.2.3",
     "gatsby-remark-acronyms": "^1.1.0",
