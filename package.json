@@ -62,7 +62,7 @@
     "gatsby-plugin-twitter": "^2.2.1",
     "gatsby-plugin-typescript": "^2.2.5",
     "gatsby-remark-acronyms": "^1.1.0",
-    "gatsby-remark-copy-linked-files": "^2.1.40",
+    "gatsby-remark-copy-linked-files": "^2.2.1",
     "gatsby-remark-images": "^3.2.1",
     "gatsby-remark-responsive-iframe": "^2.3.1",
     "gatsby-remark-smartypants": "^2.2.1",
