@@ -6,7 +6,7 @@ import SiteContext from '../../siteContext';
 
 type SidebarAboutProps = {};
 
-const SidebarAbout: React.FunctionComponent<SidebarAboutProps> = props => {
+const SidebarAbout: React.FunctionComponent<SidebarAboutProps> = (props) => {
   const { siteMetadata } = React.useContext(SiteContext);
 
   if (!siteMetadata) return null;

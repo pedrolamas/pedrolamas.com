@@ -4,7 +4,7 @@ import Link from '../link';
 
 type ABlockProps = React.ComponentPropsWithoutRef<'a'>;
 
-const ABlock: React.FunctionComponent<ABlockProps> = props => {
+const ABlock: React.FunctionComponent<ABlockProps> = (props) => {
   const { href, ...restOfProps } = props;
 
   if (href) {

@@ -2,7 +2,7 @@ import React from 'react';
 
 type PreBlockProps = React.ComponentPropsWithoutRef<'pre'>;
 
-const PreBlock: React.FunctionComponent<PreBlockProps> = props => {
+const PreBlock: React.FunctionComponent<PreBlockProps> = (props) => {
   const { children } = props;
 
   const child = children as React.ReactElement<{ originalType?: string }>;

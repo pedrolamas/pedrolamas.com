@@ -4,7 +4,7 @@ import FontAwesomeSymbol from '../fontAwesomeSymbol';
 
 type FigcaptionBlockProps = React.ComponentPropsWithoutRef<'figcaption'>;
 
-const FigcaptionBlock: React.FunctionComponent<FigcaptionBlockProps> = props => {
+const FigcaptionBlock: React.FunctionComponent<FigcaptionBlockProps> = (props) => {
   const { children, ...otherProps } = props;
 
   return (

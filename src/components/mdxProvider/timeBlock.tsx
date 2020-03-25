@@ -2,7 +2,7 @@ import React from 'react';
 
 type TimeBlockProps = React.ComponentPropsWithoutRef<'time'>;
 
-const TimeBlock: React.FunctionComponent<TimeBlockProps> = props => {
+const TimeBlock: React.FunctionComponent<TimeBlockProps> = (props) => {
   const { dateTime } = props;
   const [date, setDate] = React.useState<Date | undefined>(undefined);
 

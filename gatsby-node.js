@@ -2,7 +2,7 @@ const { createFilePath } = require('gatsby-source-filesystem');
 const path = require('path');
 const slugify = require('underscore.string/slugify');
 
-const slug = path => slugify(path.replace(/\./g, 'dot'));
+const slug = (path) => slugify(path.replace(/\./g, 'dot'));
 
 const createSlugField = (createNodeField, node, getNode) => {
   const parentNode = getNode(node.parent);
@@ -156,7 +156,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { tags, categories, edges } = data.allMdx;
 
-  tags.forEach(tag => {
+  tags.forEach((tag) => {
     createPage({
       path: `/tag/${slug(tag)}/`,
       component: path.resolve(`./src/components/tagArchiveLayout.tsx`),
@@ -166,7 +166,7 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
-  categories.forEach(category => {
+  categories.forEach((category) => {
     createPage({
       path: `/category/${slug(category)}/`,
       component: path.resolve(`./src/components/categoryArchiveLayout.tsx`),
@@ -200,7 +200,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: pageIndex === 1 ? `/` : `/page/${pageIndex}/`,
       component: path.resolve(`./src/components/indexLayout/indexLayout.tsx`),
       context: {
-        ids: groupedPosts.map(edge => edge.node.id),
+        ids: groupedPosts.map((edge) => edge.node.id),
         previousPageIndex: pageIndex > 1 ? pageIndex - 1 : undefined,
         nextPageIndex: pageIndex < totalPages ? pageIndex + 1 : undefined,
       },
