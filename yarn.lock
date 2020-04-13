@@ -112,17 +112,7 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/generator@^7.5.0", "@babel/generator@^7.8.4", "@babel/generator@^7.8.7", "@babel/generator@^7.8.8":
-  version "7.8.8"
-  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.8.8.tgz#cdcd58caab730834cee9eeadb729e833b625da3e"
-  integrity sha512-HKyUVu69cZoclptr8t8U5b6sx6zoWjh8jiUhnuj3MpZuKT2dJ8zPTuiy31luq32swhI0SpwItCIlU8XW7BZeJg==
-  dependencies:
-    "@babel/types" "^7.8.7"
-    jsesc "^2.5.1"
-    lodash "^4.17.13"
-    source-map "^0.5.0"
-
-"@babel/generator@^7.9.0":
+"@babel/generator@^7.5.0", "@babel/generator@^7.8.4", "@babel/generator@^7.8.7", "@babel/generator@^7.8.8", "@babel/generator@^7.9.0":
   version "7.9.5"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.9.5.tgz#27f0917741acc41e6eaaced6d68f96c3fa9afaf9"
   integrity sha512-GbNIxVB3ZJe3tLeDm1HSn2AhuD/mVcyLDpgtLXa5tplmWrJdF/elxB56XNqCuD6szyNkDi6wuoKXln3QeBmCHQ==
@@ -1273,16 +1263,7 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@babel/types@^7.0.0", "@babel/types@^7.3.0", "@babel/types@^7.4.4", "@babel/types@^7.5.5", "@babel/types@^7.7.0", "@babel/types@^7.8.3", "@babel/types@^7.8.6", "@babel/types@^7.8.7":
-  version "7.8.7"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.8.7.tgz#1fc9729e1acbb2337d5b6977a63979b4819f5d1d"
-  integrity sha512-k2TreEHxFA4CjGkL+GYjRyx35W0Mr7DP5+9q6WMkyKXB+904bYmG40syjMFV0oLlhhFCwWl0vA0DyzTDkwAiJw==
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.17.13"
-    to-fast-properties "^2.0.0"
-
-"@babel/types@^7.9.0", "@babel/types@^7.9.5":
+"@babel/types@^7.0.0", "@babel/types@^7.3.0", "@babel/types@^7.4.4", "@babel/types@^7.5.5", "@babel/types@^7.7.0", "@babel/types@^7.8.3", "@babel/types@^7.8.6", "@babel/types@^7.8.7", "@babel/types@^7.9.0", "@babel/types@^7.9.5":
   version "7.9.5"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.9.5.tgz#89231f82915a8a566a703b3b20133f73da6b9444"
   integrity sha512-XjnvNqenk818r5zMaba+sLQjnbda31UfUURv3ei0qPQw4u+j2jMyJ5b11y8ZHYTRSI3NnInQkkkRT4fLqqPdHg==
@@ -7199,10 +7180,10 @@ gatsby-plugin-manifest@^2.3.3:
     semver "^5.7.1"
     sharp "^0.25.1"
 
-gatsby-plugin-mdx@^1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.1.6.tgz#6b476dca3c46387ac17cc2ac73b9523ea95ac096"
-  integrity sha512-JlHOROD9M/HtBNutWKuCnaoGgbDlaqSqY1l1BdNlDNzY6BiFPRLN3MBftNsIZaKYsvgs+RQJ6Whkz7hACwnWMA==
+gatsby-plugin-mdx@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.1.7.tgz#af94eff3f10ae2475ac0714b08f3e97d0fc77b0f"
+  integrity sha512-CTEeZQQ/hYDPv9mX06259zwiQc67OGBPzigBL8ZEMSgg5ANzzfR143Wd74RGPvT04GnMNjfWKcg8yBPTf75EaA==
   dependencies:
     "@babel/core" "^7.8.7"
     "@babel/generator" "^7.8.8"
