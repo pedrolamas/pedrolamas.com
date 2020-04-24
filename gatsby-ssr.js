@@ -4,7 +4,8 @@ import 'typeface-pt-sans';
 
 import RootLayout from './src/components/rootLayout';
 import './src/styles/styles.scss';
-import './node_modules/@fortawesome/fontawesome-svg-core/styles.css';
+
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 config.autoAddCss = false;
 
