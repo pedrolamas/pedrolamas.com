@@ -85,7 +85,7 @@ module.exports = {
               maxWidth: 720,
               linkImagesToOriginal: false,
               showCaptions: [`title`],
-              wrapperStyle: fluidResult => `margin-left: auto; margin-right: auto; max-width: ${fluidResult.presentationWidth}px;`,
+              wrapperStyle: (fluidResult) => `margin-left: auto; margin-right: auto; max-width: ${fluidResult.presentationWidth}px;`,
             },
           },
           {
@@ -145,7 +145,7 @@ module.exports = {
             normalize: ({ query: { site, allMdx } }) => {
               const siteUrl = site.siteMetadata.siteUrl;
 
-              return allMdx.edges.map(edge => {
+              return allMdx.edges.map((edge) => {
                 const { html, frontmatter, fields } = edge.node;
 
                 const title = frontmatter && frontmatter.title;

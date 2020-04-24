@@ -22,7 +22,7 @@ type MatchInterface<T, U> = {
 
 export const match = <T, U>(x: T): MatchInterface<T, U> => ({
   on: (pred, fn) => (pred(x) ? matched(fn(x)) : match(x)),
-  otherwise: fn => fn(x),
+  otherwise: (fn) => fn(x),
 });
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -65,8 +65,8 @@ export const SafeMetadataFromMdx = (mdx: Pick<GraphQl.Mdx, 'id'> & Partial<Graph
     dateFormatted: frontmatter?.dateFormatted ?? '',
     // eslint-disable-next-line @typescript-eslint/camelcase
     lastModified: frontmatter?.last_modified_at ?? undefined,
-    categories: (frontmatter?.categories?.filter(x => x) as string[]) ?? undefined,
-    tags: (frontmatter?.tags?.filter(x => x) as string[]) ?? undefined,
+    categories: (frontmatter?.categories?.filter((x) => x) as string[]) ?? undefined,
+    tags: (frontmatter?.tags?.filter((x) => x) as string[]) ?? undefined,
     image: frontmatter?.image ?? undefined,
     originalFile: file?.base ?? undefined,
   };

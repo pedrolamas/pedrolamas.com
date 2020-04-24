@@ -1,25 +1,25 @@
 const path = require('path');
 const visit = require('unist-util-visit');
 
-const isInternal = url => !url.includes(':') && !url.startsWith('//');
+const isInternal = (url) => !url.includes(':') && !url.startsWith('//');
 
 module.exports = ({ markdownNode, markdownAST, getNode, files }) => {
   if (!markdownNode.fileAbsolutePath) {
     return;
   }
 
-  const filteredFiles = files.filter(x => x && x.relativePath);
+  const filteredFiles = files.filter((x) => x && x.relativePath);
 
   const parentNode = getNode(markdownNode.parent);
   const parentNodeAbsoluteDir = parentNode.dir + '/';
   const parentNodeRelativeDir = path.posix.dirname(parentNode.relativePath) + '/';
 
-  const fixUrl = url => {
+  const fixUrl = (url) => {
     if (isInternal(url)) {
       const relativePath = path.posix.resolve('/', parentNodeRelativeDir, url);
       const rootlessRelativePath = relativePath.substr(1);
 
-      const fileNode = filteredFiles.find(x => x.relativePath === rootlessRelativePath);
+      const fileNode = filteredFiles.find((x) => x.relativePath === rootlessRelativePath);
 
       if (fileNode) {
         const relativePath = path.posix.relative(parentNodeAbsoluteDir, fileNode.absolutePath);
@@ -31,11 +31,11 @@ module.exports = ({ markdownNode, markdownAST, getNode, files }) => {
     return url;
   };
 
-  visit(markdownAST, 'image', node => {
+  visit(markdownAST, 'image', (node) => {
     node.url = fixUrl(node.url);
   });
 
-  visit(markdownAST, 'link', node => {
+  visit(markdownAST, 'link', (node) => {
     node.url = fixUrl(node.url);
   });
 

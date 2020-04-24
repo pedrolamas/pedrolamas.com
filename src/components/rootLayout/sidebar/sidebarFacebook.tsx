@@ -7,7 +7,7 @@ type SidebarFacebookProps = {
   children?: never;
 };
 
-const SidebarFacebook: React.FunctionComponent<SidebarFacebookProps> = props => {
+const SidebarFacebook: React.FunctionComponent<SidebarFacebookProps> = (props) => {
   const { siteMetadata } = React.useContext(SiteContext);
 
   if (!siteMetadata) return null;
