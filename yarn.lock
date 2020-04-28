@@ -7352,12 +7352,12 @@ gatsby-plugin-sitemap@^2.3.6:
     pify "^3.0.0"
     sitemap "^1.13.0"
 
-gatsby-plugin-twitter@^2.2.5:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-2.2.5.tgz#86580549b2d5420c77ff7a76a0e09f9465ff943e"
-  integrity sha512-uxQHeBLm2eqMt/vvZaLtcosG8b2eI9mBfVWsyUk9LdAIVAfc2FYL6OlECzv9JdMbI9VRijoECjC1UwqhZ5bC9Q==
+gatsby-plugin-twitter@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-2.3.0.tgz#5786ba8807fd11992f5698e813de7eb0cb27e04d"
+  integrity sha512-uC39ZA0rnqR9DGE86k/82fnIZkIkgNRMu6Dz7a7KLwtXTNHjxAbz0dTzuB+20ObzKeAK/tfDV7Z1xhSa8rhqQw==
   dependencies:
-    "@babel/runtime" "^7.8.7"
+    "@babel/runtime" "^7.9.2"
 
 gatsby-plugin-typescript@^2.4.0:
   version "2.4.0"
