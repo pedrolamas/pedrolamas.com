@@ -7116,7 +7116,7 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-cli@^2.12.1, gatsby-cli@^2.12.5:
+gatsby-cli@^2.12.5:
   version "2.12.5"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.12.5.tgz#f79fd1d466fa121b28b7dc3f90e8b4b704008e4f"
   integrity sha512-YH2XDGNWRJNYq4jHbHKSS8Wy1/Ao6k6HHKJMOCtWMmeencurAELbkXUVCxkqL/3FxFUUbWOw4j6nkiWfsHVznw==
@@ -7609,10 +7609,10 @@ gatsby-transformer-yaml@^2.4.0:
     lodash "^4.17.15"
     unist-util-select "^1.5.0"
 
-gatsby@^2.21.1:
-  version "2.21.1"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.21.1.tgz#60f649fdfb579860cba7f6395e59dc0572f79075"
-  integrity sha512-Pf8pAC3QZMxD1cTOA4T1vFVxricZYlVf02ei0Dba/Y/NVABpDsEqpKqs59BQVvRk5GcuLaBEHv7Q93tNSfDBsA==
+gatsby@^2.21.5:
+  version "2.21.5"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.21.5.tgz#4ee3542db41ac318f7d44c29b20da79e86b64c75"
+  integrity sha512-p4kA7G4ROhgreESV6CQxOI/ezNGuXou+VSJhiM4zWc+99TinWEQ+V/RJ0KuVlp8ca4iCeS2+HqFMr/uORKHnfA==
   dependencies:
     "@babel/code-frame" "^7.8.3"
     "@babel/core" "^7.9.0"
@@ -7675,7 +7675,7 @@ gatsby@^2.21.1:
     flat "^4.1.0"
     fs-exists-cached "1.0.0"
     fs-extra "^8.1.0"
-    gatsby-cli "^2.12.1"
+    gatsby-cli "^2.12.5"
     gatsby-core-utils "^1.2.0"
     gatsby-graphiql-explorer "^0.4.0"
     gatsby-link "^2.4.0"
