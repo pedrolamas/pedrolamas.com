@@ -84,7 +84,7 @@
     "@graphql-codegen/typescript": "^1.13.5",
     "@graphql-codegen/typescript-operations": "^1.11.2",
     "@types/node": "^13.13.5",
-    "@types/prismjs": "^1.16.0",
+    "@types/prismjs": "^1.16.1",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "@types/react-helmet": "^5.0.15",
