@@ -1018,13 +1018,13 @@
   dependencies:
     prop-types "^15.7.2"
 
-"@graphql-codegen/cli@^1.13.5":
-  version "1.13.5"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/cli/-/cli-1.13.5.tgz#578c96dcbee68190b0365634214a25dfe067f4c8"
-  integrity sha512-/A19GkD9NpFhRNSt6/sVepZ09hwwpQUhjgKthBea0cteH3jFXa/3h1Sgtk/0z90MLxRNRVaY9V85O7SUU21xBA==
+"@graphql-codegen/cli@^1.14.0":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/cli/-/cli-1.14.0.tgz#23de6363f0f6705130747f7d04d00c0ccab144bc"
+  integrity sha512-ocdVvjXNcRecLBeJSWrA+lzGMBbGD662EB1hVMUkFAR1RNUBjeZGIbtp6N3CM/OoLR0PmasWtgQxffJhPNPQMQ==
   dependencies:
-    "@graphql-codegen/core" "1.13.5"
-    "@graphql-codegen/plugin-helpers" "1.13.5"
+    "@graphql-codegen/core" "1.14.0"
+    "@graphql-codegen/plugin-helpers" "1.14.0"
     "@graphql-toolkit/apollo-engine-loader" "~0.10.4"
     "@graphql-toolkit/code-file-loader" "~0.10.4"
     "@graphql-toolkit/common" "~0.10.4"
@@ -1047,7 +1047,7 @@
     dependency-graph "0.9.0"
     detect-indent "6.0.0"
     glob "7.1.6"
-    graphql-config "3.0.1"
+    graphql-config "3.0.2"
     indent-string "4.0.0"
     inquirer "7.1.0"
     is-glob "4.0.1"
@@ -1061,20 +1061,20 @@
     pascal-case "3.1.1"
     request "2.88.2"
     ts-log "2.1.4"
-    tslib "^1.11.1"
+    tslib "^2.0.0"
     upper-case "2.0.1"
     valid-url "1.0.9"
     wrap-ansi "7.0.0"
 
-"@graphql-codegen/core@1.13.5":
-  version "1.13.5"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/core/-/core-1.13.5.tgz#82cdc80757281bd84573ea52ddbf94cb4e893dcc"
-  integrity sha512-RKkzvCXWfXaNeleHRpp5qWmiwnNCxsc6cVlLmSiZMQad363yOjU2m95oqy4a7WwL6pE/x0NqxtxCFLP7fD+LMQ==
+"@graphql-codegen/core@1.14.0":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/core/-/core-1.14.0.tgz#ec155a732f90289e1660e53ba5a37f9cba0d4b5b"
+  integrity sha512-bzm/BbPOPpTwhFaHBc6wFHiQGr+7UutSlTVxEZxrxCAkV2YVpu4qvD/NMO0R0jeIO2GLrrLKyYyQJAYDzNNEwQ==
   dependencies:
-    "@graphql-codegen/plugin-helpers" "1.13.5"
+    "@graphql-codegen/plugin-helpers" "1.14.0"
     "@graphql-toolkit/common" "~0.10.4"
     "@graphql-toolkit/schema-merging" "~0.10.4"
-    tslib "~1.11.1"
+    tslib "~2.0.0"
 
 "@graphql-codegen/plugin-helpers@1.13.5":
   version "1.13.5"
@@ -7597,10 +7597,10 @@ graphql-compose@^6.3.8:
     graphql-type-json "^0.2.4"
     object-path "^0.11.4"
 
-graphql-config@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/graphql-config/-/graphql-config-3.0.1.tgz#13101175c31b0ec2d893fe699af33bbb2f38c7ee"
-  integrity sha512-RKktfOcMAh/Lg7jpXXR/u1yOlgWF+bvSUP1wT2aGeUnKfm0B4tu9SBoOAAtt2Vf/bIyOGUSKYkMzqQOiBLTuFw==
+graphql-config@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/graphql-config/-/graphql-config-3.0.2.tgz#dfec1ff193dc3791457cb09a973887cf1e4aad50"
+  integrity sha512-efoimZ4F2wF2OwZJzPq2KdPjQs1K+UgJSfsHoHBBA0TwveGyQ/0kS3lUphhJg/JXIrZociuRkfjrk8JC4iPPJQ==
   dependencies:
     "@graphql-toolkit/common" "~0.10.6"
     "@graphql-toolkit/core" "~0.10.6"
@@ -14982,7 +14982,7 @@ tslib@^1.10.0, tslib@^1.11.1, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3, tslib@~1
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.2.tgz#9c79d83272c9a7aaf166f73915c9667ecdde3cc9"
   integrity sha512-tTSkux6IGPnUGUd1XAZHcpu85MOkIl5zX49pO+jfsie3eP0B6pyhOlLXm3cAC6T7s+euSDDUUV+Acop5WmtkVg==
 
-tslib@~2.0.0:
+tslib@^2.0.0, tslib@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.0.tgz#18d13fc2dce04051e20f074cc8387fd8089ce4f3"
   integrity sha512-lTqkx847PI7xEDYJntxZH89L2/aXInsyF2luSafe/+0fHOMjlBNXdH6th7f70qxLDhul7KZK0zC8V5ZIyHl0/g==
