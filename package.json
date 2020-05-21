@@ -99,7 +99,7 @@
   "engines": {
     "node": ">=12.0",
     "npm": "npm is not supported",
-    "yarn": ">=1.22"
+    "yarn": ">=1.17"
   },
   "repository": {
     "type": "git",
