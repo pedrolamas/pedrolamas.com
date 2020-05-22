@@ -24,6 +24,9 @@ jobs:
         registry-url: https://registry.npmjs.org/
     - run: yarn install
     - run: yarn build
+      env:
+        REPOSITORY_URL: https://github.com/${{ github.repository }}
+        BRANCH: ${{ github.ref }}
     - name: Build And Deploy
       id: builddeploy
       uses: Azure/static-web-apps-deploy@v0.0.1-preview
