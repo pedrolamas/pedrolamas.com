@@ -2,7 +2,7 @@ module.exports = {
   title: `pedrolamas.com`,
   description: `Windows Development`,
   author: `Pedro Lamas`,
-  siteUrl: `https://www.pedrolamas.com`,
+  siteUrl: `https://azure-test.pedrolamas.com`,
   lang: `en-US`,
   timezone: `Europe/London`,
   logo: `logo.jpg`,
