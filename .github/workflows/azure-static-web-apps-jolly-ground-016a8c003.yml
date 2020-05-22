@@ -22,7 +22,7 @@ jobs:
         registry-url: https://registry.npmjs.org/
     - run: yarn install
     - run: yarn build
-    - run: ls -R
+    - run: ls -R public/
 #    - name: Build And Deploy
 #      id: builddeploy
 #      uses: Azure/static-web-apps-deploy@v0.0.1-preview
