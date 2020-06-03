@@ -54,7 +54,7 @@
     "gatsby-plugin-mdx": "^1.2.14",
     "gatsby-plugin-netlify": "^2.3.3",
     "gatsby-plugin-offline": "^3.2.8",
-    "gatsby-plugin-react-helmet": "^3.3.2",
+    "gatsby-plugin-react-helmet": "^3.3.3",
     "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sass": "^2.3.2",
     "gatsby-plugin-sharp": "^2.6.10",
