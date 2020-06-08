@@ -76,7 +76,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-facebook": "^8.1.4",
-    "react-helmet": "^6.0.0",
+    "react-helmet": "^6.1.0",
     "typeface-pt-sans": "^0.0.72"
   },
   "devDependencies": {
