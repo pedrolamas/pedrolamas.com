@@ -60,7 +60,7 @@
     "gatsby-plugin-sharp": "^2.6.13",
     "gatsby-plugin-sitemap": "^2.4.6",
     "gatsby-plugin-twitter": "^2.3.5",
-    "gatsby-plugin-typescript": "^2.4.5",
+    "gatsby-plugin-typescript": "^2.4.8",
     "gatsby-remark-acronyms": "^1.1.0",
     "gatsby-remark-copy-linked-files": "^2.3.6",
     "gatsby-remark-images": "^3.3.12",
