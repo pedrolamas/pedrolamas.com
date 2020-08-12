@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-env-variables`,
       options: {
-        whitelist: ['REPOSITORY_URL', 'BRANCH'],
+        allowList: ['REPOSITORY_URL', 'BRANCH'],
       },
     },
     {
