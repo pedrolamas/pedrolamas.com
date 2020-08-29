@@ -93,7 +93,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.13",
-    "prettier": "^2.1.0",
+    "prettier": "^2.1.1",
     "typescript": "^4.0.2"
   },
   "engines": {
