@@ -59,7 +59,7 @@
     "gatsby-plugin-sass": "^2.3.13",
     "gatsby-plugin-sharp": "^2.6.35",
     "gatsby-plugin-sitemap": "^2.4.13",
-    "gatsby-plugin-twitter": "^2.3.10",
+    "gatsby-plugin-twitter": "^2.3.11",
     "gatsby-plugin-typescript": "^2.4.19",
     "gatsby-remark-acronyms": "^1.1.0",
     "gatsby-remark-copy-linked-files": "^2.3.15",
