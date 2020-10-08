@@ -7337,10 +7337,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-cli@^2.12.103:
-  version "2.12.103"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.12.103.tgz#57c7392955762e16dd9803189f0dccbc139e4e8c"
-  integrity sha512-w3o/duuzISH0V+/tdqIwZRbEFWkXwK7HGi2ZFqopSMtm1EraZ0Kw8arMaiCtj5q3ks2eoKxYSPOlcWzr0EBIVg==
+gatsby-cli@^2.12.103, gatsby-cli@^2.12.105:
+  version "2.12.105"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.12.105.tgz#cda4f7661ba629d6c08223d8f8fe8d811b93b788"
+  integrity sha512-T0S5UpZ6B2y3gDrO9+zjREwyewZzFxRq/PZ1PCZgreF85w6kRZ3EGdK4lmGy8oGxJDcxQjENvgUoruiPySoG5Q==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@hapi/joi" "^15.1.1"
