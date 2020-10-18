@@ -74,7 +74,7 @@
     "prism-react-renderer": "^1.1.1",
     "prismjs": "^1.22.0",
     "react": "^16.14.0",
-    "react-dom": "^16.13.1",
+    "react-dom": "^16.14.0",
     "react-facebook": "^8.1.4",
     "react-helmet": "^6.1.0",
     "typeface-pt-sans": "^0.0.72"
