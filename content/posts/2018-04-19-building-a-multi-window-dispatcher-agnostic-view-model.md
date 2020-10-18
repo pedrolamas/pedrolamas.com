@@ -206,4 +206,4 @@ public sealed partial class MainPage : Page
 }
 ```
 
-I've also made available a [full sample on GitHub](https://github.com/PedroLamas/MultiWindowViewModelSample) so you can see and test the whole solution! :)
+I've also made available a [full sample on GitHub](https://github.com/pedrolamas/MultiWindowViewModelSample) so you can see and test the whole solution! :)

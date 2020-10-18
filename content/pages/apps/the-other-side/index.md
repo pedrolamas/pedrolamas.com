@@ -15,4 +15,4 @@ This app will alow you to see the exact opposite (the antípode) of any location
 
 ## Source code
 
-Available in [GitHub](https://github.com/PedroLamas/PedroLamas.OtherSide).
+Available in [GitHub](https://github.com/pedrolamas/PedroLamas.OtherSide).

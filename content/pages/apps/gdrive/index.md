@@ -19,4 +19,4 @@ The main purpose on building this app was an educational one, as the code is off
 
 ## Source code
 
-Available in [GitHub](https://github.com/PedroLamas/GDrive).
+Available in [GitHub](https://github.com/pedrolamas/GDrive).

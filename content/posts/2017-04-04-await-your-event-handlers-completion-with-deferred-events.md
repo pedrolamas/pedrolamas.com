@@ -50,7 +50,7 @@ My personal implementation is available on the [DeferredEvents NuGet package](ht
 
 This is a .NET Standard 1.0 package, so you should be able to use it on any .NET project!
 
-If you want to take a look at what's inside, the full source code is available [here](https://github.com/PedroLamas/DeferredEvents).
+If you want to take a look at what's inside, the full source code is available [here](https://github.com/pedrolamas/DeferredEvents).
 
 ## Usage
 
@@ -60,7 +60,7 @@ Here is an example of a deferred event:
 public event EventHandler<DeferredEventArgs> MyEvent;
 ```
 
-The only difference here to a regular event is that the event arguments have to be of type [DeferredEventArgs](https://github.com/PedroLamas/DeferredEvents/blob/master/DeferredEvents/DeferredEventArgs.cs) (or a custom class inheriting from them), and that's what allows the whole thing to work!
+The only difference here to a regular event is that the event arguments have to be of type [DeferredEventArgs](https://github.com/pedrolamas/DeferredEvents/blob/master/DeferredEvents/DeferredEventArgs.cs) (or a custom class inheriting from them), and that's what allows the whole thing to work!
 
 Now take a look at how we raise this event:
 

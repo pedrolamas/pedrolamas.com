@@ -26,7 +26,7 @@ The problem is that the new project format is based in quite a few implicit defa
 
 As I couldn't find a way to "inherit" from the base Debug and Release build configurations, I tried to understand what properties were actually required on each of them, and then create some build scripts that would set them for me!
 
-Those MSBuild scripts are available [here](https://github.com/PedroLamas/MSBuildConfigurationDefaults) and can easily be installed by running `Install-Package MSBuildConfigurationDefaults` on the Package Manager Console, or added with the Visual Studio NuGet Packages Manager.
+Those MSBuild scripts are available [here](https://github.com/pedrolamas/MSBuildConfigurationDefaults) and can easily be installed by running `Install-Package MSBuildConfigurationDefaults` on the Package Manager Console, or added with the Visual Studio NuGet Packages Manager.
 
 After adding the NuGet package, I recommend closing and re-opening the solution to ensure that the build scripts are correctly loaded.
 

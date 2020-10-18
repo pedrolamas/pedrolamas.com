@@ -13,4 +13,4 @@ Learn how to solve the quadratic equation, step by step!
 
 ## Source code
 
-Available in [GitHub](https://github.com/PedroLamas/PedroLamas.Quadratic).
+Available in [GitHub](https://github.com/pedrolamas/PedroLamas.Quadratic).

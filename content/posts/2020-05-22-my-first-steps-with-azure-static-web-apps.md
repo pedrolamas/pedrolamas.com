@@ -19,11 +19,11 @@ Let me just start by saying that Build 2020 was awesome!!
 
 There was a lot of great content going around for everyone, but as I was watching the ["From code to scale! Build a static web app in minutes"](https://mybuild.microsoft.com/sessions/898230c4-1350-4fc6-acba-6baf1a58d76a) session showing how easy it is to use [**Azure Static Web Apps**](https://azure.microsoft.com/en-au/services/app-service/static/), I couldn't help but to try that for my own with this website!
 
-My first attempt was to run through the ["Tutorial: Publish a Gatsby site to Azure Static Web Apps Preview"](https://docs.microsoft.com/en-au/azure/static-web-apps/publish-gatsby#deploy-your-web-app), and in the end I was happy to see it created the Azure resources and the a [new Github workflow](https://github.com/PedroLamas/pedrolamas.com/blob/azure-test/.github/workflows/azure-static-web-apps-jolly-ground-016a8c003.yml) showed up on my repository.
+My first attempt was to run through the ["Tutorial: Publish a Gatsby site to Azure Static Web Apps Preview"](https://docs.microsoft.com/en-au/azure/static-web-apps/publish-gatsby#deploy-your-web-app), and in the end I was happy to see it created the Azure resources and the a [new Github workflow](https://github.com/pedrolamas/pedrolamas.com/blob/azure-test/.github/workflows/azure-static-web-apps-jolly-ground-016a8c003.yml) showed up on my repository.
 
 On close analysis of the workflow, I can see there's a new `Azure/static-web-apps-deploy` action in use doing all the heavy lifting! Internally, this action is using [Oryx](https://github.com/microsoft/Oryx) build system to identify the type of source code in the repo and compile it.
 
-Once the workflow started and got to the `Azure/static-web-apps-deploy` action, I quickly came to realize that it wasn't happy with the fact that my "package.json" file had `"yarn": ">=1.22"` on the `"engines"` node... the build image only had yarn 1.17 and so the [build failed](https://github.com/PedroLamas/pedrolamas.com/runs/698012520?check_suite_focus=true):
+Once the workflow started and got to the `Azure/static-web-apps-deploy` action, I quickly came to realize that it wasn't happy with the fact that my "package.json" file had `"yarn": ">=1.22"` on the `"engines"` node... the build image only had yarn 1.17 and so the [build failed](https://github.com/pedrolamas/pedrolamas.com/runs/698012520?check_suite_focus=true):
 
 ```text
 error pedrolamas.com@0.1.0: The engine "yarn" is incompatible with this module. Expected version ">=1.22". Got "1.17.3"
@@ -32,7 +32,7 @@ error Found incompatible module.
 
 At this point I edited my "package.json" file, lowered the yarn version requirement to "1.17", and moved forward.
 
-As expected, pushing this change caused a new workflow to start, but again, this [failed](https://github.com/PedroLamas/pedrolamas.com/runs/698023365?check_suite_focus=true):
+As expected, pushing this change caused a new workflow to start, but again, this [failed](https://github.com/pedrolamas/pedrolamas.com/runs/698023365?check_suite_focus=true):
 
 ```text
 error Processing /bin/staticsites/ss-oryx/app-int/content/assets/logo.jpg failed
@@ -51,7 +51,7 @@ At this stage I actually thought giving up and went to Twitter to somehow vent m
 
 After some messages exchanged, I followed up on [a tip](https://github.com/Azure/static-web-apps/issues/17#issuecomment-632406729) from [Annaji Sharma Ganti](https://twitter.com/AnnajiGanti) to compile the source code **before** the `Azure/static-web-apps-deploy` action, and make the action point to the compiled static folder (the "public" folder in my case) - this way Orix would just skip the compilation bit and go directly to publishing the artifacts to Azure.
 
-You can see [here](https://github.com/PedroLamas/pedrolamas.com/commit/b82fcbcef206da534f6e661521d2f91b452f24e2#diff-12cef35996238334e1b6c87f186fbda9) my changes to the workflow.
+You can see [here](https://github.com/pedrolamas/pedrolamas.com/commit/b82fcbcef206da534f6e661521d2f91b452f24e2#diff-12cef35996238334e1b6c87f186fbda9) my changes to the workflow.
 
 Finally, the workflow worked as expected and I could see my static GatsbyJs site hosted as an Azure Static Web App!
 

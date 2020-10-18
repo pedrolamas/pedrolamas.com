@@ -15,4 +15,4 @@ Com esta aplicação poderá consultar rapidamente os resultados dos Jogos Santa
 
 ## Source code
 
-Available in [GitHub](https://github.com/PedroLamas/PedroLamas.JogosSantaCasa).
+Available in [GitHub](https://github.com/pedrolamas/PedroLamas.JogosSantaCasa).

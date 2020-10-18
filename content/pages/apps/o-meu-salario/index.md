@@ -15,4 +15,4 @@ Esta aplicação permite-lhe calcular qual o seu salário líquido após os desc
 
 ## Source code
 
-Available in [GitHub](https://github.com/PedroLamas/PedroLamas.Vencimento).
+Available in [GitHub](https://github.com/pedrolamas/PedroLamas.Vencimento).

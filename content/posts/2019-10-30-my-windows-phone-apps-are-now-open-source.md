@@ -18,13 +18,13 @@ As Windows Phone has been [dead and buried](/2017/07/10/windows-phone-is-officia
 
 Here's the list of the new repos:
 
-- [PedroLamas.JogosSantaCasa](https://github.com/PedroLamas/PedroLamas.JogosSantaCasa)
-- [PedroLamas.OtherSide](https://github.com/PedroLamas/PedroLamas.OtherSide)
-- [PedroLamas.Quadratic](https://github.com/PedroLamas/PedroLamas.Quadratic)
-- [PedroLamas.TheBroCode](https://github.com/PedroLamas/PedroLamas.TheBroCode)
-- [PedroLamas.Vencimento](https://github.com/PedroLamas/PedroLamas.Vencimento)
-- [PedroLamas.WP7.CTTObjectos](https://github.com/PedroLamas/PedroLamas.WP7.CTTObjectos)
-- [PedroLamas.WP7.MetroNoPorto](https://github.com/PedroLamas/PedroLamas.WP7.MetroNoPorto)
-- [PedroLamas.WP7.UnitConverter](https://github.com/PedroLamas/PedroLamas.WP7.UnitConverter)
+- [PedroLamas.JogosSantaCasa](https://github.com/pedrolamas/PedroLamas.JogosSantaCasa)
+- [PedroLamas.OtherSide](https://github.com/pedrolamas/PedroLamas.OtherSide)
+- [PedroLamas.Quadratic](https://github.com/pedrolamas/PedroLamas.Quadratic)
+- [PedroLamas.TheBroCode](https://github.com/pedrolamas/PedroLamas.TheBroCode)
+- [PedroLamas.Vencimento](https://github.com/pedrolamas/PedroLamas.Vencimento)
+- [PedroLamas.WP7.CTTObjectos](https://github.com/pedrolamas/PedroLamas.WP7.CTTObjectos)
+- [PedroLamas.WP7.MetroNoPorto](https://github.com/pedrolamas/PedroLamas.WP7.MetroNoPorto)
+- [PedroLamas.WP7.UnitConverter](https://github.com/pedrolamas/PedroLamas.WP7.UnitConverter)
 
 All content is available under MIT license, but please bear in mind that I've built these a while back and so I give no guaranties that these are in working order!

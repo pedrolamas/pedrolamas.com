@@ -25,7 +25,7 @@ Since learning React and TypeScript, I've fully [migrated this website from Jeky
 
 I enjoyed [Gatsby](https://www.gatsbyjs.org/) so much that I have even contributed with a couple of [PR's](https://github.com/gatsbyjs/gatsby/pulls?q=author%3APedroLamas) and created my first Gatsby Plugin [gatsby-remark-acronyms](https://www.npmjs.com/package/gatsby-remark-acronyms) (this is also my first npm package ever)!
 
-In my home I have a NanoPi NEO 2 SBC running [Home Assistant](https://www.home-assistant.io/) as an all-in-one home automation solution, so I've open-sourced my whole [configuration](https://github.com/PedroLamas/home-assistant-config), including the [Docker configuration](https://github.com/PedroLamas/nanopineo2-docker-config) that hosts it.
+In my home I have a NanoPi NEO 2 SBC running [Home Assistant](https://www.home-assistant.io/) as an all-in-one home automation solution, so I've open-sourced my whole [configuration](https://github.com/pedrolamas/home-assistant-config), including the [Docker configuration](https://github.com/pedrolamas/nanopineo2-docker-config) that hosts it.
 
 This gave me the opportunity to improve my Python skills, and so I have already contributed back with a couple of [PR's](https://github.com/home-assistant/home-assistant/pulls?q=author%3APedroLamas).
 

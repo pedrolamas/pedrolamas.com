@@ -15,4 +15,4 @@ Esta aplicação permite-lhe localizar de forma fácil e rápida os objectos exp
 
 ## Source code
 
-Available in [GitHub](https://github.com/PedroLamas/PedroLamas.WP7.CTTObjectos).
+Available in [GitHub](https://github.com/pedrolamas/PedroLamas.WP7.CTTObjectos).

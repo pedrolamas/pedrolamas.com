@@ -17,4 +17,4 @@ Containing approximately 150 "unspoken" rules, this code of conduct ranges from 
 
 ## Source code
 
-Available in [GitHub](https://github.com/PedroLamas/PedroLamas.TheBroCode).
+Available in [GitHub](https://github.com/pedrolamas/PedroLamas.TheBroCode).
