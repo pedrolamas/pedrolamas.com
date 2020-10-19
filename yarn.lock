@@ -7795,12 +7795,12 @@ gatsby-recipes@^0.2.31:
     yoga-layout-prebuilt "^1.9.6"
     yup "^0.27.0"
 
-gatsby-remark-acronyms@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-acronyms/-/gatsby-remark-acronyms-1.1.0.tgz#056a8b67788cb6915ed4fc832fd16529d2ca964f"
-  integrity sha512-fppFQX5V5O/nTEG3ykXjUsNz0lE2mqgtCTn7zGMdcm1ADgkFF64HorwZM8KG4lNBBlYmA9EnKg7NK5/tNMCQ6g==
+gatsby-remark-acronyms@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-acronyms/-/gatsby-remark-acronyms-1.1.1.tgz#5b448e33c54a59be23e2e791928ed71a3ed63d09"
+  integrity sha512-JCRWU4+nt3tIwKudLObCzH3gPJr89s93CjEDDXjXIs/b32ig+trEC8kADOivWICnC5npnAEBpDGS5Aihwxtlpg==
   dependencies:
-    unist-util-visit "^1.4.1"
+    unist-util-visit "^2.0.3"
 
 gatsby-remark-copy-linked-files@^2.3.19:
   version "2.3.19"
@@ -16497,7 +16497,7 @@ unist-util-visit-parents@^3.0.0:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
 
-unist-util-visit@2.0.3, unist-util-visit@^2.0.0, unist-util-visit@^2.0.2:
+unist-util-visit@2.0.3, unist-util-visit@^2.0.0, unist-util-visit@^2.0.2, unist-util-visit@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.3.tgz#c3703893146df47203bb8a9795af47d7b971208c"
   integrity sha512-iJ4/RczbJMkD0712mGktuGpm/U4By4FfDonL7N/9tATGIF4imikjOuagyMY53tnZq3NP6BcmlrHhEKAfGWjh7Q==
