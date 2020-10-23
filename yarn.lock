@@ -7533,10 +7533,10 @@ gatsby-plugin-manifest@^2.4.35:
     semver "^7.3.2"
     sharp "^0.25.4"
 
-gatsby-plugin-mdx@^1.2.49:
-  version "1.2.49"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.2.49.tgz#a5b1e01a95f182dc53c636a5045a7c43c91868b4"
-  integrity sha512-T2VADMN3dU5qdUIpgltyoDV03e3FZSX7eU/eLqOiaIgTTVvliIWWeiEo6htRnUXsHe+C08+HxxVc8A8Jv2tPKg==
+gatsby-plugin-mdx@^1.2.51:
+  version "1.2.51"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.2.51.tgz#d1285505026011bc3d75ae26d32cde9cab03d106"
+  integrity sha512-wddtB88h4aHhS+tjNWYKT848S7LHuh2/svMg+7qdl0nL4D0tvNua76OUZxGUZDtkf0y8ajcAufps4qGeYA9mVQ==
   dependencies:
     "@babel/core" "^7.11.6"
     "@babel/generator" "^7.11.6"
