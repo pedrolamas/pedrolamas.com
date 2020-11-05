@@ -7,6 +7,7 @@ import PreBlock from './preBlock';
 import HBlock from './hBlock';
 import FigcaptionBlock from './figcaptionBlock';
 import TimeBlock from './timeBlock';
+import ScriptBlock from './scriptBlock';
 
 const MdxProviderComponents: MDXProviderComponents = {
   a: ABlock,
@@ -20,6 +21,7 @@ const MdxProviderComponents: MDXProviderComponents = {
   h6: HBlock.H6Block,
   figcaption: FigcaptionBlock,
   time: TimeBlock,
+  script: ScriptBlock,
 };
 
 type MdxProviderProps = {

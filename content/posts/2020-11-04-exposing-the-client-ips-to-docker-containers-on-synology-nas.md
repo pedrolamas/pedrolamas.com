@@ -2,6 +2,7 @@
 layout: post
 title: Exposing the client IPs to Docker containers in Synology NAS
 date: 2020-11-04T11:28:11+00:00
+last_modified_at: 2020-11-05T12:09:23+00:00
 categories:
   - Docker
 tags:
@@ -44,7 +45,9 @@ I was aware that this change to the Synology iptables was not a permanent one an
 
 The simplest solution I found was to use the Synology Task Scheduler to run a user-defined script on every reboot
 
-You can check the script and instructions on how to use it [here](https://gist.github.com/pedrolamas/db809a2b9112166da4a2dbf8e3a72ae9).
+You can check the script and instructions on how to use it [here](https://gist.github.com/pedrolamas/db809a2b9112166da4a2dbf8e3a72ae9):
+
+<script src="https://gist.github.com/pedrolamas/db809a2b9112166da4a2dbf8e3a72ae9.js"></script>
 
 Please be aware that **these changes to the iptables will probably mess with the Synology Firewall**, so just be careful with that if you do use the Firewall!
 
