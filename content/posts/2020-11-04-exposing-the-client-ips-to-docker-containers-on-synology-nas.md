@@ -2,7 +2,7 @@
 layout: post
 title: Exposing the client IPs to Docker containers in Synology NAS
 date: 2020-11-04T11:28:11+00:00
-last_modified_at: 2020-11-05T12:09:23+00:00
+last_modified_at: 2020-11-20T11:44:01+00:00
 categories:
   - Docker
 tags:
@@ -30,7 +30,7 @@ At this stage, I tried comparing the Docker iptables on my Synology NAS with the
 
 I then SSH'ed to the Synology NAS and manually added the missing rules:
 
-```sh
+```bash
 sudo iptables -t nat -A PREROUTING -m addrtype --dst-type LOCAL -j DOCKER
 sudo iptables -t nat -A PREROUTING -m addrtype --dst-type LOCAL ! --dst 127.0.0.0/8 -j DOCKER
 ```
