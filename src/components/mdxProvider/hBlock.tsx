@@ -1,11 +1,11 @@
 import React from 'react';
 import { useLocation } from '@reach/router';
 import { slugify } from 'underscore.string';
+import innerText from 'react-innertext';
 
 import Link from '../link';
 import FontAwesomeSymbol from '../fontAwesomeSymbol';
 import MdxContext from '../mdxContext';
-import { Utils } from '../../utils';
 
 type HeaderElementType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
@@ -18,23 +18,18 @@ const HBlock: React.FunctionComponent<HBlockProps> = (props) => {
   const location = useLocation();
 
   const { headerElementType, children, ...restOfProps } = props;
+  const HeaderElement = headerElementType;
 
-  if (Utils.IsString(children)) {
-    const HeaderElement = headerElementType;
-    const slug = slugify(children);
+  const slug = slugify(innerText(children));
 
-    return (
-      <HeaderElement id={slug} {...restOfProps}>
-        {children}
-        <Link to={`${meta.url || location.pathname}#${slug}`} className="anchor" aria-labelledby={slug}>
-          <FontAwesomeSymbol symbolName="header-anchor" />
-        </Link>
-      </HeaderElement>
-    );
-  }
-
-  // eslint-disable-next-line jsx-a11y/heading-has-content
-  return <h1 />;
+  return (
+    <HeaderElement id={slug} {...restOfProps}>
+      {children}
+      <Link to={`${meta.url || location.pathname}#${slug}`} className="anchor" aria-labelledby={slug}>
+        <FontAwesomeSymbol symbolName="header-anchor" />
+      </Link>
+    </HeaderElement>
+  );
 };
 
 HBlock.displayName = 'HBlock';
