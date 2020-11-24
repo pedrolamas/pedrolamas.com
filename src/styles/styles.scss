@@ -231,6 +231,30 @@ abbr[title] {
   }
 }
 
+.highlight {
+  .token-line {
+    display: table-row;
+  }
+
+  .token-line-number {
+    display: none;
+    white-space: pre;
+    text-align: right;
+    padding-right: 1em;
+    user-select: none;
+    opacity: 0.5;
+  }
+
+  .token-line-content {
+    display: table-cell;
+    width: 100%;
+
+    &.highlight {
+      background-color: rgb(255, 251, 221);
+    }
+  }
+}
+
 .content-footer {
   font-size: 0.6rem;
   text-align: center;
@@ -318,5 +342,13 @@ abbr[title] {
 
   .content {
     margin-left: 24rem;
+  }
+}
+
+@media (min-width: 70em) {
+  .highlight {
+    .token-line-number {
+      display: table-cell;
+    }
   }
 }

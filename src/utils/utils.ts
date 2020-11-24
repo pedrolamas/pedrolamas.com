@@ -25,11 +25,24 @@ export const match = <T, U>(x: T): MatchInterface<T, U> => ({
   otherwise: (fn) => fn(x),
 });
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const IsNumber = (x: any): x is number => typeof x === 'number';
+type RangeValidator = (index: number) => boolean;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const IsString = (x: any): x is string => typeof x === 'string';
+export const rangeValidatorFactory = (rangeExpression: string): RangeValidator => {
+  const ranges =
+    rangeExpression.split(',').map((rangeEntry) => {
+      const [min, max] = rangeEntry.split('-').map((n) => parseInt(n.trim()));
+
+      if (max === undefined) return (i: number) => i === min;
+
+      return (i: number) => i >= min && i <= max;
+    }) ?? [];
+
+  return (index: number) => ranges.some((f) => f(index));
+};
+
+export const IsNumber = (x: unknown): x is number => typeof x === 'number';
+
+export const IsString = (x: unknown): x is string => typeof x === 'string';
 
 export const IsValidDate = (date: Date): boolean => date instanceof Date && !isNaN(+date);
 
