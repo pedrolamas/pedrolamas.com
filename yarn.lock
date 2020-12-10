@@ -7282,10 +7282,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-cli@^2.14.1, gatsby-cli@^2.15.0:
-  version "2.15.0"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.15.0.tgz#e731b1e16a8ee14bb9bd162c87401fa84943eaf2"
-  integrity sha512-ho6Bji5iOzHEXe1owvhgXip4Xpw71iQML8Kw4VdwGFzMqRxtv0m55Vj5yRKtMefM2hmLrNQ3zamtP6xdwwDk0A==
+gatsby-cli@^2.15.0, gatsby-cli@^2.15.1:
+  version "2.15.1"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.15.1.tgz#f51465db7772f9855346a585a82e82a977e95361"
+  integrity sha512-VSgnjdCmP0pBbpf5zk0CrsyQ7iE8O0NyLpBRZUqAi0xHP53JdKEsYeJB3QKZon6MH/oc6j+pxSBMUHqGzzhyhg==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@hapi/joi" "^15.1.1"
@@ -7302,7 +7302,7 @@ gatsby-cli@^2.14.1, gatsby-cli@^2.15.0:
     fs-exists-cached "^1.0.0"
     fs-extra "^8.1.0"
     gatsby-core-utils "^1.6.0"
-    gatsby-recipes "^0.5.0"
+    gatsby-recipes "^0.5.1"
     gatsby-telemetry "^1.6.0"
     hosted-git-info "^3.0.6"
     is-valid-path "^0.1.1"
@@ -7595,10 +7595,10 @@ gatsby-react-router-scroll@^3.3.0:
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-gatsby-recipes@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-recipes/-/gatsby-recipes-0.5.0.tgz#d9d701ba3dd2d8427ab7f1c9cc14b498ca28b26c"
-  integrity sha512-C0JHy4vDbGYGT3GSACpjGygqJ/kyl+GM+Li19G7LHeBTJ62o1+mF5zkYsBjMl43S4+3yrLeB4ijukPZEQdlIAA==
+gatsby-recipes@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/gatsby-recipes/-/gatsby-recipes-0.5.1.tgz#d6e3d07cc7d0dc0b073e5522e4c3c3d67686e0b0"
+  integrity sha512-6bKV8/vyWNG9mQQUL3XP/ZbiugDQTNxZT+Rs61qDU+0drzMjpIs4YqP1gj9PExp86mqnGlezEyvSK9gEPZjb+g==
   dependencies:
     "@babel/core" "^7.12.3"
     "@babel/generator" "^7.12.5"
