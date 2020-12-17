@@ -7326,7 +7326,7 @@ gatsby-cli@^2.16.0:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^1.1.2"
 
-gatsby-core-utils@^1.6.0, gatsby-core-utils@^1.7.0:
+gatsby-core-utils@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.7.0.tgz#fb5b5181136b48b859b57e3a2adc84852e79b0ec"
   integrity sha512-DYYkmlgpfkQBuc/vWEkSmp1xh7LGI00HA0AzH2U8AblrqAff3JBezeS3v8thkeuOm7FhlwkZGPNza+PIHYcwKA==
@@ -7561,10 +7561,10 @@ gatsby-plugin-sitemap@^2.9.0:
     pify "^3.0.0"
     sitemap "^1.13.0"
 
-gatsby-plugin-twitter@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-2.6.0.tgz#ebbcb5a77ee080cc1a1d4c35434d135ccdd3109b"
-  integrity sha512-ODRS+YsSmlxdZ6MBWGeaBAGuWMe8HPLYQDQGVEX4BFrym63JHc9KgZ/dQ14JaxmOXHDdTiROQprL3JeUaf/hag==
+gatsby-plugin-twitter@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-2.7.0.tgz#492bc9abfb0c3eb8b5edd731a7fe51e4673dfdec"
+  integrity sha512-KHSS2M+BX7VHWfSYxkmzsTCG6G/NP+AVc15uZN0eu2gPKHcqwp/Ko53FAsnxI3avsEfbdz8kff0y8WgHmMjUpQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
 
