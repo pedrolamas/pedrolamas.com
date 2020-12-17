@@ -7326,7 +7326,7 @@ gatsby-cli@^2.16.0:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^1.1.2"
 
-gatsby-core-utils@^1.6.0, gatsby-core-utils@^1.7.0:
+gatsby-core-utils@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.7.0.tgz#fb5b5181136b48b859b57e3a2adc84852e79b0ec"
   integrity sha512-DYYkmlgpfkQBuc/vWEkSmp1xh7LGI00HA0AzH2U8AblrqAff3JBezeS3v8thkeuOm7FhlwkZGPNza+PIHYcwKA==
@@ -7708,10 +7708,10 @@ gatsby-remark-responsive-iframe@^2.8.0:
     lodash "^4.17.20"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-smartypants@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-2.6.0.tgz#3ec69bd0fddb5e29d9e15143243973598bd69343"
-  integrity sha512-cozL2fYjBIwQpI1OB8Jj1XaBSmcUhuknz1of9BFULAcR003C6u77hMo5YaZ9ieCEwHk7EfMCjKKCVddGAMgZ/w==
+gatsby-remark-smartypants@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-2.7.0.tgz#8264d876e8f4a46ff6244175287770628913af2a"
+  integrity sha512-g8rdyOSZUyCkQiyKj4NUPajwRfv5OV7DQ/V23hWPGVaFi157y+K5Dqd8h/TzYe583ael54kcgqsFzOTMZeIvRQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
     retext "^5.0.0"
