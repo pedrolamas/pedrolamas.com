@@ -2,6 +2,7 @@
 layout: post
 title: How to connect to a WireGuard VPN server from a Docker container
 date: 2020-11-20T14:15:12+00:00
+last_modified_at: 2021-01-02T19:15:42+00:00
 image: /wp-content/uploads/2020/11/How-to-connect-to-a-WireGuard-VPN-server-from-a-Docker-container.png
 categories:
   - Docker
@@ -32,7 +33,7 @@ Our final folder structure looks like this:
 
 ```text
 .\docker-compose.yaml
-.\wireguard\wg0.yaml
+.\wireguard\wg0.conf
 ```
 
 ## Getting a WireGuard VPN server
@@ -53,7 +54,7 @@ Here is how you can generate the WireGuard connection settings in TorGuard:
 4. Enter your "VPN Username" and "VPN Password"
 5. Click on "Generate Config"
 
-The last step is to copy the "Config Output" contents to the "wg0.yaml" file.
+The last step is to copy the "Config Output" contents to the "wg0.conf" file.
 
 ## Running WireGuard from Docker
 
