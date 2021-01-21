@@ -7313,7 +7313,7 @@ gatsby-cli@^2.18.0:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^1.7.1, gatsby-core-utils@^1.9.0:
+gatsby-core-utils@^1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.9.0.tgz#ff349cc2013fd06a85099b3aee061b01f64ceabb"
   integrity sha512-AWq9E+rBY+fWJrhdOx0rn/LlZ0eCjpqLYlDcUmLZ5NjwLARgkEXNf4JsvDETLtThcNlSOibEMQex8arsYatmkA==
@@ -7513,10 +7513,10 @@ gatsby-plugin-sass@^2.8.0:
     "@babel/runtime" "^7.12.5"
     sass-loader "^7.3.1"
 
-gatsby-plugin-sharp@^2.13.0:
-  version "2.13.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.13.0.tgz#d754a7751f4f3fbc44920565b1b6b68deb38db0e"
-  integrity sha512-hfg8+vBkhsJxRWNUFU2C/gsnSAZNa0YuhyLSqod58ep/kOR9hwYRX9vMoD9GaKVDPJxX/MrgEgwelawi4Th+ug==
+gatsby-plugin-sharp@^2.13.1:
+  version "2.13.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.13.1.tgz#31e9c9db5f500ffdc5e5c28850ddbeac718bcfda"
+  integrity sha512-giWDcw58OFy7SP4kzgCd2qXxdWJkKXE03EviOxIjD2wjOxym+eUfUximxgbWjLT6dL9Vog3e/Pre57iVDPbPLA==
   dependencies:
     "@babel/runtime" "^7.12.5"
     async "^3.2.0"
