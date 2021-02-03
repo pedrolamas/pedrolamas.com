@@ -24,33 +24,6 @@ declare module '@mdx-js/react' {
   const MDXProvider: React.FunctionComponent<MDXProviderProps>;
 }
 
-declare module 'react-facebook' {
-  import * as React from 'react';
-
-  type FacebookProviderProps = {
-    appId: string;
-  };
-
-  const FacebookProvider: React.FunctionComponent<FacebookProviderProps>;
-
-  type LikeProps = {
-    referral?: string;
-    href?: string;
-    layout?: 'standard' | 'button_count' | 'button' | 'box_count';
-    showFaces?: boolean;
-    colorScheme?: 'light' | 'dark';
-    action?: 'like' | 'recommend';
-    share?: boolean;
-    children?: never;
-    width?: number | string;
-    size?: 'small' | 'large';
-    kidDirectedSite?: boolean;
-    handleParse?: Function;
-  };
-
-  const Like: React.FunctionComponent<LikeProps>;
-}
-
 declare namespace NodeJS {
   interface ProcessEnv {
     readonly NODE_ENV: 'development' | 'production' | 'test';

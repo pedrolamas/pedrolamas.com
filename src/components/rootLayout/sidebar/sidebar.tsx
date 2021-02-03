@@ -4,7 +4,6 @@ import SidebarAbout from './sidebarAbout';
 import SidebarSitemap from './sidebarSitemap';
 import SidebarSocial from './sidebarSocial';
 import SidebarLogos from './sidebarLogos';
-// import SidebarFacebook from './sidebarFacebook';
 
 const Sidebar: React.FunctionComponent = () => (
   <aside className="sidebar">
@@ -16,8 +15,6 @@ const Sidebar: React.FunctionComponent = () => (
       <SidebarSocial />
 
       <SidebarLogos />
-
-      {/* <SidebarFacebook /> */}
     </div>
   </aside>
 );
