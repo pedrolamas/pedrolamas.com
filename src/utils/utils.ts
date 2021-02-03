@@ -50,7 +50,7 @@ export const ValidDateOrUndefined = (date: Date): Date | undefined => (IsValidDa
 
 export const Slug = (path: string): string => slugify(path.replace(/\./g, 'dot'));
 
-type PostMdxFrontmatterType = GraphQl.PostMdxFragment extends { frontmatter: infer T } ? NonNullable<T> : unknown;
+type PostMdxFrontmatterType = GraphQl.PostMdxFragment extends { frontmatter?: infer T } ? NonNullable<T> : unknown;
 
 export type SafeMdxMetadata = {
   id: string;
@@ -62,7 +62,7 @@ export type SafeMdxMetadata = {
   lastModified?: string;
   categories?: string[];
   tags?: string[];
-  image?: PostMdxFrontmatterType extends { image: infer T } ? NonNullable<T> : unknown;
+  image?: PostMdxFrontmatterType extends { image?: infer T } ? NonNullable<T> : unknown;
   originalFile?: string;
 };
 
