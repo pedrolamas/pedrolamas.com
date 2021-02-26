@@ -1084,10 +1084,10 @@
   dependencies:
     prop-types "^15.7.2"
 
-"@graphql-codegen/cli@^1.20.1":
-  version "1.20.1"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/cli/-/cli-1.20.1.tgz#3b42eddb4ddbfc6ad37d0a838267165f77342e14"
-  integrity sha512-jT5aMxIniER/gg0/sfx+BPmvI2ZAncQ6ZT/xkiFvXcYMiL9tDiAcVYJTmXcRdMTEIZnlzw3rhE4VPYiw1KqruQ==
+"@graphql-codegen/cli@^1.21.1":
+  version "1.21.1"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/cli/-/cli-1.21.1.tgz#fa1666ea5f1751e158d6d200c58f8228ad2f98ed"
+  integrity sha512-xlOmpKWID2zWOwm9mtjnOCA7qsQ8tJ34RYkKLyGMPoKaTmyWwKeAWpAH1qdukZT5AXDO7G2cZU5AdF1TmYEPUA==
   dependencies:
     "@graphql-codegen/core" "1.17.9"
     "@graphql-codegen/plugin-helpers" "^1.18.2"
@@ -7083,7 +7083,7 @@ gatsby-cli@^2.19.2:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^1.10.0, gatsby-core-utils@^1.10.1:
+gatsby-core-utils@^1.10.1:
   version "1.10.1"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.10.1.tgz#97bed40df3fa79800e7ce0c0491680f0aadd6ce7"
   integrity sha512-4P3feGCJckg+DRWWl2beFk7N9c63zmCryEGPaU1OHCp+ZT2bO0ihCBuXywDWuuEp6SYP9PZ1fs0YJ/Rt6q6lag==
