@@ -10,7 +10,7 @@ export type Scalars = {
   Int: number;
   Float: number;
   /** A date string, such as 2007-12-03, compliant with the ISO 8601 standard for representation of dates and times using the Gregorian calendar. */
-  Date: any;
+  Date: string;
   /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
   JSON: any;
 };
@@ -777,8 +777,8 @@ export type FileFieldsEnum =
   | 'childrenMdx___frontmatter___id'
   | 'childrenMdx___frontmatter___author'
   | 'childrenMdx___frontmatter___guid'
-  | 'childrenMdx___frontmatter___dsq_thread_id'
   | 'childrenMdx___frontmatter___sharing_disabled'
+  | 'childrenMdx___frontmatter___dsq_thread_id'
   | 'childrenMdx___frontmatter___fb_author_post_id'
   | 'childrenMdx___frontmatter___permalink'
   | 'childrenMdx___frontmatter___fb_fan_page_post_id'
@@ -888,8 +888,8 @@ export type FileFieldsEnum =
   | 'childMdx___frontmatter___id'
   | 'childMdx___frontmatter___author'
   | 'childMdx___frontmatter___guid'
-  | 'childMdx___frontmatter___dsq_thread_id'
   | 'childMdx___frontmatter___sharing_disabled'
+  | 'childMdx___frontmatter___dsq_thread_id'
   | 'childMdx___frontmatter___fb_author_post_id'
   | 'childMdx___frontmatter___permalink'
   | 'childMdx___frontmatter___fb_fan_page_post_id'
@@ -1972,8 +1972,8 @@ export type MdxFieldsEnum =
   | 'frontmatter___id'
   | 'frontmatter___author'
   | 'frontmatter___guid'
-  | 'frontmatter___dsq_thread_id'
   | 'frontmatter___sharing_disabled'
+  | 'frontmatter___dsq_thread_id'
   | 'frontmatter___fb_author_post_id'
   | 'frontmatter___permalink'
   | 'frontmatter___fb_fan_page_post_id'
@@ -2121,8 +2121,8 @@ export type MdxFrontmatter = {
   id?: Maybe<Scalars['Int']>;
   author?: Maybe<Scalars['String']>;
   guid?: Maybe<Scalars['String']>;
-  dsq_thread_id?: Maybe<Array<Maybe<Scalars['String']>>>;
   sharing_disabled?: Maybe<Array<Maybe<Scalars['Int']>>>;
+  dsq_thread_id?: Maybe<Array<Maybe<Scalars['String']>>>;
   fb_author_post_id?: Maybe<Array<Maybe<Scalars['Float']>>>;
   permalink?: Maybe<Scalars['String']>;
   fb_fan_page_post_id?: Maybe<Array<Maybe<Scalars['Float']>>>;
@@ -2151,8 +2151,8 @@ export type MdxFrontmatterFilterInput = {
   id?: Maybe<IntQueryOperatorInput>;
   author?: Maybe<StringQueryOperatorInput>;
   guid?: Maybe<StringQueryOperatorInput>;
-  dsq_thread_id?: Maybe<StringQueryOperatorInput>;
   sharing_disabled?: Maybe<IntQueryOperatorInput>;
+  dsq_thread_id?: Maybe<StringQueryOperatorInput>;
   fb_author_post_id?: Maybe<FloatQueryOperatorInput>;
   permalink?: Maybe<StringQueryOperatorInput>;
   fb_fan_page_post_id?: Maybe<FloatQueryOperatorInput>;
@@ -2366,8 +2366,8 @@ export type MdxSourceFieldsEnum =
   | 'childrenMdx___frontmatter___id'
   | 'childrenMdx___frontmatter___author'
   | 'childrenMdx___frontmatter___guid'
-  | 'childrenMdx___frontmatter___dsq_thread_id'
   | 'childrenMdx___frontmatter___sharing_disabled'
+  | 'childrenMdx___frontmatter___dsq_thread_id'
   | 'childrenMdx___frontmatter___fb_author_post_id'
   | 'childrenMdx___frontmatter___permalink'
   | 'childrenMdx___frontmatter___fb_fan_page_post_id'
@@ -2477,8 +2477,8 @@ export type MdxSourceFieldsEnum =
   | 'childMdx___frontmatter___id'
   | 'childMdx___frontmatter___author'
   | 'childMdx___frontmatter___guid'
-  | 'childMdx___frontmatter___dsq_thread_id'
   | 'childMdx___frontmatter___sharing_disabled'
+  | 'childMdx___frontmatter___dsq_thread_id'
   | 'childMdx___frontmatter___fb_author_post_id'
   | 'childMdx___frontmatter___permalink'
   | 'childMdx___frontmatter___fb_fan_page_post_id'
@@ -3259,8 +3259,8 @@ export type SiteFieldsEnum =
   | 'siteMetadata___disclaimer___frontmatter___id'
   | 'siteMetadata___disclaimer___frontmatter___author'
   | 'siteMetadata___disclaimer___frontmatter___guid'
-  | 'siteMetadata___disclaimer___frontmatter___dsq_thread_id'
   | 'siteMetadata___disclaimer___frontmatter___sharing_disabled'
+  | 'siteMetadata___disclaimer___frontmatter___dsq_thread_id'
   | 'siteMetadata___disclaimer___frontmatter___fb_author_post_id'
   | 'siteMetadata___disclaimer___frontmatter___permalink'
   | 'siteMetadata___disclaimer___frontmatter___fb_fan_page_post_id'
@@ -3415,8 +3415,8 @@ export type SiteFieldsEnum =
   | 'childrenMdxSource___childrenMdx___frontmatter___id'
   | 'childrenMdxSource___childrenMdx___frontmatter___author'
   | 'childrenMdxSource___childrenMdx___frontmatter___guid'
-  | 'childrenMdxSource___childrenMdx___frontmatter___dsq_thread_id'
   | 'childrenMdxSource___childrenMdx___frontmatter___sharing_disabled'
+  | 'childrenMdxSource___childrenMdx___frontmatter___dsq_thread_id'
   | 'childrenMdxSource___childrenMdx___frontmatter___fb_author_post_id'
   | 'childrenMdxSource___childrenMdx___frontmatter___permalink'
   | 'childrenMdxSource___childrenMdx___frontmatter___fb_fan_page_post_id'
@@ -3463,8 +3463,8 @@ export type SiteFieldsEnum =
   | 'childrenMdxSource___childMdx___frontmatter___id'
   | 'childrenMdxSource___childMdx___frontmatter___author'
   | 'childrenMdxSource___childMdx___frontmatter___guid'
-  | 'childrenMdxSource___childMdx___frontmatter___dsq_thread_id'
   | 'childrenMdxSource___childMdx___frontmatter___sharing_disabled'
+  | 'childrenMdxSource___childMdx___frontmatter___dsq_thread_id'
   | 'childrenMdxSource___childMdx___frontmatter___fb_author_post_id'
   | 'childrenMdxSource___childMdx___frontmatter___permalink'
   | 'childrenMdxSource___childMdx___frontmatter___fb_fan_page_post_id'
@@ -3550,8 +3550,8 @@ export type SiteFieldsEnum =
   | 'childMdxSource___childrenMdx___frontmatter___id'
   | 'childMdxSource___childrenMdx___frontmatter___author'
   | 'childMdxSource___childrenMdx___frontmatter___guid'
-  | 'childMdxSource___childrenMdx___frontmatter___dsq_thread_id'
   | 'childMdxSource___childrenMdx___frontmatter___sharing_disabled'
+  | 'childMdxSource___childrenMdx___frontmatter___dsq_thread_id'
   | 'childMdxSource___childrenMdx___frontmatter___fb_author_post_id'
   | 'childMdxSource___childrenMdx___frontmatter___permalink'
   | 'childMdxSource___childrenMdx___frontmatter___fb_fan_page_post_id'
@@ -3598,8 +3598,8 @@ export type SiteFieldsEnum =
   | 'childMdxSource___childMdx___frontmatter___id'
   | 'childMdxSource___childMdx___frontmatter___author'
   | 'childMdxSource___childMdx___frontmatter___guid'
-  | 'childMdxSource___childMdx___frontmatter___dsq_thread_id'
   | 'childMdxSource___childMdx___frontmatter___sharing_disabled'
+  | 'childMdxSource___childMdx___frontmatter___dsq_thread_id'
   | 'childMdxSource___childMdx___frontmatter___fb_author_post_id'
   | 'childMdxSource___childMdx___frontmatter___permalink'
   | 'childMdxSource___childMdx___frontmatter___fb_fan_page_post_id'
@@ -4249,6 +4249,8 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___stages'
   | 'pluginCreator___pluginOptions___options___emitWarning'
   | 'pluginCreator___pluginOptions___options___failOnError'
+  | 'pluginCreator___pluginOptions___options___extensions'
+  | 'pluginCreator___pluginOptions___options___exclude'
   | 'pluginCreator___pluginOptions___headers____x'
   | 'pluginCreator___pluginOptions___headers____manifest_webmanifest'
   | 'pluginCreator___pluginOptions___mergeSecurityHeaders'
@@ -4526,6 +4528,8 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___stages'
   | 'pluginOptions___options___emitWarning'
   | 'pluginOptions___options___failOnError'
+  | 'pluginOptions___options___extensions'
+  | 'pluginOptions___options___exclude'
   | 'pluginOptions___headers____x'
   | 'pluginOptions___headers____manifest_webmanifest'
   | 'pluginOptions___mergeSecurityHeaders'
@@ -4819,11 +4823,15 @@ export type SitePluginPluginOptionsHeadersFilterInput = {
 export type SitePluginPluginOptionsOptions = {
   emitWarning?: Maybe<Scalars['Boolean']>;
   failOnError?: Maybe<Scalars['Boolean']>;
+  extensions?: Maybe<Array<Maybe<Scalars['String']>>>;
+  exclude?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 export type SitePluginPluginOptionsOptionsFilterInput = {
   emitWarning?: Maybe<BooleanQueryOperatorInput>;
   failOnError?: Maybe<BooleanQueryOperatorInput>;
+  extensions?: Maybe<StringQueryOperatorInput>;
+  exclude?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginPluginOptionsPlugins = {

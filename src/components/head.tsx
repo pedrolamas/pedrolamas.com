@@ -27,8 +27,8 @@ const Head: React.FunctionComponent<HeadProps> = (props) => {
 
   const { siteUrl, description, author, authorDetails, title, lang, logo, twitter, facebook } = siteMetadata;
 
-  const siteLogoUrl = logo && logo.publicURL && Url.resolve(siteUrl, logo.publicURL);
-  const authorPictureUrl = authorDetails && authorDetails.picture && authorDetails.picture.publicURL && Url.resolve(siteUrl, authorDetails.picture.publicURL);
+  const siteLogoUrl = logo?.publicURL && Url.resolve(siteUrl, logo.publicURL);
+  const authorPictureUrl = authorDetails?.picture?.publicURL && Url.resolve(siteUrl, authorDetails.picture.publicURL);
 
   const pageTitle = props.title || title;
   const pageDescription = props.description || description;
@@ -65,7 +65,7 @@ const Head: React.FunctionComponent<HeadProps> = (props) => {
 
   return (
     <>
-      <Helmet title={props.title} titleTemplate={`%s – ${title}`} defaultTitle={`${title} – ${description}`} defer={false}>
+      <Helmet title={props.title} titleTemplate={`%s – ${title}`} defaultTitle={`${title} – ${description || ''}`} defer={false}>
         <html lang={lang || 'en'} prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#" />
 
         {pageDescription && <meta name="description" content={pageDescription} />}

@@ -3,11 +3,10 @@ import Img, { FluidObject, FixedObject } from 'gatsby-image';
 
 import { GraphQl } from '../utils';
 
-type ImageProps = React.ComponentPropsWithoutRef<typeof Img> & {
+type ImageProps = Omit<React.ComponentPropsWithoutRef<typeof Img>, 'fixed' | 'fluid'> & {
   imageSharp: {
     fixed?: GraphQl.Maybe<Partial<GraphQl.ImageSharpFixed>>;
     fluid?: GraphQl.Maybe<Partial<GraphQl.ImageSharpFluid>>;
-    children?: never;
   };
 };
 

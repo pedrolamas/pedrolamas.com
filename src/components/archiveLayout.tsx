@@ -19,10 +19,10 @@ const ArchiveLayout: React.FunctionComponent<ArchiveLayoutProps> = ({ title, dat
 
   if (!posts) return null;
 
-  const postsGroupedByYear = posts.reduce<PostsGroupedByKey>((reduced, { node }) => {
+  const postsGroupedByYearAsObject = posts.reduce<PostsGroupedByKey>((reduced, { node }) => {
     const { frontmatter } = node;
 
-    if (frontmatter) {
+    if (frontmatter?.date) {
       const year = new Date(frontmatter.date).getFullYear().toString();
 
       if (!reduced[year]) {
@@ -35,32 +35,30 @@ const ArchiveLayout: React.FunctionComponent<ArchiveLayoutProps> = ({ title, dat
     return reduced;
   }, {});
 
-  return (
-    <PageLayout title={title}>
-      {Object.entries(postsGroupedByYear)
-        .reverse()
-        .map(([year, posts2], index) => (
-          <React.Fragment key={index}>
-            <h2>{year}</h2>
-            <ul>
-              {posts2.map((mdx, index2) => {
-                const { title, dateFormatted, url } = Utils.SafeMetadataFromMdx(mdx);
+  const postsGroupedByYear = Object.entries(postsGroupedByYearAsObject)
+    .reverse()
+    .map(([year, posts2], index) => (
+      <React.Fragment key={index}>
+        <h2>{year}</h2>
+        <ul>
+          {posts2.map((mdx, index2) => {
+            const { title, dateFormatted, url } = Utils.SafeMetadataFromMdx(mdx);
 
-                return (
-                  <li key={index2}>
-                    <h3 className="post-entry">
-                      <Link to={url}>
-                        {title} <small>{dateFormatted}</small>
-                      </Link>
-                    </h3>
-                  </li>
-                );
-              })}
-            </ul>
-          </React.Fragment>
-        ))}
-    </PageLayout>
-  );
+            return (
+              <li key={index2}>
+                <h3 className="post-entry">
+                  <Link to={url}>
+                    {title} <small>{dateFormatted}</small>
+                  </Link>
+                </h3>
+              </li>
+            );
+          })}
+        </ul>
+      </React.Fragment>
+    ));
+
+  return <PageLayout title={title}>{postsGroupedByYear}</PageLayout>;
 };
 
 ArchiveLayout.displayName = 'ArchiveLayout';
