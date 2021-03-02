@@ -10,6 +10,7 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "serve": "gatsby serve",
+    "postinstall": "husky install",
     "codegen": "graphql-codegen --config codegen.yml",
     "lint": "yarn run lint:code && yarn run lint:other",
     "lint:code": "yarn run eslint:defaults",
