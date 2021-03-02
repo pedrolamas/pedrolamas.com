@@ -10,7 +10,7 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "postinstall": "husky install",
+    "prepare": "husky install",
     "codegen": "graphql-codegen --config codegen.yml",
     "lint": "yarn run lint:code && yarn run lint:other",
     "lint:code": "yarn run eslint:defaults",
@@ -28,11 +28,6 @@
     "*.{ts,tsx,js,jsx}": [
       "eslint"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
