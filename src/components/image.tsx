@@ -1,25 +1,20 @@
 import React from 'react';
-import Img, { FluidObject, FixedObject } from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import { GraphQl } from '../utils';
 
-type ImageProps = Omit<React.ComponentPropsWithoutRef<typeof Img>, 'fixed' | 'fluid'> & {
-  imageSharp: {
-    fixed?: GraphQl.Maybe<Partial<GraphQl.ImageSharpFixed>>;
-    fluid?: GraphQl.Maybe<Partial<GraphQl.ImageSharpFluid>>;
-  };
+type ImageDataLike = typeof getImage extends (param: infer T) => unknown ? T : unknown;
+
+type ImageProps = Omit<React.ComponentPropsWithoutRef<typeof GatsbyImage>, 'image'> & {
+  imageSharp: GraphQl.Maybe<Pick<GraphQl.File, 'publicURL'> & { childImageSharp?: GraphQl.Maybe<Pick<GraphQl.ImageSharp, 'gatsbyImageData'>> }>;
 };
 
-const Image: React.FunctionComponent<ImageProps> = ({ imageSharp, style, ...restOfProps }) => {
-  const { fixed, fluid } = imageSharp;
+const Image: React.FunctionComponent<ImageProps> = ({ imageSharp, ...restOfProps }) => {
+  const image = getImage(imageSharp as ImageDataLike);
 
-  const newStyle: React.CSSProperties = {
-    ...style,
-    maxWidth: fluid?.presentationWidth || undefined,
-    maxHeight: fluid?.presentationHeight || undefined,
-  };
+  if (!image) return null;
 
-  return <Img fixed={fixed as FixedObject} fluid={fluid as FluidObject} style={newStyle} {...restOfProps} />;
+  return <GatsbyImage image={image} {...restOfProps} />;
 };
 
 Image.displayName = 'Image';

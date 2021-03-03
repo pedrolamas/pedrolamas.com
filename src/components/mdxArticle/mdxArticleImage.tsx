@@ -10,13 +10,13 @@ type MdxArticleImageProps = {
 const MdxArticleImage: React.FunctionComponent<MdxArticleImageProps> = () => {
   const { meta } = React.useContext(MdxContext);
 
-  const { image } = meta;
+  const { title, image } = meta;
 
   return (
     <>
-      {image?.childImageSharp && (
+      {image && (
         <div className="post-thumbnail">
-          <Image className="sidebar-logo" imageSharp={image.childImageSharp} />
+          <Image className="sidebar-logo" alt={title} imageSharp={image} />
         </div>
       )}
     </>

@@ -63,10 +63,7 @@ export const postMdxFragment = graphql`
       dateFormatted
       image {
         childImageSharp {
-          fluid(maxWidth: 720) {
-            ...GatsbyImageSharpFluid_withWebp
-            presentationWidth
-          }
+          gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
         }
         publicURL
       }

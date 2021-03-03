@@ -26,9 +26,7 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
             lang
             logo {
               childImageSharp {
-                fluid(maxWidth: 160) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(width: 160, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
               }
               publicURL
             }
@@ -40,9 +38,7 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
               uri
               picture {
                 childImageSharp {
-                  fluid(maxWidth: 80) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(width: 80, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
                 }
                 publicURL
               }
@@ -67,9 +63,7 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
                 title
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 200, fit: CONTAIN) {
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
+                    gatsbyImageData(width: 200, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
                   }
                 }
               }

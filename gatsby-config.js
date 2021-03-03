@@ -46,10 +46,11 @@ module.exports = {
         path: `${__dirname}/content/pages`,
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-yaml`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

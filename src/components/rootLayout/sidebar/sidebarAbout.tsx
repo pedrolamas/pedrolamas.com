@@ -15,7 +15,7 @@ const SidebarAbout: React.FunctionComponent<SidebarAboutProps> = (props) => {
 
   return (
     <div className="sidebar-about">
-      {logo?.childImageSharp && <Image className="sidebar-logo" imageSharp={logo.childImageSharp} />}
+      {logo && <Image className="sidebar-logo" alt={title} imageSharp={logo} />}
       <h1>
         <Link to="/" rel="home">
           {title}
