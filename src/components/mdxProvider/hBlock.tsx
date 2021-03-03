@@ -58,4 +58,5 @@ const H6Block: React.FunctionComponent<React.ComponentPropsWithoutRef<'h6'>> = (
 
 H6Block.displayName = 'H6Block';
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default { H1Block, H2Block, H3Block, H4Block, H5Block, H6Block };

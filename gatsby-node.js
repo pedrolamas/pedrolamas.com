@@ -56,6 +56,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       break;
 
     case 'Site':
+      // eslint-disable-next-line no-case-declarations
       const { disclaimer, authorDetails } = node.siteMetadata;
 
       createMdxSource('disclaimer', disclaimer, node, actions, createNodeId, createContentDigest);

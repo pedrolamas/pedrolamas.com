@@ -76,7 +76,6 @@ export const SafeMetadataFromMdx = (mdx: Pick<GraphQl.Mdx, 'id'> & Partial<Graph
     url: fields?.slug ?? '',
     date: frontmatter?.date ?? undefined,
     dateFormatted: frontmatter?.dateFormatted ?? '',
-    // eslint-disable-next-line @typescript-eslint/camelcase
     lastModified: frontmatter?.last_modified_at ?? undefined,
     categories: (frontmatter?.categories?.filter((x) => x) as string[]) ?? undefined,
     tags: (frontmatter?.tags?.filter((x) => x) as string[]) ?? undefined,
