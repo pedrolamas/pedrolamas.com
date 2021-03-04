@@ -7348,10 +7348,10 @@ gatsby-recipes@^0.9.2:
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
 
-gatsby-remark-acronyms@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-acronyms/-/gatsby-remark-acronyms-1.1.1.tgz#5b448e33c54a59be23e2e791928ed71a3ed63d09"
-  integrity sha512-JCRWU4+nt3tIwKudLObCzH3gPJr89s93CjEDDXjXIs/b32ig+trEC8kADOivWICnC5npnAEBpDGS5Aihwxtlpg==
+gatsby-remark-acronyms@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-acronyms/-/gatsby-remark-acronyms-1.1.2.tgz#70dfd01aa151405e75d968d689724cb18b64a165"
+  integrity sha512-TiNMIT5AF8WuxPkzExSJ3v3k9bs6b/GOldEana4bmhuseKei/mt+L0Vottn1/moYUjMFglyT+DTZkAbWrgEe8Q==
   dependencies:
     unist-util-visit "^2.0.3"
 
