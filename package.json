@@ -38,7 +38,7 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "disqus-react": "^1.0.11",
-    "gatsby": "^2.32.9",
+    "gatsby": "^2.32.10",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-env-variables": "^2.0.0",
     "gatsby-plugin-eslint": "^2.0.8",
