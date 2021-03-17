@@ -6822,15 +6822,15 @@ gatsby-plugin-mdx@^2.0.1:
     unist-util-remove "^1.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-plugin-netlify@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-3.0.1.tgz#586716f7b24e71fc8f19232004f6dd149e1d0c74"
-  integrity sha512-RH7Lo45dFsJadW9DfG0fMvpuavAT5JOVgTPnpsbNjsb6JKWYhDzRvavPOB2bW/+YpxlyoW0VHR3h6F4ZuFDnww==
+gatsby-plugin-netlify@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-3.1.0.tgz#2e6e2d89ffab2031b3f54adc69e449ee5312f146"
+  integrity sha512-wVZ2cn5dct17wDMslov8nCiAEyh1D5cbu7W04J8zUGOFdKp+Mo/SId+t5Wqpu86CBnKNEX8LVOaswpsI1B2K9A==
   dependencies:
     "@babel/runtime" "^7.12.5"
     fs-extra "^8.1.0"
     kebab-hash "^0.1.2"
-    lodash "^4.17.20"
+    lodash "^4.17.21"
     webpack-assets-manifest "^3.1.1"
 
 gatsby-plugin-offline@^4.0.0:
