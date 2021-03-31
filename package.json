@@ -53,7 +53,7 @@
     "gatsby-plugin-sass": "^4.1.0",
     "gatsby-plugin-sharp": "^3.1.2",
     "gatsby-plugin-sitemap": "^3.1.0",
-    "gatsby-plugin-twitter": "^3.1.0",
+    "gatsby-plugin-twitter": "^3.2.0",
     "gatsby-remark-acronyms": "^1.1.2",
     "gatsby-remark-copy-linked-files": "^3.1.0",
     "gatsby-remark-images": "^4.1.1",
