@@ -6779,14 +6779,14 @@ gatsby-plugin-image@^1.2.0:
     objectFitPolyfill "^2.3.0"
     prop-types "^15.7.2"
 
-gatsby-plugin-manifest@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-3.1.0.tgz#9a40e2c7355663ea0863b199e7ba92af2f655e8d"
-  integrity sha512-T3vmSdld5KdKhov1/GFgBZ1fgFdyS1Uw2ehtJy3qTqknO3TLq2AiyMTJVRE5Z6ztYWLkE5Lnc07HZSYSb0ocsA==
+gatsby-plugin-manifest@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-3.2.0.tgz#512938442542f95ffc8e0cbe5df19db719e935d9"
+  integrity sha512-oU5pvAHZ+qIhCbmTP5Eti73i6pgAnxF/nfwXCSQ7zUjFWzKkjW8tHYK3XmhEYX2ooUX2WeP9e3vp2QdnlmA59Q==
   dependencies:
     "@babel/runtime" "^7.12.5"
-    gatsby-core-utils "^2.1.0"
-    gatsby-plugin-utils "^1.1.0"
+    gatsby-core-utils "^2.2.0"
+    gatsby-plugin-utils "^1.2.0"
     semver "^7.3.2"
     sharp "^0.27.0"
 
@@ -6951,10 +6951,10 @@ gatsby-plugin-typescript@^3.1.0:
     "@babel/runtime" "^7.12.5"
     babel-plugin-remove-graphql-queries "^3.1.0"
 
-gatsby-plugin-utils@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-1.1.0.tgz#b73f3f196323df3c75e6edb345d221f003b5c152"
-  integrity sha512-B21V3tFskfZcVSJVaYy6rLrxHcumbcmhKAYKniKThxCP/0KSqHkfC9+Bopsonk8npRKbVX924OI3UOCKfbgFsg==
+gatsby-plugin-utils@^1.1.0, gatsby-plugin-utils@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-1.2.0.tgz#4751d952c9c99f15d4a68497cd1841a90aec6c33"
+  integrity sha512-9+kKeyQdXJtQ/9pthfP4LTiem7coOdBt+8wRTwa+DF331qfzunjekl0uWlZSZBnQpG1uS7GX4R/4tei72cVVmw==
   dependencies:
     joi "^17.2.1"
 
