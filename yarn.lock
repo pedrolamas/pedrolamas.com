@@ -6753,10 +6753,10 @@ gatsby-plugin-feed-generator@^2.0.5:
     pify "^3.0.0"
     url-join "^4.0.1"
 
-gatsby-plugin-google-analytics@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-3.2.0.tgz#d651c05a665427d1c812e1da08a8351c0680d261"
-  integrity sha512-Cc/Gh6fkZWta6h+ieRjU/4GuN5wMGfiP+rv1EylLYUpTS/BSZf5sUqBsJbwWerPyKXkGJ35YaYWa5Vkzu4lBZw==
+gatsby-plugin-google-analytics@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-3.3.0.tgz#dffec74c7371f3312144e8616da0ba471e57e871"
+  integrity sha512-p6++DY9fJ8Exh2YpPdaL17mtvcd1uPGfIJPf6683CJtlzfqGRbN97ue2BKl/RfsBpXuK01hIXOiY/sOgDaE9vg==
   dependencies:
     "@babel/runtime" "^7.12.5"
     minimatch "3.0.4"
