@@ -1,5 +1,3 @@
-const url = require('url');
-
 const siteMetadata = require('./gatsby-site-metadata');
 const siteAcronyms = require('./gatsby-site-acronyms');
 
@@ -102,69 +100,8 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-feed-generator`,
-      options: {
-        generator: `GatsbyJS`,
-        rss: true,
-        json: true,
-        siteQuery: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                author
-                siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            name: `feed`,
-            query: `
-              {
-                allMdx(filter: { fields: { slug: { ne: null } } }, sort: { order: DESC, fields: [frontmatter___date] }) {
-                  edges {
-                    node {
-                      html
-                      frontmatter {
-                        date
-                        title
-                        image {
-                          publicURL
-                        }
-                      }
-                      fields {
-                        slug
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            normalize: ({ query: { site, allMdx } }) => {
-              const siteUrl = site.siteMetadata.siteUrl;
-
-              return allMdx.edges.map((edge) => {
-                const { html, frontmatter, fields } = edge.node;
-
-                const title = frontmatter && frontmatter.title;
-                const date = frontmatter && frontmatter.date;
-                const image = frontmatter && frontmatter.image && frontmatter.image.publicURL;
-                const slug = fields && fields.slug;
-
-                return {
-                  title,
-                  date,
-                  url: url.resolve(siteUrl, slug),
-                  html: image ? `<p><img src="${url.resolve(siteUrl, image)}" alt="${title}" class="webfeedsFeaturedVisual" /></p>${html}` : html,
-                };
-              });
-            },
-          },
-        ],
-      },
+      resolve: `gatsby-plugin-feed`,
+      options: require('gatsby-plugin-mdx/feed'),
     },
     {
       resolve: `gatsby-plugin-sitemap`,
