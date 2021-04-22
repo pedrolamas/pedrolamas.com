@@ -6749,10 +6749,10 @@ gatsby-plugin-google-analytics@^3.3.0:
     "@babel/runtime" "^7.12.5"
     minimatch "3.0.4"
 
-gatsby-plugin-image@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-1.3.0.tgz#7a661c4e66e675adc9d0b65946c0d7a060c5fadf"
-  integrity sha512-nbz8AoZ9WqEAZbBuiIyNWXslpowfbMOWDVpHUCktGK/MKurhAIKcClo6zKQSlGWhfKUOmi4Amsj04Mom2UfEmw==
+gatsby-plugin-image@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-1.3.1.tgz#c3e1c39159fa32d02bd8737fb67c50bfc51efd23"
+  integrity sha512-ZSXBOFSYfbXGWxwc4JkFCoBMZjWLkj8vWkJ9Fu+4Gh5C4KdzveKTDJ0ypBJZU12z5qW+srnMDXVI2Ym+zL57Vw==
   dependencies:
     "@babel/code-frame" "^7.12.13"
     "@babel/parser" "^7.12.5"
