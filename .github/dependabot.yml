@@ -1,0 +1,40 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  target-branch: dependabot
+  ignore:
+  - dependency-name: husky
+    versions:
+    - 5.0.9
+    - 5.1.0
+    - 5.1.1
+    - 5.1.2
+  - dependency-name: gatsby-cli
+    versions:
+    - 2.19.0
+  - dependency-name: gatsby-plugin-typescript
+    versions:
+    - 2.12.0
+  - dependency-name: gatsby-image
+    versions:
+    - 3.0.0
+  - dependency-name: gatsby-plugin-mdx
+    versions:
+    - 2.0.0
+    - 2.0.1
+  - dependency-name: eslint-config-prettier
+    versions:
+    - 8.0.0
+    - 8.1.0
+  - dependency-name: "@graphql-codegen/typescript"
+    versions:
+    - 1.22.0
+  - dependency-name: "@types/node"
+    versions:
+    - 15.0.0
+  commit-message:
+    prefix: "[skip netlify]"
