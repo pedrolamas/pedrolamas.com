@@ -177,24 +177,21 @@ module.exports = {
               }
             }
             allSitePage {
-              edges {
-                node {
-                  context {
-                    lastModified
-                  }
-                  path
+              nodes {
+                context {
+                  lastModified
                 }
+                path
               }
             }
           }
         `,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map(({ node }) => {
-            return {
-              url: site.siteMetadata.siteUrl + node.path,
-              lastmodISO: (node.context && node.context.lastModified) || null,
-            };
-          }),
+        resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
+        resolvePages: ({ allSitePage }) => allSitePage.nodes,
+        serialize: ({ path, context }) => ({
+          url: path,
+          lastmod: (context && context.lastModified) || null,
+        }),
       },
     },
     {
