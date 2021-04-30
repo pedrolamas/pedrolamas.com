@@ -186,8 +186,6 @@ module.exports = {
             }
           }
         `,
-        resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
-        resolvePages: ({ allSitePage }) => allSitePage.nodes,
         serialize: ({ path, context }) => ({
           url: path,
           lastmod: (context && context.lastModified) || null,
