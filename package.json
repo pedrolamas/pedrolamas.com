@@ -59,7 +59,7 @@
     "gatsby-remark-images": "^5.1.0",
     "gatsby-remark-responsive-iframe": "^4.1.0",
     "gatsby-remark-smartypants": "^4.1.0",
-    "gatsby-source-filesystem": "^3.4.0",
+    "gatsby-source-filesystem": "^3.5.0",
     "gatsby-transformer-sharp": "^3.5.0",
     "gatsby-transformer-yaml": "^3.4.0",
     "prism-react-renderer": "^1.2.0",
