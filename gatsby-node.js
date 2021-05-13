@@ -69,7 +69,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   }
 };
 
-exports.sourceNodes = ({ actions }) => {
+exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
 
   const typeDefs = [
