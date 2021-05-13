@@ -6,6 +6,6 @@ import 'prismjs/components/prism-bash';
 
 type PrismLibType = typeof BundledPrism;
 
-const PrismLib = (Prism as unknown) as PrismLibType;
+const PrismLib = Prism as unknown as PrismLibType;
 
 export default PrismLib;
