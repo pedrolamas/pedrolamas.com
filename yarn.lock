@@ -7090,10 +7090,10 @@ gatsby-remark-images@^5.3.0:
     unist-util-select "^3.0.4"
     unist-util-visit-parents "^3.1.1"
 
-gatsby-remark-responsive-iframe@^4.2.1:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-4.2.1.tgz#5a8247c1ce392e4e5f467ca448e9835cc4e44919"
-  integrity sha512-Rur8SjXXCQveqQemnk2KVKHryQFc+011UyMUHi1ZcxvdKgXBY9LWnffr5aAIEA22uDDUz3yL6DvvFrxoXBu9xQ==
+gatsby-remark-responsive-iframe@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-4.3.0.tgz#5303891264836a028852ef94e1ee247c6f7e0e33"
+  integrity sha512-24dvTnc3wgYFMGQrjTT1vx7hj6eIZU277nuApk3uRnYyI3BZ2imhLstzA54Cv6If/947XygpNrEZeAFdiLz8wA==
   dependencies:
     "@babel/runtime" "^7.12.5"
     cheerio "^1.0.0-rc.9"
