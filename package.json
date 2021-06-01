@@ -82,7 +82,7 @@
     "@types/react-dom": "^17.0.4",
     "@types/react-helmet": "^6.1.1",
     "@types/underscore.string": "^0.0.38",
-    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.25.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.27.0",
