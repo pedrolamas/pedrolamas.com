@@ -7138,12 +7138,12 @@ gatsby-plugin-sharp@^3.6.0:
     svgo "1.3.2"
     uuid "3.4.0"
 
-gatsby-plugin-sitemap@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-4.2.0.tgz#2d7a176bdbfda37f31ebc35d3cf80b75b36f4a3e"
-  integrity sha512-xI4ez2aC7/4JWoPdDMK0ntF+mVCt+UF9pgAaXUXWwkNng1MfrC1cyau5Gjl2ZVyceHgMaNSFQcLyupnpA0dB+Q==
+gatsby-plugin-sitemap@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-4.3.0.tgz#cbb7bddac29322e19e50a5baaad3c8d556467ca0"
+  integrity sha512-3+GUDHcC4o6p40MP1kBjiw+Nc0lR69kjzC0pvF7XExBe3ZKlMfIrt5sRgkzMCA7EIUE7ugPJApv3Z4a1Q8S3NA==
   dependencies:
-    "@babel/runtime" "^7.12.5"
+    "@babel/runtime" "^7.14.0"
     common-tags "^1.8.0"
     minimatch "^3.0.4"
     sitemap "^7.0.0"
