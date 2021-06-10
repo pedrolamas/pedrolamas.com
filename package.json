@@ -60,7 +60,7 @@
     "gatsby-remark-responsive-iframe": "^4.3.0",
     "gatsby-remark-smartypants": "^4.4.0",
     "gatsby-source-filesystem": "^3.7.0",
-    "gatsby-transformer-sharp": "^3.6.0",
+    "gatsby-transformer-sharp": "^3.7.0",
     "gatsby-transformer-yaml": "^3.7.0",
     "prism-react-renderer": "^1.2.1",
     "prismjs": "^1.23.0",
