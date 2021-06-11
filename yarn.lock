@@ -7146,10 +7146,10 @@ gatsby-remark-acronyms@^1.1.3:
   dependencies:
     unist-util-visit "^2.0.3"
 
-gatsby-remark-copy-linked-files@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-4.4.0.tgz#b7162e87ab0f3a64ee66b8dbd36070afc3dc1080"
-  integrity sha512-gdQwCk+T9oua7WPwnpHM6qGiestFJr5RG+40BL1gzIfgmmgFrFsqcoPrUxLvjec1vU3zphLW/sCt5cBtzpX0dg==
+gatsby-remark-copy-linked-files@^4.4.1:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-4.4.1.tgz#6339926b7746792c7b765096343951fd49875f0d"
+  integrity sha512-w8jUHvKmz0g6EPtMpy5jha2SyKKPzUb7PWm+PEr4K1uEpuSI2T/JRMdwP4W+DmIM7AuRjZRLPT/wqQVxKWYlvw==
   dependencies:
     "@babel/runtime" "^7.14.0"
     cheerio "^1.0.0-rc.9"
