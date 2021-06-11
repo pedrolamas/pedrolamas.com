@@ -7041,10 +7041,10 @@ gatsby-plugin-sitemap@^4.3.0:
     minimatch "^3.0.4"
     sitemap "^7.0.0"
 
-gatsby-plugin-twitter@^3.7.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-3.7.0.tgz#3d51b8848f13d3d38817bad24e3701945dd20181"
-  integrity sha512-nY5Ioevo+NTqG2g6FPNOGPz3rhJRRhvtaYITBic/OhLerDv5aBebzDVs0105TzntYpjIbsUEy1r09cIzv6vV2A==
+gatsby-plugin-twitter@^3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-3.7.1.tgz#54e099042343dcd7265624da3f5256c83f858e3b"
+  integrity sha512-N+pnrlaWeAA/1VLFQMtO/vRah62gcOwpLclVo+xJEDnPD8w4Gz1a1Z8eYeKWsQNzZHWx8FY+F3bfBVjJDSIsyw==
   dependencies:
     "@babel/runtime" "^7.14.0"
 
