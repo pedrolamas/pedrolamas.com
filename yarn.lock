@@ -7794,18 +7794,18 @@ gatsby-plugin-sass@^4.7.1:
     resolve-url-loader "^3.1.2"
     sass-loader "^10.1.1"
 
-gatsby-plugin-sharp@^3.7.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-3.7.0.tgz#e126514a93106269efae5cf6f58e67aa7f495fca"
-  integrity sha512-C9M259wCdcDshx7isTHzX1tbGzY453h0vORih96X8ClDHGkfHvZW4QW+4WKC4d7ffWTM/xsagDcgsrwFM2fOLg==
+gatsby-plugin-sharp@^3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-3.7.1.tgz#4ed5aab484f2eeb8115923127a363e1ab56ff32e"
+  integrity sha512-rwtXrGIZ/Tsf8JgxHcEa82lTYMMZL4KUgbEgQ/OMXuMWcvyTeh4pJAwTNk/rxOS8yyVlCY1TiWO0/I65W4osJA==
   dependencies:
     "@babel/runtime" "^7.14.0"
     async "^3.2.0"
     bluebird "^3.7.2"
     filenamify "^4.2.0"
     fs-extra "^9.1.0"
-    gatsby-core-utils "^2.7.0"
-    gatsby-telemetry "^2.7.0"
+    gatsby-core-utils "^2.7.1"
+    gatsby-telemetry "^2.7.1"
     got "^10.7.0"
     imagemin "^7.0.1"
     imagemin-mozjpeg "^9.0.0"
@@ -8006,7 +8006,7 @@ gatsby-source-filesystem@^3.7.1:
     valid-url "^1.0.9"
     xstate "^4.14.0"
 
-gatsby-telemetry@^2.7.0, gatsby-telemetry@^2.7.1:
+gatsby-telemetry@^2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-2.7.1.tgz#161a590f18368b93adfa9d9e49d7f0154be62c54"
   integrity sha512-nZgM5SYkS7AWE4NJ/HGrQkUBn7B1k8d6KuRVgv1HanHQxnKUBaWL/6ej/ZBYcvfRBWMCi2mX0QJYlSKVx45XOw==
