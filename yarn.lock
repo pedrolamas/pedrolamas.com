@@ -594,7 +594,7 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.16.tgz#cc31257419d2c3189d394081635703f549fc1ed4"
   integrity sha512-c/+u9cqV6F0+4Hpq01jnJO+GLp2DdT63ppz9Xa+6cHaajM9VFzK/iDXiKK65YtpeVwu+ctfS6iqlMqRgQRzeCw==
 
-"@babel/parser@^7.0.0", "@babel/parser@^7.10.5", "@babel/parser@^7.12.13", "@babel/parser@^7.12.7", "@babel/parser@^7.14.0", "@babel/parser@^7.14.4", "@babel/parser@^7.14.5", "@babel/parser@^7.7.0":
+"@babel/parser@^7.0.0", "@babel/parser@^7.10.5", "@babel/parser@^7.12.13", "@babel/parser@^7.12.7", "@babel/parser@^7.14.0", "@babel/parser@^7.14.5", "@babel/parser@^7.7.0":
   version "7.14.5"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.14.5.tgz#4cd2f346261061b2518873ffecdf1612cb032829"
   integrity sha512-TM8C+xtH/9n1qzX+JNHi7AN2zHMTiPUtspO0ZdHflW8KaskkALhMmuMHb4bCmNdv9VAPzJX3/bXqkVLnAvsPfg==
@@ -4078,7 +4078,7 @@ babel-plugin-polyfill-regenerator@^0.2.2:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.2.2"
 
-babel-plugin-remove-graphql-queries@^3.7.0, babel-plugin-remove-graphql-queries@^3.7.1:
+babel-plugin-remove-graphql-queries@^3.7.1:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-3.7.1.tgz#e041f933dd08556b7786cb4fd44ccb99c8dffaa6"
   integrity sha512-9fANNkzCZJ0i65FXGnoeg/knDPC3riazCDyRrcH/2DVovxChAMSN2mqh/7eohJ8IrB/0e6cwLO4VirqanSk1Hw==
@@ -7660,21 +7660,21 @@ gatsby-plugin-google-analytics@^3.7.1:
     "@babel/runtime" "^7.14.0"
     minimatch "3.0.4"
 
-gatsby-plugin-image@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-1.7.0.tgz#b0b785b5f5a80dadf5f29ec18ace96a56676fcab"
-  integrity sha512-iXEWaZadSwwqoADkvX1OnP2E4nc/ZTz/jlxkXsnBkWwij5XSppkRYmo/JZZnB59lGCF0QtaXZBNYpwGBK+xCcw==
+gatsby-plugin-image@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-1.7.1.tgz#07d8f14b9c37b294a38d4151dbf80e21cfaabaff"
+  integrity sha512-1wUgNNc4e1ySNaDgH3yEs6HYZ8W4s0IAFU945SQtASknrR9o69WpeWPBllQwDrlq/1jlzetMTCiMISHvc7aqqQ==
   dependencies:
-    "@babel/code-frame" "^7.12.13"
-    "@babel/parser" "^7.14.4"
-    "@babel/traverse" "^7.14.2"
+    "@babel/code-frame" "^7.14.0"
+    "@babel/parser" "^7.14.0"
+    "@babel/traverse" "^7.14.0"
     babel-jsx-utils "^1.1.0"
-    babel-plugin-remove-graphql-queries "^3.7.0"
+    babel-plugin-remove-graphql-queries "^3.7.1"
     camelcase "^5.3.1"
     chokidar "^3.5.1"
     common-tags "^1.8.0"
     fs-extra "^8.1.0"
-    gatsby-core-utils "^2.7.0"
+    gatsby-core-utils "^2.7.1"
     objectFitPolyfill "^2.3.0"
     prop-types "^15.7.2"
 
