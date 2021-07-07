@@ -1,0 +1,15 @@
+name: Auto-Merge Dependabot PRs
+
+on:
+  pull_request:
+
+jobs:
+  auto-merge:
+    name: Auto-Merge Dependabot PRs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ahmadnassri/action-dependabot-auto-merge@v2
+        with:
+          target: minor
+          github-token: ${{ github.token }}

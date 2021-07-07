@@ -106,7 +106,7 @@
     "webpack": "^5.24.2"
   },
   "engines": {
-    "node": ">=12.0",
+    "node": ">=14.0",
     "npm": "npm is not supported",
     "yarn": ">=1.22"
   },
