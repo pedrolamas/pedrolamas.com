@@ -6861,10 +6861,10 @@ gatsby-plugin-mdx@^2.9.0:
     unist-util-remove "^1.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-plugin-netlify@^3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-3.8.0.tgz#615e10e0d42d69d517f257c98204a1759a79c47d"
-  integrity sha512-HLA5txTGi/Sg/rSsCvsqKqK34IxsvzUiFPlBgf/OFcdQ1vnRmFTT5/cjHZQ3/OwL/++xxEw10bKRv+Z3LdKIPA==
+gatsby-plugin-netlify@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-3.9.0.tgz#c01f07dcecfe29f4d026e5352a1fbbecf585dd0a"
+  integrity sha512-umhw3NciYFgQzlhgUMZqCsKPPx2e3/ck95J3iFk377XcWG6QjWcZi9ikkrhnqBcns9ETBV14zuA2v6/vnNuPLA==
   dependencies:
     "@babel/runtime" "^7.14.0"
     fs-extra "^8.1.0"
