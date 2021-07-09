@@ -5,6 +5,7 @@
 [![gatsby version](https://img.shields.io/github/package-json/dependency-version/pedrolamas/pedrolamas.com/gatsby)](https://www.npmjs.com/package/gatsby)
 [![License](https://img.shields.io/github/license/pedrolamas/pedrolamas.com)](https://github.com/pedrolamas/pedrolamas.com/blob/master/LICENSE)
 [![Twitter Follow](https://img.shields.io/twitter/follow/pedrolamas?style=social)](https://twitter.com/pedrolamas)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpedrolamas%2Fpedrolamas.com.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpedrolamas%2Fpedrolamas.com?ref=badge_shield)
 
 This is the source for [pedrolamas.com](https://www.pedrolamas.com).
 
@@ -17,3 +18,6 @@ The following directories and their contents are Copyright Pedro Lamas. You may 
 - /content
 
 All other directories and files are MIT Licensed. Feel free to use any of it as you please.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpedrolamas%2Fpedrolamas.com.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpedrolamas%2Fpedrolamas.com?ref=badge_large)
