@@ -43,7 +43,7 @@
     "gatsby-plugin-eslint": "^3.0.0",
     "gatsby-plugin-feed-generator": "^2.0.5",
     "gatsby-plugin-google-analytics": "^3.9.0",
-    "gatsby-plugin-image": "^1.9.0",
+    "gatsby-plugin-image": "^1.10.0",
     "gatsby-plugin-manifest": "^3.9.0",
     "gatsby-plugin-mdx": "^2.9.0",
     "gatsby-plugin-netlify": "^3.9.0",
