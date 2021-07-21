@@ -68,7 +68,7 @@ const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children })
                 }
               }
             }
-            googleAnalytics
+            googleGtag
             disqusShortname
           }
         }

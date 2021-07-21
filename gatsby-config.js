@@ -194,11 +194,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: siteMetadata.googleAnalytics,
-        head: true,
-        respectDNT: true,
+        trackingIds: [siteMetadata.googleGtag],
+        pluginConfig: {
+          head: true,
+          respectDNT: true,
+        },
       },
     },
     `gatsby-plugin-robots-txt`,

@@ -37,6 +37,6 @@ module.exports = {
     ],
   },
 
-  googleAnalytics: `UA-1376452-1`,
+  googleGtag: `G-MBR2EXEDTY`,
   disqusShortname: `pedrolamas-com`,
 };

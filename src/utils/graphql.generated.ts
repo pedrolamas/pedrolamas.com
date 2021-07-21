@@ -293,7 +293,7 @@ export type SiteSiteMetadata = {
   timezone?: Maybe<Scalars['String']>;
   facebook?: Maybe<SiteSiteMetadataFacebook>;
   social?: Maybe<SiteSiteMetadataSocial>;
-  googleAnalytics?: Maybe<Scalars['String']>;
+  googleGtag?: Maybe<Scalars['String']>;
   disqusShortname?: Maybe<Scalars['String']>;
 };
 
@@ -2338,7 +2338,7 @@ export type SiteSiteMetadataFilterInput = {
   timezone?: Maybe<StringQueryOperatorInput>;
   facebook?: Maybe<SiteSiteMetadataFacebookFilterInput>;
   social?: Maybe<SiteSiteMetadataSocialFilterInput>;
-  googleAnalytics?: Maybe<StringQueryOperatorInput>;
+  googleGtag?: Maybe<StringQueryOperatorInput>;
   disqusShortname?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -2627,7 +2627,7 @@ export type SiteFieldsEnum =
   | 'siteMetadata___facebook___publisher'
   | 'siteMetadata___facebook___admins'
   | 'siteMetadata___social___links'
-  | 'siteMetadata___googleAnalytics'
+  | 'siteMetadata___googleGtag'
   | 'siteMetadata___disqusShortname'
   | 'port'
   | 'host'
@@ -4665,7 +4665,7 @@ export type RootLayoutQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type RootLayoutQuery = { site?: Maybe<{ siteMetadata: (
-      Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'siteUrl' | 'lang' | 'googleAnalytics' | 'disqusShortname'>
+      Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'siteUrl' | 'lang' | 'googleGtag' | 'disqusShortname'>
       & { logo?: Maybe<(
         Pick<File, 'publicURL'>
         & { childImageSharp?: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }
