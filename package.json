@@ -73,7 +73,7 @@
     "typeface-pt-sans": "^1.1.13"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^1.21.8",
+    "@graphql-codegen/cli": "^2.0.1",
     "@graphql-codegen/typescript": "^1.22.3",
     "@graphql-codegen/typescript-operations": "^1.18.4",
     "@types/node": "^16.4.10",
