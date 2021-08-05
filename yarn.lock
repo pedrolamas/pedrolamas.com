@@ -7164,17 +7164,17 @@ gatsby-remark-smartypants@^4.8.0:
     retext-smartypants "^4.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-source-filesystem@^3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.10.0.tgz#57f1e3d7d778177316651a42c9fb62e457e4997b"
-  integrity sha512-u5gNZ/p6ZX0RQ2em2Y6e7VYNolavadHagizSsdbgxXKGMtJJq+q2OElGDfAvmAs6htIZ1jx7sF+dpS5ZHuCixw==
+gatsby-source-filesystem@^3.11.0:
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.11.0.tgz#b9d67f9a685e8542d1be0f0917a6223b31a787e4"
+  integrity sha512-cKQ4yhzLfw8Gs0B1FtgsLu51iqF+BUu/UewLBtu61I7Qyym797ESqeAvBd0bdHYckXmWl7c3qhBd1531iOXp2w==
   dependencies:
     "@babel/runtime" "^7.14.6"
     better-queue "^3.8.10"
     chokidar "^3.4.3"
     file-type "^16.0.0"
     fs-extra "^8.1.0"
-    gatsby-core-utils "^2.10.0"
+    gatsby-core-utils "^2.11.0"
     got "^9.6.0"
     md5-file "^5.0.0"
     mime "^2.4.6"
@@ -7217,10 +7217,10 @@ gatsby-transformer-sharp@^3.10.0:
     semver "^7.3.4"
     sharp "^0.28.3"
 
-gatsby-transformer-yaml@^3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-yaml/-/gatsby-transformer-yaml-3.10.0.tgz#b6bdcfb5d5a0304e264f8715b4b42e2af3741c42"
-  integrity sha512-WyzkiaYn3SKAl7Q3HKGl4BNmisa28pDaQNuD7m+pqYdvdtNKmB7E3x+BTllgc31tXQ+HcYX9pOGUCV6YKO2/xA==
+gatsby-transformer-yaml@^3.11.0:
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-yaml/-/gatsby-transformer-yaml-3.11.0.tgz#6fb315b2e2c90e7ab394c072587745a178c10601"
+  integrity sha512-X3dc5/MdyYvDElrcWidJbs6ZTVcEJv0dVciMsNbHR0kOux5mA8s4nL6QAeqHrWSUbtCPdc+dBMQ8vSfSNtUlYg==
   dependencies:
     "@babel/runtime" "^7.14.6"
     js-yaml "^3.14.1"
