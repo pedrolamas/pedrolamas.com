@@ -56,7 +56,7 @@
     "gatsby-plugin-twitter": "^3.10.0",
     "gatsby-remark-acronyms": "^1.1.3",
     "gatsby-remark-copy-linked-files": "^4.7.0",
-    "gatsby-remark-images": "^5.7.0",
+    "gatsby-remark-images": "^5.8.0",
     "gatsby-remark-responsive-iframe": "^4.7.0",
     "gatsby-remark-smartypants": "^4.7.0",
     "gatsby-source-filesystem": "^3.10.0",
