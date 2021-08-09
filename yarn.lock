@@ -5057,11 +5057,6 @@ decompress@^4.0.0, decompress@^4.2.0:
     pify "^2.3.0"
     strip-dirs "^2.0.0"
 
-dedent@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/dedent/-/dedent-0.7.0.tgz#2495ddbaf6eb874abb0e1be9df22d2e5a544326c"
-  integrity sha1-JJXduvbrh0q7Dhvp3yLS5aVEMmw=
-
 deep-equal@^1.0.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.1.1.tgz#b5c98c942ceffaf7cb051e24e1434a25a2e6076a"
@@ -6758,7 +6753,7 @@ gatsby-cli@^3.11.0:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^2.10.0, gatsby-core-utils@^2.11.0:
+gatsby-core-utils@^2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-2.11.0.tgz#155aafe7962ba6ad9b3e72c784bba8a87f99ea6b"
   integrity sha512-t5PL1/MvTPSG6IeJn+Yd3Fxp0L3HfLI1vvVsmxXvxEiwDp5MJjjtZbrSnWpST1oylMSKI/UECUEKQUax9UJW+A==
@@ -7027,7 +7022,7 @@ gatsby-plugin-typescript@^3.11.0:
     "@babel/runtime" "^7.14.6"
     babel-plugin-remove-graphql-queries "^3.11.0"
 
-gatsby-plugin-utils@^1.10.0, gatsby-plugin-utils@^1.11.0:
+gatsby-plugin-utils@^1.11.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-1.11.0.tgz#f4c76e991fbda81d3dcafe93beaf37e830331a55"
   integrity sha512-MtWLv/63DRhWrorJFJsjIlwMLvQRMxFS2xbRirTbmlvhfU0YzL3Ax5kiRv673rxt8eaaZ7dHT6Ax/5ZPxNzdeA==
@@ -7183,7 +7178,7 @@ gatsby-source-filesystem@^3.11.0:
     valid-url "^1.0.9"
     xstate "^4.14.0"
 
-gatsby-telemetry@^2.10.0, gatsby-telemetry@^2.11.0:
+gatsby-telemetry@^2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-2.11.0.tgz#e5d2de76b3bfce6aa787d261830d21bbde8b92cd"
   integrity sha512-6GEcZpsY5N/+K+SGGdDHuOknjer6vsYLJsUuUWkz32t8OK9lE1cLvXIdO2eTHdS4rtWFM324a/yFMlizp59SbA==
@@ -9441,17 +9436,16 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lint-staged@^11.1.1:
-  version "11.1.1"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-11.1.1.tgz#9c2018b872654cf80b2b1ff5a10b6b74aef6e300"
-  integrity sha512-eTNGe6i78PSUUH2BZi1gZmGmNfb8IeN4z2OzMYxSZ1qnP1WXKn1E7D+OHwLbRDm/wQINnzIj0bsKJ6lLVSuZiQ==
+lint-staged@^11.1.2:
+  version "11.1.2"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-11.1.2.tgz#4dd78782ae43ee6ebf2969cad9af67a46b33cd90"
+  integrity sha512-6lYpNoA9wGqkL6Hew/4n1H6lRqF3qCsujVT0Oq5Z4hiSAM7S6NksPJ3gnr7A7R52xCtiZMcEUNNQ6d6X5Bvh9w==
   dependencies:
     chalk "^4.1.1"
     cli-truncate "^2.1.0"
     commander "^7.2.0"
     cosmiconfig "^7.0.0"
     debug "^4.3.1"
-    dedent "^0.7.0"
     enquirer "^2.3.6"
     execa "^5.0.0"
     listr2 "^3.8.2"
