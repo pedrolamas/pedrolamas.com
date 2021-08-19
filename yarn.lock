@@ -6945,10 +6945,12 @@ gatsby-plugin-env-variables@^2.1.0:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-env-variables/-/gatsby-plugin-env-variables-2.1.0.tgz#6204113d214e8854cbc9f6e90c6650c7035e277c"
   integrity sha512-TNApeosvOcDxOoxZuzJ3rK4rbR2Fvzvweszn22U+z7bVtZ09G8/MtZg14l3HPXQBwqWjsWJH+PrRP+Z+7W7N/A==
 
-gatsby-plugin-eslint@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-3.0.0.tgz#af6a70158f1751f03f804430aa8b1feeac7db97c"
-  integrity sha512-nvyLz067k8lmhWIalhgFCzlNIjHIabYPZXpARM0k4AGRJWOPgOxc5P0T+G/TjCvtSg4+jtKotbE5ranMbxIBiw==
+gatsby-plugin-eslint@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-4.0.0.tgz#c3f7b141fd1ae4eb87838829e5443a558881f238"
+  integrity sha512-f/SS2BqNtpt7BoLsaC6zug6UM0CwN1G+6uU2S/kb7/0HdBJgnf08OchNTE0HOyj7yxM0bj1CV5J1S3x/3Wk8ZQ==
+  dependencies:
+    webpack-merge "^5.8.0"
 
 gatsby-plugin-feed-generator@^2.0.5:
   version "2.0.5"
@@ -15504,7 +15506,7 @@ webpack-log@^2.0.0:
     ansi-colors "^3.0.0"
     uuid "^3.3.2"
 
-webpack-merge@^5.7.3:
+webpack-merge@^5.7.3, webpack-merge@^5.8.0:
   version "5.8.0"
   resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-5.8.0.tgz#2b39dbf22af87776ad744c390223731d30a68f61"
   integrity sha512-/SaI7xY0831XwP6kzuwhKWVKDP9t1QY1h65lAFLbZqMPIuYcD9QAW4u9STIbU9kaJbPBB/geU/gLr1wDjOhQ+Q==
