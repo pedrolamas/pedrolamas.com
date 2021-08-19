@@ -6865,12 +6865,12 @@ gatsby-plugin-feed-generator@^2.0.5:
     pify "^3.0.0"
     url-join "^4.0.1"
 
-gatsby-plugin-google-gtag@^3.11.0:
-  version "3.11.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-3.11.0.tgz#26a7bdf7dd760926732f2ea6907d4f4ad16deee3"
-  integrity sha512-3EKxKrqo4dR4QDz6aTr+FrEDPcjSqrotGoOW1Pfub+TTvR89dLcV7CbXnVNNmG4GHviIwXvN6bXtKww5ui7OEA==
+gatsby-plugin-google-gtag@^3.12.0:
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-3.12.0.tgz#a697034a4ee392b8f3f3b4fd728085efa4999b9a"
+  integrity sha512-tPk79choz1QUrOTPPYqhynPLzkemMdam072hmuZ4ke9rafC74WzYih7lbNKZJVGRJMeam0ca83M6GtbxChpD+w==
   dependencies:
-    "@babel/runtime" "^7.14.6"
+    "@babel/runtime" "^7.14.8"
     minimatch "^3.0.4"
 
 gatsby-plugin-image@^1.12.0:
