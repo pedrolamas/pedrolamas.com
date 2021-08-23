@@ -1,7 +1,7 @@
 ---
 title: Await your event handlers completion with Deferred Events
 date: 2017-04-04T14:55:59+01:00
-last_modified_at: 2019-11-13T19:06:45+00:00
+last_modified_at: 2021-08-23T17:13:13+01:00
 layout: post
 categories:
   - Windows
@@ -11,6 +11,10 @@ tags:
   - Deferred Events
   - .NET
   - .NET Standard
+---
+
+**Deprecation notice:** The DeferredEvents are now part of the [Microsoft.Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit) where it will be maintained from this point on.
+
 ---
 
 Developers should avoid `async void` methods, but there are some situations where this is a "necessary evil", and event handlers are one of those cases.
