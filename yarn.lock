@@ -14832,10 +14832,10 @@ typeface-pt-sans@^1.1.13:
   resolved "https://registry.yarnpkg.com/typeface-pt-sans/-/typeface-pt-sans-1.1.13.tgz#ae4ae13028bbad07173aafceb141912c48e3bcfe"
   integrity sha512-x7FsHrKhbanfwRF0UkRI7UuQqUHUw4yPJJ4T9+0JODSVHM2q607IgF0Kifdvw4echLlVAdwOYibObD+GS5UN6w==
 
-typescript@^4.3.5:
-  version "4.3.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.5.tgz#4d1c37cc16e893973c45a06886b7113234f119f4"
-  integrity sha512-DqQgihaQ9cUrskJo9kIyW/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu398C0UxmKSOrPumUzA==
+typescript@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.2.tgz#6d618640d430e3569a1dfb44f7d7e600ced3ee86"
+  integrity sha512-gzP+t5W4hdy4c+68bfcv0t400HVJMMd2+H9B7gae1nQlBzCqvrXX+6GL/b3GAgyTH966pzrZ70/fRjwAtZksSQ==
 
 ua-parser-js@^0.7.18:
   version "0.7.28"
