@@ -83,7 +83,7 @@
     "@types/react-helmet": "^6.1.2",
     "@types/underscore.string": "^0.0.38",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
-    "@typescript-eslint/parser": "^4.29.3",
+    "@typescript-eslint/parser": "^4.30.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
