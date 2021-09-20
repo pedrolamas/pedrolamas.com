@@ -6693,12 +6693,12 @@ gatsby-plugin-sitemap@^4.9.0:
     minimatch "^3.0.4"
     sitemap "^7.0.0"
 
-gatsby-plugin-twitter@^3.13.0:
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-3.13.0.tgz#6535fa96f79a043711c5540efdfb7db671d1dbd6"
-  integrity sha512-ov7SmFrq5Rjcp+6sCuuaKWmX+TfJggJhe7zegTgYJbO0ZjRwA+Pa8eIALObjWSqKI4eAUHiZr0IhPh4Wkr/3Bg==
+gatsby-plugin-twitter@^3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-3.14.0.tgz#5e4c61c27220811b208fb011329e45e5fcbbc171"
+  integrity sha512-SgyaHLdrVMu6kGomLuI4nmzbEYdLIU4z9DO1cTx4SbhMi9l3YgbjbcY6VQ0WYDyDGLajMOwcoh7qHA4MCA0vIw==
   dependencies:
-    "@babel/runtime" "^7.14.8"
+    "@babel/runtime" "^7.15.4"
 
 gatsby-plugin-typescript@^3.13.0:
   version "3.13.0"
