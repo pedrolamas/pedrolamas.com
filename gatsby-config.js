@@ -1,7 +1,10 @@
 const url = require('url');
+const path = require('path');
 
 const siteMetadata = require('./gatsby-site-metadata');
 const siteAcronyms = require('./gatsby-site-acronyms');
+
+const gatsbyRequiredRules = path.join(process.cwd(), 'node_modules', 'gatsby', 'dist', 'utils', 'eslint-rules');
 
 module.exports = {
   siteMetadata,
@@ -72,7 +75,7 @@ module.exports = {
         },
         gatsbyRemarkPlugins: [
           {
-            resolve: require.resolve(`./gatsby-remark-fix-urls`),
+            resolve: require.resolve(`./plugins/gatsby-remark-fix-urls`),
           },
           {
             resolve: `gatsby-remark-acronyms`,
@@ -179,17 +182,15 @@ module.exports = {
             }
             allSitePage {
               nodes {
-                context {
-                  lastModified
-                }
+                pageContext
                 path
               }
             }
           }
         `,
-        serialize: ({ path, context }) => ({
+        serialize: ({ path, pageContext }) => ({
           url: path,
-          lastmod: (context && context.lastModified) || null,
+          lastmod: (pageContext && pageContext.lastModified) || null,
         }),
       },
     },
@@ -210,13 +211,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-eslint`,
       options: {
-        test: /\.js$|\.jsx$|\.ts$|\.tsx$/,
-        exclude: /(node_modules|.cache|public)/,
+        rulePaths: [gatsbyRequiredRules],
         stages: [`develop`],
-        options: {
-          emitWarning: true,
-          failOnError: false,
-        },
+        extensions: [`js`, `jsx`, `ts`, `tsx`],
+        exclude: [`node_modules`, `.cache`, `public`],
       },
     },
     {

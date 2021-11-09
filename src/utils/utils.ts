@@ -80,6 +80,6 @@ export const SafeMetadataFromMdx = (mdx: Pick<GraphQl.Mdx, 'id'> & Partial<Graph
     categories: (frontmatter?.categories?.filter((x) => x) as string[]) ?? undefined,
     tags: (frontmatter?.tags?.filter((x) => x) as string[]) ?? undefined,
     image: frontmatter?.image ?? undefined,
-    originalFile: file?.base ?? undefined,
+    originalFile: file && 'base' in file ? file.base : undefined,
   };
 };
