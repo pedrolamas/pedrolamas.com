@@ -6392,10 +6392,10 @@ gatsby-cli@^4.1.1:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.1.0.tgz#bf01ebd78046606ac812591319b450516f75b448"
-  integrity sha512-ErgJr5xgjUoorhCVeyMyNfnZhxBTA33KRB/aFtFWNeTXFsUNlDZBqheSp2XAaD3+gvAmDqbz2m+jKF1sI8vLAg==
+gatsby-core-utils@^3.1.0, gatsby-core-utils@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.1.1.tgz#ba4ac26c43c803ef7322f8825bc9b94bdf8c9003"
+  integrity sha512-Z7H0UtKct5oukYkyyBMlRi1zpJfD2hhE5+eV6fYpHQCjlzmx2aSdumgFcDuQfJeqcnCSnfhlZM1wcaJ8WxI5Jg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     ci-info "2.0.0"
@@ -6769,15 +6769,15 @@ gatsby-remark-copy-linked-files@^5.1.0:
     probe-image-size "^6.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-images@^6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.1.1.tgz#bd8c4bc5838b4a7b2f0193dd387e363ae2bfe6e0"
-  integrity sha512-6Zlg5NlD3r1UR9rEJ8idU0nbgzGAF8ncN/e48SVKkjgG5IjI7r9HMIJYMvggH/iuQZB71ToxkIgtV4V+vCWzHQ==
+gatsby-remark-images@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.1.2.tgz#99a12e83eeb38ede49e77e7807f3288367fa5595"
+  integrity sha512-N0eq6+ANDbHg3oXrcvrbMbLXLhRG9Uy24xp/P37zo2a/TJS7bN1C29U6S2JDTuBcMeJEs8UpMnC71ESOFGgudg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.10"
-    gatsby-core-utils "^3.1.0"
+    gatsby-core-utils "^3.1.1"
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
     mdast-util-definitions "^4.0.0"
