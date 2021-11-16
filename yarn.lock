@@ -6825,17 +6825,17 @@ gatsby-remark-smartypants@^5.1.0:
     retext-smartypants "^4.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-source-filesystem@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-4.1.2.tgz#20675ae88cdcb56e78da591e0632c357349766c6"
-  integrity sha512-f4oa3+3i3Y2IgTwHaI7EO9cQO9YW4tx3h89gnSKMeD5QjofQGivBjGsGETFMCa16kKARAdLGEITdl09A8ltcyQ==
+gatsby-source-filesystem@^4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-4.1.3.tgz#bc765d7ccb60a11386241af26a933597ab52a705"
+  integrity sha512-X3r58Mwq8jXlnA1ZJmzx2bynE2iJQKsiGyDqnC4T606LbMLnIwLLyu6n9oQ1K41zXT7KtEp6r+12BhgsTTp97A==
   dependencies:
     "@babel/runtime" "^7.15.4"
     chokidar "^3.5.2"
     fastq "^1.11.1"
     file-type "^16.5.3"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.1.2"
+    gatsby-core-utils "^3.1.3"
     got "^9.6.0"
     md5-file "^5.0.0"
     mime "^2.5.2"
