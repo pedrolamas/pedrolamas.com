@@ -6478,10 +6478,10 @@ gatsby-plugin-feed-generator@^2.0.5:
     pify "^3.0.0"
     url-join "^4.0.1"
 
-gatsby-plugin-google-gtag@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-4.1.0.tgz#75951cbe484ac5f1066062adc2df564cf9d68662"
-  integrity sha512-h2O90Lf/BdM2lmoox0OEumsKRyx8rI3kYL8uOtTvQDbsNGfrMC3iDAnb+V3l2oitm+ghvNW6AdCDyzwLpxMtKg==
+gatsby-plugin-google-gtag@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-4.2.0.tgz#614d6f36f0231ef0f9232619dc479ee37738ff21"
+  integrity sha512-PDF4HByjG02t699il90rCV/37EjtGLC+QFjZV6i8EBLO6QRdiFGVrdN5gTaqTlf4hGrlRAicE2L2XhYbSOnoTg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     minimatch "^3.0.4"
