@@ -55,7 +55,7 @@
     "gatsby-plugin-sitemap": "^5.1.1",
     "gatsby-plugin-twitter": "^4.1.1",
     "gatsby-remark-acronyms": "^1.1.4",
-    "gatsby-remark-copy-linked-files": "^5.1.0",
+    "gatsby-remark-copy-linked-files": "^5.2.0",
     "gatsby-remark-images": "^6.1.4",
     "gatsby-remark-responsive-iframe": "^5.1.0",
     "gatsby-remark-smartypants": "^5.1.0",
