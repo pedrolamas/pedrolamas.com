@@ -6468,10 +6468,10 @@ gatsby-page-utils@^2.2.0:
     lodash "^4.17.21"
     micromatch "^4.0.4"
 
-gatsby-plugin-env-variables@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-env-variables/-/gatsby-plugin-env-variables-2.1.0.tgz#6204113d214e8854cbc9f6e90c6650c7035e277c"
-  integrity sha512-TNApeosvOcDxOoxZuzJ3rK4rbR2Fvzvweszn22U+z7bVtZ09G8/MtZg14l3HPXQBwqWjsWJH+PrRP+Z+7W7N/A==
+gatsby-plugin-env-variables@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-env-variables/-/gatsby-plugin-env-variables-2.2.0.tgz#75793854688be8773cdc3a1e1b10f04b1836bbe6"
+  integrity sha512-znnUNqNmGE4qIq+nTaQeiTz54PQw3QRPflWWWtQg5V9ke3QcamEDVbJ1S1a2Afl5pXO7qCiXNaMMb8NFnNHdLw==
 
 gatsby-plugin-eslint@^4.0.2:
   version "4.0.2"
