@@ -6613,10 +6613,10 @@ gatsby-plugin-sitemap@^5.4.0:
     minimatch "^3.0.4"
     sitemap "^7.0.0"
 
-gatsby-plugin-twitter@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-4.3.0.tgz#9ca3c3bb98daca329e9e4f2ead19b41467309589"
-  integrity sha512-VaN+MixnqynWzCt70PCdfHRDDKRe6j+3U36MsCMucabeqhsY8vieSgMrnr6i8ElEFuOSc93z7xZP/OYz+6xtOg==
+gatsby-plugin-twitter@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-4.4.0.tgz#ebce21bdc68a0952560cdc1fafa41d5a7bd29b4f"
+  integrity sha512-QSMQ3g4caG6i5hcBIcLh68LWQrsIzBLB/LSEpdYBxEzTGGfcwxBbkNcdzf2W+Pfyq5QybnLB/9Ne1RfWaIjbYQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
