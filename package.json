@@ -80,7 +80,7 @@
     "@graphql-codegen/typescript-operations": "^2.2.1",
     "@types/node": "^16.11.13",
     "@types/prismjs": "^1.16.6",
-    "@types/react": "^17.0.37",
+    "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "@types/react-helmet": "^6.1.4",
     "@types/underscore.string": "^0.0.38",
