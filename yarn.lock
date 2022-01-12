@@ -4072,7 +4072,7 @@ babel-plugin-polyfill-regenerator@^0.3.0:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.3.0"
 
-babel-plugin-remove-graphql-queries@^4.4.0, babel-plugin-remove-graphql-queries@^4.5.0:
+babel-plugin-remove-graphql-queries@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.5.0.tgz#fbd4a8f8b051e02d1a29e9e5cbcf6b3d7eb91335"
   integrity sha512-IzKelZCZ4XrbO+Dzlr/U8pNqtUkluE3wkciMDaaOGS1GglVm8p3f0Gsca+U3upevS4VTwjrGmiSkBpgMJelu8g==
@@ -7213,22 +7213,22 @@ gatsby-plugin-google-gtag@^4.5.0:
     "@babel/runtime" "^7.15.4"
     minimatch "^3.0.4"
 
-gatsby-plugin-image@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.4.0.tgz#fd960393043e856eb70d998dc34ad96a738162a8"
-  integrity sha512-PKhbefaamdahm1ysKO1d54vnzmIsjR+/qtyFnZumGu8E7O9lN5is0RlXgpNCvsckL+XzcqyMljytt/bYf8L5WA==
+gatsby-plugin-image@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.5.0.tgz#59a5aa4336789aeef498b9972b9bcc2d820a5bad"
+  integrity sha512-EaL/82by1G0WrSMcGvj24bwes+EbQZSeeMCL8tg7Q6t/69YhdljVRLsdbGU0+1rQ49e+kc0Sa7VdeRvnJv9dew==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/parser" "^7.15.5"
     "@babel/runtime" "^7.15.4"
     "@babel/traverse" "^7.15.4"
     babel-jsx-utils "^1.1.0"
-    babel-plugin-remove-graphql-queries "^4.4.0"
+    babel-plugin-remove-graphql-queries "^4.5.0"
     camelcase "^5.3.1"
     chokidar "^3.5.2"
     common-tags "^1.8.2"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.4.0"
+    gatsby-core-utils "^3.5.0"
     objectFitPolyfill "^2.3.5"
     prop-types "^15.7.2"
 
