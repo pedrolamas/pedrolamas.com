@@ -53,6 +53,12 @@ abbr[title] {
   border-bottom: inherit;
 }
 
+.gatsby-image-wrapper {
+  img {
+    border-radius: inherit;
+  }
+}
+
 .sidebar-about {
   .sidebar-logo {
     width: 100px;
