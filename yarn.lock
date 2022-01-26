@@ -6735,14 +6735,6 @@ gatsby-plugin-typescript@^4.6.0:
     "@babel/runtime" "^7.15.4"
     babel-plugin-remove-graphql-queries "^4.6.0"
 
-gatsby-plugin-utils@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-2.5.0.tgz#33c343faa01577df032d4cf53c7c2b04b0b19248"
-  integrity sha512-B/JpKTQJQNRVo3b3rRbOgHKV3/i3V5fYLPOGvBU6qHxBtQ9I5YYwXrsLJYX5vl4bEtLtrkiQG9zQyvSSXzJ9Sw==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-    joi "^17.4.2"
-
 gatsby-plugin-utils@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.0.0.tgz#2f19eaf5f43cacd74c1edfe4f46385f1694e8c79"
@@ -6766,10 +6758,10 @@ gatsby-remark-acronyms@^1.1.4:
   dependencies:
     unist-util-visit "^2.0.3"
 
-gatsby-remark-copy-linked-files@^5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.5.0.tgz#2d4d0791144a0686fe3e8f5edf1a7b802ba0b5a6"
-  integrity sha512-RrntAHQErYpuk3lETieMKykIkaOFOSAbbjQGJq/3XKPqjyG2WatzdKRMTnw9cixH/u+DWpw59Z2bZMDpD6ncxg==
+gatsby-remark-copy-linked-files@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.6.0.tgz#05d1aaecbb1a1114b1339071fde0429ed3c41671"
+  integrity sha512-/gsuAK7KNj9Zuc0ADo6m5rhxemRcPulHKNEr/7VSH521/mZwp6FxK6Co0ngxfL6Z5I4ha65IBCcAFgdPksQQeA==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
