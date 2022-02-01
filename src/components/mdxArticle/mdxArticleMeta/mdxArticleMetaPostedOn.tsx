@@ -10,8 +10,15 @@ type MdxArticleMetaPostedOnProps = {
 
 const MdxArticleMetaPostedOn: React.FunctionComponent<MdxArticleMetaPostedOnProps> = () => {
   const { meta } = React.useContext(MdxContext);
+  const [localDate, setDate] = React.useState<Date | undefined>(undefined);
 
   const { url, date, dateFormatted } = meta;
+
+  React.useEffect(() => {
+    if (!date) return;
+
+    setDate(new Date(date));
+  }, [date]);
 
   return (
     <>
@@ -21,7 +28,7 @@ const MdxArticleMetaPostedOn: React.FunctionComponent<MdxArticleMetaPostedOnProp
 
           <span className="screen-reader-text">Posted on </span>
 
-          <Link to={url} rel="bookmark">
+          <Link to={url} rel="bookmark" title={localDate?.toLocaleString()}>
             <time dateTime={date}>{dateFormatted}</time>
           </Link>
         </span>
