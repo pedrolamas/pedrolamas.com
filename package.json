@@ -76,7 +76,7 @@
     "@babel/eslint-parser": "^7.17.0",
     "@babel/preset-react": "^7.16.7",
     "@graphql-codegen/cli": "^2.5.0",
-    "@graphql-codegen/typescript": "^2.4.0",
+    "@graphql-codegen/typescript": "^2.4.3",
     "@graphql-codegen/typescript-operations": "^2.2.3",
     "@types/node": "^17.0.14",
     "@types/prismjs": "^1.26.0",
