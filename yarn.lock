@@ -7100,22 +7100,22 @@ gatsby-plugin-google-gtag@^4.9.0:
     "@babel/runtime" "^7.15.4"
     minimatch "^3.0.4"
 
-gatsby-plugin-image@^2.8.1:
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.8.1.tgz#b494fb7b237c846b68bd07877e7db456962b2483"
-  integrity sha512-ADp3Wsgb9eiwJknjDPuM8pBdkZpyOPwm/OWm7RFdKbrtfziteIFelSvwd374cqVo9TMqbs8yqXm1trgUOWJ5qw==
+gatsby-plugin-image@^2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.9.0.tgz#4656dec9c93aec233792012ec952328e3dd702f7"
+  integrity sha512-2LIKmwACRNXBnh30zNhlfEDjSPL60G8vi4ZRAmMpywq7SVXJJ63lKiBRF+g2aKcN/hW0hvBPh0hgQifxSBhbYA==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/parser" "^7.15.5"
     "@babel/runtime" "^7.15.4"
     "@babel/traverse" "^7.15.4"
     babel-jsx-utils "^1.1.0"
-    babel-plugin-remove-graphql-queries "^4.8.1"
+    babel-plugin-remove-graphql-queries "^4.9.0"
     camelcase "^5.3.1"
     chokidar "^3.5.2"
     common-tags "^1.8.2"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.8.1"
+    gatsby-core-utils "^3.9.0"
     objectFitPolyfill "^2.3.5"
     prop-types "^15.7.2"
 
