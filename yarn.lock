@@ -3892,7 +3892,7 @@ babel-plugin-polyfill-regenerator@^0.3.0:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.3.1"
 
-babel-plugin-remove-graphql-queries@^4.9.0, babel-plugin-remove-graphql-queries@^4.9.1:
+babel-plugin-remove-graphql-queries@^4.9.1:
   version "4.9.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.9.1.tgz#75290c6dd840d28343dc47f9517a634e02255b80"
   integrity sha512-Mg+NB34cjdV6rIGIahMe0qij3KpWf7M8NFe8J1w2kxjQty4mpGX2qqmMUHhwxqwVWAhH1LZeiqitFZ6D/+CbJg==
@@ -7332,15 +7332,15 @@ gatsby-remark-copy-linked-files@^5.9.0:
     probe-image-size "^6.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-images@^6.9.0:
-  version "6.9.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.9.0.tgz#53872d8440285b3d2b0f5e073753236639f32578"
-  integrity sha512-7Eet9r1D6rrwmJFSf8gi5eeFdnC926xaC7fNGenSzlByK0XHv6wN8n/MYKrbeDbagGayJv8Uvi2XZoXDBXx9jA==
+gatsby-remark-images@^6.9.1:
+  version "6.9.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.9.1.tgz#61ff17e233a0cc7c0655616b2dfe93efadabdc30"
+  integrity sha512-Z4/Agg/5a+MQYtepY3QmvUMoEBOuxN0p5SEYDAsVNklEK3lfG5TQ3VNFrM9AvauLCrYzSN4GY9K9x9BUH5oC2Q==
   dependencies:
     "@babel/runtime" "^7.15.4"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.10"
-    gatsby-core-utils "^3.9.0"
+    gatsby-core-utils "^3.9.1"
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
     mdast-util-definitions "^4.0.0"
@@ -7396,7 +7396,7 @@ gatsby-source-filesystem@^4.9.1:
     valid-url "^1.0.9"
     xstate "^4.26.1"
 
-gatsby-telemetry@^3.9.0, gatsby-telemetry@^3.9.1:
+gatsby-telemetry@^3.9.1:
   version "3.9.1"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-3.9.1.tgz#3c20c7e0cb363ccaae41fb581ab289330b5d7f69"
   integrity sha512-ChXTshfvo5njd/u6kSZErDUvc/uSmtOEuo7wrt/68Xjz2JVG6nsLlRxaZpx0DxnDAInouItMVX0VF40RAU7qKg==
