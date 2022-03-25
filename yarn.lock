@@ -6975,7 +6975,7 @@ gatsby-cli@^4.10.2:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.10.0, gatsby-core-utils@^3.10.1, gatsby-core-utils@^3.5.2, gatsby-core-utils@^3.8.2:
+gatsby-core-utils@^3.10.1, gatsby-core-utils@^3.5.2, gatsby-core-utils@^3.8.2:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.10.1.tgz#0f5e6aeda5ef4b86218b27480a9766fe30af4393"
   integrity sha512-WqNMm0u1CAZm6Q+UQ4dDHwIAt3l32NeIaPuSXmDX7QcMGR3FUUk8cl2Ym6gx1hfILm1aCexqfaSCLUXtaWKkbQ==
@@ -7262,10 +7262,10 @@ gatsby-plugin-sitemap@^5.10.2:
     minimatch "^3.0.4"
     sitemap "^7.0.0"
 
-gatsby-plugin-twitter@^4.10.1:
-  version "4.10.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-4.10.1.tgz#7330d85184d06bcbafb5b7e3036777864936feeb"
-  integrity sha512-7U4pVfv5HHzw6M9RRCQmZcmo43jWZPjXIUykhMpFpENYDinQDglEX5kZbaxGFTc+gjuB84RUQPPCIrPTPqCiow==
+gatsby-plugin-twitter@^4.10.2:
+  version "4.10.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-4.10.2.tgz#cafeb4a9f800a53303da23489be6ab33142ed3e5"
+  integrity sha512-Zt/olbFFxn8CsRDuWXkDG2/jd2KOB5XQbqExP+pNQATr8uduBJtRduk8IokdPFnk56FHS5mhJxpaAT3lq6y5Ww==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
@@ -7282,7 +7282,7 @@ gatsby-plugin-typescript@^4.10.1:
     "@babel/runtime" "^7.15.4"
     babel-plugin-remove-graphql-queries "^4.10.1"
 
-gatsby-plugin-utils@^3.4.1, gatsby-plugin-utils@^3.4.2:
+gatsby-plugin-utils@^3.4.2:
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.4.2.tgz#bdc66fd52c052c91af443981e1facbc097429dc7"
   integrity sha512-HkVR8BnEdc915pmY2L9wPwFgjq303ThMH9UtT+frDOPzn+GFjPlBF5+YGJ3tZaxH0ouwpnGTn3Pu37tcRZcctA==
