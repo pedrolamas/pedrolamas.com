@@ -7218,10 +7218,10 @@ gatsby-plugin-robots-txt@^1.7.0:
     "@babel/runtime" "^7.16.7"
     generate-robotstxt "^8.0.3"
 
-gatsby-plugin-sass@^5.10.2:
-  version "5.10.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-5.10.2.tgz#c5657d5cc17aa894e000ba5e092f4019dded329d"
-  integrity sha512-jlsGnYlMElapqTEBVEZTCmh50YFwLhsXieXY6cZhRhXESciE6VfU47bqgxbsWIceqxuVJ/SIhmwAk4xP7qKBhA==
+gatsby-plugin-sass@^5.11.0:
+  version "5.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-5.11.0.tgz#dea950379ed4c4ec6ec4049422f47bf7daeb3295"
+  integrity sha512-IqFUMsy3n0jEGq5CpuEK52gj1WxxEuum4SwTJtM2tm5RBCUHWAY3FbqgklPzJL3481KUuE+nc5lZuX5yFepJLg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     resolve-url-loader "^3.1.4"
@@ -7371,14 +7371,6 @@ gatsby-sharp@^0.5.0:
     "@types/sharp" "^0.29.5"
     sharp "^0.30.1"
 
-gatsby-sharp@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-sharp/-/gatsby-sharp-0.5.0.tgz#879d3c462eefa917cb3a50c6ec891951d9740f56"
-  integrity sha512-9wZS0ADZsKTCsU66sxIP/tCHgFaREyoYm53tepgtp/YSVWNrurx9/0kGf8XsFFY9OecrqIRNuk1cWe7XKCpbQA==
-  dependencies:
-    "@types/sharp" "^0.29.5"
-    sharp "^0.30.1"
-
 gatsby-source-filesystem@^4.10.1:
   version "4.10.1"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-4.10.1.tgz#c513fadb3cedb138ff28ba351ffd264524a0c28d"
@@ -7397,7 +7389,7 @@ gatsby-source-filesystem@^4.10.1:
     valid-url "^1.0.9"
     xstate "^4.26.1"
 
-gatsby-telemetry@^3.10.1, gatsby-telemetry@^3.11.0:
+gatsby-telemetry@^3.11.0:
   version "3.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-3.11.0.tgz#3d50f36e67bc9a21278b337c1faecf8216538cd3"
   integrity sha512-OXtGdzCjTnLDaM6I7ACoSUAo7NYiQYUhEsrDZ1diGX4f2MEb1p+aLKWXh8Xn69+rpDTw7VjMb6u7ATsOqIOrhQ==
