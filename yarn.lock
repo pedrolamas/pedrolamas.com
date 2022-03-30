@@ -3892,13 +3892,13 @@ babel-plugin-polyfill-regenerator@^0.3.0:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.3.1"
 
-babel-plugin-remove-graphql-queries@^4.10.1:
-  version "4.10.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.10.1.tgz#09357b7afad1d1bf359d97701ba267bf968197f4"
-  integrity sha512-1Irx5lUoQtU56u1hMtrgipjlRsUF4Pz6WDCDNVyTuvcHqlKHQK6pna4igHrdoWhSSgEcbimlxSy6tTvP6bkplg==
+babel-plugin-remove-graphql-queries@^4.10.1, babel-plugin-remove-graphql-queries@^4.11.0:
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.11.0.tgz#3911e99376fd03ab2a90efb9b23a25c0a2335e4c"
+  integrity sha512-e5zarZEx7CZLenV5vYA/v0Rcv0KevLUU47ggtP5jGFzuGujpBj9+alzW0ZwDQe4RqiXDQwedC0s8ZRvLjClOnA==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    gatsby-core-utils "^3.10.1"
+    gatsby-core-utils "^3.11.0"
 
 babel-plugin-syntax-object-rest-spread@^6.8.0:
   version "6.13.0"
@@ -6975,10 +6975,10 @@ gatsby-cli@^4.10.2:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.10.1, gatsby-core-utils@^3.5.2, gatsby-core-utils@^3.8.2:
-  version "3.10.1"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.10.1.tgz#0f5e6aeda5ef4b86218b27480a9766fe30af4393"
-  integrity sha512-WqNMm0u1CAZm6Q+UQ4dDHwIAt3l32NeIaPuSXmDX7QcMGR3FUUk8cl2Ym6gx1hfILm1aCexqfaSCLUXtaWKkbQ==
+gatsby-core-utils@^3.10.1, gatsby-core-utils@^3.11.0, gatsby-core-utils@^3.5.2, gatsby-core-utils@^3.8.2:
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.11.0.tgz#cd78bf1a3fa89e201dd35a5d3a8c4029d7614a9d"
+  integrity sha512-ye8ULSmSdv27sOGu2g2qQiSXhxhlgkq/O+4p+yftDn+VeQMVRx/yWinhN/GfH7ahQq6mC0wYRehkbE4GK6Ga8g==
   dependencies:
     "@babel/runtime" "^7.15.4"
     ci-info "2.0.0"
@@ -7087,22 +7087,22 @@ gatsby-plugin-google-gtag@^4.10.0:
     "@babel/runtime" "^7.15.4"
     minimatch "^3.0.4"
 
-gatsby-plugin-image@^2.10.1:
-  version "2.10.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.10.1.tgz#7b9eda7334487dd0e4693996cf3664835e9c356e"
-  integrity sha512-ZFcaKkVz6h18jRzP9HHCcXzyIc/Gj57NZSycOWFxW9KLqkq3NZXVx3mkV9EQ+rup8r3RLiJu/AXEorZEy7iAhQ==
+gatsby-plugin-image@^2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.11.0.tgz#d527e135c7a0623fad60449756284aef66a27c50"
+  integrity sha512-tRNofGNUK9K6IrkPFj+m4oKPV4KxEzx+CFBD2kyDm0EMyUv4HJKNYoe+VppYJo7x0qUMFcChBo+RCAuVKiD+Fw==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/parser" "^7.15.5"
     "@babel/runtime" "^7.15.4"
     "@babel/traverse" "^7.15.4"
     babel-jsx-utils "^1.1.0"
-    babel-plugin-remove-graphql-queries "^4.10.1"
+    babel-plugin-remove-graphql-queries "^4.11.0"
     camelcase "^5.3.1"
     chokidar "^3.5.2"
     common-tags "^1.8.2"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.10.1"
+    gatsby-core-utils "^3.11.0"
     objectFitPolyfill "^2.3.5"
     prop-types "^15.7.2"
 
