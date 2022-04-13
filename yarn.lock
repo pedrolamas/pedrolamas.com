@@ -7360,10 +7360,10 @@ gatsby-remark-responsive-iframe@^5.11.0:
     lodash "^4.17.21"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-smartypants@^5.11.0:
-  version "5.11.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-5.11.0.tgz#8e5e220499761ed9894ed26674fedff634e68d61"
-  integrity sha512-s+SSmsC09CiYDssdTsYZAmzuR1iPc/7zBVsXDHAGYP6sSTLy18ParZzBzntPVhC9G9bd7qFIUdqpwI7B23Nl+Q==
+gatsby-remark-smartypants@^5.12.1:
+  version "5.12.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-5.12.1.tgz#d1e5bfd4012cff34318f88772800d0f617aab0f4"
+  integrity sha512-lhEoRgazjKi+7pX6dk5ySZ9SZu0+uMJVTqk6pQul5KkS9+4JYfExT9/mREkZV6m0FZC4KF588+WYwYaeT3ReIg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     retext "^7.0.1"
@@ -11525,7 +11525,7 @@ prismjs@^1.27.0:
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.27.0.tgz#bb6ee3138a0b438a3653dd4d6ce0cc6510a45057"
   integrity sha512-t13BGPUlFDR7wRB5kQDG4jjl7XeuH6jbJGt11JHPL96qwsEHNX2+68tFXqc1/k+/jALsbSWJKUOT/hcYAZ5LkA==
 
-probe-image-size@^7.0.0, probe-image-size@^7.2.3:
+probe-image-size@^7.2.3:
   version "7.2.3"
   resolved "https://registry.yarnpkg.com/probe-image-size/-/probe-image-size-7.2.3.tgz#d49c64be540ec8edea538f6f585f65a9b3ab4309"
   integrity sha512-HubhG4Rb2UH8YtV4ba0Vp5bQ7L78RTONYu/ujmCu5nBI8wGv24s4E9xSKBi0N1MowRpxk76pFCpJtW0KPzOK0w==
