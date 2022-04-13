@@ -7113,16 +7113,16 @@ gatsby-plugin-image@^2.11.1:
     objectFitPolyfill "^2.3.5"
     prop-types "^15.7.2"
 
-gatsby-plugin-manifest@^4.11.1:
-  version "4.11.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.11.1.tgz#fb3061c2e989acb2634719c1e8645fd1388f4b3b"
-  integrity sha512-m5cdi6KBc8+zmnlIfEh92sXpFEUfjuCrjM5BKc8e6v0jxJS0CqVrZOyT12mT2yq9H12UrkzFx1qaI8e2/IJiGA==
+gatsby-plugin-manifest@^4.12.1:
+  version "4.12.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.12.1.tgz#25342272c03fdce95901eb42a3ece09f12e4be4a"
+  integrity sha512-AZ0vtO/+khtpum4VUX/Gj/oRer6ckcEfVU/DNd3QlpG7ucHSzHKSwSLP6F5kevCHo7DS4hCMV8RixPlcv0ePWA==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    gatsby-core-utils "^3.11.1"
-    gatsby-plugin-utils "^3.5.1"
+    gatsby-core-utils "^3.12.1"
+    gatsby-plugin-utils "^3.6.1"
     semver "^7.3.5"
-    sharp "^0.30.1"
+    sharp "^0.30.3"
 
 gatsby-plugin-mdx@^3.11.1:
   version "3.11.1"
@@ -7225,10 +7225,10 @@ gatsby-plugin-robots-txt@^1.7.1:
     "@babel/runtime" "^7.16.7"
     generate-robotstxt "^8.0.3"
 
-gatsby-plugin-sass@^5.11.1:
-  version "5.11.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-5.11.1.tgz#82d204a5e7733d63e7ac0a9c86e319e79a71544f"
-  integrity sha512-FPj8UI70IOgTE5PkeyiX00ItOIxsv0RArEW3z3FI2muN66iWphuVwWj7H7SnebT4N8ap4SxLSF/xeBlh2rtl4A==
+gatsby-plugin-sass@^5.12.1:
+  version "5.12.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-5.12.1.tgz#c91cf10a29e0a849680f7be008e1f0122f903542"
+  integrity sha512-2wqqgGUDvXvmVra2b9faAlzzIZuxuUGmSRpRLQjLRZDyfE3OQ+60+N+36L3vlK1roGqB33O+lfV1fBQMe6LD8Q==
   dependencies:
     "@babel/runtime" "^7.15.4"
     resolve-url-loader "^3.1.4"
@@ -7386,16 +7386,16 @@ gatsby-sharp@^0.6.1:
     "@types/sharp" "^0.30.0"
     sharp "^0.30.3"
 
-gatsby-source-filesystem@^4.11.1:
-  version "4.11.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-4.11.1.tgz#cf2edca8816c6d06ca36ef46feaad4c6d07a6f10"
-  integrity sha512-8Fz+VpctjoiZxnGYDgfXFgdD+8rLmj5+l16fZpN+bxETAOPhbyQjznc8IoTwDEdyOER1Zr8JQB/y6tx/qRf+Bw==
+gatsby-source-filesystem@^4.12.1:
+  version "4.12.1"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-4.12.1.tgz#86f45cc047b0b9ca06b5e4ef5c48e69fa3ec2206"
+  integrity sha512-lbtKa7oR2Q+8Qa8gZych/JaRBeoIW/dk4rfy13DOrSgUJK9gZFkpLuFQ471Z0JiHitDPswienBW60HjYvymOCw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     chokidar "^3.5.2"
     file-type "^16.5.3"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.11.1"
+    gatsby-core-utils "^3.12.1"
     got "^9.6.0"
     md5-file "^5.0.0"
     mime "^2.5.2"
