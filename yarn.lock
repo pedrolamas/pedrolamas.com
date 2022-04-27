@@ -7269,10 +7269,10 @@ gatsby-plugin-sitemap@^5.12.1:
     minimatch "^3.1.2"
     sitemap "^7.0.0"
 
-gatsby-plugin-twitter@^4.12.1:
-  version "4.12.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-4.12.1.tgz#23cbb83615e144496fcb762af5336ffeccae52de"
-  integrity sha512-BTTk85p7S+h7O69wVS1b8Hlf5x0c/ybkhXvM4uRPn06+dp+++qLE6MzcnbrikXU88b1UCrEtlN8kQ7vp5f+x0g==
+gatsby-plugin-twitter@^4.13.0:
+  version "4.13.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-4.13.0.tgz#f0a677abd0931d22c3607b80154dd4bbf30cedd1"
+  integrity sha512-3J81UmnzD+fpOyk19Okosn0PhUEe0dOLlSjRAuonA3p4C+ZBUmB5kMhbzU8+2Gw8tLI5MTT3gABMZuVW4Zagrw==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
