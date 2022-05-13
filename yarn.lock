@@ -6970,10 +6970,10 @@ gatsby-plugin-google-gtag@^4.14.0:
     "@babel/runtime" "^7.15.4"
     minimatch "^3.1.2"
 
-gatsby-plugin-image@^2.14.0:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.14.0.tgz#90ee6c7fbc897e2c33b26a3cdcbbcc9ef15be05f"
-  integrity sha512-LfM8V7kJVkkvq9S0UaVYlUakMNMdrL2RTjnnAUjclFhA+QQpI1uOuSY9iQe0zcy9VUZN4XNaRnubmrQp2MlL2w==
+gatsby-plugin-image@^2.14.1:
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.14.1.tgz#902b7f6a4b9eec869896fc0641e256e783f8c57d"
+  integrity sha512-9ez7/MqjZLwvFqY37miFO3IAcqF3rkhUMyrwct+JMk2c1AcXgGyG1acgKGkJU6maiQoIqSKtyzjoQD8+o3f0Hg==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/parser" "^7.15.5"
