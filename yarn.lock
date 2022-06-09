@@ -6918,10 +6918,10 @@ gatsby-plugin-google-gtag@^4.16.0:
     "@babel/runtime" "^7.15.4"
     minimatch "^3.1.2"
 
-gatsby-plugin-image@^2.16.0:
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.16.0.tgz#b3fc58152efd866ffa5d20d36badef23151e7446"
-  integrity sha512-Vsw2HNBU7FYykiI+LMOWf7fJnO517FhCUkiPhbl77Dg2w4X7bNAtFQFOxfBzmrKqDDkJgEglVsdK8ntN1Jkslw==
+gatsby-plugin-image@^2.16.1:
+  version "2.16.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.16.1.tgz#4c6f7f0fee0bdb304207ff6f2e92cff36b106f52"
+  integrity sha512-PnCcJG7sE85xQhCFIMRUJr42T0eLRBJsERfhgHHaiCjUfNbpV02eQ30Wt8i3s3T6Ci/xPJYdnnqM9nTqiCJbTQ==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/parser" "^7.15.5"
