@@ -42,7 +42,7 @@
     "gatsby-plugin-env-variables": "^2.2.0",
     "gatsby-plugin-eslint": "^4.0.2",
     "gatsby-plugin-feed-generator": "^2.0.5",
-    "gatsby-plugin-google-gtag": "^4.17.0",
+    "gatsby-plugin-google-gtag": "^4.18.0",
     "gatsby-plugin-image": "^2.18.0",
     "gatsby-plugin-manifest": "^4.17.0",
     "gatsby-plugin-mdx": "^3.17.0",
