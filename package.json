@@ -78,7 +78,7 @@
     "@graphql-codegen/cli": "^2.7.0",
     "@graphql-codegen/typescript": "^2.6.0",
     "@graphql-codegen/typescript-operations": "^2.4.3",
-    "@types/node": "^18.0.1",
+    "@types/node": "^18.0.3",
     "@types/prismjs": "^1.26.0",
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",
