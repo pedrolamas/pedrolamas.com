@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { GraphQl, Utils } from '../utils';
+import { Utils } from '../utils';
 
 type MdxContextProps = {
-  mdx?: GraphQl.PostMdxFragment;
+  mdx?: Queries.PostMdxFragment;
   meta: Utils.SafeMdxMetadata;
 };
 

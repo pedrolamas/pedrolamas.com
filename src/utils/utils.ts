@@ -1,7 +1,5 @@
 import { slugify } from 'underscore.string';
 
-import * as GraphQl from './graphql.generated';
-
 type predType<T> = (x: T) => boolean;
 type fnType<T, U> = (x: T) => U;
 
@@ -50,7 +48,7 @@ export const ValidDateOrUndefined = (date: Date): Date | undefined => (IsValidDa
 
 export const Slug = (path: string): string => slugify(path.replace(/\./g, 'dot'));
 
-type PostMdxFrontmatterType = GraphQl.PostMdxFragment extends { frontmatter?: infer T } ? NonNullable<T> : unknown;
+type PostMdxFrontmatterType = Queries.PostMdxFragment extends { frontmatter?: infer T } ? NonNullable<T> : unknown;
 
 export type SafeMdxMetadata = {
   id: string;
@@ -66,7 +64,7 @@ export type SafeMdxMetadata = {
   originalFile?: string;
 };
 
-export const SafeMetadataFromMdx = (mdx: Pick<GraphQl.Mdx, 'id'> & Partial<GraphQl.PostMdxFragment> & Partial<GraphQl.SiblingPostMdxFragment>): SafeMdxMetadata => {
+export const SafeMetadataFromMdx = (mdx: Pick<Queries.Mdx, 'id'> & Partial<Queries.PostMdxFragment> & Partial<Queries.SiblingPostMdxFragment>): SafeMdxMetadata => {
   const { id, excerpt, fields, frontmatter, file } = mdx;
 
   return {

@@ -3,10 +3,10 @@ import React from 'react';
 import MdxArticle from '../mdxArticle';
 import Link from '../link';
 import MdxContext from '../mdxContext';
-import { GraphQl, Utils } from '../../utils';
+import { Utils } from '../../utils';
 
 type IndexLayoutPostsProps = {
-  data: GraphQl.IndexLayoutQuery;
+  data: Queries.IndexLayoutQuery;
 };
 
 const IndexLayoutPosts: React.FunctionComponent<IndexLayoutPostsProps> = ({ data }) => {

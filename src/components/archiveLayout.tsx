@@ -2,15 +2,15 @@ import React from 'react';
 
 import PageLayout from './pageLayout';
 import Link from './link';
-import { Utils, GraphQl } from '../utils';
+import { Utils } from '../utils';
 
 type PostsGroupedByKey = {
-  [key: string]: GraphQl.PostMdxFragment[];
+  [key: string]: Queries.PostMdxFragment[];
 };
 
 type ArchiveLayoutProps = {
   title: string;
-  data: GraphQl.ArchivePageQuery | GraphQl.CategoryArchiveLayoutQuery | GraphQl.TagArchiveLayoutQuery;
+  data: Queries.ArchivePageQuery | Queries.CategoryArchiveLayoutQuery | Queries.TagArchiveLayoutQuery;
   children?: never;
 };
 

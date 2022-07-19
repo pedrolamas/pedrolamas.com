@@ -3,7 +3,7 @@ import { Link as GatsbyLink } from 'gatsby';
 import { useLocation } from '@reach/router';
 import Url from 'url';
 
-type LinkProps = React.ComponentPropsWithoutRef<typeof GatsbyLink>;
+type LinkProps = React.ComponentPropsWithoutRef<typeof GatsbyLink> & { to?: string };
 
 const isInternal = (url: string): boolean => !url.includes(':') && !url.startsWith('//');
 const isFile = (url: string): boolean => /\.[0-9a-z]+$/i.test(url);

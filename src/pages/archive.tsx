@@ -2,10 +2,9 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import ArchiveLayout from '../components/archiveLayout';
-import { GraphQl } from '../utils';
 
 type ArchivePageProps = {
-  data: GraphQl.ArchivePageQuery;
+  data: Queries.ArchivePageQuery;
 };
 
 const ArchivePage: React.FunctionComponent<ArchivePageProps> = ({ data }) => <ArchiveLayout title="Archive" data={data} />;

@@ -2,10 +2,9 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import SitemapLayout from '../components/sitemapLayout';
-import { GraphQl } from '../utils';
 
 type SitemapPageProps = {
-  data: GraphQl.SitemapPageQuery;
+  data: Queries.SitemapPageQuery;
 };
 
 const SitemapPage: React.FunctionComponent<SitemapPageProps> = ({ data }) => <SitemapLayout data={data} />;

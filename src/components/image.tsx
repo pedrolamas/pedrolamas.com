@@ -1,12 +1,10 @@
 import React from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-import { GraphQl } from '../utils';
-
 type ImageDataLike = typeof getImage extends (param: infer T) => unknown ? T : unknown;
 
 type ImageProps = Omit<React.ComponentPropsWithoutRef<typeof GatsbyImage>, 'image'> & {
-  imageSharp: GraphQl.Maybe<Pick<GraphQl.File, 'publicURL'> & { childImageSharp?: GraphQl.Maybe<Pick<GraphQl.ImageSharp, 'gatsbyImageData'>> }>;
+  imageSharp: Queries.Maybe<Pick<Queries.File, 'publicURL'> & { childImageSharp?: Queries.Maybe<Pick<Queries.ImageSharp, 'gatsbyImageData'>> }>;
 };
 
 const Image: React.FunctionComponent<ImageProps> = ({ imageSharp, ...restOfProps }) => {

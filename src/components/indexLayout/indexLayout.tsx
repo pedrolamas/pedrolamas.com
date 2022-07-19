@@ -4,10 +4,9 @@ import { graphql } from 'gatsby';
 import Head from '../head';
 import IndexLayoutPosts from './indexLayoutPosts';
 import IndexLayoutNavigation from './indexLayoutNavigation';
-import { GraphQl } from '../../utils';
 
 type IndexLayoutProps = {
-  data: GraphQl.IndexLayoutQuery;
+  data: Queries.IndexLayoutQuery;
   pageContext: {
     previousPageIndex?: number;
     nextPageIndex?: number;
