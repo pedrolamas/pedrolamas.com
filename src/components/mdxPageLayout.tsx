@@ -2,10 +2,10 @@ import React from 'react';
 
 import PageLayout from './pageLayout';
 import MdxProvider from './mdxProvider';
-import { Utils, GraphQl } from '../utils';
+import { Utils } from '../utils';
 
 type MdxPageLayoutProps = {
-  pageContext: GraphQl.Mdx;
+  pageContext: Queries.Mdx;
   children: React.ReactNode;
 };
 

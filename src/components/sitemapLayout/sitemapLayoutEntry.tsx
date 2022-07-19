@@ -1,9 +1,8 @@
 import React from 'react';
 
 import Link from '../../components/link';
-import { GraphQl } from '../../utils';
 
-type SitemapLayoutEntryProps = GraphQl.SitemapYamlSub;
+type SitemapLayoutEntryProps = Queries.SitemapYamlSub;
 
 const SitemapLayoutEntry: React.FunctionComponent<SitemapLayoutEntryProps> = ({ title, url, sub }) => (
   <li>

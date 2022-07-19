@@ -3,10 +3,9 @@ import React from 'react';
 import SitemapLayoutEntry from './sitemapLayoutEntry';
 import PageLayout from '../../components/pageLayout';
 import SiteContext from '../../components/siteContext';
-import { GraphQl } from '../../utils';
 
 type SitemapLayoutProps = {
-  data: GraphQl.SitemapPageQuery;
+  data: Queries.SitemapPageQuery;
 };
 
 const SitemapLayout: React.FunctionComponent<SitemapLayoutProps> = ({ data }) => {

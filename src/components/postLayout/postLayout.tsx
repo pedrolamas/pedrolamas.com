@@ -8,10 +8,10 @@ import PostLayoutSocial from './postLayoutSocial/postLayoutSocial';
 import PostLayoutAuthor from './postLayoutAuthor';
 import PostLayoutNavigation from './postLayoutNavigation';
 import MdxContext from '../mdxContext';
-import { GraphQl, Utils } from '../../utils/';
+import { Utils } from '../../utils/';
 
 type PostLayoutProps = {
-  data: GraphQl.PostLayoutQuery;
+  data: Queries.PostLayoutQuery;
 };
 
 const PostLayout: React.FunctionComponent<PostLayoutProps> = ({ data }) => {

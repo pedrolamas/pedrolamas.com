@@ -8,6 +8,7 @@ const gatsbyRequiredRules = path.join(process.cwd(), 'node_modules', 'gatsby', '
 
 module.exports = {
   siteMetadata,
+  graphqlTypegen: true,
   plugins: [
     {
       resolve: `gatsby-plugin-env-variables`,

@@ -7,14 +7,13 @@ import Header from './header';
 import Sidebar from './sidebar';
 import Symbols from './symbols';
 import SiteContext from '../siteContext';
-import { GraphQl } from '../../utils';
 
 type RootLayoutProperties = {
   children: React.ReactNode;
 };
 
 const RootLayout: React.FunctionComponent<RootLayoutProperties> = ({ children }) => {
-  const { site } = useStaticQuery<GraphQl.RootLayoutQuery>(
+  const { site } = useStaticQuery<Queries.RootLayoutQuery>(
     graphql`
       query RootLayout {
         site {
