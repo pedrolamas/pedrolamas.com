@@ -1,7 +1,8 @@
 import React from 'react';
 import Gist from 'react-gist';
+import { Script } from 'gatsby';
 
-type scriptBlockProps = React.ComponentPropsWithoutRef<'script'>;
+type scriptBlockProps = React.ComponentPropsWithoutRef<typeof Script>;
 
 const ScriptBlock: React.FunctionComponent<scriptBlockProps> = (props) => {
   const { src } = props;
@@ -16,7 +17,7 @@ const ScriptBlock: React.FunctionComponent<scriptBlockProps> = (props) => {
     }
   }
 
-  return <script {...props} />;
+  return <Script {...props} />;
 };
 
 ScriptBlock.displayName = 'ScriptBlock';
