@@ -1,6 +1,7 @@
 module.exports = {
   API: 'Application Programming Interface',
   ASAP: 'As Soon As Possible',
+  CAD: 'Computer Aided Design',
   CTP: 'Community Technology Preview',
   DHCP: 'Dynamic Host Configuration Protocol',
   DIY: 'Do It Yourself',

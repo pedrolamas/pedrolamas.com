@@ -66,7 +66,7 @@ export type SafeMdxMetadata = {
   originalFile?: string;
 };
 
-export const SafeMetadataFromMdx = (mdx: Pick<GraphQl.Mdx, 'id'> & Partial<GraphQl.Mdx> & Partial<GraphQl.PostMdxFragment>): SafeMdxMetadata => {
+export const SafeMetadataFromMdx = (mdx: Pick<GraphQl.Mdx, 'id'> & Partial<GraphQl.PostMdxFragment> & Partial<GraphQl.SiblingPostMdxFragment>): SafeMdxMetadata => {
   const { id, excerpt, fields, frontmatter, file } = mdx;
 
   return {

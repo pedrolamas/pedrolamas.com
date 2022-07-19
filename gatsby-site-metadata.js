@@ -1,6 +1,6 @@
 module.exports = {
   title: `pedrolamas.com`,
-  description: `Windows Development`,
+  description: `Programming and Tinkering`,
   author: `Pedro Lamas`,
   siteUrl: `https://www.pedrolamas.com`,
   lang: `en-US`,
