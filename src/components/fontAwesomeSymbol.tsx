@@ -12,7 +12,7 @@ const FontAwesomeSymbol: React.FunctionComponent<FontAwesomeSymbolProps> = ({ sy
   const widthClass = `fa-w-${Math.ceil((width / height) * 16)}`;
 
   return (
-    <svg className={`svg-inline--fa ${widthClass}`}>
+    <svg className={`svg-inline--fa ${widthClass}`} viewBox={`0 0 ${width} ${height}`}>
       <use xlinkHref={`#${symbolName}`}></use>
     </svg>
   );
