@@ -3739,13 +3739,14 @@ babel-plugin-polyfill-regenerator@^0.3.1:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.3.1"
 
-babel-plugin-remove-graphql-queries@^4.19.0:
-  version "4.19.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.19.0.tgz#21972fc138a833f4dd7f8c9c2ec3f5d2c5b3113b"
-  integrity sha512-VbxC7aZxdqQA0YiAcTD/djIW+6PP/JVODlRmCiqDyTbtI0zhE/Z6je1maCmC6J2LLBsKxhWT3UYTjRfLofK7sQ==
+babel-plugin-remove-graphql-queries@^4.19.0, babel-plugin-remove-graphql-queries@^4.20.0:
+  version "4.20.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.20.0.tgz#4328dd4aa4fa5e3a9f2c21ee2a90a6ec7ed16133"
+  integrity sha512-VSMby4x3BnC8VHMBvl3xr5vr0v3fl9Uyak2sfnqNdCZsuOLJvPQLL4Sd4+utJhQhtUixN8qZyhgov0GAGjgsSw==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    gatsby-core-utils "^3.19.0"
+    "@babel/types" "^7.15.4"
+    gatsby-core-utils "^3.20.0"
 
 babel-plugin-syntax-object-rest-spread@^6.8.0:
   version "6.13.0"
@@ -6755,23 +6756,23 @@ gatsby-plugin-google-gtag@^4.19.0:
     "@babel/runtime" "^7.15.4"
     minimatch "^3.1.2"
 
-gatsby-plugin-image@^2.19.0:
-  version "2.19.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.19.0.tgz#da65ae7d82c64b2adc6c146fc8cda1a097f6f417"
-  integrity sha512-Eu2LY1nfkTdr5hJip5TcZNUqzWQps2Zq4KnPJmgmxpGOYIbrgu8B2kEKQM5hKoe5flu4Xu5gj+CObEMlBj5K1w==
+gatsby-plugin-image@^2.20.0:
+  version "2.20.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.20.0.tgz#426e36e5fdaac7c8f97c7eb28732130c37bcb117"
+  integrity sha512-GCZs0iY9kG3adDxp5/xjUHmjhBA6y1SB448eMP0JD7iw56Ddd9B/eFrTqpLNG6lBIFtBjhyFKHIzhWAG7yEHVg==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/parser" "^7.15.5"
     "@babel/runtime" "^7.15.4"
     "@babel/traverse" "^7.15.4"
     babel-jsx-utils "^1.1.0"
-    babel-plugin-remove-graphql-queries "^4.19.0"
+    babel-plugin-remove-graphql-queries "^4.20.0"
     camelcase "^5.3.1"
     chokidar "^3.5.3"
     common-tags "^1.8.2"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^3.19.0"
-    gatsby-plugin-utils "^3.13.0"
+    gatsby-core-utils "^3.20.0"
+    gatsby-plugin-utils "^3.14.0"
     objectFitPolyfill "^2.3.5"
     prop-types "^15.8.1"
 
@@ -6950,16 +6951,17 @@ gatsby-plugin-typescript@^4.19.0:
     "@babel/runtime" "^7.15.4"
     babel-plugin-remove-graphql-queries "^4.19.0"
 
-gatsby-plugin-utils@^3.13.0:
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.13.0.tgz#89580b70cba3036a7ed20986c5f17dfa6db98497"
-  integrity sha512-iFFWswld/Nu8IrSCikZXC4/cud9txv3ikjkQiGLccJStS9VH2rSY4XEMNRqsKN9Spe3pFBOr/97yYUaPhZaQWg==
+gatsby-plugin-utils@^3.13.0, gatsby-plugin-utils@^3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.14.0.tgz#d9b730689029d48f0527301b8b18cd9103a71383"
+  integrity sha512-Dj40dEPzkirU28vPNve7QtvPIqFahY8fmQMZH4aZXFI9h5AbMfCgtWGeBBeHvNB2CA8piyPcYrnNOL+oRe/zCg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@gatsbyjs/potrace" "^2.2.0"
+    fastq "^1.13.0"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^3.19.0"
-    gatsby-sharp "^0.13.0"
+    gatsby-core-utils "^3.20.0"
+    gatsby-sharp "^0.14.0"
     graphql-compose "^9.0.7"
     import-from "^4.0.0"
     joi "^17.4.2"
@@ -7043,6 +7045,14 @@ gatsby-sharp@^0.13.0:
   version "0.13.0"
   resolved "https://registry.yarnpkg.com/gatsby-sharp/-/gatsby-sharp-0.13.0.tgz#995865616f82235c1007b690a162744f8be2c0af"
   integrity sha512-dGuIuWP3rC7hXl/CgkHEY4WQEW+B9Rsg8uo6u+OumuLnLBxD4vTusEIGctVKzlyIxpENEQylQ7w1JKHX9fOy9g==
+  dependencies:
+    "@types/sharp" "^0.30.0"
+    sharp "^0.30.3"
+
+gatsby-sharp@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-sharp/-/gatsby-sharp-0.14.0.tgz#a272a63c7546f0e1397f999958eeebd0489f4fac"
+  integrity sha512-xTgU3Yxs8xbk3dQnuFw9Hsj4bUcI9upIk51ruNPwd+Q3CzN2QuKrkXuXPk+IRDIAKCXBI4dn78x/Xu/CVGZp/w==
   dependencies:
     "@types/sharp" "^0.30.0"
     sharp "^0.30.3"
