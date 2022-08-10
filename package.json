@@ -68,7 +68,7 @@
     "react-gist": "^1.2.4",
     "react-helmet": "^6.1.0",
     "react-innertext": "^1.1.5",
-    "sass": "^1.54.3",
+    "sass": "^1.54.4",
     "typeface-pt-sans": "^1.1.13"
   },
   "devDependencies": {
