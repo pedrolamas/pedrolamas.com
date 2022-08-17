@@ -3746,14 +3746,14 @@ babel-plugin-polyfill-regenerator@^0.3.1:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.3.1"
 
-babel-plugin-remove-graphql-queries@^4.20.0:
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.20.0.tgz#4328dd4aa4fa5e3a9f2c21ee2a90a6ec7ed16133"
-  integrity sha512-VSMby4x3BnC8VHMBvl3xr5vr0v3fl9Uyak2sfnqNdCZsuOLJvPQLL4Sd4+utJhQhtUixN8qZyhgov0GAGjgsSw==
+babel-plugin-remove-graphql-queries@^4.20.0, babel-plugin-remove-graphql-queries@^4.21.0:
+  version "4.21.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.21.0.tgz#f6dd16ee8062d7a72d28c953519bd53a8132e786"
+  integrity sha512-V6ryNZki9bduIE8qGmujGfvZLaYsPbOylWwhVzWtwtcHoEWu2Cd7f5hN5lMg4efOBKnyVhBlyDYKlStwYGRG9g==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@babel/types" "^7.15.4"
-    gatsby-core-utils "^3.20.0"
+    gatsby-core-utils "^3.21.0"
 
 babel-plugin-syntax-object-rest-spread@^6.8.0:
   version "6.13.0"
@@ -6784,23 +6784,23 @@ gatsby-plugin-google-gtag@^4.21.0:
     "@babel/runtime" "^7.15.4"
     minimatch "^3.1.2"
 
-gatsby-plugin-image@^2.20.0:
-  version "2.20.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.20.0.tgz#426e36e5fdaac7c8f97c7eb28732130c37bcb117"
-  integrity sha512-GCZs0iY9kG3adDxp5/xjUHmjhBA6y1SB448eMP0JD7iw56Ddd9B/eFrTqpLNG6lBIFtBjhyFKHIzhWAG7yEHVg==
+gatsby-plugin-image@^2.21.0:
+  version "2.21.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.21.0.tgz#dd82477fea941c8b3ed71ac2ae3fe358a011e313"
+  integrity sha512-vRPGlw1q7tCKKx1UK03398Gi1c80uzaGj8RjkJ1I3BvIo3Ics8+OUgR0QUtLBmCv9b7qyL1nwA5DsmDmi0Dg4w==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/parser" "^7.15.5"
     "@babel/runtime" "^7.15.4"
     "@babel/traverse" "^7.15.4"
     babel-jsx-utils "^1.1.0"
-    babel-plugin-remove-graphql-queries "^4.20.0"
+    babel-plugin-remove-graphql-queries "^4.21.0"
     camelcase "^5.3.1"
     chokidar "^3.5.3"
     common-tags "^1.8.2"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^3.20.0"
-    gatsby-plugin-utils "^3.14.0"
+    gatsby-core-utils "^3.21.0"
+    gatsby-plugin-utils "^3.15.0"
     objectFitPolyfill "^2.3.5"
     prop-types "^15.8.1"
 
