@@ -6673,27 +6673,6 @@ gatsby-core-utils@^3.20.0, gatsby-core-utils@^3.21.0, gatsby-core-utils@^3.5.2:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^3.21.0:
-  version "3.21.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.21.0.tgz#5ca118857cf9f59b69f06f2ae886d8182af46515"
-  integrity sha512-pCDa9EGU8niRJQVv7ow3ijzmG0PegZaBc5Yt6z4enc4m7Dl5ZT6Edkcw9p8q/FhGiZUkzQhWaRDxUvtaoPwAOQ==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-    ci-info "2.0.0"
-    configstore "^5.0.1"
-    fastq "^1.13.0"
-    file-type "^16.5.3"
-    fs-extra "^10.1.0"
-    got "^11.8.5"
-    import-from "^4.0.0"
-    lmdb "2.5.3"
-    lock "^1.1.0"
-    node-object-hash "^2.3.10"
-    proper-lockfile "^4.1.2"
-    resolve-from "^5.0.0"
-    tmp "^0.2.1"
-    xdg-basedir "^4.0.0"
-
 gatsby-graphiql-explorer@^2.20.0:
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/gatsby-graphiql-explorer/-/gatsby-graphiql-explorer-2.20.0.tgz#b860b27aaa5826a3c9a6f563e852338360059887"
@@ -7055,10 +7034,10 @@ gatsby-remark-responsive-iframe@^5.20.0:
     lodash "^4.17.21"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-smartypants@^5.20.0:
-  version "5.20.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-5.20.0.tgz#f9ead747a6d77f989f47272702be675281ede157"
-  integrity sha512-zsLQRXn+k1ROzQRCOktIpDzVOCHbKnnIoG0XdqiclZCmE9Ah/ChVe8JVzHG0ApICVfEdGT4v5l4iEm/8WEpUUA==
+gatsby-remark-smartypants@^5.21.0:
+  version "5.21.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-5.21.0.tgz#9ea9b8dd13b0bf066e95fe58341407bcc4a94295"
+  integrity sha512-Gb0R6ucKixLk0Mrod/j7wtmdrBZJ/nXG7WdOQ/wTbymzbANA5du5Ci7cZsei/B9ZVwme5pTc29z0BmEYk2u4tg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     retext "^7.0.1"
