@@ -55,7 +55,7 @@
     "gatsby-plugin-twitter": "^4.21.0",
     "gatsby-remark-acronyms": "^1.1.4",
     "gatsby-remark-copy-linked-files": "^5.22.0",
-    "gatsby-remark-images": "^6.21.0",
+    "gatsby-remark-images": "^6.22.0",
     "gatsby-remark-responsive-iframe": "^5.21.0",
     "gatsby-remark-smartypants": "^5.22.0",
     "gatsby-source-filesystem": "^4.21.1",
@@ -68,7 +68,7 @@
     "react-gist": "^1.2.4",
     "react-helmet": "^6.1.0",
     "react-innertext": "^1.1.5",
-    "sass": "^1.54.6",
+    "sass": "^1.54.7",
     "typeface-pt-sans": "^1.1.13"
   },
   "devDependencies": {
