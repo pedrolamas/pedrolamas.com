@@ -6186,14 +6186,14 @@ gatsby-plugin-image@^2.22.0:
     objectFitPolyfill "^2.3.5"
     prop-types "^15.8.1"
 
-gatsby-plugin-manifest@^4.22.0:
-  version "4.22.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.22.0.tgz#cff65e1d88264ba78568c367e5e77c35ab3eacc8"
-  integrity sha512-Kwq+CVnQ4IJBo8O3fkbLtZikPuES1J7mXhTyQ0R6KMOW4m42FtDmBHagFyOvUr1/9NXWXvSanxBDUn8m2v7wPg==
+gatsby-plugin-manifest@^4.23.0:
+  version "4.23.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.23.0.tgz#3a3674fb66e91d198ef5a78d7d64c2e780539fae"
+  integrity sha512-1/ReBm9/fsQXP+vo4iOrmzwFbo4Me5M8qCMKDsBgWwT8GjFNvk9/Vt/qH8LMav6yy0mZVquRU2uqfrbk7jhyhg==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    gatsby-core-utils "^3.22.0"
-    gatsby-plugin-utils "^3.16.0"
+    gatsby-core-utils "^3.23.0"
+    gatsby-plugin-utils "^3.17.0"
     semver "^7.3.7"
     sharp "^0.30.7"
 
@@ -6448,6 +6448,14 @@ gatsby-script@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/gatsby-script/-/gatsby-script-1.8.0.tgz#aabb592a490c6a006e49872d12d59437db2320e7"
   integrity sha512-9AfVURfpXn1Iz76gMDfAsYeRpYYGWoKEJyVYB8ZtYRl96DX3Dw5cIXu1m8avGveoU1l0rloKFckydL6V1nnQ+w==
+
+gatsby-sharp@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/gatsby-sharp/-/gatsby-sharp-0.17.0.tgz#cc48e51d396cc4049f902ba60de6e78075241a3a"
+  integrity sha512-k1iGqqox19nD70cEPwVI8grAgbtXswZtuonlROAV02J7kpUP6ayfdvx7as6Phdr5jam+ZQ1vfsOu60yZZgr/LQ==
+  dependencies:
+    "@types/sharp" "^0.30.5"
+    sharp "^0.30.7"
 
 gatsby-sharp@^0.17.0:
   version "0.17.0"
