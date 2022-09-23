@@ -6114,10 +6114,10 @@ gatsby-plugin-google-gtag@^4.23.0:
     "@babel/runtime" "^7.15.4"
     minimatch "^3.1.2"
 
-gatsby-plugin-image@^2.23.0:
-  version "2.23.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.23.0.tgz#1f30c5506c7f199fa693a606c15e00df5a35e9b3"
-  integrity sha512-Mnv2ta9JJVFcm0lpU4o+WbHasiQklPY+Vo6i5+bdQausNSgJHxLbl07GiML1wCXGJz2LWKPFZf0B9+D11QUsLQ==
+gatsby-plugin-image@^2.23.1:
+  version "2.23.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.23.1.tgz#0383a5232628d2ed97a3651885286594394babf2"
+  integrity sha512-1Lwn3PueX76lkRvMq/ZLhbne+PLUomn48+GBNX4acY8jEOOQnPK/yZDO68c9WmYbejI6sfxFc5kM0cCHkXFRPg==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/parser" "^7.15.5"
@@ -6130,7 +6130,7 @@ gatsby-plugin-image@^2.23.0:
     common-tags "^1.8.2"
     fs-extra "^10.1.0"
     gatsby-core-utils "^3.23.0"
-    gatsby-plugin-utils "^3.17.0"
+    gatsby-plugin-utils "^3.17.1"
     objectFitPolyfill "^2.3.5"
     prop-types "^15.8.1"
 
