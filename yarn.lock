@@ -5969,7 +5969,7 @@ gatsby-cli@^4.24.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.20.0, gatsby-core-utils@^3.23.0, gatsby-core-utils@^3.24.0, gatsby-core-utils@^3.5.2:
+gatsby-core-utils@^3.20.0, gatsby-core-utils@^3.24.0, gatsby-core-utils@^3.5.2:
   version "3.24.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.24.0.tgz#0e757bac28ad953a929046138403b3663b733cf7"
   integrity sha512-P4tbcYOJ1DSYKRP4gIAR9Xta/d/AzjmsK2C6PzX7sNcGnviDKtAIoeV9sE0kNXOqBfUCez25zmAi2cq8NlaxKw==
@@ -6267,7 +6267,7 @@ gatsby-plugin-typescript@^4.24.0:
     "@babel/runtime" "^7.15.4"
     babel-plugin-remove-graphql-queries "^4.24.0"
 
-gatsby-plugin-utils@^3.17.1, gatsby-plugin-utils@^3.18.0:
+gatsby-plugin-utils@^3.18.0:
   version "3.18.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.18.0.tgz#898e9416e3d4fa25195e9ca50d17a5435dfe91a3"
   integrity sha512-3c2iHYV93+zV8AfUhpWSuU0Bd5sgNDaUMkBYNuJAWrUqUfJY4i+QAD/H4Hvie8dhdGrX6QRWEyKo1k5gV+jERQ==
@@ -6342,10 +6342,10 @@ gatsby-remark-responsive-iframe@^5.24.0:
     lodash "^4.17.21"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-smartypants@^5.23.0:
-  version "5.23.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-5.23.0.tgz#983d4afcd6b2b4c5c5ed0332eb06a86ec3abb9ea"
-  integrity sha512-Hb2lQbDRsLy0R9BDxdyBkGOk/W+HfHddJyXreqxd7udbYsVp/baTP46gFO+ddG9vPJxfQpXlOAGB/rvomRBTVQ==
+gatsby-remark-smartypants@^5.24.0:
+  version "5.24.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-5.24.0.tgz#dbf6bb31b910795ebed819c40534e90210a8f529"
+  integrity sha512-WOCwY8k+3as/ebrUR/7ePR3wrkIgS5xP1v/YIRalcv1vyk9JSfzws/P9pYeBdXsnsery/UWMFE7AIsLKqsOdQg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     retext "^7.0.1"
