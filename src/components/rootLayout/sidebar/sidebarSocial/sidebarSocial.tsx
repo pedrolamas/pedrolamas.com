@@ -37,6 +37,9 @@ const SidebarSocial: React.FunctionComponent<SidebarSocialProps> = () => {
         } else if (link.includes('github.com')) {
           linkTitle = 'GitHub';
           symbolName = 'sidebar-github';
+        } else if (link.includes('/@')) {
+          linkTitle = 'Mastodon';
+          symbolName = 'sidebar-mastodon';
         }
 
         return <SidebarSocialLink url={link} title={linkTitle} symbolName={symbolName} key={index} />;

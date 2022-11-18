@@ -25,7 +25,7 @@ module.exports = {
   },
 
   social: {
-    links: [`https://twitter.com/pedrolamas`, `https://www.facebook.com/pedrolamas`, `https://www.linkedin.com/in/pedrolamas`, `https://github.com/pedrolamas`],
+    links: [`https://twitter.com/pedrolamas`, `https://hachyderm.io/@pedrolamas`, `https://www.facebook.com/pedrolamas`, `https://www.linkedin.com/in/pedrolamas`, `https://github.com/pedrolamas`],
   },
 
   sidebar: {
