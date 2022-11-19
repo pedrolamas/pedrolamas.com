@@ -224,6 +224,7 @@ module.exports = {
         headers: {
           '/*': [`X-Frame-Options: DENY`, `X-XSS-Protection: 1; mode=block`, `Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy: accelerometer=(), autoplay=(), ambient-light-sensor=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()`, `X-Content-Type-Options: nosniff`],
           '/manifest.webmanifest': ['Content-Type: application/manifest+json'],
+          '/.well-known/webfinger': ['Content-Type: application/jrd+json'],
         },
         mergeSecurityHeaders: false,
       },
