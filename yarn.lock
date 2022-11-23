@@ -6305,10 +6305,10 @@ gatsby-react-router-scroll@^5.24.0:
     "@babel/runtime" "^7.15.4"
     prop-types "^15.8.1"
 
-gatsby-remark-acronyms@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-acronyms/-/gatsby-remark-acronyms-1.1.4.tgz#bc6669a9864f5a2d4fd884e6039d6ba6c47e0da2"
-  integrity sha512-PYyQLzTlE0o8QOKVNPPOYSOisABP94jUvQxGjsAfgzXEyAkrkPw9X23M6BKkyJXRFyUose+7x9o1LHBUKpX+7g==
+gatsby-remark-acronyms@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-acronyms/-/gatsby-remark-acronyms-1.2.1.tgz#5c1c562f07b75a3901199a8dcf4694468706cad8"
+  integrity sha512-gWfDxE1VDgCEoUbNU7HImFYu32SYeglxu9Hrjaga6UmJqh8I4Pv9SSsguSQAWm0xvXvOKSTE/zuIndC/FNs3lg==
   dependencies:
     unist-util-visit "^2.0.3"
 
