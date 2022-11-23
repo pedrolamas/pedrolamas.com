@@ -11,7 +11,7 @@ type SidebarSocialLinkProps = {
 };
 
 const SidebarSocialLink: React.FunctionComponent<SidebarSocialLinkProps> = ({ url, title, symbolName }) => (
-  <Link to={url} className="sidebar-social-item" title={title}>
+  <Link to={url} className="sidebar-social-item" title={title} rel="me">
     <FontAwesomeSymbol symbolName={symbolName} />
     <span className="screen-reader-text">{title}</span>
   </Link>

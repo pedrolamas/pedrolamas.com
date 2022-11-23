@@ -1,13 +1,13 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faInfo, faRss, faShareAlt, faCalendarAlt, faFolder, faTags, faComment, faEdit, faLink } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter, faLinkedinIn, faWhatsapp, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faTwitter, faLinkedinIn, faWhatsapp, faGithub, faMastodon } from '@fortawesome/free-brands-svg-icons';
 
 type ArticleSymbolNames = 'article-posted-on' | 'article-categories' | 'article-tags' | 'article-comments' | 'article-edit';
 type HeaderSymbolNames = 'header-anchor';
-type SidebarSymbolNames = 'sidebar-twitter' | 'sidebar-facebook' | 'sidebar-linkedin' | 'sidebar-github' | 'sidebar-rss' | 'sidebar-default';
+type SidebarSymbolNames = 'sidebar-twitter' | 'sidebar-facebook' | 'sidebar-linkedin' | 'sidebar-github' | 'sidebar-rss' | 'sidebar-default' | 'sidebar-mastodon';
 type FigureSymbolNames = 'figure-caption';
-type ShareSymbolNames = 'share-facebook' | 'share-twitter' | 'share-linkedin' | 'share-whatsapp' | 'share-email';
+type ShareSymbolNames = 'share-facebook' | 'share-twitter' | 'share-linkedin' | 'share-whatsapp' | 'share-email' | 'share-mastodon';
 
 export type SymbolNames = ArticleSymbolNames | HeaderSymbolNames | SidebarSymbolNames | FigureSymbolNames | ShareSymbolNames;
 
@@ -27,6 +27,7 @@ export const Symbols: SymbolsType = {
   'sidebar-facebook': faFacebookF,
   'sidebar-linkedin': faLinkedinIn,
   'sidebar-github': faGithub,
+  'sidebar-mastodon': faMastodon,
   'sidebar-rss': faRss,
   'figure-caption': faInfo,
   'share-facebook': faFacebookF,
@@ -34,4 +35,5 @@ export const Symbols: SymbolsType = {
   'share-linkedin': faLinkedinIn,
   'share-whatsapp': faWhatsapp,
   'share-email': faEnvelope,
+  'share-mastodon': faMastodon,
 };
