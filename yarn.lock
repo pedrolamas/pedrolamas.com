@@ -6084,10 +6084,10 @@ gatsby-parcel-config@0.16.0:
     "@parcel/transformer-js" "2.6.2"
     "@parcel/transformer-json" "2.6.2"
 
-gatsby-plugin-env-variables@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-env-variables/-/gatsby-plugin-env-variables-2.2.0.tgz#75793854688be8773cdc3a1e1b10f04b1836bbe6"
-  integrity sha512-znnUNqNmGE4qIq+nTaQeiTz54PQw3QRPflWWWtQg5V9ke3QcamEDVbJ1S1a2Afl5pXO7qCiXNaMMb8NFnNHdLw==
+gatsby-plugin-env-variables@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-env-variables/-/gatsby-plugin-env-variables-2.3.0.tgz#bc47617bd78f8f68ff72b3c4c7a2ae7ae464fbc1"
+  integrity sha512-HvVzuapa1jZ0fHtvw4hRlu3Zi5boPLYejVkULnzSmzpSz6UrIj88eEk8WaiKrxkp0CDK9VmXweAdx6U3AwgCog==
 
 gatsby-plugin-eslint@^4.0.3:
   version "4.0.3"
