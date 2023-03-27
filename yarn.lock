@@ -6083,10 +6083,10 @@ gatsby-plugin-env-variables@^2.3.0:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-env-variables/-/gatsby-plugin-env-variables-2.3.0.tgz#bc47617bd78f8f68ff72b3c4c7a2ae7ae464fbc1"
   integrity sha512-HvVzuapa1jZ0fHtvw4hRlu3Zi5boPLYejVkULnzSmzpSz6UrIj88eEk8WaiKrxkp0CDK9VmXweAdx6U3AwgCog==
 
-gatsby-plugin-eslint@^4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-4.0.3.tgz#9b7145ae5810e76f6124324065b29a5f6bcc5551"
-  integrity sha512-z+tP4JxH60mKNBRkweYHBVFCL3/ueh6YyhYVw7nA5LyJzc4FWCzY1TMYUw/9EG9nCPQJ5XPNoqr8bViM6wMFOQ==
+gatsby-plugin-eslint@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-4.0.4.tgz#6c951e33f5b75424ece6c8f550b22051651d844e"
+  integrity sha512-o3WKrW+ssF6XJmmTAfy7XeLsbTzdTwibBDnM6/Ub2cSDNXd1YjshtidJu4BXOLvtWW/LoqpMfWi0OPbVsb/ZLA==
   dependencies:
     webpack-merge "^5.8.0"
 
