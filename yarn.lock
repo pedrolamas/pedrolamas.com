@@ -2486,10 +2486,10 @@
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.33.tgz#1073c4bc824754ae3d10cfab88ab0237ba964e4d"
   integrity sha512-gVC1InwyVrO326wbBZw+AO3u2vRXz/iRWq9jYhpG4W8LXyIgDv3ZmcLQ5Q4Gs+gFMyqx+viFoFT+l3p61QFCmQ==
 
-"@types/underscore.string@^0.0.38":
-  version "0.0.38"
-  resolved "https://registry.yarnpkg.com/@types/underscore.string/-/underscore.string-0.0.38.tgz#4081755f005f5691fb7fbd4eff3aabe6066a6c63"
-  integrity sha512-QPMttDInBYkulH/3nON0KnYpEd/RlyE5kUrhuts5d76B/stpjXpDticq+iTluoAsVnVXuGECFhPtuX+aDJdx+A==
+"@types/underscore.string@^0.0.39":
+  version "0.0.39"
+  resolved "https://registry.yarnpkg.com/@types/underscore.string/-/underscore.string-0.0.39.tgz#92b720bd34388f5e1174fc93bf25b751d50cc35a"
+  integrity sha512-TIDxaKveuDe9s+zd3bpKmNSzILWMhY2Ho2eqKFwtWTPVWWWERWncMR6jnPCJPIZkc19wBA5Gvo/vcOk3NXfUHw==
   dependencies:
     "@types/underscore" "*"
 
