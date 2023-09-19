@@ -76,7 +76,7 @@
     "@babel/preset-react": "^7.22.15",
     "@types/node": "^18.16.3",
     "@types/prismjs": "^1.26.0",
-    "@types/react": "^18.2.21",
+    "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
     "@types/react-helmet": "^6.1.6",
     "@types/underscore.string": "^0.0.39",
