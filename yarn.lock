@@ -2500,10 +2500,10 @@
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.33.tgz#1073c4bc824754ae3d10cfab88ab0237ba964e4d"
   integrity sha512-gVC1InwyVrO326wbBZw+AO3u2vRXz/iRWq9jYhpG4W8LXyIgDv3ZmcLQ5Q4Gs+gFMyqx+viFoFT+l3p61QFCmQ==
 
-"@types/underscore.string@^0.0.39":
-  version "0.0.39"
-  resolved "https://registry.yarnpkg.com/@types/underscore.string/-/underscore.string-0.0.39.tgz#92b720bd34388f5e1174fc93bf25b751d50cc35a"
-  integrity sha512-TIDxaKveuDe9s+zd3bpKmNSzILWMhY2Ho2eqKFwtWTPVWWWERWncMR6jnPCJPIZkc19wBA5Gvo/vcOk3NXfUHw==
+"@types/underscore.string@^0.0.40":
+  version "0.0.40"
+  resolved "https://registry.yarnpkg.com/@types/underscore.string/-/underscore.string-0.0.40.tgz#0ab54d15e93889fa1fcff44b2612ed3446d00183"
+  integrity sha512-6J3Wp6PnuXhSxVSVaSoh9SKiormScoa2pPLKpZk5QsjKD3RKQZQj/mwBVfULd2MUl5gM/UlLSvr+cynd/7VWQA==
   dependencies:
     "@types/underscore" "*"
 
