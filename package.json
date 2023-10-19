@@ -78,7 +78,7 @@
     "@types/prismjs": "^1.26.2",
     "@types/react": "^18.2.29",
     "@types/react-dom": "^18.2.13",
-    "@types/react-helmet": "^6.1.7",
+    "@types/react-helmet": "^6.1.8",
     "@types/underscore.string": "^0.0.40",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
