@@ -73,7 +73,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.11",
-    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-react": "^7.23.3",
     "@types/node": "^18.16.3",
     "@types/prismjs": "^1.26.3",
     "@types/react": "^18.2.37",
