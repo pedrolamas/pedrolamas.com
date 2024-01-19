@@ -35,7 +35,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
+    "@mdx-js/react": "^3.0.0",
     "disqus-react": "^1.1.5",
     "gatsby": "^4.25.8",
     "gatsby-plugin-env-variables": "^2.3.0",
