@@ -89,7 +89,7 @@
     "eslint-webpack-plugin": "^4.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
-    "prettier": "^2.8.8",
+    "prettier": "^3.6.2",
     "typescript": "^5.3.3"
   },
   "engines": {
