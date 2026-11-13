@@ -1,7 +1,6 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { Element, ElementContent, Text } from 'hast';
-import type { Code } from 'mdast';
 import { defineHastPlugin, defineMdastPlugin } from 'satteri';
 
 import { symbolSvg } from '../utils/fontAwesome';
@@ -102,42 +101,5 @@ export const timeLinksPlugin = defineMdastPlugin({
     } else if (node.value === '</time>') {
       ctx.replaceNode(node, { type: 'html', value: '</time></a>' });
     }
-  },
-});
-
-const fetchOrThrow = async (url: string): Promise<Response> => {
-  const response = await fetch(url);
-
-  if (!response.ok) throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
-
-  return response;
-};
-
-/**
- * Replaces GitHub gist `<script>` embeds with the gist's files as code blocks, fetched at build time.
- * Uses the same public endpoints as the embed script, avoiding the rate-limited GitHub REST API.
- */
-export const gistsPlugin = defineMdastPlugin({
-  name: 'gists',
-  async html(node, ctx) {
-    const match = /^<script src="https:\/\/gist\.github\.com\/([^/]+)\/([0-9a-f]+)\.js(?:\?file=([^"]+))?"><\/script>$/.exec(node.value.trim());
-
-    if (!match) return;
-
-    const [, user, id, file] = match;
-    const { files } = (await (await fetchOrThrow(`https://gist.github.com/${user}/${id}.json`)).json()) as { files: string[] };
-
-    const codeNodes = await Promise.all(
-      files
-        .filter((filename) => !file || filename === file)
-        .map(async (filename): Promise<Code> => ({
-          type: 'code',
-          lang: path.extname(filename).slice(1) || null,
-          meta: null,
-          value: await (await fetchOrThrow(`https://gist.githubusercontent.com/${user}/${id}/raw/${encodeURIComponent(filename)}`)).text(),
-        }))
-    );
-
-    ctx.replaceNode(node, codeNodes);
   },
 });

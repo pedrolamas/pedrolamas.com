@@ -8,7 +8,7 @@ import { satteri } from '@astrojs/markdown-satteri';
 
 import { acronyms } from './src/data/acronyms';
 import { siteMetadata } from './src/data/siteMetadata';
-import { acronymsPlugin, figuresPlugin, gistsPlugin, headingAnchorsPlugin, timeLinksPlugin } from './src/plugins/markdown';
+import { acronymsPlugin, figuresPlugin, headingAnchorsPlugin, timeLinksPlugin } from './src/plugins/markdown';
 import { postUrl } from './src/utils/urls';
 
 const postsDir = './src/content/posts';
@@ -53,7 +53,7 @@ export default defineConfig({
       theme: 'github-light',
     },
     processor: satteri({
-      mdastPlugins: [timeLinksPlugin, gistsPlugin],
+      mdastPlugins: [timeLinksPlugin],
       hastPlugins: [acronymsPlugin(acronyms), headingAnchorsPlugin, figuresPlugin],
     }),
   },
