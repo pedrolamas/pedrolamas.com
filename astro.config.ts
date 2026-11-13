@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { AstroIntegration } from 'astro';
-import { defineConfig, fontProviders } from 'astro/config';
+import { defineConfig, envField, fontProviders } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { satteri } from '@astrojs/markdown-satteri';
 import githubLight from '@shikijs/themes/github-light';
@@ -63,6 +63,13 @@ export default defineConfig({
   site: siteMetadata.siteUrl,
   trailingSlash: 'always',
   prefetch: { prefetchAll: true },
+  // Set by Netlify
+  env: {
+    schema: {
+      REPOSITORY_URL: envField.string({ context: 'server', access: 'public', optional: true }),
+      BRANCH: envField.string({ context: 'server', access: 'public', optional: true }),
+    },
+  },
   fonts: [
     {
       provider: fontProviders.fontsource(),

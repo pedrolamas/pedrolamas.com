@@ -1,4 +1,6 @@
 ---
+import { BRANCH, REPOSITORY_URL } from 'astro:env/server';
+
 import FontAwesomeSymbol from './FontAwesomeSymbol.astro';
 import { siteMetadata } from '../data/siteMetadata';
 import { formatDate, type Post } from '../utils/posts';
@@ -12,8 +14,6 @@ type Props = {
 const { post } = Astro.props;
 const { date, categories, tags } = post.data;
 const url = postUrl(post.id);
-
-const { REPOSITORY_URL, BRANCH } = process.env;
 ---
 
 <div class="post-meta">

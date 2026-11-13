@@ -1,7 +1,7 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
+import { REPOSITORY_URL } from 'astro:env/server';
 
-const { REPOSITORY_URL } = process.env;
+import PageLayout from '../layouts/PageLayout.astro';
 ---
 
 <PageLayout title="404: Not found">
