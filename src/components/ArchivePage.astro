@@ -10,7 +10,6 @@ type Props = {
 
 const { title, posts } = Astro.props;
 
-// Posts are sorted newest first, so years come out in descending order.
 const postsGroupedByYear = Map.groupBy(posts, (post) => post.data.date.getUTCFullYear());
 ---
 

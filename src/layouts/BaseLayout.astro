@@ -35,7 +35,7 @@ type Props = HeadProps;
     </div>
 
     <script>
-      // Show dates in the visitor's own time zone and locale when hovering them.
+      // Local time tooltips
       document.querySelectorAll<HTMLTimeElement>('.post-content time[datetime], .page-content time[datetime]').forEach((time) => {
         const target = time.closest('a') ?? time;
         target.title = new Date(time.dateTime).toLocaleString();

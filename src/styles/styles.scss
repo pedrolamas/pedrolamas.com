@@ -1,7 +1,7 @@
 @use 'base/poole';
 @use 'base/hyde';
 
-// Subset of @fortawesome/fontawesome-svg-core/styles.css used by the icon symbols
+// From @fortawesome/fontawesome-svg-core/styles.css
 .svg-inline--fa {
   display: inline-block;
   height: 1em;
@@ -23,7 +23,6 @@ img {
   height: auto;
 }
 
-// Markdown images used to be centered by gatsby-remark-images
 .post-content,
 .page-content {
   p > img:only-child,

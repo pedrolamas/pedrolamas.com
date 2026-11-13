@@ -13,7 +13,6 @@ const assets = import.meta.glob<{ default: ImageMetadata }>('../content/assets/*
 
 const sidebarLogos = await Promise.all(sidebar.logos.map(async (sidebarLogo) => ({ title: sidebarLogo.title, image: (await assets[`../content/assets/${sidebarLogo.image}`]()).default })));
 
-/** URL fragment → link title and icon, for the social links. */
 const socialNetworks: [match: string, title: string, symbolName: SymbolName][] = [
   ['twitter.com', 'Twitter', 'icon-twitter'],
   ['facebook.com', 'Facebook', 'icon-facebook'],

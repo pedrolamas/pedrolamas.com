@@ -15,7 +15,7 @@
     Permissions-Policy = "accelerometer=(), autoplay=(), ambient-light-sensor=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()"
     X-Content-Type-Options = "nosniff"
 
-# Hashed build assets (fonts, CSS, JS, images) never change, so they can be cached forever
+# Hashed filenames, safe to cache forever
 [[headers]]
   for = "/_astro/*"
   [headers.values]

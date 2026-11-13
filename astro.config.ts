@@ -15,7 +15,6 @@ import { postUrl } from './src/utils/urls';
 const postsDir = './src/content/posts';
 const wpContentDir = './src/content/assets/wp-content';
 
-/** Reads a `key: value` line from the frontmatter of a markdown file, as a date. */
 const frontmatterDate = (frontmatter: string, key: string): Date | undefined => {
   const value = new RegExp(`^${key}:\\s*['"]?([^'"\\n]+)`, 'm').exec(frontmatter)?.[1];
   const date = value ? new Date(value.trim()) : undefined;
@@ -23,7 +22,7 @@ const frontmatterDate = (frontmatter: string, key: string): Date | undefined => 
   return date && !Number.isNaN(date.getTime()) ? date : undefined;
 };
 
-/** Post URL → last modified date, for the sitemap. */
+// Sitemap lastmod per post URL
 const postsLastModified = new Map(
   fs
     .readdirSync(postsDir)
@@ -36,10 +35,9 @@ const postsLastModified = new Map(
     })
 );
 
-/** Whether a path inside the wp-content submodule is a dotfile (`.git`, …) that must not be served. */
 const isHidden = (relativePath: string): boolean => relativePath.split(/[\\/]/).some((segment) => segment.startsWith('.'));
 
-/** Serves the legacy `/wp-content/` files (downloads, full size images and animated GIFs linked from posts). */
+// Serves the wp-content submodule at /wp-content/
 const wpContent = (): AstroIntegration => ({
   name: 'wp-content',
   hooks: {
@@ -64,6 +62,7 @@ const wpContent = (): AstroIntegration => ({
 export default defineConfig({
   site: siteMetadata.siteUrl,
   trailingSlash: 'always',
+  prefetch: { prefetchAll: true },
   fonts: [
     {
       provider: fontProviders.fontsource(),
@@ -77,7 +76,7 @@ export default defineConfig({
   ],
   markdown: {
     shikiConfig: {
-      // GitHub Light with the light grey background of the previous Prism theme.
+      // Background of the previous Prism theme
       theme: { ...githubLight, colors: { ...githubLight.colors, 'editor.background': '#f6f8fa' } },
     },
     processor: satteri({

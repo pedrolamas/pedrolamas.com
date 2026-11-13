@@ -1,6 +1,4 @@
-// Kill switch for the service worker previously installed by gatsby-plugin-offline.
-// It clears that worker's caches, unregisters itself and reloads any open tabs.
-// Safe to delete once old visitors have had time to pick it up.
+// Removes the old gatsby-plugin-offline service worker
 self.addEventListener('install', () => self.skipWaiting());
 
 self.addEventListener('activate', (event) => {

@@ -24,14 +24,12 @@ export const Symbols = {
 
 export type SymbolName = keyof typeof Symbols;
 
-/** Markup referencing a symbol from the sprite rendered by `Symbols.astro`. */
 export const symbolSvg = (name: SymbolName): string => {
   const [width, height] = Symbols[name].icon;
 
   return `<svg class="svg-inline--fa" viewBox="0 0 ${width} ${height}" aria-hidden="true"><use href="#${name}"></use></svg>`;
 };
 
-/** Markup for a `<symbol>` definition of an icon. */
 export const symbolDefinition = ([name, { icon }]: [string, IconDefinition]): string => {
   const [width, height, , , svgPathData] = icon;
   const paths = Array.isArray(svgPathData) ? svgPathData : [svgPathData];

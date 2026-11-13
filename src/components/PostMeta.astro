@@ -73,13 +73,11 @@ const { REPOSITORY_URL, BRANCH } = process.env;
 </div>
 
 <script>
-  // Disqus replaces the text of every `.disqus-comment-count` element with that post's comment count.
   const commentCount = document.querySelector<HTMLElement>('.disqus-comment-count');
 
-  // Astro bundles this script once per page, however many posts are listed.
   if (commentCount) {
     const script = document.createElement('script');
-    // count.js finds its own script tag by this id, as in Disqus' embed code.
+    // count.js needs this id
     script.id = 'dsq-count-scr';
     script.src = `https://${commentCount.dataset.disqusShortname}.disqus.com/count.js`;
     script.async = true;

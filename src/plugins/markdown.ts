@@ -9,7 +9,6 @@ import { pageUrl, postUrl } from '../utils/urls';
 
 const contentDir = fileURLToPath(new URL('../content/', import.meta.url));
 
-/** Public URL of the document being rendered, used for heading anchor links. */
 const documentUrl = (fileURL: URL | undefined): string => {
   if (!fileURL) return '';
 
@@ -23,7 +22,6 @@ const documentUrl = (fileURL: URL | undefined): string => {
   return '';
 };
 
-/** Wraps known acronyms in `<abbr title="…">`. */
 export const acronymsPlugin = (acronyms: Record<string, string>) => {
   const acronymsRegExp = new RegExp(`\\b(${Object.keys(acronyms).join('|')})\\b`, 'g');
 
@@ -34,7 +32,6 @@ export const acronymsPlugin = (acronyms: Record<string, string>) => {
         if (['code', 'pre', 'abbr'].includes(ancestor.tagName)) return;
       }
 
-      // Odd indices of the split result are the captured acronyms.
       const parts = node.value.split(acronymsRegExp);
 
       if (parts.length === 1) return;
@@ -46,7 +43,6 @@ export const acronymsPlugin = (acronyms: Record<string, string>) => {
   });
 };
 
-/** Adds an `id` and a hover anchor link to every heading. */
 export const headingAnchorsPlugin = defineHastPlugin({
   name: 'heading-anchors',
   element: {
@@ -65,7 +61,6 @@ export const headingAnchorsPlugin = defineHastPlugin({
   },
 });
 
-/** Turns a paragraph holding a single titled image into a `<figure>` with a `<figcaption>`. */
 export const figuresPlugin = defineHastPlugin({
   name: 'figures',
   element: {
@@ -88,10 +83,7 @@ export const figuresPlugin = defineHastPlugin({
   },
 });
 
-/**
- * Points `/wp-content/...` images at the submodule (the `@wp-content` alias in tsconfig.json) so Astro optimizes them.
- * Animated GIFs are left alone, because optimization keeps only their first frame.
- */
+// Optimizes /wp-content/ images; GIFs are skipped to keep their animation
 export const wpContentImagesPlugin = defineMdastPlugin({
   name: 'wp-content-images',
   image(node, ctx) {
@@ -101,7 +93,6 @@ export const wpContentImagesPlugin = defineMdastPlugin({
   },
 });
 
-/** Links `<time datetime="…">` tags to timeanddate.com so readers can see the time in their own time zone. */
 export const timeLinksPlugin = defineMdastPlugin({
   name: 'time-links',
   html(node, ctx) {
@@ -114,7 +105,6 @@ export const timeLinksPlugin = defineMdastPlugin({
       ctx.data.openTimeLinks = (Number(ctx.data.openTimeLinks) || 0) + 1;
       ctx.replaceNode(node, { type: 'html', value: `<a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso=${iso}">${node.value}` });
     } else if (node.value === '</time>' && Number(ctx.data.openTimeLinks) > 0) {
-      // Only close the links this plugin opened, counted per document.
       ctx.data.openTimeLinks = Number(ctx.data.openTimeLinks) - 1;
       ctx.replaceNode(node, { type: 'html', value: '</time></a>' });
     }

@@ -1,4 +1,4 @@
-// Port of underscore.string's slugify, kept byte-compatible so existing URLs and heading anchors don't change.
+// Port of underscore.string's slugify; must stay byte-compatible
 
 const diacriticsFrom = 'ąàáäâãåæăćčĉęèéëêĝĥìíïîĵłľńňòóöőôõðøśșşšŝťțţŭùúüűûñÿýçżźž';
 const diacriticsTo = 'aaaaaaaaaccceeeeeghiiiijllnnoooooooossssstttuuuuuunyyczzz';
@@ -20,5 +20,4 @@ export const slugify = (value: string): string =>
     .replace(/[-_\s]+/g, '-')
     .replace(/^-+|-+$/g, '');
 
-/** Slug used for tag and category URLs. */
 export const slug = (value: string): string => slugify(value.replace(/\./g, 'dot'));

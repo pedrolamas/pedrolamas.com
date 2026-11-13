@@ -12,7 +12,7 @@ const url = new URL(Astro.url.pathname, siteUrl).href;
 <div id="disqus_thread" data-shortname={disqusShortname} data-url={url} data-title={Astro.props.title}></div>
 
 <script>
-  // Disqus "universal embed code", only loaded once the comments area nears the viewport.
+  // Load Disqus when near the viewport
   const thread = document.getElementById('disqus_thread');
 
   if (thread) {
