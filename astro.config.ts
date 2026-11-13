@@ -5,6 +5,7 @@ import type { AstroIntegration } from 'astro';
 import { defineConfig, fontProviders } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { satteri } from '@astrojs/markdown-satteri';
+import githubLight from '@shikijs/themes/github-light';
 
 import { acronyms } from './src/data/acronyms';
 import { siteMetadata } from './src/data/siteMetadata';
@@ -76,7 +77,8 @@ export default defineConfig({
   ],
   markdown: {
     shikiConfig: {
-      theme: 'github-light',
+      // GitHub Light with the light grey background of the previous Prism theme.
+      theme: { ...githubLight, colors: { ...githubLight.colors, 'editor.background': '#f6f8fa' } },
     },
     processor: satteri({
       mdastPlugins: [timeLinksPlugin, wpContentImagesPlugin],
