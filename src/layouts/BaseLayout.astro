@@ -12,7 +12,7 @@ type Props = HeadProps;
 ---
 
 <!doctype html>
-<html lang={siteMetadata.lang || 'en'} prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+<html lang={siteMetadata.lang} prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
   <head>
     <Font
       cssVariable="--font-pt-sans"
@@ -36,7 +36,7 @@ type Props = HeadProps;
 
     <script>
       // Show dates in the visitor's own time zone and locale when hovering them.
-      document.querySelectorAll<HTMLTimeElement>('time[datetime]').forEach((time) => {
+      document.querySelectorAll<HTMLTimeElement>('.post-content time[datetime], .page-content time[datetime]').forEach((time) => {
         const target = time.closest('a') ?? time;
         target.title = new Date(time.dateTime).toLocaleString();
       });

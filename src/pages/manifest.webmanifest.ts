@@ -1,16 +1,10 @@
 import type { APIRoute } from 'astro';
-import { getImage } from 'astro:assets';
 
 import { siteMetadata } from '../data/siteMetadata';
+import { getAppIcons } from '../utils/appIcons';
 
 export const GET: APIRoute = async () => {
-  const icons = await Promise.all(
-    [48, 72, 96, 144, 192, 256, 384, 512].map(async (size) => ({
-      src: (await getImage({ src: siteMetadata.logo, width: size, height: size, format: 'png' })).src,
-      sizes: `${size}x${size}`,
-      type: 'image/png',
-    }))
-  );
+  const icons = (await getAppIcons()).map(({ size, src }) => ({ src, sizes: `${size}x${size}`, type: 'image/png' }));
 
   const manifest = {
     name: siteMetadata.title,

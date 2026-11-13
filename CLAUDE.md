@@ -24,7 +24,7 @@ Run `pnpm lint`, `pnpm check` and `pnpm build` before reporting work as done.
 
 - Public URLs must not change: posts at `/YYYY/MM/DD/slug/`, tags/categories, heading IDs, feeds, `/wp-content/...` files.
 - Use pnpm only; never add a Yarn or npm lockfile.
-- Images are referenced as `/wp-content/...`, in markdown and in the frontmatter `image:`. `wpContentImagesPlugin` and the `image` schema in `src/content.config.ts` map them to the submodule so they get optimized. GIFs are skipped, because optimization drops their animation.
+- Images are referenced as `/wp-content/...`, in markdown and in the frontmatter `image:`. `wpContentImagesPlugin` and the `image` schema in `src/content.config.ts` map them to the submodule through the `@wp-content` alias in `tsconfig.json`, so they get optimized. GIFs are skipped, because optimization drops their animation.
 - After changing a markdown plugin, delete `node_modules/.astro` and `.astro`, because Astro caches rendered markdown.
 - Disqus threads are matched by page URL with an empty identifier; don't change that.
 - TypeScript stays on 6.x until `@astrojs/check` and typescript-eslint support 7.

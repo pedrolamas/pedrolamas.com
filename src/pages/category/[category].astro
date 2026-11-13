@@ -2,25 +2,21 @@
 import type { GetStaticPaths } from 'astro';
 
 import ArchivePage from '../../components/ArchivePage.astro';
-import { getPosts, type Post } from '../../utils/posts';
+import { getPostsByTerm, type Post } from '../../utils/posts';
 import { slug } from '../../utils/slugify';
 
-export const getStaticPaths = (async () => {
-  const posts = await getPosts();
-  const categories = [...new Set(posts.flatMap((post) => post.data.categories))];
-
-  return categories.map((category) => ({
-    params: { category: slug(category) },
-    props: { category, posts: posts.filter((post) => post.data.categories.includes(category)) },
-  }));
-}) satisfies GetStaticPaths;
+export const getStaticPaths = (async () =>
+  (await getPostsByTerm('categories')).map(({ term, posts }) => ({
+    params: { category: slug(term) },
+    props: { term, posts },
+  }))) satisfies GetStaticPaths;
 
 type Props = {
-  category: string;
+  term: string;
   posts: Post[];
 };
 
-const { category, posts } = Astro.props;
+const { term, posts } = Astro.props;
 ---
 
-<ArchivePage title={`Category: ${category}`} posts={posts} />
+<ArchivePage title={`Category: ${term}`} posts={posts} />

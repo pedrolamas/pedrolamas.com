@@ -1,13 +1,17 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
-import { postUrl } from './urls';
-
 export type Post = CollectionEntry<'posts'>;
 
 /** All posts, newest first. */
 export const getPosts = async (): Promise<Post[]> => (await getCollection('posts')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-export const getPostUrl = (post: Post): string => postUrl(post.id);
+/** Every distinct category or tag, with the posts that have it. */
+export const getPostsByTerm = async (field: 'categories' | 'tags'): Promise<{ term: string; posts: Post[] }[]> => {
+  const posts = await getPosts();
+  const terms = [...new Set(posts.flatMap((post) => post.data[field]))];
+
+  return terms.map((term) => ({ term, posts: posts.filter((post) => post.data[field].includes(term)) }));
+};
 
 /** `March 28, 2023` */
 export const formatDate = (date: Date): string => date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });

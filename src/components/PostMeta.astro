@@ -1,7 +1,8 @@
 ---
 import FontAwesomeSymbol from './FontAwesomeSymbol.astro';
 import { siteMetadata } from '../data/siteMetadata';
-import { formatDate, getPostUrl, type Post } from '../utils/posts';
+import { formatDate, type Post } from '../utils/posts';
+import { postUrl } from '../utils/urls';
 import { slug } from '../utils/slugify';
 
 type Props = {
@@ -9,15 +10,15 @@ type Props = {
 };
 
 const { post } = Astro.props;
-const { date, categories, tags } = Astro.props.post.data;
-const url = getPostUrl(post);
+const { date, categories, tags } = post.data;
+const url = postUrl(post.id);
 
 const { REPOSITORY_URL, BRANCH } = process.env;
 ---
 
 <div class="post-meta">
   <span class="posted-on">
-    <FontAwesomeSymbol symbolName="article-posted-on" />
+    <FontAwesomeSymbol symbolName="icon-calendar" />
     <span class="screen-reader-text">Posted on </span>
     <a href={url} rel="bookmark">
       <time datetime={date.toISOString()}>{formatDate(date)}</time>
@@ -26,7 +27,7 @@ const { REPOSITORY_URL, BRANCH } = process.env;
 
   {categories.length > 0 && (
     <span class="categories">
-      <FontAwesomeSymbol symbolName="article-categories" />
+      <FontAwesomeSymbol symbolName="icon-folder" />
       <span class="screen-reader-text">Categories </span>
       {categories.map((category, index) => (
         <>
@@ -41,7 +42,7 @@ const { REPOSITORY_URL, BRANCH } = process.env;
 
   {tags.length > 0 && (
     <span class="tags">
-      <FontAwesomeSymbol symbolName="article-tags" />
+      <FontAwesomeSymbol symbolName="icon-tags" />
       <span class="screen-reader-text">Tags </span>
       {tags.map((tag, index) => (
         <>
@@ -55,7 +56,7 @@ const { REPOSITORY_URL, BRANCH } = process.env;
   )}
 
   <span class="comments">
-    <FontAwesomeSymbol symbolName="article-comments" />
+    <FontAwesomeSymbol symbolName="icon-comment" />
     <a href={`${url}#disqus_thread`}>
       <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url={new URL(url, siteMetadata.siteUrl).href} data-disqus-shortname={siteMetadata.disqusShortname}>
         Comments
@@ -65,7 +66,7 @@ const { REPOSITORY_URL, BRANCH } = process.env;
 
   {REPOSITORY_URL && BRANCH && (
     <span class="edit">
-      <FontAwesomeSymbol symbolName="article-edit" />
+      <FontAwesomeSymbol symbolName="icon-edit" />
       <a href={`${REPOSITORY_URL}/edit/${BRANCH}/src/content/posts/${post.id}.md`}>Edit</a>
     </span>
   )}
@@ -75,9 +76,9 @@ const { REPOSITORY_URL, BRANCH } = process.env;
   // Disqus replaces the text of every `.disqus-comment-count` element with that post's comment count.
   const commentCount = document.querySelector<HTMLElement>('.disqus-comment-count');
 
-  if (commentCount && !document.getElementById('dsq-count-scr')) {
+  // Astro bundles this script once per page, however many posts are listed.
+  if (commentCount) {
     const script = document.createElement('script');
-    script.id = 'dsq-count-scr';
     script.src = `https://${commentCount.dataset.disqusShortname}.disqus.com/count.js`;
     script.async = true;
     document.body.appendChild(script);

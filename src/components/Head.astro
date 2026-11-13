@@ -2,6 +2,7 @@
 import { getImage } from 'astro:assets';
 
 import { siteMetadata } from '../data/siteMetadata';
+import { getAppIcons } from '../utils/appIcons';
 
 export type HeadProps = {
   type: 'index' | 'page' | 'post';
@@ -22,7 +23,7 @@ const { siteUrl, description, author, authorDetails, title, lang, logo, twitter,
 const siteLogoUrl = new URL((await getImage({ src: logo, format: 'jpg' })).src, siteUrl).href;
 const authorPictureUrl = new URL((await getImage({ src: authorDetails.picture, format: 'jpg' })).src, siteUrl).href;
 const favicon = await getImage({ src: logo, width: 32, height: 32, format: 'png' });
-const appleTouchIcons = await Promise.all([48, 72, 96, 144, 192, 256, 384, 512].map(async (size) => ({ size, src: (await getImage({ src: logo, width: size, height: size, format: 'png' })).src })));
+const appleTouchIcons = await getAppIcons();
 
 const pageTitle = props.title || title;
 const pageDescription = props.description || description;
@@ -73,8 +74,8 @@ const jsonLd = {
 <meta property="og:title" content={pageTitle} />
 <meta property="og:url" content={pageUrl} />
 {pageDescription && <meta property="og:description" content={pageDescription} />}
-{pageImageUrl && <meta property="og:image" content={pageImageUrl} />}
-{lang && <meta property="og:locale" content={lang.replace('-', '_')} />}
+<meta property="og:image" content={pageImageUrl} />
+<meta property="og:locale" content={lang.replace('-', '_')} />
 
 <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
 <meta property="fb:admins" content={facebook.admins} />
@@ -96,7 +97,7 @@ const jsonLd = {
 <meta name="twitter:creator" content={`@${authorDetails.twitter || twitter.username}`} />
 <meta name="twitter:title" content={pageTitle} />
 {pageDescription && <meta name="twitter:description" content={pageDescription} />}
-{pageImageUrl && <meta name="twitter:image" content={pageImageUrl} />}
+<meta name="twitter:image" content={pageImageUrl} />
 <meta name="twitter:label1" content="Written by" />
 <meta name="twitter:data1" content={author} />
 {props.categories && props.categories.length > 0 && (

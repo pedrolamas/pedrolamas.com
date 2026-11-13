@@ -11,11 +11,11 @@ const pageUrl = encodeURIComponent(new URL(Astro.url.pathname, siteMetadata.site
 const pageTitle = encodeURIComponent(Astro.props.title);
 
 const links: { name: string; symbolName: SymbolName; link: string; label: string }[] = [
-  { name: 'Facebook', symbolName: 'share-facebook', link: `https://facebook.com/sharer/sharer.php?u=${pageUrl}`, label: 'Share on Facebook' },
-  { name: 'Twitter', symbolName: 'share-twitter', link: `https://twitter.com/intent/tweet/?text=${pageTitle}&url=${pageUrl}`, label: 'Share on Twitter' },
-  { name: 'LinkedIn', symbolName: 'share-linkedin', link: `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}&title=${pageTitle}&summary=${pageTitle}&source=${pageUrl}`, label: 'Share on LinkedIn' },
-  { name: 'WhatsApp', symbolName: 'share-whatsapp', link: `whatsapp://send?text=${pageTitle}%20${pageUrl}`, label: 'Share on WhatsApp' },
-  { name: 'E-Mail', symbolName: 'share-email', link: `mailto:?subject=${pageTitle}&body=${pageUrl}`, label: 'Share by E-Mail' },
+  { name: 'Facebook', symbolName: 'icon-facebook', link: `https://facebook.com/sharer/sharer.php?u=${pageUrl}`, label: 'Share on Facebook' },
+  { name: 'Twitter', symbolName: 'icon-twitter', link: `https://twitter.com/intent/tweet/?text=${pageTitle}&url=${pageUrl}`, label: 'Share on Twitter' },
+  { name: 'LinkedIn', symbolName: 'icon-linkedin', link: `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}&title=${pageTitle}&summary=${pageTitle}&source=${pageUrl}`, label: 'Share on LinkedIn' },
+  { name: 'WhatsApp', symbolName: 'icon-whatsapp', link: `whatsapp://send?text=${pageTitle}%20${pageUrl}`, label: 'Share on WhatsApp' },
+  { name: 'E-Mail', symbolName: 'icon-envelope', link: `mailto:?subject=${pageTitle}&body=${pageUrl}`, label: 'Share by E-Mail' },
 ];
 ---
 

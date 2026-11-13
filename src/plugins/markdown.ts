@@ -8,7 +8,6 @@ import { slugify } from '../utils/slugify';
 import { pageUrl, postUrl } from '../utils/urls';
 
 const contentDir = fileURLToPath(new URL('../content/', import.meta.url));
-const wpContentDir = path.join(contentDir, 'assets/wp-content');
 
 /** Public URL of the document being rendered, used for heading anchor links. */
 const documentUrl = (fileURL: URL | undefined): string => {
@@ -60,7 +59,7 @@ export const headingAnchorsPlugin = defineHastPlugin({
         type: 'element',
         tagName: 'a',
         properties: { href: `${documentUrl(ctx.fileURL)}#${id}`, className: ['anchor'], ariaLabelledBy: [id] },
-        children: [{ type: 'raw', value: symbolSvg('header-anchor') }],
+        children: [{ type: 'raw', value: symbolSvg('icon-link') }],
       });
     },
   },
@@ -81,7 +80,7 @@ export const figuresPlugin = defineHastPlugin({
         type: 'element',
         tagName: 'figcaption',
         properties: {},
-        children: [{ type: 'raw', value: symbolSvg('figure-caption') }, { type: 'text', value: String(image.properties.title) } satisfies Text],
+        children: [{ type: 'raw', value: symbolSvg('icon-info') }, { type: 'text', value: String(image.properties.title) } satisfies Text],
       };
 
       ctx.replaceNode(node, { type: 'element', tagName: 'figure', properties: {}, children: [image, caption] });
@@ -90,22 +89,17 @@ export const figuresPlugin = defineHastPlugin({
 });
 
 /**
- * Points `/wp-content/...` images at the local submodule file so Astro optimizes them.
+ * Points `/wp-content/...` images at the submodule (the `@wp-content` alias in tsconfig.json) so Astro optimizes them.
  * Animated GIFs are left alone, because optimization keeps only their first frame.
  */
 export const wpContentImagesPlugin = defineMdastPlugin({
   name: 'wp-content-images',
   image(node, ctx) {
-    if (!ctx.fileURL || !node.url.startsWith('/wp-content/') || /\.gif$/i.test(node.url)) return;
+    if (!node.url.startsWith('/wp-content/') || /\.gif$/i.test(node.url)) return;
 
-    const imagePath = path.relative(path.dirname(fileURLToPath(ctx.fileURL)), path.join(wpContentDir, node.url.slice('/wp-content/'.length)));
-
-    ctx.replaceNode(node, { ...node, url: imagePath.replace(/\\/g, '/') });
+    ctx.replaceNode(node, { ...node, url: node.url.replace('/wp-content/', '@wp-content/') });
   },
 });
-
-/** Number of `<time>` tags currently wrapped in a link, so only those get a closing `</a>`. */
-let openTimeLinks = 0;
 
 /** Links `<time datetime="…">` tags to timeanddate.com so readers can see the time in their own time zone. */
 export const timeLinksPlugin = defineMdastPlugin({
@@ -117,10 +111,11 @@ export const timeLinksPlugin = defineMdastPlugin({
     if (date && !Number.isNaN(date.getTime())) {
       const iso = date.toISOString();
 
-      openTimeLinks++;
+      ctx.data.openTimeLinks = (Number(ctx.data.openTimeLinks) || 0) + 1;
       ctx.replaceNode(node, { type: 'html', value: `<a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso=${iso}">${node.value}` });
-    } else if (node.value === '</time>' && openTimeLinks > 0) {
-      openTimeLinks--;
+    } else if (node.value === '</time>' && Number(ctx.data.openTimeLinks) > 0) {
+      // Only close the links this plugin opened, counted per document.
+      ctx.data.openTimeLinks = Number(ctx.data.openTimeLinks) - 1;
       ctx.replaceNode(node, { type: 'html', value: '</time></a>' });
     }
   },

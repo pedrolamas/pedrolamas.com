@@ -1,5 +1,6 @@
 ---
-import { formatDate, getPostUrl, type Post } from '../utils/posts';
+import { formatDate, type Post } from '../utils/posts';
+import { postUrl } from '../utils/urls';
 
 type Props = {
   previous?: Post;
@@ -21,7 +22,7 @@ const items = [
         <h2 aria-hidden="true">{label}</h2>
         <span class="screen-reader-text">{`${label} post:`}</span>
         <h3 class="post-entry">
-          <a href={getPostUrl(post)} title={`${label} Post: ${post.data.title}`}>
+          <a href={postUrl(post.id)} title={`${label} Post: ${post.data.title}`}>
             {post.data.title} <small>{formatDate(post.data.date)}</small>
           </a>
         </h3>
