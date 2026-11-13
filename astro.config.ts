@@ -72,13 +72,18 @@ export default defineConfig({
   },
   fonts: [
     {
-      provider: fontProviders.fontsource(),
+      provider: fontProviders.local(),
       name: 'PT Sans',
       cssVariable: '--font-pt-sans',
-      weights: [400, 700],
-      styles: ['normal', 'italic'],
-      subsets: ['latin'],
       fallbacks: ['Helvetica', 'Arial', 'sans-serif'],
+      options: {
+        variants: [
+          { weight: 400, style: 'normal', src: ['@fontsource/pt-sans/files/pt-sans-latin-400-normal.woff2'] },
+          { weight: 400, style: 'italic', src: ['@fontsource/pt-sans/files/pt-sans-latin-400-italic.woff2'] },
+          { weight: 700, style: 'normal', src: ['@fontsource/pt-sans/files/pt-sans-latin-700-normal.woff2'] },
+          { weight: 700, style: 'italic', src: ['@fontsource/pt-sans/files/pt-sans-latin-700-italic.woff2'] },
+        ],
+      },
     },
   ],
   markdown: {
