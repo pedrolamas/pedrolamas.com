@@ -11,6 +11,8 @@ export type FeedItem = {
   html: string;
 };
 
+const escapeAttribute = (value: string): string => value.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+
 const absoluteUrls = (html: string): string => html.replace(/(src|href)="\/(?!\/)/g, `$1="${siteMetadata.siteUrl}/`);
 
 /** All posts with their full rendered content, newest first. */
@@ -24,7 +26,7 @@ export const getFeedItems = async (): Promise<FeedItem[]> => {
       const url = new URL(getPostUrl(post), siteMetadata.siteUrl).href;
       const { Content } = await render(post);
       const html = await container.renderToString(Content);
-      const imageHtml = image ? `<p><img src="${image.src}" alt="${title}" class="webfeedsFeaturedVisual" /></p>` : '';
+      const imageHtml = image ? `<p><img src="${image.src}" alt="${escapeAttribute(title)}" class="webfeedsFeaturedVisual" /></p>` : '';
 
       return { title, date, url, html: absoluteUrls(imageHtml + html) };
     })

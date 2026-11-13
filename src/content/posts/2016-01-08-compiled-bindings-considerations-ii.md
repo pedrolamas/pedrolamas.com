@@ -192,7 +192,7 @@ We've also added a `MainPage.ViewModel` property to expose the current MainViewM
 
 This is what you'll get if you run the app and tap the buttons in succession:
 
-![Compiled Bindings FallbackValue bug](../assets/wp-content/uploads/2016/01/Compiled-Bindings-FallbackValue-bug.gif)
+![Compiled Bindings FallbackValue bug](/wp-content/uploads/2016/01/Compiled-Bindings-FallbackValue-bug.gif)
 
 As you can see, the 2nd TextBlock (the one using compiled bindings) never gets the text cleared when we tap the "Destroy CurrentTimeViewModel" button!
 

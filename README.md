@@ -30,7 +30,16 @@ Other useful scripts:
 - `pnpm lint` / `pnpm format`: checks / fixes code style (ESLint and Prettier)
 - `pnpm check`: type-checks the project (`astro check`)
 
-Posts live in `src/content/posts` and pages in `src/content/pages`.
+## Content
+
+- Posts live in `src/content/posts` (named `YYYY-MM-DD-slug.md`, published at `/YYYY/MM/DD/slug/`) and pages in `src/content/pages`.
+- Images go through Astro's image optimization, so reference them with a relative path (for example `../assets/wp-content/uploads/...`).
+- Animated GIFs must use the root-relative `/wp-content/...` URL instead, because image optimization keeps only the first frame.
+- The `src/content/assets/wp-content` submodule is also served as-is at `/wp-content/`, both by `pnpm dev` and in the build output, for downloads and full-size image links.
+
+## Deployment
+
+Netlify builds the site with `pnpm build` and publishes `dist/` (see `netlify.toml`). The "Edit" link on each post uses the `REPOSITORY_URL` and `BRANCH` variables that Netlify sets automatically; it is hidden when they're missing, such as in local builds.
 
 ## License
 

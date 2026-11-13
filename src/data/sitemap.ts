@@ -91,11 +91,6 @@ export const sitemap: SitemapEntry[] = [
     ],
   },
   {
-    title: 'Contributors',
-    url: '/contributors/',
-    minimap: false,
-  },
-  {
     title: 'Archive',
     url: '/archive/',
   },

@@ -14,22 +14,48 @@ import { postUrl } from './src/utils/urls';
 const postsDir = './src/content/posts';
 const wpContentDir = './src/content/assets/wp-content';
 
+/** Reads a `key: value` line from the frontmatter of a markdown file, as a date. */
+const frontmatterDate = (frontmatter: string, key: string): Date | undefined => {
+  const value = new RegExp(`^${key}:\\s*['"]?([^'"\\n]+)`, 'm').exec(frontmatter)?.[1];
+  const date = value ? new Date(value.trim()) : undefined;
+
+  return date && !Number.isNaN(date.getTime()) ? date : undefined;
+};
+
 /** Post URL → last modified date, for the sitemap. */
 const postsLastModified = new Map(
-  fs.readdirSync(postsDir).map((file) => {
-    const content = fs.readFileSync(path.join(postsDir, file), 'utf-8');
-    const lastModified = /^last_modified_at:\s*(.+)$/m.exec(content)?.[1] ?? /^date:\s*(.+)$/m.exec(content)?.[1];
+  fs
+    .readdirSync(postsDir)
+    .filter((file) => file.endsWith('.md'))
+    .map((file) => {
+      const frontmatter = /^---\r?\n([\s\S]*?)\r?\n---/.exec(fs.readFileSync(path.join(postsDir, file), 'utf-8'))?.[1] ?? '';
+      const lastModified = frontmatterDate(frontmatter, 'last_modified_at') ?? frontmatterDate(frontmatter, 'date');
 
-    return [new URL(postUrl(file.replace(/\.md$/, '')), siteMetadata.siteUrl).href, lastModified && new Date(lastModified).toISOString()];
-  })
+      return [new URL(postUrl(file.replace(/\.md$/, '')), siteMetadata.siteUrl).href, lastModified?.toISOString()];
+    })
 );
 
-/** Serves the legacy `/wp-content/` files (downloads and full size images linked from posts). */
+/** Whether a path inside the wp-content submodule is a dotfile (`.git`, …) that must not be served. */
+const isHidden = (relativePath: string): boolean => relativePath.split(/[\\/]/).some((segment) => segment.startsWith('.'));
+
+/** Serves the legacy `/wp-content/` files (downloads, full size images and animated GIFs linked from posts). */
 const wpContent = (): AstroIntegration => ({
   name: 'wp-content',
   hooks: {
+    'astro:server:setup': ({ server }) => {
+      const root = path.resolve(wpContentDir);
+
+      server.middlewares.use('/wp-content', (req, res, next) => {
+        const relativePath = decodeURIComponent(new URL(req.url ?? '/', 'http://localhost').pathname).replace(/^\/+/, '');
+        const filePath = path.resolve(root, relativePath);
+
+        if (!filePath.startsWith(root + path.sep) || isHidden(relativePath) || !fs.statSync(filePath, { throwIfNoEntry: false })?.isFile()) return next();
+
+        fs.createReadStream(filePath).pipe(res);
+      });
+    },
     'astro:build:done': ({ dir }) => {
-      fs.cpSync(wpContentDir, fileURLToPath(new URL('wp-content/', dir)), { recursive: true, filter: (source) => path.basename(source) !== '.git' });
+      fs.cpSync(wpContentDir, fileURLToPath(new URL('wp-content/', dir)), { recursive: true, filter: (source) => !isHidden(path.relative(wpContentDir, source)) });
     },
   },
 });

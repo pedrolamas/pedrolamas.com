@@ -9,9 +9,11 @@ const { posts, newerUrl, olderUrl } = Astro.props;
 ---
 
 <BaseLayout type="index">
-  {posts.map((post) => (
-    <PostArticle post={post} linkTitle />
-  ))}
+  <main id="main">
+    {posts.map((post) => (
+      <PostArticle post={post} linkTitle />
+    ))}
+  </main>
 
   <nav class="pagination">
     {olderUrl ? (

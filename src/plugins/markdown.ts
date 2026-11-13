@@ -88,17 +88,23 @@ export const figuresPlugin = defineHastPlugin({
   },
 });
 
+/** Number of `<time>` tags currently wrapped in a link, so only those get a closing `</a>`. */
+let openTimeLinks = 0;
+
 /** Links `<time datetime="…">` tags to timeanddate.com so readers can see the time in their own time zone. */
 export const timeLinksPlugin = defineMdastPlugin({
   name: 'time-links',
   html(node, ctx) {
     const match = /^<time datetime="([^"]+)">$/.exec(node.value);
+    const date = match && new Date(match[1]);
 
-    if (match) {
-      const iso = new Date(match[1]).toISOString();
+    if (date && !Number.isNaN(date.getTime())) {
+      const iso = date.toISOString();
 
+      openTimeLinks++;
       ctx.replaceNode(node, { type: 'html', value: `<a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso=${iso}">${node.value}` });
-    } else if (node.value === '</time>') {
+    } else if (node.value === '</time>' && openTimeLinks > 0) {
+      openTimeLinks--;
       ctx.replaceNode(node, { type: 'html', value: '</time></a>' });
     }
   },
