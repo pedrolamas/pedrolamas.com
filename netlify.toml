@@ -15,6 +15,12 @@
     Permissions-Policy = "accelerometer=(), autoplay=(), ambient-light-sensor=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()"
     X-Content-Type-Options = "nosniff"
 
+# Hashed build assets (fonts, CSS, JS, images) never change, so they can be cached forever
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[headers]]
   for = "/manifest.webmanifest"
   [headers.values]
