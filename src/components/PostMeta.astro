@@ -1,5 +1,6 @@
 ---
 import FontAwesomeSymbol from './FontAwesomeSymbol.astro';
+import { siteMetadata } from '../data/siteMetadata';
 import { formatDate, getPostUrl, type Post } from '../utils/posts';
 import { slug } from '../utils/slugify';
 
@@ -55,7 +56,11 @@ const { REPOSITORY_URL, BRANCH } = process.env;
 
   <span class="comments">
     <FontAwesomeSymbol symbolName="article-comments" />
-    <a href={`${url}#disqus_thread`}>Comments</a>
+    <a href={`${url}#disqus_thread`}>
+      <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url={new URL(url, siteMetadata.siteUrl).href} data-disqus-shortname={siteMetadata.disqusShortname}>
+        Comments
+      </span>
+    </a>
   </span>
 
   {REPOSITORY_URL && BRANCH && (
@@ -65,3 +70,16 @@ const { REPOSITORY_URL, BRANCH } = process.env;
     </span>
   )}
 </div>
+
+<script>
+  // Disqus replaces the text of every `.disqus-comment-count` element with that post's comment count.
+  const commentCount = document.querySelector<HTMLElement>('.disqus-comment-count');
+
+  if (commentCount && !document.getElementById('dsq-count-scr')) {
+    const script = document.createElement('script');
+    script.id = 'dsq-count-scr';
+    script.src = `https://${commentCount.dataset.disqusShortname}.disqus.com/count.js`;
+    script.async = true;
+    document.body.appendChild(script);
+  }
+</script>
