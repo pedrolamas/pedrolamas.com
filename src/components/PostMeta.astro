@@ -79,6 +79,8 @@ const { REPOSITORY_URL, BRANCH } = process.env;
   // Astro bundles this script once per page, however many posts are listed.
   if (commentCount) {
     const script = document.createElement('script');
+    // count.js finds its own script tag by this id, as in Disqus' embed code.
+    script.id = 'dsq-count-scr';
     script.src = `https://${commentCount.dataset.disqusShortname}.disqus.com/count.js`;
     script.async = true;
     document.body.appendChild(script);
