@@ -1,0 +1,70 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+import FontAwesomeSymbol from './FontAwesomeSymbol.astro';
+import { siteMetadata } from '../data/siteMetadata';
+import { sitemap } from '../data/sitemap';
+import type { SymbolName } from '../utils/fontAwesome';
+
+const { logo, title, description, social, sidebar } = siteMetadata;
+
+const assets = import.meta.glob<{ default: ImageMetadata }>('../content/assets/**/*.{png,jpg,gif}');
+
+const sidebarLogos = await Promise.all(sidebar.logos.map(async (sidebarLogo) => ({ title: sidebarLogo.title, image: (await assets[`../content/assets/${sidebarLogo.image}`]()).default })));
+
+const socialNetworks: [match: string, title: string, symbolName: SymbolName][] = [
+  ['twitter.com', 'Twitter', 'icon-twitter'],
+  ['facebook.com', 'Facebook', 'icon-facebook'],
+  ['linkedin.com', 'LinkedIn', 'icon-linkedin'],
+  ['github.com', 'GitHub', 'icon-github'],
+  ['/@', 'Mastodon', 'icon-mastodon'],
+];
+
+const socialLinks = social.links.map((url) => {
+  const [, title = '', symbolName = 'icon-share'] = socialNetworks.find(([match]) => url.includes(match)) ?? [];
+
+  return { url, title, symbolName };
+});
+
+socialLinks.push({ url: '/feeds/', title: 'Syndicated Feeds', symbolName: 'icon-rss' });
+---
+
+<aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <Image class="sidebar-logo" src={logo} alt={title} width={160} />
+      <h1>
+        <a href="/" rel="home" data-astro-prefetch>
+          {title}
+        </a>
+      </h1>
+      <p class="lead">{description}</p>
+    </div>
+
+    <nav class="sidebar-nav" role="navigation" aria-label="Primary Menu">
+      {sitemap
+        .filter((entry) => entry.minimap !== false)
+        .map((entry) => (
+          <a class="sidebar-nav-item" href={entry.url} data-astro-prefetch>
+            {entry.title}
+          </a>
+        ))}
+    </nav>
+
+    <nav class="sidebar-social" role="navigation" aria-label="Social Links Menu">
+      {socialLinks.map((link) => (
+        <a href={link.url} class="sidebar-social-item" title={link.title} rel="me">
+          <FontAwesomeSymbol symbolName={link.symbolName} />
+          <span class="screen-reader-text">{link.title}</span>
+        </a>
+      ))}
+    </nav>
+
+    <div class="sidebar-logos">
+      {sidebarLogos.map((sidebarLogo) => (
+        <Image class="sidebar-logos-logo" src={sidebarLogo.image} title={sidebarLogo.title} alt={sidebarLogo.title} width={200} />
+      ))}
+    </div>
+  </div>
+</aside>

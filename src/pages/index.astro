@@ -1,0 +1,8 @@
+---
+import IndexPage from '../components/IndexPage.astro';
+import { getIndexPages } from '../utils/posts';
+
+const [firstPage] = await getIndexPages();
+---
+
+<IndexPage {...firstPage} />

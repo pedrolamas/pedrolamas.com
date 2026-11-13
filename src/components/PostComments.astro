@@ -1,0 +1,45 @@
+---
+import { siteMetadata } from '../data/siteMetadata';
+
+type Props = {
+  title: string;
+};
+
+const { siteUrl, disqusShortname } = siteMetadata;
+const url = new URL(Astro.url.pathname, siteUrl).href;
+---
+
+<div id="disqus_thread" data-shortname={disqusShortname} data-url={url} data-title={Astro.props.title}></div>
+
+<script>
+  // Load Disqus when near the viewport
+  const thread = document.getElementById('disqus_thread');
+
+  if (thread) {
+    const { shortname, url, title } = thread.dataset;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+
+        observer.disconnect();
+
+        Object.assign(window, {
+          disqus_config: function (this: { page: { url?: string; identifier: string; title?: string } }) {
+            this.page.url = url;
+            this.page.identifier = '';
+            this.page.title = title;
+          },
+        });
+
+        const script = document.createElement('script');
+        script.src = `https://${shortname}.disqus.com/embed.js`;
+        script.setAttribute('data-timestamp', String(Date.now()));
+        document.body.appendChild(script);
+      },
+      { rootMargin: '400px' }
+    );
+
+    observer.observe(thread);
+  }
+</script>

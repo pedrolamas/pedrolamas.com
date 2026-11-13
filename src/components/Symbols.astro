@@ -1,0 +1,7 @@
+---
+import { Symbols, symbolDefinition } from '../utils/fontAwesome';
+
+const definitions = Object.entries(Symbols).map(symbolDefinition).join('');
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none" set:html={definitions} />

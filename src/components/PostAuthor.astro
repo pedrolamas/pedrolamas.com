@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets';
+
+import { siteMetadata } from '../data/siteMetadata';
+
+const { author, authorDetails } = siteMetadata;
+---
+
+<section class="post-author">
+  <Image class="author-thumbnail" src={authorDetails.picture} alt={author} width={80} />
+  <div class="author-biography">
+    <h2>by {author}</h2>
+    <p set:html={authorDetails.biography} />
+  </div>
+</section>

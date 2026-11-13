@@ -1,0 +1,12 @@
+---
+import SitemapEntry from '../components/SitemapEntry.astro';
+import { siteMetadata } from '../data/siteMetadata';
+import { sitemap } from '../data/sitemap';
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout title="Site Map">
+  <ul>
+    <SitemapEntry title={siteMetadata.title} url="/" sub={sitemap} />
+  </ul>
+</PageLayout>

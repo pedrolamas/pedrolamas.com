@@ -1,0 +1,34 @@
+---
+import PostArticle from './PostArticle.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { IndexPage } from '../utils/posts';
+
+type Props = IndexPage;
+
+const { posts, newerUrl, olderUrl } = Astro.props;
+---
+
+<BaseLayout type="index">
+  <main id="main">
+    {posts.map((post) => (
+      <PostArticle post={post} linkTitle />
+    ))}
+  </main>
+
+  <nav class="pagination">
+    {olderUrl ? (
+      <a class="pagination-item older" href={olderUrl} data-astro-prefetch>
+        Older
+      </a>
+    ) : (
+      <span class="pagination-item older">Older</span>
+    )}
+    {newerUrl ? (
+      <a class="pagination-item newer" href={newerUrl} data-astro-prefetch>
+        Newer
+      </a>
+    ) : (
+      <span class="pagination-item newer">Newer</span>
+    )}
+  </nav>
+</BaseLayout>

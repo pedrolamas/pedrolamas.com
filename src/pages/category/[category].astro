@@ -1,0 +1,22 @@
+---
+import type { GetStaticPaths } from 'astro';
+
+import ArchivePage from '../../components/ArchivePage.astro';
+import { getPostsByTerm, type Post } from '../../utils/posts';
+import { slug } from '../../utils/slugify';
+
+export const getStaticPaths = (async () =>
+  (await getPostsByTerm('categories')).map(({ term, posts }) => ({
+    params: { category: slug(term) },
+    props: { term, posts },
+  }))) satisfies GetStaticPaths;
+
+type Props = {
+  term: string;
+  posts: Post[];
+};
+
+const { term, posts } = Astro.props;
+---
+
+<ArchivePage title={`Category: ${term}`} posts={posts} />
