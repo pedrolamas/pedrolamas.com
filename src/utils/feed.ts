@@ -16,7 +16,8 @@ const escapeAttribute = (value: string): string => value.replace(/&/g, '&amp;').
 
 const absoluteUrls = (html: string): string => html.replace(/(src|href)="\/(?!\/)/g, `$1="${siteMetadata.siteUrl}/`);
 
-const renderFeedItems = async (): Promise<FeedItem[]> => {
+/** All posts with their full rendered content, newest first. */
+export const getFeedItems = async (): Promise<FeedItem[]> => {
   const container = await AstroContainer.create();
   const posts = await getPosts();
 
@@ -32,8 +33,3 @@ const renderFeedItems = async (): Promise<FeedItem[]> => {
     })
   );
 };
-
-let feedItems: Promise<FeedItem[]> | undefined;
-
-/** All posts with their full rendered content, newest first. Rendered once and shared by both feeds. */
-export const getFeedItems = (): Promise<FeedItem[]> => (feedItems ??= renderFeedItems());
