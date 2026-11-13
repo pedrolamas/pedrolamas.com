@@ -1,3 +1,24 @@
-Contact: pedrolamas@gmail.com
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Contact: mailto:pedrolamas@gmail.com
+Expires: 2027-11-13T00:00:00.000Z
 Encryption: https://www.pedrolamas.com/public.asc
-Signature: https://www.pedrolamas.com/.well-known/security.txt
+Canonical: https://www.pedrolamas.com/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iQJPBAEBCAA5FiEEIMQrbEGh+IfHCJrB/s+F0WToSCsFAmr3YocbFIAAAAAABAAO
+bWFudTIsMi41KzEuMTIsMiwxAAoJEP7PhdFk6EgrPZgP/2+38a3Io8ARmzoMwfBq
+YP4iLIA4uodyjOLuZ6xhkmYKheqsYrm6v4KARsRDMH/THuBQpWMX1+t7ul+CUxor
+85zJ5lixnKcCVgvRX7B+1T4dY7vcGdynR9vKiVWV4smsw3baeVgytiiJRANsnaA5
+aRTxQXC7OO4ZkWzJI/JJEXvBUZFRR8kvWXUqz8bbL8srZFttyLS/GuQXYG6731Op
+uCeow9FNNZAal55HPwa4K7Elr1/ly7lHlaxJbvRcNDCCZcdBd7wNFu7ZO0pTUn6j
+gFA1zColG8kRBmruO4+uJ8UnuaQnLd8AaNBrBiShIH5MibzR0UNWMhjUgXsm0NVT
+vrBOxztUKYrxRokU5ro9BFUt1D6flff/YK7Xjdw76cCsGbMy7EykBklqz2TGwMkt
+SGS7W43mr0D7/cLOzbjhbYTyWpFA4Yr06asitdW89NUn3ISkP8CcVOKvj1M/UF6K
+e4LaCp/oCJklQxINKZ1DDTmeccclRWEVng4bBnY7KaX/Vz1o+dseP9TFgLxTbSSf
+gNq8/UscOwrg1wqGClyWxc9RDFg8BEGOZN2cMRRSD29I8EAM5LS1KICH3TNRl1/b
+rpdWUKFv9ZUWdoa8zzJe651B3UQMg1Yx5iY6Ts1TSLBJ05dHDaw+VX9PS0pi0bKI
+WRg1Qvrj2kjQntfy/FaZQFwu
+=W3+b
+-----END PGP SIGNATURE-----
