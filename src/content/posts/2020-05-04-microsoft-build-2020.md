@@ -2,7 +2,7 @@
 layout: post
 title: Microsoft Build 2020 registration is open, fully remote, and free!
 date: 2020-05-04T18:07:13+01:00
-image: ../assets/wp-content/uploads/2020/05/Microsoft-Build-2020-Registration-is-Open-Fully-Remote-and-Free.png
+image: /wp-content/uploads/2020/05/Microsoft-Build-2020-Registration-is-Open-Fully-Remote-and-Free.png
 categories:
   - Windows
 tags:

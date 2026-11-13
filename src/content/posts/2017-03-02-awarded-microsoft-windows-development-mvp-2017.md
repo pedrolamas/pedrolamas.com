@@ -12,7 +12,7 @@ dsq_thread_id:
   - '5596635171'
 dsq_needs_sync:
   - '1'
-image: ../assets/wp-content/uploads/2017/03/MVP_Logo_Horizontal_Preferred_Cyan300_RGB_300ppi.png
+image: /wp-content/uploads/2017/03/MVP_Logo_Horizontal_Preferred_Cyan300_RGB_300ppi.png
 categories:
   - Uncategorized
 tags:

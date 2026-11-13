@@ -2,7 +2,7 @@
 layout: post
 title: Cimbalino Toolkit 2.5.0
 date: 2017-05-11T12:00:40+01:00
-image: ../assets/wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
+image: /wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
 categories:
   - Windows
   - Windows Phone

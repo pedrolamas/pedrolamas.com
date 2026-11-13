@@ -33,8 +33,7 @@ Other useful scripts:
 ## Content
 
 - Posts live in `src/content/posts` (named `YYYY-MM-DD-slug.md`, published at `/YYYY/MM/DD/slug/`) and pages in `src/content/pages`.
-- Images go through Astro's image optimization, so reference them with a relative path (for example `../assets/wp-content/uploads/...`).
-- Animated GIFs must use the root-relative `/wp-content/...` URL instead, because image optimization keeps only the first frame.
+- Reference images (in markdown and the frontmatter `image:`) as `/wp-content/...`. At build time these are mapped to the files in the `src/content/assets/wp-content` submodule and optimized, except animated GIFs, which are served as they are.
 - The `src/content/assets/wp-content` submodule is also served as-is at `/wp-content/`, both by `pnpm dev` and in the build output, for downloads and full-size image links.
 
 ## Deployment

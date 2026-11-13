@@ -8,7 +8,7 @@ guid: https://www.pedrolamas.com/?p=4292
 permalink: /2015/12/08/paying-the-tab-for-dotnet-native/
 dsq_thread_id:
   - '4385658860'
-image: ../assets/wp-content/uploads/2015/12/yoursign-459x510.jpg
+image: /wp-content/uploads/2015/12/yoursign-459x510.jpg
 categories:
   - Windows
 tags:

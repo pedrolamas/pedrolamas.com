@@ -12,7 +12,7 @@ instant_articles_submission_id:
   - '1246760062066363'
 dsq_thread_id:
   - '5359337793'
-image: ../assets/wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
+image: /wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
 categories:
   - Windows
   - Windows Phone

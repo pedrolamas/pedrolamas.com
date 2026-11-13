@@ -8,7 +8,7 @@ guid: https://www.pedrolamas.com/?p=3967
 permalink: /2014/04/25/bye-nokia-hello-microsoft/
 dsq_thread_id:
   - '2638071127'
-image: ../assets/wp-content/uploads/2014/04/Microsoft-300x270.png
+image: /wp-content/uploads/2014/04/Microsoft-300x270.png
 categories:
   - Uncategorized
 tags:

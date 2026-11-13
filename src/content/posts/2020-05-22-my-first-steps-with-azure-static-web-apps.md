@@ -2,7 +2,7 @@
 layout: post
 title: My first steps with Azure Static Web Apps
 date: 2020-05-22T17:01:35+01:00
-image: ../assets/wp-content/uploads/2020/05/pedrolamas-com-Azure-Static-Web-App.png
+image: /wp-content/uploads/2020/05/pedrolamas-com-Azure-Static-Web-App.png
 categories:
   - Azure
 tags:
@@ -61,7 +61,7 @@ I then made a few more changes (like ensuring that GitHub would checkout the sub
 
 I ran a website speed test with [Fast or Slow](https://www.fastorslow.com/) and got [98 of 100 points](https://www.fastorslow.com/app/profile/ca6be8e7-1db8-5e42-b92c-cdb5eff79857), a [2 points improvement](https://www.fastorslow.com/app/profile/f2f146f8-11f5-5526-b14b-eca2d8e9b4ec) over a speed test of this website (which is built and hosted on Netlify with Cloudflare CDN)
 
-![Speed test results from Fast or Slow for this Azure Static Web App](../assets/wp-content/uploads/2020/05/pedrolamas-com-Azure-Static-Web-App-speed-test.png 'Speed test results from Fast or Slow for this Azure Static Web App')
+![Speed test results from Fast or Slow for this Azure Static Web App](/wp-content/uploads/2020/05/pedrolamas-com-Azure-Static-Web-App-speed-test.png 'Speed test results from Fast or Slow for this Azure Static Web App')
 
 Took a bit more of effort than I initially expected, but I'm very happy and **very impressed** with the result!
 

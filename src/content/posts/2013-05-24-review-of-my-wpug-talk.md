@@ -8,7 +8,7 @@ guid: https://www.pedrolamas.com/?p=1071
 permalink: /2013/05/24/review-of-my-wpug-talk/
 dsq_thread_id:
   - '2061027352'
-image: ../assets/wp-content/uploads/2013/05/WPUG.png
+image: /wp-content/uploads/2013/05/WPUG.png
 categories:
   - Windows Phone
 tags:

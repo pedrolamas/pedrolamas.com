@@ -20,7 +20,7 @@ I recently tried running an [AdGuard Home](https://adguard.com/en/adguard-home/o
 
 There was however a small issue: the IP of the client machine was not showing up!
 
-![AdGuard Home Docker container not showing the client IPs](../assets/wp-content/uploads/2020/11/AdGuard-Home-no-client-IPs.png 'AdGuard Home Docker container not showing the client IPs')
+![AdGuard Home Docker container not showing the client IPs](/wp-content/uploads/2020/11/AdGuard-Home-no-client-IPs.png 'AdGuard Home Docker container not showing the client IPs')
 
 I found a [similar issue](https://github.com/pi-hole/docker-pi-hole/issues/135) had previously been open on Pi-hole GitHub repository, but no solution provided.
 
@@ -39,7 +39,7 @@ sudo iptables -t nat -A PREROUTING -m addrtype --dst-type LOCAL ! --dst 127.0.0.
 
 I could now see the client IPs and hostnames on AdGuard Home:
 
-![AdGuard Home Docker container now showing the client IPs or hostnames](../assets/wp-content/uploads/2020/11/AdGuard-Home-client-IPs-and-hostnames.png 'AdGuard Home Docker container now showing the client IPs or hostnames')
+![AdGuard Home Docker container now showing the client IPs or hostnames](/wp-content/uploads/2020/11/AdGuard-Home-client-IPs-and-hostnames.png 'AdGuard Home Docker container now showing the client IPs or hostnames')
 
 I was aware that this change to the Synology iptables was not a permanent one and would have to be done on every reboot, so the next step was to get a more permanent solution!
 

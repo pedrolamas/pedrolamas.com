@@ -8,7 +8,7 @@ guid: https://www.pedrolamas.com/?p=4565
 permalink: /2016/04/05/cimbalino-toolkit-2-2-0/
 dsq_thread_id:
   - '4722246581'
-image: ../assets/wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
+image: /wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
 categories:
   - Windows
   - Windows Phone

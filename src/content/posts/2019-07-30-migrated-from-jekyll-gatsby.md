@@ -2,7 +2,7 @@
 layout: post
 title: Migrated from Jekyll to Gatsby
 date: 2019-07-30T18:24:22+01:00
-image: ../assets/wp-content/uploads/2019/07/Migrated-from-Jekyll-to-Gatsby.png
+image: /wp-content/uploads/2019/07/Migrated-from-Jekyll-to-Gatsby.png
 categories:
   - Uncategorized
 tags:

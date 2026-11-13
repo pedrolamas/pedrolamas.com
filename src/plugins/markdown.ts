@@ -8,6 +8,7 @@ import { slugify } from '../utils/slugify';
 import { pageUrl, postUrl } from '../utils/urls';
 
 const contentDir = fileURLToPath(new URL('../content/', import.meta.url));
+const wpContentDir = path.join(contentDir, 'assets/wp-content');
 
 /** Public URL of the document being rendered, used for heading anchor links. */
 const documentUrl = (fileURL: URL | undefined): string => {
@@ -85,6 +86,21 @@ export const figuresPlugin = defineHastPlugin({
 
       ctx.replaceNode(node, { type: 'element', tagName: 'figure', properties: {}, children: [image, caption] });
     },
+  },
+});
+
+/**
+ * Points `/wp-content/...` images at the local submodule file so Astro optimizes them.
+ * Animated GIFs are left alone, because optimization keeps only their first frame.
+ */
+export const wpContentImagesPlugin = defineMdastPlugin({
+  name: 'wp-content-images',
+  image(node, ctx) {
+    if (!ctx.fileURL || !node.url.startsWith('/wp-content/') || /\.gif$/i.test(node.url)) return;
+
+    const imagePath = path.relative(path.dirname(fileURLToPath(ctx.fileURL)), path.join(wpContentDir, node.url.slice('/wp-content/'.length)));
+
+    ctx.replaceNode(node, { ...node, url: imagePath.replace(/\\/g, '/') });
   },
 });
 

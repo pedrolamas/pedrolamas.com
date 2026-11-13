@@ -35,7 +35,7 @@ I forgot to mention a massive difference on the new version of the XAML Behavior
 
 If you use PowerShell to output the Assembly Full Name from the current and previous versions of the XAML Behaviors, this is what you will get:
 
-[![Microsoft.Xaml.Interactivity assembly full name](../assets/wp-content/uploads/2016/02/Microsoft.Xaml_.Interactivity-assembly-full-name.png)](/wp-content/uploads/2016/02/Microsoft.Xaml_.Interactivity-assembly-full-name.png)
+[![Microsoft.Xaml.Interactivity assembly full name](/wp-content/uploads/2016/02/Microsoft.Xaml_.Interactivity-assembly-full-name.png)](/wp-content/uploads/2016/02/Microsoft.Xaml_.Interactivity-assembly-full-name.png)
 
 Notice the different `PublicKey` value?
 

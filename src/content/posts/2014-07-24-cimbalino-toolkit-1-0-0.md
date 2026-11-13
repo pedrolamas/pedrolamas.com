@@ -10,7 +10,7 @@ fb_fan_page_post_id:
   - 150703221746608_339703969513198
 dsq_thread_id:
   - '2869257645'
-image: ../assets/wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
+image: /wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
 categories:
   - Windows
   - Windows Phone
@@ -42,7 +42,7 @@ There was also some limitations on the available API's for Background Agents and
 
 So the toolkit ended up divided like so:
 
-[![Cimbalino Windows Phone Toolkit](../assets/wp-content/uploads/2014/07/Cimbalino-Windows-Phone-Toolkit-thumb.png)](/wp-content/uploads/2014/07/Cimbalino-Windows-Phone-Toolkit.png)
+[![Cimbalino Windows Phone Toolkit](/wp-content/uploads/2014/07/Cimbalino-Windows-Phone-Toolkit-thumb.png)](/wp-content/uploads/2014/07/Cimbalino-Windows-Phone-Toolkit.png)
 
 In light blue are the components that may be used with Background Agents. The rest of the components are divided by Capabilities or 3rd party components requirements.
 

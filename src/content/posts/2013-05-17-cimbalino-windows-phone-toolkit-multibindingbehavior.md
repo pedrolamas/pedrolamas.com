@@ -8,7 +8,7 @@ guid: https://www.pedrolamas.com/?p=951
 permalink: /2013/05/17/cimbalino-windows-phone-toolkit-multibindingbehavior/
 dsq_thread_id:
   - '2046358152'
-image: ../assets/wp-content/uploads/2013/03/Cimbalino-Windows-Phone-Toolkit-300x270.png
+image: /wp-content/uploads/2013/03/Cimbalino-Windows-Phone-Toolkit-300x270.png
 categories:
   - Windows Phone
 tags:

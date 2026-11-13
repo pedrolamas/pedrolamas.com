@@ -3,7 +3,7 @@ layout: post
 title: How to connect to a WireGuard VPN server from a Docker container
 date: 2020-11-20T14:15:12+00:00
 last_modified_at: 2023-08-03T23:50:42+01:00
-image: ../assets/wp-content/uploads/2020/11/How-to-connect-to-a-WireGuard-VPN-server-from-a-Docker-container.png
+image: /wp-content/uploads/2020/11/How-to-connect-to-a-WireGuard-VPN-server-from-a-Docker-container.png
 categories:
   - Docker
 tags:

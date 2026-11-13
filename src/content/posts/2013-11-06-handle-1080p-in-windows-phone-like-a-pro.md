@@ -8,7 +8,7 @@ guid: https://www.pedrolamas.com/?p=3371
 permalink: /2013/11/06/handle-1080p-in-windows-phone-like-a-pro/
 dsq_thread_id:
   - '2047083646'
-image: ../assets/wp-content/uploads/2013/11/WP8-device-running-at-1080p-300x270.png
+image: /wp-content/uploads/2013/11/WP8-device-running-at-1080p-300x270.png
 categories:
   - Windows Phone
 tags:

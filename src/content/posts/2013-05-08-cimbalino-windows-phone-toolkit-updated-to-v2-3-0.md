@@ -8,7 +8,7 @@ guid: https://www.pedrolamas.com/?p=331
 permalink: /2013/05/08/cimbalino-windows-phone-toolkit-updated-to-v2-3-0/
 dsq_thread_id:
   - '2045608160'
-image: ../assets/wp-content/uploads/2013/03/Cimbalino-Windows-Phone-Toolkit-300x270.png
+image: /wp-content/uploads/2013/03/Cimbalino-Windows-Phone-Toolkit-300x270.png
 categories:
   - Windows Phone
 tags:

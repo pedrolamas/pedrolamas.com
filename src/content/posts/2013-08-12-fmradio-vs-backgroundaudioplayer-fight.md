@@ -8,7 +8,7 @@ guid: https://www.pedrolamas.com/?p=2241
 permalink: /2013/08/12/fmradio-vs-backgroundaudioplayer-fight/
 dsq_thread_id:
   - '2056177511'
-image: ../assets/wp-content/uploads/2013/08/Windows-Phone-8-FM-Radio-604x270.png
+image: /wp-content/uploads/2013/08/Windows-Phone-8-FM-Radio-604x270.png
 categories:
   - Windows Phone
 tags:

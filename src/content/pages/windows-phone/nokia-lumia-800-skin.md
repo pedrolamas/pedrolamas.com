@@ -23,7 +23,7 @@ Following up on them, I looked for one of the Nokia Lumia 800, but the (many!) s
 
 So, I created my very own Nokia Lumia 800 skin for Windows Phone emulator, and the result is what you can see here! :)
 
-[![Nokia Lumia 800 skin for Windows Phone Emulator](../../assets/wp-content/uploads/2013/01/Nokia-Lumia-800-skin-for-Windows-Phone-Emulator-thumb.png)](/wp-content/uploads/2013/01/Nokia-Lumia-800-skin-for-Windows-Phone-Emulator.png)
+[![Nokia Lumia 800 skin for Windows Phone Emulator](/wp-content/uploads/2013/01/Nokia-Lumia-800-skin-for-Windows-Phone-Emulator-thumb.png)](/wp-content/uploads/2013/01/Nokia-Lumia-800-skin-for-Windows-Phone-Emulator.png)
 
 This skin uses hi-res images, and has the following fully working buttons:
 

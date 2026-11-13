@@ -2,7 +2,7 @@
 layout: post
 title: Insider Dev Tour London
 date: 2019-06-06T11:10:12+01:00
-image: ../assets/wp-content/uploads/2019/06/Insider-Dev-Toor-London.png
+image: /wp-content/uploads/2019/06/Insider-Dev-Toor-London.png
 categories:
   - Windows
 tags:

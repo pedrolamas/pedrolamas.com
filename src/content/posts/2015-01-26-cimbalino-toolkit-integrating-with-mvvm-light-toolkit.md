@@ -8,7 +8,7 @@ guid: https://www.pedrolamas.com/?p=4083
 permalink: /2015/01/26/cimbalino-toolkit-integrating-with-mvvm-light-toolkit/
 dsq_thread_id:
   - '3456687900'
-image: ../assets/wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
+image: /wp-content/uploads/2014/06/Cimbalino.Toolkit@4x-400x270.png
 categories:
   - Windows
   - Windows Phone
@@ -28,7 +28,7 @@ On this article I will show how to integrate it with the [MVVM Light Toolkit](ht
 
 Using the same approach to add NuGet packages to the solution shown in the previous article, now search for "MvvmLight" and select the package shown in this picture:
 
-[![Searching for MVVM Light Toolkit](../assets/wp-content/uploads/2015/01/Searching-for-MVVM-Light-Toolkit.png)](/wp-content/uploads/2015/01/Searching-for-MVVM-Light-Toolkit.png)
+[![Searching for MVVM Light Toolkit](/wp-content/uploads/2015/01/Searching-for-MVVM-Light-Toolkit.png)](/wp-content/uploads/2015/01/Searching-for-MVVM-Light-Toolkit.png)
 
 You should now click on the _Install_ button, confirm that you want to install the package into both projects, review the details shown in the _License Acceptance_ window, and click the _I Accept_ button.
 
@@ -36,11 +36,11 @@ You will now see a couple of warnings about moving the _ViewModel_ folder manual
 
 Look at the Solution Explorer Window, you should see that we have two _ViewModel_ folders, one on each of the projects:
 
-[![Projects with different ViewModel folders](../assets/wp-content/uploads/2015/01/Projects-with-different-ViewModel-folders.png)](/wp-content/uploads/2015/01/Projects-with-different-ViewModel-folders.png)
+[![Projects with different ViewModel folders](/wp-content/uploads/2015/01/Projects-with-different-ViewModel-folders.png)](/wp-content/uploads/2015/01/Projects-with-different-ViewModel-folders.png)
 
 Go ahead and delete one of the _ViewModel_ folders, and move the remaining one from the project to the shared files on the bottom. The end result should look something like this:
 
-[![Projects with shared ViewModel folder](../assets/wp-content/uploads/2015/01/Projects-with-shared-ViewModel-folder.png)](/wp-content/uploads/2015/01/Projects-with-shared-ViewModel-folder.png)
+[![Projects with shared ViewModel folder](/wp-content/uploads/2015/01/Projects-with-shared-ViewModel-folder.png)](/wp-content/uploads/2015/01/Projects-with-shared-ViewModel-folder.png)
 
 We now we need to register the `IMessageBoxService` with the `ViewModelLocator` so that we can use it in the `MainViewModel` to show message popups in the app!
 

@@ -2,7 +2,7 @@
 layout: post
 title: Windows Phone is (officially) dead!
 date: 2017-07-10T15:34:00+01:00
-image: ../assets/wp-content/uploads/2017/07/Windows-Phone-is-officially-dead.jpg
+image: /wp-content/uploads/2017/07/Windows-Phone-is-officially-dead.jpg
 categories:
   - Windows Phone
 tags:
@@ -29,7 +29,7 @@ By my account, throughout the years I owed and used at least 12 different Window
 
 I also got to do a lot tech-talks on Windows Phone development, and participated in a few hackathons, helping the young and brightest with their projects.
 
-![Windows Phone 7 development with Silverlight - Microsoft Techdays Portugal 2010](../assets/wp-content/uploads/2017/07/Windows-Phone-7-Development-Techdays-Portugal-2010.jpg)
+![Windows Phone 7 development with Silverlight - Microsoft Techdays Portugal 2010](/wp-content/uploads/2017/07/Windows-Phone-7-Development-Techdays-Portugal-2010.jpg)
 
 ## "The King is dead, long live the King!"
 

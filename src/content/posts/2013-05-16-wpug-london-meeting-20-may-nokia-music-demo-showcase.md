@@ -8,7 +8,7 @@ guid: https://www.pedrolamas.com/?p=831
 permalink: /2013/05/16/wpug-london-meeting-20-may-nokia-music-demo-showcase/
 dsq_thread_id:
   - '2071353832'
-image: ../assets/wp-content/uploads/2013/05/WPUG.png
+image: /wp-content/uploads/2013/05/WPUG.png
 categories:
   - Windows Phone
 tags:

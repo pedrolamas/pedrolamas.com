@@ -14,7 +14,8 @@ const posts = defineCollection({
       last_modified_at: z.coerce.date().optional(),
       categories: z.array(z.string()).default([]),
       tags: z.array(z.string()).default([]),
-      image: image().optional(),
+      // `/wp-content/...` maps to the local submodule file, so it can be optimized.
+      image: z.preprocess((value) => (typeof value === 'string' ? value.replace(/^\/wp-content\//, '../assets/wp-content/') : value), image().optional()),
     }),
 });
 

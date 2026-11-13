@@ -8,7 +8,7 @@ guid: https://www.pedrolamas.com/?p=3936
 permalink: /2014/03/31/wrappanel-is-great-so-please-stop-using-it/
 dsq_thread_id:
   - '2562203881'
-image: ../assets/wp-content/uploads/2014/03/WrapPanel-layout-420x270.png
+image: /wp-content/uploads/2014/03/WrapPanel-layout-420x270.png
 categories:
   - Windows Phone
 tags:
@@ -45,7 +45,7 @@ Now say we want to list 3 items per row and them wrap to the next row, we can us
 
 The resulting items layout will look something like the following picture:
 
-[![WrapPanel layout](../assets/wp-content/uploads/2014/03/WrapPanel-layout-252x300.png)](/wp-content/uploads/2014/03/WrapPanel-layout.png)
+[![WrapPanel layout](/wp-content/uploads/2014/03/WrapPanel-layout-252x300.png)](/wp-content/uploads/2014/03/WrapPanel-layout.png)
 
 This will work fine with 10 items, but what about 100? Or 1.000? Or even 10.000?
 
@@ -77,7 +77,7 @@ All we now need is another `ItemsControl` inside our main `ListBox` to iterate t
 
 Here's the resulting layout schematic:
 
-[![Smart Wrapping layout](../assets/wp-content/uploads/2014/03/Smart-Wrapping-layout-252x300.png)](/wp-content/uploads/2014/03/Smart-Wrapping-layout.png)
+[![Smart Wrapping layout](/wp-content/uploads/2014/03/Smart-Wrapping-layout-252x300.png)](/wp-content/uploads/2014/03/Smart-Wrapping-layout.png)
 
 Major advantages with this approach is the obvious performance improvement and memory consumption reduction. Why? Because we maintained the `VirtualizingStackPanel` in our main `ListBox.ItemsPanel`!
 

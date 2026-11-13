@@ -8,7 +8,7 @@ guid: https://www.pedrolamas.com/?p=4166
 permalink: /2015/05/05/theres-never-been-a-better-time-to-be-a-microsoft-developer/
 dsq_thread_id:
   - '3737730208'
-image: ../assets/wp-content/uploads/2015/05/Microsoft-Build.png
+image: /wp-content/uploads/2015/05/Microsoft-Build.png
 categories:
   - Windows
   - Windows Phone

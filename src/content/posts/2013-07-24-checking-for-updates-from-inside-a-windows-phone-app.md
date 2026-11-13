@@ -8,7 +8,7 @@ guid: https://www.pedrolamas.com/?p=1551
 permalink: /2013/07/24/checking-for-updates-from-inside-a-windows-phone-app/
 dsq_thread_id:
   - '2048129749'
-image: ../assets/wp-content/uploads/2013/07/Store-tile-with-1-update.png
+image: /wp-content/uploads/2013/07/Store-tile-with-1-update.png
 categories:
   - Windows Phone
 tags:

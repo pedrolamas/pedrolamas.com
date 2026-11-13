@@ -18,7 +18,7 @@ tags:
   - WPDev
 ---
 
-[![Windows Phone Week](../assets/wp-content/uploads/2013/09/Windows-Phone-Week.png)](https://wpcommunityweek.eventday.com/)
+[![Windows Phone Week](/wp-content/uploads/2013/09/Windows-Phone-Week.png)](https://wpcommunityweek.eventday.com/)
 
 Directly from the [official site](https://wpcommunityweek.eventday.com/):
 

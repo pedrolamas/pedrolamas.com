@@ -2,7 +2,7 @@
 layout: post
 title: My Windows Phone apps are now open-source!
 date: 2019-10-30T10:52:10+00:00
-image: ../assets/wp-content/uploads/2019/10/open-source.png
+image: /wp-content/uploads/2019/10/open-source.png
 categories:
   - Windows Phone
 tags:

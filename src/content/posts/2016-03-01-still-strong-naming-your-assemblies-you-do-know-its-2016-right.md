@@ -9,7 +9,7 @@ guid: https://www.pedrolamas.com/?p=4455
 permalink: /2016/03/01/still-strong-naming-your-assemblies-you-do-know-its-2016-right/
 dsq_thread_id:
   - '4624998501'
-image: ../assets/wp-content/uploads/2016/03/We-Want-You-To-Stop-Strong-Naming-Assemblies.png
+image: /wp-content/uploads/2016/03/We-Want-You-To-Stop-Strong-Naming-Assemblies.png
 categories:
   - Windows
 tags:
@@ -45,13 +45,13 @@ So strong-named assemblies are uniquely identified, which is a good thing, until
 
 Let's look at a real example: a few years back, [JSON.net](http://json.net/) was actually a strongly-signed assembly. Now let's assume we have a project that depends on "LibraryA" and "LibraryB", and each of these require a different version of JSON.net.
 
-[![Before Assembly Binding Redirection](../assets/wp-content/uploads/2016/03/Before-Assembly-Binding-Redirection-thumb.png 'Before Assembly Binding Redirection')](/wp-content/uploads/2016/03/Before-Assembly-Binding-Redirection.png)
+[![Before Assembly Binding Redirection](/wp-content/uploads/2016/03/Before-Assembly-Binding-Redirection-thumb.png 'Before Assembly Binding Redirection')](/wp-content/uploads/2016/03/Before-Assembly-Binding-Redirection.png)
 
 If you build the project as it currently is, there will be a conflict as you can only have a single version of JSON.net on the output folder, but the libraries require different versions...
 
 To fix this issue, .NET provided a mechanism called [Assembly Binding Redirection](<https://msdn.microsoft.com/en-us/library/7wd6ex19(v=vs.110).aspx>) to ensure that only one specific assembly would be used, regardless of the required version.
 
-[![After Assembly Binding Redirection](../assets/wp-content/uploads/2016/03/After-Assembly-Binding-Redirection-thumb.png 'After Assembly Binding Redirection')](/wp-content/uploads/2016/03/After-Assembly-Binding-Redirection.png)
+[![After Assembly Binding Redirection](/wp-content/uploads/2016/03/After-Assembly-Binding-Redirection-thumb.png 'After Assembly Binding Redirection')](/wp-content/uploads/2016/03/After-Assembly-Binding-Redirection.png)
 
 ## In comes Silverlight and Windows Phone
 
