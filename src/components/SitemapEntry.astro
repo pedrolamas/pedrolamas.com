@@ -7,7 +7,13 @@ const { title, url, sub } = Astro.props;
 ---
 
 <li>
-  {url ? <a href={url}>{title}</a> : title}
+  {url ? (
+    <a href={url} data-astro-prefetch>
+      {title}
+    </a>
+  ) : (
+    title
+  )}
   {sub && (
     <ul>
       {sub.map((entry) => (

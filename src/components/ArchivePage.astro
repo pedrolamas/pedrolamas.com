@@ -10,6 +10,7 @@ type Props = {
 
 const { title, posts } = Astro.props;
 
+// Years stay in descending order because posts are sorted newest first
 const postsGroupedByYear = Map.groupBy(posts, (post) => post.data.date.getUTCFullYear());
 ---
 
@@ -21,7 +22,7 @@ const postsGroupedByYear = Map.groupBy(posts, (post) => post.data.date.getUTCFul
         {yearPosts.map((post) => (
           <li>
             <h3 class="post-entry">
-              <a href={postUrl(post.id)}>
+              <a href={postUrl(post.id)} data-astro-prefetch>
                 {post.data.title} <small>{formatDate(post.data.date)}</small>
               </a>
             </h3>

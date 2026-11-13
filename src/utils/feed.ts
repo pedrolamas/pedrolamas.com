@@ -8,6 +8,7 @@ import { postUrl } from './urls';
 type FeedItem = {
   title: string;
   date: Date;
+  lastModified: Date;
   url: string;
   html: string;
 };
@@ -22,13 +23,13 @@ export const getFeedItems = async (): Promise<FeedItem[]> => {
 
   return Promise.all(
     posts.map(async (post) => {
-      const { title, date, image } = post.data;
+      const { title, date, last_modified_at, image } = post.data;
       const url = new URL(postUrl(post.id), siteMetadata.siteUrl).href;
       const { Content } = await render(post);
       const html = await container.renderToString(Content);
       const imageHtml = image ? `<p><img src="${image.src}" alt="${escapeAttribute(title)}" class="webfeedsFeaturedVisual" /></p>` : '';
 
-      return { title, date, url, html: absoluteUrls(imageHtml + html) };
+      return { title, date, lastModified: last_modified_at ?? date, url, html: absoluteUrls(imageHtml + html) };
     })
   );
 };

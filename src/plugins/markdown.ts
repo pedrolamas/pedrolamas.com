@@ -105,6 +105,7 @@ export const timeLinksPlugin = defineMdastPlugin({
       ctx.data.openTimeLinks = (Number(ctx.data.openTimeLinks) || 0) + 1;
       ctx.replaceNode(node, { type: 'html', value: `<a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso=${iso}">${node.value}` });
     } else if (node.value === '</time>' && Number(ctx.data.openTimeLinks) > 0) {
+      // Only close links this plugin opened
       ctx.data.openTimeLinks = Number(ctx.data.openTimeLinks) - 1;
       ctx.replaceNode(node, { type: 'html', value: '</time></a>' });
     }

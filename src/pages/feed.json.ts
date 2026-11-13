@@ -13,12 +13,13 @@ export const GET: APIRoute = async () => {
     feed_url: new URL('/feed.json', siteUrl).href,
     description,
     author: { name: author },
-    items: (await getFeedItems()).map(({ title, date, url, html }) => ({
+    items: (await getFeedItems()).map(({ title, date, lastModified, url, html }) => ({
       id: url,
       content_html: html,
       url,
       title,
-      date_modified: date.toISOString(),
+      date_published: date.toISOString(),
+      date_modified: lastModified.toISOString(),
     })),
   };
 

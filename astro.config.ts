@@ -62,7 +62,7 @@ const wpContent = (): AstroIntegration => ({
 export default defineConfig({
   site: siteMetadata.siteUrl,
   trailingSlash: 'always',
-  prefetch: { prefetchAll: true },
+  prefetch: true,
   // Set by Netlify
   env: {
     schema: {

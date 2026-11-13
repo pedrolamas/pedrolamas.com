@@ -22,7 +22,7 @@ const items = [
         <h2 aria-hidden="true">{label}</h2>
         <span class="screen-reader-text">{`${label} post:`}</span>
         <h3 class="post-entry">
-          <a href={postUrl(post.id)} title={`${label} Post: ${post.data.title}`}>
+          <a href={postUrl(post.id)} data-astro-prefetch title={`${label} Post: ${post.data.title}`}>
             {post.data.title} <small>{formatDate(post.data.date)}</small>
           </a>
         </h3>

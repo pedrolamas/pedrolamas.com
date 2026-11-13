@@ -35,7 +35,7 @@ socialLinks.push({ url: '/feeds/', title: 'Syndicated Feeds', symbolName: 'icon-
     <div class="sidebar-about">
       <Image class="sidebar-logo" src={logo} alt={title} width={160} />
       <h1>
-        <a href="/" rel="home">
+        <a href="/" rel="home" data-astro-prefetch>
           {title}
         </a>
       </h1>
@@ -46,7 +46,7 @@ socialLinks.push({ url: '/feeds/', title: 'Syndicated Feeds', symbolName: 'icon-
       {sitemap
         .filter((entry) => entry.minimap !== false)
         .map((entry) => (
-          <a class="sidebar-nav-item" href={entry.url}>
+          <a class="sidebar-nav-item" href={entry.url} data-astro-prefetch>
             {entry.title}
           </a>
         ))}
