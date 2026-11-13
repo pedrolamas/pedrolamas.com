@@ -1,0 +1,43 @@
+---
+import type { GetStaticPaths } from 'astro';
+
+import PostArticle from '../../../../components/PostArticle.astro';
+import PostAuthor from '../../../../components/PostAuthor.astro';
+import PostComments from '../../../../components/PostComments.astro';
+import PostNavigation from '../../../../components/PostNavigation.astro';
+import PostSocial from '../../../../components/PostSocial.astro';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { getPostExcerpt, getPosts, type Post } from '../../../../utils/posts';
+
+export const getStaticPaths = (async () => {
+  const posts = await getPosts();
+
+  return posts.map((post, index) => {
+    const [, year, month, day, slug] = /^(\d{4})-(\d{2})-(\d{2})-(.+)$/.exec(post.id)!;
+
+    return {
+      params: { year, month, day, slug },
+      props: { post, previous: posts[index + 1], next: posts[index - 1] },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+type Props = {
+  post: Post;
+  previous?: Post;
+  next?: Post;
+};
+
+const { post, previous, next } = Astro.props;
+const { title, image, categories, tags, date, last_modified_at } = post.data;
+---
+
+<BaseLayout type="post" title={title} description={getPostExcerpt(post)} imageUrl={image?.src} categories={categories} tags={tags} date={date} lastModified={last_modified_at}>
+  <main role="main" id="main">
+    <PostArticle post={post} />
+    <PostAuthor />
+    <PostSocial title={title} />
+    <PostComments title={title} />
+    <PostNavigation previous={previous} next={next} />
+  </main>
+</BaseLayout>

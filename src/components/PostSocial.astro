@@ -1,0 +1,29 @@
+---
+import FontAwesomeSymbol from './FontAwesomeSymbol.astro';
+import { siteMetadata } from '../data/siteMetadata';
+import type { SymbolName } from '../utils/fontAwesome';
+
+type Props = {
+  title: string;
+};
+
+const pageUrl = encodeURIComponent(new URL(Astro.url.pathname, siteMetadata.siteUrl).href);
+const pageTitle = encodeURIComponent(Astro.props.title);
+
+const links: { name: string; symbolName: SymbolName; link: string; label: string }[] = [
+  { name: 'Facebook', symbolName: 'share-facebook', link: `https://facebook.com/sharer/sharer.php?u=${pageUrl}`, label: 'Share on Facebook' },
+  { name: 'Twitter', symbolName: 'share-twitter', link: `https://twitter.com/intent/tweet/?text=${pageTitle}&url=${pageUrl}`, label: 'Share on Twitter' },
+  { name: 'LinkedIn', symbolName: 'share-linkedin', link: `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}&title=${pageTitle}&summary=${pageTitle}&source=${pageUrl}`, label: 'Share on LinkedIn' },
+  { name: 'WhatsApp', symbolName: 'share-whatsapp', link: `whatsapp://send?text=${pageTitle}%20${pageUrl}`, label: 'Share on WhatsApp' },
+  { name: 'E-Mail', symbolName: 'share-email', link: `mailto:?subject=${pageTitle}&body=${pageUrl}`, label: 'Share by E-Mail' },
+];
+---
+
+<section class="post-social">
+  {links.map(({ name, symbolName, link, label }) => (
+    <a class="post-social-item" href={link} target="_blank" rel="noopener noreferrer" aria-label={label} title={label}>
+      <FontAwesomeSymbol symbolName={symbolName} />
+      <span>{name}</span>
+    </a>
+  ))}
+</section>

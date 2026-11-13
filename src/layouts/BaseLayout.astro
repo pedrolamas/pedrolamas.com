@@ -1,0 +1,39 @@
+---
+import { Font } from 'astro:assets';
+import '../styles/styles.scss';
+
+import Footer from '../components/Footer.astro';
+import Head, { type HeadProps } from '../components/Head.astro';
+import Sidebar from '../components/Sidebar.astro';
+import Symbols from '../components/Symbols.astro';
+import { siteMetadata } from '../data/siteMetadata';
+
+type Props = HeadProps;
+---
+
+<!doctype html>
+<html lang={siteMetadata.lang || 'en'} prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+  <head>
+    <Font cssVariable="--font-pt-sans" preload={[{ weight: 400, style: 'normal' }]} />
+    <Head {...Astro.props} />
+  </head>
+  <body>
+    <Symbols />
+
+    <Sidebar />
+
+    <div class="content container">
+      <slot />
+
+      <Footer />
+    </div>
+
+    <script>
+      // Show dates in the visitor's own time zone and locale when hovering them.
+      document.querySelectorAll<HTMLTimeElement>('time[datetime]').forEach((time) => {
+        const target = time.closest('a') ?? time;
+        target.title = new Date(time.dateTime).toLocaleString();
+      });
+    </script>
+  </body>
+</html>

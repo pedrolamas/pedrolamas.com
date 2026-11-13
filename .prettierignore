@@ -1,6 +1,6 @@
-public
+dist
+.astro
 src/styles/base
-**/.cache
-**/.vscode
+src/content/assets/wp-content
+pnpm-lock.yaml
 **/node_modules
-**/*.generated.*

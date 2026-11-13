@@ -1,0 +1,11 @@
+---
+import { symbolSvg, type SymbolName } from '../utils/fontAwesome';
+
+type Props = {
+  symbolName: SymbolName;
+};
+
+const { symbolName } = Astro.props;
+---
+
+<Fragment set:html={symbolSvg(symbolName)} />

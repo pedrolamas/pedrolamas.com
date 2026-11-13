@@ -1,0 +1,17 @@
+---
+import type { GetStaticPaths } from 'astro';
+
+import IndexPage from '../../components/IndexPage.astro';
+import { getIndexPages, type IndexPage as IndexPageProps } from '../../utils/posts';
+
+export const getStaticPaths = (async () => {
+  const pages = await getIndexPages();
+
+  // Page 1 is served at `/` by `src/pages/index.astro`.
+  return pages.slice(1).map((page) => ({ params: { page: String(page.pageIndex) }, props: page }));
+}) satisfies GetStaticPaths;
+
+type Props = IndexPageProps;
+---
+
+<IndexPage {...Astro.props} />

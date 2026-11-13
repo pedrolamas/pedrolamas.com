@@ -1,0 +1,31 @@
+---
+import { formatDate, getPostUrl, type Post } from '../utils/posts';
+
+type Props = {
+  previous?: Post;
+  next?: Post;
+};
+
+const { previous, next } = Astro.props;
+
+const items = [
+  { label: 'Previous', post: previous },
+  { label: 'Next', post: next },
+].filter((item): item is { label: string; post: Post } => !!item.post);
+---
+
+{items.length > 0 && (
+  <nav class="post-navigation" role="navigation">
+    {items.map(({ label, post }) => (
+      <>
+        <h2 aria-hidden="true">{label}</h2>
+        <span class="screen-reader-text">{`${label} post:`}</span>
+        <h3 class="post-entry">
+          <a href={getPostUrl(post)} title={`${label} Post: ${post.data.title}`}>
+            {post.data.title} <small>{formatDate(post.data.date)}</small>
+          </a>
+        </h3>
+      </>
+    ))}
+  </nav>
+)}

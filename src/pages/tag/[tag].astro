@@ -1,0 +1,26 @@
+---
+import type { GetStaticPaths } from 'astro';
+
+import ArchivePage from '../../components/ArchivePage.astro';
+import { getPosts, type Post } from '../../utils/posts';
+import { slug } from '../../utils/slugify';
+
+export const getStaticPaths = (async () => {
+  const posts = await getPosts();
+  const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
+
+  return tags.map((tag) => ({
+    params: { tag: slug(tag) },
+    props: { tag, posts: posts.filter((post) => post.data.tags.includes(tag)) },
+  }));
+}) satisfies GetStaticPaths;
+
+type Props = {
+  tag: string;
+  posts: Post[];
+};
+
+const { tag, posts } = Astro.props;
+---
+
+<ArchivePage title={`Tag: ${tag}`} posts={posts} />

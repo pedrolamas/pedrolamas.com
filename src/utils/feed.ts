@@ -1,0 +1,32 @@
+import { experimental_AstroContainer as AstroContainer } from 'astro/container';
+import { render } from 'astro:content';
+
+import { siteMetadata } from '../data/siteMetadata';
+import { getPosts, getPostUrl } from './posts';
+
+export type FeedItem = {
+  title: string;
+  date: Date;
+  url: string;
+  html: string;
+};
+
+const absoluteUrls = (html: string): string => html.replace(/(src|href)="\/(?!\/)/g, `$1="${siteMetadata.siteUrl}/`);
+
+/** All posts with their full rendered content, newest first. */
+export const getFeedItems = async (): Promise<FeedItem[]> => {
+  const container = await AstroContainer.create();
+  const posts = await getPosts();
+
+  return Promise.all(
+    posts.map(async (post) => {
+      const { title, date, image } = post.data;
+      const url = new URL(getPostUrl(post), siteMetadata.siteUrl).href;
+      const { Content } = await render(post);
+      const html = await container.renderToString(Content);
+      const imageHtml = image ? `<p><img src="${image.src}" alt="${title}" class="webfeedsFeaturedVisual" /></p>` : '';
+
+      return { title, date, url, html: absoluteUrls(imageHtml + html) };
+    })
+  );
+};

@@ -1,0 +1,67 @@
+---
+import FontAwesomeSymbol from './FontAwesomeSymbol.astro';
+import { formatDate, getPostUrl, type Post } from '../utils/posts';
+import { slug } from '../utils/slugify';
+
+type Props = {
+  post: Post;
+};
+
+const { post } = Astro.props;
+const { date, categories, tags } = Astro.props.post.data;
+const url = getPostUrl(post);
+
+const { REPOSITORY_URL, BRANCH } = process.env;
+---
+
+<div class="post-meta">
+  <span class="posted-on">
+    <FontAwesomeSymbol symbolName="article-posted-on" />
+    <span class="screen-reader-text">Posted on </span>
+    <a href={url} rel="bookmark">
+      <time datetime={date.toISOString()}>{formatDate(date)}</time>
+    </a>
+  </span>
+
+  {categories.length > 0 && (
+    <span class="categories">
+      <FontAwesomeSymbol symbolName="article-categories" />
+      <span class="screen-reader-text">Categories </span>
+      {categories.map((category, index) => (
+        <>
+          {index > 0 && ', '}
+          <a href={`/category/${slug(category)}/`} rel="category tag">
+            {category}
+          </a>
+        </>
+      ))}
+    </span>
+  )}
+
+  {tags.length > 0 && (
+    <span class="tags">
+      <FontAwesomeSymbol symbolName="article-tags" />
+      <span class="screen-reader-text">Tags </span>
+      {tags.map((tag, index) => (
+        <>
+          {index > 0 && ', '}
+          <a href={`/tag/${slug(tag)}/`} rel="tag">
+            {tag}
+          </a>
+        </>
+      ))}
+    </span>
+  )}
+
+  <span class="comments">
+    <FontAwesomeSymbol symbolName="article-comments" />
+    <a href={`${url}#disqus_thread`}>Comments</a>
+  </span>
+
+  {REPOSITORY_URL && BRANCH && (
+    <span class="edit">
+      <FontAwesomeSymbol symbolName="article-edit" />
+      <a href={`${REPOSITORY_URL}/edit/${BRANCH}/src/content/posts/${post.id}.md`}>Edit</a>
+    </span>
+  )}
+</div>

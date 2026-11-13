@@ -1,0 +1,6 @@
+---
+import ArchivePage from '../components/ArchivePage.astro';
+import { getPosts } from '../utils/posts';
+---
+
+<ArchivePage title="Archive" posts={await getPosts()} />

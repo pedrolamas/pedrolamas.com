@@ -1,0 +1,33 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { formatDate, getPostUrl, type Post } from '../utils/posts';
+
+type Props = {
+  title: string;
+  posts: Post[];
+};
+
+const { title, posts } = Astro.props;
+
+// Posts are sorted newest first, so years come out in descending order.
+const postsGroupedByYear = Map.groupBy(posts, (post) => post.data.date.getUTCFullYear());
+---
+
+<PageLayout title={title}>
+  {[...postsGroupedByYear].map(([year, yearPosts]) => (
+    <>
+      <h2>{year}</h2>
+      <ul>
+        {yearPosts.map((post) => (
+          <li>
+            <h3 class="post-entry">
+              <a href={getPostUrl(post)}>
+                {post.data.title} <small>{formatDate(post.data.date)}</small>
+              </a>
+            </h3>
+          </li>
+        ))}
+      </ul>
+    </>
+  ))}
+</PageLayout>
